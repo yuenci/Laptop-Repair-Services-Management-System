@@ -60,6 +60,18 @@
     <Compile Include="CommonlyControls.Designer.cs">
       <DependentUpon>CommonlyControls.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\UC_forgotPws.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UC_forgotPws.Designer.cs">
+      <DependentUpon>UC_forgotPws.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UC_Login.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UC_Login.Designer.cs">
+      <DependentUpon>UC_Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="CsharpRepairerIncDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -75,6 +87,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CommonlyControls.resx">
       <DependentUpon>CommonlyControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UC_forgotPws.resx">
+      <DependentUpon>UC_forgotPws.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UC_Login.resx">
+      <DependentUpon>UC_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
