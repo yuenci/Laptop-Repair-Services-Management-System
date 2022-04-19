@@ -73,6 +73,16 @@ namespace miniSys0._3.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap clap {
+            get {
+                object obj = ResourceManager.GetObject("clap", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap login_panel {
             get {
                 object obj = ResourceManager.GetObject("login_panel", resourceCulture);
@@ -123,9 +133,9 @@ namespace miniSys0._3.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap tou_alpha_oinam {
+        internal static System.Drawing.Bitmap tou_alpha {
             get {
-                object obj = ResourceManager.GetObject("tou_alpha_oinam", resourceCulture);
+                object obj = ResourceManager.GetObject("tou_alpha", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
