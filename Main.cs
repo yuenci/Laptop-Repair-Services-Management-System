@@ -23,6 +23,8 @@ namespace miniSys0._3
             
             addMainPanel();
             //initShortcut();
+
+            randomLogoColor();
         }
         Point mPoint;
         private void drag_down(object sender, MouseEventArgs e)
@@ -36,12 +38,31 @@ namespace miniSys0._3
             {
                 this.Location = new Point(this.Location.X + e.X - mPoint.X, this.Location.Y + e.Y - mPoint.Y);
 
+                if (uniqueInstance != null)
+                {
+                    uniqueInstance.Location = new Point(this.Location.X + 1090 + e.X - mPoint.X, this.Location.Y + 65 + e.Y - mPoint.Y);
+                }
             }
+            
         }
-
+        private static ProfileFloating uniqueInstance;
         private void profile_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (uniqueInstance == null)
+            {
+                uniqueInstance = new ProfileFloating();
+                int PositionX = this.Location.X;
+                int PositionY = this.Location.Y;
+                uniqueInstance.StartPosition = FormStartPosition.Manual;
+                uniqueInstance.Location = (Point)new Size(PositionX + 1090, PositionY + 65);
+                uniqueInstance.Show();
+            }
+            else
+            {
+                uniqueInstance.Close();
+                uniqueInstance = null;
+            }
+
         }
 
 
@@ -179,6 +200,94 @@ namespace miniSys0._3
             }
 
         }
+        void randomLogoColor()
+        {
+            Color[] colorListR = { //6
+
+                ColorTranslator.FromHtml("#F53F3F") , //red
+                ColorTranslator.FromHtml("#F77234") , //orange
+                ColorTranslator.FromHtml("#FF7D00") , //orange
+                //pink
+                ColorTranslator.FromHtml("#551DB0") ,
+                ColorTranslator.FromHtml("#B010B6"),
+                ColorTranslator.FromHtml("#F5319D") ,
+             };
+            Color[] colorListG = { //5
+
+                //yellow
+                ColorTranslator.FromHtml("#9FDB1D"), //yellow
+                ColorTranslator.FromHtml("#FADC19") , //yellow
+                //green
+                ColorTranslator.FromHtml("#FF0000"), //green
+                ColorTranslator.FromHtml("#00B42A") , //green
+                ColorTranslator.FromHtml("#14C9C9"), //green
+
+                //grey
+                ColorTranslator.FromHtml("#86909C")
+            };
+            Color[] colorListB = { //2
+
+                //blue
+                ColorTranslator.FromHtml("#3491FA") ,
+                ColorTranslator.FromHtml("#0E42D2"),
+            };
+
+
+            dynamic[] colorList2D = { colorListR , colorListG, colorListB };
+
+            int checkNum(int num)
+            {
+                int maxNum = -1;
+                if (num == 0 || num == 1)
+                {
+                    maxNum = 6;
+                }
+                else
+                {
+                    maxNum = 2;
+                }
+                return maxNum;
+            }
+
+            //LogoFore
+            int randomNumber1;
+            int randomNumber2;
+
+            Random r1 = new Random();
+            randomNumber1 = r1.Next(0, 2);
+
+            Random r2 = new Random();
+            randomNumber2 = r2.Next(1, checkNum(randomNumber1));
+
+            User_type.LogoFore = colorList2D[randomNumber1][randomNumber2];
+
+            //LogoBkg
+            int randomNumber3;
+            int randomNumber4;
+            while (true)
+            {
+                Random r3 = new Random();
+                randomNumber3 = r3.Next(0, 2);
+
+                if (randomNumber3!= randomNumber1)
+                {
+                    break;
+                }
+            }
+            Random r4 = new Random();
+            randomNumber4 = r4.Next(1, checkNum(randomNumber3));
+
+            User_type.LogoBkg = colorList2D[randomNumber3][randomNumber4];
+
+            profile.ForeColor = User_type.LogoFore;
+            profile.FillColor = User_type.LogoBkg;
+            
+
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 
     public class User_type
@@ -189,5 +298,8 @@ namespace miniSys0._3
         // Customer
         // Admin
         public static string user_name = "Innis Yu";
+        public static string post = "CEO";
+        public static Color LogoFore = Color.Black;
+        public static Color LogoBkg = Color.FromArgb(70, 141, 255);
     }
 }
