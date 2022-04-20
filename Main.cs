@@ -19,8 +19,8 @@ namespace miniSys0._3
         {
             InitializeComponent();
             searchBox.Hide();
-            sunnyUIinit();
             addNavMenu();
+            addMainPanel();
         }
         Point mPoint;
         private void drag_down(object sender, MouseEventArgs e)
@@ -85,32 +85,6 @@ namespace miniSys0._3
             }*//*
         }*/
 
-        void sunnyUIinit()
-        {
-            upperTriangle.ForeColor = Color.Red;
-            upperTriangle.FillColor = Color.Transparent;
-
-            shortcutButton1.FillColor = Color.FromArgb(242, 243, 245);
-            shortcutButton2.FillColor = Color.FromArgb(242, 243, 245);
-            shortcutButton3.FillColor = Color.FromArgb(242, 243, 245);
-            shortcutButton1.SymbolColor = Color.Black;
-            shortcutButton2.SymbolColor = Color.Black;
-            shortcutButton3.SymbolColor = Color.Black;
-            shortcutButton1.RectColor = Color.Transparent;
-            shortcutButton2.RectColor = Color.Transparent;
-            shortcutButton3.RectColor = Color.Transparent;
-            newsTopBar.RectColor = Color.Transparent;
-            newsTopBar.FillColor = Color.FromArgb(242, 243, 245);
-            news1.MarkColor = Color.FromArgb(242, 243, 245);
-            news2.MarkColor = Color.FromArgb(242, 243, 245);
-            news3.MarkColor = Color.FromArgb(242, 243, 245);
-            news4.MarkColor = Color.FromArgb(242, 243, 245);
-            news5.MarkColor = Color.FromArgb(242, 243, 245);
-            //noticeButton1.
-
-
-
-        }
 
         private void node_click(object sender, TreeNodeMouseClickEventArgs e)
         {
@@ -161,6 +135,16 @@ namespace miniSys0._3
                 addUserControl(uc);
             }
         }
+
+        private void addMainPanel()
+        {
+            UC_main uc = new UC_main();
+            uc.Dock = DockStyle.Fill;
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(uc);
+            uc.BringToFront();
+        }
+
     }
 
     public class User_type
