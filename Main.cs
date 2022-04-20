@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Sunny.UI;
+using miniSys0._3.Controls;
 
 namespace miniSys0._3
 {
@@ -60,21 +61,6 @@ namespace miniSys0._3
         }
 
 
-        public void InitMain()
-        {
-            int pageIndex = 100;
-            TreeNode parent = receptionistNavMenu.CreateNode("DashBoard", pageIndex);
-            receptionistNavMenu.CreateChildNode(parent, "Workbench", ++pageIndex);
-            receptionistNavMenu.CreateChildNode(parent, "条目2", ++pageIndex);
-            pageIndex = 200;
-            parent = receptionistNavMenu.CreateNode("Form", pageIndex);
-            receptionistNavMenu.CreateChildNode(parent, "Register", ++pageIndex);
-            receptionistNavMenu.CreateChildNode(parent, "Payment", ++pageIndex);
-            pageIndex = 300;
-            parent = receptionistNavMenu.CreateNode("Profile", pageIndex);
-            receptionistNavMenu.CreateChildNode(parent, "User info", ++pageIndex);
-            receptionistNavMenu.CreateChildNode(parent, "User settings", ++pageIndex);
-        }
 
         /*void addIcon()
         {
@@ -122,7 +108,6 @@ namespace miniSys0._3
             news5.MarkColor = Color.FromArgb(242, 243, 245);
             //noticeButton1.
 
-            receptionistNavMenu.SelectedHighColor = Color.Transparent;
 
 
         }
@@ -146,15 +131,44 @@ namespace miniSys0._3
                 }
             }
         }
-
+        private void addUserControl(UserControl userControl)
+        {
+            userControl.Dock = DockStyle.Fill;
+            navMenuPanel.Controls.Clear();
+            navMenuPanel.Controls.Add(userControl);
+            userControl.BringToFront();
+        }
         private void addNavMenu()
         {
-
+            if (User_type.user_type == "Receptionist")
+            {
+                UC_R_Navmenu uc = new UC_R_Navmenu();
+                addUserControl(uc);
+            }
+            else if (User_type.user_type == "Technician")
+            {
+                UC_T_Navmenu uc = new UC_T_Navmenu();
+                addUserControl(uc);
+            }
+            else if (User_type.user_type == "Customer")
+            {
+                UC_C_Navmenu uc = new UC_C_Navmenu();
+                addUserControl(uc);
+            }
+            else if (User_type.user_type == "Admin")
+            {
+                UC_A_Navmenu uc = new UC_A_Navmenu();
+                addUserControl(uc);
+            }
         }
     }
 
     public class User_type
     {
-        public static string user_type = "";
+        public static string user_type = "Admin";
+        // Receptionist
+        // Technician
+        // Customer
+        // Admin
     }
 }

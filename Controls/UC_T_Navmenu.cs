@@ -15,6 +15,7 @@ namespace miniSys0._3.Controls
         public UC_T_Navmenu()
         {
             InitializeComponent();
+            NavMenu.ImageList = imageList1;
         }
     }
 }

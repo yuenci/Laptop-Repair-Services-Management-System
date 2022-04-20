@@ -29,19 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Workbench");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("  Dashboard", 0, 1, new System.Windows.Forms.TreeNode[] {
-            treeNode1});
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Register");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Payment");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("  Form", 2, 3, new System.Windows.Forms.TreeNode[] {
-            treeNode3,
-            treeNode4});
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("User info");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("User settings");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("  Profile", 4, 5, new System.Windows.Forms.TreeNode[] {
-            treeNode6,
-            treeNode7});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panelTop = new System.Windows.Forms.Panel();
             this.searchBox = new Sunny.UI.UITextBox();
@@ -53,7 +40,6 @@
             this.uiSymbolButton1 = new Sunny.UI.UISymbolButton();
             this.profile = new Sunny.UI.UIAvatar();
             this.uiUserControl1 = new Sunny.UI.UIUserControl();
-            this.receptionistNavMenu = new Sunny.UI.UINavMenu();
             this.uiUserControl2 = new Sunny.UI.UIUserControl();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -100,6 +86,11 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.uiUserControl7 = new Sunny.UI.UIUserControl();
+            this.uiButton7 = new Sunny.UI.UIButton();
+            this.uiButton6 = new Sunny.UI.UIButton();
+            this.uiButton3 = new Sunny.UI.UIButton();
+            this.uiButton5 = new Sunny.UI.UIButton();
+            this.uiButton4 = new Sunny.UI.UIButton();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -109,11 +100,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.receptionistNavMenuImageList = new System.Windows.Forms.ImageList(this.components);
-            this.uiButton3 = new Sunny.UI.UIButton();
-            this.uiButton4 = new Sunny.UI.UIButton();
-            this.uiButton5 = new Sunny.UI.UIButton();
-            this.uiButton6 = new Sunny.UI.UIButton();
-            this.uiButton7 = new Sunny.UI.UIButton();
+            this.navMenuPanel = new System.Windows.Forms.Panel();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.uiUserControl1.SuspendLayout();
@@ -310,7 +297,7 @@
             // uiUserControl1
             // 
             this.uiUserControl1.BackColor = System.Drawing.Color.White;
-            this.uiUserControl1.Controls.Add(this.receptionistNavMenu);
+            this.uiUserControl1.Controls.Add(this.navMenuPanel);
             this.uiUserControl1.FillColor = System.Drawing.Color.White;
             this.uiUserControl1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiUserControl1.Location = new System.Drawing.Point(0, 67);
@@ -324,59 +311,6 @@
             this.uiUserControl1.Text = "uiUserControl1";
             this.uiUserControl1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiUserControl1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // receptionistNavMenu
-            // 
-            this.receptionistNavMenu.BackColor = System.Drawing.Color.White;
-            this.receptionistNavMenu.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.receptionistNavMenu.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll;
-            this.receptionistNavMenu.FillColor = System.Drawing.Color.White;
-            this.receptionistNavMenu.Font = new System.Drawing.Font(".萍方-简", 13F, System.Drawing.FontStyle.Bold);
-            this.receptionistNavMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.receptionistNavMenu.FullRowSelect = true;
-            this.receptionistNavMenu.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.receptionistNavMenu.ItemHeight = 50;
-            this.receptionistNavMenu.Location = new System.Drawing.Point(7, 5);
-            this.receptionistNavMenu.MenuStyle = Sunny.UI.UIMenuStyle.Custom;
-            this.receptionistNavMenu.Name = "receptionistNavMenu";
-            treeNode1.Name = "节点2";
-            treeNode1.Text = "Workbench";
-            treeNode2.BackColor = System.Drawing.Color.White;
-            treeNode2.ImageIndex = 0;
-            treeNode2.Name = "node1";
-            treeNode2.SelectedImageIndex = 1;
-            treeNode2.Text = "  Dashboard";
-            treeNode3.Name = "节点5";
-            treeNode3.Text = "Register";
-            treeNode4.Name = "节点7";
-            treeNode4.Text = "Payment";
-            treeNode5.ImageIndex = 2;
-            treeNode5.Name = "node2";
-            treeNode5.SelectedImageIndex = 3;
-            treeNode5.Text = "  Form";
-            treeNode6.Name = "节点9";
-            treeNode6.Text = "User info";
-            treeNode7.Name = "节点10";
-            treeNode7.Text = "User settings";
-            treeNode8.ImageIndex = 4;
-            treeNode8.Name = "node3";
-            treeNode8.SelectedImageIndex = 5;
-            treeNode8.Text = "  Profile";
-            this.receptionistNavMenu.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode2,
-            treeNode5,
-            treeNode8});
-            this.receptionistNavMenu.ScrollFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.receptionistNavMenu.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.receptionistNavMenu.SelectedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
-            this.receptionistNavMenu.SelectedHighColor = System.Drawing.Color.Transparent;
-            this.receptionistNavMenu.ShowLines = false;
-            this.receptionistNavMenu.Size = new System.Drawing.Size(187, 670);
-            this.receptionistNavMenu.Style = Sunny.UI.UIStyle.Custom;
-            this.receptionistNavMenu.TabIndex = 12;
-            this.receptionistNavMenu.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.receptionistNavMenu.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.receptionistNavMenu.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.node_click);
             // 
             // uiUserControl2
             // 
@@ -445,7 +379,6 @@
             // shortcutButton3
             // 
             this.shortcutButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.shortcutButton3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
             this.shortcutButton3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.shortcutButton3.Location = new System.Drawing.Point(201, 48);
             this.shortcutButton3.MinimumSize = new System.Drawing.Size(1, 1);
@@ -453,7 +386,6 @@
             this.shortcutButton3.Size = new System.Drawing.Size(50, 50);
             this.shortcutButton3.Style = Sunny.UI.UIStyle.Custom;
             this.shortcutButton3.Symbol = 61442;
-            this.shortcutButton3.SymbolColor = System.Drawing.Color.Black;
             this.shortcutButton3.TabIndex = 17;
             this.shortcutButton3.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.shortcutButton3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -461,7 +393,6 @@
             // shortcutButton2
             // 
             this.shortcutButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.shortcutButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
             this.shortcutButton2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.shortcutButton2.Location = new System.Drawing.Point(107, 48);
             this.shortcutButton2.MinimumSize = new System.Drawing.Size(1, 1);
@@ -469,7 +400,6 @@
             this.shortcutButton2.Size = new System.Drawing.Size(50, 50);
             this.shortcutButton2.Style = Sunny.UI.UIStyle.Custom;
             this.shortcutButton2.Symbol = 61442;
-            this.shortcutButton2.SymbolColor = System.Drawing.Color.Black;
             this.shortcutButton2.TabIndex = 16;
             this.shortcutButton2.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.shortcutButton2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -477,7 +407,6 @@
             // shortcutButton1
             // 
             this.shortcutButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.shortcutButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
             this.shortcutButton1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.shortcutButton1.Location = new System.Drawing.Point(13, 48);
             this.shortcutButton1.MinimumSize = new System.Drawing.Size(1, 1);
@@ -485,7 +414,6 @@
             this.shortcutButton1.Size = new System.Drawing.Size(50, 50);
             this.shortcutButton1.Style = Sunny.UI.UIStyle.Custom;
             this.shortcutButton1.Symbol = 61442;
-            this.shortcutButton1.SymbolColor = System.Drawing.Color.Black;
             this.shortcutButton1.TabIndex = 15;
             this.shortcutButton1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.shortcutButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -999,6 +927,81 @@
             this.uiUserControl7.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiUserControl7.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // uiButton7
+            // 
+            this.uiButton7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton7.Enabled = false;
+            this.uiButton7.Font = new System.Drawing.Font(".萍方-简", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton7.Location = new System.Drawing.Point(13, 117);
+            this.uiButton7.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton7.Name = "uiButton7";
+            this.uiButton7.Size = new System.Drawing.Size(65, 30);
+            this.uiButton7.Style = Sunny.UI.UIStyle.Custom;
+            this.uiButton7.TabIndex = 33;
+            this.uiButton7.Text = "Advice";
+            this.uiButton7.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton7.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiButton6
+            // 
+            this.uiButton6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton6.Enabled = false;
+            this.uiButton6.Font = new System.Drawing.Font(".萍方-简", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton6.Location = new System.Drawing.Point(13, 80);
+            this.uiButton6.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton6.Name = "uiButton6";
+            this.uiButton6.Size = new System.Drawing.Size(65, 30);
+            this.uiButton6.Style = Sunny.UI.UIStyle.Custom;
+            this.uiButton6.TabIndex = 33;
+            this.uiButton6.Text = "Message";
+            this.uiButton6.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton6.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiButton3
+            // 
+            this.uiButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton3.Enabled = false;
+            this.uiButton3.Font = new System.Drawing.Font(".萍方-简", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton3.Location = new System.Drawing.Point(13, 154);
+            this.uiButton3.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton3.Name = "uiButton3";
+            this.uiButton3.Size = new System.Drawing.Size(65, 30);
+            this.uiButton3.Style = Sunny.UI.UIStyle.Custom;
+            this.uiButton3.TabIndex = 32;
+            this.uiButton3.Text = "Advice";
+            this.uiButton3.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiButton5
+            // 
+            this.uiButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton5.Enabled = false;
+            this.uiButton5.Font = new System.Drawing.Font(".萍方-简", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton5.Location = new System.Drawing.Point(13, 191);
+            this.uiButton5.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton5.Name = "uiButton5";
+            this.uiButton5.Size = new System.Drawing.Size(65, 30);
+            this.uiButton5.Style = Sunny.UI.UIStyle.Custom;
+            this.uiButton5.TabIndex = 32;
+            this.uiButton5.Text = "Message";
+            this.uiButton5.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiButton4
+            // 
+            this.uiButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton4.Enabled = false;
+            this.uiButton4.Font = new System.Drawing.Font(".萍方-简", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton4.Location = new System.Drawing.Point(13, 43);
+            this.uiButton4.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton4.Name = "uiButton4";
+            this.uiButton4.Size = new System.Drawing.Size(65, 30);
+            this.uiButton4.Style = Sunny.UI.UIStyle.Custom;
+            this.uiButton4.TabIndex = 32;
+            this.uiButton4.Text = "Activity";
+            this.uiButton4.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
             // label25
             // 
             this.label25.AutoSize = true;
@@ -1098,95 +1101,12 @@
             this.receptionistNavMenuImageList.Images.SetKeyName(4, "1profile.png");
             this.receptionistNavMenuImageList.Images.SetKeyName(5, "1profileBlue.png");
             // 
-            // uiButton3
+            // navMenuPanel
             // 
-            this.uiButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton3.Enabled = false;
-            this.uiButton3.FillDisableColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            this.uiButton3.Font = new System.Drawing.Font(".萍方-简", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton3.ForeDisableColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
-            this.uiButton3.Location = new System.Drawing.Point(13, 154);
-            this.uiButton3.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton3.Name = "uiButton3";
-            this.uiButton3.RectDisableColor = System.Drawing.Color.Transparent;
-            this.uiButton3.Size = new System.Drawing.Size(65, 30);
-            this.uiButton3.Style = Sunny.UI.UIStyle.Custom;
-            this.uiButton3.TabIndex = 32;
-            this.uiButton3.Text = "Advice";
-            this.uiButton3.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiButton4
-            // 
-            this.uiButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton4.Enabled = false;
-            this.uiButton4.FillDisableColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(232)))));
-            this.uiButton4.Font = new System.Drawing.Font(".萍方-简", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton4.ForeDisableColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
-            this.uiButton4.Location = new System.Drawing.Point(13, 43);
-            this.uiButton4.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton4.Name = "uiButton4";
-            this.uiButton4.RectDisableColor = System.Drawing.Color.Transparent;
-            this.uiButton4.Size = new System.Drawing.Size(65, 30);
-            this.uiButton4.Style = Sunny.UI.UIStyle.Custom;
-            this.uiButton4.TabIndex = 32;
-            this.uiButton4.Text = "Activity";
-            this.uiButton4.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiButton5
-            // 
-            this.uiButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton5.Enabled = false;
-            this.uiButton5.FillDisableColor = System.Drawing.Color.WhiteSmoke;
-            this.uiButton5.Font = new System.Drawing.Font(".萍方-简", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton5.ForeDisableColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(198)))), ((int)(((byte)(194)))));
-            this.uiButton5.Location = new System.Drawing.Point(13, 191);
-            this.uiButton5.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton5.Name = "uiButton5";
-            this.uiButton5.RectDisableColor = System.Drawing.Color.Transparent;
-            this.uiButton5.Size = new System.Drawing.Size(65, 30);
-            this.uiButton5.Style = Sunny.UI.UIStyle.Custom;
-            this.uiButton5.TabIndex = 32;
-            this.uiButton5.Text = "Message";
-            this.uiButton5.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiButton6
-            // 
-            this.uiButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton6.Enabled = false;
-            this.uiButton6.FillDisableColor = System.Drawing.Color.WhiteSmoke;
-            this.uiButton6.Font = new System.Drawing.Font(".萍方-简", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton6.ForeDisableColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(198)))), ((int)(((byte)(194)))));
-            this.uiButton6.Location = new System.Drawing.Point(13, 80);
-            this.uiButton6.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton6.Name = "uiButton6";
-            this.uiButton6.RectDisableColor = System.Drawing.Color.Transparent;
-            this.uiButton6.Size = new System.Drawing.Size(65, 30);
-            this.uiButton6.Style = Sunny.UI.UIStyle.Custom;
-            this.uiButton6.TabIndex = 33;
-            this.uiButton6.Text = "Message";
-            this.uiButton6.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton6.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiButton7
-            // 
-            this.uiButton7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton7.Enabled = false;
-            this.uiButton7.FillDisableColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            this.uiButton7.Font = new System.Drawing.Font(".萍方-简", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton7.ForeDisableColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
-            this.uiButton7.Location = new System.Drawing.Point(13, 117);
-            this.uiButton7.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton7.Name = "uiButton7";
-            this.uiButton7.RectDisableColor = System.Drawing.Color.Transparent;
-            this.uiButton7.Size = new System.Drawing.Size(65, 30);
-            this.uiButton7.Style = Sunny.UI.UIStyle.Custom;
-            this.uiButton7.TabIndex = 33;
-            this.uiButton7.Text = "Advice";
-            this.uiButton7.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton7.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.navMenuPanel.Location = new System.Drawing.Point(6, 6);
+            this.navMenuPanel.Name = "navMenuPanel";
+            this.navMenuPanel.Size = new System.Drawing.Size(187, 670);
+            this.navMenuPanel.TabIndex = 0;
             // 
             // Main
             // 
@@ -1299,12 +1219,12 @@
         private Sunny.UI.UIMarkLabel news3;
         private Sunny.UI.UIMarkLabel news2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Sunny.UI.UINavMenu receptionistNavMenu;
         private System.Windows.Forms.ImageList receptionistNavMenuImageList;
         private Sunny.UI.UIButton uiButton3;
         private Sunny.UI.UIButton uiButton7;
         private Sunny.UI.UIButton uiButton6;
         private Sunny.UI.UIButton uiButton5;
         private Sunny.UI.UIButton uiButton4;
+        private System.Windows.Forms.Panel navMenuPanel;
     }
 }

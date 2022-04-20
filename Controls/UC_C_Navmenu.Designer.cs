@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Workbench");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("  Dashboard", 0, 1, new System.Windows.Forms.TreeNode[] {
             treeNode1});
@@ -39,23 +40,25 @@
             System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("  Profile", 4, 5, new System.Windows.Forms.TreeNode[] {
             treeNode5,
             treeNode6});
-            this.receptionistNavMenu = new Sunny.UI.UINavMenu();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_C_Navmenu));
+            this.NavMenu = new Sunny.UI.UINavMenu();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
-            // receptionistNavMenu
+            // NavMenu
             // 
-            this.receptionistNavMenu.BackColor = System.Drawing.Color.White;
-            this.receptionistNavMenu.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.receptionistNavMenu.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll;
-            this.receptionistNavMenu.FillColor = System.Drawing.Color.White;
-            this.receptionistNavMenu.Font = new System.Drawing.Font(".萍方-简", 13F, System.Drawing.FontStyle.Bold);
-            this.receptionistNavMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.receptionistNavMenu.FullRowSelect = true;
-            this.receptionistNavMenu.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.receptionistNavMenu.ItemHeight = 50;
-            this.receptionistNavMenu.Location = new System.Drawing.Point(0, 0);
-            this.receptionistNavMenu.MenuStyle = Sunny.UI.UIMenuStyle.Custom;
-            this.receptionistNavMenu.Name = "receptionistNavMenu";
+            this.NavMenu.BackColor = System.Drawing.Color.White;
+            this.NavMenu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NavMenu.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll;
+            this.NavMenu.FillColor = System.Drawing.Color.White;
+            this.NavMenu.Font = new System.Drawing.Font(".萍方-简", 13F, System.Drawing.FontStyle.Bold);
+            this.NavMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.NavMenu.FullRowSelect = true;
+            this.NavMenu.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.NavMenu.ItemHeight = 50;
+            this.NavMenu.Location = new System.Drawing.Point(0, 0);
+            this.NavMenu.MenuStyle = Sunny.UI.UIMenuStyle.Custom;
+            this.NavMenu.Name = "NavMenu";
             treeNode1.Name = "节点2";
             treeNode1.Text = "Workbench";
             treeNode2.BackColor = System.Drawing.Color.White;
@@ -77,26 +80,37 @@
             treeNode7.Name = "node3";
             treeNode7.SelectedImageIndex = 5;
             treeNode7.Text = "  Profile";
-            this.receptionistNavMenu.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            this.NavMenu.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode2,
             treeNode4,
             treeNode7});
-            this.receptionistNavMenu.ScrollFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.receptionistNavMenu.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.receptionistNavMenu.SelectedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
-            this.receptionistNavMenu.SelectedHighColor = System.Drawing.Color.Transparent;
-            this.receptionistNavMenu.ShowLines = false;
-            this.receptionistNavMenu.Size = new System.Drawing.Size(187, 670);
-            this.receptionistNavMenu.Style = Sunny.UI.UIStyle.Custom;
-            this.receptionistNavMenu.TabIndex = 13;
-            this.receptionistNavMenu.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.receptionistNavMenu.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.NavMenu.ScrollFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.NavMenu.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.NavMenu.SelectedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
+            this.NavMenu.SelectedHighColor = System.Drawing.Color.Transparent;
+            this.NavMenu.ShowLines = false;
+            this.NavMenu.Size = new System.Drawing.Size(187, 670);
+            this.NavMenu.Style = Sunny.UI.UIStyle.Custom;
+            this.NavMenu.TabIndex = 13;
+            this.NavMenu.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.NavMenu.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "1dashboard.png");
+            this.imageList1.Images.SetKeyName(1, "1dashboardBlue.png");
+            this.imageList1.Images.SetKeyName(2, "1worksheet.png");
+            this.imageList1.Images.SetKeyName(3, "1worksheetBlue.png");
+            this.imageList1.Images.SetKeyName(4, "1profile.png");
+            this.imageList1.Images.SetKeyName(5, "1profileBlue.png");
             // 
             // UC_C_Navmenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.receptionistNavMenu);
+            this.Controls.Add(this.NavMenu);
             this.Name = "UC_C_Navmenu";
             this.Size = new System.Drawing.Size(187, 670);
             this.ResumeLayout(false);
@@ -105,6 +119,7 @@
 
         #endregion
 
-        private Sunny.UI.UINavMenu receptionistNavMenu;
+        private Sunny.UI.UINavMenu NavMenu;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
