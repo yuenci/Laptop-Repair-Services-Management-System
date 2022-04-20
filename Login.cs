@@ -51,8 +51,8 @@ namespace miniSys0._3
 
     }
 
-    public class user_type
+    /*public class user_type
     {
         public string type = "";
-    }
+    }*/
 }

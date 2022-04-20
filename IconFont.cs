@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace miniSys0._3.Iconfont
+namespace miniSys0._3
 {
-    public class IconFont
+    public class IconfontHelper
     {
         private static System.Drawing.Text.PrivateFontCollection pfcc;
 

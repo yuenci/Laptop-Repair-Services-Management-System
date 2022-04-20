@@ -11,13 +11,15 @@ using Sunny.UI;
 
 namespace miniSys0._3
 {
+
     public partial class Main : Form
     {
         public Main()
         {
             InitializeComponent();
             searchBox.Hide();
-            //InitMain();
+            sunnyUIinit();
+            addNavMenu();
         }
         Point mPoint;
         private void drag_down(object sender, MouseEventArgs e)
@@ -61,18 +63,98 @@ namespace miniSys0._3
         public void InitMain()
         {
             int pageIndex = 100;
-            TreeNode parent = NavMenu.CreateNode("DashBoard", pageIndex);
-            NavMenu.CreateChildNode(parent, "Workbench", ++pageIndex);
-            NavMenu.CreateChildNode(parent, "条目2", ++pageIndex);
+            TreeNode parent = receptionistNavMenu.CreateNode("DashBoard", pageIndex);
+            receptionistNavMenu.CreateChildNode(parent, "Workbench", ++pageIndex);
+            receptionistNavMenu.CreateChildNode(parent, "条目2", ++pageIndex);
             pageIndex = 200;
-            parent = NavMenu.CreateNode("Form", pageIndex);
-            NavMenu.CreateChildNode(parent, "Register", ++pageIndex);
-            NavMenu.CreateChildNode(parent, "Payment", ++pageIndex);
+            parent = receptionistNavMenu.CreateNode("Form", pageIndex);
+            receptionistNavMenu.CreateChildNode(parent, "Register", ++pageIndex);
+            receptionistNavMenu.CreateChildNode(parent, "Payment", ++pageIndex);
             pageIndex = 300;
-            parent = NavMenu.CreateNode("Profile", pageIndex);
-            NavMenu.CreateChildNode(parent, "User info", ++pageIndex);
-            NavMenu.CreateChildNode(parent, "User settings", ++pageIndex);
+            parent = receptionistNavMenu.CreateNode("Profile", pageIndex);
+            receptionistNavMenu.CreateChildNode(parent, "User info", ++pageIndex);
+            receptionistNavMenu.CreateChildNode(parent, "User settings", ++pageIndex);
         }
 
+        /*void addIcon()
+        {
+            for (int i = 0; i < receptionistNavMenu.Nodes.Count; i++)
+            {
+                receptionistNavMenu.ImageList = receptionistNavMenuImageList;
+                if (i == 0)
+                {
+                    //NavMenu.Nodes[i].Text = "\ue901";
+                    receptionistNavMenu.Nodes[i].ImageIndex = 0;
+                    //NavMenu.Nodes[i].NodeFont = new Font(IconfontHelper.PFCC.Families[0], 15);
+                }
+            }
+
+            *//*label33.Text = "\ue902 Dashboard";
+            label33.Font = new Font(IconfontHelper.PFCC.Families[0], 20);*/
+
+
+            /*foreach (TreeNode item in NavMenu.Nodes)
+            {
+                item.Text = "lala";
+            }*//*
+        }*/
+
+        void sunnyUIinit()
+        {
+            upperTriangle.ForeColor = Color.Red;
+            upperTriangle.FillColor = Color.Transparent;
+
+            shortcutButton1.FillColor = Color.FromArgb(242, 243, 245);
+            shortcutButton2.FillColor = Color.FromArgb(242, 243, 245);
+            shortcutButton3.FillColor = Color.FromArgb(242, 243, 245);
+            shortcutButton1.SymbolColor = Color.Black;
+            shortcutButton2.SymbolColor = Color.Black;
+            shortcutButton3.SymbolColor = Color.Black;
+            shortcutButton1.RectColor = Color.Transparent;
+            shortcutButton2.RectColor = Color.Transparent;
+            shortcutButton3.RectColor = Color.Transparent;
+            newsTopBar.RectColor = Color.Transparent;
+            newsTopBar.FillColor = Color.FromArgb(242, 243, 245);
+            news1.MarkColor = Color.FromArgb(242, 243, 245);
+            news2.MarkColor = Color.FromArgb(242, 243, 245);
+            news3.MarkColor = Color.FromArgb(242, 243, 245);
+            news4.MarkColor = Color.FromArgb(242, 243, 245);
+            news5.MarkColor = Color.FromArgb(242, 243, 245);
+            //noticeButton1.
+
+            receptionistNavMenu.SelectedHighColor = Color.Transparent;
+
+
+        }
+
+        private void node_click(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left) 
+            {
+                /*if (e.Node.Level == 0)
+                {
+                    //e.Node.Text = "<span style ='color:red'>lalala</span>";
+                    //ForeColor = Color.Red;
+                    //e.Node.ForeColor = Color.Red;
+                    MessageBox.Show(e.Node.Text);
+                }*/
+                if (e.Node.Level == 1)                              
+                {
+
+                    //MessageBox.Show(e.Node.Parent.Text);
+                    //e.Node.Parent.Text = "laaa";
+                }
+            }
+        }
+
+        private void addNavMenu()
+        {
+
+        }
+    }
+
+    public class User_type
+    {
+        public static string user_type = "";
     }
 }
