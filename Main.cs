@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Sunny.UI;
 
 namespace miniSys0._3
 {
@@ -16,6 +17,7 @@ namespace miniSys0._3
         {
             InitializeComponent();
             searchBox.Hide();
+            //InitMain();
         }
         Point mPoint;
         private void drag_down(object sender, MouseEventArgs e)
@@ -55,18 +57,22 @@ namespace miniSys0._3
             searchBox.Text = "Type here to search";
         }
 
-        private void panel_hover(object sender, EventArgs e)
+
+        public void InitMain()
         {
-            dashBoardIcon.ForeColor = Color.FromArgb(51, 112, 255);
-            dashBoardLable.ForeColor = Color.FromArgb(51, 112, 255);
-            dashBoardDown.ForeColor = Color.FromArgb(51, 112, 255);
+            int pageIndex = 100;
+            TreeNode parent = NavMenu.CreateNode("DashBoard", pageIndex);
+            NavMenu.CreateChildNode(parent, "Workbench", ++pageIndex);
+            NavMenu.CreateChildNode(parent, "条目2", ++pageIndex);
+            pageIndex = 200;
+            parent = NavMenu.CreateNode("Form", pageIndex);
+            NavMenu.CreateChildNode(parent, "Register", ++pageIndex);
+            NavMenu.CreateChildNode(parent, "Payment", ++pageIndex);
+            pageIndex = 300;
+            parent = NavMenu.CreateNode("Profile", pageIndex);
+            NavMenu.CreateChildNode(parent, "User info", ++pageIndex);
+            NavMenu.CreateChildNode(parent, "User settings", ++pageIndex);
         }
 
-        private void panel_leave(object sender, EventArgs e)
-        {
-            dashBoardIcon.ForeColor = Color.FromArgb(78, 89, 105);
-            dashBoardLable.ForeColor = Color.FromArgb(78, 89, 105);
-            dashBoardDown.ForeColor = Color.FromArgb(78, 89, 105);
-        }
     }
 }

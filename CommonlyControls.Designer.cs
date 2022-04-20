@@ -39,6 +39,7 @@
             this.uiTextBox1 = new Sunny.UI.UITextBox();
             this.uiUserControl1 = new Sunny.UI.UIUserControl();
             this.uiCheckBox1 = new Sunny.UI.UICheckBox();
+            this.uiNavMenu1 = new Sunny.UI.UINavMenu();
             this.SuspendLayout();
             // 
             // uiAvatar1
@@ -182,11 +183,27 @@
             this.uiCheckBox1.Text = "uiCheckBox1";
             this.uiCheckBox1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // uiNavMenu1
+            // 
+            this.uiNavMenu1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.uiNavMenu1.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll;
+            this.uiNavMenu1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiNavMenu1.FullRowSelect = true;
+            this.uiNavMenu1.ItemHeight = 50;
+            this.uiNavMenu1.Location = new System.Drawing.Point(864, 173);
+            this.uiNavMenu1.Name = "uiNavMenu1";
+            this.uiNavMenu1.ShowLines = false;
+            this.uiNavMenu1.Size = new System.Drawing.Size(176, 332);
+            this.uiNavMenu1.TabIndex = 14;
+            this.uiNavMenu1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiNavMenu1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
             // CommonlyControls
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1150, 725);
+            this.Controls.Add(this.uiNavMenu1);
             this.Controls.Add(this.uiCheckBox1);
             this.Controls.Add(this.uiUserControl1);
             this.Controls.Add(this.uiTextBox1);
@@ -217,5 +234,6 @@
         private Sunny.UI.UITextBox uiTextBox1;
         private Sunny.UI.UIUserControl uiUserControl1;
         private Sunny.UI.UICheckBox uiCheckBox1;
+        private Sunny.UI.UINavMenu uiNavMenu1;
     }
 }
