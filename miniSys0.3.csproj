@@ -80,11 +80,23 @@
     <Compile Include="Controls\UC_A_Navmenu.Designer.cs">
       <DependentUpon>UC_A_Navmenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\UC_A_Shortcut.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UC_A_Shortcut.Designer.cs">
+      <DependentUpon>UC_A_Shortcut.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\UC_C_Navmenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\UC_C_Navmenu.Designer.cs">
       <DependentUpon>UC_C_Navmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UC_C_Shortcut.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UC_C_Shortcut.Designer.cs">
+      <DependentUpon>UC_C_Shortcut.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\UC_forgotPws.cs">
       <SubType>UserControl</SubType>
@@ -110,11 +122,23 @@
     <Compile Include="Controls\UC_R_Navmenu.Designer.cs">
       <DependentUpon>UC_R_Navmenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\UC_R_Shortcut.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UC_R_Shortcut.Designer.cs">
+      <DependentUpon>UC_R_Shortcut.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\UC_T_Navmenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\UC_T_Navmenu.Designer.cs">
       <DependentUpon>UC_T_Navmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UC_T_Shortcut.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UC_T_Shortcut.Designer.cs">
+      <DependentUpon>UC_T_Shortcut.cs</DependentUpon>
     </Compile>
     <Compile Include="CsharpRepairerIncDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -142,8 +166,14 @@
     <EmbeddedResource Include="Controls\UC_A_Navmenu.resx">
       <DependentUpon>UC_A_Navmenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UC_A_Shortcut.resx">
+      <DependentUpon>UC_A_Shortcut.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\UC_C_Navmenu.resx">
       <DependentUpon>UC_C_Navmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UC_C_Shortcut.resx">
+      <DependentUpon>UC_C_Shortcut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\UC_forgotPws.resx">
       <DependentUpon>UC_forgotPws.cs</DependentUpon>
@@ -157,8 +187,14 @@
     <EmbeddedResource Include="Controls\UC_R_Navmenu.resx">
       <DependentUpon>UC_R_Navmenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UC_R_Shortcut.resx">
+      <DependentUpon>UC_R_Shortcut.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\UC_T_Navmenu.resx">
       <DependentUpon>UC_T_Navmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UC_T_Shortcut.resx">
+      <DependentUpon>UC_T_Shortcut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

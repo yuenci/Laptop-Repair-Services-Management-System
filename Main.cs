@@ -18,7 +18,7 @@ namespace miniSys0._3
         public Main()
         {
             InitializeComponent();
-            searchBox.Hide();
+            searchBox.Hide();    
             addNavMenu();
             addMainPanel();
         }
@@ -144,7 +144,6 @@ namespace miniSys0._3
             mainPanel.Controls.Add(uc);
             uc.BringToFront();
         }
-
     }
 
     public class User_type
@@ -154,5 +153,6 @@ namespace miniSys0._3
         // Technician
         // Customer
         // Admin
+        public static string user_name = "Innis Yu";
     }
 }

@@ -2,8 +2,8 @@
  * @Author: Innis
  * @Description: 
  * @Date: 2022-04-19 10:48:59
- * @LastEditTime: 2022-04-20 18:45:43
- * @FilePath: \undefinede:\Materials\【LOOP】\Assignment\miniSys0.3\Html\mainLineChart.html
+ * @LastEditTime: 2022-04-20 23:58:51
+ * @FilePath: \fakeDatae:\Materials\【LOOP】\Assignment\miniSys0.3\Html\mainLineChart.html
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -30,13 +30,22 @@
         <canvas id="myChart" width="400" height="135"></canvas>
     </div>
     <script>
+        var timeList = [];
+
+        for (i = 0; i < 7; i++) {
+            var day1 = new Date();
+            day1.setTime(day1.getTime() - i * 24 * 60 * 60 * 1000);
+            var s1 = day1.getFullYear() + "-" + (day1.getMonth() + 1) + "-" + day1.getDate();
+            timeList.unshift(s1);
+        }
         function show(sqlData) {
             //alert("收到Net程序事件,我是JS弹框.")
             var ctx = document.getElementById("myChart").getContext('2d');
             var myChart = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange", "seven"],
+                    //labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange", "seven"],
+                    labels: timeList,
                     datasets: [{
                         fill: true,
                         lineTension: 0.4,
@@ -45,31 +54,31 @@
                         //pointRadius: 6,
                         data: [
                             {
-                                x: 10,
+                                x: 1,
                                 y: 20
                             },
                             {
-                                x: 15,
+                                x: 2,
                                 y: 10
                             },
                             {
-                                x: 20,
+                                x: 3,
                                 y: 30
                             },
                             {
-                                x: 25,
+                                x: 4,
                                 y: 50
                             },
                             {
-                                x: 30,
+                                x: 5,
                                 y: 70
                             },
                             {
-                                x: 35,
+                                x: 6,
                                 y: 60
                             },
                             {
-                                x: 40,
+                                x: 7,
                                 y: 30
                             }
                         ],

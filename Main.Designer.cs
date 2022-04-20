@@ -31,6 +31,7 @@
             this.panelTop = new System.Windows.Forms.Panel();
             this.searchBox = new Sunny.UI.UITextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.searchIcon = new Sunny.UI.UISymbolButton();
             this.uiSymbolButton3 = new Sunny.UI.UISymbolButton();
             this.uiSymbolButton2 = new Sunny.UI.UISymbolButton();
@@ -38,11 +39,10 @@
             this.profile = new Sunny.UI.UIAvatar();
             this.uiUserControl1 = new Sunny.UI.UIUserControl();
             this.navMenuPanel = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.panelTop.SuspendLayout();
-            this.uiUserControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.uiUserControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTop
@@ -94,6 +94,16 @@
             this.label1.Size = new System.Drawing.Size(98, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "C# Inc";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::miniSys0._3.Properties.Resources.rocket_icon_128;
+            this.pictureBox2.Location = new System.Drawing.Point(10, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // searchIcon
             // 
@@ -236,16 +246,6 @@
             this.navMenuPanel.Size = new System.Drawing.Size(187, 670);
             this.navMenuPanel.TabIndex = 0;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::miniSys0._3.Properties.Resources.rocket_icon_128;
-            this.pictureBox2.Location = new System.Drawing.Point(10, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
             // mainPanel
             // 
             this.mainPanel.Location = new System.Drawing.Point(207, 67);
@@ -268,8 +268,8 @@
             this.Text = "Main";
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
-            this.uiUserControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.uiUserControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

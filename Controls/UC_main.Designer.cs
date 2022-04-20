@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.uiUserControl7 = new Sunny.UI.UIUserControl();
             this.notice3 = new Sunny.UI.UIButton();
             this.notice2 = new Sunny.UI.UIButton();
@@ -51,15 +50,17 @@
             this.label19 = new System.Windows.Forms.Label();
             this.uiUserControl2 = new Sunny.UI.UIUserControl();
             this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.shortcutButton3 = new Sunny.UI.UISymbolButton();
-            this.shortcutButton2 = new Sunny.UI.UISymbolButton();
-            this.shortcutButton1 = new Sunny.UI.UISymbolButton();
             this.uiUserControl5 = new Sunny.UI.UIUserControl();
             this.pieChartPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.refreshlButton2 = new Sunny.UI.UISymbolButton();
             this.uiUserControl4 = new Sunny.UI.UIUserControl();
+            this.newslabel5 = new System.Windows.Forms.Label();
+            this.newslabel4 = new System.Windows.Forms.Label();
+            this.newslabel3 = new System.Windows.Forms.Label();
+            this.newslabel2 = new System.Windows.Forms.Label();
+            this.newslabel1 = new System.Windows.Forms.Label();
+            this.news1 = new Sunny.UI.UIMarkLabel();
             this.news5 = new Sunny.UI.UIMarkLabel();
             this.news4 = new Sunny.UI.UIMarkLabel();
             this.news3 = new Sunny.UI.UIMarkLabel();
@@ -68,31 +69,29 @@
             this.label32 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.news1 = new Sunny.UI.UIMarkLabel();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.uiUserControl3 = new Sunny.UI.UIUserControl();
             this.lineChartPanel = new System.Windows.Forms.Panel();
+            this.refreshlButton1 = new Sunny.UI.UISymbolButton();
             this.upperTriangle = new Sunny.UI.UIAvatar();
-            this.label9 = new System.Windows.Forms.Label();
+            this.BannerLabel4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.BannerLabel3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.BannerLabel2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.BannerLabel1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.name_lable = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.refreshlButton1 = new Sunny.UI.UISymbolButton();
-            this.refreshlButton2 = new Sunny.UI.UISymbolButton();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ShortcutPanel = new System.Windows.Forms.Panel();
             this.uiUserControl7.SuspendLayout();
             this.uiUserControl6.SuspendLayout();
             this.uiUserControl2.SuspendLayout();
@@ -107,18 +106,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::miniSys0._3.Properties.Resources.tou_alpha;
-            this.pictureBox1.Location = new System.Drawing.Point(853, 149);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(266, 164);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
             // 
             // uiUserControl7
             // 
@@ -394,13 +383,8 @@
             // uiUserControl2
             // 
             this.uiUserControl2.BackColor = System.Drawing.Color.White;
+            this.uiUserControl2.Controls.Add(this.ShortcutPanel);
             this.uiUserControl2.Controls.Add(this.label14);
-            this.uiUserControl2.Controls.Add(this.label13);
-            this.uiUserControl2.Controls.Add(this.label12);
-            this.uiUserControl2.Controls.Add(this.label11);
-            this.uiUserControl2.Controls.Add(this.shortcutButton3);
-            this.uiUserControl2.Controls.Add(this.shortcutButton2);
-            this.uiUserControl2.Controls.Add(this.shortcutButton1);
             this.uiUserControl2.FillColor = System.Drawing.Color.White;
             this.uiUserControl2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiUserControl2.Location = new System.Drawing.Point(850, 1);
@@ -421,81 +405,9 @@
             this.label14.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
             this.label14.Location = new System.Drawing.Point(6, 4);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(88, 28);
+            this.label14.Size = new System.Drawing.Size(96, 28);
             this.label14.TabIndex = 30;
-            this.label14.Text = "Shorcut";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font(".萍方-简", 10F);
-            this.label13.Location = new System.Drawing.Point(187, 104);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(70, 20);
-            this.label13.TabIndex = 32;
-            this.label13.Text = "All orders";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font(".萍方-简", 10F);
-            this.label12.Location = new System.Drawing.Point(95, 104);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(70, 20);
-            this.label12.TabIndex = 31;
-            this.label12.Text = "All orders";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font(".萍方-简", 10F);
-            this.label11.Location = new System.Drawing.Point(3, 104);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(70, 20);
-            this.label11.TabIndex = 30;
-            this.label11.Text = "All orders";
-            // 
-            // shortcutButton3
-            // 
-            this.shortcutButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.shortcutButton3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.shortcutButton3.Location = new System.Drawing.Point(201, 48);
-            this.shortcutButton3.MinimumSize = new System.Drawing.Size(1, 1);
-            this.shortcutButton3.Name = "shortcutButton3";
-            this.shortcutButton3.Size = new System.Drawing.Size(50, 50);
-            this.shortcutButton3.Style = Sunny.UI.UIStyle.Custom;
-            this.shortcutButton3.Symbol = 61442;
-            this.shortcutButton3.TabIndex = 17;
-            this.shortcutButton3.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.shortcutButton3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // shortcutButton2
-            // 
-            this.shortcutButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.shortcutButton2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.shortcutButton2.Location = new System.Drawing.Point(107, 48);
-            this.shortcutButton2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.shortcutButton2.Name = "shortcutButton2";
-            this.shortcutButton2.Size = new System.Drawing.Size(50, 50);
-            this.shortcutButton2.Style = Sunny.UI.UIStyle.Custom;
-            this.shortcutButton2.Symbol = 61442;
-            this.shortcutButton2.TabIndex = 16;
-            this.shortcutButton2.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.shortcutButton2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // shortcutButton1
-            // 
-            this.shortcutButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.shortcutButton1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.shortcutButton1.Location = new System.Drawing.Point(13, 48);
-            this.shortcutButton1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.shortcutButton1.Name = "shortcutButton1";
-            this.shortcutButton1.Size = new System.Drawing.Size(50, 50);
-            this.shortcutButton1.Style = Sunny.UI.UIStyle.Custom;
-            this.shortcutButton1.Symbol = 61442;
-            this.shortcutButton1.TabIndex = 15;
-            this.shortcutButton1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.shortcutButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.label14.Text = "Shortcut";
             // 
             // uiUserControl5
             // 
@@ -524,15 +436,45 @@
             this.pieChartPanel.Size = new System.Drawing.Size(378, 273);
             this.pieChartPanel.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(6, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 28);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "Ratio";
+            // 
+            // refreshlButton2
+            // 
+            this.refreshlButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.refreshlButton2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.refreshlButton2.Location = new System.Drawing.Point(322, 0);
+            this.refreshlButton2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.refreshlButton2.Name = "refreshlButton2";
+            this.refreshlButton2.Size = new System.Drawing.Size(35, 35);
+            this.refreshlButton2.Style = Sunny.UI.UIStyle.Custom;
+            this.refreshlButton2.Symbol = 57386;
+            this.refreshlButton2.TabIndex = 2;
+            this.refreshlButton2.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.refreshlButton2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.refreshlButton2.Click += new System.EventHandler(this.refreshlButton2_Click);
+            // 
             // uiUserControl4
             // 
             this.uiUserControl4.BackColor = System.Drawing.Color.White;
+            this.uiUserControl4.Controls.Add(this.newslabel5);
+            this.uiUserControl4.Controls.Add(this.newslabel4);
+            this.uiUserControl4.Controls.Add(this.newslabel3);
+            this.uiUserControl4.Controls.Add(this.newslabel2);
+            this.uiUserControl4.Controls.Add(this.newslabel1);
+            this.uiUserControl4.Controls.Add(this.news1);
             this.uiUserControl4.Controls.Add(this.news5);
             this.uiUserControl4.Controls.Add(this.news4);
             this.uiUserControl4.Controls.Add(this.news3);
             this.uiUserControl4.Controls.Add(this.news2);
             this.uiUserControl4.Controls.Add(this.newsTopBar);
-            this.uiUserControl4.Controls.Add(this.news1);
             this.uiUserControl4.Controls.Add(this.label17);
             this.uiUserControl4.Controls.Add(this.label16);
             this.uiUserControl4.FillColor = System.Drawing.Color.White;
@@ -549,6 +491,69 @@
             this.uiUserControl4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiUserControl4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // newslabel5
+            // 
+            this.newslabel5.AutoSize = true;
+            this.newslabel5.Location = new System.Drawing.Point(361, 245);
+            this.newslabel5.Name = "newslabel5";
+            this.newslabel5.Size = new System.Drawing.Size(64, 21);
+            this.newslabel5.TabIndex = 47;
+            this.newslabel5.Text = "label37";
+            // 
+            // newslabel4
+            // 
+            this.newslabel4.AutoSize = true;
+            this.newslabel4.Location = new System.Drawing.Point(361, 208);
+            this.newslabel4.Name = "newslabel4";
+            this.newslabel4.Size = new System.Drawing.Size(64, 21);
+            this.newslabel4.TabIndex = 46;
+            this.newslabel4.Text = "label36";
+            // 
+            // newslabel3
+            // 
+            this.newslabel3.AutoSize = true;
+            this.newslabel3.Location = new System.Drawing.Point(361, 171);
+            this.newslabel3.Name = "newslabel3";
+            this.newslabel3.Size = new System.Drawing.Size(64, 21);
+            this.newslabel3.TabIndex = 45;
+            this.newslabel3.Text = "label35";
+            // 
+            // newslabel2
+            // 
+            this.newslabel2.AutoSize = true;
+            this.newslabel2.Location = new System.Drawing.Point(361, 134);
+            this.newslabel2.Name = "newslabel2";
+            this.newslabel2.Size = new System.Drawing.Size(64, 21);
+            this.newslabel2.TabIndex = 44;
+            this.newslabel2.Text = "label34";
+            // 
+            // newslabel1
+            // 
+            this.newslabel1.AutoSize = true;
+            this.newslabel1.Location = new System.Drawing.Point(361, 97);
+            this.newslabel1.Name = "newslabel1";
+            this.newslabel1.Size = new System.Drawing.Size(64, 21);
+            this.newslabel1.TabIndex = 43;
+            this.newslabel1.Text = "label33";
+            // 
+            // news1
+            // 
+            this.news1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.news1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.news1.Location = new System.Drawing.Point(17, 92);
+            this.news1.MarkPos = Sunny.UI.UIMarkLabel.UIMarkPos.Bottom;
+            this.news1.MarkSize = 2;
+            this.news1.Name = "news1";
+            this.news1.Padding = new System.Windows.Forms.Padding(25, 0, 0, 5);
+            this.news1.Size = new System.Drawing.Size(412, 34);
+            this.news1.Style = Sunny.UI.UIStyle.Custom;
+            this.news1.TabIndex = 42;
+            this.news1.Text = "1      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...";
+            this.news1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.news1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.news1.MouseLeave += new System.EventHandler(this.n1_leave);
+            this.news1.MouseHover += new System.EventHandler(this.n1_hover);
+            // 
             // news5
             // 
             this.news5.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -561,9 +566,11 @@
             this.news5.Size = new System.Drawing.Size(412, 34);
             this.news5.Style = Sunny.UI.UIStyle.Custom;
             this.news5.TabIndex = 41;
-            this.news5.Text = "5        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...        8";
+            this.news5.Text = "5      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...";
             this.news5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.news5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.news5.MouseLeave += new System.EventHandler(this.n5_leave);
+            this.news5.MouseHover += new System.EventHandler(this.n5_hover);
             // 
             // news4
             // 
@@ -577,9 +584,11 @@
             this.news4.Size = new System.Drawing.Size(412, 34);
             this.news4.Style = Sunny.UI.UIStyle.Custom;
             this.news4.TabIndex = 40;
-            this.news4.Text = "4        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...        8";
+            this.news4.Text = "4      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...";
             this.news4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.news4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.news4.MouseLeave += new System.EventHandler(this.n4_leave);
+            this.news4.MouseHover += new System.EventHandler(this.n4_hover);
             // 
             // news3
             // 
@@ -593,9 +602,11 @@
             this.news3.Size = new System.Drawing.Size(412, 34);
             this.news3.Style = Sunny.UI.UIStyle.Custom;
             this.news3.TabIndex = 39;
-            this.news3.Text = "3        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...        8";
+            this.news3.Text = "3      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...";
             this.news3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.news3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.news3.MouseLeave += new System.EventHandler(this.n3_leave);
+            this.news3.MouseHover += new System.EventHandler(this.n3_hover);
             // 
             // news2
             // 
@@ -609,9 +620,11 @@
             this.news2.Size = new System.Drawing.Size(412, 34);
             this.news2.Style = Sunny.UI.UIStyle.Custom;
             this.news2.TabIndex = 38;
-            this.news2.Text = "2        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...        8";
+            this.news2.Text = "2      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...";
             this.news2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.news2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.news2.MouseLeave += new System.EventHandler(this.n2_leave);
+            this.news2.MouseHover += new System.EventHandler(this.n2_hover);
             // 
             // newsTopBar
             // 
@@ -646,7 +659,7 @@
             this.label31.AutoSize = true;
             this.label31.BackColor = System.Drawing.Color.Transparent;
             this.label31.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label31.Location = new System.Drawing.Point(76, 5);
+            this.label31.Location = new System.Drawing.Point(64, 5);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(44, 22);
             this.label31.TabIndex = 54;
@@ -662,22 +675,6 @@
             this.label30.Size = new System.Drawing.Size(40, 22);
             this.label30.TabIndex = 53;
             this.label30.Text = "Top";
-            // 
-            // news1
-            // 
-            this.news1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.news1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.news1.Location = new System.Drawing.Point(17, 93);
-            this.news1.MarkPos = Sunny.UI.UIMarkLabel.UIMarkPos.Bottom;
-            this.news1.MarkSize = 2;
-            this.news1.Name = "news1";
-            this.news1.Padding = new System.Windows.Forms.Padding(25, 0, 0, 5);
-            this.news1.Size = new System.Drawing.Size(412, 34);
-            this.news1.Style = Sunny.UI.UIStyle.Custom;
-            this.news1.TabIndex = 36;
-            this.news1.Text = "1        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...        8";
-            this.news1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.news1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // label17
             // 
@@ -706,19 +703,19 @@
             this.uiUserControl3.BackColor = System.Drawing.Color.White;
             this.uiUserControl3.Controls.Add(this.lineChartPanel);
             this.uiUserControl3.Controls.Add(this.upperTriangle);
-            this.uiUserControl3.Controls.Add(this.label9);
+            this.uiUserControl3.Controls.Add(this.BannerLabel4);
             this.uiUserControl3.Controls.Add(this.label10);
-            this.uiUserControl3.Controls.Add(this.label7);
+            this.uiUserControl3.Controls.Add(this.BannerLabel3);
             this.uiUserControl3.Controls.Add(this.label8);
-            this.uiUserControl3.Controls.Add(this.label5);
+            this.uiUserControl3.Controls.Add(this.BannerLabel2);
             this.uiUserControl3.Controls.Add(this.label6);
-            this.uiUserControl3.Controls.Add(this.label4);
+            this.uiUserControl3.Controls.Add(this.BannerLabel1);
             this.uiUserControl3.Controls.Add(this.label3);
             this.uiUserControl3.Controls.Add(this.pictureBox7);
             this.uiUserControl3.Controls.Add(this.pictureBox6);
             this.uiUserControl3.Controls.Add(this.pictureBox5);
             this.uiUserControl3.Controls.Add(this.pictureBox4);
-            this.uiUserControl3.Controls.Add(this.label2);
+            this.uiUserControl3.Controls.Add(this.name_lable);
             this.uiUserControl3.Controls.Add(this.pictureBox3);
             this.uiUserControl3.Controls.Add(this.panel1);
             this.uiUserControl3.FillColor = System.Drawing.Color.White;
@@ -743,6 +740,21 @@
             this.lineChartPanel.Size = new System.Drawing.Size(833, 290);
             this.lineChartPanel.TabIndex = 30;
             // 
+            // refreshlButton1
+            // 
+            this.refreshlButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.refreshlButton1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.refreshlButton1.Location = new System.Drawing.Point(780, 4);
+            this.refreshlButton1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.refreshlButton1.Name = "refreshlButton1";
+            this.refreshlButton1.Size = new System.Drawing.Size(35, 35);
+            this.refreshlButton1.Style = Sunny.UI.UIStyle.Custom;
+            this.refreshlButton1.Symbol = 57386;
+            this.refreshlButton1.TabIndex = 1;
+            this.refreshlButton1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.refreshlButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.refreshlButton1.Click += new System.EventHandler(this.refreshlButton_Click);
+            // 
             // upperTriangle
             // 
             this.upperTriangle.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -758,15 +770,15 @@
             this.upperTriangle.Text = "uiAvatar1";
             this.upperTriangle.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // label9
+            // BannerLabel4
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(719, 94);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 34);
-            this.label9.TabIndex = 28;
-            this.label9.Text = "2.8%";
+            this.BannerLabel4.AutoSize = true;
+            this.BannerLabel4.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Bold);
+            this.BannerLabel4.Location = new System.Drawing.Point(719, 94);
+            this.BannerLabel4.Name = "BannerLabel4";
+            this.BannerLabel4.Size = new System.Drawing.Size(76, 34);
+            this.BannerLabel4.TabIndex = 28;
+            this.BannerLabel4.Text = "2.8%";
             // 
             // label10
             // 
@@ -778,15 +790,15 @@
             this.label10.TabIndex = 27;
             this.label10.Text = "Compare";
             // 
-            // label7
+            // BannerLabel3
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(510, 94);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 34);
-            this.label7.TabIndex = 26;
-            this.label7.Text = "200+";
+            this.BannerLabel3.AutoSize = true;
+            this.BannerLabel3.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Bold);
+            this.BannerLabel3.Location = new System.Drawing.Point(510, 94);
+            this.BannerLabel3.Name = "BannerLabel3";
+            this.BannerLabel3.Size = new System.Drawing.Size(75, 34);
+            this.BannerLabel3.TabIndex = 26;
+            this.BannerLabel3.Text = "200+";
             // 
             // label8
             // 
@@ -798,15 +810,15 @@
             this.label8.TabIndex = 25;
             this.label8.Text = "Today\'s order";
             // 
-            // label5
+            // BannerLabel2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(291, 94);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 34);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "200+";
+            this.BannerLabel2.AutoSize = true;
+            this.BannerLabel2.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Bold);
+            this.BannerLabel2.Location = new System.Drawing.Point(291, 94);
+            this.BannerLabel2.Name = "BannerLabel2";
+            this.BannerLabel2.Size = new System.Drawing.Size(75, 34);
+            this.BannerLabel2.TabIndex = 24;
+            this.BannerLabel2.Text = "200+";
             // 
             // label6
             // 
@@ -818,15 +830,15 @@
             this.label6.TabIndex = 23;
             this.label6.Text = "Servicing";
             // 
-            // label4
+            // BannerLabel1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(82, 94);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 34);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "5000+";
+            this.BannerLabel1.AutoSize = true;
+            this.BannerLabel1.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Bold);
+            this.BannerLabel1.Location = new System.Drawing.Point(82, 94);
+            this.BannerLabel1.Name = "BannerLabel1";
+            this.BannerLabel1.Size = new System.Drawing.Size(90, 34);
+            this.BannerLabel1.TabIndex = 22;
+            this.BannerLabel1.Text = "5000+";
             // 
             // label3
             // 
@@ -878,15 +890,15 @@
             this.pictureBox4.TabIndex = 16;
             this.pictureBox4.TabStop = false;
             // 
-            // label2
+            // name_lable
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font(".萍方-简", 16F);
-            this.label2.Location = new System.Drawing.Point(53, 14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(337, 31);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Welcome back，Ryan Septimus";
+            this.name_lable.AutoSize = true;
+            this.name_lable.Font = new System.Drawing.Font(".萍方-简", 16F);
+            this.name_lable.Location = new System.Drawing.Point(53, 14);
+            this.name_lable.Name = "name_lable";
+            this.name_lable.Size = new System.Drawing.Size(337, 31);
+            this.name_lable.TabIndex = 15;
+            this.name_lable.Text = "Welcome back，Ryan Septimus";
             // 
             // pictureBox3
             // 
@@ -906,65 +918,24 @@
             this.panel1.Size = new System.Drawing.Size(810, 2);
             this.panel1.TabIndex = 0;
             // 
-            // refreshlButton1
+            // pictureBox1
             // 
-            this.refreshlButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.refreshlButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.refreshlButton1.FillHoverColor = System.Drawing.Color.Gainsboro;
-            this.refreshlButton1.FillPressColor = System.Drawing.Color.Silver;
-            this.refreshlButton1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.refreshlButton1.Location = new System.Drawing.Point(780, 4);
-            this.refreshlButton1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.refreshlButton1.Name = "refreshlButton1";
-            this.refreshlButton1.RectColor = System.Drawing.Color.Transparent;
-            this.refreshlButton1.RectHoverColor = System.Drawing.Color.Transparent;
-            this.refreshlButton1.RectPressColor = System.Drawing.Color.Transparent;
-            this.refreshlButton1.RectSelectedColor = System.Drawing.Color.Transparent;
-            this.refreshlButton1.Size = new System.Drawing.Size(35, 35);
-            this.refreshlButton1.Style = Sunny.UI.UIStyle.Custom;
-            this.refreshlButton1.Symbol = 57386;
-            this.refreshlButton1.SymbolColor = System.Drawing.Color.Black;
-            this.refreshlButton1.SymbolHoverColor = System.Drawing.Color.Black;
-            this.refreshlButton1.SymbolPressColor = System.Drawing.Color.Black;
-            this.refreshlButton1.TabIndex = 1;
-            this.refreshlButton1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.refreshlButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.refreshlButton1.Click += new System.EventHandler(this.refreshlButton_Click);
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::miniSys0._3.Properties.Resources.tou_alpha;
+            this.pictureBox1.Location = new System.Drawing.Point(853, 149);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(266, 164);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
             // 
-            // refreshlButton2
+            // ShortcutPanel
             // 
-            this.refreshlButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.refreshlButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.refreshlButton2.FillHoverColor = System.Drawing.Color.Gainsboro;
-            this.refreshlButton2.FillPressColor = System.Drawing.Color.Silver;
-            this.refreshlButton2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.refreshlButton2.Location = new System.Drawing.Point(322, 0);
-            this.refreshlButton2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.refreshlButton2.Name = "refreshlButton2";
-            this.refreshlButton2.RectColor = System.Drawing.Color.Transparent;
-            this.refreshlButton2.RectHoverColor = System.Drawing.Color.Transparent;
-            this.refreshlButton2.RectPressColor = System.Drawing.Color.Transparent;
-            this.refreshlButton2.RectSelectedColor = System.Drawing.Color.Transparent;
-            this.refreshlButton2.Size = new System.Drawing.Size(35, 35);
-            this.refreshlButton2.Style = Sunny.UI.UIStyle.Custom;
-            this.refreshlButton2.Symbol = 57386;
-            this.refreshlButton2.SymbolColor = System.Drawing.Color.Black;
-            this.refreshlButton2.SymbolHoverColor = System.Drawing.Color.Black;
-            this.refreshlButton2.SymbolPressColor = System.Drawing.Color.Black;
-            this.refreshlButton2.TabIndex = 2;
-            this.refreshlButton2.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.refreshlButton2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.refreshlButton2.Click += new System.EventHandler(this.refreshlButton2_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(6, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 28);
-            this.label1.TabIndex = 42;
-            this.label1.Text = "Ratio";
+            this.ShortcutPanel.BackColor = System.Drawing.Color.Gray;
+            this.ShortcutPanel.Location = new System.Drawing.Point(-3, 36);
+            this.ShortcutPanel.Name = "ShortcutPanel";
+            this.ShortcutPanel.Size = new System.Drawing.Size(270, 100);
+            this.ShortcutPanel.TabIndex = 31;
             // 
             // UC_main
             // 
@@ -978,8 +949,7 @@
             this.Controls.Add(this.uiUserControl4);
             this.Controls.Add(this.uiUserControl3);
             this.Name = "UC_main";
-            this.Size = new System.Drawing.Size(1125, 790);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Size = new System.Drawing.Size(1125, 720);
             this.uiUserControl7.ResumeLayout(false);
             this.uiUserControl7.PerformLayout();
             this.uiUserControl6.ResumeLayout(false);
@@ -1001,6 +971,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1030,12 +1001,6 @@
         private System.Windows.Forms.Label label19;
         private Sunny.UI.UIUserControl uiUserControl2;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private Sunny.UI.UISymbolButton shortcutButton3;
-        private Sunny.UI.UISymbolButton shortcutButton2;
-        private Sunny.UI.UISymbolButton shortcutButton1;
         private Sunny.UI.UIUserControl uiUserControl5;
         private System.Windows.Forms.Panel pieChartPanel;
         private Sunny.UI.UIUserControl uiUserControl4;
@@ -1047,29 +1012,35 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label30;
-        private Sunny.UI.UIMarkLabel news1;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private Sunny.UI.UIUserControl uiUserControl3;
         private System.Windows.Forms.Panel lineChartPanel;
         private Sunny.UI.UIAvatar upperTriangle;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label BannerLabel4;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label BannerLabel3;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label BannerLabel2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label BannerLabel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label name_lable;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel1;
         private Sunny.UI.UISymbolButton refreshlButton1;
         private Sunny.UI.UISymbolButton refreshlButton2;
         private System.Windows.Forms.Label label1;
+        private Sunny.UI.UIMarkLabel news1;
+        private System.Windows.Forms.Label newslabel5;
+        private System.Windows.Forms.Label newslabel4;
+        private System.Windows.Forms.Label newslabel3;
+        private System.Windows.Forms.Label newslabel2;
+        private System.Windows.Forms.Label newslabel1;
+        private System.Windows.Forms.Panel ShortcutPanel;
     }
 }
