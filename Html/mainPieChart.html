@@ -19,22 +19,28 @@
             overflow-y: hidden;
             overflow-x: hidden;
         }
+
+        #box {
+            position: absolute;
+            left: 40px;
+            top: -30px;
+        }
     </style>
     <!--<script src="https://cdn.bootcdn.net/ajax/libs/Chart.js/3.7.0/chart.js"></script> -->
-    <script src="chart.js"></script>
+    <script src="chart1.js"></script>
 </head>
 
 <body>
     <!-- <button onclick="show()">click</button> -->
-    <div style="height:40%;width:40%;">
-        <canvas id="myChart" width="135" height="135"></canvas>
+    <div id="box" style="height:70%;width:90%;">
+        <canvas id="myChart" width="400" height="400"></canvas>
     </div>
     <script>
-        function show(sqlData) {
+        function show1(sqlData) {
             //alert("收到Net程序事件,我是JS弹框.")
             var ctx = document.getElementById("myChart").getContext('2d');
             var myChart = new Chart(ctx, {
-                type: "pie",
+                type: "doughnut",
                 data: {
                     labels: ["Red", "Yellow", "Blue"],
                     datasets: [
@@ -49,10 +55,16 @@
                     ]
                 },
                 options: {
-                    responsive: true
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: "right"
+                        }
+                    }
                 }
             });
         }
+        show1(8);
     </script>
 </body>
 

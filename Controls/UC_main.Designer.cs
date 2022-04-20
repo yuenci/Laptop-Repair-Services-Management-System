@@ -30,11 +30,11 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.uiUserControl7 = new Sunny.UI.UIUserControl();
-            this.uiButton7 = new Sunny.UI.UIButton();
-            this.uiButton6 = new Sunny.UI.UIButton();
-            this.uiButton3 = new Sunny.UI.UIButton();
-            this.uiButton5 = new Sunny.UI.UIButton();
-            this.uiButton4 = new Sunny.UI.UIButton();
+            this.notice3 = new Sunny.UI.UIButton();
+            this.notice2 = new Sunny.UI.UIButton();
+            this.notice4 = new Sunny.UI.UIButton();
+            this.notice5 = new Sunny.UI.UIButton();
+            this.notice1 = new Sunny.UI.UIButton();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -91,6 +91,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.refreshlButton1 = new Sunny.UI.UISymbolButton();
             this.refreshlButton2 = new Sunny.UI.UISymbolButton();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.uiUserControl7.SuspendLayout();
             this.uiUserControl6.SuspendLayout();
@@ -122,11 +123,11 @@
             // uiUserControl7
             // 
             this.uiUserControl7.BackColor = System.Drawing.Color.White;
-            this.uiUserControl7.Controls.Add(this.uiButton7);
-            this.uiUserControl7.Controls.Add(this.uiButton6);
-            this.uiUserControl7.Controls.Add(this.uiButton3);
-            this.uiUserControl7.Controls.Add(this.uiButton5);
-            this.uiUserControl7.Controls.Add(this.uiButton4);
+            this.uiUserControl7.Controls.Add(this.notice3);
+            this.uiUserControl7.Controls.Add(this.notice2);
+            this.uiUserControl7.Controls.Add(this.notice4);
+            this.uiUserControl7.Controls.Add(this.notice5);
+            this.uiUserControl7.Controls.Add(this.notice1);
             this.uiUserControl7.Controls.Add(this.label25);
             this.uiUserControl7.Controls.Add(this.label24);
             this.uiUserControl7.Controls.Add(this.label23);
@@ -149,80 +150,80 @@
             this.uiUserControl7.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiUserControl7.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiButton7
+            // notice3
             // 
-            this.uiButton7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton7.Enabled = false;
-            this.uiButton7.Font = new System.Drawing.Font(".萍方-简", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton7.Location = new System.Drawing.Point(13, 117);
-            this.uiButton7.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton7.Name = "uiButton7";
-            this.uiButton7.Size = new System.Drawing.Size(65, 30);
-            this.uiButton7.Style = Sunny.UI.UIStyle.Custom;
-            this.uiButton7.TabIndex = 33;
-            this.uiButton7.Text = "Advice";
-            this.uiButton7.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton7.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.notice3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.notice3.Enabled = false;
+            this.notice3.Font = new System.Drawing.Font(".萍方-简", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.notice3.Location = new System.Drawing.Point(13, 117);
+            this.notice3.MinimumSize = new System.Drawing.Size(1, 1);
+            this.notice3.Name = "notice3";
+            this.notice3.Size = new System.Drawing.Size(65, 30);
+            this.notice3.Style = Sunny.UI.UIStyle.Custom;
+            this.notice3.TabIndex = 33;
+            this.notice3.Text = "Advice";
+            this.notice3.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.notice3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiButton6
+            // notice2
             // 
-            this.uiButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton6.Enabled = false;
-            this.uiButton6.Font = new System.Drawing.Font(".萍方-简", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton6.Location = new System.Drawing.Point(13, 80);
-            this.uiButton6.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton6.Name = "uiButton6";
-            this.uiButton6.Size = new System.Drawing.Size(65, 30);
-            this.uiButton6.Style = Sunny.UI.UIStyle.Custom;
-            this.uiButton6.TabIndex = 33;
-            this.uiButton6.Text = "Message";
-            this.uiButton6.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton6.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.notice2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.notice2.Enabled = false;
+            this.notice2.Font = new System.Drawing.Font(".萍方-简", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.notice2.Location = new System.Drawing.Point(13, 80);
+            this.notice2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.notice2.Name = "notice2";
+            this.notice2.Size = new System.Drawing.Size(65, 30);
+            this.notice2.Style = Sunny.UI.UIStyle.Custom;
+            this.notice2.TabIndex = 33;
+            this.notice2.Text = "Message";
+            this.notice2.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.notice2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiButton3
+            // notice4
             // 
-            this.uiButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton3.Enabled = false;
-            this.uiButton3.Font = new System.Drawing.Font(".萍方-简", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton3.Location = new System.Drawing.Point(13, 154);
-            this.uiButton3.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton3.Name = "uiButton3";
-            this.uiButton3.Size = new System.Drawing.Size(65, 30);
-            this.uiButton3.Style = Sunny.UI.UIStyle.Custom;
-            this.uiButton3.TabIndex = 32;
-            this.uiButton3.Text = "Advice";
-            this.uiButton3.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.notice4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.notice4.Enabled = false;
+            this.notice4.Font = new System.Drawing.Font(".萍方-简", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.notice4.Location = new System.Drawing.Point(13, 154);
+            this.notice4.MinimumSize = new System.Drawing.Size(1, 1);
+            this.notice4.Name = "notice4";
+            this.notice4.Size = new System.Drawing.Size(65, 30);
+            this.notice4.Style = Sunny.UI.UIStyle.Custom;
+            this.notice4.TabIndex = 32;
+            this.notice4.Text = "Advice";
+            this.notice4.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.notice4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiButton5
+            // notice5
             // 
-            this.uiButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton5.Enabled = false;
-            this.uiButton5.Font = new System.Drawing.Font(".萍方-简", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton5.Location = new System.Drawing.Point(13, 191);
-            this.uiButton5.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton5.Name = "uiButton5";
-            this.uiButton5.Size = new System.Drawing.Size(65, 30);
-            this.uiButton5.Style = Sunny.UI.UIStyle.Custom;
-            this.uiButton5.TabIndex = 32;
-            this.uiButton5.Text = "Message";
-            this.uiButton5.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.notice5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.notice5.Enabled = false;
+            this.notice5.Font = new System.Drawing.Font(".萍方-简", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.notice5.Location = new System.Drawing.Point(13, 191);
+            this.notice5.MinimumSize = new System.Drawing.Size(1, 1);
+            this.notice5.Name = "notice5";
+            this.notice5.Size = new System.Drawing.Size(65, 30);
+            this.notice5.Style = Sunny.UI.UIStyle.Custom;
+            this.notice5.TabIndex = 32;
+            this.notice5.Text = "Message";
+            this.notice5.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.notice5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiButton4
+            // notice1
             // 
-            this.uiButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton4.Enabled = false;
-            this.uiButton4.Font = new System.Drawing.Font(".萍方-简", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton4.Location = new System.Drawing.Point(13, 43);
-            this.uiButton4.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton4.Name = "uiButton4";
-            this.uiButton4.Size = new System.Drawing.Size(65, 30);
-            this.uiButton4.Style = Sunny.UI.UIStyle.Custom;
-            this.uiButton4.TabIndex = 32;
-            this.uiButton4.Text = "Activity";
-            this.uiButton4.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.notice1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.notice1.Enabled = false;
+            this.notice1.Font = new System.Drawing.Font(".萍方-简", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.notice1.Location = new System.Drawing.Point(13, 43);
+            this.notice1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.notice1.Name = "notice1";
+            this.notice1.Size = new System.Drawing.Size(65, 30);
+            this.notice1.Style = Sunny.UI.UIStyle.Custom;
+            this.notice1.TabIndex = 32;
+            this.notice1.Text = "Activity";
+            this.notice1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.notice1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // label25
             // 
@@ -516,10 +517,11 @@
             // 
             // pieChartPanel
             // 
+            this.pieChartPanel.Controls.Add(this.label1);
             this.pieChartPanel.Controls.Add(this.refreshlButton2);
-            this.pieChartPanel.Location = new System.Drawing.Point(15, 11);
+            this.pieChartPanel.Location = new System.Drawing.Point(3, 3);
             this.pieChartPanel.Name = "pieChartPanel";
-            this.pieChartPanel.Size = new System.Drawing.Size(357, 259);
+            this.pieChartPanel.Size = new System.Drawing.Size(378, 273);
             this.pieChartPanel.TabIndex = 0;
             // 
             // uiUserControl4
@@ -551,7 +553,7 @@
             // 
             this.news5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.news5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.news5.Location = new System.Drawing.Point(17, 236);
+            this.news5.Location = new System.Drawing.Point(17, 241);
             this.news5.MarkPos = Sunny.UI.UIMarkLabel.UIMarkPos.Bottom;
             this.news5.MarkSize = 2;
             this.news5.Name = "news5";
@@ -559,7 +561,7 @@
             this.news5.Size = new System.Drawing.Size(412, 34);
             this.news5.Style = Sunny.UI.UIStyle.Custom;
             this.news5.TabIndex = 41;
-            this.news5.Text = "5        xxxxxxxxxxxxxxxxxxxxxxxxxxxxx...        8";
+            this.news5.Text = "5        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...        8";
             this.news5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.news5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
@@ -567,7 +569,7 @@
             // 
             this.news4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.news4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.news4.Location = new System.Drawing.Point(17, 202);
+            this.news4.Location = new System.Drawing.Point(17, 204);
             this.news4.MarkPos = Sunny.UI.UIMarkLabel.UIMarkPos.Bottom;
             this.news4.MarkSize = 2;
             this.news4.Name = "news4";
@@ -575,7 +577,7 @@
             this.news4.Size = new System.Drawing.Size(412, 34);
             this.news4.Style = Sunny.UI.UIStyle.Custom;
             this.news4.TabIndex = 40;
-            this.news4.Text = "4        xxxxxxxxxxxxxxxxxxxxxxxxxxxxx...        8";
+            this.news4.Text = "4        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...        8";
             this.news4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.news4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
@@ -583,7 +585,7 @@
             // 
             this.news3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.news3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.news3.Location = new System.Drawing.Point(17, 168);
+            this.news3.Location = new System.Drawing.Point(17, 167);
             this.news3.MarkPos = Sunny.UI.UIMarkLabel.UIMarkPos.Bottom;
             this.news3.MarkSize = 2;
             this.news3.Name = "news3";
@@ -591,7 +593,7 @@
             this.news3.Size = new System.Drawing.Size(412, 34);
             this.news3.Style = Sunny.UI.UIStyle.Custom;
             this.news3.TabIndex = 39;
-            this.news3.Text = "3        xxxxxxxxxxxxxxxxxxxxxxxxxxxxx...        8";
+            this.news3.Text = "3        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...        8";
             this.news3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.news3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
@@ -599,7 +601,7 @@
             // 
             this.news2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.news2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.news2.Location = new System.Drawing.Point(17, 131);
+            this.news2.Location = new System.Drawing.Point(17, 130);
             this.news2.MarkPos = Sunny.UI.UIMarkLabel.UIMarkPos.Bottom;
             this.news2.MarkSize = 2;
             this.news2.Name = "news2";
@@ -607,7 +609,7 @@
             this.news2.Size = new System.Drawing.Size(412, 34);
             this.news2.Style = Sunny.UI.UIStyle.Custom;
             this.news2.TabIndex = 38;
-            this.news2.Text = "2        xxxxxxxxxxxxxxxxxxxxxxxxxxxxx...        8";
+            this.news2.Text = "2        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...        8";
             this.news2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.news2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
@@ -673,7 +675,7 @@
             this.news1.Size = new System.Drawing.Size(412, 34);
             this.news1.Style = Sunny.UI.UIStyle.Custom;
             this.news1.TabIndex = 36;
-            this.news1.Text = "1        xxxxxxxxxxxxxxxxxxxxxxxxxxxxx...        8";
+            this.news1.Text = "1        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...        8";
             this.news1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.news1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
@@ -738,7 +740,7 @@
             this.lineChartPanel.Controls.Add(this.refreshlButton1);
             this.lineChartPanel.Location = new System.Drawing.Point(3, 134);
             this.lineChartPanel.Name = "lineChartPanel";
-            this.lineChartPanel.Size = new System.Drawing.Size(824, 290);
+            this.lineChartPanel.Size = new System.Drawing.Size(833, 290);
             this.lineChartPanel.TabIndex = 30;
             // 
             // upperTriangle
@@ -911,7 +913,7 @@
             this.refreshlButton1.FillHoverColor = System.Drawing.Color.Gainsboro;
             this.refreshlButton1.FillPressColor = System.Drawing.Color.Silver;
             this.refreshlButton1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.refreshlButton1.Location = new System.Drawing.Point(782, 4);
+            this.refreshlButton1.Location = new System.Drawing.Point(780, 4);
             this.refreshlButton1.MinimumSize = new System.Drawing.Size(1, 1);
             this.refreshlButton1.Name = "refreshlButton1";
             this.refreshlButton1.RectColor = System.Drawing.Color.Transparent;
@@ -954,6 +956,16 @@
             this.refreshlButton2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.refreshlButton2.Click += new System.EventHandler(this.refreshlButton2_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(6, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 28);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "Ratio";
+            // 
             // UC_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -966,7 +978,7 @@
             this.Controls.Add(this.uiUserControl4);
             this.Controls.Add(this.uiUserControl3);
             this.Name = "UC_main";
-            this.Size = new System.Drawing.Size(1125, 720);
+            this.Size = new System.Drawing.Size(1125, 790);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.uiUserControl7.ResumeLayout(false);
             this.uiUserControl7.PerformLayout();
@@ -976,6 +988,7 @@
             this.uiUserControl2.PerformLayout();
             this.uiUserControl5.ResumeLayout(false);
             this.pieChartPanel.ResumeLayout(false);
+            this.pieChartPanel.PerformLayout();
             this.uiUserControl4.ResumeLayout(false);
             this.uiUserControl4.PerformLayout();
             this.newsTopBar.ResumeLayout(false);
@@ -996,11 +1009,11 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private Sunny.UI.UIUserControl uiUserControl7;
-        private Sunny.UI.UIButton uiButton7;
-        private Sunny.UI.UIButton uiButton6;
-        private Sunny.UI.UIButton uiButton3;
-        private Sunny.UI.UIButton uiButton5;
-        private Sunny.UI.UIButton uiButton4;
+        private Sunny.UI.UIButton notice3;
+        private Sunny.UI.UIButton notice2;
+        private Sunny.UI.UIButton notice4;
+        private Sunny.UI.UIButton notice5;
+        private Sunny.UI.UIButton notice1;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
@@ -1057,5 +1070,6 @@
         private System.Windows.Forms.Panel panel1;
         private Sunny.UI.UISymbolButton refreshlButton1;
         private Sunny.UI.UISymbolButton refreshlButton2;
+        private System.Windows.Forms.Label label1;
     }
 }

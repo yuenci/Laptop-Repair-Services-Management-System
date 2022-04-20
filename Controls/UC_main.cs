@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,9 @@ namespace miniSys0._3.Controls
             InitializeComponent();
             sunnyUIinit();
             InitializeChromeForMainLineChart();
-            //InitializeChromeForMainPieChart();
+            InitializeChromeForMainPieChart();
+            setNotices();
+            initNews();
         }
 
         void sunnyUIinit()
@@ -44,6 +47,90 @@ namespace miniSys0._3.Controls
             news4.MarkColor = Color.FromArgb(242, 243, 245);
             news5.MarkColor = Color.FromArgb(242, 243, 245);
         }
+
+        private void initNews()
+        {
+            string connStr = @"Data Source=LAPTOP-5ACE008F\SQLEXPRESS;Initial Catalog=CsharpRepairerInc;Integrated Security=True";
+
+            SqlConnection conn = new SqlConnection(connStr);
+            conn.Open();
+
+            string sql = $"SELECT TOP 5 Title, Views FROM Articles ORDER BY  Views DESC";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            dynamic[] newsList = { news1, news2 , news3 , news4 , news5 };
+
+            for (int i = 0; dr.Read(); i++)
+            {
+                var title ="";
+                var text = ""; 
+                if (dr["Title"].ToString().Length > 30)
+                {
+                     title = dr["Title"].ToString().Substring(0, 30);
+                     text = (i+1).ToString() + "        " + title + "...";
+                }
+                else
+                {
+                    title = dr["Title"].ToString();
+                    text = (i + 1).ToString() + "        " + title;
+                }
+                int textLength = text.Length;
+                string numStr = dr["Views"].ToString();
+                int numberLength = numStr.Length;
+                string spaces  = new string(' ', 53 - textLength- numberLength);
+                string wholeText = text + spaces + numStr;
+                Console.WriteLine(wholeText);
+                newsList[i].Text = wholeText;
+
+            }
+        }
+
+        void noticeStyle(dynamic noticeObj,string type)
+        {
+            if (type == "Activity")
+            {
+                noticeObj.Text = "Activity";
+                noticeObj.FillDisableColor = Color.FromArgb(255, 247, 232);
+                noticeObj.ForeDisableColor = Color.FromArgb(255, 125, 0);
+            }
+            else if (type == "Message")
+            {
+                noticeObj.Text = "Message";
+                noticeObj.FillDisableColor = Color.WhiteSmoke;
+                noticeObj.ForeDisableColor = Color.FromArgb(15, 198, 194);
+            }
+            else if (type == "Advice")
+            {
+                noticeObj.Text = "Advice";
+                noticeObj.FillDisableColor = Color.FromArgb(255, 247, 232);
+                noticeObj.ForeDisableColor = Color.FromArgb(22, 93, 255);
+            }
+            else
+            {
+                Console.WriteLine("error");
+            }
+        }
+
+        void setNotices()
+        {
+            notice1.RectDisableColor = Color.Transparent;
+            notice2.RectDisableColor = Color.Transparent;
+            notice3.RectDisableColor = Color.Transparent;
+            notice4.RectDisableColor = Color.Transparent;
+            notice5.RectDisableColor = Color.Transparent;
+            noticeStyle(notice1, "Activity");
+            noticeStyle(notice2, "Message");
+            noticeStyle(notice3, "Advice");
+            noticeStyle(notice4, "Advice");
+            noticeStyle(notice5, "Message");
+        }
+
+
+
+
+
+
         public ChromiumWebBrowser WebBrowser;
 
         //stop right click
@@ -93,9 +180,9 @@ namespace miniSys0._3.Controls
         public ChromiumWebBrowser WebBrowser1;
         private void InitializeChromeForMainPieChart()
         {
-            var setting1 = new CefSettings();
+           /* var setting1 = new CefSettings();
             setting1.MultiThreadedMessageLoop = true;
-            CefSharp.Cef.Initialize(setting1);
+            CefSharp.Cef.Initialize(setting1);*/
             WebBrowser1 = new ChromiumWebBrowser(@"E:\Materials\【LOOP】\Assignment\miniSys0.3\Html\mainPieChart.html");
             WebBrowser1.Dock = DockStyle.Fill;//铺满                                                                  
             WebBrowser1.Dock = DockStyle.Fill;//设置停靠方式
@@ -109,7 +196,7 @@ namespace miniSys0._3.Controls
 
         private async void refreshlButton2_Click(object sender, EventArgs e)
         {
-            await WebBrowser.GetBrowser().MainFrame.EvaluateScriptAsync("show([12, 19, 3, 5, 2, 3])");
+            await WebBrowser1.GetBrowser().MainFrame.EvaluateScriptAsync("show1([12, 19, 3, 5, 2, 3])");
         }
     }
     

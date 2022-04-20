@@ -2,8 +2,8 @@
  * @Author: Innis
  * @Description: 
  * @Date: 2022-04-19 10:48:59
- * @LastEditTime: 2022-04-20 17:22:12
- * @FilePath: \Html\mainLineChart.html
+ * @LastEditTime: 2022-04-20 18:45:43
+ * @FilePath: \undefinede:\Materials\【LOOP】\Assignment\miniSys0.3\Html\mainLineChart.html
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -34,42 +34,80 @@
             //alert("收到Net程序事件,我是JS弹框.")
             var ctx = document.getElementById("myChart").getContext('2d');
             var myChart = new Chart(ctx, {
-                type: 'bar',
+                type: 'line',
                 data: {
-                    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange", "seven"],
                     datasets: [{
-                        //data: [12, 19, 3, 5, 2, 3],
-                        data: sqlData,
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255,99,132,1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
+                        fill: true,
+                        lineTension: 0.4,
+                        borderColor: "#5a6efd",
+                        backgroundColor: "rgba(22, 93, 255, 0.2)",
+                        //pointRadius: 6,
+                        data: [
+                            {
+                                x: 10,
+                                y: 20
+                            },
+                            {
+                                x: 15,
+                                y: 10
+                            },
+                            {
+                                x: 20,
+                                y: 30
+                            },
+                            {
+                                x: 25,
+                                y: 50
+                            },
+                            {
+                                x: 30,
+                                y: 70
+                            },
+                            {
+                                x: 35,
+                                y: 60
+                            },
+                            {
+                                x: 40,
+                                y: 30
+                            }
                         ],
                         borderWidth: 1
                     }]
                 },
                 options: {
+                    responsive: true,
+                    interaction: {
+                        mode: 'index',
+                        intersect: false,
+                    },
+                    plugins: {
+                        legend: {
+                            display: false,
+                        },
+                        title: {
+                            display: false
+                        }
+                    },
                     scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero: true
+                        x: {
+                            grid: {
+                                color: "rgba(242, 243, 245,1)"
                             }
-                        }]
+                        },
+                        y: {
+                            suggestedMax: 100,
+                            min: 0,
+                            grid: {
+                                color: "rgba(242, 243, 245,1)"
+                            }
+                        }
                     }
                 }
             });
         }
+        show(8);
     </script>
 </body>
 
