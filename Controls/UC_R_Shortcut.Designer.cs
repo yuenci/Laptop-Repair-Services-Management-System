@@ -77,7 +77,7 @@
             this.shortcutButton3.RectColor = System.Drawing.Color.Transparent;
             this.shortcutButton3.Size = new System.Drawing.Size(50, 50);
             this.shortcutButton3.Style = Sunny.UI.UIStyle.Custom;
-            this.shortcutButton3.Symbol = 62144;
+            this.shortcutButton3.Symbol = 105;
             this.shortcutButton3.SymbolColor = System.Drawing.Color.Black;
             this.shortcutButton3.SymbolSize = 26;
             this.shortcutButton3.TabIndex = 41;

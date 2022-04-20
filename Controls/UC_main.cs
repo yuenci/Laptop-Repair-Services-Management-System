@@ -41,6 +41,20 @@ namespace miniSys0._3.Controls
             news4.MarkColor = Color.FromArgb(242, 243, 245);
             news5.MarkColor = Color.FromArgb(242, 243, 245);
 
+            shortcutButton1.FillColor = Color.FromArgb(242, 243, 245);
+            shortcutButton2.FillColor = Color.FromArgb(242, 243, 245);
+            shortcutButton3.FillColor = Color.FromArgb(242, 243, 245);
+            shortcutButton1.SymbolColor  = Color.Black;
+            shortcutButton2.SymbolColor = Color.Black;
+            shortcutButton3.SymbolColor = Color.Black;
+            shortcutButton1.SymbolHoverColor = Color.Black;
+            shortcutButton2.SymbolHoverColor = Color.Black;
+            shortcutButton3.SymbolHoverColor = Color.Black;
+
+            shortcutButton1.RectColor = Color.Transparent;
+            shortcutButton2.RectColor = Color.Transparent;
+            shortcutButton3.RectColor = Color.Transparent;
+
             refreshlButton1.FillColor = Color.White;
             refreshlButton1.FillHoverColor= Color.FromArgb(242, 243, 245);
             refreshlButton1.SymbolColor = Color.Black;
@@ -217,41 +231,89 @@ namespace miniSys0._3.Controls
             notice3.RectDisableColor = Color.Transparent;
             notice4.RectDisableColor = Color.Transparent;
             notice5.RectDisableColor = Color.Transparent;
-            noticeStyle(notice1, "Activity");
-            noticeStyle(notice2, "Message");
-            noticeStyle(notice3, "Advice");
-            noticeStyle(notice4, "Advice");
-            noticeStyle(notice5, "Message");
+
+
+            dynamic[] connTools = getDataReader("select top 5 Title,Type from Articles Order by Time desc");
+            SqlDataReader dr = connTools[1];
+            SqlConnection conn = connTools[0];
+
+            dynamic[] moticeList = { notice1, notice2, notice3, notice4, notice5 };
+            dynamic[] noticeTextList = { noticeText1 , noticeText2, noticeText3, noticeText4 , noticeText5 };
+
+            for (int i = 0; i < 5; i++)
+            {
+                dr.Read();
+                noticeTextList[i].Text = dr[0].ToString().Substring(0,18)+"...";
+                if (dr[1].ToString() == "Activity")
+                {
+                    noticeStyle(moticeList[i], "Activity");
+                }
+                else if (dr[1].ToString() == "Message")
+                {
+                    noticeStyle(moticeList[i], "Message");
+                }
+                else if (dr[1].ToString() == "Advice")
+                {
+                    noticeStyle(moticeList[i], "Advice");
+                }
+            }
+
+
+            dr.Close();
+            conn.Close();
+
         }
         void initShortcut()
         {
-             void addUserControl(UserControl userControl)
-            {
-                userControl.Dock = DockStyle.Fill;
-                ShortcutPanel.Controls.Clear();
-                ShortcutPanel.Controls.Add(userControl);
-                userControl.BringToFront();
-            }
 
             if (User_type.user_type == "Receptionist")
             {
-                UC_R_Shortcut uc = new UC_R_Shortcut();
-                addUserControl(uc);
+                shortcutButton1.Symbol = 62004;
+                shortcutButton2.Symbol = 105;
+                shortcutButton3.Symbol = 62144;
+                shortcutButton1.SymbolSize = 28;
+                shortcutButton2.SymbolSize = 24;
+                shortcutButton3.SymbolSize = 26;
+                shortcutText1.Text = "Register";
+                shortcutText2.Text = "Receipt";
+                shortcutText3.Text = "Profile";
+
             }
             else if (User_type.user_type == "Technician")
             {
-                UC_T_Shortcut uc = new UC_T_Shortcut();
-                addUserControl(uc);
+                shortcutButton1.Symbol = 57397;
+                shortcutButton2.Symbol = 61670;
+                shortcutButton3.Symbol = 62144;
+                shortcutButton1.SymbolSize = 24;
+                shortcutButton2.SymbolSize = 30;
+                shortcutButton3.SymbolSize = 26;
+                shortcutText1.Text = "Requests";
+                shortcutText2.Text = "Describe";
+                shortcutText3.Text = "Profile";
             }
             else if (User_type.user_type == "Customer")
             {
-                UC_C_Shortcut uc = new UC_C_Shortcut();
-                addUserControl(uc);
+                shortcutButton1.Symbol = 57397;
+                shortcutButton2.Symbol = 61670;
+                shortcutButton3.Symbol = 62144;
+                shortcutButton1.SymbolSize = 24;
+                shortcutButton2.SymbolSize = 30;
+                shortcutButton3.SymbolSize = 26;
+                shortcutText1.Text = "Requests";
+                shortcutText2.Text = "Describe";
+                shortcutText3.Text = "Profile";
             }
             else if (User_type.user_type == "Admin")
             {
-                UC_A_Shortcut uc = new UC_A_Shortcut();
-                addUserControl(uc);
+                shortcutButton1.Symbol = 57608;
+                shortcutButton2.Symbol = 57580;
+                shortcutButton3.Symbol = 105;
+                shortcutButton1.SymbolSize = 28;
+                shortcutButton2.SymbolSize = 28;
+                shortcutButton3.SymbolSize = 28;
+                shortcutText1.Text = "Register";
+                shortcutText2.Text = "Report";
+                shortcutText3.Text = "Income";
             }
             
         }
@@ -387,6 +449,96 @@ namespace miniSys0._3.Controls
         {
             news5.ForeColor = Color.Black;
             newslabel5.ForeColor = Color.Black;
+        }
+
+        private void noticeText1_hover(object sender, EventArgs e)
+        {
+            noticeText1.ForeColor = Color.FromArgb(51, 112, 255);
+        }
+
+        private void noticeText2_hover(object sender, EventArgs e)
+        {
+            noticeText2.ForeColor = Color.FromArgb(51, 112, 255);
+        }
+
+        private void noticeText3_hover(object sender, EventArgs e)
+        {
+            noticeText3.ForeColor = Color.FromArgb(51, 112, 255);
+        }
+
+        private void noticeText4_hover(object sender, EventArgs e)
+        {
+            noticeText4.ForeColor = Color.FromArgb(51, 112, 255);
+        }
+
+        private void noticeText5_hover(object sender, EventArgs e)
+        {
+            noticeText5.ForeColor = Color.FromArgb(51, 112, 255);
+        }
+
+        private void noticeText1_leave(object sender, EventArgs e)
+        {
+            noticeText1.ForeColor = Color.FromArgb(78, 89, 105);
+        }
+
+        private void noticeText2_leave(object sender, EventArgs e)
+        {
+            noticeText2.ForeColor = Color.FromArgb(78, 89, 105);
+        }
+
+        private void noticeText3_leave(object sender, EventArgs e)
+        {
+            noticeText3.ForeColor = Color.FromArgb(78, 89, 105);
+        }
+
+        private void noticeText4_leave(object sender, EventArgs e)
+        {
+            noticeText4.ForeColor = Color.FromArgb(78, 89, 105);
+        }
+
+        private void noticeText5_leave(object sender, EventArgs e)
+        {
+            noticeText5.ForeColor = Color.FromArgb(78, 89, 105);
+        }
+
+        private void doc1_hover(object sender, EventArgs e)
+        {
+            doc1.ForeColor = Color.FromArgb(51, 112, 255);
+        }
+
+        private void doc2_hover(object sender, EventArgs e)
+        {
+            doc2.ForeColor = Color.FromArgb(51, 112, 255);
+        }
+
+        private void doc3_hover(object sender, EventArgs e)
+        {
+            doc3.ForeColor = Color.FromArgb(51, 112, 255);
+        }
+
+        private void doc4_hover(object sender, EventArgs e)
+        {
+            doc4.ForeColor = Color.FromArgb(51, 112, 255);
+        }
+
+        private void doc1_leave(object sender, EventArgs e)
+        {
+            doc1.ForeColor = Color.FromArgb(78, 89, 105);
+        }
+
+        private void doc2_leave(object sender, EventArgs e)
+        {
+            doc2.ForeColor = Color.FromArgb(78, 89, 105);
+        }
+
+        private void doc3_leave(object sender, EventArgs e)
+        {
+            doc3.ForeColor = Color.FromArgb(78, 89, 105);
+        }
+
+        private void doc4_leave(object sender, EventArgs e)
+        {
+            doc4.ForeColor = Color.FromArgb(78, 89, 105);
         }
     }
     

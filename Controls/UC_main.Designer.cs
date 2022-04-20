@@ -34,22 +34,28 @@
             this.notice4 = new Sunny.UI.UIButton();
             this.notice5 = new Sunny.UI.UIButton();
             this.notice1 = new Sunny.UI.UIButton();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.noticeText5 = new System.Windows.Forms.Label();
+            this.noticeText4 = new System.Windows.Forms.Label();
+            this.noticeText3 = new System.Windows.Forms.Label();
+            this.noticeText2 = new System.Windows.Forms.Label();
+            this.noticeText1 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.uiUserControl6 = new Sunny.UI.UIUserControl();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
+            this.doc4 = new System.Windows.Forms.Label();
+            this.doc3 = new System.Windows.Forms.Label();
+            this.doc2 = new System.Windows.Forms.Label();
+            this.doc1 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.uiUserControl2 = new Sunny.UI.UIUserControl();
+            this.shortcutText3 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.shortcutText2 = new System.Windows.Forms.Label();
+            this.shortcutButton2 = new Sunny.UI.UISymbolButton();
+            this.shortcutText1 = new System.Windows.Forms.Label();
+            this.shortcutButton1 = new Sunny.UI.UISymbolButton();
+            this.shortcutButton3 = new Sunny.UI.UISymbolButton();
             this.uiUserControl5 = new Sunny.UI.UIUserControl();
             this.pieChartPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -91,7 +97,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ShortcutPanel = new System.Windows.Forms.Panel();
             this.uiUserControl7.SuspendLayout();
             this.uiUserControl6.SuspendLayout();
             this.uiUserControl2.SuspendLayout();
@@ -117,13 +122,14 @@
             this.uiUserControl7.Controls.Add(this.notice4);
             this.uiUserControl7.Controls.Add(this.notice5);
             this.uiUserControl7.Controls.Add(this.notice1);
-            this.uiUserControl7.Controls.Add(this.label25);
-            this.uiUserControl7.Controls.Add(this.label24);
-            this.uiUserControl7.Controls.Add(this.label23);
-            this.uiUserControl7.Controls.Add(this.label22);
-            this.uiUserControl7.Controls.Add(this.label21);
+            this.uiUserControl7.Controls.Add(this.noticeText5);
+            this.uiUserControl7.Controls.Add(this.noticeText4);
+            this.uiUserControl7.Controls.Add(this.noticeText3);
+            this.uiUserControl7.Controls.Add(this.noticeText2);
+            this.uiUserControl7.Controls.Add(this.noticeText1);
             this.uiUserControl7.Controls.Add(this.label18);
             this.uiUserControl7.Controls.Add(this.label15);
+            this.uiUserControl7.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.uiUserControl7.FillColor = System.Drawing.Color.White;
             this.uiUserControl7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiUserControl7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
@@ -214,60 +220,75 @@
             this.notice1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.notice1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // label25
+            // noticeText5
             // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(85, 197);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(65, 22);
-            this.label25.TabIndex = 48;
-            this.label25.Text = "label25";
+            this.noticeText5.AutoSize = true;
+            this.noticeText5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.noticeText5.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.noticeText5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.noticeText5.Location = new System.Drawing.Point(85, 197);
+            this.noticeText5.Name = "noticeText5";
+            this.noticeText5.Size = new System.Drawing.Size(65, 22);
+            this.noticeText5.TabIndex = 48;
+            this.noticeText5.Text = "label25";
+            this.noticeText5.MouseLeave += new System.EventHandler(this.noticeText5_leave);
+            this.noticeText5.MouseHover += new System.EventHandler(this.noticeText5_hover);
             // 
-            // label24
+            // noticeText4
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(85, 159);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(65, 22);
-            this.label24.TabIndex = 47;
-            this.label24.Text = "label24";
+            this.noticeText4.AutoSize = true;
+            this.noticeText4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.noticeText4.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.noticeText4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.noticeText4.Location = new System.Drawing.Point(85, 159);
+            this.noticeText4.Name = "noticeText4";
+            this.noticeText4.Size = new System.Drawing.Size(65, 22);
+            this.noticeText4.TabIndex = 47;
+            this.noticeText4.Text = "label24";
+            this.noticeText4.MouseLeave += new System.EventHandler(this.noticeText4_leave);
+            this.noticeText4.MouseHover += new System.EventHandler(this.noticeText4_hover);
             // 
-            // label23
+            // noticeText3
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(85, 121);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(65, 22);
-            this.label23.TabIndex = 46;
-            this.label23.Text = "label23";
+            this.noticeText3.AutoSize = true;
+            this.noticeText3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.noticeText3.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.noticeText3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.noticeText3.Location = new System.Drawing.Point(85, 121);
+            this.noticeText3.Name = "noticeText3";
+            this.noticeText3.Size = new System.Drawing.Size(65, 22);
+            this.noticeText3.TabIndex = 46;
+            this.noticeText3.Text = "label23";
+            this.noticeText3.MouseLeave += new System.EventHandler(this.noticeText3_leave);
+            this.noticeText3.MouseHover += new System.EventHandler(this.noticeText3_hover);
             // 
-            // label22
+            // noticeText2
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(85, 83);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(65, 22);
-            this.label22.TabIndex = 45;
-            this.label22.Text = "label22";
+            this.noticeText2.AutoSize = true;
+            this.noticeText2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.noticeText2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.noticeText2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.noticeText2.Location = new System.Drawing.Point(85, 83);
+            this.noticeText2.Name = "noticeText2";
+            this.noticeText2.Size = new System.Drawing.Size(65, 22);
+            this.noticeText2.TabIndex = 45;
+            this.noticeText2.Text = "label22";
+            this.noticeText2.MouseLeave += new System.EventHandler(this.noticeText2_leave);
+            this.noticeText2.MouseHover += new System.EventHandler(this.noticeText2_hover);
             // 
-            // label21
+            // noticeText1
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(85, 45);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(65, 22);
-            this.label21.TabIndex = 44;
-            this.label21.Text = "label21";
+            this.noticeText1.AutoSize = true;
+            this.noticeText1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.noticeText1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.noticeText1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.noticeText1.Location = new System.Drawing.Point(85, 45);
+            this.noticeText1.Name = "noticeText1";
+            this.noticeText1.Size = new System.Drawing.Size(65, 22);
+            this.noticeText1.TabIndex = 44;
+            this.noticeText1.Text = "label21";
+            this.noticeText1.MouseLeave += new System.EventHandler(this.noticeText1_leave);
+            this.noticeText1.MouseHover += new System.EventHandler(this.noticeText1_hover);
             // 
             // label18
             // 
@@ -294,12 +315,13 @@
             // uiUserControl6
             // 
             this.uiUserControl6.BackColor = System.Drawing.Color.White;
-            this.uiUserControl6.Controls.Add(this.label29);
-            this.uiUserControl6.Controls.Add(this.label28);
-            this.uiUserControl6.Controls.Add(this.label27);
-            this.uiUserControl6.Controls.Add(this.label26);
+            this.uiUserControl6.Controls.Add(this.doc4);
+            this.uiUserControl6.Controls.Add(this.doc3);
+            this.uiUserControl6.Controls.Add(this.doc2);
+            this.uiUserControl6.Controls.Add(this.doc1);
             this.uiUserControl6.Controls.Add(this.label20);
             this.uiUserControl6.Controls.Add(this.label19);
+            this.uiUserControl6.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.uiUserControl6.FillColor = System.Drawing.Color.White;
             this.uiUserControl6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiUserControl6.Location = new System.Drawing.Point(850, 563);
@@ -314,49 +336,61 @@
             this.uiUserControl6.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiUserControl6.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // label29
+            // doc4
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label29.ForeColor = System.Drawing.Color.Black;
-            this.label29.Location = new System.Drawing.Point(106, 104);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(65, 22);
-            this.label29.TabIndex = 52;
-            this.label29.Text = "label29";
+            this.doc4.AutoSize = true;
+            this.doc4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.doc4.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.doc4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.doc4.Location = new System.Drawing.Point(160, 105);
+            this.doc4.Name = "doc4";
+            this.doc4.Size = new System.Drawing.Size(76, 22);
+            this.doc4.TabIndex = 52;
+            this.doc4.Text = "About us";
+            this.doc4.MouseLeave += new System.EventHandler(this.doc4_leave);
+            this.doc4.MouseHover += new System.EventHandler(this.doc4_hover);
             // 
-            // label28
+            // doc3
             // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label28.ForeColor = System.Drawing.Color.Black;
-            this.label28.Location = new System.Drawing.Point(9, 104);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(65, 22);
-            this.label28.TabIndex = 51;
-            this.label28.Text = "label28";
+            this.doc3.AutoSize = true;
+            this.doc3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.doc3.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.doc3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.doc3.Location = new System.Drawing.Point(9, 105);
+            this.doc3.Name = "doc3";
+            this.doc3.Size = new System.Drawing.Size(92, 22);
+            this.doc3.TabIndex = 51;
+            this.doc3.Text = "Contact us";
+            this.doc3.MouseLeave += new System.EventHandler(this.doc3_leave);
+            this.doc3.MouseHover += new System.EventHandler(this.doc3_hover);
             // 
-            // label27
+            // doc2
             // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label27.ForeColor = System.Drawing.Color.Black;
-            this.label27.Location = new System.Drawing.Point(106, 58);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(65, 22);
-            this.label27.TabIndex = 50;
-            this.label27.Text = "label27";
+            this.doc2.AutoSize = true;
+            this.doc2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.doc2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.doc2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.doc2.Location = new System.Drawing.Point(160, 59);
+            this.doc2.Name = "doc2";
+            this.doc2.Size = new System.Drawing.Size(75, 22);
+            this.doc2.TabIndex = 50;
+            this.doc2.Text = "Tutorials";
+            this.doc2.MouseLeave += new System.EventHandler(this.doc2_leave);
+            this.doc2.MouseHover += new System.EventHandler(this.doc2_hover);
             // 
-            // label26
+            // doc1
             // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label26.ForeColor = System.Drawing.Color.Black;
-            this.label26.Location = new System.Drawing.Point(9, 58);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(65, 22);
-            this.label26.TabIndex = 49;
-            this.label26.Text = "label26";
+            this.doc1.AutoSize = true;
+            this.doc1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.doc1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.doc1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.doc1.Location = new System.Drawing.Point(8, 59);
+            this.doc1.Name = "doc1";
+            this.doc1.Size = new System.Drawing.Size(94, 22);
+            this.doc1.TabIndex = 49;
+            this.doc1.Text = "Quick Start";
+            this.doc1.MouseLeave += new System.EventHandler(this.doc1_leave);
+            this.doc1.MouseHover += new System.EventHandler(this.doc1_hover);
             // 
             // label20
             // 
@@ -383,8 +417,14 @@
             // uiUserControl2
             // 
             this.uiUserControl2.BackColor = System.Drawing.Color.White;
-            this.uiUserControl2.Controls.Add(this.ShortcutPanel);
+            this.uiUserControl2.Controls.Add(this.shortcutText3);
             this.uiUserControl2.Controls.Add(this.label14);
+            this.uiUserControl2.Controls.Add(this.shortcutText2);
+            this.uiUserControl2.Controls.Add(this.shortcutButton2);
+            this.uiUserControl2.Controls.Add(this.shortcutText1);
+            this.uiUserControl2.Controls.Add(this.shortcutButton1);
+            this.uiUserControl2.Controls.Add(this.shortcutButton3);
+            this.uiUserControl2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.uiUserControl2.FillColor = System.Drawing.Color.White;
             this.uiUserControl2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiUserControl2.Location = new System.Drawing.Point(850, 1);
@@ -399,6 +439,17 @@
             this.uiUserControl2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiUserControl2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // shortcutText3
+            // 
+            this.shortcutText3.AutoSize = true;
+            this.shortcutText3.Font = new System.Drawing.Font(".萍方-简", 10F);
+            this.shortcutText3.Location = new System.Drawing.Point(203, 107);
+            this.shortcutText3.Name = "shortcutText3";
+            this.shortcutText3.Size = new System.Drawing.Size(51, 20);
+            this.shortcutText3.TabIndex = 50;
+            this.shortcutText3.Text = "Profile";
+            this.shortcutText3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -408,6 +459,71 @@
             this.label14.Size = new System.Drawing.Size(96, 28);
             this.label14.TabIndex = 30;
             this.label14.Text = "Shortcut";
+            // 
+            // shortcutText2
+            // 
+            this.shortcutText2.AutoSize = true;
+            this.shortcutText2.Font = new System.Drawing.Font(".萍方-简", 10F);
+            this.shortcutText2.Location = new System.Drawing.Point(106, 107);
+            this.shortcutText2.Name = "shortcutText2";
+            this.shortcutText2.Size = new System.Drawing.Size(67, 20);
+            this.shortcutText2.TabIndex = 49;
+            this.shortcutText2.Text = "Describe";
+            this.shortcutText2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // shortcutButton2
+            // 
+            this.shortcutButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.shortcutButton2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.shortcutButton2.Location = new System.Drawing.Point(110, 51);
+            this.shortcutButton2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.shortcutButton2.Name = "shortcutButton2";
+            this.shortcutButton2.Size = new System.Drawing.Size(50, 50);
+            this.shortcutButton2.Style = Sunny.UI.UIStyle.Custom;
+            this.shortcutButton2.Symbol = 61670;
+            this.shortcutButton2.TabIndex = 46;
+            this.shortcutButton2.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.shortcutButton2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // shortcutText1
+            // 
+            this.shortcutText1.AutoSize = true;
+            this.shortcutText1.Font = new System.Drawing.Font(".萍方-简", 10F);
+            this.shortcutText1.Location = new System.Drawing.Point(7, 107);
+            this.shortcutText1.Name = "shortcutText1";
+            this.shortcutText1.Size = new System.Drawing.Size(69, 20);
+            this.shortcutText1.TabIndex = 48;
+            this.shortcutText1.Text = "Requests";
+            this.shortcutText1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // shortcutButton1
+            // 
+            this.shortcutButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.shortcutButton1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.shortcutButton1.Location = new System.Drawing.Point(16, 51);
+            this.shortcutButton1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.shortcutButton1.Name = "shortcutButton1";
+            this.shortcutButton1.Size = new System.Drawing.Size(50, 50);
+            this.shortcutButton1.Style = Sunny.UI.UIStyle.Custom;
+            this.shortcutButton1.Symbol = 57397;
+            this.shortcutButton1.TabIndex = 45;
+            this.shortcutButton1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.shortcutButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // shortcutButton3
+            // 
+            this.shortcutButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.shortcutButton3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.shortcutButton3.Location = new System.Drawing.Point(204, 51);
+            this.shortcutButton3.MinimumSize = new System.Drawing.Size(1, 1);
+            this.shortcutButton3.Name = "shortcutButton3";
+            this.shortcutButton3.Size = new System.Drawing.Size(50, 50);
+            this.shortcutButton3.Style = Sunny.UI.UIStyle.Custom;
+            this.shortcutButton3.Symbol = 62144;
+            this.shortcutButton3.SymbolSize = 26;
+            this.shortcutButton3.TabIndex = 47;
+            this.shortcutButton3.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.shortcutButton3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiUserControl5
             // 
@@ -431,6 +547,7 @@
             // 
             this.pieChartPanel.Controls.Add(this.label1);
             this.pieChartPanel.Controls.Add(this.refreshlButton2);
+            this.pieChartPanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pieChartPanel.Location = new System.Drawing.Point(3, 3);
             this.pieChartPanel.Name = "pieChartPanel";
             this.pieChartPanel.Size = new System.Drawing.Size(378, 273);
@@ -477,6 +594,7 @@
             this.uiUserControl4.Controls.Add(this.newsTopBar);
             this.uiUserControl4.Controls.Add(this.label17);
             this.uiUserControl4.Controls.Add(this.label16);
+            this.uiUserControl4.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.uiUserControl4.FillColor = System.Drawing.Color.White;
             this.uiUserControl4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiUserControl4.Location = new System.Drawing.Point(1, 441);
@@ -539,7 +657,7 @@
             // news1
             // 
             this.news1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.news1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.news1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.news1.Location = new System.Drawing.Point(17, 92);
             this.news1.MarkPos = Sunny.UI.UIMarkLabel.UIMarkPos.Bottom;
             this.news1.MarkSize = 2;
@@ -557,7 +675,7 @@
             // news5
             // 
             this.news5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.news5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.news5.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.news5.Location = new System.Drawing.Point(17, 241);
             this.news5.MarkPos = Sunny.UI.UIMarkLabel.UIMarkPos.Bottom;
             this.news5.MarkSize = 2;
@@ -575,7 +693,7 @@
             // news4
             // 
             this.news4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.news4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.news4.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.news4.Location = new System.Drawing.Point(17, 204);
             this.news4.MarkPos = Sunny.UI.UIMarkLabel.UIMarkPos.Bottom;
             this.news4.MarkSize = 2;
@@ -593,7 +711,7 @@
             // news3
             // 
             this.news3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.news3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.news3.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.news3.Location = new System.Drawing.Point(17, 167);
             this.news3.MarkPos = Sunny.UI.UIMarkLabel.UIMarkPos.Bottom;
             this.news3.MarkSize = 2;
@@ -611,7 +729,7 @@
             // news2
             // 
             this.news2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.news2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.news2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.news2.Location = new System.Drawing.Point(17, 130);
             this.news2.MarkPos = Sunny.UI.UIMarkLabel.UIMarkPos.Bottom;
             this.news2.MarkSize = 2;
@@ -718,6 +836,7 @@
             this.uiUserControl3.Controls.Add(this.name_lable);
             this.uiUserControl3.Controls.Add(this.pictureBox3);
             this.uiUserControl3.Controls.Add(this.panel1);
+            this.uiUserControl3.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.uiUserControl3.FillColor = System.Drawing.Color.White;
             this.uiUserControl3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiUserControl3.Location = new System.Drawing.Point(1, 1);
@@ -735,6 +854,7 @@
             // lineChartPanel
             // 
             this.lineChartPanel.Controls.Add(this.refreshlButton1);
+            this.lineChartPanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lineChartPanel.Location = new System.Drawing.Point(3, 134);
             this.lineChartPanel.Name = "lineChartPanel";
             this.lineChartPanel.Size = new System.Drawing.Size(833, 290);
@@ -929,14 +1049,6 @@
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
-            // ShortcutPanel
-            // 
-            this.ShortcutPanel.BackColor = System.Drawing.Color.Gray;
-            this.ShortcutPanel.Location = new System.Drawing.Point(-3, 36);
-            this.ShortcutPanel.Name = "ShortcutPanel";
-            this.ShortcutPanel.Size = new System.Drawing.Size(270, 100);
-            this.ShortcutPanel.TabIndex = 31;
-            // 
             // UC_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -948,6 +1060,7 @@
             this.Controls.Add(this.uiUserControl5);
             this.Controls.Add(this.uiUserControl4);
             this.Controls.Add(this.uiUserControl3);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "UC_main";
             this.Size = new System.Drawing.Size(1125, 720);
             this.uiUserControl7.ResumeLayout(false);
@@ -985,18 +1098,18 @@
         private Sunny.UI.UIButton notice4;
         private Sunny.UI.UIButton notice5;
         private Sunny.UI.UIButton notice1;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label noticeText5;
+        private System.Windows.Forms.Label noticeText4;
+        private System.Windows.Forms.Label noticeText3;
+        private System.Windows.Forms.Label noticeText2;
+        private System.Windows.Forms.Label noticeText1;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label15;
         private Sunny.UI.UIUserControl uiUserControl6;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label doc4;
+        private System.Windows.Forms.Label doc3;
+        private System.Windows.Forms.Label doc2;
+        private System.Windows.Forms.Label doc1;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private Sunny.UI.UIUserControl uiUserControl2;
@@ -1041,6 +1154,11 @@
         private System.Windows.Forms.Label newslabel3;
         private System.Windows.Forms.Label newslabel2;
         private System.Windows.Forms.Label newslabel1;
-        private System.Windows.Forms.Panel ShortcutPanel;
+        private System.Windows.Forms.Label shortcutText3;
+        private System.Windows.Forms.Label shortcutText2;
+        private Sunny.UI.UISymbolButton shortcutButton2;
+        private System.Windows.Forms.Label shortcutText1;
+        private Sunny.UI.UISymbolButton shortcutButton1;
+        private Sunny.UI.UISymbolButton shortcutButton3;
     }
 }

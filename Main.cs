@@ -20,7 +20,9 @@ namespace miniSys0._3
             InitializeComponent();
             searchBox.Hide();    
             addNavMenu();
+            
             addMainPanel();
+            //initShortcut();
         }
         Point mPoint;
         private void drag_down(object sender, MouseEventArgs e)
@@ -75,14 +77,14 @@ namespace miniSys0._3
                 }
             }
 
-            *//*label33.Text = "\ue902 Dashboard";
-            label33.Font = new Font(IconfontHelper.PFCC.Families[0], 20);*/
+            label33.Text = "\ue902 Dashboard";
+            label33.Font = new Font(IconfontHelper.PFCC.Families[0], 20);
 
 
-            /*foreach (TreeNode item in NavMenu.Nodes)
+            foreach (TreeNode item in NavMenu.Nodes)
             {
                 item.Text = "lala";
-            }*//*
+            }
         }*/
 
 
@@ -144,11 +146,44 @@ namespace miniSys0._3
             mainPanel.Controls.Add(uc);
             uc.BringToFront();
         }
+
+        void initShortcut()
+        {
+            /*void addUserControl(UserControl userControl)
+            {
+                userControl.Dock = DockStyle.Fill;
+                panel1.Controls.Clear();
+                panel1.Controls.Add(userControl);
+                userControl.BringToFront();
+            }*/
+
+            if (User_type.user_type == "Receptionist")
+            {
+                UC_R_Shortcut uc = new UC_R_Shortcut();
+                addUserControl(uc);
+            }
+            else if (User_type.user_type == "Technician")
+            {
+                UC_T_Shortcut uc = new UC_T_Shortcut();
+                addUserControl(uc);
+            }
+            else if (User_type.user_type == "Customer")
+            {
+                UC_C_Shortcut uc = new UC_C_Shortcut();
+                addUserControl(uc);
+            }
+            else if (User_type.user_type == "Admin")
+            {
+                UC_A_Shortcut uc = new UC_A_Shortcut();
+                addUserControl(uc);
+            }
+
+        }
     }
 
     public class User_type
     {
-        public static string user_type = "Admin";
+        public static string user_type = "Customer";
         // Receptionist
         // Technician
         // Customer
