@@ -2,8 +2,8 @@
  * @Author: Innis
  * @Description: 
  * @Date: 2022-04-19 10:48:59
- * @LastEditTime: 2022-04-19 11:11:33
- * @FilePath: \html\index.html
+ * @LastEditTime: 2022-04-20 17:22:12
+ * @FilePath: \Html\mainLineChart.html
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -14,19 +14,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div {
-            width: 400px;
-            height: 400px;
+        body {
+            overflow: scroll;
+            overflow-y: hidden;
+            overflow-x: hidden;
         }
     </style>
-     <script src="https://cdn.bootcdn.net/ajax/libs/Chart.js/3.7.0/chart.js"></script> 
-    <!--<script src="chart.js"></script>-->
+    <!--<script src="https://cdn.bootcdn.net/ajax/libs/Chart.js/3.7.0/chart.js"></script> -->
+    <script src="chart.js"></script>
 </head>
 
 <body>
     <!-- <button onclick="show()">click</button> -->
-    <div>
-        <canvas id="myChart" width="400" height="400"></canvas>
+    <div style="height:50%;width:100%;">
+        <canvas id="myChart" width="400" height="135"></canvas>
     </div>
     <script>
         function show(sqlData) {
@@ -37,7 +38,6 @@
                 data: {
                     labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
                     datasets: [{
-                        label: '# of Votes',
                         //data: [12, 19, 3, 5, 2, 3],
                         data: sqlData,
                         backgroundColor: [

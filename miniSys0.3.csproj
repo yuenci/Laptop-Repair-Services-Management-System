@@ -236,7 +236,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Html\chart.js" />
-    <Content Include="Html\index.html" />
+    <Content Include="Html\mainLineChart.html" />
+    <Content Include="Html\mainPieChart.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

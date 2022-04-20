@@ -89,12 +89,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.refreah = new System.Windows.Forms.Button();
+            this.refreshlButton1 = new Sunny.UI.UISymbolButton();
+            this.refreshlButton2 = new Sunny.UI.UISymbolButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.uiUserControl7.SuspendLayout();
             this.uiUserControl6.SuspendLayout();
             this.uiUserControl2.SuspendLayout();
             this.uiUserControl5.SuspendLayout();
+            this.pieChartPanel.SuspendLayout();
             this.uiUserControl4.SuspendLayout();
             this.newsTopBar.SuspendLayout();
             this.uiUserControl3.SuspendLayout();
@@ -514,6 +516,7 @@
             // 
             // pieChartPanel
             // 
+            this.pieChartPanel.Controls.Add(this.refreshlButton2);
             this.pieChartPanel.Location = new System.Drawing.Point(15, 11);
             this.pieChartPanel.Name = "pieChartPanel";
             this.pieChartPanel.Size = new System.Drawing.Size(357, 259);
@@ -732,10 +735,10 @@
             // 
             // lineChartPanel
             // 
-            this.lineChartPanel.Controls.Add(this.refreah);
-            this.lineChartPanel.Location = new System.Drawing.Point(17, 134);
+            this.lineChartPanel.Controls.Add(this.refreshlButton1);
+            this.lineChartPanel.Location = new System.Drawing.Point(3, 134);
             this.lineChartPanel.Name = "lineChartPanel";
-            this.lineChartPanel.Size = new System.Drawing.Size(799, 276);
+            this.lineChartPanel.Size = new System.Drawing.Size(824, 290);
             this.lineChartPanel.TabIndex = 30;
             // 
             // upperTriangle
@@ -901,15 +904,55 @@
             this.panel1.Size = new System.Drawing.Size(810, 2);
             this.panel1.TabIndex = 0;
             // 
-            // refreah
+            // refreshlButton1
             // 
-            this.refreah.Location = new System.Drawing.Point(765, 3);
-            this.refreah.Name = "refreah";
-            this.refreah.Size = new System.Drawing.Size(31, 31);
-            this.refreah.TabIndex = 0;
-            this.refreah.Text = "R";
-            this.refreah.UseVisualStyleBackColor = true;
-            this.refreah.Click += new System.EventHandler(this.refreah_Click);
+            this.refreshlButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.refreshlButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.refreshlButton1.FillHoverColor = System.Drawing.Color.Gainsboro;
+            this.refreshlButton1.FillPressColor = System.Drawing.Color.Silver;
+            this.refreshlButton1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.refreshlButton1.Location = new System.Drawing.Point(782, 4);
+            this.refreshlButton1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.refreshlButton1.Name = "refreshlButton1";
+            this.refreshlButton1.RectColor = System.Drawing.Color.Transparent;
+            this.refreshlButton1.RectHoverColor = System.Drawing.Color.Transparent;
+            this.refreshlButton1.RectPressColor = System.Drawing.Color.Transparent;
+            this.refreshlButton1.RectSelectedColor = System.Drawing.Color.Transparent;
+            this.refreshlButton1.Size = new System.Drawing.Size(35, 35);
+            this.refreshlButton1.Style = Sunny.UI.UIStyle.Custom;
+            this.refreshlButton1.Symbol = 57386;
+            this.refreshlButton1.SymbolColor = System.Drawing.Color.Black;
+            this.refreshlButton1.SymbolHoverColor = System.Drawing.Color.Black;
+            this.refreshlButton1.SymbolPressColor = System.Drawing.Color.Black;
+            this.refreshlButton1.TabIndex = 1;
+            this.refreshlButton1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.refreshlButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.refreshlButton1.Click += new System.EventHandler(this.refreshlButton_Click);
+            // 
+            // refreshlButton2
+            // 
+            this.refreshlButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.refreshlButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.refreshlButton2.FillHoverColor = System.Drawing.Color.Gainsboro;
+            this.refreshlButton2.FillPressColor = System.Drawing.Color.Silver;
+            this.refreshlButton2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.refreshlButton2.Location = new System.Drawing.Point(322, 0);
+            this.refreshlButton2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.refreshlButton2.Name = "refreshlButton2";
+            this.refreshlButton2.RectColor = System.Drawing.Color.Transparent;
+            this.refreshlButton2.RectHoverColor = System.Drawing.Color.Transparent;
+            this.refreshlButton2.RectPressColor = System.Drawing.Color.Transparent;
+            this.refreshlButton2.RectSelectedColor = System.Drawing.Color.Transparent;
+            this.refreshlButton2.Size = new System.Drawing.Size(35, 35);
+            this.refreshlButton2.Style = Sunny.UI.UIStyle.Custom;
+            this.refreshlButton2.Symbol = 57386;
+            this.refreshlButton2.SymbolColor = System.Drawing.Color.Black;
+            this.refreshlButton2.SymbolHoverColor = System.Drawing.Color.Black;
+            this.refreshlButton2.SymbolPressColor = System.Drawing.Color.Black;
+            this.refreshlButton2.TabIndex = 2;
+            this.refreshlButton2.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.refreshlButton2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.refreshlButton2.Click += new System.EventHandler(this.refreshlButton2_Click);
             // 
             // UC_main
             // 
@@ -932,6 +975,7 @@
             this.uiUserControl2.ResumeLayout(false);
             this.uiUserControl2.PerformLayout();
             this.uiUserControl5.ResumeLayout(false);
+            this.pieChartPanel.ResumeLayout(false);
             this.uiUserControl4.ResumeLayout(false);
             this.uiUserControl4.PerformLayout();
             this.newsTopBar.ResumeLayout(false);
@@ -1011,6 +1055,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button refreah;
+        private Sunny.UI.UISymbolButton refreshlButton1;
+        private Sunny.UI.UISymbolButton refreshlButton2;
     }
 }

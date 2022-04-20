@@ -1,0 +1,59 @@
+<!--
+ * @Author: Innis
+ * @Description: 
+ * @Date: 2022-04-20 17:14:17
+ * @LastEditTime: 2022-04-20 17:22:10
+ * @FilePath: \Html\mainPieChart.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            overflow: scroll;
+            overflow-y: hidden;
+            overflow-x: hidden;
+        }
+    </style>
+    <!--<script src="https://cdn.bootcdn.net/ajax/libs/Chart.js/3.7.0/chart.js"></script> -->
+    <script src="chart.js"></script>
+</head>
+
+<body>
+    <!-- <button onclick="show()">click</button> -->
+    <div style="height:40%;width:40%;">
+        <canvas id="myChart" width="135" height="135"></canvas>
+    </div>
+    <script>
+        function show(sqlData) {
+            //alert("收到Net程序事件,我是JS弹框.")
+            var ctx = document.getElementById("myChart").getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: "pie",
+                data: {
+                    labels: ["Red", "Yellow", "Blue"],
+                    datasets: [
+                        {
+                            data: [10, 20, 30],
+                            backgroundColor: [
+                                'rgba(255,99,132,1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)'
+                            ]
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

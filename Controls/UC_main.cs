@@ -18,7 +18,8 @@ namespace miniSys0._3.Controls
         {
             InitializeComponent();
             sunnyUIinit();
-            InitializeChrome();
+            InitializeChromeForMainLineChart();
+            //InitializeChromeForMainPieChart();
         }
 
         void sunnyUIinit()
@@ -44,16 +45,39 @@ namespace miniSys0._3.Controls
             news5.MarkColor = Color.FromArgb(242, 243, 245);
         }
         public ChromiumWebBrowser WebBrowser;
-        private void InitializeChrome()
+
+        //stop right click
+        public class MenuHandler : IContextMenuHandler
+        {
+            public void OnBeforeContextMenu(IWebBrowser browserControl, IBrowser browser, IFrame frame, IContextMenuParams parameters, IMenuModel model)
+            {
+                model.Clear();
+            }
+            public bool OnContextMenuCommand(IWebBrowser browserControl, IBrowser browser, IFrame frame, IContextMenuParams parameters, CefMenuCommand commandId, CefEventFlags eventFlags)
+            {
+                return false;
+            }
+            public void OnContextMenuDismissed(IWebBrowser browserControl, IBrowser browser, IFrame frame)
+            {
+            }
+            public bool RunContextMenu(IWebBrowser browserControl, IBrowser browser, IFrame frame, IContextMenuParams parameters, IMenuModel model, IRunContextMenuCallback callback)
+            {
+                return false;
+            }
+        }
+        private void InitializeChromeForMainLineChart()
         {
             var setting = new CefSettings();
             setting.MultiThreadedMessageLoop = true;
             CefSharp.Cef.Initialize(setting);
-            WebBrowser = new ChromiumWebBrowser(@"E:\Materials\【LOOP】\Assignment\miniSys0.3\Html\index.html");
+            WebBrowser = new ChromiumWebBrowser(@"E:\Materials\【LOOP】\Assignment\miniSys0.3\Html\mainLineChart.html");
             WebBrowser.Dock = DockStyle.Fill;//铺满                                                                  
             WebBrowser.Dock = DockStyle.Fill;//设置停靠方式
             WebBrowser.JavascriptObjectRepository.Settings.LegacyBindingEnabled = true; //交互数据
-            this.panel1.Controls.Add(WebBrowser);
+            WebBrowser.MenuHandler = new MenuHandler();//阻止右键
+            this.lineChartPanel.Controls.Add(WebBrowser);
+
+            //refreshlButton.PerformClick();
 
         }
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
@@ -61,10 +85,32 @@ namespace miniSys0._3.Controls
             Cef.Shutdown();
         }
 
+        private async void refreshlButton_Click(object sender, EventArgs e)
+        {
+            await WebBrowser.GetBrowser().MainFrame.EvaluateScriptAsync("show([12, 19, 3, 5, 2, 3])");
+        }
 
-        private async void refreah_Click(object sender, EventArgs e)
+        public ChromiumWebBrowser WebBrowser1;
+        private void InitializeChromeForMainPieChart()
+        {
+            var setting1 = new CefSettings();
+            setting1.MultiThreadedMessageLoop = true;
+            CefSharp.Cef.Initialize(setting1);
+            WebBrowser1 = new ChromiumWebBrowser(@"E:\Materials\【LOOP】\Assignment\miniSys0.3\Html\mainPieChart.html");
+            WebBrowser1.Dock = DockStyle.Fill;//铺满                                                                  
+            WebBrowser1.Dock = DockStyle.Fill;//设置停靠方式
+            WebBrowser1.JavascriptObjectRepository.Settings.LegacyBindingEnabled = true; //交互数据
+            WebBrowser1.MenuHandler = new MenuHandler();//阻止右键
+            this.pieChartPanel.Controls.Add(WebBrowser1);
+
+            //refreshlButton.PerformClick();
+
+        }
+
+        private async void refreshlButton2_Click(object sender, EventArgs e)
         {
             await WebBrowser.GetBrowser().MainFrame.EvaluateScriptAsync("show([12, 19, 3, 5, 2, 3])");
         }
     }
+    
 }
