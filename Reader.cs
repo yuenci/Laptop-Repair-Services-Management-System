@@ -40,7 +40,7 @@ namespace miniSys0._3
             panelBrower.Controls.Add(WebBrowser2);
 
 
-            //refreshlButton.PerformClick();
+            
 
         }
 
@@ -49,5 +49,7 @@ namespace miniSys0._3
             e.Cancel = true;
             this.Hide();
         }
+
+
     }
 }

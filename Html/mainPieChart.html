@@ -27,7 +27,8 @@
         }
     </style>
     <!--<script src="https://cdn.bootcdn.net/ajax/libs/Chart.js/3.7.0/chart.js"></script> -->
-    <script src="chart1.js"></script>
+    <script src="chart.js"></script>
+    <script src="parameterForPieChart.js"></script>
 </head>
 
 <body>
@@ -36,20 +37,29 @@
         <canvas id="myChart" width="400" height="400"></canvas>
     </div>
     <script>
-        function show1(sqlData) {
-            //alert("收到Net程序事件,我是JS弹框.")
+        function refresh1() {
+            location.reload();
+        }
+
+
+        function show1() {
             var ctx = document.getElementById("myChart").getContext('2d');
             var myChart = new Chart(ctx, {
                 type: "doughnut",
                 data: {
-                    labels: ["Red", "Yellow", "Blue"],
+                    labels: ["Virus", "Run slow", "Screen", "Keyboard", "Battery", "OS", "Data", "Internet"],
                     datasets: [
                         {
-                            data: [10, 20, 30],
+                            data: dataset,
                             backgroundColor: [
-                                'rgba(255,99,132,1)',
-                                'rgba(54, 162, 235, 1)',
-                                'rgba(255, 206, 86, 1)'
+                                "#F53F3F",
+                                "#FF7D00",
+                                "#FADC19",
+                                "#00B42A",
+                                "#14C9C9",
+                                "#165DFF",
+                                "#D91AD9",
+                                "#86909C",
                             ]
                         }
                     ]
@@ -64,7 +74,7 @@
                 }
             });
         }
-        show1(8);
+        show1();
     </script>
 </body>
 

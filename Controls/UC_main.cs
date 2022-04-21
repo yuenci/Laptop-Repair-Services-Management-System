@@ -26,7 +26,7 @@ namespace miniSys0._3.Controls
             initName();
             initDataBanner();
             initShortcut();
-            intrReader();
+            initReader();
         }
 
         void initsunnyUI()
@@ -78,7 +78,7 @@ namespace miniSys0._3.Controls
             string greet = $"Welcome back，{User_type.user_name}";
             name_lable.Text = greet;
         }
-        private dynamic getDataReader(string sql)
+        public  static  dynamic getDataReader(string sql)
         {
             string connStr = @"Data Source=LAPTOP-5ACE008F\SQLEXPRESS;Initial Catalog=CsharpRepairerInc;Integrated Security=True";
 
@@ -92,7 +92,7 @@ namespace miniSys0._3.Controls
             return connTools;
         }
 
-        private List<int> getOneWeekOrderNum()
+        public static List<int> getOneWeekOrderNum()
         {
             string allsql = "";
             for (int i = 0; i < 7; i++)
@@ -109,6 +109,30 @@ namespace miniSys0._3.Controls
                 Console.WriteLine(dr2.FieldCount);
                 //BannerLabel4.Text = dr2[1].ToString();
             }*/
+            List<int> result = new List<int>();
+            do
+            {
+                dr2.Read();
+                result.Add(int.Parse(dr2[0].ToString()));
+            }
+            while (dr2.NextResult());
+            dr2.Close();
+            conn2.Close();
+            return result;
+        }
+
+        public static List<int> getOnemonthratio()
+        {
+            string allsql = "";
+            for (int i = 0; i < 8; i++)
+            {
+                var sqlpart = $"select COUNT(*) from Orders where month(Time) = month(getdate()) and " +
+                    $"year(Time) = year(getdate()) and Service_type = 'Ser00{i+1}';";
+                allsql += sqlpart;
+            }
+            dynamic[] connTools2 = getDataReader(allsql);
+            SqlDataReader dr2 = connTools2[1];
+            SqlConnection conn2 = connTools2[0];
             List<int> result = new List<int>();
             do
             {
@@ -364,7 +388,7 @@ namespace miniSys0._3.Controls
         }
         private async void refreshlButton_Click(object sender, EventArgs e)
         {
-            await WebBrowser.GetBrowser().MainFrame.EvaluateScriptAsync("show([12, 19, 3, 5, 2, 3])");
+            await WebBrowser.GetBrowser().MainFrame.EvaluateScriptAsync("refresh()");
         }
 
         public  ChromiumWebBrowser WebBrowser1;
@@ -386,7 +410,7 @@ namespace miniSys0._3.Controls
 
         private async void refreshlButton2_Click(object sender, EventArgs e)
         {
-            await WebBrowser1.GetBrowser().MainFrame.EvaluateScriptAsync("show1([12, 19, 3, 5, 2, 3])");
+            await WebBrowser1.GetBrowser().MainFrame.EvaluateScriptAsync("refresh1()");
         }
 
         private void n1_hover(object sender, EventArgs e)
@@ -540,18 +564,14 @@ namespace miniSys0._3.Controls
             doc4.ForeColor = Color.FromArgb(78, 89, 105);
         }
         public ChromiumWebBrowser WebBrowser2;
-        void intrReader()
+        void initReader()
         {
             Reader readerInst= new Reader();
         }
 
         private void news1_Click(object sender, EventArgs e)
         {
-            /*int PositionX = this.Location.X;
-            int PositionY = this.Location.Y;
-            Reader.reader.StartPosition = FormStartPosition.Manual;
-            Reader.reader.Location = (Point)new Size(PositionX + 370, PositionY + 200);*/
-/*            await Reader.reader.WebBrowser2.GetBrowser().MainFrame.EvaluateScriptAsync("insertTitle('lalalalala')");*/
+            Reader.reader.WebBrowser2.Load("http://www.google.ca");
             Reader.reader.Show();
         }
 

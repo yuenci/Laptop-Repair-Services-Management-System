@@ -1,18 +1,16 @@
-/*
- * @Author: Innis
- * @Description: 
- * @Date: 2022-04-21 13:26:26
- * @LastEditTime: 2022-04-21 20:24:59
- * @FilePath: \Articles\script.js
- */
-let type = "Message"
-let titlePara = `[${type}] ` + "I like coding"
-let posterPara = "Innis"
-let staffpostPara = "Receptionist"
-let viewsPara = 8005
-let likesPara = 8346
-let timePara = "2022-03-27 14:48:41.000"
+let type = "Message";
+let titlePara = `[${type}] ` + "I like coding";
+let posterPara = "Innis";
+let staffpostPara = "Receptionist";
+let viewsPara = 8005;
+let likesPara = 8346;
+let timePara = "2022-03-27 14:48:41.000";
 let urlPara = "https://blog.csdn.net/YouZaiYouZaia/article/details/78705603";
+
+function refresh() {
+    location.reload();
+}
+
 
 function insertTitle(titleStr) {
     var title = document.getElementById("title");

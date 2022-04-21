@@ -20,16 +20,20 @@
             overflow-x: hidden;
         }
     </style>
-    <!--<script src="https://cdn.bootcdn.net/ajax/libs/Chart.js/3.7.0/chart.js"></script> -->
     <script src="chart.js"></script>
+    <script src="parameterForLineChart.js"></script>
 </head>
 
 <body>
-    <!-- <button onclick="show()">click</button> -->
     <div style="height:50%;width:100%;">
         <canvas id="myChart" width="400" height="135"></canvas>
     </div>
     <script>
+        function refresh() {
+            location.reload();
+        }
+
+
         var timeList = [];
 
         for (i = 0; i < 7; i++) {
@@ -38,8 +42,7 @@
             var s1 = day1.getFullYear() + "-" + (day1.getMonth() + 1) + "-" + day1.getDate();
             timeList.unshift(s1);
         }
-        function show(sqlData) {
-            //alert("收到Net程序事件,我是JS弹框.")
+        function show() {
             var ctx = document.getElementById("myChart").getContext('2d');
             var myChart = new Chart(ctx, {
                 type: 'line',
@@ -52,36 +55,7 @@
                         borderColor: "#5a6efd",
                         backgroundColor: "rgba(22, 93, 255, 0.2)",
                         //pointRadius: 6,
-                        data: [
-                            {
-                                x: 1,
-                                y: 20
-                            },
-                            {
-                                x: 2,
-                                y: 10
-                            },
-                            {
-                                x: 3,
-                                y: 30
-                            },
-                            {
-                                x: 4,
-                                y: 50
-                            },
-                            {
-                                x: 5,
-                                y: 70
-                            },
-                            {
-                                x: 6,
-                                y: 60
-                            },
-                            {
-                                x: 7,
-                                y: 30
-                            }
-                        ],
+                        data: dataset,
                         borderWidth: 1
                     }]
                 },
@@ -116,7 +90,7 @@
                 }
             });
         }
-        show(8);
+        show();
     </script>
 </body>
 

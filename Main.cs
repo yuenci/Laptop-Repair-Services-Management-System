@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Sunny.UI;
 using miniSys0._3.Controls;
+using System.IO;
 
 namespace miniSys0._3
 {
@@ -27,6 +28,8 @@ namespace miniSys0._3
             //initShortcut();
 
             randomLogoColor();
+
+            prepareData();
         }
         Point mPoint;
         private void drag_down(object sender, MouseEventArgs e)
@@ -289,6 +292,50 @@ namespace miniSys0._3
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void writeDataToJsFIle(string type, List<int> parameter)
+        {
+            string fileName = "";
+            string Content = "dataset = [";
+            if (type == "lineChart")
+            {
+                fileName = "parameterForLineChart.js";
+                for (int i = 0; i < parameter.Count; i++)
+                {
+                    string part = $"{{x: {i + 1},y: {parameter[i]}}},";
+                    Content += part;
+                }
+            } 
+            else if (type == "pieChart")
+            {
+                fileName = "parameterForPieChart.js";
+                for (int i = 0; i < parameter.Count; i++)
+                {
+                    Content += $"{parameter[i]},";
+                }
+            }
+            Content += "]";
+            string path = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin")) + $"Html\\{fileName}";
+            //empty old js file
+            FileStream fs = new FileStream(path, FileMode.Truncate, FileAccess.ReadWrite);
+            fs.Close();
+            // add new 
+            System.IO.StreamWriter sw = new System.IO.StreamWriter(path, true, System.Text.Encoding.Default);
+            sw.Write(Content);
+            sw.Close();
+            sw.Dispose();
+        }
+
+        private void prepareData()
+        {
+            List<int> weekOrderNum = UC_main.getOneWeekOrderNum();
+            List<int> monthOrderNRatio = UC_main.getOnemonthratio();
+            writeDataToJsFIle("lineChart",weekOrderNum);
+            writeDataToJsFIle("pieChart",monthOrderNRatio);
+
+
+
         }
     }
 

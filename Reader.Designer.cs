@@ -46,7 +46,6 @@
             this.Controls.Add(this.panelBrower);
             this.MaximizeBox = false;
             this.Name = "Reader";
-            this.Style = Sunny.UI.UIStyle.Custom;
             this.Text = "Reader";
             this.TopMost = true;
             this.ZoomScaleRect = new System.Drawing.Rectangle(15, 15, 800, 450);
