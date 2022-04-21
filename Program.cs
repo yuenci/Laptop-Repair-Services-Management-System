@@ -18,8 +18,9 @@ namespace miniSys0._3
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Login());
             Application.Run(new Main());
-            
             //Application.Run(new ProfileFloating());
+            //Application.Run(new Reader());
+           
         }
     }
 }

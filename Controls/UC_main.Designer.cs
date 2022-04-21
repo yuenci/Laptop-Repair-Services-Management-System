@@ -231,6 +231,7 @@
             this.noticeText5.Size = new System.Drawing.Size(65, 22);
             this.noticeText5.TabIndex = 48;
             this.noticeText5.Text = "label25";
+            this.noticeText5.Click += new System.EventHandler(this.noticeText5_Click);
             this.noticeText5.MouseLeave += new System.EventHandler(this.noticeText5_leave);
             this.noticeText5.MouseHover += new System.EventHandler(this.noticeText5_hover);
             // 
@@ -245,6 +246,7 @@
             this.noticeText4.Size = new System.Drawing.Size(65, 22);
             this.noticeText4.TabIndex = 47;
             this.noticeText4.Text = "label24";
+            this.noticeText4.Click += new System.EventHandler(this.noticeText4_Click);
             this.noticeText4.MouseLeave += new System.EventHandler(this.noticeText4_leave);
             this.noticeText4.MouseHover += new System.EventHandler(this.noticeText4_hover);
             // 
@@ -259,6 +261,7 @@
             this.noticeText3.Size = new System.Drawing.Size(65, 22);
             this.noticeText3.TabIndex = 46;
             this.noticeText3.Text = "label23";
+            this.noticeText3.Click += new System.EventHandler(this.noticeText3_Click);
             this.noticeText3.MouseLeave += new System.EventHandler(this.noticeText3_leave);
             this.noticeText3.MouseHover += new System.EventHandler(this.noticeText3_hover);
             // 
@@ -273,6 +276,7 @@
             this.noticeText2.Size = new System.Drawing.Size(65, 22);
             this.noticeText2.TabIndex = 45;
             this.noticeText2.Text = "label22";
+            this.noticeText2.Click += new System.EventHandler(this.noticeText2_Click);
             this.noticeText2.MouseLeave += new System.EventHandler(this.noticeText2_leave);
             this.noticeText2.MouseHover += new System.EventHandler(this.noticeText2_hover);
             // 
@@ -287,6 +291,7 @@
             this.noticeText1.Size = new System.Drawing.Size(65, 22);
             this.noticeText1.TabIndex = 44;
             this.noticeText1.Text = "label21";
+            this.noticeText1.Click += new System.EventHandler(this.noticeText1_Click);
             this.noticeText1.MouseLeave += new System.EventHandler(this.noticeText1_leave);
             this.noticeText1.MouseHover += new System.EventHandler(this.noticeText1_hover);
             // 
@@ -669,6 +674,7 @@
             this.news1.Text = "1      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...";
             this.news1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.news1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.news1.Click += new System.EventHandler(this.news1_Click);
             this.news1.MouseLeave += new System.EventHandler(this.n1_leave);
             this.news1.MouseHover += new System.EventHandler(this.n1_hover);
             // 
@@ -687,6 +693,7 @@
             this.news5.Text = "5      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...";
             this.news5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.news5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.news5.Click += new System.EventHandler(this.news5_Click);
             this.news5.MouseLeave += new System.EventHandler(this.n5_leave);
             this.news5.MouseHover += new System.EventHandler(this.n5_hover);
             // 
@@ -705,6 +712,7 @@
             this.news4.Text = "4      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...";
             this.news4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.news4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.news4.Click += new System.EventHandler(this.news4_Click);
             this.news4.MouseLeave += new System.EventHandler(this.n4_leave);
             this.news4.MouseHover += new System.EventHandler(this.n4_hover);
             // 
@@ -723,6 +731,7 @@
             this.news3.Text = "3      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...";
             this.news3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.news3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.news3.Click += new System.EventHandler(this.news3_Click);
             this.news3.MouseLeave += new System.EventHandler(this.n3_leave);
             this.news3.MouseHover += new System.EventHandler(this.n3_hover);
             // 
@@ -741,6 +750,7 @@
             this.news2.Text = "2      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...";
             this.news2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.news2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.news2.Click += new System.EventHandler(this.news2_Click);
             this.news2.MouseLeave += new System.EventHandler(this.n2_leave);
             this.news2.MouseHover += new System.EventHandler(this.n2_hover);
             // 

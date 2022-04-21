@@ -26,6 +26,7 @@ namespace miniSys0._3.Controls
             initName();
             initDataBanner();
             initShortcut();
+            intrReader();
         }
 
         void initsunnyUI()
@@ -319,11 +320,6 @@ namespace miniSys0._3.Controls
         }
 
 
-
-
-
-        
-
         //stop right click
         public class MenuHandler : IContextMenuHandler
         {
@@ -343,6 +339,7 @@ namespace miniSys0._3.Controls
                 return false;
             }
         }
+        
         public ChromiumWebBrowser WebBrowser;
 
         
@@ -541,6 +538,66 @@ namespace miniSys0._3.Controls
         private void doc4_leave(object sender, EventArgs e)
         {
             doc4.ForeColor = Color.FromArgb(78, 89, 105);
+        }
+        public ChromiumWebBrowser WebBrowser2;
+        void intrReader()
+        {
+            Reader readerInst= new Reader();
+        }
+
+        private void news1_Click(object sender, EventArgs e)
+        {
+            /*int PositionX = this.Location.X;
+            int PositionY = this.Location.Y;
+            Reader.reader.StartPosition = FormStartPosition.Manual;
+            Reader.reader.Location = (Point)new Size(PositionX + 370, PositionY + 200);*/
+/*            await Reader.reader.WebBrowser2.GetBrowser().MainFrame.EvaluateScriptAsync("insertTitle('lalalalala')");*/
+            Reader.reader.Show();
+        }
+
+        private void news2_Click(object sender, EventArgs e)
+        {
+            Reader.reader.Show();
+        }
+
+        private void news3_Click(object sender, EventArgs e)
+        {
+            Reader.reader.Show();
+        }
+
+        private void news4_Click(object sender, EventArgs e)
+        {
+            Reader.reader.Show();
+        }
+
+        private void news5_Click(object sender, EventArgs e)
+        {
+            Reader.reader.Show();
+        }
+
+        private void noticeText1_Click(object sender, EventArgs e)
+        {
+            Reader.reader.Show();
+        }
+
+        private void noticeText2_Click(object sender, EventArgs e)
+        {
+            Reader.reader.Show();
+        }
+
+        private void noticeText3_Click(object sender, EventArgs e)
+        {
+            Reader.reader.Show();
+        }
+
+        private void noticeText4_Click(object sender, EventArgs e)
+        {
+            Reader.reader.Show();
+        }
+
+        private void noticeText5_Click(object sender, EventArgs e)
+        {
+            Reader.reader.Show();
         }
     }
     

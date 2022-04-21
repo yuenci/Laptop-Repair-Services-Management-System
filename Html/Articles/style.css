@@ -1,0 +1,116 @@
+body {
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #E3EDCD;
+}
+
+#icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(70, 141, 255, 1);
+    border: 1px solid transparent;
+    border-radius: 50%;
+    text-align: center;
+
+}
+
+#first {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 50px;
+}
+
+#name {
+    position: absolute;
+    top: 65px;
+    left: 80px;
+}
+
+#staff {
+    position: absolute;
+    top: 100px;
+    left: 80px;
+    text-indent: 0;
+}
+
+.icon {
+    width: 50px;
+    height: 30px;
+    background-color: rgb(187, 191, 196);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.iconfont {
+    color: #fff;
+    position: relative;
+    line-height: 30px
+}
+
+#info {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+#share {
+    position: relative;
+    top: 4px;
+}
+
+.word {
+    color: #fff;
+
+}
+
+.iconAndWord {
+    width: 70px;
+}
+
+.icon:hover {
+    background-color: rgb(22, 93, 255);
+}
+
+p {
+    text-indent: 2em;
+}
+
+/* #time {
+            text-indent: 0em;
+            font-size: 12px;
+            margin-bottom: 10px;
+        } */
+
+#artical {
+    font-size: 16px;
+}
+
+#timeAndChanger {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+input {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+input:hover {
+    background-color: rgb(187, 191, 196);
+}
+
+#btns {
+    position: relative;
+    left: 65%;
+}
+
+#fwin {
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+}

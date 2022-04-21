@@ -166,6 +166,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reader.Designer.cs">
+      <DependentUpon>Reader.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CommonlyControls.resx">
       <DependentUpon>CommonlyControls.cs</DependentUpon>
     </EmbeddedResource>
@@ -221,6 +227,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reader.resx">
+      <DependentUpon>Reader.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="CsharpRepairerIncDataSet.xsc">
       <DependentUpon>CsharpRepairerIncDataSet.xsd</DependentUpon>
     </None>
@@ -232,9 +241,7 @@
     <None Include="CsharpRepairerIncDataSet.xss">
       <DependentUpon>CsharpRepairerIncDataSet.xsd</DependentUpon>
     </None>
-    <None Include="icomoon.ttf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <None Include="Html\Articles\iconfont.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -280,10 +287,218 @@
     <None Include="Resources\tou_alpha.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Html\Articles\Art000001.html" />
+    <Content Include="Html\Articles\Art000002.html" />
+    <Content Include="Html\Articles\Art000003.html" />
+    <Content Include="Html\Articles\Art000004.html" />
+    <Content Include="Html\Articles\Art000005.html" />
+    <Content Include="Html\Articles\Art000006.html" />
+    <Content Include="Html\Articles\Art000007.html" />
+    <Content Include="Html\Articles\Art000008.html" />
+    <Content Include="Html\Articles\Art000009.html" />
+    <Content Include="Html\Articles\Art000010.html" />
+    <Content Include="Html\Articles\Art000011.html" />
+    <Content Include="Html\Articles\Art000012.html" />
+    <Content Include="Html\Articles\Art000013.html" />
+    <Content Include="Html\Articles\Art000014.html" />
+    <Content Include="Html\Articles\Art000015.html" />
+    <Content Include="Html\Articles\Art000016.html" />
+    <Content Include="Html\Articles\Art000017.html" />
+    <Content Include="Html\Articles\Art000018.html" />
+    <Content Include="Html\Articles\Art000019.html" />
+    <Content Include="Html\Articles\Art000020.html" />
+    <Content Include="Html\Articles\Art000021.html" />
+    <Content Include="Html\Articles\Art000022.html" />
+    <Content Include="Html\Articles\Art000023.html" />
+    <Content Include="Html\Articles\Art000024.html" />
+    <Content Include="Html\Articles\Art000025.html" />
+    <Content Include="Html\Articles\Art000026.html" />
+    <Content Include="Html\Articles\Art000027.html" />
+    <Content Include="Html\Articles\Art000028.html" />
+    <Content Include="Html\Articles\Art000029.html" />
+    <Content Include="Html\Articles\Art000030.html" />
+    <Content Include="Html\Articles\Art000031.html" />
+    <Content Include="Html\Articles\Art000032.html" />
+    <Content Include="Html\Articles\Art000033.html" />
+    <Content Include="Html\Articles\Art000034.html" />
+    <Content Include="Html\Articles\Art000035.html" />
+    <Content Include="Html\Articles\Art000036.html" />
+    <Content Include="Html\Articles\Art000037.html" />
+    <Content Include="Html\Articles\Art000038.html" />
+    <Content Include="Html\Articles\Art000039.html" />
+    <Content Include="Html\Articles\Art000040.html" />
+    <Content Include="Html\Articles\Art000041.html" />
+    <Content Include="Html\Articles\Art000042.html" />
+    <Content Include="Html\Articles\Art000043.html" />
+    <Content Include="Html\Articles\Art000044.html" />
+    <Content Include="Html\Articles\Art000045.html" />
+    <Content Include="Html\Articles\Art000046.html" />
+    <Content Include="Html\Articles\Art000047.html" />
+    <Content Include="Html\Articles\Art000048.html" />
+    <Content Include="Html\Articles\Art000049.html" />
+    <Content Include="Html\Articles\Art000050.html" />
+    <Content Include="Html\Articles\Art000051.html" />
+    <Content Include="Html\Articles\Art000052.html" />
+    <Content Include="Html\Articles\Art000053.html" />
+    <Content Include="Html\Articles\Art000054.html" />
+    <Content Include="Html\Articles\Art000055.html" />
+    <Content Include="Html\Articles\Art000056.html" />
+    <Content Include="Html\Articles\Art000057.html" />
+    <Content Include="Html\Articles\Art000058.html" />
+    <Content Include="Html\Articles\Art000059.html" />
+    <Content Include="Html\Articles\Art000060.html" />
+    <Content Include="Html\Articles\Art000061.html" />
+    <Content Include="Html\Articles\Art000062.html" />
+    <Content Include="Html\Articles\Art000063.html" />
+    <Content Include="Html\Articles\Art000064.html" />
+    <Content Include="Html\Articles\Art000065.html" />
+    <Content Include="Html\Articles\Art000066.html" />
+    <Content Include="Html\Articles\Art000067.html" />
+    <Content Include="Html\Articles\Art000068.html" />
+    <Content Include="Html\Articles\Art000069.html" />
+    <Content Include="Html\Articles\Art000070.html" />
+    <Content Include="Html\Articles\Art000071.html" />
+    <Content Include="Html\Articles\Art000072.html" />
+    <Content Include="Html\Articles\Art000073.html" />
+    <Content Include="Html\Articles\Art000074.html" />
+    <Content Include="Html\Articles\Art000075.html" />
+    <Content Include="Html\Articles\Art000076.html" />
+    <Content Include="Html\Articles\Art000077.html" />
+    <Content Include="Html\Articles\Art000078.html" />
+    <Content Include="Html\Articles\Art000079.html" />
+    <Content Include="Html\Articles\Art000080.html" />
+    <Content Include="Html\Articles\Art000081.html" />
+    <Content Include="Html\Articles\Art000082.html" />
+    <Content Include="Html\Articles\Art000083.html" />
+    <Content Include="Html\Articles\Art000084.html" />
+    <Content Include="Html\Articles\Art000085.html" />
+    <Content Include="Html\Articles\Art000086.html" />
+    <Content Include="Html\Articles\Art000087.html" />
+    <Content Include="Html\Articles\Art000088.html" />
+    <Content Include="Html\Articles\Art000089.html" />
+    <Content Include="Html\Articles\Art000090.html" />
+    <Content Include="Html\Articles\Art000091.html" />
+    <Content Include="Html\Articles\Art000092.html" />
+    <Content Include="Html\Articles\Art000093.html" />
+    <Content Include="Html\Articles\Art000094.html" />
+    <Content Include="Html\Articles\Art000095.html" />
+    <Content Include="Html\Articles\Art000096.html" />
+    <Content Include="Html\Articles\Art000097.html" />
+    <Content Include="Html\Articles\Art000098.html" />
+    <Content Include="Html\Articles\Art000099.html" />
+    <Content Include="Html\Articles\Art000100.html" />
+    <Content Include="Html\Articles\Art000101.html" />
+    <Content Include="Html\Articles\Art000102.html" />
+    <Content Include="Html\Articles\Art000103.html" />
+    <Content Include="Html\Articles\Art000104.html" />
+    <Content Include="Html\Articles\Art000105.html" />
+    <Content Include="Html\Articles\Art000106.html" />
+    <Content Include="Html\Articles\Art000107.html" />
+    <Content Include="Html\Articles\Art000108.html" />
+    <Content Include="Html\Articles\Art000109.html" />
+    <Content Include="Html\Articles\Art000110.html" />
+    <Content Include="Html\Articles\Art000111.html" />
+    <Content Include="Html\Articles\Art000112.html" />
+    <Content Include="Html\Articles\Art000113.html" />
+    <Content Include="Html\Articles\Art000114.html" />
+    <Content Include="Html\Articles\Art000115.html" />
+    <Content Include="Html\Articles\Art000116.html" />
+    <Content Include="Html\Articles\Art000117.html" />
+    <Content Include="Html\Articles\Art000118.html" />
+    <Content Include="Html\Articles\Art000119.html" />
+    <Content Include="Html\Articles\Art000120.html" />
+    <Content Include="Html\Articles\Art000121.html" />
+    <Content Include="Html\Articles\Art000122.html" />
+    <Content Include="Html\Articles\Art000123.html" />
+    <Content Include="Html\Articles\Art000124.html" />
+    <Content Include="Html\Articles\Art000125.html" />
+    <Content Include="Html\Articles\Art000126.html" />
+    <Content Include="Html\Articles\Art000127.html" />
+    <Content Include="Html\Articles\Art000128.html" />
+    <Content Include="Html\Articles\Art000129.html" />
+    <Content Include="Html\Articles\Art000130.html" />
+    <Content Include="Html\Articles\Art000131.html" />
+    <Content Include="Html\Articles\Art000132.html" />
+    <Content Include="Html\Articles\Art000133.html" />
+    <Content Include="Html\Articles\Art000134.html" />
+    <Content Include="Html\Articles\Art000135.html" />
+    <Content Include="Html\Articles\Art000136.html" />
+    <Content Include="Html\Articles\Art000137.html" />
+    <Content Include="Html\Articles\Art000138.html" />
+    <Content Include="Html\Articles\Art000139.html" />
+    <Content Include="Html\Articles\Art000140.html" />
+    <Content Include="Html\Articles\Art000141.html" />
+    <Content Include="Html\Articles\Art000142.html" />
+    <Content Include="Html\Articles\Art000143.html" />
+    <Content Include="Html\Articles\Art000144.html" />
+    <Content Include="Html\Articles\Art000145.html" />
+    <Content Include="Html\Articles\Art000146.html" />
+    <Content Include="Html\Articles\Art000147.html" />
+    <Content Include="Html\Articles\Art000148.html" />
+    <Content Include="Html\Articles\Art000149.html" />
+    <Content Include="Html\Articles\Art000150.html" />
+    <Content Include="Html\Articles\Art000151.html" />
+    <Content Include="Html\Articles\Art000152.html" />
+    <Content Include="Html\Articles\Art000153.html" />
+    <Content Include="Html\Articles\Art000154.html" />
+    <Content Include="Html\Articles\Art000155.html" />
+    <Content Include="Html\Articles\Art000156.html" />
+    <Content Include="Html\Articles\Art000157.html" />
+    <Content Include="Html\Articles\Art000158.html" />
+    <Content Include="Html\Articles\Art000159.html" />
+    <Content Include="Html\Articles\Art000160.html" />
+    <Content Include="Html\Articles\Art000161.html" />
+    <Content Include="Html\Articles\Art000162.html" />
+    <Content Include="Html\Articles\Art000163.html" />
+    <Content Include="Html\Articles\Art000164.html" />
+    <Content Include="Html\Articles\Art000165.html" />
+    <Content Include="Html\Articles\Art000166.html" />
+    <Content Include="Html\Articles\Art000167.html" />
+    <Content Include="Html\Articles\Art000168.html" />
+    <Content Include="Html\Articles\Art000169.html" />
+    <Content Include="Html\Articles\Art000170.html" />
+    <Content Include="Html\Articles\Art000171.html" />
+    <Content Include="Html\Articles\Art000172.html" />
+    <Content Include="Html\Articles\Art000173.html" />
+    <Content Include="Html\Articles\Art000174.html" />
+    <Content Include="Html\Articles\Art000175.html" />
+    <Content Include="Html\Articles\Art000176.html" />
+    <Content Include="Html\Articles\Art000177.html" />
+    <Content Include="Html\Articles\Art000178.html" />
+    <Content Include="Html\Articles\Art000179.html" />
+    <Content Include="Html\Articles\Art000180.html" />
+    <Content Include="Html\Articles\Art000181.html" />
+    <Content Include="Html\Articles\Art000182.html" />
+    <Content Include="Html\Articles\Art000183.html" />
+    <Content Include="Html\Articles\Art000184.html" />
+    <Content Include="Html\Articles\Art000185.html" />
+    <Content Include="Html\Articles\Art000186.html" />
+    <Content Include="Html\Articles\Art000187.html" />
+    <Content Include="Html\Articles\Art000188.html" />
+    <Content Include="Html\Articles\Art000189.html" />
+    <Content Include="Html\Articles\Art000190.html" />
+    <Content Include="Html\Articles\Art000191.html" />
+    <Content Include="Html\Articles\Art000192.html" />
+    <Content Include="Html\Articles\Art000193.html" />
+    <Content Include="Html\Articles\Art000194.html" />
+    <Content Include="Html\Articles\Art000195.html" />
+    <Content Include="Html\Articles\Art000196.html" />
+    <Content Include="Html\Articles\Art000197.html" />
+    <Content Include="Html\Articles\Art000198.html" />
+    <Content Include="Html\Articles\Art000199.html" />
+    <Content Include="Html\Articles\Art000200.html" />
+    <Content Include="Html\Articles\iconfont.css" />
+    <Content Include="Html\Articles\index2.html" />
+    <Content Include="Html\Articles\qr2.html" />
+    <Content Include="Html\Articles\qrcode.js" />
+    <Content Include="Html\Articles\qrcode.min.js" />
+    <Content Include="Html\Articles\script.js" />
+    <Content Include="Html\Articles\style.css" />
     <Content Include="Html\chart.js" />
     <Content Include="Html\mainLineChart.html" />
     <Content Include="Html\mainPieChart.html" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

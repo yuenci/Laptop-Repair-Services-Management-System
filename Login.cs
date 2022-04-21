@@ -1,4 +1,5 @@
-﻿using miniSys0._3.Controls;
+﻿using CefSharp;
+using miniSys0._3.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,6 +26,7 @@ namespace miniSys0._3
 
         private void uiSymbolButton1_Click(object sender, EventArgs e)
         {
+            Cef.Shutdown();
             Application.Exit();
         }
         Point mPoint;
