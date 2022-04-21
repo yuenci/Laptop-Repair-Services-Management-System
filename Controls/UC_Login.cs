@@ -56,7 +56,7 @@ namespace miniSys0._3.Controls
                 conn.Open();
 
                 //match staff
-                string sql = $"SELECT Password FROM Staff WHERE Name = '{nameInput}'";
+                string sql = $"SELECT Password,Name,Department,Post,StaffID FROM Staff WHERE Name = '{nameInput}'";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataReader dr = cmd.ExecuteReader();
 
@@ -64,7 +64,15 @@ namespace miniSys0._3.Controls
                 {
                     if (passwordInput == dr["Password"].ToString())
                     {
-                        MessageBox.Show("Login success");
+                        User_type.user_name = dr["Name"].ToString();
+                        User_type.user_deparment = dr["Department"].ToString();
+                        User_type.user_post = dr["Post"].ToString();
+                        User_type.user_ID = dr["StaffID"].ToString();
+
+                        Main main = new Main();
+                        main.Show();
+                        Login.login.Hide();
+                        //MessageBox.Show("Login success");
                         dr.Close();
                     }
 
@@ -78,14 +86,21 @@ namespace miniSys0._3.Controls
                 {
                     dr.Close();
                     //match customer
-                    string sql1 = $"SELECT Password FROM Customer WHERE Name = '{nameInput}'";
+                    string sql1 = $"SELECT Password,Name,CustomerID FROM Customer WHERE Name = '{nameInput}'";
                     SqlCommand cmd1 = new SqlCommand(sql1, conn);
                     SqlDataReader dr1 = cmd1.ExecuteReader();
                     if (dr1.Read())
                     {
                         if (passwordInput == dr1["Password"].ToString())
                         {
-                            MessageBox.Show("Login success");
+                            User_type.user_name = dr1["Name"].ToString();
+                            User_type.user_ID = dr1["CustomerID"].ToString();
+                            Main main = new Main();
+                            main.Show();
+                            Login.login.Hide();
+
+                            //MessageBox.Show("Login success");
+
                             dr1.Close();
                         }
                         else

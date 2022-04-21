@@ -15,9 +15,11 @@ namespace miniSys0._3
 
     public partial class Main : Form
     {
+        public static Main main;
         public Main()
         {
             InitializeComponent();
+            main = this;
             searchBox.Hide();    
             addNavMenu();
             
@@ -40,7 +42,7 @@ namespace miniSys0._3
 
                 if (uniqueInstance != null)
                 {
-                    uniqueInstance.Location = new Point(this.Location.X + 1090 + e.X - mPoint.X, this.Location.Y + 65 + e.Y - mPoint.Y);
+                    uniqueInstance.Location = new Point(this.Location.X + 1090 + e.X - mPoint.X, this.Location.Y + 68 + e.Y - mPoint.Y);
                 }
             }
             
@@ -54,7 +56,7 @@ namespace miniSys0._3
                 int PositionX = this.Location.X;
                 int PositionY = this.Location.Y;
                 uniqueInstance.StartPosition = FormStartPosition.Manual;
-                uniqueInstance.Location = (Point)new Size(PositionX + 1090, PositionY + 65);
+                uniqueInstance.Location = (Point)new Size(PositionX + 1090, PositionY + 68);
                 uniqueInstance.Show();
             }
             else
@@ -137,22 +139,22 @@ namespace miniSys0._3
         }
         private void addNavMenu()
         {
-            if (User_type.user_type == "Receptionist")
+            if (User_type.user_deparment == "Receptionist")
             {
                 UC_R_Navmenu uc = new UC_R_Navmenu();
                 addUserControl(uc);
             }
-            else if (User_type.user_type == "Technician")
+            else if (User_type.user_deparment == "Technician")
             {
                 UC_T_Navmenu uc = new UC_T_Navmenu();
                 addUserControl(uc);
             }
-            else if (User_type.user_type == "Customer")
+            else if (User_type.user_deparment == "Customer")
             {
                 UC_C_Navmenu uc = new UC_C_Navmenu();
                 addUserControl(uc);
             }
-            else if (User_type.user_type == "Admin")
+            else if (User_type.user_deparment == "Admin")
             {
                 UC_A_Navmenu uc = new UC_A_Navmenu();
                 addUserControl(uc);
@@ -178,7 +180,7 @@ namespace miniSys0._3
                 userControl.BringToFront();
             }*/
 
-            if (User_type.user_type == "Receptionist")
+            /*if (User_type.user_type == "Receptionist")
             {
                 UC_R_Shortcut uc = new UC_R_Shortcut();
                 addUserControl(uc);
@@ -198,7 +200,7 @@ namespace miniSys0._3
                 UC_A_Shortcut uc = new UC_A_Shortcut();
                 addUserControl(uc);
             }
-
+*/
         }
         void randomLogoColor()
         {
@@ -292,14 +294,19 @@ namespace miniSys0._3
 
     public class User_type
     {
-        public static string user_type = "Customer";
-        // Receptionist
-        // Technician
-        // Customer
-        // Admin
+        //this is defult
+        //public static string user_deparment = "Customer";
+        public static string user_deparment = "Admin";
+        //deparment:  Receptionist,Technician, Customer, Admin
+
+        //test data
         public static string user_name = "Innis Yu";
-        public static string post = "CEO";
+        public static string user_post = "CEO";
+        public static string user_ID = "Sta000000";
+
+
         public static Color LogoFore = Color.Black;
         public static Color LogoBkg = Color.FromArgb(70, 141, 255);
+        public static string loginStatus = "Login";  //Login,Relogin
     }
 }

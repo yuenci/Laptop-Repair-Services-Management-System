@@ -266,7 +266,7 @@ namespace miniSys0._3.Controls
         void initShortcut()
         {
 
-            if (User_type.user_type == "Receptionist")
+            if (User_type.user_deparment == "Receptionist")
             {
                 shortcutButton1.Symbol = 62004;
                 shortcutButton2.Symbol = 105;
@@ -279,7 +279,7 @@ namespace miniSys0._3.Controls
                 shortcutText3.Text = "Profile";
 
             }
-            else if (User_type.user_type == "Technician")
+            else if (User_type.user_deparment == "Technician")
             {
                 shortcutButton1.Symbol = 57397;
                 shortcutButton2.Symbol = 61670;
@@ -291,7 +291,7 @@ namespace miniSys0._3.Controls
                 shortcutText2.Text = "Describe";
                 shortcutText3.Text = "Profile";
             }
-            else if (User_type.user_type == "Customer")
+            else if (User_type.user_deparment == "Customer")
             {
                 shortcutButton1.Symbol = 57397;
                 shortcutButton2.Symbol = 61670;
@@ -303,7 +303,7 @@ namespace miniSys0._3.Controls
                 shortcutText2.Text = "Describe";
                 shortcutText3.Text = "Profile";
             }
-            else if (User_type.user_type == "Admin")
+            else if (User_type.user_deparment == "Admin")
             {
                 shortcutButton1.Symbol = 57608;
                 shortcutButton2.Symbol = 57580;
@@ -322,7 +322,7 @@ namespace miniSys0._3.Controls
 
 
 
-        public ChromiumWebBrowser WebBrowser;
+        
 
         //stop right click
         public class MenuHandler : IContextMenuHandler
@@ -343,11 +343,18 @@ namespace miniSys0._3.Controls
                 return false;
             }
         }
+        public ChromiumWebBrowser WebBrowser;
+
+        
         private void InitializeChromeForMainLineChart()
         {
-            var setting = new CefSettings();
-            setting.MultiThreadedMessageLoop = true;
-            CefSharp.Cef.Initialize(setting);
+            if (User_type.loginStatus !=  "Relogin")
+            {
+                var setting = new CefSettings();
+                setting.MultiThreadedMessageLoop = true;
+                CefSharp.Cef.Initialize(setting);
+            }
+            
             WebBrowser = new ChromiumWebBrowser(@"E:\Materials\【LOOP】\Assignment\miniSys0.3\Html\mainLineChart.html");
             WebBrowser.Dock = DockStyle.Fill;//铺满                                                                  
             WebBrowser.Dock = DockStyle.Fill;//设置停靠方式
@@ -358,17 +365,12 @@ namespace miniSys0._3.Controls
             //refreshlButton.PerformClick();
 
         }
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Cef.Shutdown();
-        }
-
         private async void refreshlButton_Click(object sender, EventArgs e)
         {
             await WebBrowser.GetBrowser().MainFrame.EvaluateScriptAsync("show([12, 19, 3, 5, 2, 3])");
         }
 
-        public ChromiumWebBrowser WebBrowser1;
+        public  ChromiumWebBrowser WebBrowser1;
         private void InitializeChromeForMainPieChart()
         {
            /* var setting1 = new CefSettings();
