@@ -74,28 +74,28 @@
     <Compile Include="CommonlyControls.Designer.cs">
       <DependentUpon>CommonlyControls.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\UC_A_Navmenu.cs">
+    <Compile Include="Controls\Navmenu\UC_A_Navmenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\UC_A_Navmenu.Designer.cs">
+    <Compile Include="Controls\Navmenu\UC_A_Navmenu.Designer.cs">
       <DependentUpon>UC_A_Navmenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\UC_C_Navmenu.cs">
+    <Compile Include="Controls\Navmenu\UC_C_Navmenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\UC_C_Navmenu.Designer.cs">
+    <Compile Include="Controls\Navmenu\UC_C_Navmenu.Designer.cs">
       <DependentUpon>UC_C_Navmenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\UC_forgotPws.cs">
+    <Compile Include="Controls\Login\UC_forgotPws.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\UC_forgotPws.Designer.cs">
+    <Compile Include="Controls\Login\UC_forgotPws.Designer.cs">
       <DependentUpon>UC_forgotPws.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\UC_Login.cs">
+    <Compile Include="Controls\Login\UC_Login.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\UC_Login.Designer.cs">
+    <Compile Include="Controls\Login\UC_Login.Designer.cs">
       <DependentUpon>UC_Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\UC_main.cs">
@@ -104,16 +104,16 @@
     <Compile Include="Controls\UC_main.Designer.cs">
       <DependentUpon>UC_main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\UC_R_Navmenu.cs">
+    <Compile Include="Controls\Navmenu\UC_R_Navmenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\UC_R_Navmenu.Designer.cs">
+    <Compile Include="Controls\Navmenu\UC_R_Navmenu.Designer.cs">
       <DependentUpon>UC_R_Navmenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\UC_T_Navmenu.cs">
+    <Compile Include="Controls\Navmenu\UC_T_Navmenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\UC_T_Navmenu.Designer.cs">
+    <Compile Include="Controls\Navmenu\UC_T_Navmenu.Designer.cs">
       <DependentUpon>UC_T_Navmenu.cs</DependentUpon>
     </Compile>
     <Compile Include="CsharpRepairerIncDataSet.Designer.cs">
@@ -163,25 +163,25 @@
     <EmbeddedResource Include="CommonlyControls.resx">
       <DependentUpon>CommonlyControls.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UC_A_Navmenu.resx">
+    <EmbeddedResource Include="Controls\Navmenu\UC_A_Navmenu.resx">
       <DependentUpon>UC_A_Navmenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UC_C_Navmenu.resx">
+    <EmbeddedResource Include="Controls\Navmenu\UC_C_Navmenu.resx">
       <DependentUpon>UC_C_Navmenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UC_forgotPws.resx">
+    <EmbeddedResource Include="Controls\Login\UC_forgotPws.resx">
       <DependentUpon>UC_forgotPws.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UC_Login.resx">
+    <EmbeddedResource Include="Controls\Login\UC_Login.resx">
       <DependentUpon>UC_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\UC_main.resx">
       <DependentUpon>UC_main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UC_R_Navmenu.resx">
+    <EmbeddedResource Include="Controls\Navmenu\UC_R_Navmenu.resx">
       <DependentUpon>UC_R_Navmenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UC_T_Navmenu.resx">
+    <EmbeddedResource Include="Controls\Navmenu\UC_T_Navmenu.resx">
       <DependentUpon>UC_T_Navmenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
@@ -482,7 +482,6 @@
     <None Include="Resources\logo.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controls\Navmenu\" />
     <Folder Include="Html\Document\" />
   </ItemGroup>
   <ItemGroup>
