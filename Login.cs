@@ -26,8 +26,14 @@ namespace miniSys0._3
 
         private void uiSymbolButton1_Click(object sender, EventArgs e)
         {
+            this.Dispose();
+            ProfileFloating.profileFloating.Dispose();
+            Main.main.Dispose();
+            UC_main.WebBrowser.Dispose();
+            UC_main.WebBrowser1.Dispose();
+            Reader.reader.Dispose();
             Cef.Shutdown();
-            Application.Exit();
+            Environment.Exit(0);
         }
         Point mPoint;
         private void drag_down(object sender, MouseEventArgs e)

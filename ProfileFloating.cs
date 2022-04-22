@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,12 +15,11 @@ namespace miniSys0._3
 {
     public partial class ProfileFloating : UIForm
     {
+        public static ProfileFloating profileFloating;
         public ProfileFloating()
         {
             InitializeComponent();
-            Console.WriteLine(User_type.user_name);
-            Console.WriteLine(User_type.user_deparment);
-            Console.WriteLine(User_type.user_post);
+            profileFloating = this;
             userName.Text = User_type.user_name ;
             userPost.Text = "";
             if (User_type.user_deparment != "Customer")
@@ -37,8 +37,13 @@ namespace miniSys0._3
 
         private void uiSymbolButton1_Click(object sender, EventArgs e)
         {
+            ProfileFloating.profileFloating.Dispose();
+            Main.main.Dispose();    
+            UC_main.WebBrowser.Dispose();
+            UC_main.WebBrowser1.Dispose();
+            Reader.reader.Dispose();
             Cef.Shutdown();
-            Application.Exit();
+            Environment.Exit(0);
         }
 
         private void logoutButton2_Click(object sender, EventArgs e)

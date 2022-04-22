@@ -4,7 +4,8 @@ body {
     background-color: #E3EDCD;
 }
 
-#icon {
+#nameIcon {
+    display: inline-block;
     width: 50px;
     height: 50px;
     background-color: rgba(70, 141, 255, 1);
@@ -20,16 +21,29 @@ body {
     line-height: 50px;
 }
 
+#poster {
+    height: 50px;
+}
+
+#nameAndstaff {
+    display: inline-block;
+    width: 120px;
+    margin-left: 10px;
+}
+
 #name {
-    position: absolute;
-    top: 65px;
-    left: 80px;
+    display: inline-block;
+    margin: 0;
+    /*position: relative;
+    top: -20px;
+    left: 16px; */
 }
 
 #staff {
-    position: absolute;
-    top: 100px;
-    left: 80px;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    top: 5px;
     text-indent: 0;
 }
 
@@ -75,6 +89,10 @@ body {
     background-color: rgb(22, 93, 255);
 }
 
+#chakan:hover {
+    background-color: rgb(187, 191, 196);
+}
+
 p {
     text-indent: 2em;
 }
@@ -110,7 +128,18 @@ input:hover {
 }
 
 #fwin {
+    z-index: 999;
     width: 200px;
     height: 200px;
     background-color: aqua;
+}
+
+.bg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(220, 220, 220, 0.7);
+
 }

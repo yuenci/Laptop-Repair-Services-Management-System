@@ -20,7 +20,7 @@ namespace miniSys0._3
             Application.Run(new Main());
             //Application.Run(new ProfileFloating());
             //Application.Run(new Reader());
-           
+            //Application.Run(new Form1());
         }
     }
 }

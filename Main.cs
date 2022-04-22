@@ -301,7 +301,7 @@ namespace miniSys0._3
             if (type == "lineChart")
             {
                 fileName = "parameterForLineChart.js";
-                for (int i = 0; i < parameter.Count; i++)
+                for (int i = 6; i >=0; i--)
                 {
                     string part = $"{{x: {i + 1},y: {parameter[i]}}},";
                     Content += part;

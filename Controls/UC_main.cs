@@ -4,8 +4,10 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CefSharp;
@@ -15,6 +17,7 @@ namespace miniSys0._3.Controls
 {
     public partial class UC_main : UserControl
     {
+        public UC_main uc_main;
         public UC_main()
         {
             InitializeComponent();
@@ -27,6 +30,7 @@ namespace miniSys0._3.Controls
             initDataBanner();
             initShortcut();
             initReader();
+            uc_main = this;
         }
 
         void initsunnyUI()
@@ -183,6 +187,10 @@ namespace miniSys0._3.Controls
             BannerLabel3.Text = orderToday.ToString();
             //yesterday
             int orderYesterday = weekOrderNum[1];
+
+            Console.WriteLine($"today{orderToday}");
+            Console.WriteLine($"yesterday{orderYesterday}");
+
             if (orderYesterday> orderToday)
             {
                 upperTriangle.Symbol = 67;
@@ -195,9 +203,11 @@ namespace miniSys0._3.Controls
 
 
         }
+
+        
         private void initNews()
         {
-            dynamic[] connTools = getDataReader("SELECT TOP 5 Title, Views FROM Articles ORDER BY  Views DESC");
+            dynamic[] connTools = getDataReader("SELECT TOP 5 ArticlelD,Title, PosterID,Time,Url,Views,Likes FROM Articles WHERE TYPE ='News' ORDER BY  Views DESC");
             SqlDataReader dr = connTools[1];
             SqlConnection conn = connTools[0];
             dynamic[] newsList = { news1, news2 , news3 , news4 , news5 };
@@ -208,20 +218,49 @@ namespace miniSys0._3.Controls
                 var text = ""; 
                 if (dr["Title"].ToString().Length > 30)
                 {
+                    ArticlesInfo.titleParaList[i] = "[News]" + dr["Title"].ToString();
                     title = dr["Title"].ToString().Substring(0, 30);
                     text = (i+1).ToString() + "      " + title + "...";
                 }
                 else
                 {
+                    ArticlesInfo.titleParaList[i] = "[News]" + dr["Title"].ToString();
                     title = dr["Title"].ToString();
                     text = (i + 1).ToString() + "      " + title;
                 }
                 newsList[i].Text = text;
                 newsLableList[i].Text = dr["Views"].ToString();
+
+                ArticlesInfo.ArticlelDList[i] = dr["ArticlelD"].ToString();
+                ArticlesInfo.posterParaList[i] = dr["PosterID"].ToString();
+                //
+                ArticlesInfo.viewsParaList[i] = dr["Views"].ToString();
+                ArticlesInfo.likesParaList[i] = dr["Likes"].ToString();
+                ArticlesInfo.timeParaList[i] = dr["Time"].ToString();
+                ArticlesInfo.urlParaList[i] = dr["Url"].ToString();
             }
             dr.Close();
             conn.Close();
+
+            for (int i = 0; i < 5; i++)
+            {
+                string posterId = ArticlesInfo.posterParaList[i];
+                dynamic[] connTools2 = getDataReader($"SELECT Name, Post FROM Staff WHERE StaffID ='{posterId}'");
+                SqlDataReader dr2 = connTools2[1];
+                SqlConnection conn2 = connTools2[0];
+                if (dr2.Read())
+                {
+                    ArticlesInfo.posterParaList[i] = dr2["Name"].ToString();
+                    ArticlesInfo.staffpostParaList[i] = dr2["Post"].ToString();
+                }
+                dr2.Close();
+                conn2.Close();
+
+                //
+            }
+
         }
+
 
         void noticeStyle(dynamic noticeObj,string type)
         {
@@ -364,7 +403,7 @@ namespace miniSys0._3.Controls
             }
         }
         
-        public ChromiumWebBrowser WebBrowser;
+        public static ChromiumWebBrowser WebBrowser;
 
         
         private void InitializeChromeForMainLineChart()
@@ -375,11 +414,11 @@ namespace miniSys0._3.Controls
                 setting.MultiThreadedMessageLoop = true;
                 CefSharp.Cef.Initialize(setting);
             }
-            
-            WebBrowser = new ChromiumWebBrowser(@"E:\Materials\【LOOP】\Assignment\miniSys0.3\Html\mainLineChart.html");
+            string path = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin")) + $"Html\\mainLineChart.html";
+            WebBrowser = new ChromiumWebBrowser(path);
             WebBrowser.Dock = DockStyle.Fill;//铺满                                                                  
             WebBrowser.Dock = DockStyle.Fill;//设置停靠方式
-            WebBrowser.JavascriptObjectRepository.Settings.LegacyBindingEnabled = true; //交互数据
+            //WebBrowser.JavascriptObjectRepository.Settings.LegacyBindingEnabled = true; //交互数据
             WebBrowser.MenuHandler = new MenuHandler();//阻止右键
             this.lineChartPanel.Controls.Add(WebBrowser);
 
@@ -391,16 +430,17 @@ namespace miniSys0._3.Controls
             await WebBrowser.GetBrowser().MainFrame.EvaluateScriptAsync("refresh()");
         }
 
-        public  ChromiumWebBrowser WebBrowser1;
+        public static ChromiumWebBrowser WebBrowser1;
         private void InitializeChromeForMainPieChart()
         {
-           /* var setting1 = new CefSettings();
-            setting1.MultiThreadedMessageLoop = true;
-            CefSharp.Cef.Initialize(setting1);*/
-            WebBrowser1 = new ChromiumWebBrowser(@"E:\Materials\【LOOP】\Assignment\miniSys0.3\Html\mainPieChart.html");
+            /* var setting1 = new CefSettings();
+             setting1.MultiThreadedMessageLoop = true;
+             CefSharp.Cef.Initialize(setting1);*/
+            string path = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin")) + $"Html\\mainPieChart.html";
+            WebBrowser1 = new ChromiumWebBrowser(path);
             WebBrowser1.Dock = DockStyle.Fill;//铺满                                                                  
             WebBrowser1.Dock = DockStyle.Fill;//设置停靠方式
-            WebBrowser1.JavascriptObjectRepository.Settings.LegacyBindingEnabled = true; //交互数据
+            //WebBrowser1.JavascriptObjectRepository.Settings.LegacyBindingEnabled = true; //交互数据
             WebBrowser1.MenuHandler = new MenuHandler();//阻止右键
             this.pieChartPanel.Controls.Add(WebBrowser1);
 
@@ -413,6 +453,7 @@ namespace miniSys0._3.Controls
             await WebBrowser1.GetBrowser().MainFrame.EvaluateScriptAsync("refresh1()");
         }
 
+        #region hover and leave color
         private void n1_hover(object sender, EventArgs e)
         {
             news1.ForeColor = Color.FromArgb(51, 112, 255);
@@ -473,6 +514,7 @@ namespace miniSys0._3.Controls
             news5.ForeColor = Color.Black;
             newslabel5.ForeColor = Color.Black;
         }
+
 
         private void noticeText1_hover(object sender, EventArgs e)
         {
@@ -558,42 +600,122 @@ namespace miniSys0._3.Controls
         {
             doc3.ForeColor = Color.FromArgb(78, 89, 105);
         }
-
+        
         private void doc4_leave(object sender, EventArgs e)
         {
             doc4.ForeColor = Color.FromArgb(78, 89, 105);
         }
-        public ChromiumWebBrowser WebBrowser2;
+        
+        #endregion
+
+
+        public static ChromiumWebBrowser WebBrowser2;
         void initReader()
         {
             Reader readerInst= new Reader();
         }
+        private void initArticleData(int  no)
+        {
+            //add 1 to views 
+            string views = ArticlesInfo.viewsParaList[no];
+            ArticlesInfo.viewsParaList[no] = (int.Parse(views) + 1).ToString();
+            add1ToViewsOrLikesToDB("views");
 
+            //store the no of newslab be clicked
+            ArticlesInfo.currentnewsLablelD = no;
+
+
+            // create text and store in to js file
+            string path = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin")) +
+                $"Html\\Articles\\script.js";
+            string[] lines = System.IO.File.ReadAllLines(path);
+            string[] parameter = { "titlePara", "posterPara", "staffpostPara", "viewsPara", 
+                "likesPara", "timePara", "urlPara", };
+            dynamic[] positionPara = { ArticlesInfo.titleParaList, ArticlesInfo.posterParaList,
+                        ArticlesInfo.staffpostParaList,ArticlesInfo.viewsParaList,
+                        ArticlesInfo.likesParaList,ArticlesInfo.timeParaList,
+                        ArticlesInfo.urlParaList,};
+            for (int i = 0; i < parameter.Length; i++)
+            {
+                lines[i] = "let " + parameter[i] + $" = \"{positionPara[i][no]}\";";
+
+            }
+            //empty old file
+            FileStream fs = new FileStream(path, FileMode.Truncate, FileAccess.ReadWrite);
+            fs.Close();
+            //add new
+            for (int i = 0; i < lines.Length; i++)
+            {
+                File.AppendAllText(path, lines[i] + Environment.NewLine);
+            }
+        }
+        private void readerShow(int num)
+        {
+            
+            //init data
+            initArticleData(num);
+
+            //show lastest views to newLable
+            dynamic[] newsLableList = { newslabel1, newslabel2, newslabel3, newslabel4, newslabel5 };
+            newsLableList[num].Text = ArticlesInfo.viewsParaList[num];
+            //store lastest to views
+            add1ToViewsOrLikesToDB("views");
+
+            //point to no1
+            string path = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin"))
+                + $"Html\\Articles\\{ArticlesInfo.urlParaList[num]}";
+            Reader.reader.WebBrowser2.Load(path);
+            ArticlesInfo.currentArticlelD = ArticlesInfo.ArticlelDList[num];
+            
+            Thread.Sleep(100);
+            Reader.reader.Show();
+        }
+        public static void add1ToViewsOrLikesToDB(string type)
+        {
+            string atrID = ArticlesInfo.currentArticlelD;
+            string connStr = @"Data Source=LAPTOP-5ACE008F\SQLEXPRESS;Initial Catalog=CsharpRepairerInc;Integrated Security=True";
+
+            SqlConnection conn = new SqlConnection(connStr);
+            conn.Open();
+
+            string sql = $"SELECT TOP 5 Title, Views FROM Articles ORDER BY  Views DESC";
+            if (type=="views")
+            {
+                sql = $"update Articles set Views=Views+1 where ArticlelD='{atrID}';";
+            }else if (type == "likes")
+            {
+                sql = $"update Articles set Likes=Likes+ 1 where ArticlelD='{atrID}';";
+            }
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+        }
+
+        #region newsButton Click event
         private void news1_Click(object sender, EventArgs e)
         {
-            Reader.reader.WebBrowser2.Load("http://www.google.ca");
-            Reader.reader.Show();
+            readerShow(0);
         }
 
         private void news2_Click(object sender, EventArgs e)
         {
-            Reader.reader.Show();
+            readerShow(1);
         }
 
         private void news3_Click(object sender, EventArgs e)
         {
-            Reader.reader.Show();
+            readerShow(2);
         }
 
         private void news4_Click(object sender, EventArgs e)
         {
-            Reader.reader.Show();
+            readerShow(3);
         }
 
         private void news5_Click(object sender, EventArgs e)
         {
-            Reader.reader.Show();
+            readerShow(4);
         }
+        #endregion
 
         private void noticeText1_Click(object sender, EventArgs e)
         {
@@ -621,4 +743,26 @@ namespace miniSys0._3.Controls
         }
     }
     
+    public class ArticlesInfo
+    {
+        public static string[] ArticlelDList = new string[5];
+        public static string[] titleParaList = new string[5];
+        public static string[] posterParaList = new string[5];
+        public static string[] staffpostParaList = new string[5];
+        public static string[] viewsParaList = new string[5];
+        public static string[] likesParaList = new string[5];
+        public static string[] timeParaList = new string[5];
+        public static string[] urlParaList = new string[5];
+        public static string currentArticlelD = "";
+        public static int currentnewsLablelD = -1;
+
+        /*public static string type = "Message";
+        public static string titlePara = type + "I like coding";
+        public static string posterPara = "Innis";
+        public static string staffpostPara = "Receptionist";
+        public static string viewsPara = "8005";
+        public static string likesPara = "8346";
+        public static string timePara = "2022-03-27 14:48:41.000";
+        public static string urlPara = "https://blog.csdn.net/";*/
+    }
 }
