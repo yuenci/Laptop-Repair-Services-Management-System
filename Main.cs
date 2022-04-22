@@ -21,15 +21,25 @@ namespace miniSys0._3
         {
             InitializeComponent();
             main = this;
-            searchBox.Hide();    
-            addNavMenu();
-            
-            addMainPanel();
-            //initShortcut();
 
+            
+
+            //left bat
+            addNavMenu();
+            searchBox.Hide();
+            //topbar
             randomLogoColor();
 
+            //insert data to js to prepare first time load
             prepareData();
+
+            // main area loading
+            add_UC_Mainto_Panel();
+
+
+
+
+
         }
         Point mPoint;
         private void drag_down(object sender, MouseEventArgs e)
@@ -45,21 +55,21 @@ namespace miniSys0._3
 
                 if (uniqueInstance != null)
                 {
-                    uniqueInstance.Location = new Point(this.Location.X + 1090 + e.X - mPoint.X, this.Location.Y + 68 + e.Y - mPoint.Y);
+                    uniqueInstance.Location = new Point(this.Location.X + 1080 + e.X - mPoint.X, this.Location.Y + 68 + e.Y - mPoint.Y);
                 }
             }
             
         }
-        private static ProfileFloating uniqueInstance;
+        private static FormFloating uniqueInstance;
         private void profile_Click(object sender, EventArgs e)
         {
             if (uniqueInstance == null)
             {
-                uniqueInstance = new ProfileFloating();
+                uniqueInstance = new FormFloating();
                 int PositionX = this.Location.X;
                 int PositionY = this.Location.Y;
                 uniqueInstance.StartPosition = FormStartPosition.Manual;
-                uniqueInstance.Location = (Point)new Size(PositionX + 1090, PositionY + 68);
+                uniqueInstance.Location = (Point)new Size(PositionX + 1080, PositionY + 68);
                 uniqueInstance.Show();
             }
             else
@@ -164,7 +174,7 @@ namespace miniSys0._3
             }
         }
 
-        private void addMainPanel()
+        private void add_UC_Mainto_Panel()
         {
             UC_main uc = new UC_main();
             uc.Dock = DockStyle.Fill;
@@ -333,9 +343,6 @@ namespace miniSys0._3
             List<int> monthOrderNRatio = UC_main.getOnemonthratio();
             writeDataToJsFIle("lineChart",weekOrderNum);
             writeDataToJsFIle("pieChart",monthOrderNRatio);
-
-
-
         }
     }
 

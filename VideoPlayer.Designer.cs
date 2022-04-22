@@ -49,6 +49,8 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Name = "VideoPlayer";
+            this.ShowRadius = false;
+            this.ShowShadow = true;
             this.Text = "VideoPlayer";
             this.ZoomScaleRect = new System.Drawing.Rectangle(15, 15, 800, 450);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.win_closing);

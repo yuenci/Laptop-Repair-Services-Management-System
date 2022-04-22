@@ -1,6 +1,6 @@
 ﻿namespace miniSys0._3
 {
-    partial class ProfileFloating
+    partial class FormFloating
     {
         /// <summary>
         /// Required designer variable.
@@ -137,7 +137,7 @@
             // 
             this.AllowShowTitle = false;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(250, 300);
             this.ControlBox = false;
             this.Controls.Add(this.userPost);
@@ -150,6 +150,8 @@
             this.Name = "ProfileFloating";
             this.Padding = new System.Windows.Forms.Padding(0);
             this.RectColor = System.Drawing.Color.Gainsboro;
+            this.ShowRadius = false;
+            this.ShowShadow = true;
             this.ShowTitle = false;
             this.Style = Sunny.UI.UIStyle.Custom;
             this.Text = "ProfileFloating";

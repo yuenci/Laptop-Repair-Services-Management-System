@@ -27,7 +27,7 @@ namespace miniSys0._3
         private void uiSymbolButton1_Click(object sender, EventArgs e)
         {
             this.Dispose();
-            ProfileFloating.profileFloating.Dispose();
+            FormFloating.profileFloating.Dispose();
             Main.main.Dispose();
             UC_main.WebBrowser.Dispose();
             UC_main.WebBrowser1.Dispose();

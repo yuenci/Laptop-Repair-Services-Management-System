@@ -13,10 +13,10 @@ using miniSys0._3.Controls;
 using Sunny.UI;
 namespace miniSys0._3
 {
-    public partial class ProfileFloating : UIForm
+    public partial class FormFloating : UIForm
     {
-        public static ProfileFloating profileFloating;
-        public ProfileFloating()
+        public static FormFloating profileFloating;
+        public FormFloating()
         {
             InitializeComponent();
             profileFloating = this;
@@ -37,7 +37,7 @@ namespace miniSys0._3
 
         private void uiSymbolButton1_Click(object sender, EventArgs e)
         {
-            ProfileFloating.profileFloating.Dispose();
+            FormFloating.profileFloating.Dispose();
             Main.main.Dispose();    
             UC_main.WebBrowser.Dispose();
             UC_main.WebBrowser1.Dispose();
