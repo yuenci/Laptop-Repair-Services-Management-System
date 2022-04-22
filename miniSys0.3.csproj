@@ -68,11 +68,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="add_UC_UserInfo.cs" />
     <Compile Include="CommonlyControls.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CommonlyControls.Designer.cs">
       <DependentUpon>CommonlyControls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MainArea\UC_UserInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MainArea\UC_UserInfo.Designer.cs">
+      <DependentUpon>UC_UserInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\Navmenu\UC_A_Navmenu.cs">
       <SubType>UserControl</SubType>
@@ -98,10 +105,10 @@
     <Compile Include="Controls\Login\UC_Login.Designer.cs">
       <DependentUpon>UC_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\UC_main.cs">
+    <Compile Include="Controls\MainArea\UC_main.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\UC_main.Designer.cs">
+    <Compile Include="Controls\MainArea\UC_main.Designer.cs">
       <DependentUpon>UC_main.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\Navmenu\UC_R_Navmenu.cs">
@@ -115,6 +122,12 @@
     </Compile>
     <Compile Include="Controls\Navmenu\UC_T_Navmenu.Designer.cs">
       <DependentUpon>UC_T_Navmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Others\UC_StaffCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Others\UC_StaffCard.Designer.cs">
+      <DependentUpon>UC_StaffCard.cs</DependentUpon>
     </Compile>
     <Compile Include="CsharpRepairerIncDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -163,6 +176,9 @@
     <EmbeddedResource Include="CommonlyControls.resx">
       <DependentUpon>CommonlyControls.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MainArea\UC_UserInfo.resx">
+      <DependentUpon>UC_UserInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\Navmenu\UC_A_Navmenu.resx">
       <DependentUpon>UC_A_Navmenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,7 +191,7 @@
     <EmbeddedResource Include="Controls\Login\UC_Login.resx">
       <DependentUpon>UC_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UC_main.resx">
+    <EmbeddedResource Include="Controls\MainArea\UC_main.resx">
       <DependentUpon>UC_main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Navmenu\UC_R_Navmenu.resx">
@@ -183,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Navmenu\UC_T_Navmenu.resx">
       <DependentUpon>UC_T_Navmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Others\UC_StaffCard.resx">
+      <DependentUpon>UC_StaffCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -479,6 +498,18 @@
     <Content Include="Html\chart.js" />
     <Content Include="Html\mainLineChart.html" />
     <Content Include="Html\mainPieChart.html" />
+    <None Include="Resources\head1.png" />
+    <None Include="Resources\head2.png" />
+    <None Include="Resources\head3.png" />
+    <None Include="Resources\head4.png" />
+    <None Include="Resources\imac.png" />
+    <None Include="Resources\iphone.png" />
+    <None Include="Resources\BG.png" />
+    <None Include="Resources\Mirage.jpg" />
+    <None Include="Resources\TMBG.png" />
+    <None Include="Resources\iUserinfoBG1+1.png" />
+    <None Include="Resources\iUserinfoBG1+.png" />
+    <None Include="Resources\iUserinfoBG.png" />
     <None Include="Resources\logo.ico" />
   </ItemGroup>
   <ItemGroup>

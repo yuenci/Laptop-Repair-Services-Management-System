@@ -57,10 +57,10 @@
             this.exitButton1.Symbol = 61457;
             this.exitButton1.SymbolColor = System.Drawing.Color.Black;
             this.exitButton1.SymbolHoverColor = System.Drawing.Color.Black;
-            this.exitButton1.SymbolOffset = new System.Drawing.Point(-50, 0);
+            this.exitButton1.SymbolOffset = new System.Drawing.Point(-77, 0);
             this.exitButton1.SymbolPressColor = System.Drawing.Color.Black;
             this.exitButton1.TabIndex = 10;
-            this.exitButton1.Text = "Exit C# Inc";
+            this.exitButton1.Text = "Exit";
             this.exitButton1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.exitButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.exitButton1.Click += new System.EventHandler(this.uiSymbolButton1_Click);
@@ -133,7 +133,7 @@
             this.userPost.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.userPost.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // ProfileFloating
+            // FormFloating
             // 
             this.AllowShowTitle = false;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -147,7 +147,7 @@
             this.Controls.Add(this.exitButton1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ProfileFloating";
+            this.Name = "FormFloating";
             this.Padding = new System.Windows.Forms.Padding(0);
             this.RectColor = System.Drawing.Color.Gainsboro;
             this.ShowRadius = false;

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Sunny.UI;
 using miniSys0._3.Controls;
 using System.IO;
+using miniSys0._3.Controls.MainArea;
 
 namespace miniSys0._3
 {
@@ -34,7 +35,9 @@ namespace miniSys0._3
             prepareData();
 
             // main area loading
-            add_UC_Mainto_Panel();
+
+            //add_UC_Mainto_Panel();
+            add_UC_UserInfo();
 
 
 
@@ -174,14 +177,7 @@ namespace miniSys0._3
             }
         }
 
-        private void add_UC_Mainto_Panel()
-        {
-            UC_main uc = new UC_main();
-            uc.Dock = DockStyle.Fill;
-            mainPanel.Controls.Clear();
-            mainPanel.Controls.Add(uc);
-            uc.BringToFront();
-        }
+        
 
         void initShortcut()
         {
@@ -344,6 +340,26 @@ namespace miniSys0._3
             writeDataToJsFIle("lineChart",weekOrderNum);
             writeDataToJsFIle("pieChart",monthOrderNRatio);
         }
+
+        #region
+        private void add_UC_Mainto_Panel()
+        {
+            UC_main uc = new UC_main();
+            uc.Dock = DockStyle.Fill;
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(uc);
+            uc.BringToFront();
+        }
+
+        private void  add_UC_UserInfo()
+        {
+            UC_UserInfo uc = new UC_UserInfo();
+            uc.Dock = DockStyle.Fill;
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(uc);
+            uc.BringToFront();
+        }
+        #endregion
     }
 
 

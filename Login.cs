@@ -29,9 +29,9 @@ namespace miniSys0._3
             this.Dispose();
             FormFloating.profileFloating.Dispose();
             Main.main.Dispose();
-            UC_main.WebBrowser.Dispose();
+            /*UC_main.WebBrowser.Dispose();
             UC_main.WebBrowser1.Dispose();
-            Reader.reader.Dispose();
+            Reader.reader.Dispose();*/
             Cef.Shutdown();
             Environment.Exit(0);
         }

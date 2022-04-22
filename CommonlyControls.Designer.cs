@@ -40,6 +40,8 @@
             this.uiUserControl1 = new Sunny.UI.UIUserControl();
             this.uiCheckBox1 = new Sunny.UI.UICheckBox();
             this.uiNavMenu1 = new Sunny.UI.UINavMenu();
+            this.uiHeaderButton2 = new Sunny.UI.UIHeaderButton();
+            this.uiAvatar2 = new Sunny.UI.UIAvatar();
             this.SuspendLayout();
             // 
             // uiAvatar1
@@ -57,7 +59,7 @@
             // 
             this.uiButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButton1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton1.Location = new System.Drawing.Point(140, 62);
+            this.uiButton1.Location = new System.Drawing.Point(229, 62);
             this.uiButton1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton1.Name = "uiButton1";
             this.uiButton1.Size = new System.Drawing.Size(100, 35);
@@ -198,11 +200,41 @@
             this.uiNavMenu1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiNavMenu1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // uiHeaderButton2
+            // 
+            this.uiHeaderButton2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiHeaderButton2.Location = new System.Drawing.Point(377, 470);
+            this.uiHeaderButton2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiHeaderButton2.Name = "uiHeaderButton2";
+            this.uiHeaderButton2.Padding = new System.Windows.Forms.Padding(0, 8, 0, 3);
+            this.uiHeaderButton2.Radius = 0;
+            this.uiHeaderButton2.RadiusSides = Sunny.UI.UICornerRadiusSides.None;
+            this.uiHeaderButton2.RectSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.None;
+            this.uiHeaderButton2.Size = new System.Drawing.Size(100, 88);
+            this.uiHeaderButton2.TabIndex = 15;
+            this.uiHeaderButton2.Text = "uiHeaderButton2";
+            this.uiHeaderButton2.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiHeaderButton2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiAvatar2
+            // 
+            this.uiAvatar2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiAvatar2.Location = new System.Drawing.Point(133, 52);
+            this.uiAvatar2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiAvatar2.Name = "uiAvatar2";
+            this.uiAvatar2.Shape = Sunny.UI.UIShape.Square;
+            this.uiAvatar2.Size = new System.Drawing.Size(60, 60);
+            this.uiAvatar2.TabIndex = 16;
+            this.uiAvatar2.Text = "uiAvatar2";
+            this.uiAvatar2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
             // CommonlyControls
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 725);
+            this.Controls.Add(this.uiAvatar2);
+            this.Controls.Add(this.uiHeaderButton2);
             this.Controls.Add(this.uiNavMenu1);
             this.Controls.Add(this.uiCheckBox1);
             this.Controls.Add(this.uiUserControl1);
@@ -235,5 +267,7 @@
         private Sunny.UI.UIUserControl uiUserControl1;
         private Sunny.UI.UICheckBox uiCheckBox1;
         private Sunny.UI.UINavMenu uiNavMenu1;
+        private Sunny.UI.UIHeaderButton uiHeaderButton2;
+        private Sunny.UI.UIAvatar uiAvatar2;
     }
 }

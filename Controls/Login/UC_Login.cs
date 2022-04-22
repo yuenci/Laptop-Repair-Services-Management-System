@@ -56,7 +56,7 @@ namespace miniSys0._3.Controls
                 conn.Open();
 
                 //match staff
-                string sql = $"SELECT Password,Name,Department,Post,StaffID FROM Staff WHERE Name = '{nameInput}'";
+                string sql = $"SELECT Password,Name,Department,Post,StaffID,Country FROM Staff WHERE Name = '{nameInput}'";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataReader dr = cmd.ExecuteReader();
 
@@ -68,6 +68,7 @@ namespace miniSys0._3.Controls
                         User_type.user_deparment = dr["Department"].ToString();
                         User_type.user_post = dr["Post"].ToString();
                         User_type.user_ID = dr["StaffID"].ToString();
+                        User_type.user_Country = dr["Country"].ToString();
 
                         Main main = new Main();
                         main.Show();

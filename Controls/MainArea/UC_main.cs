@@ -901,9 +901,10 @@ namespace miniSys0._3.Controls
         //deparment:  Receptionist,Technician, Customer, Admin
 
         //test data
-        public static string user_name = "Innis Yu";
+        public static string user_name = "Innis";
         public static string user_post = "CEO";
         public static string user_ID = "Sta000000";
+        public static string user_Country =  "China";
 
 
         public static Color LogoFore = Color.Black;
@@ -940,6 +941,12 @@ namespace miniSys0._3.Controls
         public static string currentArticlelD = "";
         public static int currentnoticeLablelD = -1; 
     }
-
+    class MyException : Exception
+    {
+        public MyException(string message) : base(message)
+        {
+        }
+        //throw new MyException("Sql statement has mistakes");
+    }
     public static class Temp { }
 }
