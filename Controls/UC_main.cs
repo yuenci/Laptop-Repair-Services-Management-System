@@ -24,11 +24,15 @@ namespace miniSys0._3.Controls
             InitializeChromeForMainLineChart();
             InitializeChromeForMainPieChart();
             initsunnyUI();
-            initNotices();
-            initNews();
+
             initName();
             initDataBanner();
             initShortcut();
+
+            initNewsDataToGlobal();
+            initNoticesStyle();
+            initNoticeDataToGlobal();
+            
             initReader();
             uc_main = this;
         }
@@ -84,7 +88,7 @@ namespace miniSys0._3.Controls
         }
         public  static  dynamic getDataReader(string sql)
         {
-            string connStr = @"Data Source=LAPTOP-5ACE008F\SQLEXPRESS;Initial Catalog=CsharpRepairerInc;Integrated Security=True";
+            string connStr = Setting.DBString;
 
             SqlConnection conn = new SqlConnection(connStr);
             conn.Open();
@@ -205,7 +209,7 @@ namespace miniSys0._3.Controls
         }
 
         
-        private void initNews()
+        private void initNewsDataToGlobal()
         {
             dynamic[] connTools = getDataReader("SELECT TOP 5 ArticlelD,Title, PosterID,Time,Url,Views,Likes FROM Articles WHERE TYPE ='News' ORDER BY  Views DESC");
             SqlDataReader dr = connTools[1];
@@ -288,7 +292,7 @@ namespace miniSys0._3.Controls
             }
         }
 
-        void initNotices()
+        void initNoticesStyle()
         {
             notice1.RectDisableColor = Color.Transparent;
             notice2.RectDisableColor = Color.Transparent;
@@ -297,7 +301,9 @@ namespace miniSys0._3.Controls
             notice5.RectDisableColor = Color.Transparent;
 
 
-            dynamic[] connTools = getDataReader("select top 5 Title,Type from Articles Order by Time desc");
+            dynamic[] connTools = getDataReader("select top 5 Title,Type,ArticlelD,PosterID," +
+                "Views,Likes,Time,Url" +
+                " from Articles Order by Time desc");
             SqlDataReader dr = connTools[1];
             SqlConnection conn = connTools[0];
 
@@ -307,19 +313,30 @@ namespace miniSys0._3.Controls
             for (int i = 0; i < 5; i++)
             {
                 dr.Read();
-                noticeTextList[i].Text = dr[0].ToString().Substring(0,18)+"...";
-                if (dr[1].ToString() == "Activity")
+                string title = dr["Title"].ToString();
+                string type = dr["Type"].ToString();
+                noticeTextList[i].Text = title.ToString().Substring(0, 18) + "...";
+                if (type == "Activity")
                 {
                     noticeStyle(moticeList[i], "Activity");
                 }
-                else if (dr[1].ToString() == "Message")
+                else if (type == "Message")
                 {
                     noticeStyle(moticeList[i], "Message");
                 }
-                else if (dr[1].ToString() == "Advice")
+                else if (type == "Advice")
                 {
                     noticeStyle(moticeList[i], "Advice");
                 }
+
+                NoticeInfo.ArticlelDList[i] = dr["ArticlelD"].ToString();
+                NoticeInfo.titleParaList[i] = $"[{type}]{title}";
+                NoticeInfo.posterParaList[i] = dr["PosterID"].ToString();
+                //
+                NoticeInfo.viewsParaList[i] = dr["Views"].ToString();
+                NoticeInfo.likesParaList[i] = dr["Likes"].ToString();
+                NoticeInfo.timeParaList[i] = dr["Time"].ToString();
+                NoticeInfo.urlParaList[i] = dr["Url"].ToString();
             }
 
 
@@ -614,71 +631,119 @@ namespace miniSys0._3.Controls
         {
             Reader readerInst= new Reader();
         }
-        private void initArticleData(int  no)
+        private void initArticleData(string type,int  no)
         {
-            //add 1 to views 
-            string views = ArticlesInfo.viewsParaList[no];
-            ArticlesInfo.viewsParaList[no] = (int.Parse(views) + 1).ToString();
-            add1ToViewsOrLikesToDB("views");
-
-            //store the no of newslab be clicked
-            ArticlesInfo.currentnewsLablelD = no;
-
-
             // create text and store in to js file
+            //// para the argurment
             string path = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin")) +
                 $"Html\\Articles\\script.js";
             string[] lines = System.IO.File.ReadAllLines(path);
-            string[] parameter = { "titlePara", "posterPara", "staffpostPara", "viewsPara", 
+            string[] parameter = { "titlePara", "posterPara", "staffpostPara", "viewsPara",
                 "likesPara", "timePara", "urlPara", };
-            dynamic[] positionPara = { ArticlesInfo.titleParaList, ArticlesInfo.posterParaList,
+            dynamic[] positionParaTemp = { };
+            if (type == "news")
+            {
+                //add 1 to views 
+                string views = ArticlesInfo.viewsParaList[no];
+                ArticlesInfo.viewsParaList[no] = (int.Parse(views) + 1).ToString();
+                add1ToViewsOrLikesToDB("views");
+
+                //store the no of newslab be clicked
+                ArticlesInfo.currentnewsLablelD = no;
+                dynamic[] positionPara = { ArticlesInfo.titleParaList, ArticlesInfo.posterParaList,
                         ArticlesInfo.staffpostParaList,ArticlesInfo.viewsParaList,
                         ArticlesInfo.likesParaList,ArticlesInfo.timeParaList,
                         ArticlesInfo.urlParaList,};
+                positionParaTemp = positionPara;
+            }
+            else if(type == "notice"){
+                //add 1 to views 
+                string views = NoticeInfo.viewsParaList[no];
+                NoticeInfo.viewsParaList[no] = (int.Parse(views) + 1).ToString();
+                add1ToViewsOrLikesToDB("views");
+
+                Console.WriteLine(NoticeInfo.titleParaList[1]);// string obj
+
+                //store the no of newslab be clicked
+                NoticeInfo.currentnoticeLablelD = no;
+                dynamic[] positionPara = { NoticeInfo.titleParaList, NoticeInfo.posterParaList,
+                        NoticeInfo.staffpostParaList,NoticeInfo.viewsParaList,
+                        NoticeInfo.likesParaList,NoticeInfo.timeParaList,
+                        NoticeInfo.urlParaList,};
+                positionParaTemp = positionPara;
+            }
+            
+            
             for (int i = 0; i < parameter.Length; i++)
             {
-                lines[i] = "let " + parameter[i] + $" = \"{positionPara[i][no]}\";";
-
+                lines[i] = "let " + parameter[i] + $" = \"{positionParaTemp[i][no]}\";";
             }
+
+
             //empty old file
             FileStream fs = new FileStream(path, FileMode.Truncate, FileAccess.ReadWrite);
             fs.Close();
-            //add new
+            //stor new to js file
             for (int i = 0; i < lines.Length; i++)
             {
                 File.AppendAllText(path, lines[i] + Environment.NewLine);
             }
+
         }
-        private void readerShow(int num)
+        private void readerShow(string type,int num)
         {
-            
-            //init data
-            initArticleData(num);
+            if (type == "news")
+            {
+                ArticlesInfo.currentArticleType = "news";
 
-            //show lastest views to newLable
-            dynamic[] newsLableList = { newslabel1, newslabel2, newslabel3, newslabel4, newslabel5 };
-            newsLableList[num].Text = ArticlesInfo.viewsParaList[num];
-            //store lastest to views
-            add1ToViewsOrLikesToDB("views");
+                //init data
+                initArticleData("news",num);
 
-            //point to no1
-            string path = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin"))
-                + $"Html\\Articles\\{ArticlesInfo.urlParaList[num]}";
-            Reader.reader.WebBrowser2.Load(path);
-            ArticlesInfo.currentArticlelD = ArticlesInfo.ArticlelDList[num];
+                //show lastest views to newLable
+                dynamic[] newsLableList = { newslabel1, newslabel2, newslabel3, newslabel4, newslabel5 };
+                newsLableList[num].Text = ArticlesInfo.viewsParaList[num];
+                //store lastest to views in DB
+                add1ToViewsOrLikesToDB("views");
+
+                //accord to the url, open it
+                string path = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin"))
+                    + $"Html\\Articles\\{ArticlesInfo.urlParaList[num]}";
+                Reader.reader.WebBrowser2.Load(path);
+                ArticlesInfo.currentArticlelD = ArticlesInfo.ArticlelDList[num];
+
+                Thread.Sleep(100);
+                Reader.reader.Show();
+            }
+            else if (type=="notice")
+            {
+                ArticlesInfo.currentArticleType = "notice";
+
+                //init data
+                initArticleData("notice", num);
+
+                //store lastest to views in DB
+                add1ToViewsOrLikesToDB("views");
+
+                //accord to the url, open it
+                string path = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin"))
+                    + $"Html\\Articles\\{NoticeInfo.urlParaList[num]}";
+                Reader.reader.WebBrowser2.Load(path);
+                NoticeInfo.currentArticlelD = NoticeInfo.ArticlelDList[num];
+
+                Thread.Sleep(100);
+                Reader.reader.Show();
+            }
             
-            Thread.Sleep(100);
-            Reader.reader.Show();
         }
         public static void add1ToViewsOrLikesToDB(string type)
         {
             string atrID = ArticlesInfo.currentArticlelD;
-            string connStr = @"Data Source=LAPTOP-5ACE008F\SQLEXPRESS;Initial Catalog=CsharpRepairerInc;Integrated Security=True";
+            string connStr = Setting.DBString;
 
             SqlConnection conn = new SqlConnection(connStr);
             conn.Open();
 
-            string sql = $"SELECT TOP 5 Title, Views FROM Articles ORDER BY  Views DESC";
+            string sql = "";
             if (type=="views")
             {
                 sql = $"update Articles set Views=Views+1 where ArticlelD='{atrID}';";
@@ -690,59 +755,162 @@ namespace miniSys0._3.Controls
             cmd.ExecuteNonQuery();
         }
 
+        public static void add1ToViewsOrLikesToDB(string Datatype,string aritcalTpye)
+        {
+            string atrID = "";
+            string connStr = Setting.DBString;
+
+            SqlConnection conn = new SqlConnection(connStr);
+            conn.Open();
+
+            string sql = "";
+            if (aritcalTpye == "news")
+            {
+                atrID = ArticlesInfo.currentArticlelD;
+                sql = $"update Articles set Likes=Likes+ 1 where ArticlelD='{atrID}';";
+            }
+            else if(aritcalTpye == "notice")
+            {
+                atrID = NoticeInfo.currentArticlelD;
+                sql = $"update Articles set Likes=Likes+ 1 where ArticlelD='{atrID}';";
+            }
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+        }
+
         #region newsButton Click event
         private void news1_Click(object sender, EventArgs e)
         {
-            readerShow(0);
+            readerShow("news",0);
         }
 
         private void news2_Click(object sender, EventArgs e)
         {
-            readerShow(1);
+            readerShow("news", 1);
         }
 
         private void news3_Click(object sender, EventArgs e)
         {
-            readerShow(2);
+            readerShow("news", 2);
         }
 
         private void news4_Click(object sender, EventArgs e)
         {
-            readerShow(3);
+            readerShow("news", 3);
         }
 
         private void news5_Click(object sender, EventArgs e)
         {
-            readerShow(4);
+            readerShow("news", 4);
         }
         #endregion
 
+        #region NoticeButton click event
         private void noticeText1_Click(object sender, EventArgs e)
         {
-            Reader.reader.Show();
+            readerShow("notice", 0);
         }
 
         private void noticeText2_Click(object sender, EventArgs e)
         {
-            Reader.reader.Show();
+            readerShow("notice", 1);
         }
 
         private void noticeText3_Click(object sender, EventArgs e)
         {
-            Reader.reader.Show();
+            readerShow("notice", 2);
         }
 
         private void noticeText4_Click(object sender, EventArgs e)
         {
-            Reader.reader.Show();
+            readerShow("notice", 3);
         }
 
         private void noticeText5_Click(object sender, EventArgs e)
         {
+            readerShow("notice", 4);
+        }
+        #endregion
+
+        #region document click event
+        private void docShow(string docFileName)
+        {
+            string path = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin"))
+                + $"Html\\Document\\{docFileName}.html";
+            Reader.reader.WebBrowser2.Load(path);
+            Thread.Sleep(100);
             Reader.reader.Show();
         }
+        private void doc1_Click(object sender, EventArgs e)
+        {
+            docShow("Doc000001");
+        }
+        
+
+        private void doc2_Click(object sender, EventArgs e)
+        {
+            docShow("Doc000002");
+        }
+
+        private void doc3_Click(object sender, EventArgs e)
+        {
+            docShow("Doc000003");
+        }
+
+        private void doc4_Click(object sender, EventArgs e)
+        {
+            docShow("Doc000004");
+        }
+        #endregion
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            VideoPlayer videoPlayer = new VideoPlayer();
+            videoPlayer.Show();
+        }
+
+        private void initNoticeDataToGlobal()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                string posterId = NoticeInfo.posterParaList[i];
+                dynamic[] connTools2 = getDataReader($"SELECT Name, Post FROM Staff WHERE StaffID ='{posterId}'");
+                SqlDataReader dr2 = connTools2[1];
+                SqlConnection conn2 = connTools2[0];
+                if (dr2.Read())
+                {
+                    NoticeInfo.posterParaList[i] = dr2["Name"].ToString();
+                    NoticeInfo.staffpostParaList[i] = dr2["Post"].ToString();
+                }
+                dr2.Close();
+                conn2.Close();
+
+                //
+            }
+        }
     }
-    
+    public class Setting
+    {
+        public static string DBString = @"Data Source=LAPTOP-5ACE008F\SQLEXPRESS;Initial Catalog=CsharpRepairerInc;Integrated Security=True";
+    }
+    public class User_type
+    {
+        //this is defult
+        //public static string user_deparment = "Customer";
+        public static string user_deparment = "Admin";
+        //deparment:  Receptionist,Technician, Customer, Admin
+
+        //test data
+        public static string user_name = "Innis Yu";
+        public static string user_post = "CEO";
+        public static string user_ID = "Sta000000";
+
+
+        public static Color LogoFore = Color.Black;
+        public static Color LogoBkg = Color.FromArgb(70, 141, 255);
+        public static string loginStatus = "Login";  //Login,Relogin
+    }
+
     public class ArticlesInfo
     {
         public static string[] ArticlelDList = new string[5];
@@ -754,15 +922,24 @@ namespace miniSys0._3.Controls
         public static string[] timeParaList = new string[5];
         public static string[] urlParaList = new string[5];
         public static string currentArticlelD = "";
+        public static string currentArticleType = "";
         public static int currentnewsLablelD = -1;
-
-        /*public static string type = "Message";
-        public static string titlePara = type + "I like coding";
-        public static string posterPara = "Innis";
-        public static string staffpostPara = "Receptionist";
-        public static string viewsPara = "8005";
-        public static string likesPara = "8346";
-        public static string timePara = "2022-03-27 14:48:41.000";
-        public static string urlPara = "https://blog.csdn.net/";*/
+        
     }
+
+    public static class NoticeInfo
+    {
+        public static string[] ArticlelDList = new string[5];
+        public static string[] titleParaList = new string[5];
+        public static string[] posterParaList = new string[5];
+        public static string[] staffpostParaList = new string[5];
+        public static string[] viewsParaList = new string[5];
+        public static string[] likesParaList = new string[5];
+        public static string[] timeParaList = new string[5];
+        public static string[] urlParaList = new string[5];
+        public static string currentArticlelD = "";
+        public static int currentnoticeLablelD = -1; 
+    }
+
+    public static class Temp { }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -21,6 +22,7 @@ namespace miniSys0._3
             //Application.Run(new ProfileFloating());
             //Application.Run(new Reader());
             //Application.Run(new Form1());
+            //Application.Run(new VideoPlayer());
         }
     }
 }

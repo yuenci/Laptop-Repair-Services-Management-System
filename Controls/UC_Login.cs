@@ -50,7 +50,7 @@ namespace miniSys0._3.Controls
 
             void login(string nameInput, string passwordInput)
             {
-                string connStr = @"Data Source=LAPTOP-5ACE008F\SQLEXPRESS;Initial Catalog=CsharpRepairerInc;Integrated Security=True";
+                string connStr = Setting.DBString;
 
                 SqlConnection conn = new SqlConnection(connStr);
                 conn.Open();

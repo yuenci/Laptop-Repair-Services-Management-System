@@ -1,10 +1,10 @@
-let titlePara = "[Activity]Inside position always thought push.";
-let posterPara = "Patricia Griffith";
+let titlePara = document.title;
+let posterPara = "Kevin Hodges";
 let staffpostPara = "Receptionist";
-let viewsPara = "153";
-let likesPara = "5993";
-let timePara = "2022/4/20 19:56:53";
-let urlPara = "Art000057.html";
+let viewsPara = "9999";
+let likesPara = "9999";
+let timePara = "2021/12/28 13:52:09";
+let urlPara = document.title;
 
 function refresh() {
     location.reload();
@@ -52,13 +52,9 @@ function insertInfo(viewInt, likeInt) {
     <div id='qrcode'></div>
     <div></div>
     <div></div>
-    <div  class='iconAndWord icon' id='chakan'>
-        <span class="iconfont icon-chakan"></span>
-        <span class='word'>${viewInt}</span>
+    <div id='chakan'>
     </div>
-    <div  class='iconAndWord icon' id='love'>
-        <span class="iconfont icon-love"></span>
-         <span class='word' id='likeNum'>${likeInt}</span>
+    <div id='love'>
     </div>`;
 }
 insertInfo(viewsPara, likesPara);

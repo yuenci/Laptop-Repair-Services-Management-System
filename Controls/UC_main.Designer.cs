@@ -89,14 +89,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.BannerLabel1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.name_lable = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.name_lable = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.uiUserControl7.SuspendLayout();
             this.uiUserControl6.SuspendLayout();
             this.uiUserControl2.SuspendLayout();
@@ -106,12 +106,12 @@
             this.newsTopBar.SuspendLayout();
             this.uiUserControl3.SuspendLayout();
             this.lineChartPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // uiUserControl7
@@ -352,6 +352,7 @@
             this.doc4.Size = new System.Drawing.Size(76, 22);
             this.doc4.TabIndex = 52;
             this.doc4.Text = "About us";
+            this.doc4.Click += new System.EventHandler(this.doc4_Click);
             this.doc4.MouseLeave += new System.EventHandler(this.doc4_leave);
             this.doc4.MouseHover += new System.EventHandler(this.doc4_hover);
             // 
@@ -366,6 +367,7 @@
             this.doc3.Size = new System.Drawing.Size(92, 22);
             this.doc3.TabIndex = 51;
             this.doc3.Text = "Contact us";
+            this.doc3.Click += new System.EventHandler(this.doc3_Click);
             this.doc3.MouseLeave += new System.EventHandler(this.doc3_leave);
             this.doc3.MouseHover += new System.EventHandler(this.doc3_hover);
             // 
@@ -380,6 +382,7 @@
             this.doc2.Size = new System.Drawing.Size(75, 22);
             this.doc2.TabIndex = 50;
             this.doc2.Text = "Tutorials";
+            this.doc2.Click += new System.EventHandler(this.doc2_Click);
             this.doc2.MouseLeave += new System.EventHandler(this.doc2_leave);
             this.doc2.MouseHover += new System.EventHandler(this.doc2_hover);
             // 
@@ -394,6 +397,7 @@
             this.doc1.Size = new System.Drawing.Size(94, 22);
             this.doc1.TabIndex = 49;
             this.doc1.Text = "Quick Start";
+            this.doc1.Click += new System.EventHandler(this.doc1_Click);
             this.doc1.MouseLeave += new System.EventHandler(this.doc1_leave);
             this.doc1.MouseHover += new System.EventHandler(this.doc1_hover);
             // 
@@ -980,6 +984,36 @@
             this.label3.TabIndex = 21;
             this.label3.Text = "All orders";
             // 
+            // name_lable
+            // 
+            this.name_lable.AutoSize = true;
+            this.name_lable.Font = new System.Drawing.Font(".萍方-简", 16F);
+            this.name_lable.Location = new System.Drawing.Point(53, 14);
+            this.name_lable.Name = "name_lable";
+            this.name_lable.Size = new System.Drawing.Size(337, 31);
+            this.name_lable.TabIndex = 15;
+            this.name_lable.Text = "Welcome back，Ryan Septimus";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Location = new System.Drawing.Point(17, 51);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(810, 2);
+            this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::miniSys0._3.Properties.Resources.tou_alpha;
+            this.pictureBox1.Location = new System.Drawing.Point(853, 149);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(266, 164);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::miniSys0._3.Properties.Resources.todayorder;
@@ -1020,16 +1054,6 @@
             this.pictureBox4.TabIndex = 16;
             this.pictureBox4.TabStop = false;
             // 
-            // name_lable
-            // 
-            this.name_lable.AutoSize = true;
-            this.name_lable.Font = new System.Drawing.Font(".萍方-简", 16F);
-            this.name_lable.Location = new System.Drawing.Point(53, 14);
-            this.name_lable.Name = "name_lable";
-            this.name_lable.Size = new System.Drawing.Size(337, 31);
-            this.name_lable.TabIndex = 15;
-            this.name_lable.Text = "Welcome back，Ryan Septimus";
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::miniSys0._3.Properties.Resources.clap;
@@ -1039,25 +1063,6 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Location = new System.Drawing.Point(17, 51);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(810, 2);
-            this.panel1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::miniSys0._3.Properties.Resources.tou_alpha;
-            this.pictureBox1.Location = new System.Drawing.Point(853, 149);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(266, 164);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
             // 
             // UC_main
             // 
@@ -1089,12 +1094,12 @@
             this.uiUserControl3.ResumeLayout(false);
             this.uiUserControl3.PerformLayout();
             this.lineChartPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

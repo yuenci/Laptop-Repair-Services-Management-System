@@ -339,21 +339,5 @@ namespace miniSys0._3
         }
     }
 
-    public class User_type
-    {
-        //this is defult
-        //public static string user_deparment = "Customer";
-        public static string user_deparment = "Admin";
-        //deparment:  Receptionist,Technician, Customer, Admin
 
-        //test data
-        public static string user_name = "Innis Yu";
-        public static string user_post = "CEO";
-        public static string user_ID = "Sta000000";
-
-
-        public static Color LogoFore = Color.Black;
-        public static Color LogoBkg = Color.FromArgb(70, 141, 255);
-        public static string loginStatus = "Login";  //Login,Relogin
-    }
 }

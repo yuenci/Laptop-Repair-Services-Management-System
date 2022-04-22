@@ -65,12 +65,24 @@ namespace miniSys0._3
         }
         public void add1ToLikes()
         {
-            Console.WriteLine("get");
+           //Console.WriteLine("get");
 
-            int no = ArticlesInfo.currentnewsLablelD;
-            string likes = ArticlesInfo.likesParaList[no];
-            ArticlesInfo.likesParaList[no] = (int.Parse(likes) + 1).ToString();
-            add1ToViewsOrLikesToDB("likes");
+            if (ArticlesInfo.currentArticleType == "news")
+            {
+                int no = ArticlesInfo.currentnewsLablelD;
+                string likes = ArticlesInfo.likesParaList[no];
+                ArticlesInfo.likesParaList[no] = (int.Parse(likes) + 1).ToString();
+                add1ToViewsOrLikesToDB("likes","news");
+            }
+            else if (ArticlesInfo.currentArticleType == "notice")
+            {
+                int no = NoticeInfo.currentnoticeLablelD;
+                string likes = NoticeInfo.likesParaList[no];
+                NoticeInfo.likesParaList[no] = (int.Parse(likes) + 1).ToString();
+                add1ToViewsOrLikesToDB("likes","notice");
+            }
+            
+
         }
 
     }
