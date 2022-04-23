@@ -35,6 +35,7 @@
             this.ButtonUserPost = new Sunny.UI.UISymbolButton();
             this.ButtonEditPhoto = new Sunny.UI.UISymbolButton();
             this.UserFirstLeeter = new Sunny.UI.UILabel();
+            this.pictureBg = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.uiUserControl1 = new Sunny.UI.UIUserControl();
@@ -45,26 +46,25 @@
             this.macLabel = new System.Windows.Forms.Label();
             this.iphonrLabel = new System.Windows.Forms.Label();
             this.uiSymbolButton1 = new Sunny.UI.UISymbolButton();
-            this.uiUserControl2 = new Sunny.UI.UIUserControl();
-            this.uiUserControl3 = new Sunny.UI.UIUserControl();
-            this.uiUserControl4 = new Sunny.UI.UIUserControl();
             this.pictureBoxMacbook = new System.Windows.Forms.PictureBox();
+            this.uiUserControl2 = new Sunny.UI.UIUserControl();
             this.pictureBoxIphone = new System.Windows.Forms.PictureBox();
-            this.pictureBg = new System.Windows.Forms.PictureBox();
-            this.urC_Crumbs1 = new miniSys0._3.Controls.Others.UrC_Crumbs();
-            this.uC_StaffCard4 = new miniSys0._3.Controls.Others.UC_StaffCard();
-            this.uC_StaffCard3 = new miniSys0._3.Controls.Others.UC_StaffCard();
-            this.uC_StaffCard2 = new miniSys0._3.Controls.Others.UC_StaffCard();
-            this.uC_StaffCard11 = new miniSys0._3.Controls.Others.UC_StaffCard1();
-            this.uC_StaffCard12 = new miniSys0._3.Controls.Others.UC_StaffCard1();
-            this.uC_StaffCard13 = new miniSys0._3.Controls.Others.UC_StaffCard1();
+            this.uiUserControl3 = new Sunny.UI.UIUserControl();
             this.uC_StaffCard14 = new miniSys0._3.Controls.Others.UC_StaffCard1();
+            this.uC_StaffCard13 = new miniSys0._3.Controls.Others.UC_StaffCard1();
+            this.uC_StaffCard12 = new miniSys0._3.Controls.Others.UC_StaffCard1();
+            this.uC_StaffCard11 = new miniSys0._3.Controls.Others.UC_StaffCard1();
+            /*this.uC_StaffCard4 = new miniSys0._3.Controls.Others.UC_StaffCard();
+            this.uC_StaffCard3 = new miniSys0._3.Controls.Others.UC_StaffCard();
+            this.uC_StaffCard2 = new miniSys0._3.Controls.Others.UC_StaffCard();*/
+            this.uiUserControl4 = new Sunny.UI.UIUserControl();
+            this.urC_Crumbs1 = new miniSys0._3.Controls.Others.UrC_Crumbs();
             this.picContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBg)).BeginInit();
             this.uiUserControl1.SuspendLayout();
-            this.uiUserControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMacbook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIphone)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBg)).BeginInit();
+            this.uiUserControl3.SuspendLayout();
             this.SuspendLayout();
             // 
             // picContainer
@@ -168,6 +168,7 @@
             this.ButtonEditPhoto.TabIndex = 33;
             this.ButtonEditPhoto.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ButtonEditPhoto.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.ButtonEditPhoto.Click += new System.EventHandler(this.ButtonEditPhoto_Click);
             // 
             // UserFirstLeeter
             // 
@@ -180,6 +181,15 @@
             this.UserFirstLeeter.Text = "V";
             this.UserFirstLeeter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.UserFirstLeeter.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // pictureBg
+            // 
+            this.pictureBg.Image = global::miniSys0._3.Properties.Resources.TMBG;
+            this.pictureBg.Location = new System.Drawing.Point(0, 0);
+            this.pictureBg.Name = "pictureBg";
+            this.pictureBg.Size = new System.Drawing.Size(1128, 200);
+            this.pictureBg.TabIndex = 19;
+            this.pictureBg.TabStop = false;
             // 
             // label1
             // 
@@ -338,6 +348,20 @@
             this.uiSymbolButton1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiSymbolButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // pictureBoxMacbook
+            // 
+            this.pictureBoxMacbook.BackColor = System.Drawing.Color.Black;
+            this.pictureBoxMacbook.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxMacbook.Image = global::miniSys0._3.Properties.Resources.imac;
+            this.pictureBoxMacbook.Location = new System.Drawing.Point(289, 78);
+            this.pictureBoxMacbook.Name = "pictureBoxMacbook";
+            this.pictureBoxMacbook.Size = new System.Drawing.Size(226, 246);
+            this.pictureBoxMacbook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxMacbook.TabIndex = 27;
+            this.pictureBoxMacbook.TabStop = false;
+            this.pictureBoxMacbook.MouseLeave += new System.EventHandler(this.mac_leave);
+            this.pictureBoxMacbook.MouseHover += new System.EventHandler(this.mac_hover);
+            // 
             // uiUserControl2
             // 
             this.uiUserControl2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -351,16 +375,30 @@
             this.uiUserControl2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiUserControl2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // pictureBoxIphone
+            // 
+            this.pictureBoxIphone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(12)))), ((int)(((byte)(23)))));
+            this.pictureBoxIphone.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxIphone.Image = global::miniSys0._3.Properties.Resources.iphone;
+            this.pictureBoxIphone.Location = new System.Drawing.Point(29, 78);
+            this.pictureBoxIphone.Name = "pictureBoxIphone";
+            this.pictureBoxIphone.Size = new System.Drawing.Size(226, 246);
+            this.pictureBoxIphone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxIphone.TabIndex = 22;
+            this.pictureBoxIphone.TabStop = false;
+            this.pictureBoxIphone.MouseLeave += new System.EventHandler(this.phone_leave);
+            this.pictureBoxIphone.MouseHover += new System.EventHandler(this.phone_hover);
+            // 
             // uiUserControl3
             // 
             this.uiUserControl3.Controls.Add(this.uC_StaffCard14);
             this.uiUserControl3.Controls.Add(this.uC_StaffCard13);
             this.uiUserControl3.Controls.Add(this.uC_StaffCard12);
             this.uiUserControl3.Controls.Add(this.uC_StaffCard11);
-            this.uiUserControl3.Controls.Add(this.uC_StaffCard4);
-            this.uiUserControl3.Controls.Add(this.uC_StaffCard3);
+            //this.uiUserControl3.Controls.Add(this.uC_StaffCard4);
+            //this.uiUserControl3.Controls.Add(this.uC_StaffCard3);
             this.uiUserControl3.Controls.Add(this.label2);
-            this.uiUserControl3.Controls.Add(this.uC_StaffCard2);
+            //this.uiUserControl3.Controls.Add(this.uC_StaffCard2);
             this.uiUserControl3.FillColor = System.Drawing.Color.White;
             this.uiUserControl3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiUserControl3.Location = new System.Drawing.Point(835, 305);
@@ -374,6 +412,65 @@
             this.uiUserControl3.Text = "uiUserControl3";
             this.uiUserControl3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiUserControl3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uC_StaffCard14
+            // 
+            this.uC_StaffCard14.BackColor = System.Drawing.Color.White;
+            this.uC_StaffCard14.Location = new System.Drawing.Point(17, 276);
+            this.uC_StaffCard14.Name = "uC_StaffCard14";
+            this.uC_StaffCard14.Size = new System.Drawing.Size(230, 50);
+            this.uC_StaffCard14.TabIndex = 28;
+            // 
+            // uC_StaffCard13
+            // 
+            this.uC_StaffCard13.BackColor = System.Drawing.Color.White;
+            this.uC_StaffCard13.Location = new System.Drawing.Point(17, 211);
+            this.uC_StaffCard13.Name = "uC_StaffCard13";
+            this.uC_StaffCard13.Size = new System.Drawing.Size(230, 50);
+            this.uC_StaffCard13.TabIndex = 27;
+            // 
+            // uC_StaffCard12
+            // 
+            this.uC_StaffCard12.BackColor = System.Drawing.Color.White;
+            this.uC_StaffCard12.Location = new System.Drawing.Point(17, 146);
+            this.uC_StaffCard12.Name = "uC_StaffCard12";
+            this.uC_StaffCard12.Size = new System.Drawing.Size(230, 50);
+            this.uC_StaffCard12.TabIndex = 26;
+            // 
+            // uC_StaffCard11
+            // 
+            this.uC_StaffCard11.BackColor = System.Drawing.Color.White;
+            this.uC_StaffCard11.Location = new System.Drawing.Point(17, 81);
+            this.uC_StaffCard11.Name = "uC_StaffCard11";
+            this.uC_StaffCard11.Size = new System.Drawing.Size(230, 50);
+            this.uC_StaffCard11.TabIndex = 25;
+            // 
+            // uC_StaffCard4
+            // 
+            /*this.uC_StaffCard4.BackColor = System.Drawing.Color.White;
+            this.uC_StaffCard4.Location = new System.Drawing.Point(47, 842);
+            this.uC_StaffCard4.Margin = new System.Windows.Forms.Padding(13, 16, 13, 16);
+            this.uC_StaffCard4.Name = "uC_StaffCard4";
+            this.uC_StaffCard4.Size = new System.Drawing.Size(638, 154);
+            this.uC_StaffCard4.TabIndex = 3;*/
+            // 
+            // uC_StaffCard3
+            // 
+           /* this.uC_StaffCard3.BackColor = System.Drawing.Color.White;
+            this.uC_StaffCard3.Location = new System.Drawing.Point(47, 653);
+            this.uC_StaffCard3.Margin = new System.Windows.Forms.Padding(13, 16, 13, 16);
+            this.uC_StaffCard3.Name = "uC_StaffCard3";
+            this.uC_StaffCard3.Size = new System.Drawing.Size(638, 154);
+            this.uC_StaffCard3.TabIndex = 2;*/
+            // 
+            // uC_StaffCard2
+            // 
+            /*this.uC_StaffCard2.BackColor = System.Drawing.Color.White;
+            this.uC_StaffCard2.Location = new System.Drawing.Point(47, 462);
+            this.uC_StaffCard2.Margin = new System.Windows.Forms.Padding(13, 16, 13, 16);
+            this.uC_StaffCard2.Name = "uC_StaffCard2";
+            this.uC_StaffCard2.Size = new System.Drawing.Size(638, 154);
+            this.uC_StaffCard2.TabIndex = 1;*/
             // 
             // uiUserControl4
             // 
@@ -392,43 +489,6 @@
             this.uiUserControl4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiUserControl4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // pictureBoxMacbook
-            // 
-            this.pictureBoxMacbook.BackColor = System.Drawing.Color.Black;
-            this.pictureBoxMacbook.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxMacbook.Image = global::miniSys0._3.Properties.Resources.imac;
-            this.pictureBoxMacbook.Location = new System.Drawing.Point(289, 78);
-            this.pictureBoxMacbook.Name = "pictureBoxMacbook";
-            this.pictureBoxMacbook.Size = new System.Drawing.Size(226, 246);
-            this.pictureBoxMacbook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxMacbook.TabIndex = 27;
-            this.pictureBoxMacbook.TabStop = false;
-            this.pictureBoxMacbook.MouseLeave += new System.EventHandler(this.mac_leave);
-            this.pictureBoxMacbook.MouseHover += new System.EventHandler(this.mac_hover);
-            // 
-            // pictureBoxIphone
-            // 
-            this.pictureBoxIphone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(12)))), ((int)(((byte)(23)))));
-            this.pictureBoxIphone.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxIphone.Image = global::miniSys0._3.Properties.Resources.iphone;
-            this.pictureBoxIphone.Location = new System.Drawing.Point(29, 78);
-            this.pictureBoxIphone.Name = "pictureBoxIphone";
-            this.pictureBoxIphone.Size = new System.Drawing.Size(226, 246);
-            this.pictureBoxIphone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxIphone.TabIndex = 22;
-            this.pictureBoxIphone.TabStop = false;
-            this.pictureBoxIphone.MouseLeave += new System.EventHandler(this.phone_leave);
-            this.pictureBoxIphone.MouseHover += new System.EventHandler(this.phone_hover);
-            // 
-            // pictureBg
-            // 
-            this.pictureBg.Image = global::miniSys0._3.Properties.Resources.TMBG;
-            this.pictureBg.Location = new System.Drawing.Point(0, 0);
-            this.pictureBg.Name = "pictureBg";
-            this.pictureBg.Size = new System.Drawing.Size(1128, 200);
-            this.pictureBg.TabIndex = 19;
-            this.pictureBg.TabStop = false;
-            // 
             // urC_Crumbs1
             // 
             this.urC_Crumbs1.BackColor = System.Drawing.SystemColors.Control;
@@ -436,65 +496,6 @@
             this.urC_Crumbs1.Name = "urC_Crumbs1";
             this.urC_Crumbs1.Size = new System.Drawing.Size(300, 35);
             this.urC_Crumbs1.TabIndex = 29;
-            // 
-            // uC_StaffCard4
-            // 
-            this.uC_StaffCard4.BackColor = System.Drawing.Color.White;
-            this.uC_StaffCard4.Location = new System.Drawing.Point(47, 842);
-            this.uC_StaffCard4.Margin = new System.Windows.Forms.Padding(13, 16, 13, 16);
-            this.uC_StaffCard4.Name = "uC_StaffCard4";
-            this.uC_StaffCard4.Size = new System.Drawing.Size(638, 154);
-            this.uC_StaffCard4.TabIndex = 3;
-            // 
-            // uC_StaffCard3
-            // 
-            this.uC_StaffCard3.BackColor = System.Drawing.Color.White;
-            this.uC_StaffCard3.Location = new System.Drawing.Point(47, 653);
-            this.uC_StaffCard3.Margin = new System.Windows.Forms.Padding(13, 16, 13, 16);
-            this.uC_StaffCard3.Name = "uC_StaffCard3";
-            this.uC_StaffCard3.Size = new System.Drawing.Size(638, 154);
-            this.uC_StaffCard3.TabIndex = 2;
-            // 
-            // uC_StaffCard2
-            // 
-            this.uC_StaffCard2.BackColor = System.Drawing.Color.White;
-            this.uC_StaffCard2.Location = new System.Drawing.Point(47, 462);
-            this.uC_StaffCard2.Margin = new System.Windows.Forms.Padding(13, 16, 13, 16);
-            this.uC_StaffCard2.Name = "uC_StaffCard2";
-            this.uC_StaffCard2.Size = new System.Drawing.Size(638, 154);
-            this.uC_StaffCard2.TabIndex = 1;
-            // 
-            // uC_StaffCard11
-            // 
-            this.uC_StaffCard11.BackColor = System.Drawing.Color.White;
-            this.uC_StaffCard11.Location = new System.Drawing.Point(17, 81);
-            this.uC_StaffCard11.Name = "uC_StaffCard11";
-            this.uC_StaffCard11.Size = new System.Drawing.Size(230, 50);
-            this.uC_StaffCard11.TabIndex = 25;
-            // 
-            // uC_StaffCard12
-            // 
-            this.uC_StaffCard12.BackColor = System.Drawing.Color.White;
-            this.uC_StaffCard12.Location = new System.Drawing.Point(17, 146);
-            this.uC_StaffCard12.Name = "uC_StaffCard12";
-            this.uC_StaffCard12.Size = new System.Drawing.Size(230, 50);
-            this.uC_StaffCard12.TabIndex = 26;
-            // 
-            // uC_StaffCard13
-            // 
-            this.uC_StaffCard13.BackColor = System.Drawing.Color.White;
-            this.uC_StaffCard13.Location = new System.Drawing.Point(17, 211);
-            this.uC_StaffCard13.Name = "uC_StaffCard13";
-            this.uC_StaffCard13.Size = new System.Drawing.Size(230, 50);
-            this.uC_StaffCard13.TabIndex = 27;
-            // 
-            // uC_StaffCard14
-            // 
-            this.uC_StaffCard14.BackColor = System.Drawing.Color.White;
-            this.uC_StaffCard14.Location = new System.Drawing.Point(17, 276);
-            this.uC_StaffCard14.Name = "uC_StaffCard14";
-            this.uC_StaffCard14.Size = new System.Drawing.Size(230, 50);
-            this.uC_StaffCard14.TabIndex = 28;
             // 
             // UC_UserInfo
             // 
@@ -509,13 +510,13 @@
             this.Name = "UC_UserInfo";
             this.Size = new System.Drawing.Size(1125, 720);
             this.picContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBg)).EndInit();
             this.uiUserControl1.ResumeLayout(false);
             this.uiUserControl1.PerformLayout();
-            this.uiUserControl3.ResumeLayout(false);
-            this.uiUserControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMacbook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIphone)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBg)).EndInit();
+            this.uiUserControl3.ResumeLayout(false);
+            this.uiUserControl3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -543,9 +544,9 @@
         private Sunny.UI.UISymbolButton ButtonUserCoutry;
         private Sunny.UI.UISymbolButton ButtonUserDepart;
         private Sunny.UI.UISymbolButton ButtonUserPost;
-        private Others.UC_StaffCard uC_StaffCard4;
+        /*private Others.UC_StaffCard uC_StaffCard4;
         private Others.UC_StaffCard uC_StaffCard3;
-        private Others.UC_StaffCard uC_StaffCard2;
+        private Others.UC_StaffCard uC_StaffCard2;*/
         private Sunny.UI.UIUserControl uiUserControl4;
         private Others.UrC_Crumbs urC_Crumbs1;
         private Others.UC_StaffCard1 uC_StaffCard14;

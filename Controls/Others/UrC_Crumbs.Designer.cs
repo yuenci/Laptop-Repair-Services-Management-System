@@ -97,7 +97,7 @@
         #endregion
 
         public System.Windows.Forms.Label crumbsText;
-        private Sunny.UI.UISymbolButton crumbsHome;
+        public Sunny.UI.UISymbolButton crumbsHome;
         public Sunny.UI.UILabel crumbText;
     }
 }

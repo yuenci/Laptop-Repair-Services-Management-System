@@ -215,8 +215,20 @@ namespace miniSys0._3.Controls.MainArea
         }
 
 
+
         #endregion
 
-
+        private void ButtonEditPhoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Multiselect = false;
+            dialog.Title = "Please choose a picture";
+            dialog.Filter = "Picture file(*.gif;*.jpg;*.jpeg;*.png)|*.gif;*.jpg;*.jpeg;*.png";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                MessageBox.Show(dialog.FileName);
+                // do something           
+            }
+        }
     }
 }

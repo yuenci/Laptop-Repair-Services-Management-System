@@ -37,10 +37,9 @@ namespace miniSys0._3
             // main area loading
 
             //add_UC_Mainto_Panel();
-            add_UC_UserInfo();
-
+            //add_UC_UserInfo();
             //add_UC_UserSetting();
-
+            add_UC_registration();
 
 
 
@@ -370,6 +369,16 @@ namespace miniSys0._3
             mainPanel.Controls.Add(uc);
             uc.BringToFront();
         }
+
+        private void add_UC_registration()
+        {
+            UC_Registration uc = new UC_Registration();
+            uc.Dock = DockStyle.Fill;
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(uc);
+            uc.BringToFront();
+        }
+
         #endregion
     }
 

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.container1 = new Sunny.UI.UIUserControl();
+            this.authStatus = new Sunny.UI.UIPanel();
             this.editIDCardNum = new System.Windows.Forms.Label();
             this.editPhone = new System.Windows.Forms.Label();
             this.phoneTextBox = new Sunny.UI.UITextBox();
@@ -45,17 +46,16 @@
             this.ButtonEditPhoto = new Sunny.UI.UISymbolButton();
             this.icon = new Sunny.UI.UIAvatar();
             this.container2 = new Sunny.UI.UIUserControl();
-            this.contentPanel = new System.Windows.Forms.Panel();
-            this.bgSS = new Sunny.UI.UIUserControl();
-            this.labelSS = new System.Windows.Forms.Label();
             this.bgBI = new Sunny.UI.UIUserControl();
             this.labelBI = new System.Windows.Forms.Label();
-            this.authStatus = new Sunny.UI.UIPanel();
+            this.bgSS = new Sunny.UI.UIUserControl();
+            this.labelSS = new System.Windows.Forms.Label();
+            this.contentPanel = new System.Windows.Forms.Panel();
             this.urC_Crumbs1 = new miniSys0._3.Controls.Others.UrC_Crumbs();
             this.container1.SuspendLayout();
             this.container2.SuspendLayout();
-            this.bgSS.SuspendLayout();
             this.bgBI.SuspendLayout();
+            this.bgSS.SuspendLayout();
             this.SuspendLayout();
             // 
             // container1
@@ -92,6 +92,20 @@
             this.container1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.container1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // authStatus
+            // 
+            this.authStatus.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.authStatus.Location = new System.Drawing.Point(733, 102);
+            this.authStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.authStatus.MinimumSize = new System.Drawing.Size(1, 1);
+            this.authStatus.Name = "authStatus";
+            this.authStatus.Size = new System.Drawing.Size(126, 30);
+            this.authStatus.Style = Sunny.UI.UIStyle.Custom;
+            this.authStatus.TabIndex = 15;
+            this.authStatus.Text = "Authenticated ";
+            this.authStatus.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.authStatus.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
             // editIDCardNum
             // 
             this.editIDCardNum.AutoSize = true;
@@ -123,16 +137,13 @@
             // 
             this.phoneTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.phoneTextBox.DoubleValue = 1234567890D;
-            this.phoneTextBox.FillDisableColor = System.Drawing.Color.White;
             this.phoneTextBox.Font = new System.Drawing.Font(".萍方-简", 12F);
-            this.phoneTextBox.ForeDisableColor = System.Drawing.Color.Gray;
             this.phoneTextBox.IntValue = 1234567890;
             this.phoneTextBox.Location = new System.Drawing.Point(733, 62);
             this.phoneTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.phoneTextBox.MinimumSize = new System.Drawing.Size(1, 16);
             this.phoneTextBox.Name = "phoneTextBox";
             this.phoneTextBox.Radius = 2;
-            this.phoneTextBox.RectDisableColor = System.Drawing.Color.White;
             this.phoneTextBox.ShowText = false;
             this.phoneTextBox.Size = new System.Drawing.Size(240, 30);
             this.phoneTextBox.Style = Sunny.UI.UIStyle.Custom;
@@ -266,7 +277,7 @@
             this.ButtonEditPhoto.BackColor = System.Drawing.Color.Transparent;
             this.ButtonEditPhoto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonEditPhoto.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ButtonEditPhoto.Location = new System.Drawing.Point(128, 96);
+            this.ButtonEditPhoto.Location = new System.Drawing.Point(129, 96);
             this.ButtonEditPhoto.MinimumSize = new System.Drawing.Size(1, 1);
             this.ButtonEditPhoto.Name = "ButtonEditPhoto";
             this.ButtonEditPhoto.Radius = 20;
@@ -277,6 +288,7 @@
             this.ButtonEditPhoto.TabIndex = 34;
             this.ButtonEditPhoto.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ButtonEditPhoto.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.ButtonEditPhoto.Click += new System.EventHandler(this.ButtonEditPhoto_Click);
             // 
             // icon
             // 
@@ -316,45 +328,6 @@
             this.container2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.container2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // contentPanel
-            // 
-            this.contentPanel.Location = new System.Drawing.Point(3, 54);
-            this.contentPanel.Name = "contentPanel";
-            this.contentPanel.Size = new System.Drawing.Size(1110, 451);
-            this.contentPanel.TabIndex = 11;
-            // 
-            // bgSS
-            // 
-            this.bgSS.Controls.Add(this.labelSS);
-            this.bgSS.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bgSS.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bgSS.ForeColor = System.Drawing.Color.White;
-            this.bgSS.Location = new System.Drawing.Point(199, 13);
-            this.bgSS.MinimumSize = new System.Drawing.Size(1, 1);
-            this.bgSS.Name = "bgSS";
-            this.bgSS.Radius = 35;
-            this.bgSS.RectColor = System.Drawing.Color.White;
-            this.bgSS.Size = new System.Drawing.Size(160, 35);
-            this.bgSS.Style = Sunny.UI.UIStyle.Custom;
-            this.bgSS.TabIndex = 13;
-            this.bgSS.Text = "uiUserControl1";
-            this.bgSS.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bgSS.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // labelSS
-            // 
-            this.labelSS.AutoSize = true;
-            this.labelSS.BackColor = System.Drawing.Color.Transparent;
-            this.labelSS.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelSS.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelSS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
-            this.labelSS.Location = new System.Drawing.Point(11, 5);
-            this.labelSS.Name = "labelSS";
-            this.labelSS.Size = new System.Drawing.Size(142, 22);
-            this.labelSS.TabIndex = 0;
-            this.labelSS.Text = "Security settings";
-            this.labelSS.Click += new System.EventHandler(this.labelSS_Click);
-            // 
             // bgBI
             // 
             this.bgBI.Controls.Add(this.labelBI);
@@ -365,7 +338,6 @@
             this.bgBI.MinimumSize = new System.Drawing.Size(1, 1);
             this.bgBI.Name = "bgBI";
             this.bgBI.Radius = 35;
-            this.bgBI.RectColor = System.Drawing.Color.White;
             this.bgBI.Size = new System.Drawing.Size(160, 35);
             this.bgBI.Style = Sunny.UI.UIStyle.Custom;
             this.bgBI.TabIndex = 14;
@@ -387,22 +359,43 @@
             this.labelBI.Text = "Basic infomation";
             this.labelBI.Click += new System.EventHandler(this.labelBI_Click);
             // 
-            // authStatus
+            // bgSS
             // 
-            this.authStatus.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(255)))), ((int)(((byte)(234)))));
-            this.authStatus.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.authStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(42)))));
-            this.authStatus.Location = new System.Drawing.Point(733, 102);
-            this.authStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.authStatus.MinimumSize = new System.Drawing.Size(1, 1);
-            this.authStatus.Name = "authStatus";
-            this.authStatus.RectColor = System.Drawing.Color.White;
-            this.authStatus.Size = new System.Drawing.Size(126, 30);
-            this.authStatus.Style = Sunny.UI.UIStyle.Custom;
-            this.authStatus.TabIndex = 15;
-            this.authStatus.Text = "Authenticated ";
-            this.authStatus.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.authStatus.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.bgSS.Controls.Add(this.labelSS);
+            this.bgSS.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bgSS.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.bgSS.ForeColor = System.Drawing.Color.White;
+            this.bgSS.Location = new System.Drawing.Point(199, 13);
+            this.bgSS.MinimumSize = new System.Drawing.Size(1, 1);
+            this.bgSS.Name = "bgSS";
+            this.bgSS.Radius = 35;
+            this.bgSS.Size = new System.Drawing.Size(160, 35);
+            this.bgSS.Style = Sunny.UI.UIStyle.Custom;
+            this.bgSS.TabIndex = 13;
+            this.bgSS.Text = "uiUserControl1";
+            this.bgSS.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bgSS.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // labelSS
+            // 
+            this.labelSS.AutoSize = true;
+            this.labelSS.BackColor = System.Drawing.Color.Transparent;
+            this.labelSS.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelSS.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelSS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
+            this.labelSS.Location = new System.Drawing.Point(11, 5);
+            this.labelSS.Name = "labelSS";
+            this.labelSS.Size = new System.Drawing.Size(142, 22);
+            this.labelSS.TabIndex = 0;
+            this.labelSS.Text = "Security settings";
+            this.labelSS.Click += new System.EventHandler(this.labelSS_Click);
+            // 
+            // contentPanel
+            // 
+            this.contentPanel.Location = new System.Drawing.Point(3, 54);
+            this.contentPanel.Name = "contentPanel";
+            this.contentPanel.Size = new System.Drawing.Size(1110, 451);
+            this.contentPanel.TabIndex = 11;
             // 
             // urC_Crumbs1
             // 
@@ -425,10 +418,10 @@
             this.container1.ResumeLayout(false);
             this.container1.PerformLayout();
             this.container2.ResumeLayout(false);
-            this.bgSS.ResumeLayout(false);
-            this.bgSS.PerformLayout();
             this.bgBI.ResumeLayout(false);
             this.bgBI.PerformLayout();
+            this.bgSS.ResumeLayout(false);
+            this.bgSS.PerformLayout();
             this.ResumeLayout(false);
 
         }

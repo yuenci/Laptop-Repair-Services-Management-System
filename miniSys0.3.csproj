@@ -75,6 +75,12 @@
     <Compile Include="CommonlyControls.Designer.cs">
       <DependentUpon>CommonlyControls.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\MainArea\UC_Registration .cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MainArea\UC_Registration .Designer.cs">
+      <DependentUpon>UC_Registration .cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MainArea\UC_UserInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -140,12 +146,6 @@
     </Compile>
     <Compile Include="Controls\Others\UC_SecureSet.Designer.cs">
       <DependentUpon>UC_SecureSet.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\Others\UC_StaffCard.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\Others\UC_StaffCard.Designer.cs">
-      <DependentUpon>UC_StaffCard.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\Others\UC_StaffCard1.cs">
       <SubType>UserControl</SubType>
@@ -213,6 +213,9 @@
     <EmbeddedResource Include="CommonlyControls.resx">
       <DependentUpon>CommonlyControls.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MainArea\UC_Registration .resx">
+      <DependentUpon>UC_Registration .cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\MainArea\UC_UserInfo.resx">
       <DependentUpon>UC_UserInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,9 +248,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Others\UC_SecureSet.resx">
       <DependentUpon>UC_SecureSet.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\Others\UC_StaffCard.resx">
-      <DependentUpon>UC_StaffCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Others\UC_StaffCard1.resx">
       <DependentUpon>UC_StaffCard1.cs</DependentUpon>
