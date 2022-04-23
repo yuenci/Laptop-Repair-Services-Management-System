@@ -23,6 +23,7 @@ namespace miniSys0._3
             //Application.Run(new Reader());
             //Application.Run(new Form1());
             //Application.Run(new VideoPlayer());
+            //Application.Run(new TestForm());
         }
     }
 }

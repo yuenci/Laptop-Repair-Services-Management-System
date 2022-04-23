@@ -37,9 +37,9 @@ namespace miniSys0._3
             // main area loading
 
             //add_UC_Mainto_Panel();
-            //add_UC_UserInfo();
+            add_UC_UserInfo();
 
-            add_UC_UserSetting();
+            //add_UC_UserSetting();
 
 
 

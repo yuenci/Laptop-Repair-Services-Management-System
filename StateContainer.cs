@@ -28,6 +28,9 @@ namespace miniSys0._3
         public static string user_phone = "8120633";
         public static string user_email = "test@test.mail.com";
         public static string user_ID_number = "412722194641334317";
+        public static string user_security_qustion = "I love coding right?";
+        public static string user_security_answer = "I love coding right?";
+        public static string user_password = "password123456";
 
 
         public static Color LogoFore = Color.Black;

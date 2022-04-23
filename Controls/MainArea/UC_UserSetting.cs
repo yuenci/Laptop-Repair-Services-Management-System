@@ -18,12 +18,17 @@ namespace miniSys0._3.Controls.MainArea
         public UC_UserSetting()
         {
             InitializeComponent();
+            InitCurmbs();
             InitIcon();
             InitUserInfo();
             InitContentPanel();
             InitChangeButton();
         }
+        private void InitCurmbs()
+        {
+            urC_Crumbs1.crumbText.Text = "User setting";
 
+        }
         private void InitIcon()
         {
             //urC_Crumbs1.crumbText.Text = "User Setting";
@@ -99,7 +104,7 @@ namespace miniSys0._3.Controls.MainArea
         private void InitContentPanel()
         {
             UC_BasicInfo uc = new UC_BasicInfo();
-            //UC_SecureSet
+            //UC_SecureSet uc = new UC_SecureSet();
             addUserControl(uc);
         }
 

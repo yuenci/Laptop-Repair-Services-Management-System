@@ -32,14 +32,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.uiButton4 = new Sunny.UI.UIButton();
-            this.uiTextBox6 = new Sunny.UI.UITextBox();
-            this.uiButton3 = new Sunny.UI.UIButton();
-            this.uiTextBox5 = new Sunny.UI.UITextBox();
-            this.uiTextBox4 = new Sunny.UI.UITextBox();
-            this.uiTextBox3 = new Sunny.UI.UITextBox();
-            this.uiTextBox2 = new Sunny.UI.UITextBox();
-            this.uiTextBox1 = new Sunny.UI.UITextBox();
+            this.ResetButton = new Sunny.UI.UIButton();
+            this.profile = new Sunny.UI.UITextBox();
+            this.OKButton = new Sunny.UI.UIButton();
+            this.address = new Sunny.UI.UITextBox();
+            this.street = new Sunny.UI.UITextBox();
+            this.country = new Sunny.UI.UITextBox();
+            this.name = new Sunny.UI.UITextBox();
+            this.email = new Sunny.UI.UITextBox();
             this.uiLabel16 = new Sunny.UI.UILabel();
             this.uiLabel15 = new Sunny.UI.UILabel();
             this.uiLabel14 = new Sunny.UI.UILabel();
@@ -96,162 +96,176 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "*";
             // 
-            // uiButton4
+            // ResetButton
             // 
-            this.uiButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton4.Location = new System.Drawing.Point(316, 390);
-            this.uiButton4.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton4.Name = "uiButton4";
-            this.uiButton4.Radius = 2;
-            this.uiButton4.Size = new System.Drawing.Size(65, 35);
-            this.uiButton4.Style = Sunny.UI.UIStyle.Custom;
-            this.uiButton4.TabIndex = 18;
-            this.uiButton4.Text = "Reset";
-            this.uiButton4.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.ResetButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ResetButton.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ResetButton.Location = new System.Drawing.Point(316, 390);
+            this.ResetButton.MinimumSize = new System.Drawing.Size(1, 1);
+            this.ResetButton.Name = "ResetButton";
+            this.ResetButton.Radius = 2;
+            this.ResetButton.Size = new System.Drawing.Size(65, 35);
+            this.ResetButton.Style = Sunny.UI.UIStyle.Custom;
+            this.ResetButton.TabIndex = 18;
+            this.ResetButton.Text = "Reset";
+            this.ResetButton.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ResetButton.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
-            // uiTextBox6
+            // profile
             // 
-            this.uiTextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.uiTextBox6.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTextBox6.ForeColor = System.Drawing.Color.Gray;
-            this.uiTextBox6.Location = new System.Drawing.Point(210, 290);
-            this.uiTextBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox6.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox6.Multiline = true;
-            this.uiTextBox6.Name = "uiTextBox6";
-            this.uiTextBox6.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.uiTextBox6.Radius = 2;
-            this.uiTextBox6.RectColor = System.Drawing.Color.Transparent;
-            this.uiTextBox6.ShowText = false;
-            this.uiTextBox6.Size = new System.Drawing.Size(366, 88);
-            this.uiTextBox6.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTextBox6.TabIndex = 24;
-            this.uiTextBox6.Text = "Please enter your personal introduction with a maximum of 300 characters.";
-            this.uiTextBox6.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox6.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.profile.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.profile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.profile.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.profile.ForeColor = System.Drawing.Color.Gray;
+            this.profile.Location = new System.Drawing.Point(210, 290);
+            this.profile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.profile.MinimumSize = new System.Drawing.Size(1, 16);
+            this.profile.Multiline = true;
+            this.profile.Name = "profile";
+            this.profile.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.profile.Radius = 2;
+            this.profile.RectColor = System.Drawing.Color.White;
+            this.profile.ShowText = false;
+            this.profile.Size = new System.Drawing.Size(366, 88);
+            this.profile.Style = Sunny.UI.UIStyle.Custom;
+            this.profile.TabIndex = 24;
+            this.profile.Text = "Please enter your personal introduction with a maximum of 300 characters.";
+            this.profile.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.profile.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.profile.Leave += new System.EventHandler(this.profile_Leave_1);
+            this.profile.Enter += new System.EventHandler(this.profile_Enter);
             // 
-            // uiButton3
+            // OKButton
             // 
-            this.uiButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton3.Location = new System.Drawing.Point(210, 390);
-            this.uiButton3.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton3.Name = "uiButton3";
-            this.uiButton3.Radius = 2;
-            this.uiButton3.Size = new System.Drawing.Size(65, 35);
-            this.uiButton3.Style = Sunny.UI.UIStyle.Custom;
-            this.uiButton3.TabIndex = 17;
-            this.uiButton3.Text = "OK";
-            this.uiButton3.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.OKButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.OKButton.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.OKButton.Location = new System.Drawing.Point(210, 390);
+            this.OKButton.MinimumSize = new System.Drawing.Size(1, 1);
+            this.OKButton.Name = "OKButton";
+            this.OKButton.Radius = 2;
+            this.OKButton.Size = new System.Drawing.Size(65, 35);
+            this.OKButton.Style = Sunny.UI.UIStyle.Custom;
+            this.OKButton.TabIndex = 17;
+            this.OKButton.Text = "OK";
+            this.OKButton.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.OKButton.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
             // 
-            // uiTextBox5
+            // address
             // 
-            this.uiTextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.uiTextBox5.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTextBox5.ForeColor = System.Drawing.Color.Gray;
-            this.uiTextBox5.Location = new System.Drawing.Point(210, 235);
-            this.uiTextBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox5.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox5.Name = "uiTextBox5";
-            this.uiTextBox5.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.uiTextBox5.Radius = 2;
-            this.uiTextBox5.RectColor = System.Drawing.Color.Transparent;
-            this.uiTextBox5.ShowText = false;
-            this.uiTextBox5.Size = new System.Drawing.Size(366, 40);
-            this.uiTextBox5.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTextBox5.TabIndex = 23;
-            this.uiTextBox5.Text = "Enter the detailed address";
-            this.uiTextBox5.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.address.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.address.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.address.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.address.ForeColor = System.Drawing.Color.Gray;
+            this.address.Location = new System.Drawing.Point(210, 235);
+            this.address.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.address.MinimumSize = new System.Drawing.Size(1, 16);
+            this.address.Name = "address";
+            this.address.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.address.Radius = 2;
+            this.address.RectColor = System.Drawing.Color.White;
+            this.address.ShowText = false;
+            this.address.Size = new System.Drawing.Size(366, 40);
+            this.address.Style = Sunny.UI.UIStyle.Custom;
+            this.address.TabIndex = 23;
+            this.address.Text = "Enter the detailed address";
+            this.address.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.address.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.address.Leave += new System.EventHandler(this.address_Leave_1);
+            this.address.Enter += new System.EventHandler(this.address_Enter);
             // 
-            // uiTextBox4
+            // street
             // 
-            this.uiTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.uiTextBox4.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTextBox4.ForeColor = System.Drawing.Color.Gray;
-            this.uiTextBox4.Location = new System.Drawing.Point(210, 180);
-            this.uiTextBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox4.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox4.Name = "uiTextBox4";
-            this.uiTextBox4.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.uiTextBox4.Radius = 2;
-            this.uiTextBox4.RectColor = System.Drawing.Color.Transparent;
-            this.uiTextBox4.ShowText = false;
-            this.uiTextBox4.Size = new System.Drawing.Size(366, 40);
-            this.uiTextBox4.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTextBox4.TabIndex = 22;
-            this.uiTextBox4.Text = "Enter the street where you live";
-            this.uiTextBox4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.street.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.street.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.street.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.street.ForeColor = System.Drawing.Color.Gray;
+            this.street.Location = new System.Drawing.Point(210, 180);
+            this.street.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.street.MinimumSize = new System.Drawing.Size(1, 16);
+            this.street.Name = "street";
+            this.street.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.street.Radius = 2;
+            this.street.RectColor = System.Drawing.Color.White;
+            this.street.ShowText = false;
+            this.street.Size = new System.Drawing.Size(366, 40);
+            this.street.Style = Sunny.UI.UIStyle.Custom;
+            this.street.TabIndex = 22;
+            this.street.Text = "Enter the street where you live";
+            this.street.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.street.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.street.Leave += new System.EventHandler(this.street_Leave_1);
+            this.street.Enter += new System.EventHandler(this.street_Enter);
             // 
-            // uiTextBox3
+            // country
             // 
-            this.uiTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.uiTextBox3.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTextBox3.ForeColor = System.Drawing.Color.Gray;
-            this.uiTextBox3.Location = new System.Drawing.Point(210, 125);
-            this.uiTextBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox3.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox3.Name = "uiTextBox3";
-            this.uiTextBox3.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.uiTextBox3.Radius = 2;
-            this.uiTextBox3.RectColor = System.Drawing.Color.Transparent;
-            this.uiTextBox3.ShowText = false;
-            this.uiTextBox3.Size = new System.Drawing.Size(366, 40);
-            this.uiTextBox3.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTextBox3.TabIndex = 25;
-            this.uiTextBox3.Text = "Enter your country";
-            this.uiTextBox3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.country.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.country.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.country.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.country.ForeColor = System.Drawing.Color.Gray;
+            this.country.Location = new System.Drawing.Point(210, 125);
+            this.country.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.country.MinimumSize = new System.Drawing.Size(1, 16);
+            this.country.Name = "country";
+            this.country.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.country.Radius = 2;
+            this.country.RectColor = System.Drawing.Color.White;
+            this.country.ShowText = false;
+            this.country.Size = new System.Drawing.Size(366, 40);
+            this.country.Style = Sunny.UI.UIStyle.Custom;
+            this.country.TabIndex = 25;
+            this.country.Text = "Enter your country";
+            this.country.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.country.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.country.Leave += new System.EventHandler(this.country_Leave_1);
+            this.country.Enter += new System.EventHandler(this.country_Enter);
             // 
-            // uiTextBox2
+            // name
             // 
-            this.uiTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.uiTextBox2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTextBox2.ForeColor = System.Drawing.Color.Gray;
-            this.uiTextBox2.Location = new System.Drawing.Point(210, 70);
-            this.uiTextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox2.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox2.Name = "uiTextBox2";
-            this.uiTextBox2.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.uiTextBox2.Radius = 2;
-            this.uiTextBox2.RectColor = System.Drawing.Color.Transparent;
-            this.uiTextBox2.ShowText = false;
-            this.uiTextBox2.Size = new System.Drawing.Size(366, 40);
-            this.uiTextBox2.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTextBox2.TabIndex = 21;
-            this.uiTextBox2.Text = "Enter your name";
-            this.uiTextBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.name.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.name.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.name.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.name.ForeColor = System.Drawing.Color.Gray;
+            this.name.Location = new System.Drawing.Point(210, 70);
+            this.name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.name.MinimumSize = new System.Drawing.Size(1, 16);
+            this.name.Name = "name";
+            this.name.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.name.Radius = 2;
+            this.name.RectColor = System.Drawing.Color.White;
+            this.name.ShowText = false;
+            this.name.Size = new System.Drawing.Size(366, 40);
+            this.name.Style = Sunny.UI.UIStyle.Custom;
+            this.name.TabIndex = 21;
+            this.name.Text = "Enter your name";
+            this.name.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.name.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.name.Leave += new System.EventHandler(this.name_Leave_1);
+            this.name.Enter += new System.EventHandler(this.name_Enter);
             // 
-            // uiTextBox1
+            // email
             // 
-            this.uiTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.uiTextBox1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTextBox1.ForeColor = System.Drawing.Color.Gray;
-            this.uiTextBox1.Location = new System.Drawing.Point(210, 15);
-            this.uiTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox1.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox1.Name = "uiTextBox1";
-            this.uiTextBox1.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.uiTextBox1.Radius = 2;
-            this.uiTextBox1.RectColor = System.Drawing.Color.Transparent;
-            this.uiTextBox1.ShowText = false;
-            this.uiTextBox1.Size = new System.Drawing.Size(366, 40);
-            this.uiTextBox1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTextBox1.TabIndex = 20;
-            this.uiTextBox1.Text = "Enter your email address";
-            this.uiTextBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.email.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.email.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.email.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.email.ForeColor = System.Drawing.Color.Gray;
+            this.email.Location = new System.Drawing.Point(210, 15);
+            this.email.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.email.MinimumSize = new System.Drawing.Size(1, 16);
+            this.email.Name = "email";
+            this.email.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.email.Radius = 2;
+            this.email.RectColor = System.Drawing.Color.White;
+            this.email.ShowText = false;
+            this.email.Size = new System.Drawing.Size(366, 40);
+            this.email.Style = Sunny.UI.UIStyle.Custom;
+            this.email.TabIndex = 20;
+            this.email.Text = "Enter your email address";
+            this.email.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.email.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.email.Leave += new System.EventHandler(this.email_Leave_1);
+            this.email.Enter += new System.EventHandler(this.email_enter);
             // 
             // uiLabel16
             // 
@@ -334,14 +348,14 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.uiButton4);
-            this.Controls.Add(this.uiTextBox6);
-            this.Controls.Add(this.uiButton3);
-            this.Controls.Add(this.uiTextBox5);
-            this.Controls.Add(this.uiTextBox4);
-            this.Controls.Add(this.uiTextBox3);
-            this.Controls.Add(this.uiTextBox2);
-            this.Controls.Add(this.uiTextBox1);
+            this.Controls.Add(this.ResetButton);
+            this.Controls.Add(this.profile);
+            this.Controls.Add(this.OKButton);
+            this.Controls.Add(this.address);
+            this.Controls.Add(this.street);
+            this.Controls.Add(this.country);
+            this.Controls.Add(this.name);
+            this.Controls.Add(this.email);
             this.Controls.Add(this.uiLabel16);
             this.Controls.Add(this.uiLabel15);
             this.Controls.Add(this.uiLabel14);
@@ -361,14 +375,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private Sunny.UI.UIButton uiButton4;
-        private Sunny.UI.UITextBox uiTextBox6;
-        private Sunny.UI.UIButton uiButton3;
-        private Sunny.UI.UITextBox uiTextBox5;
-        private Sunny.UI.UITextBox uiTextBox4;
-        private Sunny.UI.UITextBox uiTextBox3;
-        private Sunny.UI.UITextBox uiTextBox2;
-        private Sunny.UI.UITextBox uiTextBox1;
+        private Sunny.UI.UIButton ResetButton;
+        private Sunny.UI.UITextBox profile;
+        private Sunny.UI.UIButton OKButton;
+        private Sunny.UI.UITextBox address;
+        private Sunny.UI.UITextBox street;
+        private Sunny.UI.UITextBox country;
+        private Sunny.UI.UITextBox name;
+        private Sunny.UI.UITextBox email;
         private Sunny.UI.UILabel uiLabel16;
         private Sunny.UI.UILabel uiLabel15;
         private Sunny.UI.UILabel uiLabel14;

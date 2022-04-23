@@ -23,7 +23,7 @@ namespace miniSys0._3.Controls.MainArea
             InitDeviceCard();
             //InitRlatedStaff();
             string[] staffIDArray = { "Sta000001", "Sta000004", "Sta000037", "Sta000063" };
-            InitRlatedStaff(staffIDArray);
+            //InitRlatedStaff(staffIDArray);
 
             
         }
@@ -88,7 +88,7 @@ namespace miniSys0._3.Controls.MainArea
             
         }
 
-        private void InitRlatedStaff(string[] stuffArry)
+        /*private void InitRlatedStaff(string[] stuffArry)
         {
             if (stuffArry.Length != 4)
             {
@@ -126,7 +126,7 @@ namespace miniSys0._3.Controls.MainArea
             while (dr2.NextResult()); //next method
             dr2.Close();
             conn2.Close();
-        }
+        }*/
 
         #region Phone and Mac card init
         private void phone_hover(object sender, EventArgs e)

@@ -53,7 +53,6 @@
             this.uC_StaffCard4 = new miniSys0._3.Controls.Others.UC_StaffCard();
             this.uC_StaffCard3 = new miniSys0._3.Controls.Others.UC_StaffCard();
             this.uC_StaffCard2 = new miniSys0._3.Controls.Others.UC_StaffCard();
-            this.uC_StaffCard1 = new miniSys0._3.Controls.Others.UC_StaffCard();
             this.uiUserControl4 = new Sunny.UI.UIUserControl();
             this.urC_Crumbs1 = new miniSys0._3.Controls.Others.UrC_Crumbs();
             this.picContainer.SuspendLayout();
@@ -190,6 +189,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(24, 25);
             this.label1.Name = "label1";
@@ -200,6 +200,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(12, 28);
             this.label2.Name = "label2";
@@ -389,7 +390,6 @@
             this.uiUserControl3.Controls.Add(this.uC_StaffCard3);
             this.uiUserControl3.Controls.Add(this.label2);
             this.uiUserControl3.Controls.Add(this.uC_StaffCard2);
-            this.uiUserControl3.Controls.Add(this.uC_StaffCard1);
             this.uiUserControl3.FillColor = System.Drawing.Color.White;
             this.uiUserControl3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiUserControl3.Location = new System.Drawing.Point(835, 305);
@@ -427,14 +427,6 @@
             this.uC_StaffCard2.Name = "uC_StaffCard2";
             this.uC_StaffCard2.Size = new System.Drawing.Size(638, 154);
             this.uC_StaffCard2.TabIndex = 1;
-            // 
-            // uC_StaffCard1
-            // 
-            this.uC_StaffCard1.Location = new System.Drawing.Point(47, 270);
-            this.uC_StaffCard1.Margin = new System.Windows.Forms.Padding(13, 16, 13, 16);
-            this.uC_StaffCard1.Name = "uC_StaffCard1";
-            this.uC_StaffCard1.Size = new System.Drawing.Size(638, 156);
-            this.uC_StaffCard1.TabIndex = 0;
             // 
             // uiUserControl4
             // 
@@ -511,7 +503,6 @@
         private Others.UC_StaffCard uC_StaffCard4;
         private Others.UC_StaffCard uC_StaffCard3;
         private Others.UC_StaffCard uC_StaffCard2;
-        private Others.UC_StaffCard uC_StaffCard1;
         private Sunny.UI.UIUserControl uiUserControl4;
         private Others.UrC_Crumbs urC_Crumbs1;
     }

@@ -66,8 +66,7 @@
             // 
             // UC_StaffCard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.deparNameLable);
             this.Controls.Add(this.staffNameLable);
             this.Controls.Add(this.pictureHead);

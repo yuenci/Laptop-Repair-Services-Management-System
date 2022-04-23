@@ -289,6 +289,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private Sunny.UI.UITextBox searchBox;
         private System.Windows.Forms.Panel navMenuPanel;
-        private System.Windows.Forms.Panel mainPanel;
+        public System.Windows.Forms.Panel mainPanel;
     }
 }

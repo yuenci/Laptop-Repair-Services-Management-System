@@ -28,154 +28,83 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.uiTextBox9 = new Sunny.UI.UITextBox();
-            this.uiTextBox10 = new Sunny.UI.UITextBox();
-            this.uiTextBox11 = new Sunny.UI.UITextBox();
-            this.uiTextBox12 = new Sunny.UI.UITextBox();
+            this.editEmail = new System.Windows.Forms.Label();
+            this.editPhone = new System.Windows.Forms.Label();
+            this.editPassword = new System.Windows.Forms.Label();
+            this.editQuestion = new System.Windows.Forms.Label();
             this.uiLabel19 = new Sunny.UI.UILabel();
             this.uiLabel20 = new Sunny.UI.UILabel();
             this.uiLabel21 = new Sunny.UI.UILabel();
             this.uiLabel22 = new Sunny.UI.UILabel();
+            this.password1 = new Sunny.UI.UITextBox();
+            this.secure2 = new Sunny.UI.UITextBox();
+            this.email1 = new Sunny.UI.UITextBox();
+            this.phone1 = new Sunny.UI.UITextBox();
+            this.secureComb = new Sunny.UI.UIComboBox();
+            this.password2 = new Sunny.UI.UITextBox();
+            this.sendButton1 = new Sunny.UI.UIButton();
+            this.phone2 = new Sunny.UI.UITextBox();
+            this.sendButton2 = new Sunny.UI.UIButton();
+            this.email2 = new Sunny.UI.UITextBox();
             this.SuspendLayout();
             // 
-            // label8
+            // editEmail
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
-            this.label8.Location = new System.Drawing.Point(1020, 270);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 22);
-            this.label8.TabIndex = 71;
-            this.label8.Text = "Edit";
+            this.editEmail.AutoSize = true;
+            this.editEmail.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.editEmail.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.editEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
+            this.editEmail.Location = new System.Drawing.Point(1028, 272);
+            this.editEmail.Name = "editEmail";
+            this.editEmail.Size = new System.Drawing.Size(42, 22);
+            this.editEmail.TabIndex = 71;
+            this.editEmail.Text = "Edit";
+            this.editEmail.Click += new System.EventHandler(this.editEmail_Click);
             // 
-            // label7
+            // editPhone
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
-            this.label7.Location = new System.Drawing.Point(1020, 184);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(42, 22);
-            this.label7.TabIndex = 70;
-            this.label7.Text = "Edit";
+            this.editPhone.AutoSize = true;
+            this.editPhone.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.editPhone.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.editPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
+            this.editPhone.Location = new System.Drawing.Point(1028, 193);
+            this.editPhone.Name = "editPhone";
+            this.editPhone.Size = new System.Drawing.Size(42, 22);
+            this.editPhone.TabIndex = 70;
+            this.editPhone.Text = "Edit";
+            this.editPhone.Click += new System.EventHandler(this.editPhone_Click);
             // 
-            // label6
+            // editPassword
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
-            this.label6.Location = new System.Drawing.Point(1020, 15);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 22);
-            this.label6.TabIndex = 68;
-            this.label6.Text = "Edit";
+            this.editPassword.AutoSize = true;
+            this.editPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.editPassword.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.editPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
+            this.editPassword.Location = new System.Drawing.Point(1028, 23);
+            this.editPassword.Name = "editPassword";
+            this.editPassword.Size = new System.Drawing.Size(42, 22);
+            this.editPassword.TabIndex = 68;
+            this.editPassword.Text = "Edit";
+            this.editPassword.Click += new System.EventHandler(this.editPassword_Click);
             // 
-            // label5
+            // editQuestion
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
-            this.label5.Location = new System.Drawing.Point(1020, 99);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 22);
-            this.label5.TabIndex = 69;
-            this.label5.Text = "Edit";
-            // 
-            // uiTextBox9
-            // 
-            this.uiTextBox9.ButtonSymbolOffset = new System.Drawing.Point(10, 1);
-            this.uiTextBox9.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox9.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTextBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.uiTextBox9.Location = new System.Drawing.Point(207, 269);
-            this.uiTextBox9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox9.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox9.Name = "uiTextBox9";
-            this.uiTextBox9.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.uiTextBox9.RectColor = System.Drawing.Color.Transparent;
-            this.uiTextBox9.ShowText = false;
-            this.uiTextBox9.Size = new System.Drawing.Size(738, 29);
-            this.uiTextBox9.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTextBox9.SymbolOffset = new System.Drawing.Point(10, 0);
-            this.uiTextBox9.TabIndex = 65;
-            this.uiTextBox9.Text = "Bound: 157275@gamil.com";
-            this.uiTextBox9.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox9.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiTextBox10
-            // 
-            this.uiTextBox10.ButtonSymbolOffset = new System.Drawing.Point(10, 1);
-            this.uiTextBox10.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox10.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTextBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.uiTextBox10.Location = new System.Drawing.Point(207, 178);
-            this.uiTextBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox10.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox10.Name = "uiTextBox10";
-            this.uiTextBox10.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.uiTextBox10.RectColor = System.Drawing.Color.Transparent;
-            this.uiTextBox10.ShowText = false;
-            this.uiTextBox10.Size = new System.Drawing.Size(738, 29);
-            this.uiTextBox10.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTextBox10.SymbolOffset = new System.Drawing.Point(10, 0);
-            this.uiTextBox10.TabIndex = 66;
-            this.uiTextBox10.Text = "bound: 157******29";
-            this.uiTextBox10.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox10.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiTextBox11
-            // 
-            this.uiTextBox11.ButtonSymbolOffset = new System.Drawing.Point(10, 1);
-            this.uiTextBox11.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox11.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTextBox11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.uiTextBox11.Location = new System.Drawing.Point(207, 93);
-            this.uiTextBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox11.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox11.Name = "uiTextBox11";
-            this.uiTextBox11.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.uiTextBox11.RectColor = System.Drawing.Color.Transparent;
-            this.uiTextBox11.ShowText = false;
-            this.uiTextBox11.Size = new System.Drawing.Size(738, 29);
-            this.uiTextBox11.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTextBox11.SymbolOffset = new System.Drawing.Point(10, 0);
-            this.uiTextBox11.TabIndex = 67;
-            this.uiTextBox11.Text = "Already set ecurity question";
-            this.uiTextBox11.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox11.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiTextBox12
-            // 
-            this.uiTextBox12.ButtonSymbolOffset = new System.Drawing.Point(10, 1);
-            this.uiTextBox12.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox12.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTextBox12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.uiTextBox12.Location = new System.Drawing.Point(207, 14);
-            this.uiTextBox12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox12.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox12.Name = "uiTextBox12";
-            this.uiTextBox12.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.uiTextBox12.RectColor = System.Drawing.Color.Transparent;
-            this.uiTextBox12.ShowText = false;
-            this.uiTextBox12.Size = new System.Drawing.Size(738, 29);
-            this.uiTextBox12.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTextBox12.SymbolOffset = new System.Drawing.Point(10, 0);
-            this.uiTextBox12.TabIndex = 64;
-            this.uiTextBox12.Text = "Already set. At least six characters in the password, and must contain numbers an" +
-    "d letters";
-            this.uiTextBox12.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox12.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.editQuestion.AutoSize = true;
+            this.editQuestion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.editQuestion.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.editQuestion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
+            this.editQuestion.Location = new System.Drawing.Point(1028, 104);
+            this.editQuestion.Name = "editQuestion";
+            this.editQuestion.Size = new System.Drawing.Size(42, 22);
+            this.editQuestion.TabIndex = 69;
+            this.editQuestion.Text = "Edit";
+            this.editQuestion.Click += new System.EventHandler(this.editQuestion_Click);
             // 
             // uiLabel19
             // 
             this.uiLabel19.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold);
             this.uiLabel19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.uiLabel19.Location = new System.Drawing.Point(44, 269);
+            this.uiLabel19.Location = new System.Drawing.Point(44, 272);
             this.uiLabel19.Name = "uiLabel19";
             this.uiLabel19.Size = new System.Drawing.Size(124, 23);
             this.uiLabel19.Style = Sunny.UI.UIStyle.Custom;
@@ -188,7 +117,7 @@
             // 
             this.uiLabel20.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold);
             this.uiLabel20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.uiLabel20.Location = new System.Drawing.Point(29, 184);
+            this.uiLabel20.Location = new System.Drawing.Point(29, 192);
             this.uiLabel20.Name = "uiLabel20";
             this.uiLabel20.Size = new System.Drawing.Size(139, 23);
             this.uiLabel20.Style = Sunny.UI.UIStyle.Custom;
@@ -201,7 +130,7 @@
             // 
             this.uiLabel21.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold);
             this.uiLabel21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.uiLabel21.Location = new System.Drawing.Point(-6, 99);
+            this.uiLabel21.Location = new System.Drawing.Point(-6, 103);
             this.uiLabel21.Name = "uiLabel21";
             this.uiLabel21.Size = new System.Drawing.Size(174, 23);
             this.uiLabel21.Style = Sunny.UI.UIStyle.Custom;
@@ -214,7 +143,7 @@
             // 
             this.uiLabel22.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold);
             this.uiLabel22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.uiLabel22.Location = new System.Drawing.Point(-19, 14);
+            this.uiLabel22.Location = new System.Drawing.Point(-19, 22);
             this.uiLabel22.Name = "uiLabel22";
             this.uiLabel22.Size = new System.Drawing.Size(187, 23);
             this.uiLabel22.Style = Sunny.UI.UIStyle.Custom;
@@ -223,23 +152,258 @@
             this.uiLabel22.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.uiLabel22.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // password1
+            // 
+            this.password1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.password1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.password1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.password1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.password1.Location = new System.Drawing.Point(207, 15);
+            this.password1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.password1.MinimumSize = new System.Drawing.Size(1, 16);
+            this.password1.Name = "password1";
+            this.password1.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.password1.RectColor = System.Drawing.Color.White;
+            this.password1.ShowText = false;
+            this.password1.Size = new System.Drawing.Size(255, 40);
+            this.password1.Style = Sunny.UI.UIStyle.Custom;
+            this.password1.TabIndex = 72;
+            this.password1.Text = "Enter new password";
+            this.password1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.password1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.password1.Leave += new System.EventHandler(this.password1_leave);
+            this.password1.Enter += new System.EventHandler(this.password1_Enter);
+            // 
+            // secure2
+            // 
+            this.secure2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.secure2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.secure2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.secure2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.secure2.Location = new System.Drawing.Point(516, 99);
+            this.secure2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.secure2.MinimumSize = new System.Drawing.Size(1, 16);
+            this.secure2.Name = "secure2";
+            this.secure2.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.secure2.RectColor = System.Drawing.Color.White;
+            this.secure2.ShowText = false;
+            this.secure2.Size = new System.Drawing.Size(255, 40);
+            this.secure2.Style = Sunny.UI.UIStyle.Custom;
+            this.secure2.TabIndex = 73;
+            this.secure2.Text = "Enter your answer";
+            this.secure2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.secure2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.secure2.Leave += new System.EventHandler(this.secure2_Leave);
+            this.secure2.Enter += new System.EventHandler(this.secure2_Enter);
+            // 
+            // email1
+            // 
+            this.email1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.email1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.email1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.email1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.email1.Location = new System.Drawing.Point(207, 263);
+            this.email1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.email1.MinimumSize = new System.Drawing.Size(1, 16);
+            this.email1.Name = "email1";
+            this.email1.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.email1.RectColor = System.Drawing.Color.White;
+            this.email1.ShowText = false;
+            this.email1.Size = new System.Drawing.Size(194, 40);
+            this.email1.Style = Sunny.UI.UIStyle.Custom;
+            this.email1.TabIndex = 73;
+            this.email1.Text = "Enter new eamil";
+            this.email1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.email1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.email1.Leave += new System.EventHandler(this.email1_Leave);
+            this.email1.Enter += new System.EventHandler(this.email1_Enter);
+            // 
+            // phone1
+            // 
+            this.phone1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.phone1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.phone1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.phone1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.phone1.Location = new System.Drawing.Point(207, 184);
+            this.phone1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.phone1.MinimumSize = new System.Drawing.Size(1, 16);
+            this.phone1.Name = "phone1";
+            this.phone1.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.phone1.RectColor = System.Drawing.Color.White;
+            this.phone1.ShowText = false;
+            this.phone1.Size = new System.Drawing.Size(194, 40);
+            this.phone1.Style = Sunny.UI.UIStyle.Custom;
+            this.phone1.TabIndex = 73;
+            this.phone1.Text = "Enter new number";
+            this.phone1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.phone1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.phone1.Leave += new System.EventHandler(this.phone1_Leave);
+            this.phone1.Enter += new System.EventHandler(this.phone1_Enter);
+            // 
+            // secureComb
+            // 
+            this.secureComb.DataSource = null;
+            this.secureComb.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.secureComb.FilterMaxCount = 50;
+            this.secureComb.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.secureComb.Items.AddRange(new object[] {
+            "Q11111111111",
+            "Q2222222222222",
+            "Q333333333333",
+            "Q4444444444444",
+            "Q555555555555"});
+            this.secureComb.ItemSelectBackColor = System.Drawing.Color.Silver;
+            this.secureComb.Location = new System.Drawing.Point(207, 99);
+            this.secureComb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.secureComb.MinimumSize = new System.Drawing.Size(63, 0);
+            this.secureComb.Name = "secureComb";
+            this.secureComb.Padding = new System.Windows.Forms.Padding(8, 0, 30, 2);
+            this.secureComb.RectColor = System.Drawing.Color.Gray;
+            this.secureComb.Size = new System.Drawing.Size(255, 40);
+            this.secureComb.Style = Sunny.UI.UIStyle.Custom;
+            this.secureComb.TabIndex = 74;
+            this.secureComb.Text = "Select a question";
+            this.secureComb.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.secureComb.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.secureComb.DropDown += new System.EventHandler(this.secureComb_DropDown);
+            // 
+            // password2
+            // 
+            this.password2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.password2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.password2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.password2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.password2.Location = new System.Drawing.Point(516, 15);
+            this.password2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.password2.MinimumSize = new System.Drawing.Size(1, 16);
+            this.password2.Name = "password2";
+            this.password2.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.password2.RectColor = System.Drawing.Color.White;
+            this.password2.ShowText = false;
+            this.password2.Size = new System.Drawing.Size(255, 40);
+            this.password2.Style = Sunny.UI.UIStyle.Custom;
+            this.password2.TabIndex = 73;
+            this.password2.Text = "Repeat new password";
+            this.password2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.password2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.password2.Leave += new System.EventHandler(this.password2_Leave);
+            this.password2.Enter += new System.EventHandler(this.password2_Enter);
+            // 
+            // sendButton1
+            // 
+            this.sendButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sendButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
+            this.sendButton1.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(100)))), ((int)(((byte)(221)))));
+            this.sendButton1.Font = new System.Drawing.Font(".萍方-简", 10F);
+            this.sendButton1.Location = new System.Drawing.Point(412, 187);
+            this.sendButton1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.sendButton1.Name = "sendButton1";
+            this.sendButton1.Radius = 10;
+            this.sendButton1.RectColor = System.Drawing.Color.Transparent;
+            this.sendButton1.RectDisableColor = System.Drawing.Color.Transparent;
+            this.sendButton1.RectHoverColor = System.Drawing.Color.Transparent;
+            this.sendButton1.RectPressColor = System.Drawing.Color.Transparent;
+            this.sendButton1.RectSelectedColor = System.Drawing.Color.Transparent;
+            this.sendButton1.Size = new System.Drawing.Size(50, 35);
+            this.sendButton1.Style = Sunny.UI.UIStyle.Custom;
+            this.sendButton1.TabIndex = 75;
+            this.sendButton1.Text = "Send";
+            this.sendButton1.TipsFont = null;
+            this.sendButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.sendButton1.Click += new System.EventHandler(this.sendButton1_Click);
+            // 
+            // phone2
+            // 
+            this.phone2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.phone2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.phone2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.phone2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.phone2.Location = new System.Drawing.Point(516, 184);
+            this.phone2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.phone2.MinimumSize = new System.Drawing.Size(1, 16);
+            this.phone2.Name = "phone2";
+            this.phone2.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.phone2.RectColor = System.Drawing.Color.White;
+            this.phone2.ShowText = false;
+            this.phone2.Size = new System.Drawing.Size(255, 40);
+            this.phone2.Style = Sunny.UI.UIStyle.Custom;
+            this.phone2.TabIndex = 74;
+            this.phone2.Text = "Enter the PIN code";
+            this.phone2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.phone2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.phone2.Leave += new System.EventHandler(this.phone2_Leave);
+            this.phone2.Enter += new System.EventHandler(this.phone2_Enter);
+            // 
+            // sendButton2
+            // 
+            this.sendButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sendButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
+            this.sendButton2.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(100)))), ((int)(((byte)(221)))));
+            this.sendButton2.Font = new System.Drawing.Font(".萍方-简", 10F);
+            this.sendButton2.Location = new System.Drawing.Point(412, 266);
+            this.sendButton2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.sendButton2.Name = "sendButton2";
+            this.sendButton2.Radius = 10;
+            this.sendButton2.RectColor = System.Drawing.Color.Transparent;
+            this.sendButton2.RectDisableColor = System.Drawing.Color.Transparent;
+            this.sendButton2.RectHoverColor = System.Drawing.Color.Transparent;
+            this.sendButton2.RectPressColor = System.Drawing.Color.Transparent;
+            this.sendButton2.RectSelectedColor = System.Drawing.Color.Transparent;
+            this.sendButton2.Size = new System.Drawing.Size(50, 35);
+            this.sendButton2.Style = Sunny.UI.UIStyle.Custom;
+            this.sendButton2.TabIndex = 76;
+            this.sendButton2.Text = "Send";
+            this.sendButton2.TipsFont = null;
+            this.sendButton2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.sendButton2.Click += new System.EventHandler(this.sendButton2_Click);
+            // 
+            // email2
+            // 
+            this.email2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.email2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.email2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.email2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.email2.Location = new System.Drawing.Point(516, 263);
+            this.email2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.email2.MinimumSize = new System.Drawing.Size(1, 16);
+            this.email2.Name = "email2";
+            this.email2.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.email2.RectColor = System.Drawing.Color.White;
+            this.email2.ShowText = false;
+            this.email2.Size = new System.Drawing.Size(255, 40);
+            this.email2.Style = Sunny.UI.UIStyle.Custom;
+            this.email2.TabIndex = 75;
+            this.email2.Text = "Enter the PIN code";
+            this.email2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.email2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.email2.Leave += new System.EventHandler(this.email2_Leave);
+            this.email2.Enter += new System.EventHandler(this.email2_Enter);
+            // 
             // UC_SecureSet
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.uiTextBox9);
-            this.Controls.Add(this.uiTextBox10);
-            this.Controls.Add(this.uiTextBox11);
-            this.Controls.Add(this.uiTextBox12);
+            this.Controls.Add(this.email2);
+            this.Controls.Add(this.sendButton2);
+            this.Controls.Add(this.phone2);
+            this.Controls.Add(this.sendButton1);
+            this.Controls.Add(this.password2);
+            this.Controls.Add(this.secureComb);
+            this.Controls.Add(this.phone1);
+            this.Controls.Add(this.email1);
+            this.Controls.Add(this.secure2);
+            this.Controls.Add(this.password1);
+            this.Controls.Add(this.editEmail);
+            this.Controls.Add(this.editPhone);
+            this.Controls.Add(this.editPassword);
+            this.Controls.Add(this.editQuestion);
             this.Controls.Add(this.uiLabel19);
             this.Controls.Add(this.uiLabel20);
             this.Controls.Add(this.uiLabel21);
             this.Controls.Add(this.uiLabel22);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "UC_SecureSet";
+            this.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Size = new System.Drawing.Size(1110, 451);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -248,17 +412,23 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private Sunny.UI.UITextBox uiTextBox9;
-        private Sunny.UI.UITextBox uiTextBox10;
-        private Sunny.UI.UITextBox uiTextBox11;
-        private Sunny.UI.UITextBox uiTextBox12;
+        private System.Windows.Forms.Label editEmail;
+        private System.Windows.Forms.Label editPhone;
+        private System.Windows.Forms.Label editPassword;
+        private System.Windows.Forms.Label editQuestion;
         private Sunny.UI.UILabel uiLabel19;
         private Sunny.UI.UILabel uiLabel20;
         private Sunny.UI.UILabel uiLabel21;
         private Sunny.UI.UILabel uiLabel22;
+        private Sunny.UI.UITextBox password1;
+        private Sunny.UI.UITextBox secure2;
+        private Sunny.UI.UITextBox email1;
+        private Sunny.UI.UITextBox phone1;
+        private Sunny.UI.UIComboBox secureComb;
+        private Sunny.UI.UITextBox password2;
+        private Sunny.UI.UIButton sendButton1;
+        private Sunny.UI.UITextBox phone2;
+        private Sunny.UI.UIButton sendButton2;
+        private Sunny.UI.UITextBox email2;
     }
 }
