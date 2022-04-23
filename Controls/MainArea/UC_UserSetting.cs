@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,8 +20,8 @@ namespace miniSys0._3.Controls.MainArea
             InitializeComponent();
             InitIcon();
             InitUserInfo();
-            //InitChangeButtonStyle();
             InitContentPanel();
+            InitChangeButton();
         }
 
         private void InitIcon()
@@ -39,58 +40,55 @@ namespace miniSys0._3.Controls.MainArea
 
 
         }
+        private string encryptedPhoneNum(string phoneNum)
+        {
+            double lengthdouble = phoneNum.Length - (phoneNum.Length % 3) ;
+            double numLength = Math.Floor(lengthdouble / 3);
+            int numLengthInt = Convert.ToInt32(numLength);
+
+            int lengthInt = phoneNum.Length;
+            
+            string start =   phoneNum.Substring(0, numLengthInt);
+            string end = phoneNum.Substring(lengthInt - numLengthInt, numLengthInt);
+            string asterisks  = new string('*', lengthInt - 2 * numLengthInt);
+
+            return start + asterisks + end;
+
+
+        }
         private void InitUserInfo()
         {
             uiLabel7.Text = User_type.user_name;
             uiLabel8.Text = User_type.user_ID;
             uiLabel9.Text = User_type.user_regtime;
             uiLabel10.Text = User_type.user_gender;
-            phoneTextBox.Text = User_type.user_phone;
-            emailTextBox.Text = User_type.user_email;
+            phoneTextBox.Text = encryptedPhoneNum(User_type.user_phone);
+            phoneTextBox.RectColor = Color.White;
+            phoneTextBox.Enabled = false;
+
+
         }
 
-        private void SelectedButtonStyle(dynamic button1)
+        private void SelectedButtonStyle(UIUserControl userControl,Label lable)
         {
-            //select(base)
-            button1.RectColor = Color.Transparent;
-            button1.FillColor = Color.FromArgb(242, 243, 245);
-            button1.ForeColor = Color.FromArgb(22, 93, 255);
+            lable.ForeColor = Color.FromArgb(22, 93, 255);
+            lable.Font =   new Font(".萍方-简", 12, FontStyle.Bold);
 
-            //hover
-            button1.RectColor = Color.Transparent;
-            button1.FillColor = Color.FromArgb(242, 243, 245);
-            button1.ForeColor = Color.FromArgb(22, 93, 255);
+            userControl.FillColor = Color.FromArgb(242, 243, 245);
 
-            //press
-            button1.RectColor = Color.Transparent;
-            button1.FillColor = Color.Silver;
-            button1.ForeColor = Color.FromArgb(22, 93, 255);
         }
-        private void UnSelectedButtonStyle(UIButton button)
+        private void UnSelectedButtonStyle(UIUserControl userControl, Label lable)
         {
-            //select(base)
-            button.RectColor = Color.Transparent;
-            button.FillColor = Color.Transparent;
-            //button.ForeColor = Color.FromArgb(78, 89, 105);
-            button.ForeColor = Color.Red;
-
-            //hover
-            button.RectColor = Color.Transparent;
-            //button.FillColor = Color.FromArgb(242, 243, 245
-            button.FillColor = Color.Red;
-            button.ForeColor = Color.FromArgb(22, 93, 255);
-
-            //press
-            button.RectColor = Color.Transparent;
-            button.FillColor = Color.Silver;
-            button.ForeColor = Color.FromArgb(22, 93, 255);
+            lable.ForeColor = Color.FromArgb(78, 89, 105);
+            lable.Font = new Font(".萍方-简", 12, FontStyle.Regular);
+            userControl.FillColor = Color.Transparent;
         }
-
-        private void InitChangeButtonStyle()
+        private void InitChangeButton()
         {
-            SelectedButtonStyle(changeButton1);
-            UnSelectedButtonStyle(changeButton2);
+            SelectedButtonStyle(bgBI, labelBI);
+            UnSelectedButtonStyle(bgSS,labelSS);
         }
+
         private void addUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
@@ -105,9 +103,103 @@ namespace miniSys0._3.Controls.MainArea
             addUserControl(uc);
         }
 
-        private void uiButton1_Click(object sender, EventArgs e)
+
+        private void labelSS_Click(object sender, EventArgs e)
         {
-            InitChangeButtonStyle();
+            SelectedButtonStyle(bgSS, labelSS);
+            UnSelectedButtonStyle(bgBI, labelBI);
+            UC_SecureSet uc = new UC_SecureSet();
+            addUserControl(uc);
+        }
+
+        private void labelBI_Click(object sender, EventArgs e)
+        {
+            SelectedButtonStyle(bgBI, labelBI);
+            UnSelectedButtonStyle(bgSS, labelSS);
+            UC_BasicInfo uc = new UC_BasicInfo();
+            addUserControl(uc);
+        }
+
+        private void editPhone_Click(object sender, EventArgs e)
+        {
+            string oldPhoneNum = phoneTextBox.Text;
+            Console.WriteLine($"begin:{oldPhoneNum}");
+            if (editPhone.Text == "Edit")
+            {
+                phoneTextBox.Enabled = true;
+                phoneTextBox.Text = "";
+                phoneTextBox.RectColor = Color.FromArgb(80, 160, 255);
+                phoneTextBox.Focus();
+                editPhone.Text = "OK";
+            }else if (editPhone.Text == "OK")
+            {
+                if (phoneTextBox.Text == "")
+                {
+                    MessageBox.Show("Empty input, Enter phone number please");
+                }
+                else if (phoneTextBox.Text != User_type.user_phone)
+                {
+                    try
+                    {
+                        Console.WriteLine("!=!=!==");
+                        Regex.IsMatch(phoneTextBox.Text, @"Expression");
+                        phoneTextBox.Enabled = false;
+                        string orginalNum = phoneTextBox.Text;
+                        string encryNum = encryptedPhoneNum(phoneTextBox.Text);
+                        phoneTextBox.Text = encryNum;
+                        phoneTextBox.RectColor = Color.White;
+                        editPhone.Text = "Edit";
+                        User_type.user_phone = orginalNum;
+                        MessageBox.Show($"send new phone:{orginalNum} to db");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Invalid input, Enter number please");
+                    }
+                }
+                else if (phoneTextBox.Text == User_type.user_phone)
+                {
+                    phoneTextBox.Text = encryptedPhoneNum(phoneTextBox.Text); 
+                    phoneTextBox.Enabled = false;
+                    phoneTextBox.RectColor = Color.White; 
+                    editPhone.Text = "Edit";
+                }  
+            }
+
+
+        }
+
+        private UITextBox idCardNum = new UITextBox();
+        private void editIDCardNum_Click(object sender, EventArgs e)
+        {
+            if (editIDCardNum.Text == "Edit")
+            {
+                authStatus.Hide();
+                idCardNum.Text = User_type.user_ID_number;
+                idCardNum.Location = new Point(733, 102);
+                idCardNum.Size = new Size(240, 30);
+                idCardNum.ForeColor = Color.Gray;
+                container1.Controls.Add(idCardNum);
+
+                editIDCardNum.Text = "OK";
+            }
+            else if (editIDCardNum.Text == "OK")
+            {
+                if (idCardNum.Text != User_type.user_ID_number)
+                {
+                    string id_num = idCardNum.Text;
+                    container1.Controls.Remove(idCardNum);
+                    authStatus.Show();
+                    editIDCardNum.Text = "Edit";
+                    MessageBox.Show($"send new id num:{id_num} to db");
+                }
+                else
+                {
+                    container1.Controls.Remove(idCardNum);
+                    authStatus.Show();
+                    editIDCardNum.Text = "Edit";
+                }
+            }
         }
     }
 }

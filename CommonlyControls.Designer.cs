@@ -58,6 +58,7 @@
             this.deparNameLable1 = new System.Windows.Forms.Label();
             this.staffNameLable1 = new System.Windows.Forms.Label();
             this.pictureHead1 = new System.Windows.Forms.PictureBox();
+            this.uiLabel1 = new Sunny.UI.UILabel();
             this.uiUserControl7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureHead4)).BeginInit();
             this.uiUserControl6.SuspendLayout();
@@ -440,11 +441,23 @@
             this.pictureHead1.TabIndex = 0;
             this.pictureHead1.TabStop = false;
             // 
+            // uiLabel1
+            // 
+            this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel1.Location = new System.Drawing.Point(261, 178);
+            this.uiLabel1.Name = "uiLabel1";
+            this.uiLabel1.Size = new System.Drawing.Size(100, 23);
+            this.uiLabel1.TabIndex = 21;
+            this.uiLabel1.Text = "uiLabel1";
+            this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiLabel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
             // CommonlyControls
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 725);
+            this.Controls.Add(this.uiLabel1);
             this.Controls.Add(this.uiUserControl7);
             this.Controls.Add(this.uiUserControl6);
             this.Controls.Add(this.uiUserControl5);
@@ -513,5 +526,6 @@
         private System.Windows.Forms.Label deparNameLable1;
         private System.Windows.Forms.Label staffNameLable1;
         private System.Windows.Forms.PictureBox pictureHead1;
+        private Sunny.UI.UILabel uiLabel1;
     }
 }

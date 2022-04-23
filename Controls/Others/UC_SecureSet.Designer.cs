@@ -47,7 +47,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
-            this.label8.Location = new System.Drawing.Point(1023, 339);
+            this.label8.Location = new System.Drawing.Point(1020, 270);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(42, 22);
             this.label8.TabIndex = 71;
@@ -58,7 +58,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
-            this.label7.Location = new System.Drawing.Point(1023, 253);
+            this.label7.Location = new System.Drawing.Point(1020, 184);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(42, 22);
             this.label7.TabIndex = 70;
@@ -69,7 +69,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
-            this.label6.Location = new System.Drawing.Point(1023, 84);
+            this.label6.Location = new System.Drawing.Point(1020, 15);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(42, 22);
             this.label6.TabIndex = 68;
@@ -80,7 +80,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
-            this.label5.Location = new System.Drawing.Point(1023, 168);
+            this.label5.Location = new System.Drawing.Point(1020, 99);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 22);
             this.label5.TabIndex = 69;
@@ -92,7 +92,7 @@
             this.uiTextBox9.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.uiTextBox9.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiTextBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.uiTextBox9.Location = new System.Drawing.Point(250, 338);
+            this.uiTextBox9.Location = new System.Drawing.Point(207, 269);
             this.uiTextBox9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiTextBox9.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTextBox9.Name = "uiTextBox9";
@@ -113,7 +113,7 @@
             this.uiTextBox10.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.uiTextBox10.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiTextBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.uiTextBox10.Location = new System.Drawing.Point(250, 247);
+            this.uiTextBox10.Location = new System.Drawing.Point(207, 178);
             this.uiTextBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiTextBox10.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTextBox10.Name = "uiTextBox10";
@@ -134,7 +134,7 @@
             this.uiTextBox11.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.uiTextBox11.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiTextBox11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.uiTextBox11.Location = new System.Drawing.Point(250, 162);
+            this.uiTextBox11.Location = new System.Drawing.Point(207, 93);
             this.uiTextBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiTextBox11.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTextBox11.Name = "uiTextBox11";
@@ -155,7 +155,7 @@
             this.uiTextBox12.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.uiTextBox12.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiTextBox12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.uiTextBox12.Location = new System.Drawing.Point(250, 83);
+            this.uiTextBox12.Location = new System.Drawing.Point(207, 14);
             this.uiTextBox12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiTextBox12.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTextBox12.Name = "uiTextBox12";
@@ -175,7 +175,7 @@
             // 
             this.uiLabel19.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold);
             this.uiLabel19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.uiLabel19.Location = new System.Drawing.Point(87, 338);
+            this.uiLabel19.Location = new System.Drawing.Point(44, 269);
             this.uiLabel19.Name = "uiLabel19";
             this.uiLabel19.Size = new System.Drawing.Size(124, 23);
             this.uiLabel19.Style = Sunny.UI.UIStyle.Custom;
@@ -188,7 +188,7 @@
             // 
             this.uiLabel20.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold);
             this.uiLabel20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.uiLabel20.Location = new System.Drawing.Point(72, 253);
+            this.uiLabel20.Location = new System.Drawing.Point(29, 184);
             this.uiLabel20.Name = "uiLabel20";
             this.uiLabel20.Size = new System.Drawing.Size(139, 23);
             this.uiLabel20.Style = Sunny.UI.UIStyle.Custom;
@@ -201,7 +201,7 @@
             // 
             this.uiLabel21.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold);
             this.uiLabel21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.uiLabel21.Location = new System.Drawing.Point(37, 168);
+            this.uiLabel21.Location = new System.Drawing.Point(-6, 99);
             this.uiLabel21.Name = "uiLabel21";
             this.uiLabel21.Size = new System.Drawing.Size(174, 23);
             this.uiLabel21.Style = Sunny.UI.UIStyle.Custom;
@@ -214,7 +214,7 @@
             // 
             this.uiLabel22.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold);
             this.uiLabel22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.uiLabel22.Location = new System.Drawing.Point(24, 83);
+            this.uiLabel22.Location = new System.Drawing.Point(-19, 14);
             this.uiLabel22.Name = "uiLabel22";
             this.uiLabel22.Size = new System.Drawing.Size(187, 23);
             this.uiLabel22.Style = Sunny.UI.UIStyle.Custom;

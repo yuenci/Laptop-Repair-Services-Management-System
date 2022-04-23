@@ -191,6 +191,7 @@
     <Compile Include="Reader.Designer.cs">
       <DependentUpon>Reader.cs</DependentUpon>
     </Compile>
+    <Compile Include="StateContainer.cs" />
     <Compile Include="VideoPlayer.cs">
       <SubType>Form</SubType>
     </Compile>
