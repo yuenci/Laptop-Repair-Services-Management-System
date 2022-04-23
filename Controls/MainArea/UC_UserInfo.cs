@@ -21,9 +21,8 @@ namespace miniSys0._3.Controls.MainArea
 
             InitUserInfoBar();
             InitDeviceCard();
-            //InitRlatedStaff();
             string[] staffIDArray = { "Sta000001", "Sta000004", "Sta000037", "Sta000063" };
-            //InitRlatedStaff(staffIDArray);
+            InitRlatedStaff(staffIDArray);
 
             
         }
@@ -87,9 +86,48 @@ namespace miniSys0._3.Controls.MainArea
 
             
         }
+        private void InitRlatedStaff(string[] stuffArry)
+        {
+            if (stuffArry.Length != 4)
+            {
+                throw new MyException("staff number has mistake");
+            }
 
+            uC_StaffCard11.pictureHead.Image = Resources.head1;
+            uC_StaffCard12.pictureHead.Image = Resources.head2;
+            uC_StaffCard13.pictureHead.Image = Resources.head3;
+            uC_StaffCard14.pictureHead.Image = Resources.head4;
+
+            dynamic[] staffCardObjArray = { uC_StaffCard11, uC_StaffCard12, uC_StaffCard13, uC_StaffCard14 };
+
+            //staffNameLable
+            //deparNameLable
+
+            string allsql = "";
+            for (int i = 0; i < 4; i++)
+            {
+                var sqlpart = $"select Name,Post from Staff where StaffID = '{stuffArry[i]}';";
+                allsql += sqlpart;
+            }
+            dynamic[] connTools2 = UC_main.getDataReader(allsql);
+            SqlDataReader dr2 = connTools2[1];
+            SqlConnection conn2 = connTools2[0];
+            int ii = 0;
+            do
+            {
+                dr2.Read();
+                staffCardObjArray[ii].nameLabel.Text = dr2["Name"].ToString();
+                staffCardObjArray[ii].postLabel.Text = dr2["Post"].ToString();
+                ii++;
+
+            }
+            while (dr2.NextResult()); //next method
+            dr2.Close();
+            conn2.Close();
+        }
         /*private void InitRlatedStaff(string[] stuffArry)
         {
+        uC_StaffCard11
             if (stuffArry.Length != 4)
             {
                 throw new MyException("staff number has mistake");

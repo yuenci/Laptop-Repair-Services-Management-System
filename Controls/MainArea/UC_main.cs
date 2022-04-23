@@ -23,6 +23,9 @@ namespace miniSys0._3.Controls
             InitializeComponent();
             InitializeChromeForMainLineChart();
             InitializeChromeForMainPieChart();
+            CefinitStatus();
+
+
             initsunnyUI();
 
             initName();
@@ -425,8 +428,9 @@ namespace miniSys0._3.Controls
         
         private void InitializeChromeForMainLineChart()
         {
-            if (User_type.loginStatus !=  "Relogin")
+            if (User_type.loginStatus != "Login" || User_type.ifCefInit==false)
             {
+                Console.WriteLine(User_type.ifCefInit.ToString());
                 var setting = new CefSettings();
                 setting.MultiThreadedMessageLoop = true;
                 CefSharp.Cef.Initialize(setting);
@@ -464,7 +468,13 @@ namespace miniSys0._3.Controls
             //refreshlButton.PerformClick();
 
         }
-
+        private void CefinitStatus()
+        {
+            if (User_type.ifCefInit == false)
+            {
+                User_type.ifCefInit = true;
+            }
+        }
         private async void refreshlButton2_Click(object sender, EventArgs e)
         {
             await WebBrowser1.GetBrowser().MainFrame.EvaluateScriptAsync("refresh1()");

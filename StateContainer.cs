@@ -36,6 +36,7 @@ namespace miniSys0._3
         public static Color LogoFore = Color.Black;
         public static Color LogoBkg = Color.FromArgb(70, 141, 255);
         public static string loginStatus = "Login";  //Login,Relogin
+        public static bool ifCefInit = false;
     }
 
     public class ArticlesInfo

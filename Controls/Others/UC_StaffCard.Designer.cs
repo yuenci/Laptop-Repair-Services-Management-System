@@ -67,6 +67,7 @@
             // UC_StaffCard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.deparNameLable);
             this.Controls.Add(this.staffNameLable);
             this.Controls.Add(this.pictureHead);

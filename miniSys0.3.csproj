@@ -147,6 +147,12 @@
     <Compile Include="Controls\Others\UC_StaffCard.Designer.cs">
       <DependentUpon>UC_StaffCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Others\UC_StaffCard1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Others\UC_StaffCard1.Designer.cs">
+      <DependentUpon>UC_StaffCard1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Others\UrC_Crumbs.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -242,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Others\UC_StaffCard.resx">
       <DependentUpon>UC_StaffCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Others\UC_StaffCard1.resx">
+      <DependentUpon>UC_StaffCard1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Others\UrC_Crumbs.resx">
       <DependentUpon>UrC_Crumbs.cs</DependentUpon>

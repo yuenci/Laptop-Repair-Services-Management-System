@@ -46,6 +46,11 @@ namespace miniSys0._3.Controls
                 UC_UserSetting uc = new UC_UserSetting();
                 addUserControl(uc);
             }
+            else if (nodeSelect == "Workbench")
+            {
+                UC_main uc = new UC_main();
+                addUserControl(uc);
+            }
         }
     }
 }
