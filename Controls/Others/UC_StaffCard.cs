@@ -15,6 +15,14 @@ namespace miniSys0._3.Controls.Others
         public UC_StaffCard()
         {
             InitializeComponent();
+            initStyle();
+        }
+        private void initStyle()
+        {
+            staffNameLable.Font = new Font(".萍方-简", 15);
+            deparNameLable.Font = new Font(".萍方-简", 12);
+            staffNameLable.Location = new Point(40, 1);
+            deparNameLable.Location = new Point(40, 15);
         }
     }
 }

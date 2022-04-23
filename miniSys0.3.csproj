@@ -81,6 +81,12 @@
     <Compile Include="Controls\MainArea\UC_UserInfo.Designer.cs">
       <DependentUpon>UC_UserInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\MainArea\UC_UserSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MainArea\UC_UserSetting.Designer.cs">
+      <DependentUpon>UC_UserSetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Navmenu\UC_A_Navmenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -123,11 +129,29 @@
     <Compile Include="Controls\Navmenu\UC_T_Navmenu.Designer.cs">
       <DependentUpon>UC_T_Navmenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Others\UC_BasicInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Others\UC_BasicInfo.Designer.cs">
+      <DependentUpon>UC_BasicInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Others\UC_SecureSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Others\UC_SecureSet.Designer.cs">
+      <DependentUpon>UC_SecureSet.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Others\UC_StaffCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\Others\UC_StaffCard.Designer.cs">
       <DependentUpon>UC_StaffCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Others\UrC_Crumbs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Others\UrC_Crumbs.Designer.cs">
+      <DependentUpon>UrC_Crumbs.cs</DependentUpon>
     </Compile>
     <Compile Include="CsharpRepairerIncDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -179,6 +203,9 @@
     <EmbeddedResource Include="Controls\MainArea\UC_UserInfo.resx">
       <DependentUpon>UC_UserInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MainArea\UC_UserSetting.resx">
+      <DependentUpon>UC_UserSetting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\Navmenu\UC_A_Navmenu.resx">
       <DependentUpon>UC_A_Navmenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -200,8 +227,17 @@
     <EmbeddedResource Include="Controls\Navmenu\UC_T_Navmenu.resx">
       <DependentUpon>UC_T_Navmenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Others\UC_BasicInfo.resx">
+      <DependentUpon>UC_BasicInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Others\UC_SecureSet.resx">
+      <DependentUpon>UC_SecureSet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\Others\UC_StaffCard.resx">
       <DependentUpon>UC_StaffCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Others\UrC_Crumbs.resx">
+      <DependentUpon>UrC_Crumbs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -498,6 +534,7 @@
     <Content Include="Html\chart.js" />
     <Content Include="Html\mainLineChart.html" />
     <Content Include="Html\mainPieChart.html" />
+    <None Include="Resources\cirleHole-1.png" />
     <None Include="Resources\head1.png" />
     <None Include="Resources\head2.png" />
     <None Include="Resources\head3.png" />

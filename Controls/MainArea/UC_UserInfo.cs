@@ -22,7 +22,10 @@ namespace miniSys0._3.Controls.MainArea
             InitUserInfoBar();
             InitDeviceCard();
             //InitRlatedStaff();
+            string[] staffIDArray = { "Sta000001", "Sta000004", "Sta000037", "Sta000063" };
+            InitRlatedStaff(staffIDArray);
 
+            
         }
 
         private void InitUserInfoBar()
@@ -89,7 +92,7 @@ namespace miniSys0._3.Controls.MainArea
         {
             if (stuffArry.Length != 4)
             {
-                
+                throw new MyException("staff number has mistake");
             }
 
             uC_StaffCard1.pictureHead.Image = Resources.head1;
@@ -99,30 +102,33 @@ namespace miniSys0._3.Controls.MainArea
 
             dynamic[] staffCardObjArray = { uC_StaffCard1 , uC_StaffCard2 , uC_StaffCard3 , uC_StaffCard4 };
 
-            //nameLable
-            //deparName
+            //staffNameLable
+            //deparNameLable
 
-            /*string allsql = "";
-            for (int i = 0; i < 8; i++)
+            string allsql = "";
+            for (int i = 0; i < 4; i++)
             {
-                var sqlpart = $"select COUNT(*) from Orders where month(Time) = month(getdate()) and " +
-                    $"year(Time) = year(getdate()) and Service_type = 'Ser00{i + 1}';";
+                var sqlpart = $"select Name,Post from Staff where StaffID = '{stuffArry[i]}';";
                 allsql += sqlpart;
             }
-            dynamic[] connTools2 = getDataReader(allsql);
+            dynamic[] connTools2 = UC_main.getDataReader(allsql);
             SqlDataReader dr2 = connTools2[1];
             SqlConnection conn2 = connTools2[0];
-            List<int> result = new List<int>();
+            int ii = 0;
             do
             {
                 dr2.Read();
-                result.Add(int.Parse(dr2[0].ToString()));
+                staffCardObjArray[ii].staffNameLable.Text = dr2["Name"].ToString();
+                staffCardObjArray[ii].deparNameLable.Text = dr2["Post"].ToString();
+                ii++;
+
             }
             while (dr2.NextResult()); //next method
             dr2.Close();
-            conn2.Close();*/
+            conn2.Close();
         }
 
+        #region Phone and Mac card init
         private void phone_hover(object sender, EventArgs e)
         {
             ButtonEdit1.Show();
@@ -169,5 +175,10 @@ namespace miniSys0._3.Controls.MainArea
             ButtonEdit2.Hide();
             buttonGarbage2.Hide();
         }
+
+
+        #endregion
+
+
     }
 }

@@ -905,6 +905,10 @@ namespace miniSys0._3.Controls
         public static string user_post = "CEO";
         public static string user_ID = "Sta000000";
         public static string user_Country =  "China";
+        public static string user_regtime = "2022-02-22";
+        public static string user_gender = "maleMale";
+        public static string user_phone = "8120633";
+        public static string user_email = "test@test.mail.com";
 
 
         public static Color LogoFore = Color.Black;

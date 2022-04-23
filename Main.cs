@@ -37,7 +37,9 @@ namespace miniSys0._3
             // main area loading
 
             //add_UC_Mainto_Panel();
-            add_UC_UserInfo();
+            //add_UC_UserInfo();
+
+            add_UC_UserSetting();
 
 
 
@@ -354,6 +356,15 @@ namespace miniSys0._3
         private void  add_UC_UserInfo()
         {
             UC_UserInfo uc = new UC_UserInfo();
+            uc.Dock = DockStyle.Fill;
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(uc);
+            uc.BringToFront();
+        }
+
+        private void add_UC_UserSetting()
+        {
+            UC_UserSetting uc = new UC_UserSetting();
             uc.Dock = DockStyle.Fill;
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(uc);
