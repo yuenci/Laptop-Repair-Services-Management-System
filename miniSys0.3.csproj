@@ -75,6 +75,7 @@
     <Compile Include="CommonlyControls.Designer.cs">
       <DependentUpon>CommonlyControls.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlEvent.cs" />
     <Compile Include="Controls\MainArea\UC_Registration .cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -140,6 +141,18 @@
     </Compile>
     <Compile Include="Controls\Others\UC_BasicInfo.Designer.cs">
       <DependentUpon>UC_BasicInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Others\UC_Registe_detaildinfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Others\UC_Registe_detaildinfo.Designer.cs">
+      <DependentUpon>UC_Registe_detaildinfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Others\UC_Registe_Staff_Basicinfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Others\UC_Registe_Staff_Basicinfo.Designer.cs">
+      <DependentUpon>UC_Registe_Staff_Basicinfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\Others\UC_SecureSet.cs">
       <SubType>UserControl</SubType>
@@ -245,6 +258,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Others\UC_BasicInfo.resx">
       <DependentUpon>UC_BasicInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Others\UC_Registe_Staff_Basicinfo.resx">
+      <DependentUpon>UC_Registe_Staff_Basicinfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Others\UC_SecureSet.resx">
       <DependentUpon>UC_SecureSet.cs</DependentUpon>

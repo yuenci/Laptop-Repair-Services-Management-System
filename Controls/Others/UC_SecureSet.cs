@@ -119,10 +119,7 @@ namespace miniSys0._3.Controls.Others
 
         private void phone1_Leave(object sender, EventArgs e)
         {
-            if (phone1.Text == "")
-            {
-                phone1.Text = "Enter new number";
-            }
+            
         }
 
         private void phone2_Leave(object sender, EventArgs e)
