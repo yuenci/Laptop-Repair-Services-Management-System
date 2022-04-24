@@ -20,6 +20,15 @@ namespace miniSys0._3.Controls.Others
         private void InitTextBox()
         {
             TextBoxCE superTextbox = new TextBoxCE(nameTextBox, "Enter the user's name", Color.Gray);
+            TextBoxCE superTextbox1 = new TextBoxCE(IDnumberTextBox, "Enter the user's ID number", Color.Gray);
+        }
+        private void nameTextBox_Enter(object sender, EventArgs e)
+        {
+            nameTextBox.RectSize = 1;
+        }
+        private void IDnumberTextBox_Enter(object sender, EventArgs e)
+        {
+            IDnumberTextBox.RectSize = 1;
         }
 
         private void selectDepartment_DropDown(object sender, EventArgs e)
@@ -77,31 +86,35 @@ namespace miniSys0._3.Controls.Others
                 nameTextBox.RectColor = Color.Red;
                 nameTextBox.RectSize = 2;
             }
+            if (IDnumberTextBox.Text == "" || IDnumberTextBox.Text == "Enter the user's ID number")
+            {
+                IDnumberTextBox.RectColor = Color.Red;
+                IDnumberTextBox.RectSize = 2;
+            }
+
             if (selectDepartment.SelectedIndex == -1)
             {
                 selectDepartment.RectColor= Color.Red;
                 selectDepartment.RectSize = 2;
             }
 
-
             if (nameTextBox.Text != "" && nameTextBox.Text != "Enter the user's name")
             {
-                if (selectDepartment.SelectedIndex != -1 && selectPost.SelectedIndex != -1)
+                if (IDnumberTextBox.Text != "" || IDnumberTextBox.Text != "Enter the user's ID number")
                 {
-                    MessageBox.Show($"store [{nameTextBox.Text}," +
-                        $"{selectDepartment.SelectedItem.ToString()}," +
-                        $"{selectPost.SelectedItem.ToString()}]");
-                }
+                    if (selectDepartment.SelectedIndex != -1 && selectPost.SelectedIndex != -1)
+                    {
+                        MessageBox.Show($"store [{nameTextBox.Text}," +
+                            $"{selectDepartment.SelectedItem.ToString()}," +
+                            $"{selectPost.SelectedItem.ToString()}]");
+                    }
+                }   
             }
             
             
         }
 
-        private void nameTextBox_Click(object sender, EventArgs e)
-        {
-            nameTextBox.RectSize = 1;
-        }
-
+       
         private void selectPost_DropDownClosed(object sender, EventArgs e)
         {
             if (selectPost.SelectedIndex == -1)
@@ -114,5 +127,7 @@ namespace miniSys0._3.Controls.Others
                 selectPost.Font = new Font(".萍方-简", 12, FontStyle.Bold);
             }
         }
+
+
     }
 }

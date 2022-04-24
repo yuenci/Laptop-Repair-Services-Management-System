@@ -38,7 +38,7 @@
             this.uiLabel2 = new Sunny.UI.UILabel();
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.nameTextBox = new Sunny.UI.UITextBox();
-            this.uiTextBox1 = new Sunny.UI.UITextBox();
+            this.IDnumberTextBox = new Sunny.UI.UITextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.IDnumber = new Sunny.UI.UILabel();
             this.SuspendLayout();
@@ -208,28 +208,29 @@
             this.nameTextBox.Text = "Enter the user\'s name";
             this.nameTextBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.nameTextBox.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.nameTextBox.Click += new System.EventHandler(this.nameTextBox_Click);
+            this.nameTextBox.Enter += new System.EventHandler(this.nameTextBox_Enter);
             // 
-            // uiTextBox1
+            // IDnumberTextBox
             // 
-            this.uiTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.uiTextBox1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.uiTextBox1.Location = new System.Drawing.Point(463, 152);
-            this.uiTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox1.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox1.Name = "uiTextBox1";
-            this.uiTextBox1.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.uiTextBox1.RectColor = System.Drawing.Color.Gray;
-            this.uiTextBox1.RectDisableColor = System.Drawing.Color.White;
-            this.uiTextBox1.ShowText = false;
-            this.uiTextBox1.Size = new System.Drawing.Size(343, 35);
-            this.uiTextBox1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTextBox1.TabIndex = 97;
-            this.uiTextBox1.Text = "Enter the user\'s name";
-            this.uiTextBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.IDnumberTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.IDnumberTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.IDnumberTextBox.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.IDnumberTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.IDnumberTextBox.Location = new System.Drawing.Point(463, 152);
+            this.IDnumberTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.IDnumberTextBox.MinimumSize = new System.Drawing.Size(1, 16);
+            this.IDnumberTextBox.Name = "IDnumberTextBox";
+            this.IDnumberTextBox.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.IDnumberTextBox.RectColor = System.Drawing.Color.Gray;
+            this.IDnumberTextBox.RectDisableColor = System.Drawing.Color.White;
+            this.IDnumberTextBox.ShowText = false;
+            this.IDnumberTextBox.Size = new System.Drawing.Size(343, 35);
+            this.IDnumberTextBox.Style = Sunny.UI.UIStyle.Custom;
+            this.IDnumberTextBox.TabIndex = 97;
+            this.IDnumberTextBox.Text = "Enter the user\'s ID number";
+            this.IDnumberTextBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.IDnumberTextBox.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.IDnumberTextBox.Enter += new System.EventHandler(this.IDnumberTextBox_Enter);
             // 
             // label1
             // 
@@ -259,7 +260,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.uiTextBox1);
+            this.Controls.Add(this.IDnumberTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.IDnumber);
@@ -291,7 +292,7 @@
         private Sunny.UI.UILabel uiLabel2;
         private Sunny.UI.UILabel uiLabel1;
         private Sunny.UI.UITextBox nameTextBox;
-        private Sunny.UI.UITextBox uiTextBox1;
+        private Sunny.UI.UITextBox IDnumberTextBox;
         private System.Windows.Forms.Label label1;
         private Sunny.UI.UILabel IDnumber;
     }

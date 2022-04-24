@@ -36,6 +36,7 @@ namespace miniSys0._3
         private void TextBoxEnter(object senter, EventArgs e)
         {
             this.Source.RectColor = this.RectColor;
+            this.Source.Font = new Font(".萍方-简", 12, FontStyle.Bold);
             if (this.Source.Text == this.Text)
             {
                 this.Source.Text = "";
@@ -46,6 +47,7 @@ namespace miniSys0._3
             if (this.Source.Text == "")
             {
                 this.Source.Text = this.Text;
+                this.Source.Font = new Font(".萍方-简", 12, FontStyle.Regular);
             }
         }
     }
