@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Web.Security;
+using System.Text.RegularExpressions;
 
 namespace miniSys0._3.Controls.Others
 {
@@ -99,8 +101,18 @@ namespace miniSys0._3.Controls.Others
                 {
                     RegisterInfoCache.user_about = profile.Text;
                 }
-
+                RegisterInfoCache.user_password = generatePWD();
                 
+
+                if (User_type.user_deparment =="Admin")
+                {
+                    RegisterInfoCache.user_ID = SQLCursor.AddOneToLastID("StaffID", "Staff");
+                }
+                else if(User_type.user_deparment == "Receptionist")
+                {
+                    RegisterInfoCache.user_ID = SQLCursor.AddOneToLastID("CustomerID", "Customer");
+                }
+
 
                 RegisterInfoCache.step3Activate = true;
 
@@ -113,6 +125,40 @@ namespace miniSys0._3.Controls.Others
                 UC_Registe_Complete uc = new UC_Registe_Complete();
                 uc.Location = new Point(320, 80);
                 AddUserControl.Add(uc, UC_Registration.uc_Registration.contentPanel);
+            }
+        }
+        
+        private string generatePWD()
+        {
+            string chars = "0123456789ABCDEFGHIJKLMNOPQSTUVWXYZabcdefghijklmnpqrstuvwxyz";
+            Random randrom = new Random(getNewSeed());
+
+            string str = "";
+            for (int j = 0; j < 50; j++)
+            {
+                str = "";
+                for (int i = 0; i < 8; i++)
+                {
+                    str += chars[randrom.Next(chars.Length)];//randrom.Next(int i)返回一个小于所指定最大值的非负随机数
+                }
+                //不符合正则，重新生成
+                if (!Regex.IsMatch(str, @"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$"))
+                {
+                    continue;
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            return str;
+            int getNewSeed()
+            {
+                byte[] rndBytes = new byte[4];
+                System.Security.Cryptography.RNGCryptoServiceProvider rng = new System.Security.Cryptography.RNGCryptoServiceProvider();
+                rng.GetBytes(rndBytes);
+                return BitConverter.ToInt32(rndBytes, 0);
             }
         }
     }

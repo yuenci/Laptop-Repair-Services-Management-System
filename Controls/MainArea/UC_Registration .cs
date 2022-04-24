@@ -21,11 +21,16 @@ namespace miniSys0._3.Controls.MainArea
             InitCurmbs();
             InitIcon();
             IconEventRegister();
+            //Inittest();
             InitContent();
             uc_Registration = this;
             //button1.Click += new EventHandler(buttonClickCallfuc);
         }
-
+        private  void Inittest()
+        {
+            UC_CheckRegister uc = new UC_CheckRegister();
+            uiUserControl1.Controls.Add(uc);
+         }
         private void InitCurmbs()
         {
             urC_Crumbs1.crumbText.Text = "Registration";

@@ -34,9 +34,13 @@
             this.again = new Sunny.UI.UIButton();
             this.uiButton1 = new Sunny.UI.UIButton();
             this.uiUserControl1 = new Sunny.UI.UIUserControl();
-            this.uiLabel2 = new Sunny.UI.UILabel();
-            this.uiLabel3 = new Sunny.UI.UILabel();
-            this.viewMore = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.uiSymbolLabel1 = new Sunny.UI.UISymbolLabel();
+            this.name = new Sunny.UI.UILabel();
+            this.account = new Sunny.UI.UILabel();
+            this.password = new Sunny.UI.UILabel();
             this.uiUserControl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +49,7 @@
             this.uiAvatar1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(255)))), ((int)(((byte)(234)))));
             this.uiAvatar1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiAvatar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(42)))));
-            this.uiAvatar1.Location = new System.Drawing.Point(527, 65);
+            this.uiAvatar1.Location = new System.Drawing.Point(527, 29);
             this.uiAvatar1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiAvatar1.Name = "uiAvatar1";
             this.uiAvatar1.Size = new System.Drawing.Size(60, 60);
@@ -58,7 +62,7 @@
             // successful
             // 
             this.successful.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
-            this.successful.Location = new System.Drawing.Point(492, 138);
+            this.successful.Location = new System.Drawing.Point(492, 102);
             this.successful.Name = "successful";
             this.successful.Size = new System.Drawing.Size(131, 23);
             this.successful.TabIndex = 2;
@@ -70,7 +74,7 @@
             // 
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.uiLabel1.Location = new System.Drawing.Point(429, 175);
+            this.uiLabel1.Location = new System.Drawing.Point(429, 139);
             this.uiLabel1.Name = "uiLabel1";
             this.uiLabel1.Size = new System.Drawing.Size(257, 23);
             this.uiLabel1.Style = Sunny.UI.UIStyle.Custom;
@@ -86,7 +90,7 @@
             this.again.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.again.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.again.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.again.Location = new System.Drawing.Point(586, 220);
+            this.again.Location = new System.Drawing.Point(586, 184);
             this.again.MinimumSize = new System.Drawing.Size(1, 1);
             this.again.Name = "again";
             this.again.RectColor = System.Drawing.Color.White;
@@ -107,7 +111,7 @@
             this.uiButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
             this.uiButton1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.uiButton1.Location = new System.Drawing.Point(433, 220);
+            this.uiButton1.Location = new System.Drawing.Point(433, 184);
             this.uiButton1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton1.Name = "uiButton1";
             this.uiButton1.RectColor = System.Drawing.Color.Transparent;
@@ -124,62 +128,119 @@
             // 
             // uiUserControl1
             // 
-            this.uiUserControl1.Controls.Add(this.viewMore);
-            this.uiUserControl1.Controls.Add(this.uiLabel3);
-            this.uiUserControl1.Controls.Add(this.uiLabel2);
+            this.uiUserControl1.Controls.Add(this.password);
+            this.uiUserControl1.Controls.Add(this.account);
+            this.uiUserControl1.Controls.Add(this.name);
+            this.uiUserControl1.Controls.Add(this.uiSymbolLabel1);
+            this.uiUserControl1.Controls.Add(this.label3);
+            this.uiUserControl1.Controls.Add(this.label2);
+            this.uiUserControl1.Controls.Add(this.label1);
             this.uiUserControl1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
             this.uiUserControl1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiUserControl1.Location = new System.Drawing.Point(110, 308);
+            this.uiUserControl1.Location = new System.Drawing.Point(293, 256);
             this.uiUserControl1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiUserControl1.Name = "uiUserControl1";
             this.uiUserControl1.RectColor = System.Drawing.Color.White;
-            this.uiUserControl1.Size = new System.Drawing.Size(895, 122);
+            this.uiUserControl1.Size = new System.Drawing.Size(547, 183);
             this.uiUserControl1.Style = Sunny.UI.UIStyle.Custom;
             this.uiUserControl1.TabIndex = 106;
+            this.uiUserControl1.Text = null;
             this.uiUserControl1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiUserControl1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiLabel2
+            // label1
             // 
-            this.uiLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.uiLabel2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold);
-            this.uiLabel2.Location = new System.Drawing.Point(35, 19);
-            this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(237, 23);
-            this.uiLabel2.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel2.TabIndex = 107;
-            this.uiLabel2.Text = "User registration description";
-            this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiLabel2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.label1.Location = new System.Drawing.Point(178, 66);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 22);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Name:";
             // 
-            // uiLabel3
+            // label2
             // 
-            this.uiLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel3.Location = new System.Drawing.Point(35, 51);
-            this.uiLabel3.Name = "uiLabel3";
-            this.uiLabel3.Size = new System.Drawing.Size(823, 47);
-            this.uiLabel3.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel3.TabIndex = 108;
-            this.uiLabel3.Text = "By completing the registration, the user understands and agrees to abide by the c" +
-    "ompany\'s policies and agreements.";
-            this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiLabel3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.label2.Location = new System.Drawing.Point(140, 110);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 22);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Account ID:";
             // 
-            // viewMore
+            // label3
             // 
-            this.viewMore.AutoSize = true;
-            this.viewMore.BackColor = System.Drawing.Color.Transparent;
-            this.viewMore.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.viewMore.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.viewMore.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
-            this.viewMore.Location = new System.Drawing.Point(139, 73);
-            this.viewMore.Name = "viewMore";
-            this.viewMore.Size = new System.Drawing.Size(88, 22);
-            this.viewMore.TabIndex = 109;
-            this.viewMore.TabStop = true;
-            this.viewMore.Text = "View more";
-            this.viewMore.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.viewMore_LinkClicked);
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.label3.Location = new System.Drawing.Point(152, 154);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(92, 22);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Password:";
+            // 
+            // uiSymbolLabel1
+            // 
+            this.uiSymbolLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(232)))));
+            this.uiSymbolLabel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiSymbolLabel1.Location = new System.Drawing.Point(94, 13);
+            this.uiSymbolLabel1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiSymbolLabel1.Name = "uiSymbolLabel1";
+            this.uiSymbolLabel1.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
+            this.uiSymbolLabel1.Size = new System.Drawing.Size(362, 35);
+            this.uiSymbolLabel1.Style = Sunny.UI.UIStyle.Custom;
+            this.uiSymbolLabel1.Symbol = 61530;
+            this.uiSymbolLabel1.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
+            this.uiSymbolLabel1.TabIndex = 3;
+            this.uiSymbolLabel1.Text = "Please modify the temporary password";
+            this.uiSymbolLabel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // name
+            // 
+            this.name.BackColor = System.Drawing.Color.Transparent;
+            this.name.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.name.Location = new System.Drawing.Point(259, 66);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(178, 23);
+            this.name.Style = Sunny.UI.UIStyle.Custom;
+            this.name.TabIndex = 4;
+            this.name.Text = "uiLabel2";
+            this.name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.name.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // account
+            // 
+            this.account.BackColor = System.Drawing.Color.Transparent;
+            this.account.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.account.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.account.Location = new System.Drawing.Point(259, 111);
+            this.account.Name = "account";
+            this.account.Size = new System.Drawing.Size(178, 23);
+            this.account.Style = Sunny.UI.UIStyle.Custom;
+            this.account.TabIndex = 5;
+            this.account.Text = "uiLabel3";
+            this.account.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.account.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // password
+            // 
+            this.password.BackColor = System.Drawing.Color.Transparent;
+            this.password.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.password.Location = new System.Drawing.Point(259, 154);
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(197, 23);
+            this.password.Style = Sunny.UI.UIStyle.Custom;
+            this.password.TabIndex = 6;
+            this.password.Text = "uiLabel4";
+            this.password.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.password.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // UC_Registe_Complete
             // 
@@ -207,8 +268,12 @@
         private Sunny.UI.UIButton again;
         private Sunny.UI.UIButton uiButton1;
         private Sunny.UI.UIUserControl uiUserControl1;
-        private Sunny.UI.UILabel uiLabel2;
-        private System.Windows.Forms.LinkLabel viewMore;
-        private Sunny.UI.UILabel uiLabel3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private Sunny.UI.UISymbolLabel uiSymbolLabel1;
+        private Sunny.UI.UILabel password;
+        private Sunny.UI.UILabel account;
+        private Sunny.UI.UILabel name;
     }
 }

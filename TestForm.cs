@@ -5,7 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Web.Security;
 using System.Windows.Forms;
 
 namespace miniSys0._3
@@ -81,6 +83,42 @@ namespace miniSys0._3
         private void button4_Click(object sender, EventArgs e)
         {
             Console.WriteLine(SQLCursor.AddOneToLastID("ArticlelD", "Articles"));
+        }
+
+        private void uiButton1_Click(object sender, EventArgs e)
+        {
+            /*string a =  Membership.GeneratePassword(8, 1);*/
+
+            string chars = "0123456789ABCDEFGHIJKLMNOPQSTUVWXYZabcdefghijklmnpqrstuvwxyz";
+            Random randrom = new Random(getNewSeed());
+
+            string str = "";
+            for (int j = 0; j < 50; j++)
+            {
+                str = "";
+                for (int i = 0; i < 8; i++)
+                {
+                    str += chars[randrom.Next(chars.Length)];//randrom.Next(int i)返回一个小于所指定最大值的非负随机数
+                }
+                //不符合正则，重新生成
+                if (!Regex.IsMatch(str, @"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$"))
+                {
+                    continue;
+                }
+                else
+                {
+                    break;
+                }
+            }
+            
+            Console.WriteLine(str);
+        }
+        private static int getNewSeed()
+        {
+            byte[] rndBytes = new byte[4];
+            System.Security.Cryptography.RNGCryptoServiceProvider rng = new System.Security.Cryptography.RNGCryptoServiceProvider();
+            rng.GetBytes(rndBytes);
+            return BitConverter.ToInt32(rndBytes, 0);
         }
     }
 }

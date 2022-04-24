@@ -16,11 +16,18 @@ namespace miniSys0._3.Controls.Others
         public UC_Registe_Complete()
         {
             InitializeComponent();
+            InitData();
         }
 
         private void viewMore_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MessageBox.Show("agreement");
+        }
+        private void InitData()
+        {
+            name.Text = RegisterInfoCache.user_name;
+            account.Text = RegisterInfoCache.user_ID;
+            password.Text = RegisterInfoCache.user_password;
         }
 
         private void again_Click(object sender, EventArgs e)
