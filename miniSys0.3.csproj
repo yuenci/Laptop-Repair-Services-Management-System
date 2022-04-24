@@ -148,6 +148,12 @@
     <Compile Include="Controls\Others\UC_Registe_Complete.Designer.cs">
       <DependentUpon>UC_Registe_Complete.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Others\UC_Registe_Customer_Basicinfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Others\UC_Registe_Customer_Basicinfo.Designer.cs">
+      <DependentUpon>UC_Registe_Customer_Basicinfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Others\UC_Registe_detaildinfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -183,7 +189,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CsharpRepairerIncDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Cursor.cs" />
+    <Compile Include="SQLCursor.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -268,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Others\UC_Registe_Complete.resx">
       <DependentUpon>UC_Registe_Complete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Others\UC_Registe_Customer_Basicinfo.resx">
+      <DependentUpon>UC_Registe_Customer_Basicinfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Others\UC_Registe_detaildinfo.resx">
       <DependentUpon>UC_Registe_detaildinfo.cs</DependentUpon>
@@ -585,6 +594,7 @@
     <Content Include="Html\chart.js" />
     <Content Include="Html\mainLineChart.html" />
     <Content Include="Html\mainPieChart.html" />
+    <None Include="Resources\Ask_me_anything.png" />
     <None Include="Resources\cirleHole-1.png" />
     <None Include="Resources\head1.png" />
     <None Include="Resources\head2.png" />

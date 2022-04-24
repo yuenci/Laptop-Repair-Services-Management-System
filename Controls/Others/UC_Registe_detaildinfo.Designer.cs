@@ -434,12 +434,12 @@
 
         #endregion
 
-        private Sunny.UI.UITextBox email;
-        private Sunny.UI.UITextBox phone;
+        public Sunny.UI.UITextBox email;
+        public Sunny.UI.UITextBox phone;
         private Sunny.UI.UILabel emailLabel;
         private System.Windows.Forms.Label label4;
         private Sunny.UI.UIButton nextStepBtn;
-        private Sunny.UI.UIComboBox squestion;
+        public Sunny.UI.UIComboBox squestion;
         private Sunny.UI.UILabel squestionLabel;
         private Sunny.UI.UILabel countryLabel;
         private Sunny.UI.UILabel phoneLabel;
@@ -447,12 +447,12 @@
         private Sunny.UI.UILabel answerLabel;
         private Sunny.UI.UILabel addressLabel;
         private Sunny.UI.UILabel birthdayLabel;
-        private Sunny.UI.UIDatePicker birthDatePicker;
-        private Sunny.UI.UIRichTextBox profile;
+        public Sunny.UI.UIDatePicker birthDatePicker;
+        public Sunny.UI.UIRichTextBox profile;
         private Sunny.UI.UILabel profileLabel;
-        private Sunny.UI.UIComboBox gender;
-        private Sunny.UI.UITextBox country;
-        private Sunny.UI.UITextBox address;
-        private Sunny.UI.UITextBox sanswer;
+        public Sunny.UI.UIComboBox gender;
+        public Sunny.UI.UITextBox country;
+        public Sunny.UI.UITextBox address;
+        public Sunny.UI.UITextBox sanswer;
     }
 }

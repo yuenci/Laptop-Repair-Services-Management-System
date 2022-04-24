@@ -290,13 +290,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private Sunny.UI.UIButton nextStepBtn;
-        private Sunny.UI.UIComboBox selectPost;
-        private Sunny.UI.UIComboBox selectDepartment;
+        public Sunny.UI.UIComboBox selectPost;
+        public Sunny.UI.UIComboBox selectDepartment;
         private Sunny.UI.UILabel uiLabel3;
         private Sunny.UI.UILabel uiLabel2;
         private Sunny.UI.UILabel uiLabel1;
-        private Sunny.UI.UITextBox nameTextBox;
-        private Sunny.UI.UITextBox IDnumberTextBox;
+        public Sunny.UI.UITextBox nameTextBox;
+        public Sunny.UI.UITextBox IDnumberTextBox;
         private System.Windows.Forms.Label label1;
         private Sunny.UI.UILabel IDnumber;
     }

@@ -42,15 +42,67 @@ namespace miniSys0._3.Controls.Others
             }
             else
             {
+                string genderStr = "";
+                string squestionStr = "";
+                if (gender.SelectedIndex != -1)
+                {
+                    genderStr = gender.SelectedItem.ToString();
+                }
+                if (squestion.SelectedIndex != -1)
+                {
+                    squestionStr = squestion.SelectedItem.ToString();
+                }
+
                 MessageBox.Show($"{phone.Text}" +
                     $"{birthDatePicker.Text}" +
                     $"{email.Text}" +
-                    //$"{gender.SelectedItem.ToString()}" +
+                    $"{genderStr}" +
                     $"{country.Text}" +
                     $"{address.Text}" +
-                    //$"{squestion.SelectedItem.ToString()}" +
+                    $"{squestionStr}" +
                     $"{sanswer.Text}" +
                     $"{profile.Text}" );
+                if (phone.Text != "Enter user's phone" && phone.Text != "")
+                {
+                    RegisterInfoCache.user_phone = phone.Text;
+                }
+                if (birthDatePicker.Text != "")
+                {
+                    RegisterInfoCache.user_Birthday = birthDatePicker.Text;
+                }
+                if (email.Text != "Enter user's email" && email.Text != "")
+                {
+                    RegisterInfoCache.user_email = email.Text;
+                }
+                if (genderStr != "")
+                {
+                    RegisterInfoCache.user_gender = genderStr;
+                }
+                if (country.Text != "Enter user's country" && country.Text != "")
+                {
+                    RegisterInfoCache.user_Country = country.Text;
+                }
+                if (address.Text != "Enter user's address" && address.Text != "")
+                {
+                    RegisterInfoCache.user_Address = address.Text;
+                }
+                if (squestionStr != "")
+                {
+                    RegisterInfoCache.user_security_qustion = squestionStr;
+                }
+                if (sanswer.Text != "Enter a answer" && sanswer.Text != "")
+                {
+                    RegisterInfoCache.user_security_answer = sanswer.Text;
+                }
+                if (profile.Text != "Enter user's personal introduction with a maximum of 300 characters." 
+                    && profile.Text != "")
+                {
+                    RegisterInfoCache.user_about = profile.Text;
+                }
+
+                
+
+                RegisterInfoCache.step3Activate = true;
 
                 UC_Registration.iconSelect(UC_Registration.uc_Registration.icon3,
                 UC_Registration.uc_Registration.iconLabel3);

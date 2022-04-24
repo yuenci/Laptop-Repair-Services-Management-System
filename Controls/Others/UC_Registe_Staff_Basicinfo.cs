@@ -109,6 +109,11 @@ namespace miniSys0._3.Controls.Others
                             $"{selectDepartment.SelectedItem.ToString()}," +
                             $"{selectPost.SelectedItem.ToString()}]");
 
+                        RegisterInfoCache.user_name = nameTextBox.Text;
+                        RegisterInfoCache.user_ID_number = IDnumberTextBox.Text;
+                        RegisterInfoCache.user_deparment = selectDepartment.SelectedItem.ToString();
+                        RegisterInfoCache.user_post = selectPost.SelectedItem.ToString();
+
                         UC_Registration.iconSelect(UC_Registration.uc_Registration.icon2,
                 UC_Registration.uc_Registration.iconLabel2);
                         UC_Registration.iconUnSelect(UC_Registration.uc_Registration.icon1,
@@ -116,7 +121,7 @@ namespace miniSys0._3.Controls.Others
                         UC_Registration.iconUnSelect(UC_Registration.uc_Registration.icon3,
                             UC_Registration.uc_Registration.iconLabel3);
 
-
+                        RegisterInfoCache.step2Activate = true;
 
                         UC_Registe_detaildinfo uc = new UC_Registe_detaildinfo();
                         uc.Location = new Point(320,80);

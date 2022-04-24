@@ -19,15 +19,18 @@ namespace miniSys0._3
         //deparment:  Receptionist,Technician, Customer, Admin
 
         //test data
-        public static string user_name = "Innis";
-        public static string user_post = "CEO";
         public static string user_ID = "Sta000000";
-        public static string user_Country = "China";
-        public static string user_regtime = "2022-02-22";
-        public static string user_gender = "maleMale";
+        public static string user_name = "Innis";
         public static string user_phone = "8120633";
         public static string user_email = "test@test.mail.com";
+        public static string Birthday = "19990416";
+        public static string user_gender = "maleMale";
+        public static string user_post = "CEO";
         public static string user_ID_number = "412722194641334317";
+        public static string user_about = "best of the best";
+        public static string user_Country = "China";
+        public static string user_Address = "China";
+        public static string user_regtime = "2022-02-22"; 
         public static string user_security_qustion = "I love coding right?";
         public static string user_security_answer = "I love coding right?";
         public static string user_password = "password123456";
@@ -67,5 +70,31 @@ namespace miniSys0._3
         public static string[] urlParaList = new string[5];
         public static string currentArticlelD = "";
         public static int currentnoticeLablelD = -1;
+    }
+
+    public static class RegisterInfoCache
+    {
+        //public static string RegisterType = "";
+        //staff / customer
+        public static string user_deparment = "";
+        public static string user_ID = "";
+        public static string user_name = "";
+        public static string user_phone = "";
+        public static string user_email = "";
+        public static string user_Birthday = "";
+        public static string user_gender = "";
+        public static string user_post = "";
+        public static string user_ID_number = "";
+        public static string user_about = "";
+        public static string user_Country = "";
+        public static string user_Address = "";
+        public static string user_regtime = "";
+        public static string user_security_qustion = "";
+        public static string user_security_answer = "";
+        public static string user_password = "";
+
+        public static bool step1Activate = false;
+        public static bool step2Activate = false;
+        public static bool step3Activate = false;
     }
 }

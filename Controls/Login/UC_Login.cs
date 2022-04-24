@@ -45,7 +45,7 @@ namespace miniSys0._3.Controls
                 agreementCheck
                 )
             {
-                login(name, password);
+                loginToMain(name, password);
             }
 
             void login(string nameInput, string passwordInput)
@@ -198,6 +198,65 @@ namespace miniSys0._3.Controls
             this.Hide();
             Control uc = new Control();
             addUserControl(uc);
+        }
+
+        private void loginToMain(string nameInput, string passwordInput)
+        {
+            
+            dynamic resultStaff = SQLCursor.Query($"Select * From Staff Where Name = '{nameInput}'");
+            if (resultStaff.Length != 0)
+            {
+                if (resultStaff[15] == passwordInput)
+                {
+                    // set department for user
+                    string department = resultStaff[6];
+                    if (department == "Admin")
+                    {
+                        User_type.user_deparment = "Admin";
+                    }
+                    else if(department == "Service department")
+                    {
+                        User_type.user_deparment = "Receptionist";
+                    }
+                    else if (department == "Technican department")
+                    {
+                        User_type.user_deparment = "Technician";
+                    }
+
+                    Console.WriteLine(User_type.user_deparment);
+                    Main main = new Main();
+                    main.Show();
+                    Login.login.Hide();
+                    //MessageBox.Show("Login success")
+                }
+                else
+                {
+                    MessageBox.Show("Wrong password, try again please");
+                }
+            }
+            else
+            {
+                dynamic resultCus = SQLCursor.Query($"Select * From Customer Where Name = '{nameInput}'");
+                if (resultCus.Length != 0)
+                {
+
+                    if (resultCus[12] == passwordInput)
+                    {
+                        User_type.user_deparment = "Customer";
+                        Main main = new Main();
+                        main.Show();
+                        Login.login.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Wrong password, try again please");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show($"{nameInput} does not exist");
+                }
+            }      
         }
     }
 }

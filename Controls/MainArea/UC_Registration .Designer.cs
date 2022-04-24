@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.uiUserControl1 = new Sunny.UI.UIUserControl();
+            this.contentPanel = new System.Windows.Forms.Panel();
             this.iconLabel3 = new System.Windows.Forms.Label();
             this.iconLabel2 = new System.Windows.Forms.Label();
             this.iconLabel1 = new System.Windows.Forms.Label();
@@ -37,7 +38,6 @@
             this.icon2 = new Sunny.UI.UIAvatar();
             this.icon1 = new Sunny.UI.UIAvatar();
             this.urC_Crumbs1 = new miniSys0._3.Controls.Others.UrC_Crumbs();
-            this.contentPanel = new System.Windows.Forms.Panel();
             this.uiUserControl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +64,13 @@
             this.uiUserControl1.Text = "uiUserControl1";
             this.uiUserControl1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiUserControl1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // contentPanel
+            // 
+            this.contentPanel.Location = new System.Drawing.Point(0, 147);
+            this.contentPanel.Name = "contentPanel";
+            this.contentPanel.Size = new System.Drawing.Size(1115, 492);
+            this.contentPanel.TabIndex = 84;
             // 
             // iconLabel3
             // 
@@ -163,13 +170,6 @@
             this.urC_Crumbs1.Name = "urC_Crumbs1";
             this.urC_Crumbs1.Size = new System.Drawing.Size(300, 35);
             this.urC_Crumbs1.TabIndex = 0;
-            // 
-            // contentPanel
-            // 
-            this.contentPanel.Location = new System.Drawing.Point(0, 147);
-            this.contentPanel.Name = "contentPanel";
-            this.contentPanel.Size = new System.Drawing.Size(1115, 492);
-            this.contentPanel.TabIndex = 84;
             // 
             // UC_Registration
             // 
