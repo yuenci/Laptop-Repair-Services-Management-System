@@ -57,7 +57,7 @@ namespace miniSys0._3.Controls.Others
 
         private void profile_Enter(object sender, EventArgs e)
         {
-            profile.RectColor = Color.White;    
+            profile.RectColor = Color.White;
             profile.Text = "";
             profile.ForeColor = Color.Black;
         }
@@ -121,7 +121,7 @@ namespace miniSys0._3.Controls.Others
 
         private void ResetButton_Click(object sender, EventArgs e)
         {
-            UITextBox[] uITextBoxes = { email, name, country, street ,address,profile};
+            dynamic[] uITextBoxes = { email, name, country, street ,address, profile };
             string[] textBoxContent = {
                 "Enter your email address",
                 "Enter your name",

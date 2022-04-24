@@ -51,6 +51,11 @@ namespace miniSys0._3.Controls
                 UC_main uc = new UC_main();
                 addUserControl(uc);
             }
+            else if (nodeSelect == "Register")
+            {
+                UC_Registration uc = new UC_Registration();
+                addUserControl(uc);
+            }
         }
     }
 }

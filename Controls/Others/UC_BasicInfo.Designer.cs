@@ -33,7 +33,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ResetButton = new Sunny.UI.UIButton();
-            this.profile = new Sunny.UI.UITextBox();
             this.OKButton = new Sunny.UI.UIButton();
             this.address = new Sunny.UI.UITextBox();
             this.street = new Sunny.UI.UITextBox();
@@ -46,6 +45,7 @@
             this.uiLabel13 = new Sunny.UI.UILabel();
             this.uiLabel12 = new Sunny.UI.UILabel();
             this.uiLabel11 = new Sunny.UI.UILabel();
+            this.profile = new Sunny.UI.UIRichTextBox();
             this.SuspendLayout();
             // 
             // label4
@@ -111,30 +111,6 @@
             this.ResetButton.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ResetButton.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
-            // 
-            // profile
-            // 
-            this.profile.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.profile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.profile.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.profile.ForeColor = System.Drawing.Color.Gray;
-            this.profile.Location = new System.Drawing.Point(210, 290);
-            this.profile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.profile.MinimumSize = new System.Drawing.Size(1, 16);
-            this.profile.Multiline = true;
-            this.profile.Name = "profile";
-            this.profile.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.profile.Radius = 2;
-            this.profile.RectColor = System.Drawing.Color.White;
-            this.profile.ShowText = false;
-            this.profile.Size = new System.Drawing.Size(366, 88);
-            this.profile.Style = Sunny.UI.UIStyle.Custom;
-            this.profile.TabIndex = 24;
-            this.profile.Text = "Please enter your personal introduction with a maximum of 300 characters.";
-            this.profile.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.profile.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.profile.Leave += new System.EventHandler(this.profile_Leave_1);
-            this.profile.Enter += new System.EventHandler(this.profile_Enter);
             // 
             // OKButton
             // 
@@ -340,16 +316,38 @@
             this.uiLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.uiLabel11.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // profile
+            // 
+            this.profile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.profile.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.profile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.profile.Location = new System.Drawing.Point(210, 294);
+            this.profile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.profile.MinimumSize = new System.Drawing.Size(1, 1);
+            this.profile.Name = "profile";
+            this.profile.Padding = new System.Windows.Forms.Padding(10, 2, 2, 2);
+            this.profile.Radius = 2;
+            this.profile.RectColor = System.Drawing.Color.White;
+            this.profile.ShowText = false;
+            this.profile.Size = new System.Drawing.Size(700, 78);
+            this.profile.Style = Sunny.UI.UIStyle.Custom;
+            this.profile.TabIndex = 30;
+            this.profile.Text = "Please enter your personal introduction with a maximum of 300 characters.";
+            this.profile.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.profile.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.profile.Leave += new System.EventHandler(this.profile_Leave_1);
+            this.profile.Enter += new System.EventHandler(this.profile_Enter);
+            // 
             // UC_BasicInfo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.profile);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ResetButton);
-            this.Controls.Add(this.profile);
             this.Controls.Add(this.OKButton);
             this.Controls.Add(this.address);
             this.Controls.Add(this.street);
@@ -363,7 +361,7 @@
             this.Controls.Add(this.uiLabel12);
             this.Controls.Add(this.uiLabel11);
             this.Name = "UC_BasicInfo";
-            this.Size = new System.Drawing.Size(610, 440);
+            this.Size = new System.Drawing.Size(1031, 440);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -376,7 +374,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Sunny.UI.UIButton ResetButton;
-        private Sunny.UI.UITextBox profile;
         private Sunny.UI.UIButton OKButton;
         private Sunny.UI.UITextBox address;
         private Sunny.UI.UITextBox street;
@@ -389,5 +386,6 @@
         private Sunny.UI.UILabel uiLabel13;
         private Sunny.UI.UILabel uiLabel12;
         private Sunny.UI.UILabel uiLabel11;
+        private Sunny.UI.UIRichTextBox profile;
     }
 }

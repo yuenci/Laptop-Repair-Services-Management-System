@@ -1,4 +1,5 @@
-﻿using System;
+﻿using miniSys0._3.Controls.MainArea;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -107,6 +108,19 @@ namespace miniSys0._3.Controls.Others
                         MessageBox.Show($"store [{nameTextBox.Text}," +
                             $"{selectDepartment.SelectedItem.ToString()}," +
                             $"{selectPost.SelectedItem.ToString()}]");
+
+                        UC_Registration.iconSelect(UC_Registration.uc_Registration.icon2,
+                UC_Registration.uc_Registration.iconLabel2);
+                        UC_Registration.iconUnSelect(UC_Registration.uc_Registration.icon1,
+                            UC_Registration.uc_Registration.iconLabel1);
+                        UC_Registration.iconUnSelect(UC_Registration.uc_Registration.icon3,
+                            UC_Registration.uc_Registration.iconLabel3);
+
+
+
+                        UC_Registe_detaildinfo uc = new UC_Registe_detaildinfo();
+                        uc.Location = new Point(320,80);
+                        AddUserControl.Add(uc, UC_Registration.uc_Registration.contentPanel);
                     }
                 }   
             }

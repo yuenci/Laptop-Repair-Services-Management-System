@@ -14,14 +14,15 @@ namespace miniSys0._3.Controls.MainArea
 {
     public partial class UC_Registration : UserControl
     {
+        public static UC_Registration uc_Registration;
         public UC_Registration()
         {
             InitializeComponent();
             InitCurmbs();
             InitIcon();
             IconEventRegister();
-
             InitContent();
+            uc_Registration = this;
             //button1.Click += new EventHandler(buttonClickCallfuc);
         }
 
@@ -30,14 +31,14 @@ namespace miniSys0._3.Controls.MainArea
             urC_Crumbs1.crumbText.Text = "Registration";
             urC_Crumbs1.crumbsHome.Text = " / Form / Register";
         }
-        private void iconSelect(UIAvatar icon,Label iconLabel)
+        public static void iconSelect(UIAvatar icon,Label iconLabel)
         {
             icon.FillColor = Color.FromArgb(22, 93, 255);
             icon.ForeColor = Color.White;
 
             iconLabel.Font = new Font(".萍方-简", 12, FontStyle.Bold);
         }
-        private void iconUnSelect(UIAvatar icon, Label iconLabel)
+        public static void iconUnSelect(UIAvatar icon, Label iconLabel)
         {
             icon.FillColor = Color.FromArgb(242, 243, 245);
             icon.ForeColor = Color.FromArgb(78, 89, 105);
@@ -52,11 +53,13 @@ namespace miniSys0._3.Controls.MainArea
             iconUnSelect(icon3, iconLabel3);
         }
 
-        private void icon1OrLabel1Click(object senter, EventArgs e)
+        private void  icon1OrLabel1Click(object senter, EventArgs e)
         {
             iconSelect(icon1, iconLabel1);
             iconUnSelect(icon2, iconLabel2);
             iconUnSelect(icon3, iconLabel3);
+            UC_Registe_Staff_Basicinfo uc = new UC_Registe_Staff_Basicinfo();
+            AddUserControl.Add(uc, contentPanel);
         }
 
         private void icon2OrLabel2Click(object senter, EventArgs e)
@@ -64,6 +67,8 @@ namespace miniSys0._3.Controls.MainArea
             iconSelect(icon2, iconLabel2);
             iconUnSelect(icon1, iconLabel1);
             iconUnSelect(icon3, iconLabel3);
+            UC_Registe_detaildinfo uc = new UC_Registe_detaildinfo();
+            AddUserControl.Add(uc, contentPanel);
         }
 
         private void icon3OrLabel3Click(object senter, EventArgs e)
@@ -71,6 +76,8 @@ namespace miniSys0._3.Controls.MainArea
             iconSelect(icon3, iconLabel3);
             iconUnSelect(icon1, iconLabel1);
             iconUnSelect(icon2, iconLabel2);
+            UC_Registe_Complete uc = new UC_Registe_Complete();
+            AddUserControl.Add(uc, contentPanel);
         }
 
         private void IconEventRegister()
@@ -85,11 +92,21 @@ namespace miniSys0._3.Controls.MainArea
             iconLabel3.Click += new EventHandler(icon3OrLabel3Click);
         }
 
+
+
         private void InitContent()
         {
             UC_Registe_Staff_Basicinfo  uc= new UC_Registe_Staff_Basicinfo();
             uc.Location = new Point(320,80);
             AddUserControl.Add(uc, contentPanel);
+
+            /*UC_Registe_detaildinfo uc = new UC_Registe_detaildinfo();
+            uc.Location = new Point(320,80);
+            AddUserControl.Add(uc, contentPanel);*/
+
+            /*UC_Registe_Complete uc = new UC_Registe_Complete();
+            uc.Location = new Point(320, 80);
+            AddUserControl.Add(uc, contentPanel);*/
         }
     }
 }

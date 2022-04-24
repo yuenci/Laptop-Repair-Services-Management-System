@@ -142,6 +142,12 @@
     <Compile Include="Controls\Others\UC_BasicInfo.Designer.cs">
       <DependentUpon>UC_BasicInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Others\UC_Registe_Complete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Others\UC_Registe_Complete.Designer.cs">
+      <DependentUpon>UC_Registe_Complete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Others\UC_Registe_detaildinfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -177,6 +183,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CsharpRepairerIncDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Cursor.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +266,9 @@
     <EmbeddedResource Include="Controls\Others\UC_BasicInfo.resx">
       <DependentUpon>UC_BasicInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Others\UC_Registe_Complete.resx">
+      <DependentUpon>UC_Registe_Complete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\Others\UC_Registe_detaildinfo.resx">
       <DependentUpon>UC_Registe_detaildinfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,6 +289,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.en-GB.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

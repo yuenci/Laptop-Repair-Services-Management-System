@@ -49,7 +49,7 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("微软雅黑", 15F);
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(372, 314);
+            this.label3.Location = new System.Drawing.Point(338, 314);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(21, 27);
             this.label3.TabIndex = 93;
@@ -61,7 +61,7 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("微软雅黑", 15F);
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(311, 236);
+            this.label2.Location = new System.Drawing.Point(283, 236);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(21, 27);
             this.label2.TabIndex = 92;
@@ -73,7 +73,7 @@
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("微软雅黑", 15F);
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(358, 81);
+            this.label4.Location = new System.Drawing.Point(330, 81);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(21, 27);
             this.label4.TabIndex = 91;
@@ -86,7 +86,7 @@
             this.nextStepBtn.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.nextStepBtn.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.nextStepBtn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.nextStepBtn.Location = new System.Drawing.Point(463, 389);
+            this.nextStepBtn.Location = new System.Drawing.Point(435, 416);
             this.nextStepBtn.MinimumSize = new System.Drawing.Size(1, 1);
             this.nextStepBtn.Name = "nextStepBtn";
             this.nextStepBtn.RectColor = System.Drawing.Color.White;
@@ -110,7 +110,7 @@
             this.selectPost.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.selectPost.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
             this.selectPost.ItemSelectBackColor = System.Drawing.Color.Silver;
-            this.selectPost.Location = new System.Drawing.Point(463, 310);
+            this.selectPost.Location = new System.Drawing.Point(435, 310);
             this.selectPost.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.selectPost.MinimumSize = new System.Drawing.Size(63, 0);
             this.selectPost.Name = "selectPost";
@@ -136,7 +136,7 @@
             "Service department",
             "Technican department"});
             this.selectDepartment.ItemSelectBackColor = System.Drawing.Color.Silver;
-            this.selectDepartment.Location = new System.Drawing.Point(463, 231);
+            this.selectDepartment.Location = new System.Drawing.Point(435, 231);
             this.selectDepartment.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.selectDepartment.MinimumSize = new System.Drawing.Size(63, 0);
             this.selectDepartment.Name = "selectDepartment";
@@ -154,8 +154,9 @@
             // 
             // uiLabel3
             // 
-            this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel3.Location = new System.Drawing.Point(332, 306);
+            this.uiLabel3.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.uiLabel3.Location = new System.Drawing.Point(304, 306);
             this.uiLabel3.Name = "uiLabel3";
             this.uiLabel3.Size = new System.Drawing.Size(100, 35);
             this.uiLabel3.Style = Sunny.UI.UIStyle.Custom;
@@ -166,8 +167,9 @@
             // 
             // uiLabel2
             // 
-            this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel2.Location = new System.Drawing.Point(323, 228);
+            this.uiLabel2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.uiLabel2.Location = new System.Drawing.Point(295, 228);
             this.uiLabel2.Name = "uiLabel2";
             this.uiLabel2.Size = new System.Drawing.Size(109, 35);
             this.uiLabel2.Style = Sunny.UI.UIStyle.Custom;
@@ -178,8 +180,9 @@
             // 
             // uiLabel1
             // 
-            this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel1.Location = new System.Drawing.Point(332, 72);
+            this.uiLabel1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.uiLabel1.Location = new System.Drawing.Point(304, 72);
             this.uiLabel1.Name = "uiLabel1";
             this.uiLabel1.Size = new System.Drawing.Size(100, 35);
             this.uiLabel1.Style = Sunny.UI.UIStyle.Custom;
@@ -194,7 +197,7 @@
             this.nameTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
             this.nameTextBox.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.nameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.nameTextBox.Location = new System.Drawing.Point(463, 73);
+            this.nameTextBox.Location = new System.Drawing.Point(435, 73);
             this.nameTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.nameTextBox.MinimumSize = new System.Drawing.Size(1, 16);
             this.nameTextBox.Name = "nameTextBox";
@@ -216,7 +219,7 @@
             this.IDnumberTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
             this.IDnumberTextBox.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.IDnumberTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.IDnumberTextBox.Location = new System.Drawing.Point(463, 152);
+            this.IDnumberTextBox.Location = new System.Drawing.Point(435, 152);
             this.IDnumberTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.IDnumberTextBox.MinimumSize = new System.Drawing.Size(1, 16);
             this.IDnumberTextBox.Name = "IDnumberTextBox";
@@ -238,7 +241,7 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 15F);
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(323, 158);
+            this.label1.Location = new System.Drawing.Point(295, 158);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(21, 27);
             this.label1.TabIndex = 96;
@@ -246,8 +249,9 @@
             // 
             // IDnumber
             // 
-            this.IDnumber.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.IDnumber.Location = new System.Drawing.Point(332, 150);
+            this.IDnumber.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.IDnumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.IDnumber.Location = new System.Drawing.Point(304, 150);
             this.IDnumber.Name = "IDnumber";
             this.IDnumber.Size = new System.Drawing.Size(100, 35);
             this.IDnumber.Style = Sunny.UI.UIStyle.Custom;

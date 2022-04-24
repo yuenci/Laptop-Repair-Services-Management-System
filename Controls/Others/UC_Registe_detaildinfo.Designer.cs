@@ -28,109 +28,82 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.IDnumberTextBox = new Sunny.UI.UITextBox();
-            this.nameTextBox = new Sunny.UI.UITextBox();
-            this.IDnumber = new Sunny.UI.UILabel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.email = new Sunny.UI.UITextBox();
+            this.phone = new Sunny.UI.UITextBox();
+            this.emailLabel = new Sunny.UI.UILabel();
             this.label4 = new System.Windows.Forms.Label();
             this.nextStepBtn = new Sunny.UI.UIButton();
-            this.selectPost = new Sunny.UI.UIComboBox();
-            this.selectDepartment = new Sunny.UI.UIComboBox();
-            this.uiLabel3 = new Sunny.UI.UILabel();
-            this.uiLabel2 = new Sunny.UI.UILabel();
-            this.uiLabel1 = new Sunny.UI.UILabel();
-            this.uiTextBox1 = new Sunny.UI.UITextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.uiTextBox2 = new Sunny.UI.UITextBox();
-            this.uiLabel4 = new Sunny.UI.UILabel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.uiComboBox1 = new Sunny.UI.UIComboBox();
-            this.uiComboBox2 = new Sunny.UI.UIComboBox();
-            this.uiLabel5 = new Sunny.UI.UILabel();
-            this.uiLabel6 = new Sunny.UI.UILabel();
-            this.uiLabel7 = new Sunny.UI.UILabel();
+            this.squestion = new Sunny.UI.UIComboBox();
+            this.squestionLabel = new Sunny.UI.UILabel();
+            this.countryLabel = new Sunny.UI.UILabel();
+            this.phoneLabel = new Sunny.UI.UILabel();
+            this.genderLabel = new Sunny.UI.UILabel();
+            this.answerLabel = new Sunny.UI.UILabel();
+            this.addressLabel = new Sunny.UI.UILabel();
+            this.birthdayLabel = new Sunny.UI.UILabel();
+            this.birthDatePicker = new Sunny.UI.UIDatePicker();
+            this.profile = new Sunny.UI.UIRichTextBox();
+            this.profileLabel = new Sunny.UI.UILabel();
+            this.gender = new Sunny.UI.UIComboBox();
+            this.country = new Sunny.UI.UITextBox();
+            this.address = new Sunny.UI.UITextBox();
+            this.sanswer = new Sunny.UI.UITextBox();
             this.SuspendLayout();
             // 
-            // IDnumberTextBox
+            // email
             // 
-            this.IDnumberTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.IDnumberTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.IDnumberTextBox.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.IDnumberTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.IDnumberTextBox.Location = new System.Drawing.Point(185, 154);
-            this.IDnumberTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.IDnumberTextBox.MinimumSize = new System.Drawing.Size(1, 16);
-            this.IDnumberTextBox.Name = "IDnumberTextBox";
-            this.IDnumberTextBox.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.IDnumberTextBox.RectColor = System.Drawing.Color.Gray;
-            this.IDnumberTextBox.RectDisableColor = System.Drawing.Color.White;
-            this.IDnumberTextBox.ShowText = false;
-            this.IDnumberTextBox.Size = new System.Drawing.Size(343, 35);
-            this.IDnumberTextBox.Style = Sunny.UI.UIStyle.Custom;
-            this.IDnumberTextBox.TabIndex = 110;
-            this.IDnumberTextBox.Text = "Enter the user\'s ID number";
-            this.IDnumberTextBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.IDnumberTextBox.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.email.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.email.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.email.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.email.Location = new System.Drawing.Point(192, 90);
+            this.email.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.email.MinimumSize = new System.Drawing.Size(1, 16);
+            this.email.Name = "email";
+            this.email.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.email.RectColor = System.Drawing.Color.Gray;
+            this.email.RectDisableColor = System.Drawing.Color.White;
+            this.email.ShowText = false;
+            this.email.Size = new System.Drawing.Size(343, 35);
+            this.email.Style = Sunny.UI.UIStyle.Custom;
+            this.email.TabIndex = 110;
+            this.email.Text = "Enter user\'s email";
+            this.email.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.email.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // nameTextBox
+            // phone
             // 
-            this.nameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nameTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.nameTextBox.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.nameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.nameTextBox.Location = new System.Drawing.Point(185, 75);
-            this.nameTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.nameTextBox.MinimumSize = new System.Drawing.Size(1, 16);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.nameTextBox.RectColor = System.Drawing.Color.Gray;
-            this.nameTextBox.RectDisableColor = System.Drawing.Color.White;
-            this.nameTextBox.ShowText = false;
-            this.nameTextBox.Size = new System.Drawing.Size(343, 35);
-            this.nameTextBox.Style = Sunny.UI.UIStyle.Custom;
-            this.nameTextBox.TabIndex = 107;
-            this.nameTextBox.Text = "Enter the user\'s name";
-            this.nameTextBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.nameTextBox.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.phone.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.phone.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.phone.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.phone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.phone.Location = new System.Drawing.Point(192, 17);
+            this.phone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.phone.MinimumSize = new System.Drawing.Size(1, 16);
+            this.phone.Name = "phone";
+            this.phone.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.phone.RectColor = System.Drawing.Color.Gray;
+            this.phone.RectDisableColor = System.Drawing.Color.White;
+            this.phone.ShowText = false;
+            this.phone.Size = new System.Drawing.Size(343, 35);
+            this.phone.Style = Sunny.UI.UIStyle.Custom;
+            this.phone.TabIndex = 107;
+            this.phone.Text = "Enter user\'s phone";
+            this.phone.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.phone.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // IDnumber
+            // emailLabel
             // 
-            this.IDnumber.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.IDnumber.Location = new System.Drawing.Point(61, 152);
-            this.IDnumber.Name = "IDnumber";
-            this.IDnumber.Size = new System.Drawing.Size(100, 35);
-            this.IDnumber.Style = Sunny.UI.UIStyle.Custom;
-            this.IDnumber.TabIndex = 108;
-            this.IDnumber.Text = "Email";
-            this.IDnumber.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.IDnumber.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("微软雅黑", 15F);
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(101, 316);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(21, 27);
-            this.label3.TabIndex = 106;
-            this.label3.Text = "*";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("微软雅黑", 15F);
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(40, 238);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(21, 27);
-            this.label2.TabIndex = 105;
-            this.label2.Text = "*";
+            this.emailLabel.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.emailLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.emailLabel.Location = new System.Drawing.Point(68, 90);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(100, 35);
+            this.emailLabel.Style = Sunny.UI.UIStyle.Custom;
+            this.emailLabel.TabIndex = 108;
+            this.emailLabel.Text = "Email";
+            this.emailLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.emailLabel.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // label4
             // 
@@ -138,7 +111,7 @@
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("微软雅黑", 15F);
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(16, 81);
+            this.label4.Location = new System.Drawing.Point(25, 22);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(21, 27);
             this.label4.TabIndex = 104;
@@ -150,8 +123,8 @@
             this.nextStepBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
             this.nextStepBtn.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.nextStepBtn.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.nextStepBtn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.nextStepBtn.Location = new System.Drawing.Point(462, 387);
+            this.nextStepBtn.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.nextStepBtn.Location = new System.Drawing.Point(435, 416);
             this.nextStepBtn.MinimumSize = new System.Drawing.Size(1, 1);
             this.nextStepBtn.Name = "nextStepBtn";
             this.nextStepBtn.RectColor = System.Drawing.Color.White;
@@ -164,303 +137,295 @@
             this.nextStepBtn.Text = "Next";
             this.nextStepBtn.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.nextStepBtn.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.nextStepBtn.Click += new System.EventHandler(this.nextStepBtn_Click);
             // 
-            // selectPost
+            // squestion
             // 
-            this.selectPost.DataSource = null;
-            this.selectPost.Enabled = false;
-            this.selectPost.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.selectPost.FilterMaxCount = 50;
-            this.selectPost.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.selectPost.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.selectPost.ItemSelectBackColor = System.Drawing.Color.Silver;
-            this.selectPost.Location = new System.Drawing.Point(185, 312);
-            this.selectPost.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.selectPost.MinimumSize = new System.Drawing.Size(63, 0);
-            this.selectPost.Name = "selectPost";
-            this.selectPost.Padding = new System.Windows.Forms.Padding(8, 0, 30, 2);
-            this.selectPost.RectColor = System.Drawing.Color.Gray;
-            this.selectPost.Size = new System.Drawing.Size(343, 35);
-            this.selectPost.Style = Sunny.UI.UIStyle.Custom;
-            this.selectPost.TabIndex = 98;
-            this.selectPost.Text = "Select user\'s post";
-            this.selectPost.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.selectPost.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.squestion.DataSource = null;
+            this.squestion.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.squestion.FilterMaxCount = 50;
+            this.squestion.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.squestion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.squestion.Items.AddRange(new object[] {
+            "What is your favorie food?",
+            "What is your first teacher\'s name?",
+            "What is your father\'s middle name?",
+            "What is your city of birth?",
+            "What is your library card number?",
+            "What is your frequent flyer number",
+            "What is your first phone number?"});
+            this.squestion.ItemSelectBackColor = System.Drawing.Color.Silver;
+            this.squestion.Location = new System.Drawing.Point(192, 236);
+            this.squestion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.squestion.MinimumSize = new System.Drawing.Size(63, 0);
+            this.squestion.Name = "squestion";
+            this.squestion.Padding = new System.Windows.Forms.Padding(8, 0, 30, 2);
+            this.squestion.RectColor = System.Drawing.Color.Gray;
+            this.squestion.Size = new System.Drawing.Size(343, 35);
+            this.squestion.Style = Sunny.UI.UIStyle.Custom;
+            this.squestion.TabIndex = 98;
+            this.squestion.Text = "Select a security question";
+            this.squestion.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.squestion.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // selectDepartment
+            // squestionLabel
             // 
-            this.selectDepartment.DataSource = null;
-            this.selectDepartment.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.selectDepartment.FilterMaxCount = 50;
-            this.selectDepartment.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.selectDepartment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.selectDepartment.Items.AddRange(new object[] {
-            "Service department",
-            "Technican department"});
-            this.selectDepartment.ItemSelectBackColor = System.Drawing.Color.Silver;
-            this.selectDepartment.Location = new System.Drawing.Point(185, 233);
-            this.selectDepartment.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.selectDepartment.MinimumSize = new System.Drawing.Size(63, 0);
-            this.selectDepartment.Name = "selectDepartment";
-            this.selectDepartment.Padding = new System.Windows.Forms.Padding(8, 0, 30, 2);
-            this.selectDepartment.RectColor = System.Drawing.Color.Gray;
-            this.selectDepartment.Size = new System.Drawing.Size(343, 35);
-            this.selectDepartment.Style = Sunny.UI.UIStyle.Custom;
-            this.selectDepartment.TabIndex = 99;
-            this.selectDepartment.Text = "Select user\'s department";
-            this.selectDepartment.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.selectDepartment.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.squestionLabel.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.squestionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.squestionLabel.Location = new System.Drawing.Point(0, 236);
+            this.squestionLabel.Name = "squestionLabel";
+            this.squestionLabel.Size = new System.Drawing.Size(168, 35);
+            this.squestionLabel.Style = Sunny.UI.UIStyle.Custom;
+            this.squestionLabel.TabIndex = 102;
+            this.squestionLabel.Text = "Security question";
+            this.squestionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.squestionLabel.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiLabel3
+            // countryLabel
             // 
-            this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel3.Location = new System.Drawing.Point(61, 308);
-            this.uiLabel3.Name = "uiLabel3";
-            this.uiLabel3.Size = new System.Drawing.Size(100, 35);
-            this.uiLabel3.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel3.TabIndex = 102;
-            this.uiLabel3.Text = "Post";
-            this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.uiLabel3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.countryLabel.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.countryLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.countryLabel.Location = new System.Drawing.Point(59, 163);
+            this.countryLabel.Name = "countryLabel";
+            this.countryLabel.Size = new System.Drawing.Size(109, 35);
+            this.countryLabel.Style = Sunny.UI.UIStyle.Custom;
+            this.countryLabel.TabIndex = 101;
+            this.countryLabel.Text = "Country";
+            this.countryLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.countryLabel.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiLabel2
+            // phoneLabel
             // 
-            this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel2.Location = new System.Drawing.Point(52, 230);
-            this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(109, 35);
-            this.uiLabel2.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel2.TabIndex = 101;
-            this.uiLabel2.Text = "Department";
-            this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.uiLabel2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.phoneLabel.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.phoneLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.phoneLabel.Location = new System.Drawing.Point(26, 17);
+            this.phoneLabel.Name = "phoneLabel";
+            this.phoneLabel.Size = new System.Drawing.Size(142, 35);
+            this.phoneLabel.Style = Sunny.UI.UIStyle.Custom;
+            this.phoneLabel.TabIndex = 100;
+            this.phoneLabel.Text = "Phone number";
+            this.phoneLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.phoneLabel.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiLabel1
+            // genderLabel
             // 
-            this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel1.Location = new System.Drawing.Point(19, 75);
-            this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(142, 35);
-            this.uiLabel1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel1.TabIndex = 100;
-            this.uiLabel1.Text = "Phone number";
-            this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.uiLabel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.genderLabel.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.genderLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.genderLabel.Location = new System.Drawing.Point(592, 90);
+            this.genderLabel.Name = "genderLabel";
+            this.genderLabel.Size = new System.Drawing.Size(100, 35);
+            this.genderLabel.Style = Sunny.UI.UIStyle.Custom;
+            this.genderLabel.TabIndex = 120;
+            this.genderLabel.Text = "Gender";
+            this.genderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.genderLabel.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiTextBox1
+            // answerLabel
             // 
-            this.uiTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.uiTextBox1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.uiTextBox1.Location = new System.Drawing.Point(715, 152);
-            this.uiTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox1.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox1.Name = "uiTextBox1";
-            this.uiTextBox1.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.uiTextBox1.RectColor = System.Drawing.Color.Gray;
-            this.uiTextBox1.RectDisableColor = System.Drawing.Color.White;
-            this.uiTextBox1.ShowText = false;
-            this.uiTextBox1.Size = new System.Drawing.Size(343, 35);
-            this.uiTextBox1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTextBox1.TabIndex = 122;
-            this.uiTextBox1.Text = "Enter the user\'s ID number";
-            this.uiTextBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.answerLabel.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.answerLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.answerLabel.Location = new System.Drawing.Point(559, 236);
+            this.answerLabel.Name = "answerLabel";
+            this.answerLabel.Size = new System.Drawing.Size(133, 35);
+            this.answerLabel.Style = Sunny.UI.UIStyle.Custom;
+            this.answerLabel.TabIndex = 115;
+            this.answerLabel.Text = "Answer";
+            this.answerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.answerLabel.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // label5
+            // addressLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Font = new System.Drawing.Font("微软雅黑", 15F);
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(575, 158);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(21, 27);
-            this.label5.TabIndex = 121;
-            this.label5.Text = "*";
+            this.addressLabel.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.addressLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.addressLabel.Location = new System.Drawing.Point(583, 163);
+            this.addressLabel.Name = "addressLabel";
+            this.addressLabel.Size = new System.Drawing.Size(109, 35);
+            this.addressLabel.Style = Sunny.UI.UIStyle.Custom;
+            this.addressLabel.TabIndex = 114;
+            this.addressLabel.Text = "Address";
+            this.addressLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.addressLabel.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiTextBox2
+            // birthdayLabel
             // 
-            this.uiTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.uiTextBox2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.uiTextBox2.Location = new System.Drawing.Point(715, 73);
-            this.uiTextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox2.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox2.Name = "uiTextBox2";
-            this.uiTextBox2.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.uiTextBox2.RectColor = System.Drawing.Color.Gray;
-            this.uiTextBox2.RectDisableColor = System.Drawing.Color.White;
-            this.uiTextBox2.ShowText = false;
-            this.uiTextBox2.Size = new System.Drawing.Size(343, 35);
-            this.uiTextBox2.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTextBox2.TabIndex = 119;
-            this.uiTextBox2.Text = "Enter the user\'s name";
-            this.uiTextBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.birthdayLabel.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.birthdayLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.birthdayLabel.Location = new System.Drawing.Point(592, 17);
+            this.birthdayLabel.Name = "birthdayLabel";
+            this.birthdayLabel.Size = new System.Drawing.Size(100, 35);
+            this.birthdayLabel.Style = Sunny.UI.UIStyle.Custom;
+            this.birthdayLabel.TabIndex = 113;
+            this.birthdayLabel.Text = "Birthday";
+            this.birthdayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.birthdayLabel.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiLabel4
+            // birthDatePicker
             // 
-            this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel4.Location = new System.Drawing.Point(584, 150);
-            this.uiLabel4.Name = "uiLabel4";
-            this.uiLabel4.Size = new System.Drawing.Size(100, 35);
-            this.uiLabel4.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel4.TabIndex = 120;
-            this.uiLabel4.Text = "ID number";
-            this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.uiLabel4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.birthDatePicker.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.birthDatePicker.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.birthDatePicker.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.birthDatePicker.Location = new System.Drawing.Point(722, 17);
+            this.birthDatePicker.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.birthDatePicker.MaxLength = 10;
+            this.birthDatePicker.MinimumSize = new System.Drawing.Size(63, 0);
+            this.birthDatePicker.Name = "birthDatePicker";
+            this.birthDatePicker.Padding = new System.Windows.Forms.Padding(8, 0, 30, 2);
+            this.birthDatePicker.RectColor = System.Drawing.Color.Gray;
+            this.birthDatePicker.Size = new System.Drawing.Size(343, 35);
+            this.birthDatePicker.Style = Sunny.UI.UIStyle.Custom;
+            this.birthDatePicker.SymbolDropDown = 61555;
+            this.birthDatePicker.SymbolNormal = 61555;
+            this.birthDatePicker.TabIndex = 123;
+            this.birthDatePicker.Text = "2022-04-24";
+            this.birthDatePicker.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.birthDatePicker.Value = new System.DateTime(2022, 4, 24, 14, 54, 18, 878);
+            this.birthDatePicker.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // label6
+            // profile
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Font = new System.Drawing.Font("微软雅黑", 15F);
-            this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(624, 314);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(21, 27);
-            this.label6.TabIndex = 118;
-            this.label6.Text = "*";
+            this.profile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.profile.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.profile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.profile.Location = new System.Drawing.Point(192, 309);
+            this.profile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.profile.MinimumSize = new System.Drawing.Size(1, 1);
+            this.profile.Name = "profile";
+            this.profile.Padding = new System.Windows.Forms.Padding(8, 2, 2, 2);
+            this.profile.RectColor = System.Drawing.Color.Gray;
+            this.profile.ShowText = false;
+            this.profile.Size = new System.Drawing.Size(873, 82);
+            this.profile.Style = Sunny.UI.UIStyle.Custom;
+            this.profile.TabIndex = 124;
+            this.profile.Text = "Enter user\'s personal introduction with a maximum of 300 characters.";
+            this.profile.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.profile.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // label7
+            // profileLabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Font = new System.Drawing.Font("微软雅黑", 15F);
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(563, 236);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(21, 27);
-            this.label7.TabIndex = 117;
-            this.label7.Text = "*";
+            this.profileLabel.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.profileLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.profileLabel.Location = new System.Drawing.Point(0, 312);
+            this.profileLabel.Name = "profileLabel";
+            this.profileLabel.Size = new System.Drawing.Size(168, 35);
+            this.profileLabel.Style = Sunny.UI.UIStyle.Custom;
+            this.profileLabel.TabIndex = 125;
+            this.profileLabel.Text = "Profile";
+            this.profileLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.profileLabel.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // label8
+            // gender
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.Font = new System.Drawing.Font("微软雅黑", 15F);
-            this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(610, 81);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(21, 27);
-            this.label8.TabIndex = 116;
-            this.label8.Text = "*";
+            this.gender.DataSource = null;
+            this.gender.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.gender.FilterMaxCount = 50;
+            this.gender.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.gender.Items.AddRange(new object[] {
+            "Malel",
+            "Female"});
+            this.gender.ItemSelectBackColor = System.Drawing.Color.Silver;
+            this.gender.Location = new System.Drawing.Point(722, 90);
+            this.gender.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gender.MinimumSize = new System.Drawing.Size(63, 0);
+            this.gender.Name = "gender";
+            this.gender.Padding = new System.Windows.Forms.Padding(8, 0, 30, 2);
+            this.gender.RectColor = System.Drawing.Color.Gray;
+            this.gender.Size = new System.Drawing.Size(343, 35);
+            this.gender.Style = Sunny.UI.UIStyle.Custom;
+            this.gender.TabIndex = 113;
+            this.gender.Text = "Select user\'s gender";
+            this.gender.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.gender.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiComboBox1
+            // country
             // 
-            this.uiComboBox1.DataSource = null;
-            this.uiComboBox1.Enabled = false;
-            this.uiComboBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.uiComboBox1.FilterMaxCount = 50;
-            this.uiComboBox1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.uiComboBox1.ItemSelectBackColor = System.Drawing.Color.Silver;
-            this.uiComboBox1.Location = new System.Drawing.Point(715, 310);
-            this.uiComboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiComboBox1.MinimumSize = new System.Drawing.Size(63, 0);
-            this.uiComboBox1.Name = "uiComboBox1";
-            this.uiComboBox1.Padding = new System.Windows.Forms.Padding(8, 0, 30, 2);
-            this.uiComboBox1.RectColor = System.Drawing.Color.Gray;
-            this.uiComboBox1.Size = new System.Drawing.Size(343, 35);
-            this.uiComboBox1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiComboBox1.TabIndex = 111;
-            this.uiComboBox1.Text = "Select user\'s post";
-            this.uiComboBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiComboBox1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.country.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.country.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.country.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.country.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.country.Location = new System.Drawing.Point(192, 163);
+            this.country.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.country.MinimumSize = new System.Drawing.Size(1, 16);
+            this.country.Name = "country";
+            this.country.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.country.RectColor = System.Drawing.Color.Gray;
+            this.country.RectDisableColor = System.Drawing.Color.White;
+            this.country.ShowText = false;
+            this.country.Size = new System.Drawing.Size(343, 35);
+            this.country.Style = Sunny.UI.UIStyle.Custom;
+            this.country.TabIndex = 111;
+            this.country.Text = "Enter user\'s country";
+            this.country.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.country.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiComboBox2
+            // address
             // 
-            this.uiComboBox2.DataSource = null;
-            this.uiComboBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.uiComboBox2.FilterMaxCount = 50;
-            this.uiComboBox2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.uiComboBox2.Items.AddRange(new object[] {
-            "Service department",
-            "Technican department"});
-            this.uiComboBox2.ItemSelectBackColor = System.Drawing.Color.Silver;
-            this.uiComboBox2.Location = new System.Drawing.Point(715, 231);
-            this.uiComboBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiComboBox2.MinimumSize = new System.Drawing.Size(63, 0);
-            this.uiComboBox2.Name = "uiComboBox2";
-            this.uiComboBox2.Padding = new System.Windows.Forms.Padding(8, 0, 30, 2);
-            this.uiComboBox2.RectColor = System.Drawing.Color.Gray;
-            this.uiComboBox2.Size = new System.Drawing.Size(343, 35);
-            this.uiComboBox2.Style = Sunny.UI.UIStyle.Custom;
-            this.uiComboBox2.TabIndex = 112;
-            this.uiComboBox2.Text = "Select user\'s department";
-            this.uiComboBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiComboBox2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.address.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.address.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.address.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.address.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.address.Location = new System.Drawing.Point(722, 163);
+            this.address.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.address.MinimumSize = new System.Drawing.Size(1, 16);
+            this.address.Name = "address";
+            this.address.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.address.RectColor = System.Drawing.Color.Gray;
+            this.address.RectDisableColor = System.Drawing.Color.White;
+            this.address.ShowText = false;
+            this.address.Size = new System.Drawing.Size(343, 35);
+            this.address.Style = Sunny.UI.UIStyle.Custom;
+            this.address.TabIndex = 112;
+            this.address.Text = "Enter user\'s address";
+            this.address.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.address.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiLabel5
+            // sanswer
             // 
-            this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel5.Location = new System.Drawing.Point(584, 306);
-            this.uiLabel5.Name = "uiLabel5";
-            this.uiLabel5.Size = new System.Drawing.Size(100, 35);
-            this.uiLabel5.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel5.TabIndex = 115;
-            this.uiLabel5.Text = "Post";
-            this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.uiLabel5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiLabel6
-            // 
-            this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel6.Location = new System.Drawing.Point(575, 228);
-            this.uiLabel6.Name = "uiLabel6";
-            this.uiLabel6.Size = new System.Drawing.Size(109, 35);
-            this.uiLabel6.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel6.TabIndex = 114;
-            this.uiLabel6.Text = "Department";
-            this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.uiLabel6.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiLabel7
-            // 
-            this.uiLabel7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel7.Location = new System.Drawing.Point(584, 72);
-            this.uiLabel7.Name = "uiLabel7";
-            this.uiLabel7.Size = new System.Drawing.Size(100, 35);
-            this.uiLabel7.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel7.TabIndex = 113;
-            this.uiLabel7.Text = "Name";
-            this.uiLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.uiLabel7.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.sanswer.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.sanswer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.sanswer.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.sanswer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.sanswer.Location = new System.Drawing.Point(722, 236);
+            this.sanswer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.sanswer.MinimumSize = new System.Drawing.Size(1, 16);
+            this.sanswer.Name = "sanswer";
+            this.sanswer.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.sanswer.RectColor = System.Drawing.Color.Gray;
+            this.sanswer.RectDisableColor = System.Drawing.Color.White;
+            this.sanswer.ShowText = false;
+            this.sanswer.Size = new System.Drawing.Size(343, 35);
+            this.sanswer.Style = Sunny.UI.UIStyle.Custom;
+            this.sanswer.TabIndex = 113;
+            this.sanswer.Text = "Enter a answer";
+            this.sanswer.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.sanswer.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // UC_Registe_detaildinfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.uiTextBox1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.IDnumberTextBox);
-            this.Controls.Add(this.uiTextBox2);
-            this.Controls.Add(this.uiLabel4);
-            this.Controls.Add(this.nameTextBox);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.IDnumber);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.uiComboBox1);
+            this.Controls.Add(this.sanswer);
+            this.Controls.Add(this.address);
+            this.Controls.Add(this.country);
+            this.Controls.Add(this.gender);
+            this.Controls.Add(this.profileLabel);
+            this.Controls.Add(this.profile);
+            this.Controls.Add(this.birthDatePicker);
+            this.Controls.Add(this.email);
+            this.Controls.Add(this.genderLabel);
+            this.Controls.Add(this.phone);
+            this.Controls.Add(this.emailLabel);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.uiComboBox2);
             this.Controls.Add(this.nextStepBtn);
-            this.Controls.Add(this.uiLabel5);
-            this.Controls.Add(this.selectPost);
-            this.Controls.Add(this.uiLabel6);
-            this.Controls.Add(this.selectDepartment);
-            this.Controls.Add(this.uiLabel7);
-            this.Controls.Add(this.uiLabel3);
-            this.Controls.Add(this.uiLabel2);
-            this.Controls.Add(this.uiLabel1);
+            this.Controls.Add(this.answerLabel);
+            this.Controls.Add(this.squestion);
+            this.Controls.Add(this.addressLabel);
+            this.Controls.Add(this.birthdayLabel);
+            this.Controls.Add(this.squestionLabel);
+            this.Controls.Add(this.countryLabel);
+            this.Controls.Add(this.phoneLabel);
             this.Name = "UC_Registe_detaildinfo";
+            this.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Size = new System.Drawing.Size(1115, 492);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -469,29 +434,25 @@
 
         #endregion
 
-        private Sunny.UI.UITextBox IDnumberTextBox;
-        private Sunny.UI.UITextBox nameTextBox;
-        private Sunny.UI.UILabel IDnumber;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private Sunny.UI.UITextBox email;
+        private Sunny.UI.UITextBox phone;
+        private Sunny.UI.UILabel emailLabel;
         private System.Windows.Forms.Label label4;
         private Sunny.UI.UIButton nextStepBtn;
-        private Sunny.UI.UIComboBox selectPost;
-        private Sunny.UI.UIComboBox selectDepartment;
-        private Sunny.UI.UILabel uiLabel3;
-        private Sunny.UI.UILabel uiLabel2;
-        private Sunny.UI.UILabel uiLabel1;
-        private Sunny.UI.UITextBox uiTextBox1;
-        private System.Windows.Forms.Label label5;
-        private Sunny.UI.UITextBox uiTextBox2;
-        private Sunny.UI.UILabel uiLabel4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private Sunny.UI.UIComboBox uiComboBox1;
-        private Sunny.UI.UIComboBox uiComboBox2;
-        private Sunny.UI.UILabel uiLabel5;
-        private Sunny.UI.UILabel uiLabel6;
-        private Sunny.UI.UILabel uiLabel7;
+        private Sunny.UI.UIComboBox squestion;
+        private Sunny.UI.UILabel squestionLabel;
+        private Sunny.UI.UILabel countryLabel;
+        private Sunny.UI.UILabel phoneLabel;
+        private Sunny.UI.UILabel genderLabel;
+        private Sunny.UI.UILabel answerLabel;
+        private Sunny.UI.UILabel addressLabel;
+        private Sunny.UI.UILabel birthdayLabel;
+        private Sunny.UI.UIDatePicker birthDatePicker;
+        private Sunny.UI.UIRichTextBox profile;
+        private Sunny.UI.UILabel profileLabel;
+        private Sunny.UI.UIComboBox gender;
+        private Sunny.UI.UITextBox country;
+        private Sunny.UI.UITextBox address;
+        private Sunny.UI.UITextBox sanswer;
     }
 }

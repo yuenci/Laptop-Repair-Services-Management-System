@@ -21,6 +21,7 @@ namespace miniSys0._3.Controls.MainArea
             InitCurmbs();
             InitIcon();
             InitUserInfo();
+            InitAuthStatus();
             InitContentPanel();
             InitChangeButton();
         }
@@ -67,6 +68,7 @@ namespace miniSys0._3.Controls.MainArea
             uiLabel8.Text = User_type.user_ID;
             uiLabel9.Text = User_type.user_regtime;
             uiLabel10.Text = User_type.user_gender;
+            phoneTextBox.RectDisableColor = Color.White;  
             phoneTextBox.Text = encryptedPhoneNum(User_type.user_phone);
             phoneTextBox.RectColor = Color.White;
             phoneTextBox.Enabled = false;
@@ -90,6 +92,8 @@ namespace miniSys0._3.Controls.MainArea
         }
         private void InitChangeButton()
         {
+            bgBI.RectColor = Color.White;
+            bgSS.RectColor = Color.White;
             SelectedButtonStyle(bgBI, labelBI);
             UnSelectedButtonStyle(bgSS,labelSS);
         }
@@ -173,7 +177,12 @@ namespace miniSys0._3.Controls.MainArea
 
 
         }
-
+        private void InitAuthStatus()
+        {
+            authStatus.RectColor = Color.White;
+            authStatus.FillColor = Color.FromArgb(232, 255, 234);
+            authStatus.ForeColor = Color.FromArgb(0, 180, 42);
+        }
         private UITextBox idCardNum = new UITextBox();
         private void editIDCardNum_Click(object sender, EventArgs e)
         {

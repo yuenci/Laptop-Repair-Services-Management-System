@@ -29,9 +29,43 @@ namespace miniSys0._3
             this.Source.Enter += new EventHandler(TextBoxEnter);
             this.Source.Leave += new EventHandler(TextBoxLeave);
         }
-        private void SetText()
+        private void TextBoxEnter(object senter, EventArgs e)
         {
-            this.Source.Text = this.Text;
+            this.Source.RectColor = this.RectColor;
+            this.Source.Font = new Font(".萍方-简", 12, FontStyle.Bold);
+            if (this.Source.Text == this.Text)
+            {
+                this.Source.Text = "";
+            }
+        }
+        private void TextBoxLeave(object senter, EventArgs e)
+        {
+            if (this.Source.Text == "")
+            {
+                this.Source.Text = this.Text;
+                this.Source.Font = new Font(".萍方-简", 12, FontStyle.Regular);
+            }
+        }
+    }
+    public class RichTextBoxCE
+    {
+        private UIRichTextBox Source;
+        private string Text;
+        private Color RectColor = Color.White;
+        public RichTextBoxCE(UIRichTextBox textBox, string textContent)
+        {
+            this.Source = textBox;
+            this.Text = textContent;
+            this.Source.Enter += new EventHandler(TextBoxEnter);
+            this.Source.Leave += new EventHandler(TextBoxLeave);
+        }
+        public RichTextBoxCE(UIRichTextBox textBox, string textContent, Color RectColor)
+        {
+            this.Source = textBox;
+            this.Text = textContent;
+            this.RectColor = RectColor;
+            this.Source.Enter += new EventHandler(TextBoxEnter);
+            this.Source.Leave += new EventHandler(TextBoxLeave);
         }
         private void TextBoxEnter(object senter, EventArgs e)
         {
@@ -51,6 +85,41 @@ namespace miniSys0._3
             }
         }
     }
+
+    public class ComboBoxCE
+    {
+        private UIComboBox ComboBox;
+        private Color RectColor = Color.White;
+
+        public ComboBoxCE(UIComboBox comboBox,Color RectColor)
+        {
+            this.ComboBox = comboBox;
+            this.RectColor = RectColor;
+            this.ComboBox.DropDown += new EventHandler(ComboBox_DropDown);
+            this.ComboBox.DropDownClosed += new EventHandler(ComboBox_DropDownClosed);
+        }
+  
+        private void ComboBox_DropDown(object senter, EventArgs e)
+        {
+            this.ComboBox.RectColor = this.RectColor;
+            this.ComboBox.RectSize = 1;
+            this.ComboBox.Font = new Font(".萍方-简", 12, FontStyle.Regular);
+
+        }
+        private void ComboBox_DropDownClosed(object senter, EventArgs e)
+        {
+            if (this.ComboBox.SelectedIndex == -1)
+            {
+                ComboBox.RectSize = 2;
+                ComboBox.RectColor = Color.Red;
+            }
+            else
+            {
+                this.ComboBox.Font = new Font(".萍方-简", 12, FontStyle.Bold);
+            }
+        }
+    }
+    
 
     public static class AddUserControl
     {
