@@ -104,6 +104,7 @@
             // selectPost
             // 
             this.selectPost.DataSource = null;
+            this.selectPost.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.selectPost.Enabled = false;
             this.selectPost.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
             this.selectPost.FilterMaxCount = 50;
@@ -128,6 +129,7 @@
             // selectDepartment
             // 
             this.selectDepartment.DataSource = null;
+            this.selectDepartment.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.selectDepartment.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
             this.selectDepartment.FilterMaxCount = 50;
             this.selectDepartment.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));

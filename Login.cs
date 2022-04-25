@@ -19,9 +19,12 @@ namespace miniSys0._3
         public Login()
         {
             InitializeComponent();
+            login = this;
+            this.StartPosition = FormStartPosition.CenterScreen;
+
             UC_Login uc = new UC_Login();
             addUserControl(uc);
-            login = this;
+
         }
 
         private void uiSymbolButton1_Click(object sender, EventArgs e)
@@ -56,6 +59,7 @@ namespace miniSys0._3
             panelContainer.Controls.Add(userControl);
             userControl.BringToFront();
         }
+
 
     }
 

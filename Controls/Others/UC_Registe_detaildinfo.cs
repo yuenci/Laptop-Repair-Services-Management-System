@@ -102,7 +102,9 @@ namespace miniSys0._3.Controls.Others
                     RegisterInfoCache.user_about = profile.Text;
                 }
                 RegisterInfoCache.user_password = generatePWD();
-                
+                RegisterInfoCache.user_regtime = DateTime.Now.ToString();
+
+
 
                 if (User_type.user_deparment =="Admin")
                 {

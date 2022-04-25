@@ -77,6 +77,12 @@
       <DependentUpon>CommonlyControls.cs</DependentUpon>
     </Compile>
     <Compile Include="ControlEvent.cs" />
+    <Compile Include="Controls\MainArea\UC_Payment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MainArea\UC_Payment.Designer.cs">
+      <DependentUpon>UC_Payment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MainArea\UC_Registration .cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -143,12 +149,6 @@
     <Compile Include="Controls\Others\UC_BasicInfo.Designer.cs">
       <DependentUpon>UC_BasicInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Others\UC_CheckRegister.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\Others\UC_CheckRegister.Designer.cs">
-      <DependentUpon>UC_CheckRegister.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controls\Others\UC_Registe_Complete.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -195,6 +195,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CsharpRepairerIncDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
     </Compile>
     <Compile Include="SQLCursor.cs" />
     <Compile Include="Form1.cs">
@@ -243,8 +249,17 @@
     <Compile Include="VideoPlayer.Designer.cs">
       <DependentUpon>VideoPlayer.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewProfile.Designer.cs">
+      <DependentUpon>ViewProfile.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CommonlyControls.resx">
       <DependentUpon>CommonlyControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MainArea\UC_Payment.resx">
+      <DependentUpon>UC_Payment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\MainArea\UC_Registration .resx">
       <DependentUpon>UC_Registration .cs</DependentUpon>
@@ -279,9 +294,6 @@
     <EmbeddedResource Include="Controls\Others\UC_BasicInfo.resx">
       <DependentUpon>UC_BasicInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\Others\UC_CheckRegister.resx">
-      <DependentUpon>UC_CheckRegister.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Controls\Others\UC_Registe_Complete.resx">
       <DependentUpon>UC_Registe_Complete.cs</DependentUpon>
     </EmbeddedResource>
@@ -305,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -336,6 +351,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VideoPlayer.resx">
       <DependentUpon>VideoPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewProfile.resx">
+      <DependentUpon>ViewProfile.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="CsharpRepairerIncDataSet.xsc">
       <DependentUpon>CsharpRepairerIncDataSet.xsd</DependentUpon>
@@ -604,6 +622,8 @@
     <Content Include="Html\chart.js" />
     <Content Include="Html\mainLineChart.html" />
     <Content Include="Html\mainPieChart.html" />
+    <None Include="Resources\headIcon.png" />
+    <None Include="Resources\Software code testing-pana.png" />
     <None Include="Resources\Ask_me_anything.png" />
     <None Include="Resources\cirleHole-1.png" />
     <None Include="Resources\head1.png" />

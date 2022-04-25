@@ -17,6 +17,7 @@ namespace miniSys0._3.Controls.Others
         {
             InitializeComponent();
             InitData();
+            InitWarningBar();
         }
 
         private void viewMore_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -29,7 +30,11 @@ namespace miniSys0._3.Controls.Others
             account.Text = RegisterInfoCache.user_ID;
             password.Text = RegisterInfoCache.user_password;
         }
-
+        private void InitWarningBar()
+        {
+            warningBar.BackColor = Color.FromArgb(255, 247, 232);
+            warningBar.SymbolColor = Color.FromArgb(255, 125, 0);
+        }
         private void again_Click(object sender, EventArgs e)
         {
 
@@ -77,6 +82,12 @@ namespace miniSys0._3.Controls.Others
             UC_Registe_Staff_Basicinfo uc = new UC_Registe_Staff_Basicinfo();
             uc.Location = new Point(320, 80);
             AddUserControl.Add(uc, UC_Registration.uc_Registration.contentPanel);
+        }
+
+        private void CheckButton_Click(object sender, EventArgs e)
+        {
+           ViewProfile viewProfile = new ViewProfile();
+            viewProfile.Show();
         }
     }
 }

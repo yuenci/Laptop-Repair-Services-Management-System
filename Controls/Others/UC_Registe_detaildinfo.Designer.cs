@@ -142,6 +142,7 @@
             // squestion
             // 
             this.squestion.DataSource = null;
+            this.squestion.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.squestion.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
             this.squestion.FilterMaxCount = 50;
             this.squestion.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -316,6 +317,7 @@
             // gender
             // 
             this.gender.DataSource = null;
+            this.gender.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.gender.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
             this.gender.FilterMaxCount = 50;
             this.gender.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));

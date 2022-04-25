@@ -46,9 +46,12 @@
             this.Controls.Add(this.panelBrower);
             this.MaximizeBox = false;
             this.Name = "Reader";
+            this.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ShowRadius = false;
             this.ShowShadow = true;
+            this.Style = Sunny.UI.UIStyle.Custom;
             this.Text = "Reader";
+            this.TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.TopMost = true;
             this.ZoomScaleRect = new System.Drawing.Rectangle(15, 15, 800, 450);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.form_closing);

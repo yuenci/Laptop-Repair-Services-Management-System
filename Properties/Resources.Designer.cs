@@ -153,6 +153,16 @@ namespace miniSys0._3.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap headIcon {
+            get {
+                object obj = ResourceManager.GetObject("headIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap imac {
             get {
                 object obj = ResourceManager.GetObject("imac", resourceCulture);
@@ -226,6 +236,16 @@ namespace miniSys0._3.Properties {
         internal static System.Drawing.Bitmap servering {
             get {
                 object obj = ResourceManager.GetObject("servering", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap Software_code_testing_pana {
+            get {
+                object obj = ResourceManager.GetObject("Software code testing-pana", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

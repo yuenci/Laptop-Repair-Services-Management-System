@@ -24,6 +24,8 @@ namespace miniSys0._3
             //Application.Run(new Form1());
             //Application.Run(new VideoPlayer());
             //Application.Run(new TestForm());
+            //Application.Run(new Loading());
+            //Application.Run(new ViewProfile());
         }
     }
 }

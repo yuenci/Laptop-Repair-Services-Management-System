@@ -28,42 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.uiUserControl1 = new Sunny.UI.UIUserControl();
+            this.Container = new Sunny.UI.UIUserControl();
             this.contentPanel = new System.Windows.Forms.Panel();
             this.iconLabel3 = new System.Windows.Forms.Label();
             this.iconLabel2 = new System.Windows.Forms.Label();
             this.iconLabel1 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.icon3 = new Sunny.UI.UIAvatar();
             this.icon2 = new Sunny.UI.UIAvatar();
             this.icon1 = new Sunny.UI.UIAvatar();
+            this.label1 = new System.Windows.Forms.Label();
             this.urC_Crumbs1 = new miniSys0._3.Controls.Others.UrC_Crumbs();
-            this.uiUserControl1.SuspendLayout();
+            this.Container.SuspendLayout();
             this.SuspendLayout();
             // 
-            // uiUserControl1
+            // Container
             // 
-            this.uiUserControl1.BackColor = System.Drawing.Color.White;
-            this.uiUserControl1.Controls.Add(this.contentPanel);
-            this.uiUserControl1.Controls.Add(this.iconLabel3);
-            this.uiUserControl1.Controls.Add(this.iconLabel2);
-            this.uiUserControl1.Controls.Add(this.iconLabel1);
-            this.uiUserControl1.Controls.Add(this.label1);
-            this.uiUserControl1.Controls.Add(this.icon3);
-            this.uiUserControl1.Controls.Add(this.icon2);
-            this.uiUserControl1.Controls.Add(this.icon1);
-            this.uiUserControl1.FillColor = System.Drawing.Color.White;
-            this.uiUserControl1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiUserControl1.Location = new System.Drawing.Point(4, 58);
-            this.uiUserControl1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiUserControl1.Name = "uiUserControl1";
-            this.uiUserControl1.RectColor = System.Drawing.Color.White;
-            this.uiUserControl1.Size = new System.Drawing.Size(1118, 659);
-            this.uiUserControl1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiUserControl1.TabIndex = 1;
-            this.uiUserControl1.Text = "uiUserControl1";
-            this.uiUserControl1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiUserControl1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.Container.BackColor = System.Drawing.Color.White;
+            this.Container.Controls.Add(this.contentPanel);
+            this.Container.Controls.Add(this.iconLabel3);
+            this.Container.Controls.Add(this.iconLabel2);
+            this.Container.Controls.Add(this.iconLabel1);
+            this.Container.Controls.Add(this.icon3);
+            this.Container.Controls.Add(this.icon2);
+            this.Container.Controls.Add(this.icon1);
+            this.Container.Controls.Add(this.label1);
+            this.Container.FillColor = System.Drawing.Color.White;
+            this.Container.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Container.Location = new System.Drawing.Point(4, 58);
+            this.Container.MinimumSize = new System.Drawing.Size(1, 1);
+            this.Container.Name = "Container";
+            this.Container.RectColor = System.Drawing.Color.White;
+            this.Container.Size = new System.Drawing.Size(1118, 659);
+            this.Container.Style = Sunny.UI.UIStyle.Custom;
+            this.Container.TabIndex = 1;
+            this.Container.Text = "uiUserControl1";
+            this.Container.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Container.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // contentPanel
             // 
@@ -104,16 +104,6 @@
             this.iconLabel1.Size = new System.Drawing.Size(84, 22);
             this.iconLabel1.TabIndex = 7;
             this.iconLabel1.Text = "Basic info";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(10, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(233, 28);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "User registration form";
             // 
             // icon3
             // 
@@ -163,6 +153,16 @@
             this.icon1.Text = "1";
             this.icon1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(10, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(233, 28);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "User registration form";
+            // 
             // urC_Crumbs1
             // 
             this.urC_Crumbs1.BackColor = System.Drawing.Color.Transparent;
@@ -176,12 +176,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(250)))));
-            this.Controls.Add(this.uiUserControl1);
+            this.Controls.Add(this.Container);
             this.Controls.Add(this.urC_Crumbs1);
             this.Name = "UC_Registration";
             this.Size = new System.Drawing.Size(1125, 720);
-            this.uiUserControl1.ResumeLayout(false);
-            this.uiUserControl1.PerformLayout();
+            this.Container.ResumeLayout(false);
+            this.Container.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -189,7 +189,7 @@
         #endregion
 
         private Others.UrC_Crumbs urC_Crumbs1;
-        private Sunny.UI.UIUserControl uiUserControl1;
+        private Sunny.UI.UIUserControl Container;
         public Sunny.UI.UIAvatar icon3;
         public Sunny.UI.UIAvatar icon2;
         public Sunny.UI.UIAvatar icon1;

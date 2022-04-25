@@ -22,8 +22,9 @@ namespace miniSys0._3
         {
             InitializeComponent();
             main = this;
+            this.StartPosition = FormStartPosition.CenterScreen;
 
-            
+
 
             //left bat
             addNavMenu();
@@ -39,7 +40,8 @@ namespace miniSys0._3
             //add_UC_Mainto_Panel();
             //add_UC_UserInfo();
             //add_UC_UserSetting();
-            add_UC_registration();
+            //add_UC_registration
+            add_UC_Payment();
 
 
 
@@ -378,7 +380,15 @@ namespace miniSys0._3
             mainPanel.Controls.Add(uc);
             uc.BringToFront();
         }
+        private void add_UC_Payment()
+        {
+            UC_Payment uc = new UC_Payment();
+            uc.Dock = DockStyle.Fill;
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(uc);
+            uc.BringToFront();
 
+        }
         #endregion
     }
 

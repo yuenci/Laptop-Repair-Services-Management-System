@@ -21,32 +21,40 @@ namespace miniSys0._3.Controls
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            string name = name_input.Text;
-            string password = password_input.Text;
-            bool agreementCheck = agreement.Checked;
-
-            if (name == "Enter the user name" || name == "")
+            if (IfDBConnect())
             {
-                name_input.RectColor = Color.Red;
+                string name = name_input.Text;
+                string password = password_input.Text;
+                bool agreementCheck = agreement.Checked;
+
+                if (name == "Enter the user name" || name == "")
+                {
+                    name_input.RectColor = Color.Red;
+                }
+
+                if (password == "Enter your password" || name == "")
+                {
+                    password_input.RectColor = Color.Red;
+                }
+
+                if (!agreementCheck)
+                {
+                    agreement.CheckBoxColor = Color.Red;
+                }
+
+                if (name != "" && name != "Enter the user name" &&
+                    password != "" && password != "Enter your password" &&
+                    agreementCheck
+                    )
+                {
+                    loginToMain(name, password);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Can't connect to the database, please contact the system administrator.");
             }
 
-            if (password == "Enter your password" || name == "")
-            {
-                password_input.RectColor = Color.Red;
-            }
-
-            if (!agreementCheck)
-            {
-                agreement.CheckBoxColor = Color.Red;
-            }
-
-            if (name != "" && name != "Enter the user name" &&
-                password != "" && password != "Enter your password" &&
-                agreementCheck
-                )
-            {
-                loginToMain(name, password);
-            }
 
             void login(string nameInput, string passwordInput)
             {
@@ -223,9 +231,9 @@ namespace miniSys0._3.Controls
                         User_type.user_deparment = "Technician";
                     }
 
-                    Console.WriteLine(User_type.user_deparment);
-                    Main main = new Main();
-                    main.Show();
+                    //Console.WriteLine(User_type.user_deparment);
+                    Loading loading = new Loading();
+                    loading.Show();
                     Login.login.Hide();
                     //MessageBox.Show("Login success")
                 }
@@ -243,8 +251,8 @@ namespace miniSys0._3.Controls
                     if (resultCus[12] == passwordInput)
                     {
                         User_type.user_deparment = "Customer";
-                        Main main = new Main();
-                        main.Show();
+                        Loading loading = new Loading();
+                        loading.Show();
                         Login.login.Hide();
                     }
                     else
@@ -257,6 +265,22 @@ namespace miniSys0._3.Controls
                     MessageBox.Show($"{nameInput} does not exist");
                 }
             }      
+        }
+
+        private bool IfDBConnect()
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Setting.DBString))
+                {
+                    conn.Open();
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

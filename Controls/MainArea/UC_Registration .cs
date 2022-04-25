@@ -21,21 +21,17 @@ namespace miniSys0._3.Controls.MainArea
             InitCurmbs();
             InitIcon();
             IconEventRegister();
-            //Inittest();
             InitContent();
             uc_Registration = this;
             //button1.Click += new EventHandler(buttonClickCallfuc);
         }
-        private  void Inittest()
-        {
-            UC_CheckRegister uc = new UC_CheckRegister();
-            uiUserControl1.Controls.Add(uc);
-         }
         private void InitCurmbs()
         {
             urC_Crumbs1.crumbText.Text = "Registration";
             urC_Crumbs1.crumbsHome.Text = " / Form / Register";
         }
+        public Panel contentArea;
+
         public static void iconSelect(UIAvatar icon,Label iconLabel)
         {
             icon.FillColor = Color.FromArgb(22, 93, 255);
@@ -175,13 +171,14 @@ namespace miniSys0._3.Controls.MainArea
                 UC_Registe_Staff_Basicinfo uc = new UC_Registe_Staff_Basicinfo();
                 uc.Location = new Point(320, 80);
                 AddUserControl.Add(uc, contentPanel);
-            }else if (User_type.user_deparment == "Receptionist")
+            }
+            else if (User_type.user_deparment == "Receptionist")
             {
                 UC_Registe_Customer_Basicinfo uc = new UC_Registe_Customer_Basicinfo();
                 uc.Location = new Point(320, 80);
                 AddUserControl.Add(uc, contentPanel);
             }
-            
+
 
             /*UC_Registe_detaildinfo uc = new UC_Registe_detaildinfo();
             uc.Location = new Point(320,80);
