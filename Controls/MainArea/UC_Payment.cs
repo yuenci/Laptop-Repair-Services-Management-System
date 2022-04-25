@@ -1,4 +1,6 @@
-﻿using System;
+﻿using miniSys0._3.Controls.Others;
+using Sunny.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,11 +18,20 @@ namespace miniSys0._3.Controls.MainArea
         {
             InitializeComponent();
             InitCurmbs();
+            Initcontent();
         }
         private void InitCurmbs()
         {
             urC_Crumbs1.crumbText.Text = "Payment";
             urC_Crumbs1.crumbsHome.Text = " / Form / Payment";
         }
+
+        private void Initcontent()
+        {
+            UC_ReciptSubmit uc = new UC_ReciptSubmit();
+            AddUserControl.Add(uc, contentPanel);
+        }
+
+
     }
 }

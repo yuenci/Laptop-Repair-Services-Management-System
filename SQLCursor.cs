@@ -197,9 +197,17 @@ namespace miniSys0._3
         {
             string lastOneID = Query($"SELECT TOP 1 {rowIDName} FROM {tableName} ORDER BY  {rowIDName} DESC;")[0];
             //sql = "SELECT TOP 1 ArticlelD FROM Articles ORDER BY  ArticlelD DESC;"
+            int newValue;
+            string newID;
+            if (tableName == "Orders")
+            {
+                newValue = int.Parse(lastOneID.Substring(3, 8)) + 1;
+                newID = rowIDName.Substring(0, 3) + newValue.ToString().PadLeft(8, '0');
+                return newID;
+            }
 
-            int newValue = int.Parse(lastOneID.Substring(3, 6)) + 1;
-            string newID = rowIDName.Substring(0,3) + newValue.ToString().PadLeft(6, '0');
+            newValue = int.Parse(lastOneID.Substring(3, 6)) + 1;
+            newID = rowIDName.Substring(0, 3) + newValue.ToString().PadLeft(6, '0');
             return newID;
         }
         public static dynamic getDataReader(string sql)

@@ -21,7 +21,7 @@ namespace miniSys0._3
         //deparment:  Receptionist,Technician, Customer, Admin
 
         //test data
-        public static string user_ID = "Sta000000";
+        public static string user_ID = "Sta999999";
         public static string user_name = "Innis";
         public static string user_phone = "8120633";
         public static string user_email = "test@test.mail.com";
@@ -42,6 +42,30 @@ namespace miniSys0._3
         public static Color LogoBkg = Color.FromArgb(70, 141, 255);
         public static string loginStatus = "Login";  //Login,Relogin
         public static bool ifCefInit = false;
+
+        public static void ShowALLPropertyValue()
+        {
+            Console.WriteLine($"User_type.user_deparment: {user_deparment}");
+            Console.WriteLine($"User_type.user_ID: {user_ID}");
+            Console.WriteLine($"User_type.user_name: {user_name}");
+            Console.WriteLine($"User_type.user_phone: {user_phone}");
+            Console.WriteLine($"User_type.user_email: {user_email}");
+            Console.WriteLine($"User_type.Birthday: {Birthday}");
+            Console.WriteLine($"User_type.user_gender: {user_gender}");
+            Console.WriteLine($"User_type.user_post: {user_post}");
+            Console.WriteLine($"User_type.user_ID_number: {user_ID_number}");
+            Console.WriteLine($"User_type.user_about: {user_about}");
+            Console.WriteLine($"User_type.user_Country: {user_Country}");
+            Console.WriteLine($"User_type.user_Address: {user_Address}");
+            Console.WriteLine($"User_type.user_regtime: {user_regtime}");
+            Console.WriteLine($"User_type.user_security_qustion: {user_security_qustion}");
+            Console.WriteLine($"User_type.user_security_answer: {user_security_answer}");
+            Console.WriteLine($"User_type.user_password: {user_password}");
+            Console.WriteLine($"User_type.LogoFore: {LogoFore}");
+            Console.WriteLine($"User_type.LogoBkg: {LogoBkg}");
+            Console.WriteLine($"User_type.loginStatus: {loginStatus}");
+            Console.WriteLine($"User_type.ifCefInit: {ifCefInit}");
+        }
     }
 
     public class ArticlesInfo
@@ -98,5 +122,60 @@ namespace miniSys0._3
         public static bool step1Activate = false;
         public static bool step2Activate = false;
         public static bool step3Activate = false;
+
+        public static void ShowALLPropertyValue()
+        {
+            Console.WriteLine($"User_type.user_deparment: {user_deparment}");
+            Console.WriteLine($"User_type.user_ID: {user_ID}");
+            Console.WriteLine($"User_type.user_name: {user_name}");
+            Console.WriteLine($"User_type.user_phone: {user_phone}");
+            Console.WriteLine($"User_type.user_email: {user_email}");
+            Console.WriteLine($"User_type.user_Birthday: {user_Birthday}");
+            Console.WriteLine($"User_type.user_gender: {user_gender}");
+            Console.WriteLine($"User_type.user_post: {user_post}");
+            Console.WriteLine($"User_type.user_ID_number: {user_ID_number}");
+            Console.WriteLine($"User_type.user_about: {user_about}");
+            Console.WriteLine($"User_type.user_Country: {user_Country}");
+            Console.WriteLine($"User_type.user_Address: {user_Address}");
+            Console.WriteLine($"User_type.user_regtime: {user_regtime}");
+            Console.WriteLine($"User_type.user_security_qustion: {user_security_qustion}");
+            Console.WriteLine($"User_type.user_security_answer: {user_security_answer}");
+            Console.WriteLine($"User_type.user_password: {user_password}");
+            Console.WriteLine($"User_type.step1Activate: {step1Activate}");
+            Console.WriteLine($"User_type.step2Activate: {step2Activate}");
+            Console.WriteLine($"User_type.step3Activate: {step3Activate}");
+        }
+    }
+
+    public static class ReceiptInfoCache
+    {
+        public static string orderID = "";
+        public static string service_Type = "";
+        public static string customerID = "";
+        public static string receptionist = "";
+        public static string urgent = "";
+        public static string model = "";
+        public static string time = "";
+        public static string description = "";
+        public static string price = "";
+        public static string payment_method = "";
+        public static string star = "";
+        public static string Card_Account_ID = "";
+
+        public static void ShowALLPropertyValue()
+        {
+            Console.WriteLine($"User_type.orderID: {orderID}");
+            Console.WriteLine($"User_type.service_Type: {service_Type}");
+            Console.WriteLine($"User_type.customerID: {customerID}");
+            Console.WriteLine($"User_type.receptionist: {receptionist}");
+            Console.WriteLine($"User_type.urgent: {urgent}");
+            Console.WriteLine($"User_type.model: {model}");
+            Console.WriteLine($"User_type.time: {time}");
+            Console.WriteLine($"User_type.description: {description}");
+            Console.WriteLine($"User_type.price: {price}");
+            Console.WriteLine($"User_type.payment_method: {payment_method}");
+            Console.WriteLine($"User_type.star: {star}");
+            Console.WriteLine($"User_type.Card_Account_ID: {Card_Account_ID}");
+        }
     }
 }

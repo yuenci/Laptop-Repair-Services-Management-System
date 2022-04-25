@@ -149,6 +149,18 @@
     <Compile Include="Controls\Others\UC_BasicInfo.Designer.cs">
       <DependentUpon>UC_BasicInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Others\UC_ReciptComplete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Others\UC_ReciptComplete.Designer.cs">
+      <DependentUpon>UC_ReciptComplete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Others\UC_ReciptSubmit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Others\UC_ReciptSubmit.Designer.cs">
+      <DependentUpon>UC_ReciptSubmit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Others\UC_Registe_Complete.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -293,6 +305,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Others\UC_BasicInfo.resx">
       <DependentUpon>UC_BasicInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Others\UC_ReciptComplete.resx">
+      <DependentUpon>UC_ReciptComplete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Others\UC_ReciptSubmit.resx">
+      <DependentUpon>UC_ReciptSubmit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Others\UC_Registe_Complete.resx">
       <DependentUpon>UC_Registe_Complete.cs</DependentUpon>
