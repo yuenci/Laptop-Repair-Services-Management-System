@@ -1,4 +1,5 @@
-﻿using Sunny.UI;
+﻿using miniSys0._3.Controls.MainArea;
+using Sunny.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -113,10 +114,13 @@ namespace miniSys0._3.Controls.Others
 
             if (flag1 && flag2 && flag3 && flag4 && flag5 &&!errorBar.Visible&& IfcardIDOKTosubmit())
             {
-                MessageBox.Show("Submit success");
+                //MessageBox.Show("Submit success");
+
+                ReceiptInfoCache.customer_name = name.Text;
 
                 ReceiptInfoCache.orderID = SQLCursor.AddOneToLastID("OrderID", "Orders");
                 ReceiptInfoCache.service_Type = getService_Type();
+                ReceiptInfoCache.service_Name = type.SelectedItem.ToString();
                 ReceiptInfoCache.customerID = customerIDCashe;
                 ReceiptInfoCache.receptionist = User_type.user_ID;
                 ReceiptInfoCache.urgent = ifUrgent().ToString();
@@ -125,7 +129,12 @@ namespace miniSys0._3.Controls.Others
                 ReceiptInfoCache.price = TotalPrice().ToString();
                 ReceiptInfoCache.payment_method = method.SelectedItem.ToString();
                 ReceiptInfoCache.Card_Account_ID = Card_Account_ID;
-                ReceiptInfoCache.ShowALLPropertyValue();
+                //ReceiptInfoCache.ShowALLPropertyValue();
+
+
+                UC_ReciptComplete uc = new UC_ReciptComplete();
+                AddUserControl.Add(uc, UC_Payment.uc_Payment.contentPanel);
+
             }
         }
 

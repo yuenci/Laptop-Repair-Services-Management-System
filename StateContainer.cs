@@ -11,7 +11,8 @@ namespace miniSys0._3
     {
         public static string DBString = @"Data Source=LAPTOP-5ACE008F\SQLEXPRESS;Initial Catalog=CsharpRepairerInc;Integrated Security=True";
         //public static string DBString = @"Dddddata Source=LAPTOP-5ACE008F\SQLEXPRESS;Initial Catalog=CsharpRepairerInc;Integrated Security=True";
-
+        public static string path = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin"));
+        //E:\Materials\【LOOP】\Assignment\miniSys0.3\
     }
     public class User_type
     {
@@ -151,6 +152,7 @@ namespace miniSys0._3
     {
         public static string orderID = "";
         public static string service_Type = "";
+        public static string service_Name = "";
         public static string customerID = "";
         public static string receptionist = "";
         public static string urgent = "";
@@ -162,10 +164,13 @@ namespace miniSys0._3
         public static string star = "";
         public static string Card_Account_ID = "";
 
+        public static string customer_name = "";
+
         public static void ShowALLPropertyValue()
         {
             Console.WriteLine($"User_type.orderID: {orderID}");
             Console.WriteLine($"User_type.service_Type: {service_Type}");
+            Console.WriteLine($"User_type.service_Type: {service_Name}");
             Console.WriteLine($"User_type.customerID: {customerID}");
             Console.WriteLine($"User_type.receptionist: {receptionist}");
             Console.WriteLine($"User_type.urgent: {urgent}");

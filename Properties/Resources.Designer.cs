@@ -223,6 +223,16 @@ namespace miniSys0._3.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap receiptIcon {
+            get {
+                object obj = ResourceManager.GetObject("receiptIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap rocket_icon_128 {
             get {
                 object obj = ResourceManager.GetObject("rocket_icon_128", resourceCulture);

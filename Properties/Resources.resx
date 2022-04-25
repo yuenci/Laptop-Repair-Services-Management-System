@@ -133,8 +133,14 @@
   <data name="Mirage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mirage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="headIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\headIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="yesterday" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\yesterday.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="head1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\head1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,17 +160,14 @@
   <data name="todayorder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\todayorder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rocket_icon_128" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2870346_launch project_rocket_startup_icon (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Software code testing-pana" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Software code testing-pana.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="allcontent" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\allcontent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="login_panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\radiu1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="head3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\head3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="head2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\head2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,16 +178,16 @@
   <data name="TMBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TMBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="head1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\head1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="login_panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\radiu1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="head3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\head3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rocket_icon_128" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2870346_launch project_rocket_startup_icon (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cirleHole" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cirleHole-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="headIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\headIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="receiptIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\receiptIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
