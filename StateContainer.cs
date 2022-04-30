@@ -22,8 +22,8 @@ namespace miniSys0._3
         //deparment:  Receptionist,Technician, Customer, Admin
 
         //test data
-        public static string user_ID = "Sta999999";
-        public static string user_name = "Innis";
+        public static string user_ID = "Sta000052";
+        public static string user_name = "James Young";
         public static string user_phone = "8120633";
         public static string user_email = "test@test.mail.com";
         public static string Birthday = "19990416";

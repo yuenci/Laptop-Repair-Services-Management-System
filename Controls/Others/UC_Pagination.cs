@@ -5,8 +5,10 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using miniSys0._3.Controls.MainArea;
 using Sunny.UI;
 
 namespace miniSys0._3.Controls.Others
@@ -17,17 +19,21 @@ namespace miniSys0._3.Controls.Others
         private int DataAmount;
         public int pageID;
         public UC_Pagination()
+        {     
+            InitializeComponent();   
+        }
+        public string type = "";
+        //card ; list
+        public void Init(int dataAmount,int perPage)
         {
-            int DataAmount = 1000;
-            InitializeComponent();
-
-            this.DataAmount = DataAmount;
+            this.DataAmount = dataAmount;
             InitTotal();
 
-            int pages = culPageNum();
+            int pages = culPageNum(perPage);
             IntButtonRender(pages);
             InitButtonEvent();
         }
+
         private bool ifLessEight;
         private void InitTotal()
         {
@@ -777,6 +783,8 @@ namespace miniSys0._3.Controls.Others
                     }
                 }
             }
+            //Console.WriteLine(pageID);
+            cardCallBack();
         }
         private void clearRect()
         {
@@ -828,7 +836,7 @@ namespace miniSys0._3.Controls.Others
             }
             else if (senter.Equals(symButton7))
             {
-                Console.WriteLine("hover");
+                //Console.WriteLine("hover");
                 if (symButton7.Text == "...")
                 {
                     symButton7.Text = "";
@@ -907,9 +915,53 @@ namespace miniSys0._3.Controls.Others
 
         private void UITextBoxPageNo_KeyDown(object sender, KeyEventArgs e)
         {
+            
+        }
+
+        private void pageNumEnter_KeyDown(object sender, KeyEventArgs e)
+        {
             if (e.KeyCode == Keys.Enter)// press enter key
             {
-                logic(pageNumEnter.Text, 0, currentBlue());
+                string str = pageNumEnter.Text;
+                if (str != null && Regex.IsMatch(str, @"^\d+$"))
+                {
+                    if (int.Parse(str)<= pageNum && int.Parse(str) >=1)
+                    {
+                        logic(pageNumEnter.Text, 0, currentBlue());
+                    }
+                    
+                }
+                Console.WriteLine("enter");
+            }
+        }
+
+        private void cardCallBack()
+        {
+            if (type == "card")
+            {
+                Console.WriteLine("called");
+                string sql = "WITH A AS(SELECT DISTINCT OrderID,Time from Schedule WhERE Status = 'Finished'),";
+                sql += "B AS(SELECT DISTINCT OrderID,Time from Schedule)";
+                sql += "select * from B where (select count(1) as num from A where A.OrderID = B.OrderID) = 0  Order by Time";
+
+                dynamic[] data = SQLCursor.Query(sql);
+
+                dynamic[] card = { UC_TaskCards.uc_TaskCards.uC_Task_Card1,
+                UC_TaskCards.uc_TaskCards.uC_Task_Card2,
+                UC_TaskCards.uc_TaskCards.uC_Task_Card3,
+                UC_TaskCards.uc_TaskCards.uC_Task_Card4,
+                UC_TaskCards.uc_TaskCards.uC_Task_Card5,
+                UC_TaskCards.uc_TaskCards.uC_Task_Card6,
+                UC_TaskCards.uc_TaskCards.uC_Task_Card7,
+                UC_TaskCards.uc_TaskCards.uC_Task_Card8,
+                UC_TaskCards.uc_TaskCards.uC_Task_Card9,};
+
+
+
+                for (int i = 0; i < card.Length; i++)
+                {
+                    card[i].Init(data[9*pageID -9 + i][0]);
+                }
             }
         }
     }

@@ -15,6 +15,27 @@ namespace miniSys0._3.Controls.Others
         public UC_Task_Card()
         {
             InitializeComponent();
+            InitStyle();
+        }
+        private void InitStyle() 
+        {
+            uiLine1.FillColor = Color.Transparent;
+            uiLine1.LineColor = Color.FromArgb(242, 243, 245);
+            edit.FillColor = Color.Transparent;
+            edit.BackColor = Color.Transparent;
+            more.FillColor = Color.Transparent;
+            more.BackColor = Color.Transparent;
+            start.FillColor = Color.Transparent;
+            start.BackColor = Color.Transparent;
+            done.FillColor = Color.Transparent;
+            done.BackColor = Color.Transparent;
+            edit.ForeColor = Color.Silver;
+            more.ForeColor = Color.Silver;
+            start.ForeColor = Color.Silver;
+            done.ForeColor = Color.Silver;
+            avatar.FillColor = Color.FromArgb(64, 128, 255);
+            avatar.ForeColor = Color.White;
+
         }
         private  string ordIDCache = "";
         public void Init(string ordID)
@@ -27,6 +48,7 @@ namespace miniSys0._3.Controls.Others
 
             model.Text = data[0];
             name = data[1];
+            avatar.Text = name.Substring(0,1);
             service.Text = data[2];
             time.Text = data[3];
             ordIDCache = ordID;
@@ -36,6 +58,8 @@ namespace miniSys0._3.Controls.Others
 
             string description = SQLCursor.Query($"select Description From Orders Where OrderID ='{ordIDCache}'")[0];
             InitDescriptionIcon(description);
+
+       
         }
         private string  name ="";
         private void avatar_MouseHover(object sender, EventArgs e)
@@ -50,16 +74,19 @@ namespace miniSys0._3.Controls.Others
             string time = DateTime.Now.ToString();
             SQLCursor.Execute($"INSERT INTO Schedule VALUES ('{schID}','Progress','{time}','{User_type.user_ID}','{ordIDCache}')");
             done.Enabled = true;
+            uiUserControl1.FillColor = Color.FromArgb(255, 247, 232);
 
         }
 
         private void done_Click(object sender, EventArgs e)
         {
             start.Enabled = false;
+            done.ForeColor = Color.Green;
             string schID = SQLCursor.AddOneToLastID("ScheduleID", "Schedule");
             string time = DateTime.Now.ToString();
             SQLCursor.Execute($"INSERT INTO Schedule VALUES ('{schID}','Completed','{time}','{User_type.user_ID}','{ordIDCache}')");
             done.Enabled = false;
+            uiUserControl1.FillColor = Color.FromArgb(232, 255, 234);
         }
 
         private void InitStatus(string status)
@@ -67,37 +94,40 @@ namespace miniSys0._3.Controls.Others
             if (status == "Order")
             {
                 start.Enabled=true;
-                start.ForeColor=Color.FromArgb(242, 243, 245);
+                start.ForeColor=Color.Silver;
 
                 done.Enabled=false;
-                done.ForeColor = Color.FromArgb(242, 243, 245);
+                done.ForeColor = Color.Silver;
             }else if (status == "Progress")
             {
                 start.Enabled = false;
                 start.ForeColor = Color.Green;
 
                 done.Enabled = true;
-                done.ForeColor = Color.FromArgb(242, 243, 245);
-            }else if (status == "Completed" || status == "Finished")
+                done.ForeColor = Color.Silver;
+                uiUserControl1.FillColor = Color.FromArgb(255, 247, 232);
+            }
+            else if (status == "Completed" || status == "Finished")
             {
                 start.Enabled = false;
                 start.ForeColor = Color.Green;
 
                 done.Enabled = false;
                 done.ForeColor = Color.Green;
+                uiUserControl1.FillColor = Color.FromArgb(232, 255, 234);
             }
         }
 
         private void InitDescriptionIcon(string description)
         {
-            if (description == "")
+            if (description != "")
             {
                 edit.ForeColor = Color.Green;
-                edit.Enabled = false;
+                edit.Enabled = true;
             }
             else
             {
-                edit.ForeColor = Color.FromArgb(242, 243, 245);
+                edit.ForeColor = Color.Silver;
                 edit.Enabled = true;
             }
         }
@@ -111,7 +141,19 @@ namespace miniSys0._3.Controls.Others
 
         private void edit_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("edit");
+            AddDescription addDescription = new AddDescription();
+            addDescription.Init(ordIDCache);
+            addDescription.Show();
+        }
+
+        private void start_MouseHover(object sender, EventArgs e)
+        {
+            toolTip2.Show("Start repair", start);
+        }
+
+        private void done_MouseHover(object sender, EventArgs e)
+        {
+            toolTip3.Show("Complete repair", done);
         }
     }
 }

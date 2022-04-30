@@ -28,14 +28,16 @@ namespace miniSys0._3
             //if there was result,how many cols in the result
             int colsNum = int.Parse(dr.FieldCount.ToString());
             List<dynamic> result = new List<dynamic>();
-            string[] resultSingle = new string[colsNum];
+            
             while (dr.Read())
             {
+                string[] resultSingle = new string[colsNum];
                 for (int i = 0; i < colsNum; i++)
                 {
                     resultSingle[i] = dr[i].ToString();
                 }
                 result.Add(resultSingle);
+                
             }
 
             dr.Close();
@@ -199,7 +201,7 @@ namespace miniSys0._3
             //sql = "SELECT TOP 1 ArticlelD FROM Articles ORDER BY  ArticlelD DESC;"
             int newValue;
             string newID;
-            if (tableName == "Orders")
+            if (tableName == "Orders" || tableName == "Schedule")
             {
                 newValue = int.Parse(lastOneID.Substring(3, 8)) + 1;
                 newID = rowIDName.Substring(0, 3) + newValue.ToString().PadLeft(8, '0');

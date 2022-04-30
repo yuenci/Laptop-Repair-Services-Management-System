@@ -74,14 +74,14 @@
             this.label1.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(10, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(255, 28);
+            this.label1.Size = new System.Drawing.Size(227, 28);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Service requested Cards";
+            this.label1.Text = "Service requested list";
             // 
             // UC_TaskList
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(250)))));
             this.Controls.Add(this.Container);
             this.Controls.Add(this.urC_Crumbs1);
             this.Name = "UC_TaskList";

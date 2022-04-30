@@ -64,6 +64,7 @@
             this.pageNumEnter.Text = "50000";
             this.pageNumEnter.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.pageNumEnter.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.pageNumEnter.KeyDown += new System.Windows.Forms.KeyEventHandler(this.pageNumEnter_KeyDown);
             // 
             // symButton10
             // 
@@ -555,13 +556,13 @@
 
         #endregion
 
-        private Sunny.UI.UITextBox pageNumEnter;
+        public Sunny.UI.UITextBox pageNumEnter;
         private Sunny.UI.UISymbolButton symButton10;
         private Sunny.UI.UILabel uiLabel1;
         private Sunny.UI.UISymbolButton symButton0;
         private Sunny.UI.UILabel uiLabel4;
         private Sunny.UI.UISymbolButton symButton2;
-        private Sunny.UI.UIComboBox ComboBox;
+        public Sunny.UI.UIComboBox ComboBox;
         private Sunny.UI.UISymbolButton symButton3;
         private Sunny.UI.UISymbolButton symButton6;
         private Sunny.UI.UISymbolButton symButton7;
@@ -570,6 +571,6 @@
         private Sunny.UI.UISymbolButton symButton9;
         private Sunny.UI.UISymbolButton symButton4;
         private Sunny.UI.UISymbolButton symButton1;
-        private Sunny.UI.UILabel total;
+        public Sunny.UI.UILabel total;
     }
 }

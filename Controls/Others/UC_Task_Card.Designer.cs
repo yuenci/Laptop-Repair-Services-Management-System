@@ -39,33 +39,40 @@
             this.start = new Sunny.UI.UIAvatar();
             this.done = new Sunny.UI.UIAvatar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.uiUserControl1 = new Sunny.UI.UIUserControl();
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
+            this.uiUserControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // uiLine1
             // 
-            this.uiLine1.BackColor = System.Drawing.Color.White;
+            this.uiLine1.BackColor = System.Drawing.Color.Transparent;
             this.uiLine1.FillColor = System.Drawing.Color.Transparent;
             this.uiLine1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLine1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(243)))));
-            this.uiLine1.Location = new System.Drawing.Point(3, 24);
+            this.uiLine1.Location = new System.Drawing.Point(3, 36);
             this.uiLine1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiLine1.Name = "uiLine1";
-            this.uiLine1.Size = new System.Drawing.Size(280, 29);
+            this.uiLine1.Size = new System.Drawing.Size(280, 10);
             this.uiLine1.Style = Sunny.UI.UIStyle.Custom;
             this.uiLine1.TabIndex = 0;
             this.uiLine1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // avatar
             // 
-            this.avatar.AvatarSize = 32;
-            this.avatar.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.avatar.Location = new System.Drawing.Point(7, 103);
+            this.avatar.AvatarSize = 30;
+            this.avatar.BackColor = System.Drawing.Color.Transparent;
+            this.avatar.Font = new System.Drawing.Font("微软雅黑", 15F);
+            this.avatar.Icon = Sunny.UI.UIAvatar.UIIcon.Text;
+            this.avatar.Location = new System.Drawing.Point(7, 102);
             this.avatar.MinimumSize = new System.Drawing.Size(1, 1);
             this.avatar.Name = "avatar";
             this.avatar.Size = new System.Drawing.Size(32, 32);
+            this.avatar.Style = Sunny.UI.UIStyle.Custom;
+            this.avatar.Symbol = 0;
             this.avatar.SymbolSize = 30;
             this.avatar.TabIndex = 2;
-            this.avatar.Text = "uiAvatar1";
+            this.avatar.Text = "I";
             this.avatar.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.avatar.MouseHover += new System.EventHandler(this.avatar_MouseHover);
             // 
@@ -75,8 +82,7 @@
             this.edit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.edit.FillColor = System.Drawing.Color.Transparent;
             this.edit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.edit.ForeColor = System.Drawing.Color.Gray;
-            this.edit.Location = new System.Drawing.Point(227, 3);
+            this.edit.Location = new System.Drawing.Point(227, 2);
             this.edit.MinimumSize = new System.Drawing.Size(1, 1);
             this.edit.Name = "edit";
             this.edit.Size = new System.Drawing.Size(32, 32);
@@ -90,10 +96,12 @@
             // 
             // time
             // 
-            this.time.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.time.Location = new System.Drawing.Point(45, 108);
+            this.time.BackColor = System.Drawing.Color.Transparent;
+            this.time.Font = new System.Drawing.Font(".萍方-简", 12F);
+            this.time.Location = new System.Drawing.Point(45, 107);
             this.time.Name = "time";
             this.time.Size = new System.Drawing.Size(163, 23);
+            this.time.Style = Sunny.UI.UIStyle.Custom;
             this.time.TabIndex = 6;
             this.time.Text = "2022-04-29 23:44:00";
             this.time.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -101,10 +109,12 @@
             // 
             // model
             // 
-            this.model.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.model.Location = new System.Drawing.Point(3, 8);
+            this.model.BackColor = System.Drawing.Color.Transparent;
+            this.model.Font = new System.Drawing.Font(".萍方-简", 12F);
+            this.model.Location = new System.Drawing.Point(3, 7);
             this.model.Name = "model";
             this.model.Size = new System.Drawing.Size(177, 23);
+            this.model.Style = Sunny.UI.UIStyle.Custom;
             this.model.TabIndex = 7;
             this.model.Text = "Dell ModelDe3";
             this.model.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -112,8 +122,9 @@
             // 
             // service
             // 
+            this.service.BackColor = System.Drawing.Color.Transparent;
             this.service.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.service.Location = new System.Drawing.Point(7, 47);
+            this.service.Location = new System.Drawing.Point(7, 46);
             this.service.Name = "service";
             this.service.Size = new System.Drawing.Size(290, 53);
             this.service.TabIndex = 8;
@@ -125,8 +136,7 @@
             this.more.Cursor = System.Windows.Forms.Cursors.Hand;
             this.more.FillColor = System.Drawing.Color.Transparent;
             this.more.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.more.ForeColor = System.Drawing.Color.Gray;
-            this.more.Location = new System.Drawing.Point(265, 3);
+            this.more.Location = new System.Drawing.Point(265, 2);
             this.more.MinimumSize = new System.Drawing.Size(1, 1);
             this.more.Name = "more";
             this.more.Size = new System.Drawing.Size(32, 32);
@@ -144,8 +154,7 @@
             this.start.Cursor = System.Windows.Forms.Cursors.Hand;
             this.start.FillColor = System.Drawing.Color.Transparent;
             this.start.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.start.ForeColor = System.Drawing.Color.Gray;
-            this.start.Location = new System.Drawing.Point(227, 103);
+            this.start.Location = new System.Drawing.Point(227, 102);
             this.start.MinimumSize = new System.Drawing.Size(1, 1);
             this.start.Name = "start";
             this.start.Size = new System.Drawing.Size(32, 32);
@@ -156,6 +165,7 @@
             this.start.Text = "uiAvatar4";
             this.start.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.start.Click += new System.EventHandler(this.start_Click);
+            this.start.MouseHover += new System.EventHandler(this.start_MouseHover);
             // 
             // done
             // 
@@ -164,8 +174,7 @@
             this.done.Enabled = false;
             this.done.FillColor = System.Drawing.Color.Transparent;
             this.done.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.done.ForeColor = System.Drawing.Color.Gray;
-            this.done.Location = new System.Drawing.Point(265, 103);
+            this.done.Location = new System.Drawing.Point(265, 102);
             this.done.MinimumSize = new System.Drawing.Size(1, 1);
             this.done.Name = "done";
             this.done.Size = new System.Drawing.Size(32, 32);
@@ -176,22 +185,40 @@
             this.done.Text = "uiAvatar5";
             this.done.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.done.Click += new System.EventHandler(this.done_Click);
+            this.done.MouseHover += new System.EventHandler(this.done_MouseHover);
+            // 
+            // uiUserControl1
+            // 
+            this.uiUserControl1.Controls.Add(this.more);
+            this.uiUserControl1.Controls.Add(this.edit);
+            this.uiUserControl1.Controls.Add(this.model);
+            this.uiUserControl1.Controls.Add(this.service);
+            this.uiUserControl1.Controls.Add(this.done);
+            this.uiUserControl1.Controls.Add(this.uiLine1);
+            this.uiUserControl1.Controls.Add(this.start);
+            this.uiUserControl1.Controls.Add(this.avatar);
+            this.uiUserControl1.Controls.Add(this.time);
+            this.uiUserControl1.FillColor = System.Drawing.Color.White;
+            this.uiUserControl1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiUserControl1.Location = new System.Drawing.Point(3, 2);
+            this.uiUserControl1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiUserControl1.Name = "uiUserControl1";
+            this.uiUserControl1.RectColor = System.Drawing.Color.Gainsboro;
+            this.uiUserControl1.Size = new System.Drawing.Size(300, 140);
+            this.uiUserControl1.Style = Sunny.UI.UIStyle.Custom;
+            this.uiUserControl1.TabIndex = 12;
+            this.uiUserControl1.Text = "uiUserControl1";
+            this.uiUserControl1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiUserControl1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // UC_Task_Card
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.done);
-            this.Controls.Add(this.start);
-            this.Controls.Add(this.more);
-            this.Controls.Add(this.service);
-            this.Controls.Add(this.model);
-            this.Controls.Add(this.time);
-            this.Controls.Add(this.edit);
-            this.Controls.Add(this.avatar);
-            this.Controls.Add(this.uiLine1);
+            this.Controls.Add(this.uiUserControl1);
             this.Name = "UC_Task_Card";
-            this.Size = new System.Drawing.Size(300, 140);
+            this.Size = new System.Drawing.Size(305, 145);
+            this.uiUserControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -208,5 +235,8 @@
         private Sunny.UI.UIAvatar start;
         private Sunny.UI.UIAvatar done;
         private System.Windows.Forms.ToolTip toolTip1;
+        private Sunny.UI.UIUserControl uiUserControl1;
+        private System.Windows.Forms.ToolTip toolTip2;
+        private System.Windows.Forms.ToolTip toolTip3;
     }
 }
