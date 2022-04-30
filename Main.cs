@@ -41,7 +41,8 @@ namespace miniSys0._3
             //add_UC_UserInfo();
             //add_UC_UserSetting();
             //add_UC_registration
-            add_UC_Payment();
+            //add_UC_Payment();
+            add_task_cards();
 
 
 
@@ -388,6 +389,15 @@ namespace miniSys0._3
             mainPanel.Controls.Add(uc);
             uc.BringToFront();
 
+        }
+
+        private void  add_task_cards()
+        {
+            UC_TaskCards uc = new UC_TaskCards();
+            uc.Dock = DockStyle.Fill;
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(uc);
+            uc.BringToFront();
         }
         #endregion
     }

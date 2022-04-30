@@ -1,6 +1,6 @@
 ﻿namespace miniSys0._3.Controls.MainArea
 {
-    partial class UC_Payment
+    partial class UC_TaskList
     {
         /// <summary> 
         /// 必需的设计器变量。
@@ -28,13 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.urC_Crumbs1 = new miniSys0._3.Controls.Others.UrC_Crumbs();
             this.Container = new Sunny.UI.UIUserControl();
             this.contentPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.urC_Crumbs1 = new miniSys0._3.Controls.Others.UrC_Crumbs();
-            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.Container.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // urC_Crumbs1
+            // 
+            this.urC_Crumbs1.BackColor = System.Drawing.Color.Transparent;
+            this.urC_Crumbs1.Location = new System.Drawing.Point(0, 4);
+            this.urC_Crumbs1.Name = "urC_Crumbs1";
+            this.urC_Crumbs1.Size = new System.Drawing.Size(300, 35);
+            this.urC_Crumbs1.TabIndex = 2;
             // 
             // Container
             // 
@@ -43,13 +50,13 @@
             this.Container.Controls.Add(this.label1);
             this.Container.FillColor = System.Drawing.Color.White;
             this.Container.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Container.Location = new System.Drawing.Point(4, 58);
+            this.Container.Location = new System.Drawing.Point(3, 61);
             this.Container.MinimumSize = new System.Drawing.Size(1, 1);
             this.Container.Name = "Container";
             this.Container.RectColor = System.Drawing.Color.White;
             this.Container.Size = new System.Drawing.Size(1118, 659);
             this.Container.Style = Sunny.UI.UIStyle.Custom;
-            this.Container.TabIndex = 2;
+            this.Container.TabIndex = 3;
             this.Container.Text = "uiUserControl1";
             this.Container.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.Container.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -67,26 +74,17 @@
             this.label1.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(10, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(257, 28);
+            this.label1.Size = new System.Drawing.Size(255, 28);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Receipt generating Form";
+            this.label1.Text = "Service requested Cards";
             // 
-            // urC_Crumbs1
+            // UC_TaskList
             // 
-            this.urC_Crumbs1.BackColor = System.Drawing.Color.Transparent;
-            this.urC_Crumbs1.Location = new System.Drawing.Point(0, 4);
-            this.urC_Crumbs1.Name = "urC_Crumbs1";
-            this.urC_Crumbs1.Size = new System.Drawing.Size(300, 35);
-            this.urC_Crumbs1.TabIndex = 1;
-            // 
-            // UC_Payment
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(250)))));
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.Container);
             this.Controls.Add(this.urC_Crumbs1);
-            this.Name = "UC_Payment";
+            this.Name = "UC_TaskList";
             this.Size = new System.Drawing.Size(1125, 720);
             this.Container.ResumeLayout(false);
             this.Container.PerformLayout();
@@ -100,6 +98,5 @@
         private Sunny.UI.UIUserControl Container;
         public System.Windows.Forms.Panel contentPanel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

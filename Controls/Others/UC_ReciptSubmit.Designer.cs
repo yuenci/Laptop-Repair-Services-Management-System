@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.brand = new Sunny.UI.UITextBox();
             this.method = new Sunny.UI.UIComboBox();
@@ -45,6 +46,7 @@
             this.errorBar = new Sunny.UI.UISymbolLabel();
             this.successIcon = new Sunny.UI.UIAvatar();
             this.cardID = new Sunny.UI.UITextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // label2
@@ -191,6 +193,7 @@
             this.submitButton.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.submitButton.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
+            //this.submitButton.MouseHover += new System.EventHandler(this.submitButton_MouseHover);
             // 
             // uiLabel5
             // 
@@ -363,5 +366,6 @@
         private Sunny.UI.UISymbolLabel errorBar;
         public Sunny.UI.UIAvatar successIcon;
         private Sunny.UI.UITextBox cardID;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

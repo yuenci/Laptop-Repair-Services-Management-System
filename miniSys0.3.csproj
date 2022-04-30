@@ -95,6 +95,18 @@
     <Compile Include="Controls\MainArea\UC_Registration .Designer.cs">
       <DependentUpon>UC_Registration .cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\MainArea\UC_TaskCards.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MainArea\UC_TaskCards.Designer.cs">
+      <DependentUpon>UC_TaskCards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MainArea\UC_TaskList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MainArea\UC_TaskList.Designer.cs">
+      <DependentUpon>UC_TaskList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MainArea\UC_UserInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -155,6 +167,12 @@
     <Compile Include="Controls\Others\UC_BasicInfo.Designer.cs">
       <DependentUpon>UC_BasicInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Others\UC_Pagination.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Others\UC_Pagination.Designer.cs">
+      <DependentUpon>UC_Pagination.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Others\UC_ReciptComplete.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -202,6 +220,12 @@
     </Compile>
     <Compile Include="Controls\Others\UC_StaffCard1.Designer.cs">
       <DependentUpon>UC_StaffCard1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Others\UC_Task_Card.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Others\UC_Task_Card.Designer.cs">
+      <DependentUpon>UC_Task_Card.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\Others\UrC_Crumbs.cs">
       <SubType>UserControl</SubType>
@@ -282,6 +306,12 @@
     <EmbeddedResource Include="Controls\MainArea\UC_Registration .resx">
       <DependentUpon>UC_Registration .cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MainArea\UC_TaskCards.resx">
+      <DependentUpon>UC_TaskCards.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MainArea\UC_TaskList.resx">
+      <DependentUpon>UC_TaskList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\MainArea\UC_UserInfo.resx">
       <DependentUpon>UC_UserInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -312,6 +342,9 @@
     <EmbeddedResource Include="Controls\Others\UC_BasicInfo.resx">
       <DependentUpon>UC_BasicInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Others\UC_Pagination.resx">
+      <DependentUpon>UC_Pagination.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\Others\UC_ReciptComplete.resx">
       <DependentUpon>UC_ReciptComplete.cs</DependentUpon>
     </EmbeddedResource>
@@ -335,6 +368,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Others\UC_StaffCard1.resx">
       <DependentUpon>UC_StaffCard1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Others\UC_Task_Card.resx">
+      <DependentUpon>UC_Task_Card.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Others\UrC_Crumbs.resx">
       <DependentUpon>UrC_Crumbs.cs</DependentUpon>
