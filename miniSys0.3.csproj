@@ -95,12 +95,6 @@
     <Compile Include="Controls\MainArea\UC_Registration .Designer.cs">
       <DependentUpon>UC_Registration .cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\MainArea\UC_TaskCards.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\MainArea\UC_TaskCards.Designer.cs">
-      <DependentUpon>UC_TaskCards.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controls\MainArea\UC_TaskList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -244,6 +238,12 @@
     <Compile Include="Loading.Designer.cs">
       <DependentUpon>Loading.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrderDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderDetails.Designer.cs">
+      <DependentUpon>OrderDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="SQLCursor.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -305,9 +305,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\MainArea\UC_Registration .resx">
       <DependentUpon>UC_Registration .cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\MainArea\UC_TaskCards.resx">
-      <DependentUpon>UC_TaskCards.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\MainArea\UC_TaskList.resx">
       <DependentUpon>UC_TaskList.cs</DependentUpon>
@@ -392,6 +389,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormFloating.resx">
       <DependentUpon>FormFloating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderDetails.resx">
+      <DependentUpon>OrderDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

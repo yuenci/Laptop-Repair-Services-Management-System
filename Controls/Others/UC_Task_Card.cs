@@ -101,5 +101,17 @@ namespace miniSys0._3.Controls.Others
                 edit.Enabled = true;
             }
         }
+
+        private void more_Click(object sender, EventArgs e)
+        {
+            OrderDetails orderDetails = new OrderDetails();
+            orderDetails.Init(ordIDCache);
+            orderDetails.Show();
+        }
+
+        private void edit_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("edit");
+        }
     }
 }

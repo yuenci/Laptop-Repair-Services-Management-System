@@ -393,11 +393,11 @@ namespace miniSys0._3
 
         private void  add_task_cards()
         {
-            UC_TaskCards uc = new UC_TaskCards();
-            uc.Dock = DockStyle.Fill;
+            //UC_TaskCards uc = new UC_TaskCards();
+            /*uc.Dock = DockStyle.Fill;
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(uc);
-            uc.BringToFront();
+            uc.BringToFront();*/
         }
         #endregion
     }

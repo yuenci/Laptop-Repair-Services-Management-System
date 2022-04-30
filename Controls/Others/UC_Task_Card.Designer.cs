@@ -86,6 +86,7 @@
             this.edit.TabIndex = 4;
             this.edit.Text = "uiAvatar2";
             this.edit.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.edit.Click += new System.EventHandler(this.edit_Click);
             // 
             // time
             // 
@@ -121,6 +122,7 @@
             // more
             // 
             this.more.AvatarSize = 32;
+            this.more.Cursor = System.Windows.Forms.Cursors.Hand;
             this.more.FillColor = System.Drawing.Color.Transparent;
             this.more.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.more.ForeColor = System.Drawing.Color.Gray;
@@ -134,6 +136,7 @@
             this.more.TabIndex = 9;
             this.more.Text = "uiAvatar3";
             this.more.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.more.Click += new System.EventHandler(this.more_Click);
             // 
             // start
             // 
