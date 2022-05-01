@@ -11,6 +11,7 @@ using Sunny.UI;
 using miniSys0._3.Controls;
 using System.IO;
 using miniSys0._3.Controls.MainArea;
+using CefSharp.WinForms;
 
 namespace miniSys0._3
 {
@@ -23,7 +24,7 @@ namespace miniSys0._3
             InitializeComponent();
             main = this;
             this.StartPosition = FormStartPosition.CenterScreen;
-
+            InitCef();
 
 
             //left bat
@@ -43,13 +44,22 @@ namespace miniSys0._3
             //add_UC_registration
             //add_UC_Payment();
             //add_task_cards();
-            add_Cus_OrderDetails();
+            //add_Cus_OrderDetails();
+            //add_UC_ServiceReport();
+            add_UC_IncomeAnalysis();
 
 
 
 
         }
         Point mPoint;
+        private void InitCef()
+        {
+            var setting = new CefSettings();
+            setting.MultiThreadedMessageLoop = true;
+            CefSharp.Cef.Initialize(setting);
+        }
+
         private void drag_down(object sender, MouseEventArgs e)
         {
             mPoint = new Point(e.X, e.Y);
@@ -404,6 +414,24 @@ namespace miniSys0._3
         private void add_Cus_OrderDetails()
         {
             UC_Cus_OrderDetails uc = new UC_Cus_OrderDetails();
+            uc.Dock = DockStyle.Fill;
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(uc);
+            uc.BringToFront();
+        }
+
+        private void add_UC_ServiceReport()
+        {
+            UC_ServiceReport uc = new UC_ServiceReport();
+            uc.Dock = DockStyle.Fill;
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(uc);
+            uc.BringToFront();
+        }
+
+        private void add_UC_IncomeAnalysis()
+        {
+            UC_IncomeAnalysis uc = new UC_IncomeAnalysis();
             uc.Dock = DockStyle.Fill;
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(uc);

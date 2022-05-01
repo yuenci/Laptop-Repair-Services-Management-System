@@ -1,0 +1,180 @@
+body {
+    background-color: #f7f8fa;
+    margin: 0;
+    padding: 0;
+    font-family: ".萍方-简";
+    overflow-x: hidden
+}
+
+body::-webkit-scrollbar {
+    width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgb(239, 239, 239);
+    border-radius: 2px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #40a0ff49;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #40a0ff;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    width: 1125px;
+    height: 210px;
+    background-color: #f7f8fa;
+}
+
+#mainCharts {
+    /* border-top: 2px solid red; */
+    width: 1125px;
+    height: 500px;
+    background-color: #f7f8fa;
+}
+
+.card {
+    margin: 0px 5px 0px 5px;
+    /* border: 2px solid red; */
+    background-color: #fff;
+    width: 260px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.title {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.number {
+    margin-left: 10px;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.chartContainer {
+    height: 80px;
+}
+
+.summary {
+
+    margin: 10px 5px 0px 10px;
+    padding-top: 5px;
+    border-top: 1px solid #e8e8e8;
+}
+
+.text {
+    margin: 10px 10px 12px 10px;
+}
+
+svg {
+    position: relative;
+    top: 5px;
+}
+
+#incomeBarChart-container {
+    background-color: white;
+    width: 790px;
+    height: 450px;
+    margin-left: 10px;
+}
+
+
+
+#mainTitle {
+    background-color: white;
+    width: 780px;
+    padding: 10px 10px 10px 10px;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+#rankList {
+    position: absolute;
+    width: 315px;
+    top: 212px;
+    left: 800px;
+    background-color: white;
+}
+
+.infoContainer {
+    margin: 30px 5px 30px 5px;
+
+}
+
+#title {
+    padding: 10px 10px 10px 30px;
+}
+
+.icon {
+    margin-left: 30px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: aqua;
+    border-radius: 40px;
+    text-align: center;
+    line-height: 30px;
+    color: black;
+    background-color: rgb(242, 243, 245);
+}
+
+.name {
+    display: inline-block;
+    width: 130px;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+.sale {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+#icon1,
+#icon2,
+#icon3 {
+    background-color: #314659;
+    color: #fff;
+}
+
+#page2 {
+    /* border-top: 2px solid red; */
+    width: 1125px;
+    height: 700px;
+    background-color: #f7f8fa;
+}
+
+#time {
+    background-color: white;
+    margin: 0px 10px 0px 10px;
+    height: 300px;
+}
+
+#serverType {
+    background-color: #fff;
+    display: inline-block;
+    width: 550px;
+    height: 350px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-bottom: 10px;
+}
+
+#method {
+    background-color: #fff;
+    display: inline-block;
+    margin-top: 10px;
+    width: 550px;
+    height: 350px;
+    padding-bottom: 10px;
+}

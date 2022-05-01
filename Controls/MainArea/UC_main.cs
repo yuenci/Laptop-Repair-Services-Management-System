@@ -205,7 +205,15 @@ namespace miniSys0._3.Controls
             }
             else
             {
-                BannerLabel4.Text = (100 * (orderToday - orderYesterday) / orderToday).ToString() + "%";
+                try
+                {
+                    BannerLabel4.Text = (100 * (orderToday - orderYesterday) / orderToday).ToString() + "%";
+                }
+                catch
+                {
+                    BannerLabel4.Text = "0";
+                }
+                
             }
 
 
@@ -428,13 +436,13 @@ namespace miniSys0._3.Controls
         
         private void InitializeChromeForMainLineChart()
         {
-            if (User_type.loginStatus != "Login" || User_type.ifCefInit==false)
+            /*if (User_type.loginStatus != "Login" || User_type.ifCefInit==false)
             {
                 Console.WriteLine(User_type.ifCefInit.ToString());
                 var setting = new CefSettings();
                 setting.MultiThreadedMessageLoop = true;
                 CefSharp.Cef.Initialize(setting);
-            }
+            }*/
             string path = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin")) + $"Html\\mainLineChart.html";
             WebBrowser = new ChromiumWebBrowser(path);
             WebBrowser.Dock = DockStyle.Fill;//铺满                                                                  

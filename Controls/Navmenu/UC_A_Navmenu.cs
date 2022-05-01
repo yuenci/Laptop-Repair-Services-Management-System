@@ -56,6 +56,16 @@ namespace miniSys0._3.Controls
                 UC_Registration uc = new UC_Registration();
                 addUserControl(uc);
             }
+            else if (nodeSelect == "Service report")
+            {
+                UC_ServiceReport uc = new UC_ServiceReport();
+                addUserControl(uc);
+            }
+            else if (nodeSelect == "Income analysis")
+            {
+                UC_IncomeAnalysis uc = new UC_IncomeAnalysis();
+                addUserControl(uc);
+            }
         }
     }
 }

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IncomeAnalysis</title>
+    <script src="chart.js"></script>
+    <script src="paramentForIncomeAnalysis.js"></script>
+    <link rel="stylesheet" type="text/css" href="adminIncomeAnalysis.css">
+</head>
+
+<body>
+    <div id="cards">
+        <div class="card" id="card1">
+            <div class="title" id="title1">Total monthly income</div>
+            <div class="number" id="number1"></div>
+            <div class="text11">
+                <div class="text" id="text1"></div>
+                <div class="text" id="text2"></div>
+            </div>
+            <div class="summary" id="summary1"></div>
+        </div>
+        <div class="card" id="card2">
+            <div class="title" id="title3">Number of payments</div>
+            <div class="number" id="number3"></div>
+            <div class="chartContainer" id="lineChart1">
+                <canvas id="myLineChart1"></canvas>
+            </div>
+            <div class="summary" id="summary3"></div>
+        </div>
+        <div class="card" id="card3">
+            <div class="title" id="title2">Average transaction value</div>
+            <div class="number" id="number2"></div>
+            <div class="chartContainer" id="barChart1">
+                <canvas id="mybarChart1"></canvas>
+            </div>
+            <div class="summary" id="summary2"></div>
+        </div>
+        <div class="card" id="card4">
+            <div class="title" id="title4">HR Efficiency</div>
+            <div class="number" id="number4"></div>
+            <div class="chartContainer" id="lineChart2">
+                <canvas id="myLineChart2"></canvas>
+            </div>
+            <div class="summary" id="summary4"></div>
+        </div>
+    </div>
+    <div id="mainCharts">
+        <div id="mainTitle">Income trend</div>
+        <div id="incomeBarChart-container">
+            <canvas id="incomeBarChart"></canvas>
+        </div>
+        <div id="rankList">
+            <div id="title">Top Receptionist</div>
+            <div class="infoContainer" id="no1">
+                <div class="icon" id="icon1">1</div>
+                <div class="name" id="name1"></div>
+                <div class="sale" id="sale1"></div>
+            </div>
+            <div class="infoContainer" id="no2">
+                <div class="icon" id="icon2">2</div>
+                <div class="name" id="name2"></div>
+                <div class="sale" id="sale2"></div>
+            </div>
+            <div class="infoContainer" id="no3">
+                <div class="icon" id="icon3">3</div>
+                <div class="name" id="name3"></div>
+                <div class="sale" id="sale3"></div>
+            </div>
+            <div class="infoContainer" id="no4">
+                <div class="icon" id="icon4">4</div>
+                <div class="name" id="name4"></div>
+                <div class="sale" id="sale4"></div>
+            </div>
+            <div class="infoContainer" id="no5">
+                <div class="icon" id="icon5">5</div>
+                <div class="name" id="name5"></div>
+                <div class="sale" id="sale5"></div>
+            </div>
+            <div class="infoContainer" id="no6">
+                <div class="icon" id="icon6">6</div>
+                <div class="name" id="name6"></div>
+                <div class="sale" id="sale6"></div>
+            </div>
+            <div class="infoContainer" id="no7">
+                <div class="icon" id="icon7">7</div>
+                <div class="name" id="name7"></div>
+                <div class="sale" id="sale7"></div>
+            </div>
+        </div>
+    </div>
+    <div id="page2">
+        <div id="time">
+            <canvas id="myLineChartTime"></canvas>
+        </div>
+        <div id="serverType">
+            <canvas id="myPieChartServerType"></canvas>
+        </div>
+        <div id="method">
+            <canvas id="myPieChartMethod"></canvas>
+        </div>
+    </div>
+    <script src="adminIncomeAnalysis.js"></script>
+</body>
+
+</html>

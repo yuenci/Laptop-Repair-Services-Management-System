@@ -1,0 +1,267 @@
+body {
+    background-color: #f7f8fa;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    font-family: ".萍方-简"
+}
+
+/* body::-webkit-scrollbar {
+    display: none;
+} */
+
+
+body::-webkit-scrollbar {
+    width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgb(239, 239, 239);
+    border-radius: 2px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #40a0ff49;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #40a0ff;
+}
+
+
+
+#containerPage1 {
+    width: 1125px;
+    height: 720px;
+    background-color: #f7f8fa;
+    /* border-bottom: 2px solid red; */
+
+}
+
+#containerPage2 {
+    width: 1125px;
+    height: 300px;
+    background-color: #f7f8fa;
+}
+
+#title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-left: 10px;
+}
+
+#container1 {
+    width: 800px;
+    height: 550px;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.text {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 800px;
+    justify-items: right;
+    margin-bottom: 30px;
+    margin-left: 25px;
+
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+    display: inline-block;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 10px;
+}
+
+#icon1 {
+    background-color: #ffe4ba;
+}
+
+#icon2 {
+    background-color: #e8f3ff;
+}
+
+#icon3 {
+    background-color: #f5e8ff;
+}
+
+.number {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 50px;
+    margin-left: 5px;
+}
+
+#multi-axis-line {
+    width: 750px;
+    height: 720px;
+    margin-left: 25px;
+}
+
+#container2 {
+    background-color: white;
+    width: 310px;
+    height: 270px;
+    position: absolute;
+    top: 0px;
+    left: 810px;
+    border-radius: 5px;
+}
+
+#myChart2Container {
+    height: 180px;
+}
+
+#myChart3Container {
+    height: 180px;
+}
+
+
+#text2 {
+    margin-top: 10px;
+    margin-left: 5px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#container3 {
+    background-color: white;
+    width: 310px;
+    height: 270px;
+    position: absolute;
+    top: 278px;
+    left: 810px;
+    border-radius: 5px;
+}
+
+#text3 {
+    margin-top: 10px;
+    margin-left: 5px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.barIcon {
+    display: inline-block;
+    background-color: #e8fffb;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+
+.barText {
+    position: relative;
+    bottom: 5px;
+    margin-left: 30px;
+}
+
+.barNum {
+    position: relative;
+    bottom: 5px;
+    margin-left: 30px;
+}
+
+#container4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 1125px;
+    justify-items: center;
+    margin-top: 10px;
+}
+
+.littleChart {
+    background-color: white;
+    width: 270px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.littleChart-text {
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.littleChart-num {
+    font-size: 30px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.littleChart-percent {
+    font-size: 15px;
+    display: inline-block;
+}
+
+#littleChart-1 {
+    position: relative;
+    bottom: 20px;
+}
+
+#littleChart-3 {
+    position: relative;
+    bottom: 10px;
+    height: 100px;
+}
+
+#littleChart-2 {
+    height: 85px;
+    position: relative;
+    bottom: 5px;
+}
+
+#littleChart-4 {
+    height: 85px;
+    position: relative;
+    bottom: 5px;
+}
+
+#pie1_2 {
+    height: 300px;
+    width: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: white;
+}
+
+#pie1Container1 {
+    margin: 5px 10px 5px 10px;
+    display: inline-block;
+    height: 300px;
+    width: 30%;
+}
+
+#pie1Container2 {
+    margin: 5px 10px 5px 10px;
+    display: inline-block;
+    height: 300px;
+    width: 30%;
+}
+
+#pie1Container3 {
+    margin: 5px 10px 5px 10px;
+    display: inline-block;
+    height: 300px;
+    width: 33%;
+}

@@ -31,8 +31,8 @@
             this.Container = new Sunny.UI.UIUserControl();
             this.contentPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.urC_Crumbs1 = new miniSys0._3.Controls.Others.UrC_Crumbs();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.urC_Crumbs1 = new miniSys0._3.Controls.Others.UrC_Crumbs();
             this.Container.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,7 +74,7 @@
             // urC_Crumbs1
             // 
             this.urC_Crumbs1.BackColor = System.Drawing.Color.Transparent;
-            this.urC_Crumbs1.Location = new System.Drawing.Point(0, 4);
+            this.urC_Crumbs1.Location = new System.Drawing.Point(4, 3);
             this.urC_Crumbs1.Name = "urC_Crumbs1";
             this.urC_Crumbs1.Size = new System.Drawing.Size(300, 35);
             this.urC_Crumbs1.TabIndex = 1;

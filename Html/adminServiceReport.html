@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server repot</title>
+    <script src="chart.js"></script>
+    <script src="parameterForServiceReport.js"></script>
+    <link rel="stylesheet" type="text/css" href="adminServiceReport.css">
+</head>
+
+<body>
+    <div id="containerPage1">
+        <div id="container1">
+            <div id="title"> Monthly service report</div>
+            <div id="cards">
+                <div id="card1">
+                    <div class="text">Orders</div>
+                    <div class="icon" id="icon1"><svg width="24" height="24" viewBox="0 0 48 48" fill="none">
+                            <path d="M16 21h16m-16 8h10m11 13H11a2 2 0 01-2-2V8a2 2 0 012-2h21l7 7v27a2 2 0 01-2 2z"
+                                stroke="#ff7d00" stroke-width="4" />
+                        </svg></div>
+                    <div class="number" id="num1"></div>
+                </div>
+                <div id="card2">
+                    <div class="text">Finished</div>
+                    <div class="icon" id="icon2"><svg width="24" height="24" viewBox="0 0 48 48" fill="none">
+                            <path d="M42 24c0 9.941-8.059 18-18 18S6 33.941 6 24 14.059 6 24 6s18 8.059 18 18z"
+                                stroke="#165dff" stroke-width="4" />
+                            <path d="M15 22l7 7 11.5-11.5" stroke="#165dff" stroke-width="4" />
+                        </svg></div>
+                    <div class="number" id="num2"></div>
+                </div>
+                <div id="card3">
+                    <div class="text">Customers</div>
+                    <div class="icon" id="icon3"><svg width="24" height="24" viewBox="0 0 48 48" fill="none">
+                            <path d="M7 37c0-4.97 4.03-8 9-8h16c4.97 0 9 3.03 9 8v3a1 1 0 01-1 1H8a1 1 0 01-1-1v-3z"
+                                stroke="#722ed1" stroke-width="4" />
+                            <circle cx="24" cy="15" r="8" stroke="#722ed1" stroke-width="4" />
+                        </svg></div>
+                    <div class="number" id="num3"></div>
+                </div>
+            </div>
+            <div id="multi-axis-line">
+                <canvas id="myChart1"></canvas>
+            </div>
+        </div>
+        <div id="container2">
+            <div id="text2">Top Service Volume</div>
+            <div id="myChart2Container">
+                <canvas id="myChart2"></canvas>
+            </div>
+            <div id="bar1Card">
+                <span class="barIcon" id="bar1Icon"><svg width="24" height="24" viewBox="0 0 48 48" fill="none">
+                        <path
+                            d="M10 6a1 1 0 00-1 1v34.667a.2.2 0 00.294.176L24 34l14.706 7.843a.2.2 0 00.294-.176V7a1 1 0 00-1-1H10z"
+                            stroke="#0fc6c2" stroke-width="4" />
+                        <path d="M31.289 15.596l-9.193 9.193-4.95-4.95" stroke="#0fc6c2" stroke-width="4" />
+                    </svg></span>
+                <span class="barText">Average:</span>
+                <span id="aveServer" class="barNum"></span>
+            </div>
+        </div>
+        <div id="container3">
+            <div id="text3">Top repair Volume</div>
+            <div id="myChart3Container">
+                <canvas id="myChart3"></canvas>
+            </div>
+            <div id="bar2Card">
+                <span class="barIcon" id="bar2Icon"><svg width="24" height="24" viewBox="0 0 48 48" fill="none">
+                        <path
+                            d="M10 6a1 1 0 00-1 1v34.667a.2.2 0 00.294.176L24 34l14.706 7.843a.2.2 0 00.294-.176V7a1 1 0 00-1-1H10z"
+                            stroke="#0fc6c2" stroke-width="4" />
+                        <path d="M31.289 15.596l-9.193 9.193-4.95-4.95" stroke="#0fc6c2" stroke-width="4" />
+                    </svg></span>
+                <span class="barText">Average:</span>
+                <span id="aveRepair" class="barNum"></span>
+            </div>
+        </div>
+        <div id="container4">
+            <div class="littleChart" id="littleChart1">
+                <div class="littleChart-text">Order quantity</div>
+                <div class="littleChart-num" id="littleChart-num1"></div>
+                <div class="littleChart-percent" id="littleChart-percent1"></div>
+                <div id="littleChart-1">
+                    <canvas id="myChartOrder"></canvas>
+                </div>
+            </div>
+            <div class="littleChart" id="littleChart2">
+                <div class="littleChart-text">New customers</div>
+                <div class="littleChart-num" id="littleChart-num2"></div>
+                <div class="littleChart-percent" id="littleChart-percent2"></div>
+                <div id="littleChart-2">
+                    <canvas id="myChartCustomer"></canvas>
+                </div>
+            </div>
+            <div class="littleChart" id="littleChart3">
+                <div class="littleChart-text">Service score</div>
+                <div class="littleChart-num" id="littleChart-num3"></div>
+                <div class="littleChart-percent" id="littleChart-percent3"></div>
+                <div id="littleChart-3">
+                    <canvas id="myChartService"></canvas>
+                </div>
+            </div>
+            <div class="littleChart" id="littleChart4">
+                <div class="littleChart-text">Completion speed</div>
+                <div class="littleChart-num" id="littleChart-num4"></div>
+                <div class="littleChart-percent" id="littleChart-percent4"></div>
+                <div id="littleChart-4">
+                    <canvas id="myChartSpeed"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="containerPage2">
+        <div id="pie1_2">
+            <div id="pie1Container1">
+                <canvas id="pie1"></canvas>
+            </div>
+            <div id="pie1Container2">
+                <canvas id="pie2"></canvas>
+            </div>
+            <div id="pie1Container3">
+                <canvas id="pie3"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="adminServiceReport.js"></script>
+</body>
+
+</html>
