@@ -40,6 +40,9 @@ namespace miniSys0._3.Controls.Others
         private  string ordIDCache = "";
         public void Init(string ordID)
         {
+            clearStyle();
+            this.Show();
+
             dynamic[] data = SQLCursor.Query("select Orders.Model, Customer.Name,Service.Type,Orders.Time " +
                 "From Orders " +
                 "Inner Join Customer On Customer.CustomerID = Orders.CustomerID " +
@@ -61,6 +64,15 @@ namespace miniSys0._3.Controls.Others
 
        
         }
+        private  void clearStyle()
+        {
+            uiUserControl1.FillColor = Color.White;
+            start.ForeColor = Color.Silver;
+            done.ForeColor = Color.Silver;
+            edit.ForeColor = Color.Silver;
+            more.ForeColor = Color.Silver;
+        }
+        
         private string  name ="";
         private void avatar_MouseHover(object sender, EventArgs e)
         {

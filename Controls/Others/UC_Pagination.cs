@@ -956,12 +956,33 @@ namespace miniSys0._3.Controls.Others
                 UC_TaskCards.uc_TaskCards.uC_Task_Card8,
                 UC_TaskCards.uc_TaskCards.uC_Task_Card9,};
 
-
-
-                for (int i = 0; i < card.Length; i++)
+                if (pageID != pageNum)
                 {
-                    card[i].Init(data[9*pageID -9 + i][0]);
+                    for (int i = 0; i < card.Length; i++)
+                    {
+                        card[i].Init(data[9 * pageID - 9 + i][0]);
+                    }
                 }
+                else
+                {
+                    int lastPageCardNum = data.Length % 9;
+                    int index = data.Length - lastPageCardNum;
+
+                    Console.WriteLine(lastPageCardNum);
+
+                    for (int i = 0; i < lastPageCardNum; i++)
+                    {
+                        card[i].Init(data[index+i][0]);
+                    }
+
+
+                    for (int i = lastPageCardNum; i < card.Length; i++)
+                    {
+                        card[i].Hide();
+                    }
+                }
+
+                
             }
         }
     }

@@ -89,6 +89,12 @@
       <DependentUpon>CommonlyControls.cs</DependentUpon>
     </Compile>
     <Compile Include="ControlEvent.cs" />
+    <Compile Include="Controls\MainArea\UC_Cus_OrderDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MainArea\UC_Cus_OrderDetails.Designer.cs">
+      <DependentUpon>UC_Cus_OrderDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MainArea\UC_Payment.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -178,6 +184,12 @@
     </Compile>
     <Compile Include="Controls\Others\UC_Pagination.Designer.cs">
       <DependentUpon>UC_Pagination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Others\UC_Recent_Repair_Card.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Others\UC_Recent_Repair_Card.Designer.cs">
+      <DependentUpon>UC_Recent_Repair_Card.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\Others\UC_ReciptComplete.cs">
       <SubType>UserControl</SubType>
@@ -315,6 +327,9 @@
     <EmbeddedResource Include="CommonlyControls.resx">
       <DependentUpon>CommonlyControls.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MainArea\UC_Cus_OrderDetails.resx">
+      <DependentUpon>UC_Cus_OrderDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\MainArea\UC_Payment.resx">
       <DependentUpon>UC_Payment.cs</DependentUpon>
     </EmbeddedResource>
@@ -359,6 +374,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Others\UC_Pagination.resx">
       <DependentUpon>UC_Pagination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Others\UC_Recent_Repair_Card.resx">
+      <DependentUpon>UC_Recent_Repair_Card.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Others\UC_ReciptComplete.resx">
       <DependentUpon>UC_ReciptComplete.cs</DependentUpon>

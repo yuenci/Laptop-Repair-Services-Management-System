@@ -28,11 +28,11 @@ namespace miniSys0._3.Controls.MainArea
         }
         private void InitCard()
         {
-            string sql = "WITH A AS(SELECT DISTINCT OrderID,Time from Schedule WhERE Status = 'Finished'),";
-            sql += "B AS(SELECT DISTINCT OrderID,Time from Schedule)";
-            sql += "select * from B where (select count(1) as num from A where A.OrderID = B.OrderID) = 0  Order by Time";
+            string sql1 = "WITH A AS(SELECT DISTINCT OrderID,Time from Schedule WhERE Status = 'Finished'),";
+            sql1 += "B AS(SELECT DISTINCT OrderID,Time from Schedule)";
+            sql1 += "select * from B where (select count(1) as num from A where A.OrderID = B.OrderID) = 0  Order by Time";
 
-            dynamic[]  data = SQLCursor.Query(sql);
+            dynamic[]  data = SQLCursor.Query(sql1);
 
             dynamic[] card = { uC_Task_Card1, uC_Task_Card2, uC_Task_Card3, uC_Task_Card4,
             uC_Task_Card5,uC_Task_Card6,uC_Task_Card7,uC_Task_Card8,uC_Task_Card9};
