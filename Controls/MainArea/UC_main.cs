@@ -680,7 +680,7 @@ namespace miniSys0._3.Controls
                 NoticeInfo.viewsParaList[no] = (int.Parse(views) + 1).ToString();
                 add1ToViewsOrLikesToDB("views");
 
-                Console.WriteLine(NoticeInfo.titleParaList[1]);// string obj
+                //Console.WriteLine(NoticeInfo.titleParaList[1]);// string obj
 
                 //store the no of newslab be clicked
                 NoticeInfo.currentnoticeLablelD = no;

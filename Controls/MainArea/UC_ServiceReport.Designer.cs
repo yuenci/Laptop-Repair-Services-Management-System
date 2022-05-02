@@ -40,7 +40,6 @@
             this.urC_Crumbs1.Name = "urC_Crumbs1";
             this.urC_Crumbs1.Size = new System.Drawing.Size(300, 35);
             this.urC_Crumbs1.TabIndex = 0;
-            this.urC_Crumbs1.Load += new System.EventHandler(this.urC_Crumbs1_Load);
             // 
             // chartPanel
             // 

@@ -167,7 +167,8 @@ function show() {
                     display: true,
                 },
                 title: {
-                    display: false
+                    display: true,
+                    text: "Monthly service type quantity",
                 }
             },
             scales: {

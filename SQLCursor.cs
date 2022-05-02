@@ -74,7 +74,15 @@ namespace miniSys0._3
                 dr.Read();
                 for (int i = 0; i < colsNum; i++)
                 {
-                    resultSingle[i] = dr[i].ToString();
+                    try
+                    {
+                        resultSingle[i] = dr[i].ToString();
+                    }
+                    catch
+                    {
+                        resultSingle[i] = "";
+                    }
+                    
                 }
                 result.Add(resultSingle);
             }

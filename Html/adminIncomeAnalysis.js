@@ -6,7 +6,7 @@ document.getElementById("number2").innerHTML = paymentsNum;
 document.getElementById("number3").innerHTML = "RM" + ATV;
 document.getElementById("number4").innerHTML = "RM" + HRE;
 
-document.getElementById("summary1").innerHTML = "Average daily income: " + "RM" + totalIncome_AD;
+document.getElementById("summary1").innerHTML = "Average daily Inc: " + "RM" + totalIncome_AD;
 document.getElementById("summary2").innerHTML = "Average daily payments: " + paymentsNum_AD;
 document.getElementById("summary3").innerHTML = "Average daily ATV: " + "RM" + ATV_AD;
 document.getElementById("summary4").innerHTML = "Average daily HRE: " + "RM" + HRE_AD;
@@ -34,7 +34,7 @@ function toPercent(point) {
     if (point == 0) {
         return 0;
     }
-    var str = Number(point * 100).toFixed();
+    var str = Number(point * 100).toFixed(2);
     str += "%";
     return str;
 }
@@ -82,11 +82,10 @@ var ctxPay = document.getElementById("myLineChart1").getContext('2d');
 var myChartPay = new Chart(ctxPay, {
     type: 'line',
     data: {
-        //labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange", "seven"],
         labels: monthList,
         datasets: [
             {
-                label: 'Payments',
+                label: 'Amount of Payments',
                 fill: true,
                 lineTension: 0.4,
                 pointRadius: 0,
@@ -146,6 +145,7 @@ var myBarChartATV = new Chart(ctxATV, {
 
         datasets: [{
             //borderRadius: 10,
+            label: 'ATV',
             backgroundColor: ['rgba(64, 134, 255, 0.9)', 'rgba(64, 134, 255, 0.9)', 'rgba(64, 134, 255, 0.9)'],
             data: ATV_month,
         }],
@@ -159,7 +159,13 @@ var myBarChartATV = new Chart(ctxATV, {
             },
             title: {
                 display: false
-            }
+            },
+            tooltip: {
+                callbacks: {
+                    label: (item) =>
+                        `${item.dataset.label}: RM${item.formattedValue}`,
+                },
+            },
         },
         barThickness: 10,
 
@@ -184,7 +190,7 @@ var myChartHRE = new Chart(ctxHRE, {
         labels: monthList,
         datasets: [
             {
-                label: 'Payments',
+                label: 'HRE',
                 fill: true,
                 lineTension: 0.4,
                 pointRadius: 0,
@@ -210,7 +216,13 @@ var myChartHRE = new Chart(ctxHRE, {
             },
             title: {
                 display: false
-            }
+            },
+            tooltip: {
+                callbacks: {
+                    label: (item) =>
+                        `${item.dataset.label}: RM${item.formattedValue}`,
+                },
+            },
         },
         scales: {
             x: {
@@ -244,6 +256,7 @@ var myBarChartIncome = new Chart(ctxIncome, {
 
         datasets: [{
             //borderRadius: 10,
+            label: 'Income',
             backgroundColor: ['rgba(64, 134, 255, 0.9)', 'rgba(64, 134, 255, 0.9)', 'rgba(64, 134, 255, 0.9)'],
             data: month_Income,
         }],
@@ -258,7 +271,13 @@ var myBarChartIncome = new Chart(ctxIncome, {
             },
             title: {
                 display: false
-            }
+            },
+            tooltip: {
+                callbacks: {
+                    label: (item) =>
+                        `${item.dataset.label}: RM${item.formattedValue}`,
+                },
+            },
         },
         barThickness: 20,
 
@@ -285,18 +304,30 @@ var myChartTime = new Chart(ctxTime, {
     type: 'line',
     data: {
         //labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange", "seven"],
-        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24],
+        labels: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
         datasets: [
             {
-                label: 'Order quantity',
+                label: "Income",
                 fill: true,
                 lineTension: 0.4,
                 pointRadius: 1,
                 borderColor: "#4080ff",
                 backgroundColor: "rgba(22, 93, 255, 0.2)",
                 //pointRadius: 6,
-                data: time_value,
-                borderWidth: 1
+                data: time_income_value,
+                borderWidth: 1,
+                yAxisID: 'y',
+            }, {
+                label: "Order quantity",
+                fill: true,
+                lineTension: 0.4,
+                pointRadius: 1,
+                borderColor: "#ff7d00",
+                backgroundColor: "rgba(255, 125, 0, 0.2)",
+                //pointRadius: 6,
+                data: time_order_value,
+                borderWidth: 1,
+                yAxisID: 'order',
             }
         ]
     },
@@ -310,12 +341,24 @@ var myChartTime = new Chart(ctxTime, {
         },
         plugins: {
             legend: {
-                display: false,
+                display: true,
             },
             title: {
                 display: true,
                 text: 'Monthly income per hour'
-            }
+            },
+            tooltip: {
+                callbacks: {
+                    label: function (item) {
+                        //console.log(item.dataset.label);
+                        if (item.dataset.label == "Income") {
+                            return `${item.dataset.label}: RM${item.formattedValue}`;
+                        } else if (item.dataset.label == "Order quantity") {
+                            return `${item.dataset.label}: ${item.formattedValue}`;
+                        }
+                    }
+                },
+            },
         },
         scales: {
             x: {
@@ -335,6 +378,9 @@ var myChartTime = new Chart(ctxTime, {
                 grid: {
                     color: "rgba(242, 243, 245,1)"
                 }
+            },
+            order: {
+                position: "right"
             }
         },
 
@@ -348,6 +394,7 @@ var myChartServerType = new Chart(ctxServerType, {
         labels: ["Virus", "Run slow", "Screen", "Keyboard", "Battery", "OS", "Data", "Internet"],
         datasets: [
             {
+                label: "Income",
                 data: server_type_income,
                 backgroundColor: [
                     "#00B42A",
@@ -368,8 +415,15 @@ var myChartServerType = new Chart(ctxServerType, {
             },
             title: {
                 display: true,
-                text: 'Ratio of service type to income'
-            }
+                text: 'Monthly ratio of service type to income'
+            },
+            tooltip: {
+                callbacks: {
+                    label: function (tooltipItem) {
+                        return tooltipItem.label + ": RM" + tooltipItem.formattedValue
+                    }
+                }
+            },
         }
     }
 });
@@ -382,6 +436,7 @@ var myChartMethod = new Chart(ctxMethod, {
         labels: ['Credit Card', 'Paypal', 'Cash', 'Check'],
         datasets: [
             {
+                label: "Income",
                 data: payment_method,
                 backgroundColor: [
                     "#00B42A",
@@ -395,15 +450,22 @@ var myChartMethod = new Chart(ctxMethod, {
     options: {
         maintainAspectRatio: false,
         responsive: true,
+
         plugins: {
             legend: {
                 position: "right"
             },
             title: {
                 display: true,
-                text: 'Payment method ratio'
-            }
-        },
-
+                text: 'Monthly payment method ratio'
+            },
+            tooltip: {
+                callbacks: {
+                    label: function (tooltipItem) {
+                        return tooltipItem.label + ": RM" + tooltipItem.formattedValue
+                    }
+                }
+            },
+        }
     }
 });
