@@ -12,6 +12,7 @@ using miniSys0._3.Controls;
 using System.IO;
 using miniSys0._3.Controls.MainArea;
 using CefSharp.WinForms;
+using miniSys0._3.Controls.Navmenu;
 
 namespace miniSys0._3
 {
@@ -43,9 +44,9 @@ namespace miniSys0._3
             //add_UC_UserSetting();
             //add_UC_registration
             //add_UC_Payment();
-            //add_task_cards();
+            add_task_cards();
             //add_Cus_OrderDetails();
-            add_UC_ServiceReport();
+            //add_UC_ServiceReport();
             //add_UC_IncomeAnalysis();
 
 
@@ -170,7 +171,11 @@ namespace miniSys0._3
         }
         private void addNavMenu()
         {
-            if (User_type.user_deparment == "Receptionist")
+            UC_Test uc = new UC_Test();
+            addUserControl(uc);
+
+
+            /*if (User_type.user_deparment == "Receptionist")
             {
                 UC_R_Navmenu uc = new UC_R_Navmenu();
                 addUserControl(uc);
@@ -189,7 +194,8 @@ namespace miniSys0._3
             {
                 UC_A_Navmenu uc = new UC_A_Navmenu();
                 addUserControl(uc);
-            }
+            }*/
+            
         }
 
         

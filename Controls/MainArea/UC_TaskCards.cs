@@ -49,7 +49,7 @@ namespace miniSys0._3.Controls.MainArea
         }
 
 
-        private void reset_Click(object sender, EventArgs e)
+        /*private void reset_Click(object sender, EventArgs e)
         {
             serviceType.Text = "";
             name.Text = "";
@@ -57,7 +57,7 @@ namespace miniSys0._3.Controls.MainArea
             date2.Text = DateTime.Now.ToString("yyyy-MM-dd"); 
             status.Text = "";
             orderID.Text = "";
-        }
+        }*/
 
         private void query_Click(object sender, EventArgs e)
         {

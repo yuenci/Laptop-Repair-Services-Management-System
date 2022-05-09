@@ -11,7 +11,7 @@ document.getElementById("aveRepair").innerHTML = averageRepair;
 document.getElementById("littleChart-num1").innerHTML = order_quantity;
 document.getElementById("littleChart-num2").innerHTML = new_customers;
 document.getElementById("littleChart-num3").innerHTML = service_score;
-document.getElementById("littleChart-num4").innerHTML = completion_speed;
+document.getElementById("littleChart-num4").innerHTML = completion_speed + "Hours";
 
 changeColor(document.getElementById("littleChart-percent1"), order_quantity_per);
 changeColor(document.getElementById("littleChart-percent2"), new_customers_per);
@@ -285,6 +285,7 @@ var myChartOrder = new Chart(ctxOrder, {
         ]
     },
     options: {
+        maintainAspectRatio: false,
         responsive: true,
         pointDotRadius: 1,
         interaction: {
@@ -425,7 +426,7 @@ var myBarChartSpeed = new Chart(ctxSpeed, {
         datasets: [{
             borderRadius: 10,
             backgroundColor: ['rgba(64, 134, 255, 0.9)', 'rgba(134, 223, 108, 0.9)'],
-            data: new_customers_month,
+            data: completion_speed_month,
         }],
     },
     options: {

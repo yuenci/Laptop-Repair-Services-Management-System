@@ -48,7 +48,6 @@
             // 
             // panelTop
             // 
-            resources.ApplyResources(this.panelTop, "panelTop");
             this.panelTop.BackColor = System.Drawing.Color.White;
             this.panelTop.Controls.Add(this.searchBox);
             this.panelTop.Controls.Add(this.label1);
@@ -58,14 +57,15 @@
             this.panelTop.Controls.Add(this.uiSymbolButton2);
             this.panelTop.Controls.Add(this.uiSymbolButton1);
             this.panelTop.Controls.Add(this.profile);
+            resources.ApplyResources(this.panelTop, "panelTop");
             this.panelTop.Name = "panelTop";
             this.panelTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.drag_down);
             this.panelTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.drag_move);
             // 
             // searchBox
             // 
-            resources.ApplyResources(this.searchBox, "searchBox");
             this.searchBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            resources.ApplyResources(this.searchBox, "searchBox");
             this.searchBox.Name = "searchBox";
             this.searchBox.Radius = 30;
             this.searchBox.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
@@ -83,17 +83,17 @@
             // 
             // pictureBox2
             // 
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Image = global::miniSys0._3.Properties.Resources.rocket_icon_128;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             // 
             // searchIcon
             // 
-            resources.ApplyResources(this.searchIcon, "searchIcon");
             this.searchIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchIcon.FillColor = System.Drawing.Color.White;
             this.searchIcon.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            resources.ApplyResources(this.searchIcon, "searchIcon");
             this.searchIcon.Name = "searchIcon";
             this.searchIcon.Radius = 32;
             this.searchIcon.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
@@ -111,10 +111,10 @@
             // 
             // uiSymbolButton3
             // 
-            resources.ApplyResources(this.uiSymbolButton3, "uiSymbolButton3");
             this.uiSymbolButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiSymbolButton3.FillColor = System.Drawing.Color.White;
             this.uiSymbolButton3.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            resources.ApplyResources(this.uiSymbolButton3, "uiSymbolButton3");
             this.uiSymbolButton3.Name = "uiSymbolButton3";
             this.uiSymbolButton3.Radius = 32;
             this.uiSymbolButton3.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
@@ -131,10 +131,10 @@
             // 
             // uiSymbolButton2
             // 
-            resources.ApplyResources(this.uiSymbolButton2, "uiSymbolButton2");
             this.uiSymbolButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiSymbolButton2.FillColor = System.Drawing.Color.White;
             this.uiSymbolButton2.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            resources.ApplyResources(this.uiSymbolButton2, "uiSymbolButton2");
             this.uiSymbolButton2.Name = "uiSymbolButton2";
             this.uiSymbolButton2.Radius = 32;
             this.uiSymbolButton2.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
@@ -151,10 +151,10 @@
             // 
             // uiSymbolButton1
             // 
-            resources.ApplyResources(this.uiSymbolButton1, "uiSymbolButton1");
             this.uiSymbolButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiSymbolButton1.FillColor = System.Drawing.Color.White;
             this.uiSymbolButton1.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            resources.ApplyResources(this.uiSymbolButton1, "uiSymbolButton1");
             this.uiSymbolButton1.Name = "uiSymbolButton1";
             this.uiSymbolButton1.Radius = 32;
             this.uiSymbolButton1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
@@ -171,10 +171,10 @@
             // 
             // profile
             // 
-            resources.ApplyResources(this.profile, "profile");
             this.profile.AvatarSize = 32;
             this.profile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.profile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
+            resources.ApplyResources(this.profile, "profile");
             this.profile.ForeColor = System.Drawing.Color.Black;
             this.profile.Icon = Sunny.UI.UIAvatar.UIIcon.Text;
             this.profile.Name = "profile";
@@ -185,10 +185,10 @@
             // 
             // uiUserControl1
             // 
-            resources.ApplyResources(this.uiUserControl1, "uiUserControl1");
             this.uiUserControl1.BackColor = System.Drawing.Color.White;
             this.uiUserControl1.Controls.Add(this.navMenuPanel);
             this.uiUserControl1.FillColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.uiUserControl1, "uiUserControl1");
             this.uiUserControl1.Name = "uiUserControl1";
             this.uiUserControl1.Radius = 10;
             this.uiUserControl1.RectColor = System.Drawing.Color.Gainsboro;

@@ -89,6 +89,12 @@
       <DependentUpon>CommonlyControls.cs</DependentUpon>
     </Compile>
     <Compile Include="ControlEvent.cs" />
+    <Compile Include="Controls\Button\Btn_ellipse_grey.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Button\Btn_ellipse_grey.Designer.cs">
+      <DependentUpon>Btn_ellipse_grey.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MainArea\UC_Cus_OrderDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -178,6 +184,12 @@
     </Compile>
     <Compile Include="Controls\Navmenu\UC_R_Navmenu.Designer.cs">
       <DependentUpon>UC_R_Navmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Navmenu\UC_Test.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Navmenu\UC_Test.Designer.cs">
+      <DependentUpon>UC_Test.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\Navmenu\UC_T_Navmenu.cs">
       <SubType>UserControl</SubType>
@@ -339,6 +351,9 @@
     <EmbeddedResource Include="CommonlyControls.resx">
       <DependentUpon>CommonlyControls.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Button\Btn_ellipse_grey.resx">
+      <DependentUpon>Btn_ellipse_grey.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\MainArea\UC_Cus_OrderDetails.resx">
       <DependentUpon>UC_Cus_OrderDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -383,6 +398,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Navmenu\UC_R_Navmenu.resx">
       <DependentUpon>UC_R_Navmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Navmenu\UC_Test.resx">
+      <DependentUpon>UC_Test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Navmenu\UC_T_Navmenu.resx">
       <DependentUpon>UC_T_Navmenu.cs</DependentUpon>

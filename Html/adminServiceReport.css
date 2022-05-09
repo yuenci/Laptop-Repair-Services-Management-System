@@ -216,13 +216,14 @@ body::-webkit-scrollbar-thumb:hover {
 
 #littleChart-1 {
     position: relative;
-    bottom: 20px;
+    bottom: 10px;
+    height: 90px;
 }
 
 #littleChart-3 {
     position: relative;
     bottom: 10px;
-    height: 100px;
+    height: 90px;
 }
 
 #littleChart-2 {

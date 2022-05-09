@@ -55,11 +55,15 @@
             this.uiButton2 = new Sunny.UI.UIButton();
             this.uiPagination1 = new Sunny.UI.UIPagination();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.uC_Pagination1 = new miniSys0._3.Controls.Others.UC_Pagination();
+            this.uC_Task_Card1 = new miniSys0._3.Controls.Others.UC_Task_Card();
+            this.urC_Crumbs1 = new miniSys0._3.Controls.Others.UrC_Crumbs();
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.csharpRepairerIncDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.csharpRepairerIncDataSet)).BeginInit();
             this.fillByToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -277,16 +281,43 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.uC_Pagination1);
             this.panel1.Location = new System.Drawing.Point(22, 445);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(941, 118);
             this.panel1.TabIndex = 10;
+            // 
+            // uC_Pagination1
+            // 
+            this.uC_Pagination1.BackColor = System.Drawing.Color.White;
+            this.uC_Pagination1.Location = new System.Drawing.Point(-37, 42);
+            this.uC_Pagination1.Name = "uC_Pagination1";
+            this.uC_Pagination1.Size = new System.Drawing.Size(1000, 40);
+            this.uC_Pagination1.TabIndex = 0;
+            // 
+            // uC_Task_Card1
+            // 
+            this.uC_Task_Card1.BackColor = System.Drawing.Color.White;
+            this.uC_Task_Card1.Location = new System.Drawing.Point(645, 87);
+            this.uC_Task_Card1.Name = "uC_Task_Card1";
+            this.uC_Task_Card1.Size = new System.Drawing.Size(305, 145);
+            this.uC_Task_Card1.TabIndex = 11;
+            // 
+            // urC_Crumbs1
+            // 
+            this.urC_Crumbs1.BackColor = System.Drawing.SystemColors.Control;
+            this.urC_Crumbs1.Location = new System.Drawing.Point(650, 284);
+            this.urC_Crumbs1.Name = "urC_Crumbs1";
+            this.urC_Crumbs1.Size = new System.Drawing.Size(300, 35);
+            this.urC_Crumbs1.TabIndex = 12;
             // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 599);
+            this.Controls.Add(this.urC_Crumbs1);
+            this.Controls.Add(this.uC_Task_Card1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.uiPagination1);
             this.Controls.Add(this.uiButton2);
@@ -306,6 +337,7 @@
             this.fillByToolStrip.ResumeLayout(false);
             this.fillByToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,5 +371,8 @@
         private Sunny.UI.UIButton uiButton2;
         private Sunny.UI.UIPagination uiPagination1;
         private System.Windows.Forms.Panel panel1;
+        private Controls.Others.UC_Pagination uC_Pagination1;
+        private Controls.Others.UC_Task_Card uC_Task_Card1;
+        private Controls.Others.UrC_Crumbs urC_Crumbs1;
     }
 }
