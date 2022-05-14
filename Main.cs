@@ -171,11 +171,11 @@ namespace miniSys0._3
         }
         private void addNavMenu()
         {
-            UC_Test uc = new UC_Test();
-            addUserControl(uc);
+            /*UC_Test uc = new UC_Test();
+            addUserControl(uc);*/
 
 
-            /*if (User_type.user_deparment == "Receptionist")
+            if (User_type.user_deparment == "Receptionist")
             {
                 UC_R_Navmenu uc = new UC_R_Navmenu();
                 addUserControl(uc);
@@ -194,8 +194,8 @@ namespace miniSys0._3
             {
                 UC_A_Navmenu uc = new UC_A_Navmenu();
                 addUserControl(uc);
-            }*/
-            
+            }
+
         }
 
         

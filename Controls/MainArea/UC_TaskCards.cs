@@ -19,6 +19,7 @@ namespace miniSys0._3.Controls.MainArea
             InitCurmbs();
             InitCard();
             uc_TaskCards = this;
+            InitSwitchBtns();
         }
 
         private void InitCurmbs()
@@ -48,20 +49,11 @@ namespace miniSys0._3.Controls.MainArea
             pagination.type = "card";
         }
 
-
-        /*private void reset_Click(object sender, EventArgs e)
+        private void InitSwitchBtns()
         {
-            serviceType.Text = "";
-            name.Text = "";
-            date1.Text = DateTime.Now.ToString("yyyy-MM-dd"); 
-            date2.Text = DateTime.Now.ToString("yyyy-MM-dd"); 
-            status.Text = "";
-            orderID.Text = "";
-        }*/
-
-        private void query_Click(object sender, EventArgs e)
-        {
-
+            
         }
+
+        
     }
 }

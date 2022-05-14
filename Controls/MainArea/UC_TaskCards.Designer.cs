@@ -31,6 +31,12 @@
             this.Container = new Sunny.UI.UIUserControl();
             this.contentPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.switchButton1 = new Sunny.UI.UIButton();
+            this.switchButton2 = new Sunny.UI.UIButton();
+            this.switchButton3 = new Sunny.UI.UIButton();
+            this.switchButton4 = new Sunny.UI.UIButton();
+            this.searchBox = new Sunny.UI.UITextBox();
+            this.uiAvatar2 = new Sunny.UI.UIAvatar();
             this.pagination = new miniSys0._3.Controls.Others.UC_Pagination();
             this.uC_Task_Card9 = new miniSys0._3.Controls.Others.UC_Task_Card();
             this.uC_Task_Card8 = new miniSys0._3.Controls.Others.UC_Task_Card();
@@ -48,7 +54,13 @@
             // 
             // Container
             // 
-            this.Container.BackColor = System.Drawing.Color.White;
+            this.Container.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.Container.Controls.Add(this.uiAvatar2);
+            this.Container.Controls.Add(this.searchBox);
+            this.Container.Controls.Add(this.switchButton4);
+            this.Container.Controls.Add(this.switchButton3);
+            this.Container.Controls.Add(this.switchButton2);
+            this.Container.Controls.Add(this.switchButton1);
             this.Container.Controls.Add(this.pagination);
             this.Container.Controls.Add(this.contentPanel);
             this.Container.Controls.Add(this.label1);
@@ -90,6 +102,108 @@
             this.label1.Size = new System.Drawing.Size(255, 28);
             this.label1.TabIndex = 6;
             this.label1.Text = "Service requested Cards";
+            // 
+            // switchButton1
+            // 
+            this.switchButton1.BackColor = System.Drawing.Color.Transparent;
+            this.switchButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.switchButton1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.switchButton1.Location = new System.Drawing.Point(59, 76);
+            this.switchButton1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.switchButton1.Name = "switchButton1";
+            this.switchButton1.Radius = 25;
+            this.switchButton1.Size = new System.Drawing.Size(100, 30);
+            this.switchButton1.Style = Sunny.UI.UIStyle.Custom;
+            this.switchButton1.TabIndex = 86;
+            this.switchButton1.Text = "All ";
+            this.switchButton1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.switchButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // switchButton2
+            // 
+            this.switchButton2.BackColor = System.Drawing.Color.Transparent;
+            this.switchButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.switchButton2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.switchButton2.Location = new System.Drawing.Point(192, 76);
+            this.switchButton2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.switchButton2.Name = "switchButton2";
+            this.switchButton2.Radius = 25;
+            this.switchButton2.Size = new System.Drawing.Size(100, 30);
+            this.switchButton2.Style = Sunny.UI.UIStyle.Custom;
+            this.switchButton2.TabIndex = 87;
+            this.switchButton2.Text = "NotStart";
+            this.switchButton2.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.switchButton2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // switchButton3
+            // 
+            this.switchButton3.BackColor = System.Drawing.Color.Transparent;
+            this.switchButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.switchButton3.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.switchButton3.Location = new System.Drawing.Point(325, 76);
+            this.switchButton3.MinimumSize = new System.Drawing.Size(1, 1);
+            this.switchButton3.Name = "switchButton3";
+            this.switchButton3.Radius = 25;
+            this.switchButton3.Size = new System.Drawing.Size(100, 30);
+            this.switchButton3.Style = Sunny.UI.UIStyle.Custom;
+            this.switchButton3.TabIndex = 88;
+            this.switchButton3.Text = "Repairing";
+            this.switchButton3.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.switchButton3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // switchButton4
+            // 
+            this.switchButton4.BackColor = System.Drawing.Color.Transparent;
+            this.switchButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.switchButton4.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.switchButton4.Location = new System.Drawing.Point(458, 76);
+            this.switchButton4.MinimumSize = new System.Drawing.Size(1, 1);
+            this.switchButton4.Name = "switchButton4";
+            this.switchButton4.Radius = 25;
+            this.switchButton4.Size = new System.Drawing.Size(100, 30);
+            this.switchButton4.Style = Sunny.UI.UIStyle.Custom;
+            this.switchButton4.TabIndex = 89;
+            this.switchButton4.Text = "Finished";
+            this.switchButton4.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.switchButton4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // searchBox
+            // 
+            this.searchBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.searchBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.searchBox.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.searchBox.Location = new System.Drawing.Point(753, 72);
+            this.searchBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.searchBox.MinimumSize = new System.Drawing.Size(1, 16);
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.searchBox.RectColor = System.Drawing.Color.White;
+            this.searchBox.RectDisableColor = System.Drawing.Color.White;
+            this.searchBox.RectReadOnlyColor = System.Drawing.Color.White;
+            this.searchBox.ShowText = false;
+            this.searchBox.Size = new System.Drawing.Size(269, 35);
+            this.searchBox.Style = Sunny.UI.UIStyle.Custom;
+            this.searchBox.TabIndex = 90;
+            this.searchBox.Text = "Search";
+            this.searchBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.searchBox.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiAvatar2
+            // 
+            this.uiAvatar2.FillColor = System.Drawing.Color.Transparent;
+            this.uiAvatar2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiAvatar2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.uiAvatar2.Location = new System.Drawing.Point(1021, 73);
+            this.uiAvatar2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiAvatar2.Name = "uiAvatar2";
+            this.uiAvatar2.Shape = Sunny.UI.UIShape.Square;
+            this.uiAvatar2.Size = new System.Drawing.Size(33, 33);
+            this.uiAvatar2.Style = Sunny.UI.UIStyle.Custom;
+            this.uiAvatar2.Symbol = 61442;
+            this.uiAvatar2.SymbolSize = 30;
+            this.uiAvatar2.TabIndex = 91;
+            this.uiAvatar2.Text = "uiAvatar2";
+            this.uiAvatar2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // pagination
             // 
@@ -211,5 +325,11 @@
         public Others.UC_Task_Card uC_Task_Card8;
         public Others.UC_Task_Card uC_Task_Card7;
         public Others.UC_Task_Card uC_Task_Card6;
+        private Sunny.UI.UIButton switchButton4;
+        private Sunny.UI.UIButton switchButton3;
+        private Sunny.UI.UIButton switchButton2;
+        private Sunny.UI.UIButton switchButton1;
+        private Sunny.UI.UITextBox searchBox;
+        private Sunny.UI.UIAvatar uiAvatar2;
     }
 }

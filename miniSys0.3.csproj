@@ -89,12 +89,6 @@
       <DependentUpon>CommonlyControls.cs</DependentUpon>
     </Compile>
     <Compile Include="ControlEvent.cs" />
-    <Compile Include="Controls\Button\Btn_ellipse_grey.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\Button\Btn_ellipse_grey.Designer.cs">
-      <DependentUpon>Btn_ellipse_grey.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controls\MainArea\UC_Cus_OrderDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -350,9 +344,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CommonlyControls.resx">
       <DependentUpon>CommonlyControls.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\Button\Btn_ellipse_grey.resx">
-      <DependentUpon>Btn_ellipse_grey.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\MainArea\UC_Cus_OrderDetails.resx">
       <DependentUpon>UC_Cus_OrderDetails.cs</DependentUpon>
