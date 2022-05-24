@@ -89,6 +89,12 @@
       <DependentUpon>CommonlyControls.cs</DependentUpon>
     </Compile>
     <Compile Include="ControlEvent.cs" />
+    <Compile Include="Controls\MainArea\UC_Cus_dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MainArea\UC_Cus_dashboard.Designer.cs">
+      <DependentUpon>UC_Cus_dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MainArea\UC_Cus_OrderDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -344,6 +350,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CommonlyControls.resx">
       <DependentUpon>CommonlyControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MainArea\UC_Cus_dashboard.resx">
+      <DependentUpon>UC_Cus_dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\MainArea\UC_Cus_OrderDetails.resx">
       <DependentUpon>UC_Cus_OrderDetails.cs</DependentUpon>
@@ -745,6 +754,9 @@
     <Content Include="Html\chart.js" />
     <Content Include="Html\mainLineChart.html" />
     <Content Include="Html\mainPieChart.html" />
+    <None Include="Resources\032.png" />
+    <None Include="Resources\022.png" />
+    <None Include="Resources\012.png" />
     <None Include="Resources\receiptIcon.png" />
     <None Include="Resources\headIcon.png" />
     <None Include="Resources\Software code testing-pana.png" />

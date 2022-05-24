@@ -79,6 +79,7 @@
             // 
             // contentPanel
             // 
+            this.contentPanel.BackColor = System.Drawing.Color.Transparent;
             this.contentPanel.Controls.Add(this.uC_Task_Card9);
             this.contentPanel.Controls.Add(this.uC_Task_Card8);
             this.contentPanel.Controls.Add(this.uC_Task_Card7);
@@ -96,6 +97,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(10, 10);
             this.label1.Name = "label1";
@@ -118,6 +120,7 @@
             this.switchButton1.Text = "All ";
             this.switchButton1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.switchButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.switchButton1.Click += new System.EventHandler(this.switchButton1_Click);
             // 
             // switchButton2
             // 
@@ -134,6 +137,7 @@
             this.switchButton2.Text = "NotStart";
             this.switchButton2.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.switchButton2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.switchButton2.Click += new System.EventHandler(this.switchButton2_Click);
             // 
             // switchButton3
             // 
@@ -150,6 +154,7 @@
             this.switchButton3.Text = "Repairing";
             this.switchButton3.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.switchButton3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.switchButton3.Click += new System.EventHandler(this.switchButton3_Click);
             // 
             // switchButton4
             // 
@@ -166,6 +171,7 @@
             this.switchButton4.Text = "Finished";
             this.switchButton4.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.switchButton4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.switchButton4.Click += new System.EventHandler(this.switchButton4_Click);
             // 
             // searchBox
             // 
@@ -187,6 +193,8 @@
             this.searchBox.Text = "Search";
             this.searchBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.searchBox.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.searchBox.Leave += new System.EventHandler(this.searchBox_Leave);
+            this.searchBox.Enter += new System.EventHandler(this.searchBox_Enter);
             // 
             // uiAvatar2
             // 

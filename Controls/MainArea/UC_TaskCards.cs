@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sunny.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -51,9 +52,93 @@ namespace miniSys0._3.Controls.MainArea
 
         private void InitSwitchBtns()
         {
-            
+            clearBtnStyle();
+            clickBtnStyle(switchButton1);
+        }
+        private void clearBtnStyle()
+        {
+            UIButton[] btnList = { switchButton1, switchButton2, switchButton3, switchButton4 };
+            foreach (var item in btnList)
+            {
+                //  basic
+                item.BackColor = Color.White;
+                item.FillColor=Color.White;
+                item.ForeColor = Color.FromArgb(78, 89, 105);
+                item.RectColor = Color.White;
+
+                //hover
+                item.BackColor = Color.White;
+                item.FillHoverColor = Color.FromArgb(242, 243, 245);
+                item.ForeHoverColor = Color.FromArgb(78, 89, 105);
+                item.RectHoverColor = Color.White;
+
+                //click
+                item.BackColor = Color.White;
+                item.FillPressColor = Color.FromArgb(242, 243, 245);
+                item.ForePressColor = Color.FromArgb(78, 89, 105);
+                item.RectPressColor = Color.White;
+            }
+        }
+        private void clickBtnStyle(UIButton btn)
+        {
+            //  basic
+            btn.BackColor = Color.White;
+            btn.FillColor = Color.FromArgb(242, 243, 245);
+            btn.ForeColor = Color.FromArgb(22, 93, 255);
+            btn.RectColor = Color.White;
+
+            //hover
+            btn.BackColor = Color.White;
+            btn.FillHoverColor = Color.FromArgb(242, 243, 245);
+            btn.ForeHoverColor = Color.FromArgb(22, 93, 255);
+            btn.RectHoverColor = Color.White;
+
+            //click
+            btn.BackColor = Color.White;
+            btn.FillPressColor = Color.FromArgb(242, 243, 245);
+            btn.ForePressColor = Color.FromArgb(22, 93, 255);
+            btn.RectPressColor = Color.White;
+        }
+       
+
+        private void searchBox_Enter(object sender, EventArgs e)
+        {
+            if (searchBox.Text=="Search")
+            {
+                searchBox.Text = "";
+            }
         }
 
-        
+        private void searchBox_Leave(object sender, EventArgs e)
+        {
+            if (searchBox.Text == "")
+            {
+                searchBox.Text = "Search";
+            }
+        }
+
+        private void switchButton1_Click(object sender, EventArgs e)
+        {
+            clearBtnStyle();
+            clickBtnStyle(switchButton1);
+        }
+
+        private void switchButton2_Click(object sender, EventArgs e)
+        {
+            clearBtnStyle();
+            clickBtnStyle(switchButton2);
+        }
+
+        private void switchButton3_Click(object sender, EventArgs e)
+        {
+            clearBtnStyle();
+            clickBtnStyle(switchButton3);
+        }
+
+        private void switchButton4_Click(object sender, EventArgs e)
+        {
+            clearBtnStyle();
+            clickBtnStyle(switchButton4);
+        }
     }
 }

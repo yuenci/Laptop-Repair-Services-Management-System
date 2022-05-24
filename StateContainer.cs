@@ -18,7 +18,7 @@ namespace miniSys0._3
     {
         //this is defult
         //public static string user_deparment = "Customer";
-        public static string user_deparment = "Receptionist";
+        public static string user_deparment = "Customer";
         //deparment:  Receptionist,Technician, Customer, Admin
 
         //test data

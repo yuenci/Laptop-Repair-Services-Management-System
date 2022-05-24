@@ -31,22 +31,37 @@ namespace miniSys0._3
         }
         private void ok_Click(object sender, EventArgs e)
         {
-            if (textBox.Text != "" && OrderID!="")
+            if(User_type.user_deparment == "Customer")
             {
-                SQLCursor.Execute($"UPDATE Orders SET Description = '{textBox.Text}' " +
-                    $"WHERE OrderID ='{OrderID}';");
-                uiSymbolLabel.Visible = true;
+                this.Close();
+            }
+            else
+            {
+                if (textBox.Text != "" && OrderID != "")
+                {
+                    SQLCursor.Execute($"UPDATE Orders SET Description = '{textBox.Text}' " +
+                        $"WHERE OrderID ='{OrderID}';");
+                    uiSymbolLabel.Visible = true;
 
+                }
+                else if (textBox.Text == "")
+                {
+                    textBox.RectColor = Color.Red;
+                }
             }
-            else if(textBox.Text == "")
-            {
-                textBox.RectColor = Color.Red;
-            }
+            
         }
 
         private void textBox_Enter(object sender, EventArgs e)
         {
             textBox.RectColor = Color.FromArgb(22, 93, 255);
+        }
+
+        public void cusInit(string  str)
+        {
+            cancel.Hide();
+            textBox.Text = str;
+            textBox.Enabled = false;
         }
     }
 }
