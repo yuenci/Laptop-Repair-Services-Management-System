@@ -18,11 +18,12 @@ namespace miniSys0._3
     {
         //this is defult
         //public static string user_deparment = "Customer";
-        public static string user_deparment = "Customer";
+        public static string user_deparment = "Technician";
         //deparment:  Receptionist,Technician, Customer, Admin
 
         //test data
-        public static string user_ID = "Cus000001";
+        //public static string user_ID = "Cus000001";
+        public static string user_ID = "Sta000093";
         public static string user_name = "Jill Taylor";
         public static string user_phone = "8120633";
         public static string user_email = "test@test.mail.com";

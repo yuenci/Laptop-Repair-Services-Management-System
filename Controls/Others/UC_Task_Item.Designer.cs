@@ -68,6 +68,7 @@
             // 
             // finish
             // 
+            this.finish.Cursor = System.Windows.Forms.Cursors.Hand;
             this.finish.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.finish.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
             this.finish.Location = new System.Drawing.Point(1009, 9);
@@ -82,6 +83,7 @@
             // 
             // start
             // 
+            this.start.Cursor = System.Windows.Forms.Cursors.Hand;
             this.start.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.start.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
             this.start.Location = new System.Drawing.Point(927, 9);
@@ -118,6 +120,7 @@
             // 
             // description
             // 
+            this.description.Cursor = System.Windows.Forms.Cursors.Hand;
             this.description.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.description.Location = new System.Drawing.Point(158, 9);
             this.description.Name = "description";

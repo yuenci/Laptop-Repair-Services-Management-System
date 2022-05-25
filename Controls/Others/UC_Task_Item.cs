@@ -77,6 +77,7 @@ namespace miniSys0._3.Controls.Others
         {
             AddDescription descriptionForm = new AddDescription();
             descriptionForm.Init(orderIDcache);
+            descriptionForm.Show();
         }
 
         private void start_TextChanged(object sender, EventArgs e)

@@ -31,11 +31,11 @@ namespace miniSys0._3.Controls.MainArea
 
         private void InitStyle()
         {
-            dynamic[] lables = { uiLabel1, uiLabel2, uiLabel3, uiLabel4, uiLabel5 };
+            /*dynamic[] lables = { uiLabel1, uiLabel2, uiLabel3, uiLabel4, uiLabel5 };
             foreach (var lable in lables)
             {
                 lable.RectColor = Color.White;
-            }
+            }*/
 
             searchBox.RectColor = Color.White;
             searchBox.FillColor = Color.FromArgb(242, 243, 245);
