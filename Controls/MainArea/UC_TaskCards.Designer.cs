@@ -81,7 +81,7 @@
             // 
             this.searchIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchIcon.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.searchIcon.Location = new System.Drawing.Point(1021, 55);
+            this.searchIcon.Location = new System.Drawing.Point(1021, 49);
             this.searchIcon.MinimumSize = new System.Drawing.Size(1, 1);
             this.searchIcon.Name = "searchIcon";
             this.searchIcon.Shape = Sunny.UI.UIShape.Square;
@@ -98,7 +98,7 @@
             // 
             this.searchBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.searchBox.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.searchBox.Location = new System.Drawing.Point(753, 54);
+            this.searchBox.Location = new System.Drawing.Point(753, 48);
             this.searchBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.searchBox.MinimumSize = new System.Drawing.Size(1, 16);
             this.searchBox.Name = "searchBox";
@@ -118,7 +118,7 @@
             this.dfinishedCard.BackColor = System.Drawing.Color.Transparent;
             this.dfinishedCard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dfinishedCard.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dfinishedCard.Location = new System.Drawing.Point(458, 58);
+            this.dfinishedCard.Location = new System.Drawing.Point(458, 52);
             this.dfinishedCard.MinimumSize = new System.Drawing.Size(1, 1);
             this.dfinishedCard.Name = "dfinishedCard";
             this.dfinishedCard.Radius = 25;
@@ -135,7 +135,7 @@
             this.repairingCard.BackColor = System.Drawing.Color.Transparent;
             this.repairingCard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.repairingCard.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.repairingCard.Location = new System.Drawing.Point(325, 58);
+            this.repairingCard.Location = new System.Drawing.Point(325, 52);
             this.repairingCard.MinimumSize = new System.Drawing.Size(1, 1);
             this.repairingCard.Name = "repairingCard";
             this.repairingCard.Radius = 25;
@@ -152,7 +152,7 @@
             this.noStartCard.BackColor = System.Drawing.Color.Transparent;
             this.noStartCard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.noStartCard.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.noStartCard.Location = new System.Drawing.Point(192, 58);
+            this.noStartCard.Location = new System.Drawing.Point(192, 52);
             this.noStartCard.MinimumSize = new System.Drawing.Size(1, 1);
             this.noStartCard.Name = "noStartCard";
             this.noStartCard.Radius = 25;
@@ -169,7 +169,7 @@
             this.allCard.BackColor = System.Drawing.Color.Transparent;
             this.allCard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.allCard.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.allCard.Location = new System.Drawing.Point(59, 58);
+            this.allCard.Location = new System.Drawing.Point(59, 52);
             this.allCard.MinimumSize = new System.Drawing.Size(1, 1);
             this.allCard.Name = "allCard";
             this.allCard.Radius = 25;

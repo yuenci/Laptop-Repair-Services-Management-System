@@ -29,23 +29,31 @@
         private void InitializeComponent()
         {
             this.Container = new Sunny.UI.UIUserControl();
+            this.uiLabel6 = new Sunny.UI.UILabel();
+            this.pagination = new miniSys0._3.Controls.Others.UC_Pagination();
+            this.uiLabel7 = new Sunny.UI.UILabel();
+            this.uiLabel8 = new Sunny.UI.UILabel();
             this.searchIcon = new Sunny.UI.UIAvatar();
+            this.uiLabel9 = new Sunny.UI.UILabel();
             this.searchBox = new Sunny.UI.UITextBox();
+            this.uiLabel10 = new Sunny.UI.UILabel();
             this.dfinishedCard = new Sunny.UI.UIButton();
             this.repairingCard = new Sunny.UI.UIButton();
             this.noStartCard = new Sunny.UI.UIButton();
             this.allCard = new Sunny.UI.UIButton();
             this.contentPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pagination = new miniSys0._3.Controls.Others.UC_Pagination();
             this.uC_Task_Item2 = new miniSys0._3.Controls.Others.UC_Task_Item();
             this.uC_Task_Item1 = new miniSys0._3.Controls.Others.UC_Task_Item();
+            this.label1 = new System.Windows.Forms.Label();
             this.urC_Crumbs1 = new miniSys0._3.Controls.Others.UrC_Crumbs();
-            this.uiLabel1 = new Sunny.UI.UILabel();
-            this.uiLabel2 = new Sunny.UI.UILabel();
-            this.uiLabel3 = new Sunny.UI.UILabel();
-            this.uiLabel4 = new Sunny.UI.UILabel();
-            this.uiLabel5 = new Sunny.UI.UILabel();
+            this.uC_Task_Item3 = new miniSys0._3.Controls.Others.UC_Task_Item();
+            this.uC_Task_Item4 = new miniSys0._3.Controls.Others.UC_Task_Item();
+            this.uC_Task_Item5 = new miniSys0._3.Controls.Others.UC_Task_Item();
+            this.uC_Task_Item6 = new miniSys0._3.Controls.Others.UC_Task_Item();
+            this.uC_Task_Item7 = new miniSys0._3.Controls.Others.UC_Task_Item();
+            this.uC_Task_Item8 = new miniSys0._3.Controls.Others.UC_Task_Item();
+            this.uC_Task_Item9 = new miniSys0._3.Controls.Others.UC_Task_Item();
+            this.uC_Task_Item10 = new miniSys0._3.Controls.Others.UC_Task_Item();
             this.Container.SuspendLayout();
             this.contentPanel.SuspendLayout();
             this.SuspendLayout();
@@ -53,9 +61,14 @@
             // Container
             // 
             this.Container.BackColor = System.Drawing.Color.White;
+            this.Container.Controls.Add(this.uiLabel6);
             this.Container.Controls.Add(this.pagination);
+            this.Container.Controls.Add(this.uiLabel7);
+            this.Container.Controls.Add(this.uiLabel8);
             this.Container.Controls.Add(this.searchIcon);
+            this.Container.Controls.Add(this.uiLabel9);
             this.Container.Controls.Add(this.searchBox);
+            this.Container.Controls.Add(this.uiLabel10);
             this.Container.Controls.Add(this.dfinishedCard);
             this.Container.Controls.Add(this.repairingCard);
             this.Container.Controls.Add(this.noStartCard);
@@ -75,11 +88,55 @@
             this.Container.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.Container.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // uiLabel6
+            // 
+            this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel6.Location = new System.Drawing.Point(578, 86);
+            this.uiLabel6.Name = "uiLabel6";
+            this.uiLabel6.Size = new System.Drawing.Size(100, 23);
+            this.uiLabel6.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel6.TabIndex = 18;
+            this.uiLabel6.Text = "Status";
+            this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiLabel6.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // pagination
+            // 
+            this.pagination.BackColor = System.Drawing.Color.White;
+            this.pagination.Location = new System.Drawing.Point(59, 618);
+            this.pagination.Name = "pagination";
+            this.pagination.Size = new System.Drawing.Size(1000, 40);
+            this.pagination.TabIndex = 98;
+            // 
+            // uiLabel7
+            // 
+            this.uiLabel7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel7.Location = new System.Drawing.Point(713, 86);
+            this.uiLabel7.Name = "uiLabel7";
+            this.uiLabel7.Size = new System.Drawing.Size(100, 23);
+            this.uiLabel7.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel7.TabIndex = 17;
+            this.uiLabel7.Text = "Update Time";
+            this.uiLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiLabel7.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiLabel8
+            // 
+            this.uiLabel8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel8.Location = new System.Drawing.Point(934, 86);
+            this.uiLabel8.Name = "uiLabel8";
+            this.uiLabel8.Size = new System.Drawing.Size(100, 23);
+            this.uiLabel8.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel8.TabIndex = 16;
+            this.uiLabel8.Text = "Operation";
+            this.uiLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiLabel8.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
             // searchIcon
             // 
             this.searchIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchIcon.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.searchIcon.Location = new System.Drawing.Point(1021, 54);
+            this.searchIcon.Location = new System.Drawing.Point(1021, 47);
             this.searchIcon.MinimumSize = new System.Drawing.Size(1, 1);
             this.searchIcon.Name = "searchIcon";
             this.searchIcon.Shape = Sunny.UI.UIShape.Square;
@@ -91,11 +148,23 @@
             this.searchIcon.Text = "uiAvatar2";
             this.searchIcon.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // uiLabel9
+            // 
+            this.uiLabel9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel9.Location = new System.Drawing.Point(165, 86);
+            this.uiLabel9.Name = "uiLabel9";
+            this.uiLabel9.Size = new System.Drawing.Size(100, 23);
+            this.uiLabel9.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel9.TabIndex = 15;
+            this.uiLabel9.Text = "Decription";
+            this.uiLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiLabel9.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
             // searchBox
             // 
             this.searchBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.searchBox.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.searchBox.Location = new System.Drawing.Point(753, 53);
+            this.searchBox.Location = new System.Drawing.Point(753, 46);
             this.searchBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.searchBox.MinimumSize = new System.Drawing.Size(1, 16);
             this.searchBox.Name = "searchBox";
@@ -110,12 +179,24 @@
             this.searchBox.Leave += new System.EventHandler(this.searchBox_Leave);
             this.searchBox.Enter += new System.EventHandler(this.searchBox_Enter);
             // 
+            // uiLabel10
+            // 
+            this.uiLabel10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel10.Location = new System.Drawing.Point(15, 86);
+            this.uiLabel10.Name = "uiLabel10";
+            this.uiLabel10.Size = new System.Drawing.Size(100, 23);
+            this.uiLabel10.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel10.TabIndex = 14;
+            this.uiLabel10.Text = "Order ID";
+            this.uiLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiLabel10.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
             // dfinishedCard
             // 
             this.dfinishedCard.BackColor = System.Drawing.Color.Transparent;
             this.dfinishedCard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dfinishedCard.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dfinishedCard.Location = new System.Drawing.Point(458, 57);
+            this.dfinishedCard.Location = new System.Drawing.Point(458, 50);
             this.dfinishedCard.MinimumSize = new System.Drawing.Size(1, 1);
             this.dfinishedCard.Name = "dfinishedCard";
             this.dfinishedCard.Radius = 25;
@@ -132,7 +213,7 @@
             this.repairingCard.BackColor = System.Drawing.Color.Transparent;
             this.repairingCard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.repairingCard.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.repairingCard.Location = new System.Drawing.Point(325, 57);
+            this.repairingCard.Location = new System.Drawing.Point(325, 50);
             this.repairingCard.MinimumSize = new System.Drawing.Size(1, 1);
             this.repairingCard.Name = "repairingCard";
             this.repairingCard.Radius = 25;
@@ -149,7 +230,7 @@
             this.noStartCard.BackColor = System.Drawing.Color.Transparent;
             this.noStartCard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.noStartCard.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.noStartCard.Location = new System.Drawing.Point(192, 57);
+            this.noStartCard.Location = new System.Drawing.Point(192, 50);
             this.noStartCard.MinimumSize = new System.Drawing.Size(1, 1);
             this.noStartCard.Name = "noStartCard";
             this.noStartCard.Radius = 25;
@@ -166,7 +247,7 @@
             this.allCard.BackColor = System.Drawing.Color.Transparent;
             this.allCard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.allCard.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.allCard.Location = new System.Drawing.Point(59, 57);
+            this.allCard.Location = new System.Drawing.Point(59, 50);
             this.allCard.MinimumSize = new System.Drawing.Size(1, 1);
             this.allCard.Name = "allCard";
             this.allCard.Radius = 25;
@@ -180,17 +261,36 @@
             // 
             // contentPanel
             // 
-            this.contentPanel.Controls.Add(this.uiLabel5);
-            this.contentPanel.Controls.Add(this.uiLabel4);
-            this.contentPanel.Controls.Add(this.uiLabel3);
-            this.contentPanel.Controls.Add(this.uiLabel2);
-            this.contentPanel.Controls.Add(this.uiLabel1);
+            this.contentPanel.Controls.Add(this.uC_Task_Item10);
+            this.contentPanel.Controls.Add(this.uC_Task_Item9);
+            this.contentPanel.Controls.Add(this.uC_Task_Item7);
+            this.contentPanel.Controls.Add(this.uC_Task_Item8);
+            this.contentPanel.Controls.Add(this.uC_Task_Item5);
+            this.contentPanel.Controls.Add(this.uC_Task_Item6);
+            this.contentPanel.Controls.Add(this.uC_Task_Item3);
+            this.contentPanel.Controls.Add(this.uC_Task_Item4);
             this.contentPanel.Controls.Add(this.uC_Task_Item2);
             this.contentPanel.Controls.Add(this.uC_Task_Item1);
-            this.contentPanel.Location = new System.Drawing.Point(0, 96);
+            this.contentPanel.Location = new System.Drawing.Point(3, 113);
             this.contentPanel.Name = "contentPanel";
-            this.contentPanel.Size = new System.Drawing.Size(1115, 506);
+            this.contentPanel.Size = new System.Drawing.Size(1112, 499);
             this.contentPanel.TabIndex = 84;
+            // 
+            // uC_Task_Item2
+            // 
+            this.uC_Task_Item2.BackColor = System.Drawing.Color.White;
+            this.uC_Task_Item2.Location = new System.Drawing.Point(4, 52);
+            this.uC_Task_Item2.Name = "uC_Task_Item2";
+            this.uC_Task_Item2.Size = new System.Drawing.Size(1100, 47);
+            this.uC_Task_Item2.TabIndex = 1;
+            // 
+            // uC_Task_Item1
+            // 
+            this.uC_Task_Item1.BackColor = System.Drawing.Color.White;
+            this.uC_Task_Item1.Location = new System.Drawing.Point(4, 3);
+            this.uC_Task_Item1.Name = "uC_Task_Item1";
+            this.uC_Task_Item1.Size = new System.Drawing.Size(1100, 47);
+            this.uC_Task_Item1.TabIndex = 0;
             // 
             // label1
             // 
@@ -202,30 +302,6 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Service requested list";
             // 
-            // pagination
-            // 
-            this.pagination.BackColor = System.Drawing.Color.White;
-            this.pagination.Location = new System.Drawing.Point(59, 616);
-            this.pagination.Name = "pagination";
-            this.pagination.Size = new System.Drawing.Size(1000, 40);
-            this.pagination.TabIndex = 98;
-            // 
-            // uC_Task_Item2
-            // 
-            this.uC_Task_Item2.BackColor = System.Drawing.Color.White;
-            this.uC_Task_Item2.Location = new System.Drawing.Point(3, 96);
-            this.uC_Task_Item2.Name = "uC_Task_Item2";
-            this.uC_Task_Item2.Size = new System.Drawing.Size(1100, 47);
-            this.uC_Task_Item2.TabIndex = 8;
-            // 
-            // uC_Task_Item1
-            // 
-            this.uC_Task_Item1.BackColor = System.Drawing.Color.White;
-            this.uC_Task_Item1.Location = new System.Drawing.Point(3, 43);
-            this.uC_Task_Item1.Name = "uC_Task_Item1";
-            this.uC_Task_Item1.Size = new System.Drawing.Size(1100, 47);
-            this.uC_Task_Item1.TabIndex = 7;
-            // 
             // urC_Crumbs1
             // 
             this.urC_Crumbs1.BackColor = System.Drawing.Color.Transparent;
@@ -234,60 +310,69 @@
             this.urC_Crumbs1.Size = new System.Drawing.Size(300, 35);
             this.urC_Crumbs1.TabIndex = 2;
             // 
-            // uiLabel1
+            // uC_Task_Item3
             // 
-            this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel1.Location = new System.Drawing.Point(15, 11);
-            this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(100, 23);
-            this.uiLabel1.TabIndex = 9;
-            this.uiLabel1.Text = "Order ID";
-            this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiLabel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.uC_Task_Item3.BackColor = System.Drawing.Color.White;
+            this.uC_Task_Item3.Location = new System.Drawing.Point(4, 150);
+            this.uC_Task_Item3.Name = "uC_Task_Item3";
+            this.uC_Task_Item3.Size = new System.Drawing.Size(1100, 47);
+            this.uC_Task_Item3.TabIndex = 3;
             // 
-            // uiLabel2
+            // uC_Task_Item4
             // 
-            this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel2.Location = new System.Drawing.Point(165, 17);
-            this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(100, 23);
-            this.uiLabel2.TabIndex = 10;
-            this.uiLabel2.Text = "Decription";
-            this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiLabel2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.uC_Task_Item4.BackColor = System.Drawing.Color.White;
+            this.uC_Task_Item4.Location = new System.Drawing.Point(4, 101);
+            this.uC_Task_Item4.Name = "uC_Task_Item4";
+            this.uC_Task_Item4.Size = new System.Drawing.Size(1100, 47);
+            this.uC_Task_Item4.TabIndex = 2;
             // 
-            // uiLabel3
+            // uC_Task_Item5
             // 
-            this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel3.Location = new System.Drawing.Point(930, 17);
-            this.uiLabel3.Name = "uiLabel3";
-            this.uiLabel3.Size = new System.Drawing.Size(100, 23);
-            this.uiLabel3.TabIndex = 11;
-            this.uiLabel3.Text = "Operation";
-            this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiLabel3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.uC_Task_Item5.BackColor = System.Drawing.Color.White;
+            this.uC_Task_Item5.Location = new System.Drawing.Point(4, 248);
+            this.uC_Task_Item5.Name = "uC_Task_Item5";
+            this.uC_Task_Item5.Size = new System.Drawing.Size(1100, 47);
+            this.uC_Task_Item5.TabIndex = 5;
             // 
-            // uiLabel4
+            // uC_Task_Item6
             // 
-            this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel4.Location = new System.Drawing.Point(713, 17);
-            this.uiLabel4.Name = "uiLabel4";
-            this.uiLabel4.Size = new System.Drawing.Size(100, 23);
-            this.uiLabel4.TabIndex = 12;
-            this.uiLabel4.Text = "Update Time";
-            this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiLabel4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.uC_Task_Item6.BackColor = System.Drawing.Color.White;
+            this.uC_Task_Item6.Location = new System.Drawing.Point(4, 199);
+            this.uC_Task_Item6.Name = "uC_Task_Item6";
+            this.uC_Task_Item6.Size = new System.Drawing.Size(1100, 47);
+            this.uC_Task_Item6.TabIndex = 4;
             // 
-            // uiLabel5
+            // uC_Task_Item7
             // 
-            this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel5.Location = new System.Drawing.Point(571, 17);
-            this.uiLabel5.Name = "uiLabel5";
-            this.uiLabel5.Size = new System.Drawing.Size(100, 23);
-            this.uiLabel5.TabIndex = 13;
-            this.uiLabel5.Text = "Status";
-            this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiLabel5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.uC_Task_Item7.BackColor = System.Drawing.Color.White;
+            this.uC_Task_Item7.Location = new System.Drawing.Point(4, 346);
+            this.uC_Task_Item7.Name = "uC_Task_Item7";
+            this.uC_Task_Item7.Size = new System.Drawing.Size(1100, 47);
+            this.uC_Task_Item7.TabIndex = 7;
+            // 
+            // uC_Task_Item8
+            // 
+            this.uC_Task_Item8.BackColor = System.Drawing.Color.White;
+            this.uC_Task_Item8.Location = new System.Drawing.Point(4, 297);
+            this.uC_Task_Item8.Name = "uC_Task_Item8";
+            this.uC_Task_Item8.Size = new System.Drawing.Size(1100, 47);
+            this.uC_Task_Item8.TabIndex = 6;
+            // 
+            // uC_Task_Item9
+            // 
+            this.uC_Task_Item9.BackColor = System.Drawing.Color.White;
+            this.uC_Task_Item9.Location = new System.Drawing.Point(4, 395);
+            this.uC_Task_Item9.Name = "uC_Task_Item9";
+            this.uC_Task_Item9.Size = new System.Drawing.Size(1100, 47);
+            this.uC_Task_Item9.TabIndex = 8;
+            // 
+            // uC_Task_Item10
+            // 
+            this.uC_Task_Item10.BackColor = System.Drawing.Color.White;
+            this.uC_Task_Item10.Location = new System.Drawing.Point(4, 444);
+            this.uC_Task_Item10.Name = "uC_Task_Item10";
+            this.uC_Task_Item10.Size = new System.Drawing.Size(1100, 47);
+            this.uC_Task_Item10.TabIndex = 9;
             // 
             // UC_TaskList
             // 
@@ -317,12 +402,20 @@
         private Sunny.UI.UIButton noStartCard;
         private Sunny.UI.UIButton allCard;
         private Others.UC_Pagination pagination;
-        private Others.UC_Task_Item uC_Task_Item2;
+        private Sunny.UI.UILabel uiLabel6;
+        private Sunny.UI.UILabel uiLabel7;
+        private Sunny.UI.UILabel uiLabel8;
+        private Sunny.UI.UILabel uiLabel9;
+        private Sunny.UI.UILabel uiLabel10;
         private Others.UC_Task_Item uC_Task_Item1;
-        private Sunny.UI.UILabel uiLabel5;
-        private Sunny.UI.UILabel uiLabel4;
-        private Sunny.UI.UILabel uiLabel3;
-        private Sunny.UI.UILabel uiLabel2;
-        private Sunny.UI.UILabel uiLabel1;
+        private Others.UC_Task_Item uC_Task_Item2;
+        private Others.UC_Task_Item uC_Task_Item10;
+        private Others.UC_Task_Item uC_Task_Item9;
+        private Others.UC_Task_Item uC_Task_Item7;
+        private Others.UC_Task_Item uC_Task_Item8;
+        private Others.UC_Task_Item uC_Task_Item5;
+        private Others.UC_Task_Item uC_Task_Item6;
+        private Others.UC_Task_Item uC_Task_Item3;
+        private Others.UC_Task_Item uC_Task_Item4;
     }
 }

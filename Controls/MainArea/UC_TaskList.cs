@@ -19,8 +19,7 @@ namespace miniSys0._3.Controls.MainArea
             InitCurmbs();
             InitStyle();
             InitSwitchBtns();
-            uC_Task_Item1.Init("Ord00000001");
-            uC_Task_Item2.Init("Ord00000002");
+            Init10Items();
         }
 
         private void InitCurmbs()
@@ -156,6 +155,20 @@ namespace miniSys0._3.Controls.MainArea
             pagination.orderList = SQLCursor.Query(sql);
             //renderCard(pagination.orderList);
             pagination.Init(pagination.orderList.Length, 9);
+        }
+
+        private void Init10Items()
+        {
+            uC_Task_Item1.Init("Ord00000001");
+            uC_Task_Item2.Init("Ord00000002");
+            uC_Task_Item3.Init("Ord00000003");
+            uC_Task_Item4.Init("Ord00000004");
+            uC_Task_Item5.Init("Ord00000005");
+            uC_Task_Item6.Init("Ord00000006");
+            uC_Task_Item7.Init("Ord00000007");
+            uC_Task_Item8.Init("Ord00000008");
+            uC_Task_Item9.Init("Ord00000009");
+            uC_Task_Item10.Init("Ord00000010");
         }
     }
 }

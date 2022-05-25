@@ -31,7 +31,6 @@ namespace miniSys0._3.Controls.Others
                 $"WHERE OrderID = '{orderID}' " +
                 $"ORDER BY Time DESC;");
 
-            
             setStatus(Data[0]);
             //updateTime.Text = Data[1].Substring(0, 19);
             updateTime.Text = Data[1];
