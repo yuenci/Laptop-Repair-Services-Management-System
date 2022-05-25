@@ -18,6 +18,7 @@ namespace miniSys0._3.Controls.Others
         private int pageNum;
         private int DataAmount;
         public int pageID;
+
         public UC_Pagination()
         {     
             InitializeComponent();   
@@ -783,7 +784,7 @@ namespace miniSys0._3.Controls.Others
                     }
                 }
             }
-            //Console.WriteLine(pageID);
+            Console.WriteLine(pageID);
             cardCallBack();
         }
         private void clearRect()
@@ -935,16 +936,17 @@ namespace miniSys0._3.Controls.Others
             }
         }
 
+        public dynamic[] orderList;
         private void cardCallBack()
         {
             if (type == "card")
             {
                 Console.WriteLine("called");
-                string sql = "WITH A AS(SELECT DISTINCT OrderID,Time from Schedule WhERE Status = 'Finished'),";
+                /*string sql = "WITH A AS(SELECT DISTINCT OrderID,Time from Schedule WhERE Status = 'Finished'),";
                 sql += "B AS(SELECT DISTINCT OrderID,Time from Schedule)";
-                sql += "select * from B where (select count(1) as num from A where A.OrderID = B.OrderID) = 0  Order by Time";
+                sql += "select * from B where (select count(1) as num from A where A.OrderID = B.OrderID) = 0  Order by Time";*/
 
-                dynamic[] data = SQLCursor.Query(sql);
+                dynamic[] data = orderList;
 
                 dynamic[] card = { UC_TaskCards.uc_TaskCards.uC_Task_Card1,
                 UC_TaskCards.uc_TaskCards.uC_Task_Card2,

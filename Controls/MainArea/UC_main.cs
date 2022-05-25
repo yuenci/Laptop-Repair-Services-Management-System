@@ -708,7 +708,7 @@ namespace miniSys0._3.Controls
             }
 
         }
-        private void readerShow(string type,int num)
+        public  void readerShow(string type,int num)
         {
             if (type == "news")
             {

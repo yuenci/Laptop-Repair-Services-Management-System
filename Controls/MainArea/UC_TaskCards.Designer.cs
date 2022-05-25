@@ -29,15 +29,14 @@
         private void InitializeComponent()
         {
             this.Container = new Sunny.UI.UIUserControl();
-            this.contentPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.switchButton1 = new Sunny.UI.UIButton();
-            this.switchButton2 = new Sunny.UI.UIButton();
-            this.switchButton3 = new Sunny.UI.UIButton();
-            this.switchButton4 = new Sunny.UI.UIButton();
+            this.searchIcon = new Sunny.UI.UIAvatar();
             this.searchBox = new Sunny.UI.UITextBox();
-            this.uiAvatar2 = new Sunny.UI.UIAvatar();
+            this.dfinishedCard = new Sunny.UI.UIButton();
+            this.repairingCard = new Sunny.UI.UIButton();
+            this.noStartCard = new Sunny.UI.UIButton();
+            this.allCard = new Sunny.UI.UIButton();
             this.pagination = new miniSys0._3.Controls.Others.UC_Pagination();
+            this.contentPanel = new System.Windows.Forms.Panel();
             this.uC_Task_Card9 = new miniSys0._3.Controls.Others.UC_Task_Card();
             this.uC_Task_Card8 = new miniSys0._3.Controls.Others.UC_Task_Card();
             this.uC_Task_Card7 = new miniSys0._3.Controls.Others.UC_Task_Card();
@@ -47,6 +46,7 @@
             this.uC_Task_Card3 = new miniSys0._3.Controls.Others.UC_Task_Card();
             this.uC_Task_Card2 = new miniSys0._3.Controls.Others.UC_Task_Card();
             this.uC_Task_Card1 = new miniSys0._3.Controls.Others.UC_Task_Card();
+            this.label1 = new System.Windows.Forms.Label();
             this.urC_Crumbs1 = new miniSys0._3.Controls.Others.UrC_Crumbs();
             this.Container.SuspendLayout();
             this.contentPanel.SuspendLayout();
@@ -55,12 +55,12 @@
             // Container
             // 
             this.Container.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.Container.Controls.Add(this.uiAvatar2);
+            this.Container.Controls.Add(this.searchIcon);
             this.Container.Controls.Add(this.searchBox);
-            this.Container.Controls.Add(this.switchButton4);
-            this.Container.Controls.Add(this.switchButton3);
-            this.Container.Controls.Add(this.switchButton2);
-            this.Container.Controls.Add(this.switchButton1);
+            this.Container.Controls.Add(this.dfinishedCard);
+            this.Container.Controls.Add(this.repairingCard);
+            this.Container.Controls.Add(this.noStartCard);
+            this.Container.Controls.Add(this.allCard);
             this.Container.Controls.Add(this.pagination);
             this.Container.Controls.Add(this.contentPanel);
             this.Container.Controls.Add(this.label1);
@@ -77,6 +77,118 @@
             this.Container.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.Container.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // searchIcon
+            // 
+            this.searchIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.searchIcon.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.searchIcon.Location = new System.Drawing.Point(1021, 55);
+            this.searchIcon.MinimumSize = new System.Drawing.Size(1, 1);
+            this.searchIcon.Name = "searchIcon";
+            this.searchIcon.Shape = Sunny.UI.UIShape.Square;
+            this.searchIcon.Size = new System.Drawing.Size(33, 33);
+            this.searchIcon.Style = Sunny.UI.UIStyle.Custom;
+            this.searchIcon.Symbol = 61442;
+            this.searchIcon.SymbolSize = 30;
+            this.searchIcon.TabIndex = 91;
+            this.searchIcon.Text = "uiAvatar2";
+            this.searchIcon.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.searchIcon.Click += new System.EventHandler(this.searchIcon_Click);
+            // 
+            // searchBox
+            // 
+            this.searchBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.searchBox.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.searchBox.Location = new System.Drawing.Point(753, 54);
+            this.searchBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.searchBox.MinimumSize = new System.Drawing.Size(1, 16);
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.searchBox.ShowText = false;
+            this.searchBox.Size = new System.Drawing.Size(269, 35);
+            this.searchBox.Style = Sunny.UI.UIStyle.Custom;
+            this.searchBox.TabIndex = 90;
+            this.searchBox.Text = "Search";
+            this.searchBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.searchBox.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.searchBox.Leave += new System.EventHandler(this.searchBox_Leave);
+            this.searchBox.Enter += new System.EventHandler(this.searchBox_Enter);
+            // 
+            // dfinishedCard
+            // 
+            this.dfinishedCard.BackColor = System.Drawing.Color.Transparent;
+            this.dfinishedCard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dfinishedCard.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dfinishedCard.Location = new System.Drawing.Point(458, 58);
+            this.dfinishedCard.MinimumSize = new System.Drawing.Size(1, 1);
+            this.dfinishedCard.Name = "dfinishedCard";
+            this.dfinishedCard.Radius = 25;
+            this.dfinishedCard.Size = new System.Drawing.Size(100, 30);
+            this.dfinishedCard.Style = Sunny.UI.UIStyle.Custom;
+            this.dfinishedCard.TabIndex = 89;
+            this.dfinishedCard.Text = "Finished";
+            this.dfinishedCard.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dfinishedCard.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.dfinishedCard.Click += new System.EventHandler(this.switchButton4_Click);
+            // 
+            // repairingCard
+            // 
+            this.repairingCard.BackColor = System.Drawing.Color.Transparent;
+            this.repairingCard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.repairingCard.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.repairingCard.Location = new System.Drawing.Point(325, 58);
+            this.repairingCard.MinimumSize = new System.Drawing.Size(1, 1);
+            this.repairingCard.Name = "repairingCard";
+            this.repairingCard.Radius = 25;
+            this.repairingCard.Size = new System.Drawing.Size(100, 30);
+            this.repairingCard.Style = Sunny.UI.UIStyle.Custom;
+            this.repairingCard.TabIndex = 88;
+            this.repairingCard.Text = "Repairing";
+            this.repairingCard.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.repairingCard.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.repairingCard.Click += new System.EventHandler(this.switchButton3_Click);
+            // 
+            // noStartCard
+            // 
+            this.noStartCard.BackColor = System.Drawing.Color.Transparent;
+            this.noStartCard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.noStartCard.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.noStartCard.Location = new System.Drawing.Point(192, 58);
+            this.noStartCard.MinimumSize = new System.Drawing.Size(1, 1);
+            this.noStartCard.Name = "noStartCard";
+            this.noStartCard.Radius = 25;
+            this.noStartCard.Size = new System.Drawing.Size(100, 30);
+            this.noStartCard.Style = Sunny.UI.UIStyle.Custom;
+            this.noStartCard.TabIndex = 87;
+            this.noStartCard.Text = "NotStart";
+            this.noStartCard.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.noStartCard.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.noStartCard.Click += new System.EventHandler(this.switchButton2_Click);
+            // 
+            // allCard
+            // 
+            this.allCard.BackColor = System.Drawing.Color.Transparent;
+            this.allCard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.allCard.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.allCard.Location = new System.Drawing.Point(59, 58);
+            this.allCard.MinimumSize = new System.Drawing.Size(1, 1);
+            this.allCard.Name = "allCard";
+            this.allCard.Radius = 25;
+            this.allCard.Size = new System.Drawing.Size(100, 30);
+            this.allCard.Style = Sunny.UI.UIStyle.Custom;
+            this.allCard.TabIndex = 86;
+            this.allCard.Text = "All ";
+            this.allCard.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.allCard.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.allCard.Click += new System.EventHandler(this.switchButton1_Click);
+            // 
+            // pagination
+            // 
+            this.pagination.BackColor = System.Drawing.Color.White;
+            this.pagination.Location = new System.Drawing.Point(59, 617);
+            this.pagination.Name = "pagination";
+            this.pagination.Size = new System.Drawing.Size(1000, 40);
+            this.pagination.TabIndex = 85;
+            // 
             // contentPanel
             // 
             this.contentPanel.BackColor = System.Drawing.Color.Transparent;
@@ -89,142 +201,15 @@
             this.contentPanel.Controls.Add(this.uC_Task_Card3);
             this.contentPanel.Controls.Add(this.uC_Task_Card2);
             this.contentPanel.Controls.Add(this.uC_Task_Card1);
-            this.contentPanel.Location = new System.Drawing.Point(3, 128);
+            this.contentPanel.Location = new System.Drawing.Point(3, 108);
             this.contentPanel.Name = "contentPanel";
-            this.contentPanel.Size = new System.Drawing.Size(1115, 484);
+            this.contentPanel.Size = new System.Drawing.Size(1115, 504);
             this.contentPanel.TabIndex = 84;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(10, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(255, 28);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Service requested Cards";
-            // 
-            // switchButton1
-            // 
-            this.switchButton1.BackColor = System.Drawing.Color.Transparent;
-            this.switchButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.switchButton1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.switchButton1.Location = new System.Drawing.Point(59, 76);
-            this.switchButton1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.switchButton1.Name = "switchButton1";
-            this.switchButton1.Radius = 25;
-            this.switchButton1.Size = new System.Drawing.Size(100, 30);
-            this.switchButton1.Style = Sunny.UI.UIStyle.Custom;
-            this.switchButton1.TabIndex = 86;
-            this.switchButton1.Text = "All ";
-            this.switchButton1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.switchButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.switchButton1.Click += new System.EventHandler(this.switchButton1_Click);
-            // 
-            // switchButton2
-            // 
-            this.switchButton2.BackColor = System.Drawing.Color.Transparent;
-            this.switchButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.switchButton2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.switchButton2.Location = new System.Drawing.Point(192, 76);
-            this.switchButton2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.switchButton2.Name = "switchButton2";
-            this.switchButton2.Radius = 25;
-            this.switchButton2.Size = new System.Drawing.Size(100, 30);
-            this.switchButton2.Style = Sunny.UI.UIStyle.Custom;
-            this.switchButton2.TabIndex = 87;
-            this.switchButton2.Text = "NotStart";
-            this.switchButton2.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.switchButton2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.switchButton2.Click += new System.EventHandler(this.switchButton2_Click);
-            // 
-            // switchButton3
-            // 
-            this.switchButton3.BackColor = System.Drawing.Color.Transparent;
-            this.switchButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.switchButton3.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.switchButton3.Location = new System.Drawing.Point(325, 76);
-            this.switchButton3.MinimumSize = new System.Drawing.Size(1, 1);
-            this.switchButton3.Name = "switchButton3";
-            this.switchButton3.Radius = 25;
-            this.switchButton3.Size = new System.Drawing.Size(100, 30);
-            this.switchButton3.Style = Sunny.UI.UIStyle.Custom;
-            this.switchButton3.TabIndex = 88;
-            this.switchButton3.Text = "Repairing";
-            this.switchButton3.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.switchButton3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.switchButton3.Click += new System.EventHandler(this.switchButton3_Click);
-            // 
-            // switchButton4
-            // 
-            this.switchButton4.BackColor = System.Drawing.Color.Transparent;
-            this.switchButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.switchButton4.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.switchButton4.Location = new System.Drawing.Point(458, 76);
-            this.switchButton4.MinimumSize = new System.Drawing.Size(1, 1);
-            this.switchButton4.Name = "switchButton4";
-            this.switchButton4.Radius = 25;
-            this.switchButton4.Size = new System.Drawing.Size(100, 30);
-            this.switchButton4.Style = Sunny.UI.UIStyle.Custom;
-            this.switchButton4.TabIndex = 89;
-            this.switchButton4.Text = "Finished";
-            this.switchButton4.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.switchButton4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.switchButton4.Click += new System.EventHandler(this.switchButton4_Click);
-            // 
-            // searchBox
-            // 
-            this.searchBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.searchBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.searchBox.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.searchBox.Location = new System.Drawing.Point(753, 72);
-            this.searchBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.searchBox.MinimumSize = new System.Drawing.Size(1, 16);
-            this.searchBox.Name = "searchBox";
-            this.searchBox.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.searchBox.RectColor = System.Drawing.Color.White;
-            this.searchBox.RectDisableColor = System.Drawing.Color.White;
-            this.searchBox.RectReadOnlyColor = System.Drawing.Color.White;
-            this.searchBox.ShowText = false;
-            this.searchBox.Size = new System.Drawing.Size(269, 35);
-            this.searchBox.Style = Sunny.UI.UIStyle.Custom;
-            this.searchBox.TabIndex = 90;
-            this.searchBox.Text = "Search";
-            this.searchBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.searchBox.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.searchBox.Leave += new System.EventHandler(this.searchBox_Leave);
-            this.searchBox.Enter += new System.EventHandler(this.searchBox_Enter);
-            // 
-            // uiAvatar2
-            // 
-            this.uiAvatar2.FillColor = System.Drawing.Color.Transparent;
-            this.uiAvatar2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiAvatar2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.uiAvatar2.Location = new System.Drawing.Point(1021, 73);
-            this.uiAvatar2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiAvatar2.Name = "uiAvatar2";
-            this.uiAvatar2.Shape = Sunny.UI.UIShape.Square;
-            this.uiAvatar2.Size = new System.Drawing.Size(33, 33);
-            this.uiAvatar2.Style = Sunny.UI.UIStyle.Custom;
-            this.uiAvatar2.Symbol = 61442;
-            this.uiAvatar2.SymbolSize = 30;
-            this.uiAvatar2.TabIndex = 91;
-            this.uiAvatar2.Text = "uiAvatar2";
-            this.uiAvatar2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // pagination
-            // 
-            this.pagination.BackColor = System.Drawing.Color.White;
-            this.pagination.Location = new System.Drawing.Point(59, 611);
-            this.pagination.Name = "pagination";
-            this.pagination.Size = new System.Drawing.Size(1000, 40);
-            this.pagination.TabIndex = 85;
             // 
             // uC_Task_Card9
             // 
             this.uC_Task_Card9.BackColor = System.Drawing.Color.White;
-            this.uC_Task_Card9.Location = new System.Drawing.Point(750, 323);
+            this.uC_Task_Card9.Location = new System.Drawing.Point(750, 344);
             this.uC_Task_Card9.Name = "uC_Task_Card9";
             this.uC_Task_Card9.Size = new System.Drawing.Size(305, 145);
             this.uC_Task_Card9.TabIndex = 8;
@@ -232,7 +217,7 @@
             // uC_Task_Card8
             // 
             this.uC_Task_Card8.BackColor = System.Drawing.Color.White;
-            this.uC_Task_Card8.Location = new System.Drawing.Point(403, 323);
+            this.uC_Task_Card8.Location = new System.Drawing.Point(403, 344);
             this.uC_Task_Card8.Name = "uC_Task_Card8";
             this.uC_Task_Card8.Size = new System.Drawing.Size(305, 145);
             this.uC_Task_Card8.TabIndex = 7;
@@ -240,7 +225,7 @@
             // uC_Task_Card7
             // 
             this.uC_Task_Card7.BackColor = System.Drawing.Color.White;
-            this.uC_Task_Card7.Location = new System.Drawing.Point(56, 323);
+            this.uC_Task_Card7.Location = new System.Drawing.Point(56, 344);
             this.uC_Task_Card7.Name = "uC_Task_Card7";
             this.uC_Task_Card7.Size = new System.Drawing.Size(305, 145);
             this.uC_Task_Card7.TabIndex = 6;
@@ -248,7 +233,7 @@
             // uC_Task_Card6
             // 
             this.uC_Task_Card6.BackColor = System.Drawing.Color.White;
-            this.uC_Task_Card6.Location = new System.Drawing.Point(750, 166);
+            this.uC_Task_Card6.Location = new System.Drawing.Point(750, 175);
             this.uC_Task_Card6.Name = "uC_Task_Card6";
             this.uC_Task_Card6.Size = new System.Drawing.Size(305, 145);
             this.uC_Task_Card6.TabIndex = 5;
@@ -256,7 +241,7 @@
             // uC_Task_Card5
             // 
             this.uC_Task_Card5.BackColor = System.Drawing.Color.White;
-            this.uC_Task_Card5.Location = new System.Drawing.Point(403, 166);
+            this.uC_Task_Card5.Location = new System.Drawing.Point(403, 175);
             this.uC_Task_Card5.Name = "uC_Task_Card5";
             this.uC_Task_Card5.Size = new System.Drawing.Size(305, 145);
             this.uC_Task_Card5.TabIndex = 4;
@@ -264,7 +249,7 @@
             // uC_Task_Card4
             // 
             this.uC_Task_Card4.BackColor = System.Drawing.Color.White;
-            this.uC_Task_Card4.Location = new System.Drawing.Point(56, 166);
+            this.uC_Task_Card4.Location = new System.Drawing.Point(56, 175);
             this.uC_Task_Card4.Name = "uC_Task_Card4";
             this.uC_Task_Card4.Size = new System.Drawing.Size(305, 145);
             this.uC_Task_Card4.TabIndex = 3;
@@ -292,6 +277,17 @@
             this.uC_Task_Card1.Name = "uC_Task_Card1";
             this.uC_Task_Card1.Size = new System.Drawing.Size(305, 145);
             this.uC_Task_Card1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(10, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(255, 28);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Service requested Cards";
             // 
             // urC_Crumbs1
             // 
@@ -333,11 +329,11 @@
         public Others.UC_Task_Card uC_Task_Card8;
         public Others.UC_Task_Card uC_Task_Card7;
         public Others.UC_Task_Card uC_Task_Card6;
-        private Sunny.UI.UIButton switchButton4;
-        private Sunny.UI.UIButton switchButton3;
-        private Sunny.UI.UIButton switchButton2;
-        private Sunny.UI.UIButton switchButton1;
+        private Sunny.UI.UIButton dfinishedCard;
+        private Sunny.UI.UIButton repairingCard;
+        private Sunny.UI.UIButton noStartCard;
+        private Sunny.UI.UIButton allCard;
         private Sunny.UI.UITextBox searchBox;
-        private Sunny.UI.UIAvatar uiAvatar2;
+        private Sunny.UI.UIAvatar searchIcon;
     }
 }

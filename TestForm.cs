@@ -172,8 +172,12 @@ namespace miniSys0._3
             }
         }
 
-
-
-
+        private void button5_Click(object sender, EventArgs e)
+        {
+            dynamic[] Data = SQLCursor.Query($"SELECT TOP 1 Status,Time FROM Schedule " +
+                $"WHERE OrderID = 'Ord00000003' " +
+                $"ORDER BY Time DESC;");
+            MessageBox.Show(Data[1]);
+        }
     }
 }

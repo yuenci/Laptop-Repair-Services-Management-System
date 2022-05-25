@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Windows.Forms;
@@ -21,6 +22,10 @@ namespace miniSys0._3.Controls.MainArea
             InitName();
             InitStyle();
             InitBtnEvent();
+            InitProcess();
+            InitNewsStyle();
+            InitNewsContent();
+            InitNewsEvents();
             uc_Cus_dashboard = this;
             SetTimer();
         }
@@ -36,23 +41,47 @@ namespace miniSys0._3.Controls.MainArea
         }
         private void InitStyle()
         {
+            modelIcon.RectDisableColor = Color.White;
+            staffIcon.RectDisableColor = Color.White;
+
+            modelIcon.Enabled = false;
+            staffIcon.Enabled = false;
+
+            Process.ProcessBackColor = Color.White;
+            Process.ProcessColor = Color.FromArgb(0, 180, 42);
+
             shortcutButton1.FillColor = Color.FromArgb(242, 243, 245);
             shortcutButton2.FillColor = Color.FromArgb(242, 243, 245);
             shortcutButton3.FillColor = Color.FromArgb(242, 243, 245);
+
+            modelIcon.FillColor = Color.FromArgb(242, 243, 245);
+            staffIcon.FillColor = Color.FromArgb(242, 243, 245);
+
             shortcutButton1.SymbolColor = Color.Black;
             shortcutButton2.SymbolColor = Color.Black;
             shortcutButton3.SymbolColor = Color.Black;
+            modelIcon.SymbolColor = Color.Black;
+            staffIcon.SymbolColor = Color.Black;
+
             shortcutButton1.SymbolHoverColor = Color.Black;
             shortcutButton2.SymbolHoverColor = Color.Black;
             shortcutButton3.SymbolHoverColor = Color.Black;
+            modelIcon.SymbolHoverColor = Color.Black;
+            staffIcon.SymbolHoverColor = Color.Black;
 
             shortcutButton1.RectColor = Color.Transparent;
             shortcutButton2.RectColor = Color.Transparent;
             shortcutButton3.RectColor = Color.Transparent;
+            modelIcon.RectColor = Color.Transparent;
+            staffIcon.RectColor = Color.Transparent;
 
             imageBtn1.FillColor = Color.FromArgb(252, 210, 80);
             imageBtnLeft.FillColor = Color.White;
             imageBtnRight.FillColor = Color.White;
+
+            orderStatus.RectColor = Color.White;
+            modelText.RectColor = Color.White;
+            staffName.RectColor = Color.White;
         }
         public void InitBtnEvent()
         {
@@ -200,12 +229,9 @@ namespace miniSys0._3.Controls.MainArea
             UC_Cus_OrderDetails uc = new UC_Cus_OrderDetails();
             addUserControl(uc);
         }
-
+        string cusID = User_type.user_ID;
         private void shortcutButton2_Click(object sender, EventArgs e)
-        {
-            string cusID = User_type.user_ID;
-            string OrderID = "Ord00005700";
-            
+        { 
             dynamic[] description = SQLCursor.Query($"select Top 1 Description from Orders where CustomerID = '{cusID}' Order by Time DESC;;");
             int length = description.Length;
 
@@ -227,6 +253,246 @@ namespace miniSys0._3.Controls.MainArea
                 MessageBox.Show("You haven't made any order");
             }
         }
+
+        private void InitProcess()
+        {
+            dynamic[] data = SQLCursor.Query($"SELECT TOP 1 Schedule.Status,Orders.Model,Staff.Name " +
+                $"FROM Schedule " +
+                $"INNER JOIN Orders ON Orders.OrderID = Schedule.OrderID " +
+                $"INNER JOIN Staff ON Staff.StaffID = Schedule.TechnicianID " +
+                $"WHERE Orders.CustomerID = '{cusID}' " +
+                $"ORDER BY Schedule.Time DESC; ");
+
+            //MessageBox.Show(data[0]);
+
+            if (data.Length ==0)
+            {
+                Process.Text = "0";
+                orderStatus.Text = " ";
+                modelText.Text = "None";
+                staffName.Text = "None";
+            }
+            else
+            {
+
+                Process.Value = int.Parse(prcessValue(data[0])[0]);
+                orderStatus.Text = prcessValue(data[0])[1];
+                modelText.Text = data[1];
+
+                if (data[2] !=null)
+                {
+                    staffName.Text = data[2];
+                }
+                else
+                {
+                    staffName.Text = "None";
+                }
+
+            }
+
+            /*Process.Text = */
+        }
+
+        private string[] prcessValue(string str)
+        {
+            string[] valueText  = new string[2];
+            if (str == "Order")
+            {
+                valueText[0] = "25";
+                valueText[1] = "Ordered";
+                return valueText;
+            }
+            else if (str == "Progress")
+            {
+                valueText[0] = "50";
+                valueText[1] = "Repatring";
+                return valueText;
+            }
+            else if (str == "Completed")
+            {
+                valueText[0] = "75";
+                valueText[1] = "Complated";
+                return valueText;
+            }
+            else if (str == "Finished")
+            {
+                valueText[0] = "100";
+                valueText[1] = "Finished";
+                return valueText;
+            }
+            return valueText;
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InitNewsStyle()
+        {
+            newsTopBar.RectColor = Color.Transparent;
+            newsTopBar.FillColor = Color.FromArgb(242, 243, 245);
+            news1.MarkColor = Color.FromArgb(242, 243, 245);
+            news2.MarkColor = Color.FromArgb(242, 243, 245);
+            news3.MarkColor = Color.FromArgb(242, 243, 245);
+            news4.MarkColor = Color.FromArgb(242, 243, 245);
+            news5.MarkColor = Color.FromArgb(242, 243, 245);
+
+            shortcutButton1.FillColor = Color.FromArgb(242, 243, 245);
+            shortcutButton2.FillColor = Color.FromArgb(242, 243, 245);
+            shortcutButton3.FillColor = Color.FromArgb(242, 243, 245);
+            shortcutButton1.SymbolColor = Color.Black;
+            shortcutButton2.SymbolColor = Color.Black;
+            shortcutButton3.SymbolColor = Color.Black;
+            shortcutButton1.SymbolHoverColor = Color.Black;
+            shortcutButton2.SymbolHoverColor = Color.Black;
+            shortcutButton3.SymbolHoverColor = Color.Black;
+
+            shortcutButton1.RectColor = Color.Transparent;
+            shortcutButton2.RectColor = Color.Transparent;
+            shortcutButton3.RectColor = Color.Transparent;
+        }
+        private string[] urls;
+        private void InitNewsContent()
+        {
+            dynamic data = SQLCursor.Query("SELECT TOP  5 Title,Views,Url FROM Articles ORDER BY Views DESC;");
+            UIMarkLabel[] uIMarkLabels = { news1 , news2 , news3 , news4 , news5 };
+            Label[] lables = { newslabel1 , newslabel2 , newslabel3 , newslabel4 , newslabel5 };
+            urls = new string[5];
+            for (int i = 0; i < 5; i++)
+            {
+                uIMarkLabels[i].Text = (i+1).ToString()+ "     " + data[i][0];
+                lables[i].Text = data[i][1];
+                urls[i] = data[i][2];
+            }
+        }
+        private void readerShow(int newsID)
+        {
+            string path = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin"))
+                     + $"Html\\Articles\\{urls[newsID]}";
+            Reader.reader.WebBrowser2.Load(path);
+
+
+            add1ToViews(urls[newsID]);
+
+            Thread.Sleep(100);
+            Reader.reader.Show();
+
+
+        }
+        private void add1ToViews(string url)
+        {
+            Label[] lables = { newslabel1, newslabel2, newslabel3, newslabel4, newslabel5 };
+            int index = urls.ToList().IndexOf(url);
+            lables[index].Text = (int.Parse(lables[index].Text) + 1).ToString();
+            string sql = $"update Articles set Views=Views+1 where Url='{url}';";
+            SQLCursor.Execute(sql);
+        }
+        private void InitNewsEvents()
+        {
+            news1.Click  += new EventHandler(newsClick);
+            news2.Click += new EventHandler(newsClick);
+            news3.Click += new EventHandler(newsClick);
+            news4.Click += new EventHandler(newsClick);
+            news5.Click += new EventHandler(newsClick);
+
+            news1.MouseHover += new EventHandler(newsHover);
+            news2.MouseHover += new EventHandler(newsHover);
+            news3.MouseHover += new EventHandler(newsHover);
+            news4.MouseHover += new EventHandler(newsHover);
+            news5.MouseHover += new EventHandler(newsHover);
+
+            news1.MouseLeave += new EventHandler(newsLeave);
+            news2.MouseLeave += new EventHandler(newsLeave);
+            news3.MouseLeave += new EventHandler(newsLeave);
+            news4.MouseLeave += new EventHandler(newsLeave);
+            news5.MouseLeave += new EventHandler(newsLeave);
+        }
+        private void newsClick(object sender, EventArgs e)
+        {
+            if (sender.Equals(news1))
+            {
+                readerShow( 0);
+            }
+            else if(sender.Equals(news2))
+            {
+                readerShow( 1);
+            }
+            else if (sender.Equals(news3))
+            {
+                readerShow( 2);
+            }
+            else if (sender.Equals(news4))
+            {
+                readerShow( 3);
+            }
+            else if (sender.Equals(news5))
+            {
+                readerShow( 4);
+            }
+        }
+
+        private void newsHover(object sender, EventArgs e)
+        {
+            if (sender.Equals(news1))
+            {
+                news1.ForeColor = Color.FromArgb(51, 112, 255);
+                newslabel1.ForeColor = Color.FromArgb(51, 112, 255);
+            }
+            else if (sender.Equals(news2))
+            {
+                news2.ForeColor = Color.FromArgb(51, 112, 255);
+                newslabel2.ForeColor = Color.FromArgb(51, 112, 255);
+            }
+            else if (sender.Equals(news3))
+            {
+                news3.ForeColor = Color.FromArgb(51, 112, 255);
+                newslabel3.ForeColor = Color.FromArgb(51, 112, 255);
+            }
+            else if (sender.Equals(news4))
+            {
+                news4.ForeColor = Color.FromArgb(51, 112, 255);
+                newslabel4.ForeColor = Color.FromArgb(51, 112, 255);
+            }
+            else if (sender.Equals(news5))
+            {
+                news5.ForeColor = Color.FromArgb(51, 112, 255);
+                newslabel5.ForeColor = Color.FromArgb(51, 112, 255);
+            }
+        }
+
+        private void newsLeave(object sender, EventArgs e)
+        {
+            if (sender.Equals(news1))
+            {
+                news1.ForeColor = Color.Black;
+                newslabel1.ForeColor = Color.Black;
+            }
+            else if (sender.Equals(news2))
+            {
+                news2.ForeColor = Color.Black;
+                newslabel2.ForeColor = Color.Black;
+            }
+            else if (sender.Equals(news3))
+            {
+                news3.ForeColor = Color.Black;
+                newslabel3.ForeColor = Color.Black;
+            }
+            else if (sender.Equals(news4))
+            {
+                news4.ForeColor = Color.Black;
+                newslabel4.ForeColor = Color.Black;
+            }
+            else if (sender.Equals(news5))
+            {
+                news5.ForeColor = Color.Black;
+                newslabel5.ForeColor = Color.Black;
+            }
+        }
+
+
     }
-    
+
+
+
 }

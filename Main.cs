@@ -27,6 +27,7 @@ namespace miniSys0._3
             this.StartPosition = FormStartPosition.CenterScreen;
             InitCef();
             InitProfile();
+            InitReader();
 
 
             //left bat
@@ -46,10 +47,11 @@ namespace miniSys0._3
             //add_UC_registration
             //add_UC_Payment();
             //add_task_cards();
+            add_task_table();
             //add_Cus_OrderDetails();
             //add_UC_ServiceReport();
             //add_UC_IncomeAnalysis();
-            add_UC_Cus_dashboard();
+            //add_UC_Cus_dashboard();
 
 
 
@@ -60,6 +62,11 @@ namespace miniSys0._3
             var setting = new CefSettings();
             setting.MultiThreadedMessageLoop = true;
             CefSharp.Cef.Initialize(setting);
+        }
+
+        private void InitReader()
+        {
+            Reader reader = new Reader();
         }
         private void InitProfile()
         {
@@ -451,6 +458,15 @@ namespace miniSys0._3
         private void add_UC_Cus_dashboard()
         {
             UC_Cus_dashboard uc = new UC_Cus_dashboard();
+            uc.Dock = DockStyle.Fill;
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(uc);
+            uc.BringToFront();
+        }
+
+        private void add_task_table()
+        {
+            UC_TaskList uc = new UC_TaskList();
             uc.Dock = DockStyle.Fill;
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(uc);

@@ -19,6 +19,7 @@ namespace miniSys0._3.Controls.MainArea
             InitializeComponent();
             InitCurmbs();
             InitCard();
+            InitStyle();
             uc_TaskCards = this;
             InitSwitchBtns();
         }
@@ -44,20 +45,34 @@ namespace miniSys0._3.Controls.MainArea
                 card[i].Init(data[i][0]);
             }
 
-            pagination.Init(data.Length,9);
+            string sql = "SELECT OrderID FROM Schedule WHERE Status = 'Order' ORDER　BY Time DESC;";
+            pagination.orderList = SQLCursor.Query(sql);
+
+            renderCard(pagination.orderList);
+            pagination.Init(pagination.orderList.Length, 9);
+
+
+            //pagination.Init(data.Length,9);
             pagination.ComboBox.Text = "9 / page";
             pagination.ComboBox.Enabled = false;
             pagination.type = "card";
         }
+        private void InitStyle()
+        {
+            searchBox.RectColor = Color.White;
+            searchBox.FillColor = Color.FromArgb(242, 243, 245);
 
+            searchIcon.FillColor = Color.FromArgb(242, 243, 245);
+            searchIcon.ForeColor = Color.FromArgb(78, 89, 105);
+        }
         private void InitSwitchBtns()
         {
             clearBtnStyle();
-            clickBtnStyle(switchButton1);
+            clickBtnStyle(allCard);
         }
         private void clearBtnStyle()
         {
-            UIButton[] btnList = { switchButton1, switchButton2, switchButton3, switchButton4 };
+            UIButton[] btnList = { allCard, noStartCard, repairingCard, dfinishedCard };
             foreach (var item in btnList)
             {
                 //  basic
@@ -120,25 +135,101 @@ namespace miniSys0._3.Controls.MainArea
         private void switchButton1_Click(object sender, EventArgs e)
         {
             clearBtnStyle();
-            clickBtnStyle(switchButton1);
+            clickBtnStyle(allCard);
+
+            string sql = "SELECT OrderID FROM Schedule WHERE Status = 'Order' ORDER　BY Time DESC;";
+            pagination.orderList = SQLCursor.Query(sql);
+
+            renderCard(pagination.orderList);
+            pagination.Init(pagination.orderList.Length, 9);
         }
 
         private void switchButton2_Click(object sender, EventArgs e)
         {
             clearBtnStyle();
-            clickBtnStyle(switchButton2);
+            clickBtnStyle(noStartCard);
+
+            string sql = "SELECT OrderID FROM Schedule WHERE Status = 'Order' ORDER　BY Time;";
+            pagination.orderList = SQLCursor.Query(sql);
+
+            renderCard(pagination.orderList);
+            pagination.Init(pagination.orderList.Length, 9);
         }
 
         private void switchButton3_Click(object sender, EventArgs e)
         {
             clearBtnStyle();
-            clickBtnStyle(switchButton3);
+            clickBtnStyle(repairingCard);
+
+            string sql = "SELECT OrderID FROM Schedule WHERE Status = 'Progress' ORDER　BY Time;";
+            pagination.orderList = SQLCursor.Query(sql);
+
+            renderCard(pagination.orderList);
+            pagination.Init(pagination.orderList.Length, 9);
         }
 
         private void switchButton4_Click(object sender, EventArgs e)
         {
             clearBtnStyle();
-            clickBtnStyle(switchButton4);
+            clickBtnStyle(dfinishedCard);
+
+            string sql = "SELECT OrderID FROM Schedule WHERE Status = 'Completed' ORDER　BY Time DESC;";
+            pagination.orderList = SQLCursor.Query(sql);
+            renderCard(pagination.orderList);
+            pagination.Init(pagination.orderList.Length, 9);
+        }
+
+        private void renderCard(dynamic orderlist)
+        {
+            dynamic[] cards = { uC_Task_Card1 , uC_Task_Card2 , uC_Task_Card3,
+                                 uC_Task_Card4, uC_Task_Card5, uC_Task_Card6,
+                                 uC_Task_Card7, uC_Task_Card8, uC_Task_Card9};
+            if (orderlist.Length >= 9)
+            {
+                for (int i = 0; i < 9; i++)
+                {
+                    cards[i].Init(orderlist[i][0]);
+                }
+            }
+            if (orderlist.Length == 1)
+            {
+                for (int i = 0; i < 9; i++)
+                {
+                    if (i < 1)
+                    {
+                        cards[i].Init(orderlist[0]);
+                    }
+                    else
+                    {
+                        cards[i].Hide();
+                    }
+
+                }
+            }
+            else
+            {
+                for (int i = 0; i < 9; i++)
+                {
+                    if (i < orderlist.Length)
+                    {
+                        cards[i].Init(orderlist[i][0]);
+                    }
+                    else
+                    {
+                        cards[i].Hide();
+                    }
+
+                }
+            }
+        }
+
+        private void searchIcon_Click(object sender, EventArgs e)
+        {
+            string orderID = searchBox.Text;
+            string sql = $"SELECT TOP 1  OrderID FROM Schedule WHERE OrderID = '{orderID}';";
+            pagination.orderList = SQLCursor.Query(sql);
+            renderCard(pagination.orderList);
+            pagination.Init(pagination.orderList.Length, 9);
         }
     }
 }

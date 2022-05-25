@@ -54,8 +54,30 @@
             this.imageBtn2 = new Sunny.UI.UIUserControl();
             this.imageBtn1 = new Sunny.UI.UIUserControl();
             this.uiUserControl5 = new Sunny.UI.UIUserControl();
-            this.uiRoundProcess1 = new Sunny.UI.UIRoundProcess();
+            this.Process = new Sunny.UI.UIRoundProcess();
             this.uiUserControl1 = new Sunny.UI.UIUserControl();
+            this.modelIcon = new Sunny.UI.UISymbolButton();
+            this.orderStatus = new Sunny.UI.UITextBox();
+            this.staffName = new Sunny.UI.UITextBox();
+            this.staffIcon = new Sunny.UI.UISymbolButton();
+            this.modelText = new Sunny.UI.UITextBox();
+            this.uiUserControl4 = new Sunny.UI.UIUserControl();
+            this.newslabel5 = new System.Windows.Forms.Label();
+            this.newslabel4 = new System.Windows.Forms.Label();
+            this.newslabel3 = new System.Windows.Forms.Label();
+            this.newslabel2 = new System.Windows.Forms.Label();
+            this.newslabel1 = new System.Windows.Forms.Label();
+            this.news1 = new Sunny.UI.UIMarkLabel();
+            this.news5 = new Sunny.UI.UIMarkLabel();
+            this.news4 = new Sunny.UI.UIMarkLabel();
+            this.news3 = new Sunny.UI.UIMarkLabel();
+            this.news2 = new Sunny.UI.UIMarkLabel();
+            this.newsTopBar = new Sunny.UI.UIUserControl();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.uiUserControl6.SuspendLayout();
             this.uiUserControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -63,6 +85,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.uiUserControl5.SuspendLayout();
             this.uiUserControl1.SuspendLayout();
+            this.uiUserControl4.SuspendLayout();
+            this.newsTopBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // uiUserControl6
@@ -295,7 +319,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::miniSys0._3.Properties.Resources.banner_012;
-            this.pictureBox2.Location = new System.Drawing.Point(15, 75);
+            this.pictureBox2.Location = new System.Drawing.Point(15, 59);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(810, 341);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -329,7 +353,7 @@
             this.imageBtnLeft.BackColor = System.Drawing.Color.White;
             this.imageBtnLeft.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imageBtnLeft.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.imageBtnLeft.Location = new System.Drawing.Point(24, 206);
+            this.imageBtnLeft.Location = new System.Drawing.Point(24, 190);
             this.imageBtnLeft.MinimumSize = new System.Drawing.Size(1, 1);
             this.imageBtnLeft.Name = "imageBtnLeft";
             this.imageBtnLeft.Shape = Sunny.UI.UIShape.Square;
@@ -346,7 +370,7 @@
             this.imageBtnRight.BackColor = System.Drawing.Color.White;
             this.imageBtnRight.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imageBtnRight.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.imageBtnRight.Location = new System.Drawing.Point(785, 206);
+            this.imageBtnRight.Location = new System.Drawing.Point(785, 190);
             this.imageBtnRight.MinimumSize = new System.Drawing.Size(1, 1);
             this.imageBtnRight.Name = "imageBtnRight";
             this.imageBtnRight.Shape = Sunny.UI.UIShape.Square;
@@ -363,7 +387,7 @@
             this.imageBtn3.BackColor = System.Drawing.Color.Transparent;
             this.imageBtn3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imageBtn3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.imageBtn3.Location = new System.Drawing.Point(474, 395);
+            this.imageBtn3.Location = new System.Drawing.Point(474, 379);
             this.imageBtn3.MinimumSize = new System.Drawing.Size(1, 1);
             this.imageBtn3.Name = "imageBtn3";
             this.imageBtn3.Radius = 0;
@@ -379,7 +403,7 @@
             this.imageBtn2.BackColor = System.Drawing.Color.Transparent;
             this.imageBtn2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imageBtn2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.imageBtn2.Location = new System.Drawing.Point(418, 395);
+            this.imageBtn2.Location = new System.Drawing.Point(418, 379);
             this.imageBtn2.MinimumSize = new System.Drawing.Size(1, 1);
             this.imageBtn2.Name = "imageBtn2";
             this.imageBtn2.Radius = 0;
@@ -395,7 +419,7 @@
             this.imageBtn1.BackColor = System.Drawing.Color.Transparent;
             this.imageBtn1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imageBtn1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.imageBtn1.Location = new System.Drawing.Point(362, 395);
+            this.imageBtn1.Location = new System.Drawing.Point(362, 379);
             this.imageBtn1.MinimumSize = new System.Drawing.Size(1, 1);
             this.imageBtn1.Name = "imageBtn1";
             this.imageBtn1.Radius = 0;
@@ -423,31 +447,38 @@
             this.uiUserControl5.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiUserControl5.Name = "uiUserControl5";
             this.uiUserControl5.RectColor = System.Drawing.Color.Gainsboro;
-            this.uiUserControl5.Size = new System.Drawing.Size(839, 445);
+            this.uiUserControl5.Size = new System.Drawing.Size(839, 413);
             this.uiUserControl5.Style = Sunny.UI.UIStyle.Custom;
             this.uiUserControl5.TabIndex = 27;
             this.uiUserControl5.Text = "uiUserControl5";
             this.uiUserControl5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiUserControl5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiRoundProcess1
+            // Process
             // 
-            this.uiRoundProcess1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.uiRoundProcess1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiRoundProcess1.Location = new System.Drawing.Point(0, 0);
-            this.uiRoundProcess1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiRoundProcess1.Name = "uiRoundProcess1";
-            this.uiRoundProcess1.ShowProcess = true;
-            this.uiRoundProcess1.Size = new System.Drawing.Size(269, 123);
-            this.uiRoundProcess1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiRoundProcess1.TabIndex = 28;
-            this.uiRoundProcess1.Text = "1%";
-            this.uiRoundProcess1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.Process.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Bold);
+            this.Process.Location = new System.Drawing.Point(13, 3);
+            this.Process.MinimumSize = new System.Drawing.Size(1, 1);
+            this.Process.Name = "Process";
+            this.Process.ShowFocusColor = true;
+            this.Process.ShowProcess = true;
+            this.Process.Size = new System.Drawing.Size(113, 123);
+            this.Process.Style = Sunny.UI.UIStyle.Custom;
+            this.Process.TabIndex = 28;
+            this.Process.TagString = "";
+            this.Process.Text = "80.0%";
+            this.Process.Value = 80;
+            this.Process.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiUserControl1
             // 
             this.uiUserControl1.BackColor = System.Drawing.Color.White;
-            this.uiUserControl1.Controls.Add(this.uiRoundProcess1);
+            this.uiUserControl1.Controls.Add(this.modelIcon);
+            this.uiUserControl1.Controls.Add(this.orderStatus);
+            this.uiUserControl1.Controls.Add(this.staffName);
+            this.uiUserControl1.Controls.Add(this.staffIcon);
+            this.uiUserControl1.Controls.Add(this.modelText);
+            this.uiUserControl1.Controls.Add(this.Process);
             this.uiUserControl1.FillColor = System.Drawing.Color.White;
             this.uiUserControl1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiUserControl1.Location = new System.Drawing.Point(850, 325);
@@ -461,10 +492,319 @@
             this.uiUserControl1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiUserControl1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // modelIcon
+            // 
+            this.modelIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.modelIcon.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.modelIcon.Location = new System.Drawing.Point(16, 129);
+            this.modelIcon.MinimumSize = new System.Drawing.Size(1, 1);
+            this.modelIcon.Name = "modelIcon";
+            this.modelIcon.Size = new System.Drawing.Size(38, 39);
+            this.modelIcon.Style = Sunny.UI.UIStyle.Custom;
+            this.modelIcon.Symbol = 57358;
+            this.modelIcon.SymbolSize = 26;
+            this.modelIcon.TabIndex = 52;
+            this.modelIcon.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.modelIcon.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // orderStatus
+            // 
+            this.orderStatus.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.orderStatus.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
+            this.orderStatus.Location = new System.Drawing.Point(128, 50);
+            this.orderStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.orderStatus.MinimumSize = new System.Drawing.Size(1, 16);
+            this.orderStatus.Name = "orderStatus";
+            this.orderStatus.ShowText = false;
+            this.orderStatus.Size = new System.Drawing.Size(92, 29);
+            this.orderStatus.Style = Sunny.UI.UIStyle.Custom;
+            this.orderStatus.TabIndex = 31;
+            this.orderStatus.Text = "Ordered";
+            this.orderStatus.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.orderStatus.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // staffName
+            // 
+            this.staffName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.staffName.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.staffName.Location = new System.Drawing.Point(82, 178);
+            this.staffName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.staffName.MinimumSize = new System.Drawing.Size(1, 16);
+            this.staffName.Name = "staffName";
+            this.staffName.ShowText = false;
+            this.staffName.Size = new System.Drawing.Size(169, 39);
+            this.staffName.Style = Sunny.UI.UIStyle.Custom;
+            this.staffName.TabIndex = 30;
+            this.staffName.Text = "Technician name";
+            this.staffName.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.staffName.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // staffIcon
+            // 
+            this.staffIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.staffIcon.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.staffIcon.Location = new System.Drawing.Point(16, 178);
+            this.staffIcon.MinimumSize = new System.Drawing.Size(1, 1);
+            this.staffIcon.Name = "staffIcon";
+            this.staffIcon.Size = new System.Drawing.Size(38, 39);
+            this.staffIcon.Style = Sunny.UI.UIStyle.Custom;
+            this.staffIcon.Symbol = 362718;
+            this.staffIcon.SymbolSize = 26;
+            this.staffIcon.TabIndex = 51;
+            this.staffIcon.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.staffIcon.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // modelText
+            // 
+            this.modelText.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.modelText.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.modelText.Location = new System.Drawing.Point(82, 129);
+            this.modelText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.modelText.MinimumSize = new System.Drawing.Size(1, 16);
+            this.modelText.Name = "modelText";
+            this.modelText.ShowText = false;
+            this.modelText.Size = new System.Drawing.Size(169, 39);
+            this.modelText.Style = Sunny.UI.UIStyle.Custom;
+            this.modelText.TabIndex = 29;
+            this.modelText.Text = "Computer Model";
+            this.modelText.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.modelText.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiUserControl4
+            // 
+            this.uiUserControl4.BackColor = System.Drawing.Color.White;
+            this.uiUserControl4.Controls.Add(this.newslabel5);
+            this.uiUserControl4.Controls.Add(this.newslabel4);
+            this.uiUserControl4.Controls.Add(this.newslabel3);
+            this.uiUserControl4.Controls.Add(this.newslabel2);
+            this.uiUserControl4.Controls.Add(this.newslabel1);
+            this.uiUserControl4.Controls.Add(this.news1);
+            this.uiUserControl4.Controls.Add(this.news5);
+            this.uiUserControl4.Controls.Add(this.news4);
+            this.uiUserControl4.Controls.Add(this.news3);
+            this.uiUserControl4.Controls.Add(this.news2);
+            this.uiUserControl4.Controls.Add(this.newsTopBar);
+            this.uiUserControl4.Controls.Add(this.label17);
+            this.uiUserControl4.Controls.Add(this.label16);
+            this.uiUserControl4.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.uiUserControl4.FillColor = System.Drawing.Color.White;
+            this.uiUserControl4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiUserControl4.Location = new System.Drawing.Point(5, 425);
+            this.uiUserControl4.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiUserControl4.Name = "uiUserControl4";
+            this.uiUserControl4.Radius = 10;
+            this.uiUserControl4.RectColor = System.Drawing.Color.Gainsboro;
+            this.uiUserControl4.Size = new System.Drawing.Size(839, 292);
+            this.uiUserControl4.Style = Sunny.UI.UIStyle.Custom;
+            this.uiUserControl4.TabIndex = 30;
+            this.uiUserControl4.Text = "uiUserControl4";
+            this.uiUserControl4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiUserControl4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // newslabel5
+            // 
+            this.newslabel5.AutoSize = true;
+            this.newslabel5.Location = new System.Drawing.Point(761, 243);
+            this.newslabel5.Name = "newslabel5";
+            this.newslabel5.Size = new System.Drawing.Size(64, 21);
+            this.newslabel5.TabIndex = 47;
+            this.newslabel5.Text = "label37";
+            // 
+            // newslabel4
+            // 
+            this.newslabel4.AutoSize = true;
+            this.newslabel4.Location = new System.Drawing.Point(761, 199);
+            this.newslabel4.Name = "newslabel4";
+            this.newslabel4.Size = new System.Drawing.Size(64, 21);
+            this.newslabel4.TabIndex = 46;
+            this.newslabel4.Text = "label36";
+            // 
+            // newslabel3
+            // 
+            this.newslabel3.AutoSize = true;
+            this.newslabel3.Location = new System.Drawing.Point(761, 159);
+            this.newslabel3.Name = "newslabel3";
+            this.newslabel3.Size = new System.Drawing.Size(64, 21);
+            this.newslabel3.TabIndex = 45;
+            this.newslabel3.Text = "label35";
+            // 
+            // newslabel2
+            // 
+            this.newslabel2.AutoSize = true;
+            this.newslabel2.Location = new System.Drawing.Point(761, 117);
+            this.newslabel2.Name = "newslabel2";
+            this.newslabel2.Size = new System.Drawing.Size(64, 21);
+            this.newslabel2.TabIndex = 44;
+            this.newslabel2.Text = "label34";
+            // 
+            // newslabel1
+            // 
+            this.newslabel1.AutoSize = true;
+            this.newslabel1.Location = new System.Drawing.Point(761, 74);
+            this.newslabel1.Name = "newslabel1";
+            this.newslabel1.Size = new System.Drawing.Size(64, 21);
+            this.newslabel1.TabIndex = 43;
+            this.newslabel1.Text = "label33";
+            this.newslabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // news1
+            // 
+            this.news1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.news1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.news1.Location = new System.Drawing.Point(17, 73);
+            this.news1.MarkPos = Sunny.UI.UIMarkLabel.UIMarkPos.Bottom;
+            this.news1.MarkSize = 2;
+            this.news1.Name = "news1";
+            this.news1.Padding = new System.Windows.Forms.Padding(25, 0, 0, 5);
+            this.news1.Size = new System.Drawing.Size(808, 34);
+            this.news1.Style = Sunny.UI.UIStyle.Custom;
+            this.news1.TabIndex = 42;
+            this.news1.Text = "1      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...";
+            this.news1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.news1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // news5
+            // 
+            this.news5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.news5.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.news5.Location = new System.Drawing.Point(17, 241);
+            this.news5.MarkPos = Sunny.UI.UIMarkLabel.UIMarkPos.Bottom;
+            this.news5.MarkSize = 2;
+            this.news5.Name = "news5";
+            this.news5.Padding = new System.Windows.Forms.Padding(25, 0, 0, 5);
+            this.news5.Size = new System.Drawing.Size(808, 34);
+            this.news5.Style = Sunny.UI.UIStyle.Custom;
+            this.news5.TabIndex = 41;
+            this.news5.Text = "5      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...";
+            this.news5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.news5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // news4
+            // 
+            this.news4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.news4.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.news4.Location = new System.Drawing.Point(17, 199);
+            this.news4.MarkPos = Sunny.UI.UIMarkLabel.UIMarkPos.Bottom;
+            this.news4.MarkSize = 2;
+            this.news4.Name = "news4";
+            this.news4.Padding = new System.Windows.Forms.Padding(25, 0, 0, 5);
+            this.news4.Size = new System.Drawing.Size(808, 34);
+            this.news4.Style = Sunny.UI.UIStyle.Custom;
+            this.news4.TabIndex = 40;
+            this.news4.Text = "4      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...";
+            this.news4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.news4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // news3
+            // 
+            this.news3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.news3.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.news3.Location = new System.Drawing.Point(17, 157);
+            this.news3.MarkPos = Sunny.UI.UIMarkLabel.UIMarkPos.Bottom;
+            this.news3.MarkSize = 2;
+            this.news3.Name = "news3";
+            this.news3.Padding = new System.Windows.Forms.Padding(25, 0, 0, 5);
+            this.news3.Size = new System.Drawing.Size(808, 34);
+            this.news3.Style = Sunny.UI.UIStyle.Custom;
+            this.news3.TabIndex = 39;
+            this.news3.Text = "3      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...";
+            this.news3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.news3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // news2
+            // 
+            this.news2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.news2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.news2.Location = new System.Drawing.Point(17, 115);
+            this.news2.MarkPos = Sunny.UI.UIMarkLabel.UIMarkPos.Bottom;
+            this.news2.MarkSize = 2;
+            this.news2.Name = "news2";
+            this.news2.Padding = new System.Windows.Forms.Padding(25, 0, 0, 5);
+            this.news2.Size = new System.Drawing.Size(808, 34);
+            this.news2.Style = Sunny.UI.UIStyle.Custom;
+            this.news2.TabIndex = 38;
+            this.news2.Text = "2      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...";
+            this.news2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.news2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // newsTopBar
+            // 
+            this.newsTopBar.Controls.Add(this.label32);
+            this.newsTopBar.Controls.Add(this.label31);
+            this.newsTopBar.Controls.Add(this.label30);
+            this.newsTopBar.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.newsTopBar.Location = new System.Drawing.Point(17, 34);
+            this.newsTopBar.MinimumSize = new System.Drawing.Size(1, 1);
+            this.newsTopBar.Name = "newsTopBar";
+            this.newsTopBar.Radius = 10;
+            this.newsTopBar.Size = new System.Drawing.Size(808, 29);
+            this.newsTopBar.Style = Sunny.UI.UIStyle.Custom;
+            this.newsTopBar.TabIndex = 37;
+            this.newsTopBar.Text = null;
+            this.newsTopBar.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.newsTopBar.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.BackColor = System.Drawing.Color.Transparent;
+            this.label32.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label32.Location = new System.Drawing.Point(743, 4);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(57, 22);
+            this.label32.TabIndex = 55;
+            this.label32.Text = "Views";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.BackColor = System.Drawing.Color.Transparent;
+            this.label31.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label31.Location = new System.Drawing.Point(64, 5);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(44, 22);
+            this.label31.TabIndex = 54;
+            this.label31.Text = "Title";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.BackColor = System.Drawing.Color.Transparent;
+            this.label30.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label30.Location = new System.Drawing.Point(14, 5);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(40, 22);
+            this.label30.TabIndex = 53;
+            this.label30.Text = "Top";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label17.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(112)))), ((int)(((byte)(255)))));
+            this.label17.Location = new System.Drawing.Point(734, 7);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(91, 22);
+            this.label17.TabIndex = 35;
+            this.label17.Text = "Read more";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
+            this.label16.Location = new System.Drawing.Point(10, 1);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(66, 28);
+            this.label16.TabIndex = 34;
+            this.label16.Text = "News";
+            // 
             // UC_Cus_dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.uiUserControl4);
             this.Controls.Add(this.uiUserControl1);
             this.Controls.Add(this.uiUserControl5);
             this.Controls.Add(this.pictureBox1);
@@ -482,6 +822,10 @@
             this.uiUserControl5.ResumeLayout(false);
             this.uiUserControl5.PerformLayout();
             this.uiUserControl1.ResumeLayout(false);
+            this.uiUserControl4.ResumeLayout(false);
+            this.uiUserControl4.PerformLayout();
+            this.newsTopBar.ResumeLayout(false);
+            this.newsTopBar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -514,7 +858,29 @@
         private Sunny.UI.UIUserControl imageBtn2;
         private Sunny.UI.UIUserControl imageBtn1;
         private Sunny.UI.UIUserControl uiUserControl5;
-        private Sunny.UI.UIRoundProcess uiRoundProcess1;
+        private Sunny.UI.UIRoundProcess Process;
         private Sunny.UI.UIUserControl uiUserControl1;
+        private Sunny.UI.UISymbolButton modelIcon;
+        private Sunny.UI.UITextBox orderStatus;
+        private Sunny.UI.UITextBox staffName;
+        private Sunny.UI.UISymbolButton staffIcon;
+        private Sunny.UI.UITextBox modelText;
+        private Sunny.UI.UIUserControl uiUserControl4;
+        private System.Windows.Forms.Label newslabel5;
+        private System.Windows.Forms.Label newslabel4;
+        private System.Windows.Forms.Label newslabel3;
+        private System.Windows.Forms.Label newslabel2;
+        private System.Windows.Forms.Label newslabel1;
+        private Sunny.UI.UIMarkLabel news1;
+        private Sunny.UI.UIMarkLabel news5;
+        private Sunny.UI.UIMarkLabel news4;
+        private Sunny.UI.UIMarkLabel news3;
+        private Sunny.UI.UIMarkLabel news2;
+        private Sunny.UI.UIUserControl newsTopBar;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
     }
 }
