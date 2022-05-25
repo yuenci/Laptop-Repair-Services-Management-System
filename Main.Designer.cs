@@ -128,6 +128,7 @@
             this.uiSymbolButton3.SymbolHoverColor = System.Drawing.Color.Black;
             this.uiSymbolButton3.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiSymbolButton3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.uiSymbolButton3.Click += new System.EventHandler(this.uiSymbolButton3_Click);
             // 
             // uiSymbolButton2
             // 

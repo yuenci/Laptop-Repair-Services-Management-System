@@ -17,6 +17,7 @@ namespace miniSys0._3.Controls
         {
             InitializeComponent();
             NavMenu.ImageList = imageList1;
+            InitTheme();
         }
 
         private void addUserControl(UserControl userControl)
@@ -63,8 +64,24 @@ namespace miniSys0._3.Controls
                 UC_UserSetting uc = new UC_UserSetting();
                 addUserControl(uc);
             }
+        }
 
+        private void InitTheme()
+        {
+            if (User_type.user_theme == "dark")
+            {
+                // nav have item part bgc
+                NavMenu.FillColor = Color.FromArgb(28, 47, 70);
 
+                // the whole bgc
+                NavMenu.BackColor = Color.FromArgb(28, 47, 70);
+
+                // the hover bgc
+                NavMenu.HoverColor = Color.FromArgb(55, 55, 57);
+
+                // the bgc of choose item
+                NavMenu.SelectedColor = Color.FromArgb(55, 55, 57);
+            }
         }
     }
 }

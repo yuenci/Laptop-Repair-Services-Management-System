@@ -1,4 +1,5 @@
-﻿using Sunny.UI;
+﻿using miniSys0._3.Controls.Others;
+using Sunny.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -70,6 +71,7 @@ namespace miniSys0._3.Controls.MainArea
                 item.FillPressColor = Color.FromArgb(242, 243, 245);
                 item.ForePressColor = Color.FromArgb(78, 89, 105);
                 item.RectPressColor = Color.White;
+
             }
         }
         private void clickBtnStyle(UIButton btn)
@@ -159,7 +161,13 @@ namespace miniSys0._3.Controls.MainArea
 
         private void Init10Items()
         {
-            uC_Task_Item1.Init("Ord00000001");
+            for (int i = 0; i < 15; i++)
+            {
+                UC_Task_Item item = new UC_Task_Item();
+                item.Location = new Point(0, i * 50);
+                contentPanel.Controls.Add(item);
+            }
+           /* uC_Task_Item1.Init("Ord00000001");
             uC_Task_Item2.Init("Ord00000002");
             uC_Task_Item3.Init("Ord00000003");
             uC_Task_Item4.Init("Ord00000004");
@@ -168,7 +176,7 @@ namespace miniSys0._3.Controls.MainArea
             uC_Task_Item7.Init("Ord00000007");
             uC_Task_Item8.Init("Ord00000008");
             uC_Task_Item9.Init("Ord00000009");
-            uC_Task_Item10.Init("Ord00000010");
+            uC_Task_Item10.Init("Ord00000010");*/
         }
     }
 }

@@ -71,7 +71,7 @@
             this.finish.Cursor = System.Windows.Forms.Cursors.Hand;
             this.finish.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.finish.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
-            this.finish.Location = new System.Drawing.Point(1009, 9);
+            this.finish.Location = new System.Drawing.Point(998, 9);
             this.finish.Name = "finish";
             this.finish.Size = new System.Drawing.Size(62, 29);
             this.finish.Style = Sunny.UI.UIStyle.Custom;
@@ -155,7 +155,7 @@
             this.Controls.Add(this.uiMarkLabel1);
             this.Controls.Add(this.statusIcon);
             this.Name = "UC_Task_Item";
-            this.Size = new System.Drawing.Size(1100, 47);
+            this.Size = new System.Drawing.Size(1069, 47);
             this.ResumeLayout(false);
 
         }

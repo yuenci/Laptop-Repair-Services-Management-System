@@ -28,6 +28,7 @@ namespace miniSys0._3
             InitCef();
             InitProfile();
             InitReader();
+            InitTheme();
 
 
             //left bat
@@ -64,6 +65,21 @@ namespace miniSys0._3
             CefSharp.Cef.Initialize(setting);
         }
 
+        private void InitTheme()
+        {
+            if (User_type.user_theme == "dark")
+            {
+                this.BackColor = Color.FromArgb(18, 31, 43);
+                panelTop.BackColor = Color.FromArgb(28, 47, 70);
+                label1.ForeColor = Color.White;
+                uiUserControl1.BackColor = Color.FromArgb(28, 47, 70);
+                uiUserControl1.FillColor = Color.FromArgb(28, 47, 70);
+                uiUserControl1.RectColor = Color.FromArgb(28, 47, 70);
+
+                //uiUserControl2.BackColor = Color.FromArgb(28, 47, 70);
+                navMenuPanel.BackColor = Color.FromArgb(28, 47, 70);
+            }
+        }
         private void InitReader()
         {
             Reader reader = new Reader();
@@ -473,6 +489,18 @@ namespace miniSys0._3
             uc.BringToFront();
         }
         #endregion
+
+        private void uiSymbolButton3_Click(object sender, EventArgs e)
+        {
+            if (User_type.user_theme == "light")
+            {
+                User_type.user_theme = "dark";
+            }
+            else if (User_type.user_theme == "dark")
+            {
+                User_type.user_theme = "light";
+            }
+        }
     }
 
 

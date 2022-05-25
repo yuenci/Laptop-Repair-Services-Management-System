@@ -38,6 +38,8 @@ namespace miniSys0._3
         public static string user_security_qustion = "I love coding right?";
         public static string user_security_answer = "I love coding right?";
         public static string user_password = "password123456";
+        public static string user_theme = "dark";
+        // light/dark
 
 
         public static Color LogoFore = Color.Black;
