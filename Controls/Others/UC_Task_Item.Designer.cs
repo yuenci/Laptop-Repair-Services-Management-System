@@ -133,6 +133,7 @@
             // 
             // orderId
             // 
+            this.orderId.Cursor = System.Windows.Forms.Cursors.Hand;
             this.orderId.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.orderId.Location = new System.Drawing.Point(10, 9);
             this.orderId.Name = "orderId";
@@ -141,6 +142,7 @@
             this.orderId.Text = "00000001";
             this.orderId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.orderId.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.orderId.Click += new System.EventHandler(this.orderId_Click);
             // 
             // UC_Task_Item
             // 

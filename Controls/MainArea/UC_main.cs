@@ -27,6 +27,7 @@ namespace miniSys0._3.Controls
 
 
             initsunnyUI();
+            InitTheme();
 
             initName();
             initDataBanner();
@@ -39,7 +40,33 @@ namespace miniSys0._3.Controls
             initReader();
             uc_main = this;
         }
+        private void InitTheme()
+        {
+            if (User_type.user_theme == "dark")
+            {
+                dynamic[] panels = { uiUserControl2 , uiUserControl3 , uiUserControl4 ,
+                uiUserControl5,uiUserControl6,uiUserControl7 };
 
+                foreach (dynamic pan in panels)
+                {
+                    pan.FillColor = Color.FromArgb(28, 47, 70);
+                    pan.RectColor = Color.FromArgb(28, 47, 70);
+                    pan.BackColor = Color.FromArgb(28, 47, 70);
+                }
+                dynamic[] lables = { name_lable ,label3,BannerLabel1,label6,BannerLabel2,label8,
+                                        BannerLabel3,label10,BannerLabel4,label14,shortcutText1,
+                                        shortcutText2,shortcutText3,label15,label1,
+                                        noticeText1,noticeText2,noticeText3,noticeText4,noticeText5,
+                                        label19, doc1,doc2,doc3,doc4,label16,
+                                        news1,news2,news3,news4,news5,
+                                        newslabel1,newslabel2,newslabel3,newslabel4,newslabel5
+                                    };
+                foreach (var lable in lables)
+                {
+                    lable.ForeColor = Color.White;
+                }
+            }
+        }
         void initsunnyUI()
         {
             upperTriangle.ForeColor = Color.Red;

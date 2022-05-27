@@ -225,6 +225,7 @@
             this.ComboBox.Text = "10 / page";
             this.ComboBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.ComboBox.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.ComboBox.DropDownClosed += new System.EventHandler(this.ComboBox_DropDownClosed);
             // 
             // symButton3
             // 

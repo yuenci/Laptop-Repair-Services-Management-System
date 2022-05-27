@@ -103,5 +103,12 @@ namespace miniSys0._3.Controls.Others
             finish.Enabled = false;
             updateTime.Text = time;
         }
+
+        private void orderId_Click(object sender, EventArgs e)
+        {
+            OrderDetails orderDetails = new OrderDetails();
+            orderDetails.Init(orderIDcache);
+            orderDetails.Show();
+        }
     }
 }

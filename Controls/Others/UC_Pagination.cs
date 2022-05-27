@@ -18,12 +18,14 @@ namespace miniSys0._3.Controls.Others
         private int pageNum;
         private int DataAmount;
         public int pageID;
+        public int currentPerNum = 10;
+        public string type = "";
 
         public UC_Pagination()
         {     
             InitializeComponent();   
         }
-        public string type = "";
+        
         //card ; list
         public void Init(int dataAmount,int perPage)
         {
@@ -33,6 +35,7 @@ namespace miniSys0._3.Controls.Others
             int pages = culPageNum(perPage);
             IntButtonRender(pages);
             InitButtonEvent();
+
         }
 
         private bool ifLessEight;
@@ -882,30 +885,38 @@ namespace miniSys0._3.Controls.Others
                 }
             }
         }
-
+        
         private void ComboBox_DropDownClosed(object sender, EventArgs e)
         {
             if (ComboBox.SelectedIndex == 0)
             {
+                //Console.WriteLine("10");
                 IntButtonRender(culPageNum());
+                currentPerNum = 10;
             }
             else if (ComboBox.SelectedIndex == 1)
             {
+                //Console.WriteLine("20");
                 IntButtonRender(culPageNum(20));
+                currentPerNum = 20;
             }
             else if (ComboBox.SelectedIndex == 2)
             {
+                //Console.WriteLine("30");
                 IntButtonRender(culPageNum(30));
+                currentPerNum = 30;
             }
             else if (ComboBox.SelectedIndex == 3)
             {
                 IntButtonRender(culPageNum(40));
+                currentPerNum = 40;
             }
             else if (ComboBox.SelectedIndex == 4)
             {
                 IntButtonRender(culPageNum(50));
+                currentPerNum = 50;
             }
-
+            UC_TaskList.instance.renderNewList(0, currentPerNum);
 
         }
         private int culPageNum(int perPage = 10)
@@ -984,7 +995,21 @@ namespace miniSys0._3.Controls.Others
                     }
                 }
 
-                
+
+            }
+            else if(type == "list")
+            {
+                if (pageID != pageNum)
+                {
+                    Console.WriteLine($"{(pageID-1) * currentPerNum},{currentPerNum}");
+                    UC_TaskList.instance.renderNewList((pageID-1) * currentPerNum, currentPerNum);
+                }
+                else
+                {
+                    int range = orderList.Length - (pageNum - 1) * currentPerNum;
+                    int start = currentPerNum * (pageNum - 1);
+                    UC_TaskList.instance.renderNewList(start, range);
+                }
             }
         }
     }

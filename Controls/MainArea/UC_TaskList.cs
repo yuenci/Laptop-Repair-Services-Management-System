@@ -14,13 +14,17 @@ namespace miniSys0._3.Controls.MainArea
 {
     public partial class UC_TaskList : UserControl
     {
+        public static UC_TaskList instance;
         public UC_TaskList()
         {
+            instance = this;
             InitializeComponent();
             InitCurmbs();
             InitStyle();
             InitSwitchBtns();
-            Init10Items();
+            Initpagenation();
+            //Init10Items();
+            allCard.PerformClick();
         }
 
         private void InitCurmbs()
@@ -111,7 +115,10 @@ namespace miniSys0._3.Controls.MainArea
                 searchBox.Text = "Search";
             }
         }
-
+        private void Initpagenation()
+        {
+            pagination.type = "list";
+        }
         private void switchButton1_Click(object sender, EventArgs e)
         {
             clearBtnStyle();
@@ -121,7 +128,9 @@ namespace miniSys0._3.Controls.MainArea
             pagination.orderList = SQLCursor.Query(sql);
 
             //renderCard(pagination.orderList);
-            pagination.Init(pagination.orderList.Length, 9);
+            pagination.Init(pagination.orderList.Length, pagination.currentPerNum);
+
+            renderNewList(0,pagination.currentPerNum);
         }
 
         private void switchButton2_Click(object sender, EventArgs e)
@@ -133,7 +142,9 @@ namespace miniSys0._3.Controls.MainArea
             pagination.orderList = SQLCursor.Query(sql);
 
             //renderCard(pagination.orderList);
-            pagination.Init(pagination.orderList.Length, 9);
+            pagination.Init(pagination.orderList.Length, pagination.currentPerNum);
+
+            renderNewList(0,pagination.currentPerNum);
         }
 
         private void switchButton3_Click(object sender, EventArgs e)
@@ -145,7 +156,9 @@ namespace miniSys0._3.Controls.MainArea
             pagination.orderList = SQLCursor.Query(sql);
 
             //renderCard(pagination.orderList);
-            pagination.Init(pagination.orderList.Length, 9);
+            pagination.Init(pagination.orderList.Length, pagination.currentPerNum);
+
+            renderNewList(0, pagination.currentPerNum);
         }
 
         private void switchButton4_Click(object sender, EventArgs e)
@@ -156,16 +169,20 @@ namespace miniSys0._3.Controls.MainArea
             string sql = "SELECT OrderID FROM Schedule WHERE Status = 'Completed' ORDER　BY Time DESC;";
             pagination.orderList = SQLCursor.Query(sql);
             //renderCard(pagination.orderList);
-            pagination.Init(pagination.orderList.Length, 9);
+            pagination.Init(pagination.orderList.Length, pagination.currentPerNum);
+
+            renderNewList(0, pagination.currentPerNum);
         }
 
         private void Init10Items()
         {
-            for (int i = 0; i < 15; i++)
+            for (int i = 0; i < 9; i++)
             {
                 UC_Task_Item item = new UC_Task_Item();
                 item.Location = new Point(0, i * 50);
+                item.Init($"Ord0000000{i+1}");
                 contentPanel.Controls.Add(item);
+
             }
            /* uC_Task_Item1.Init("Ord00000001");
             uC_Task_Item2.Init("Ord00000002");
@@ -177,6 +194,119 @@ namespace miniSys0._3.Controls.MainArea
             uC_Task_Item8.Init("Ord00000008");
             uC_Task_Item9.Init("Ord00000009");
             uC_Task_Item10.Init("Ord00000010");*/
+        }
+
+
+        public void renderNewList(int startIndex, int range)
+        {
+            contentPanel.Controls.Clear();
+            int cardIndex  = 0;
+            int end = startIndex + range;
+            if (pagination.orderList.Length ==1)
+            {
+                UC_Task_Item item = new UC_Task_Item();
+                item.Location = new Point(0, 0);
+                item.Init(pagination.orderList[0]);
+                contentPanel.Controls.Add(item);
+            }
+            else
+            {
+                for (int i = startIndex; i < end; i++)
+                {
+                    UC_Task_Item item = new UC_Task_Item();
+                    item.Location = new Point(0, cardIndex * 50);
+                    item.Init(pagination.orderList[startIndex][0]);
+                    contentPanel.Controls.Add(item);
+                    cardIndex++;
+                    startIndex++;
+                }
+            }
+            
+        }
+
+        private void searchIcon_Click(object sender, EventArgs e)
+        {
+            string sql;
+            if (searchBox.Text == null || searchBox.Text == "Search")
+            {
+                MessageBox.Show("Enter OrderID / Time please.");
+            }
+            else
+            {
+                string res =  Order_Search.search(searchBox.Text);
+                if (Order_Search.type == "OrderID")
+                {
+                    sql = $"SELECT TOP 1 OrderID FROM Schedule WHERE  OrderID = '{res}';";
+                    pagination.orderList = SQLCursor.Query(sql);
+                    if (pagination.orderList.Length  == 0)
+                    {
+                        MessageBox.Show($"Order {res} dosen't exist");
+                    }
+                    else
+                    {
+                        pagination.Init(pagination.orderList.Length, pagination.currentPerNum);
+                        renderNewList(0, pagination.currentPerNum);
+                    }
+                    
+                }
+                else if(Order_Search.type == "OrderNum")
+                {
+                    sql = $"SELECT TOP 1 OrderID FROM Schedule WHERE  OrderID = '{res}';";
+                    pagination.orderList = SQLCursor.Query(sql);
+                    if (pagination.orderList.Length == 0)
+                    {
+                        MessageBox.Show($"Order {res} dosen't exist");
+                    }
+                    else
+                    {
+                        pagination.Init(pagination.orderList.Length, pagination.currentPerNum);
+                        renderNewList(0, pagination.currentPerNum);
+                    }
+                }
+                else if (Order_Search.type == "OrderTime")
+                {
+                    pagination.orderList = SQLCursor.Query(res);
+                    renderNewList(0, pagination.orderList.Length);
+                }
+                else if (Order_Search.type == "others")
+                {
+                    MessageBox.Show("Can't find any orders");
+                }
+                //renderCard(pagination.orderList);
+                
+            }
+        }
+    }
+    public static class Order_Search
+    {
+        static int  orderNum ;
+        static DateTime dtDate;
+        public static string type;
+        public static dynamic search(string str)
+        {
+            if (str == null)
+            {
+                return null;
+            }
+            else if (str.Length == 11 && str.Substring(0,3)== "Ord" )
+            {
+                type = "OrderID";
+                return str;
+
+            }
+            else if (int.TryParse(str, out orderNum))
+            {
+                type = "OrderNum";
+                return "Ord" + str;
+            }
+            else if (DateTime.TryParse(str, out dtDate))
+            {
+                type = "OrderTime";
+                string sql = $"SELECT OrderID FROM Orders WHERE Time between '{str} 00:00:00' and '{str} 23:59:59' ";
+                return sql;
+            }
+            type = "others";
+            return null;
         }
     }
 }

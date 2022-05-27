@@ -17,7 +17,17 @@ namespace miniSys0._3.Controls.Others
         {
             InitializeComponent();
             InitTextBox();
+            InitTheme();
         }
+
+        private void InitTheme()
+        {
+            if (User_type.user_theme == "dark")
+            {
+                this.BackColor = Color.FromArgb(28, 47, 70);
+            }
+        }
+
         private void InitTextBox()
         {
             TextBoxCE superTextbox = new TextBoxCE(nameTextBox, "Enter the user's name", Color.Gray);

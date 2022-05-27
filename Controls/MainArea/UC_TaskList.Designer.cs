@@ -30,6 +30,7 @@
         {
             this.Container = new Sunny.UI.UIUserControl();
             this.uiLabel6 = new Sunny.UI.UILabel();
+            this.pagination = new miniSys0._3.Controls.Others.UC_Pagination();
             this.uiLabel7 = new Sunny.UI.UILabel();
             this.uiLabel8 = new Sunny.UI.UILabel();
             this.searchIcon = new Sunny.UI.UIAvatar();
@@ -42,7 +43,6 @@
             this.allCard = new Sunny.UI.UIButton();
             this.contentPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pagination = new miniSys0._3.Controls.Others.UC_Pagination();
             this.urC_Crumbs1 = new miniSys0._3.Controls.Others.UrC_Crumbs();
             this.Container.SuspendLayout();
             this.SuspendLayout();
@@ -89,6 +89,14 @@
             this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiLabel6.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // pagination
+            // 
+            this.pagination.BackColor = System.Drawing.Color.White;
+            this.pagination.Location = new System.Drawing.Point(59, 618);
+            this.pagination.Name = "pagination";
+            this.pagination.Size = new System.Drawing.Size(1000, 40);
+            this.pagination.TabIndex = 98;
+            // 
             // uiLabel7
             // 
             this.uiLabel7.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -128,6 +136,7 @@
             this.searchIcon.TabIndex = 97;
             this.searchIcon.Text = "uiAvatar2";
             this.searchIcon.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.searchIcon.Click += new System.EventHandler(this.searchIcon_Click);
             // 
             // uiLabel9
             // 
@@ -257,14 +266,6 @@
             this.label1.Size = new System.Drawing.Size(227, 28);
             this.label1.TabIndex = 6;
             this.label1.Text = "Service requested list";
-            // 
-            // pagination
-            // 
-            this.pagination.BackColor = System.Drawing.Color.White;
-            this.pagination.Location = new System.Drawing.Point(59, 618);
-            this.pagination.Name = "pagination";
-            this.pagination.Size = new System.Drawing.Size(1000, 40);
-            this.pagination.TabIndex = 98;
             // 
             // urC_Crumbs1
             // 

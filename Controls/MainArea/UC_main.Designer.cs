@@ -89,14 +89,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.BannerLabel1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.name_lable = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.name_lable = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.uiUserControl7.SuspendLayout();
             this.uiUserControl6.SuspendLayout();
             this.uiUserControl2.SuspendLayout();
@@ -106,12 +106,12 @@
             this.newsTopBar.SuspendLayout();
             this.uiUserControl3.SuspendLayout();
             this.lineChartPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // uiUserControl7
@@ -223,6 +223,7 @@
             // noticeText5
             // 
             this.noticeText5.AutoSize = true;
+            this.noticeText5.BackColor = System.Drawing.Color.Transparent;
             this.noticeText5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.noticeText5.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.noticeText5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
@@ -238,6 +239,7 @@
             // noticeText4
             // 
             this.noticeText4.AutoSize = true;
+            this.noticeText4.BackColor = System.Drawing.Color.Transparent;
             this.noticeText4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.noticeText4.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.noticeText4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
@@ -253,6 +255,7 @@
             // noticeText3
             // 
             this.noticeText3.AutoSize = true;
+            this.noticeText3.BackColor = System.Drawing.Color.Transparent;
             this.noticeText3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.noticeText3.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.noticeText3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
@@ -268,6 +271,7 @@
             // noticeText2
             // 
             this.noticeText2.AutoSize = true;
+            this.noticeText2.BackColor = System.Drawing.Color.Transparent;
             this.noticeText2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.noticeText2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.noticeText2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
@@ -283,6 +287,7 @@
             // noticeText1
             // 
             this.noticeText1.AutoSize = true;
+            this.noticeText1.BackColor = System.Drawing.Color.Transparent;
             this.noticeText1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.noticeText1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.noticeText1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
@@ -298,6 +303,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label18.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(112)))), ((int)(((byte)(255)))));
@@ -310,6 +316,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
             this.label15.Location = new System.Drawing.Point(7, 5);
             this.label15.Name = "label15";
@@ -344,6 +351,7 @@
             // doc4
             // 
             this.doc4.AutoSize = true;
+            this.doc4.BackColor = System.Drawing.Color.Transparent;
             this.doc4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.doc4.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.doc4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
@@ -359,6 +367,7 @@
             // doc3
             // 
             this.doc3.AutoSize = true;
+            this.doc3.BackColor = System.Drawing.Color.Transparent;
             this.doc3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.doc3.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.doc3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
@@ -374,6 +383,7 @@
             // doc2
             // 
             this.doc2.AutoSize = true;
+            this.doc2.BackColor = System.Drawing.Color.Transparent;
             this.doc2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.doc2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.doc2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
@@ -389,6 +399,7 @@
             // doc1
             // 
             this.doc1.AutoSize = true;
+            this.doc1.BackColor = System.Drawing.Color.Transparent;
             this.doc1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.doc1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.doc1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
@@ -404,6 +415,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label20.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(112)))), ((int)(((byte)(255)))));
@@ -416,6 +428,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
             this.label19.Location = new System.Drawing.Point(6, 6);
             this.label19.Name = "label19";
@@ -451,6 +464,7 @@
             // shortcutText3
             // 
             this.shortcutText3.AutoSize = true;
+            this.shortcutText3.BackColor = System.Drawing.Color.Transparent;
             this.shortcutText3.Font = new System.Drawing.Font(".萍方-简", 10F);
             this.shortcutText3.Location = new System.Drawing.Point(203, 107);
             this.shortcutText3.Name = "shortcutText3";
@@ -462,6 +476,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
             this.label14.Location = new System.Drawing.Point(6, 4);
             this.label14.Name = "label14";
@@ -472,6 +487,7 @@
             // shortcutText2
             // 
             this.shortcutText2.AutoSize = true;
+            this.shortcutText2.BackColor = System.Drawing.Color.Transparent;
             this.shortcutText2.Font = new System.Drawing.Font(".萍方-简", 10F);
             this.shortcutText2.Location = new System.Drawing.Point(106, 107);
             this.shortcutText2.Name = "shortcutText2";
@@ -497,6 +513,7 @@
             // shortcutText1
             // 
             this.shortcutText1.AutoSize = true;
+            this.shortcutText1.BackColor = System.Drawing.Color.Transparent;
             this.shortcutText1.Font = new System.Drawing.Font(".萍方-简", 10F);
             this.shortcutText1.Location = new System.Drawing.Point(7, 107);
             this.shortcutText1.Name = "shortcutText1";
@@ -565,6 +582,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(6, 4);
             this.label1.Name = "label1";
@@ -811,6 +829,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label17.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(112)))), ((int)(((byte)(255)))));
@@ -823,6 +842,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
             this.label16.Location = new System.Drawing.Point(10, 5);
             this.label16.Name = "label16";
@@ -891,6 +911,7 @@
             // 
             // upperTriangle
             // 
+            this.upperTriangle.BackColor = System.Drawing.Color.Transparent;
             this.upperTriangle.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.upperTriangle.Location = new System.Drawing.Point(786, 98);
             this.upperTriangle.MinimumSize = new System.Drawing.Size(1, 1);
@@ -907,6 +928,7 @@
             // BannerLabel4
             // 
             this.BannerLabel4.AutoSize = true;
+            this.BannerLabel4.BackColor = System.Drawing.Color.Transparent;
             this.BannerLabel4.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Bold);
             this.BannerLabel4.Location = new System.Drawing.Point(719, 94);
             this.BannerLabel4.Name = "BannerLabel4";
@@ -917,6 +939,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font(".萍方-简", 12F);
             this.label10.Location = new System.Drawing.Point(721, 68);
             this.label10.Name = "label10";
@@ -927,6 +950,7 @@
             // BannerLabel3
             // 
             this.BannerLabel3.AutoSize = true;
+            this.BannerLabel3.BackColor = System.Drawing.Color.Transparent;
             this.BannerLabel3.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Bold);
             this.BannerLabel3.Location = new System.Drawing.Point(510, 94);
             this.BannerLabel3.Name = "BannerLabel3";
@@ -937,6 +961,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font(".萍方-简", 12F);
             this.label8.Location = new System.Drawing.Point(512, 68);
             this.label8.Name = "label8";
@@ -947,6 +972,7 @@
             // BannerLabel2
             // 
             this.BannerLabel2.AutoSize = true;
+            this.BannerLabel2.BackColor = System.Drawing.Color.Transparent;
             this.BannerLabel2.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Bold);
             this.BannerLabel2.Location = new System.Drawing.Point(291, 94);
             this.BannerLabel2.Name = "BannerLabel2";
@@ -957,6 +983,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font(".萍方-简", 12F);
             this.label6.Location = new System.Drawing.Point(293, 68);
             this.label6.Name = "label6";
@@ -967,6 +994,7 @@
             // BannerLabel1
             // 
             this.BannerLabel1.AutoSize = true;
+            this.BannerLabel1.BackColor = System.Drawing.Color.Transparent;
             this.BannerLabel1.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Bold);
             this.BannerLabel1.Location = new System.Drawing.Point(82, 94);
             this.BannerLabel1.Name = "BannerLabel1";
@@ -977,42 +1005,13 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font(".萍方-简", 12F);
             this.label3.Location = new System.Drawing.Point(84, 68);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 22);
             this.label3.TabIndex = 21;
             this.label3.Text = "All orders";
-            // 
-            // name_lable
-            // 
-            this.name_lable.AutoSize = true;
-            this.name_lable.Font = new System.Drawing.Font(".萍方-简", 16F);
-            this.name_lable.Location = new System.Drawing.Point(53, 14);
-            this.name_lable.Name = "name_lable";
-            this.name_lable.Size = new System.Drawing.Size(337, 31);
-            this.name_lable.TabIndex = 15;
-            this.name_lable.Text = "Welcome back，Ryan Septimus";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Location = new System.Drawing.Point(17, 51);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(810, 2);
-            this.panel1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::miniSys0._3.Properties.Resources.tou_alpha;
-            this.pictureBox1.Location = new System.Drawing.Point(853, 149);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(266, 164);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox7
             // 
@@ -1054,8 +1053,20 @@
             this.pictureBox4.TabIndex = 16;
             this.pictureBox4.TabStop = false;
             // 
+            // name_lable
+            // 
+            this.name_lable.AutoSize = true;
+            this.name_lable.BackColor = System.Drawing.Color.Transparent;
+            this.name_lable.Font = new System.Drawing.Font(".萍方-简", 16F);
+            this.name_lable.Location = new System.Drawing.Point(53, 14);
+            this.name_lable.Name = "name_lable";
+            this.name_lable.Size = new System.Drawing.Size(337, 31);
+            this.name_lable.TabIndex = 15;
+            this.name_lable.Text = "Welcome back，Ryan Septimus";
+            // 
             // pictureBox3
             // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::miniSys0._3.Properties.Resources.clap;
             this.pictureBox3.Location = new System.Drawing.Point(17, 15);
             this.pictureBox3.Name = "pictureBox3";
@@ -1063,6 +1074,26 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Location = new System.Drawing.Point(17, 51);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(810, 2);
+            this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::miniSys0._3.Properties.Resources.tou_alpha;
+            this.pictureBox1.Location = new System.Drawing.Point(853, 149);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(266, 164);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // UC_main
             // 
@@ -1094,12 +1125,12 @@
             this.uiUserControl3.ResumeLayout(false);
             this.uiUserControl3.PerformLayout();
             this.lineChartPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

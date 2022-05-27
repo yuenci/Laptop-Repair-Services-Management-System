@@ -45,7 +45,7 @@ namespace miniSys0._3
             //add_UC_Mainto_Panel();
             //add_UC_UserInfo();
             //add_UC_UserSetting();
-            //add_UC_registration
+            //add_UC_registration();
             //add_UC_Payment();
             //add_task_cards();
             add_task_table();
@@ -416,7 +416,6 @@ namespace miniSys0._3
             mainPanel.Controls.Add(uc);
             uc.BringToFront();
         }
-
         private void add_UC_registration()
         {
             UC_Registration uc = new UC_Registration();
