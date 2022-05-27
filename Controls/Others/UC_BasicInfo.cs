@@ -16,6 +16,19 @@ namespace miniSys0._3.Controls.Others
         public UC_BasicInfo()
         {
             InitializeComponent();
+            InitTheme();
+        }
+        private void InitTheme()
+        {
+            if (User_type.user_theme == "dark")
+            {
+                this.BackColor = Color.FromArgb(28, 47, 70);
+                dynamic[] lable = { uiLabel11, uiLabel12, uiLabel13, uiLabel14, uiLabel15, uiLabel16 };
+                foreach (var item in lable)
+                {
+                    item.ForeColor = Color.White;
+                }
+            }
         }
 
         #region text box enter and leave event

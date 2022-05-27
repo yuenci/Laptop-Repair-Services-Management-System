@@ -75,6 +75,7 @@
             // iconLabel3
             // 
             this.iconLabel3.AutoSize = true;
+            this.iconLabel3.BackColor = System.Drawing.Color.Transparent;
             this.iconLabel3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconLabel3.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.iconLabel3.Location = new System.Drawing.Point(775, 97);
@@ -86,6 +87,7 @@
             // iconLabel2
             // 
             this.iconLabel2.AutoSize = true;
+            this.iconLabel2.BackColor = System.Drawing.Color.Transparent;
             this.iconLabel2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconLabel2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.iconLabel2.Location = new System.Drawing.Point(543, 97);
@@ -97,6 +99,7 @@
             // iconLabel1
             // 
             this.iconLabel1.AutoSize = true;
+            this.iconLabel1.BackColor = System.Drawing.Color.Transparent;
             this.iconLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconLabel1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.iconLabel1.Location = new System.Drawing.Point(311, 97);
@@ -156,6 +159,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(10, 10);
             this.label1.Name = "label1";

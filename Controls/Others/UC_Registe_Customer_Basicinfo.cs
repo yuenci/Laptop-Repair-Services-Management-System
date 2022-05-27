@@ -16,8 +16,23 @@ namespace miniSys0._3.Controls.Others
         public UC_Registe_Customer_Basicinfo()
         {
             InitializeComponent();
-
+            InitTheme();
             TextBoxCE superName = new TextBoxCE(nameTextBox, "Enter Customer's name",Color.Gray);
+        }
+        private void InitTheme()
+        {
+            if (User_type.user_theme == "dark")
+            {
+                this.BackColor = Color.FromArgb(28, 47, 70);
+                nextStepBtn.RectColor = Color.Transparent;
+                pictureBox1.Image = Properties.Resources.Ask_me_anything_dark;
+
+                dynamic[] lable = { uiLabel1 };
+                foreach (var item in lable)
+                {
+                    item.ForeColor = Color.White;
+                }
+            }
         }
 
         private void nextStepBtn_Click(object sender, EventArgs e)

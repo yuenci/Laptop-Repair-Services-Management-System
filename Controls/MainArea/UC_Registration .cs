@@ -20,10 +20,30 @@ namespace miniSys0._3.Controls.MainArea
             InitializeComponent();
             InitCurmbs();
             InitIcon();
+            InitTheme();
             IconEventRegister();
             InitContent();
             uc_Registration = this;
             //button1.Click += new EventHandler(buttonClickCallfuc);
+
+        }
+        private void InitTheme()
+        {
+            if (User_type.user_theme == "dark")
+            {
+                this.BackColor= Color.FromArgb(28, 47, 70);
+                Container.FillColor = Color.FromArgb(28, 47, 70);
+                Container.BackColor = Color.FromArgb(28, 47, 70);
+                Container.RectColor = Color.FromArgb(28, 47, 70);
+                contentPanel.BackColor = Color.FromArgb(28, 47, 70);
+
+
+                dynamic[] labelList = { label1, iconLabel1, iconLabel2, iconLabel3 };
+                foreach (var item in labelList)
+                {
+                    item.ForeColor = Color.White;
+                }
+            }
         }
         private void InitCurmbs()
         {
@@ -181,7 +201,7 @@ namespace miniSys0._3.Controls.MainArea
 
 
             /*UC_Registe_detaildinfo uc = new UC_Registe_detaildinfo();
-            uc.Location = new Point(320,80);
+            uc.Location = new Point(320, 80);
             AddUserControl.Add(uc, contentPanel);*/
 
             /*UC_Registe_Complete uc = new UC_Registe_Complete();

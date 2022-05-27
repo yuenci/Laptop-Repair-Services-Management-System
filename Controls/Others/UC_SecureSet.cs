@@ -18,12 +18,25 @@ namespace miniSys0._3.Controls.Others
             InitializeComponent();
             HideAllTextBox();
             ShowInfoLable("all");
+            InitTheme();
+        }
+        private void InitTheme()
+        {
+            if (User_type.user_theme == "dark")
+            {
+                this.BackColor = Color.FromArgb(28, 47, 70);
+                dynamic[] lable = { uiLabel19 , uiLabel20 , uiLabel21 , uiLabel22 };
+                foreach (var item in lable)
+                {
+                    item.ForeColor = Color.White;
+                }
+            }
         }
 
 
         #region textboxes enter and leave event
 
-        
+
         private void password1_Enter(object sender, EventArgs e)
         {
             password1.RectColor = Color.White;

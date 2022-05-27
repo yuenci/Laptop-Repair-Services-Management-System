@@ -34,13 +34,13 @@
             this.again = new Sunny.UI.UIButton();
             this.CheckButton = new Sunny.UI.UIButton();
             this.uiUserControl1 = new Sunny.UI.UIUserControl();
+            this.password = new Sunny.UI.UITextBox();
             this.account = new Sunny.UI.UILabel();
             this.name = new Sunny.UI.UILabel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.warningBar = new Sunny.UI.UISymbolLabel();
-            this.password = new Sunny.UI.UITextBox();
             this.uiUserControl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,10 +93,10 @@
             this.again.Location = new System.Drawing.Point(586, 184);
             this.again.MinimumSize = new System.Drawing.Size(1, 1);
             this.again.Name = "again";
-            this.again.RectColor = System.Drawing.Color.White;
-            this.again.RectHoverColor = System.Drawing.Color.White;
-            this.again.RectPressColor = System.Drawing.Color.White;
-            this.again.RectSelectedColor = System.Drawing.Color.White;
+            this.again.RectColor = System.Drawing.Color.Transparent;
+            this.again.RectHoverColor = System.Drawing.Color.Transparent;
+            this.again.RectPressColor = System.Drawing.Color.Transparent;
+            this.again.RectSelectedColor = System.Drawing.Color.Transparent;
             this.again.Size = new System.Drawing.Size(100, 35);
             this.again.Style = Sunny.UI.UIStyle.Custom;
             this.again.TabIndex = 104;
@@ -147,6 +147,24 @@
             this.uiUserControl1.Text = null;
             this.uiUserControl1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiUserControl1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // password
+            // 
+            this.password.BackColor = System.Drawing.Color.Transparent;
+            this.password.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.password.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.password.Font = new System.Drawing.Font(".萍方-简", 12F);
+            this.password.Location = new System.Drawing.Point(314, 88);
+            this.password.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.password.MinimumSize = new System.Drawing.Size(1, 16);
+            this.password.Name = "password";
+            this.password.ShowText = false;
+            this.password.Size = new System.Drawing.Size(150, 29);
+            this.password.Style = Sunny.UI.UIStyle.Custom;
+            this.password.TabIndex = 107;
+            this.password.Text = "uiTextBox1";
+            this.password.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.password.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // account
             // 
@@ -225,25 +243,6 @@
             this.warningBar.TabIndex = 3;
             this.warningBar.Text = "Please modify the temporary password";
             this.warningBar.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // password
-            // 
-            this.password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.password.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.password.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.password.Font = new System.Drawing.Font(".萍方-简", 12F);
-            this.password.Location = new System.Drawing.Point(314, 88);
-            this.password.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.password.MinimumSize = new System.Drawing.Size(1, 16);
-            this.password.Name = "password";
-            this.password.RectColor = System.Drawing.Color.Transparent;
-            this.password.ShowText = false;
-            this.password.Size = new System.Drawing.Size(150, 29);
-            this.password.Style = Sunny.UI.UIStyle.Custom;
-            this.password.TabIndex = 107;
-            this.password.Text = "uiTextBox1";
-            this.password.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.password.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // UC_Registe_Complete
             // 

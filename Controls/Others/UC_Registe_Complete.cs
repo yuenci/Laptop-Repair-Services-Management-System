@@ -18,6 +18,19 @@ namespace miniSys0._3.Controls.Others
             InitializeComponent();
             InitData();
             InitWarningBar();
+            InitTheme();
+        }
+        private void InitTheme()
+        {
+            if (User_type.user_theme == "dark")
+            {
+                this.BackColor = Color.FromArgb(28, 47, 70);
+                dynamic[] lable = { successful , uiLabel1 };
+                foreach (var item in lable)
+                {
+                    item.ForeColor = Color.White;
+                }
+            }
         }
 
         private void viewMore_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -29,6 +42,10 @@ namespace miniSys0._3.Controls.Others
             name.Text = RegisterInfoCache.user_name;
             account.Text = RegisterInfoCache.user_ID;
             password.Text = RegisterInfoCache.user_password;
+
+            password.RectColor = Color.Transparent;
+            password.BackColor = Color.Transparent;
+            password.FillColor = Color.FromArgb(242, 243, 245);
         }
         private void InitWarningBar()
         {

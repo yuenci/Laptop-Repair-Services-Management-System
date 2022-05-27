@@ -45,10 +45,10 @@
             this.nextStepBtn.Location = new System.Drawing.Point(435, 415);
             this.nextStepBtn.MinimumSize = new System.Drawing.Size(1, 1);
             this.nextStepBtn.Name = "nextStepBtn";
-            this.nextStepBtn.RectColor = System.Drawing.Color.White;
-            this.nextStepBtn.RectHoverColor = System.Drawing.Color.White;
-            this.nextStepBtn.RectPressColor = System.Drawing.Color.White;
-            this.nextStepBtn.RectSelectedColor = System.Drawing.Color.White;
+            this.nextStepBtn.RectColor = System.Drawing.Color.Transparent;
+            this.nextStepBtn.RectHoverColor = System.Drawing.Color.Transparent;
+            this.nextStepBtn.RectPressColor = System.Drawing.Color.Transparent;
+            this.nextStepBtn.RectSelectedColor = System.Drawing.Color.Transparent;
             this.nextStepBtn.Size = new System.Drawing.Size(100, 35);
             this.nextStepBtn.Style = Sunny.UI.UIStyle.Custom;
             this.nextStepBtn.TabIndex = 91;

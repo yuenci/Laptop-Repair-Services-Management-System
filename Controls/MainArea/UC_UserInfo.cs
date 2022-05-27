@@ -21,11 +21,36 @@ namespace miniSys0._3.Controls.MainArea
 
             InitUserInfoBar();
             InitDeviceCard();
+            InitTheme();
             string[] staffIDArray = { "Sta000001", "Sta000004", "Sta000037", "Sta000063" };
             InitRlatedStaff(staffIDArray);
 
             
         }
+        private void InitTheme()
+        {
+            if (User_type.user_theme == "dark")
+            {
+                this.BackColor = Color.FromArgb(28, 47, 70);
+                uiUserControl1.FillColor = Color.FromArgb(28, 47, 70);
+                uiUserControl3.FillColor = Color.FromArgb(28, 47, 70);
+                uiUserControl1.RectColor = Color.FromArgb(55, 55, 57);
+                uiUserControl3.RectColor = Color.FromArgb(55, 55, 57);
+                uiUserControl4.FillColor = Color.FromArgb(28, 47, 70);
+
+                dynamic[] lable = { label1 , label2};
+                foreach (var item in lable)
+                {
+                    item.ForeColor = Color.White;
+                }
+
+                uC_StaffCard11.BackColor = Color.FromArgb(55, 55, 57);
+                uC_StaffCard12.BackColor = Color.FromArgb(55, 55, 57);
+                uC_StaffCard13.BackColor = Color.FromArgb(55, 55, 57);
+                uC_StaffCard14.BackColor = Color.FromArgb(55, 55, 57);
+            }
+        }
+
 
         private void InitUserInfoBar()
         {

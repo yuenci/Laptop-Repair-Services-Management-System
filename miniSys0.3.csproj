@@ -81,7 +81,6 @@
     <Compile Include="AddDescription.Designer.cs">
       <DependentUpon>AddDescription.cs</DependentUpon>
     </Compile>
-    <Compile Include="add_UC_UserInfo.cs" />
     <Compile Include="CommonlyControls.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -769,6 +768,7 @@
     <Content Include="Html\chart.js" />
     <Content Include="Html\mainLineChart.html" />
     <Content Include="Html\mainPieChart.html" />
+    <None Include="Resources\Ask_me_anything_dark.png" />
     <None Include="Resources\032.png" />
     <None Include="Resources\022.png" />
     <None Include="Resources\012.png" />

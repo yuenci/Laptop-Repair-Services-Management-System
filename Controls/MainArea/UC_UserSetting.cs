@@ -18,6 +18,7 @@ namespace miniSys0._3.Controls.MainArea
         public UC_UserSetting()
         {
             InitializeComponent();
+            InitTheme();
             InitCurmbs();
             InitIcon();
             InitUserInfo();
@@ -25,6 +26,30 @@ namespace miniSys0._3.Controls.MainArea
             InitContentPanel();
             InitChangeButton();
         }
+        private void InitTheme()
+        {
+            if (User_type.user_theme == "dark")
+            {
+                this.BackColor = Color.FromArgb(28, 47, 70);
+                container1.BackColor = Color.FromArgb(28, 47, 70);
+                contentPanel.BackColor = Color.FromArgb(28, 47, 70);
+                container1.FillColor = Color.FromArgb(28, 47, 70);
+                container1.RectColor = Color.FromArgb(55, 55, 57);
+                icon.BackColor = Color.FromArgb(28, 47, 70);
+                ButtonEditPhoto.BackColor = Color.FromArgb(28, 47, 70);
+                container2.FillColor = Color.FromArgb(28, 47, 70);
+                container2.BackColor = Color.FromArgb(28, 47, 70);
+                container2.RectColor = Color.FromArgb(55, 55, 57);
+
+                dynamic[] lable = { uiLabel1 , uiLabel2, uiLabel3, uiLabel4, uiLabel5,
+                uiLabel6 ,uiLabel7 ,uiLabel8 ,uiLabel9 ,uiLabel10 };
+                foreach (var item in lable)
+                {
+                    item.ForeColor = Color.White;
+                }
+            }
+        }
+
         private void InitCurmbs()
         {
             urC_Crumbs1.crumbText.Text = "User setting";

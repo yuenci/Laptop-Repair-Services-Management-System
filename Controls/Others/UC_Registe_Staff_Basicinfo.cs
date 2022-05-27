@@ -26,7 +26,14 @@ namespace miniSys0._3.Controls.Others
             {
                 this.BackColor = Color.FromArgb(28, 47, 70);
             }
+            dynamic[] lable = { uiLabel1, IDnumber, uiLabel2, uiLabel3};
+            foreach (var item in lable)
+            {
+                item.ForeColor = Color.White;
+            }
+
         }
+
 
         private void InitTextBox()
         {

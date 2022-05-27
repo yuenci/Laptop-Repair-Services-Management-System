@@ -46,7 +46,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("微软雅黑", 15F);
             this.label3.ForeColor = System.Drawing.Color.Red;
             this.label3.Location = new System.Drawing.Point(338, 314);
@@ -58,7 +58,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("微软雅黑", 15F);
             this.label2.ForeColor = System.Drawing.Color.Red;
             this.label2.Location = new System.Drawing.Point(283, 236);
@@ -70,7 +70,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("微软雅黑", 15F);
             this.label4.ForeColor = System.Drawing.Color.Red;
             this.label4.Location = new System.Drawing.Point(330, 81);
@@ -89,10 +89,10 @@
             this.nextStepBtn.Location = new System.Drawing.Point(435, 416);
             this.nextStepBtn.MinimumSize = new System.Drawing.Size(1, 1);
             this.nextStepBtn.Name = "nextStepBtn";
-            this.nextStepBtn.RectColor = System.Drawing.Color.White;
-            this.nextStepBtn.RectHoverColor = System.Drawing.Color.White;
-            this.nextStepBtn.RectPressColor = System.Drawing.Color.White;
-            this.nextStepBtn.RectSelectedColor = System.Drawing.Color.White;
+            this.nextStepBtn.RectColor = System.Drawing.Color.Transparent;
+            this.nextStepBtn.RectHoverColor = System.Drawing.Color.Transparent;
+            this.nextStepBtn.RectPressColor = System.Drawing.Color.Transparent;
+            this.nextStepBtn.RectSelectedColor = System.Drawing.Color.Transparent;
             this.nextStepBtn.Size = new System.Drawing.Size(100, 35);
             this.nextStepBtn.Style = Sunny.UI.UIStyle.Custom;
             this.nextStepBtn.TabIndex = 90;
@@ -240,7 +240,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 15F);
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(295, 158);

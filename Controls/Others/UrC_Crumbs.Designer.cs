@@ -48,7 +48,7 @@
             this.crumbsHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(250)))));
             this.crumbsHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.crumbsHome.Enabled = false;
-            this.crumbsHome.FillColor = System.Drawing.Color.Transparent;
+            this.crumbsHome.FillColor = System.Drawing.Color.White;
             this.crumbsHome.FillDisableColor = System.Drawing.Color.Transparent;
             this.crumbsHome.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.crumbsHome.ForeColor = System.Drawing.Color.Black;

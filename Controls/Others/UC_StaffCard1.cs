@@ -13,8 +13,21 @@ namespace miniSys0._3.Controls.Others
     public partial class UC_StaffCard1 : UserControl
     {
         public UC_StaffCard1()
-        {
+        {      
             InitializeComponent();
+            InitTheme();
         }
+        private void InitTheme()
+        {
+            if (User_type.user_theme == "dark")
+            {
+                dynamic[] lable = { nameLabel , postLabel };
+                foreach (var item in lable)
+                {
+                    item.ForeColor = Color.White;
+                }
+            }
+        }
+
     }
 }
