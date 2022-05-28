@@ -98,6 +98,7 @@ namespace miniSys0._3
         private void InitProfile()
         {
             this.profile.Text = User_type.user_name.Substring(0, 1);
+            searchBox.Visible = false;
         }
         private void drag_down(object sender, MouseEventArgs e)
         {
@@ -141,8 +142,20 @@ namespace miniSys0._3
 
         private void searchIcon_Click(object sender, EventArgs e)
         {
-            searchBox.Show();
-            searchBox.Focus();
+            if (searchBox.Visible && searchBox.Text == "")
+            {
+                searchBox.Visible = false;
+            }
+            else if (searchBox.Visible && searchBox.Text == "Type here to search")
+            {
+                searchBox.Visible = false;
+            }
+            else if(!searchBox.Visible)
+            {
+                searchBox.Visible = true;
+                searchBox.Focus();
+            }
+            
         }
 
         private void search_enter(object sender, EventArgs e)
@@ -200,7 +213,7 @@ namespace miniSys0._3
                 }
             }
         }
-        private void addUserControl(UserControl userControl)
+        public void addUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
             navMenuPanel.Controls.Clear();
@@ -411,102 +424,98 @@ namespace miniSys0._3
         }
 
         #region
+        public string currentMainPage;
+
+        private void addUserControlToMain(UserControl userControl)
+        {
+            userControl.Dock = DockStyle.Fill;
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(userControl);
+            userControl.BringToFront();
+        }
+
         private void add_UC_Mainto_Panel()
         {
-            UC_main uc = new UC_main();
-            uc.Dock = DockStyle.Fill;
-            mainPanel.Controls.Clear();
-            mainPanel.Controls.Add(uc);
-            uc.BringToFront();
+
+            if (User_type.user_deparment == "Customer")
+            {
+                UC_Cus_dashboard uc = new UC_Cus_dashboard();
+                addUserControlToMain(uc);
+            }
+            else
+            {
+                UC_main uc = new UC_main();
+                addUserControlToMain(uc);
+            }
+            currentMainPage = "UC_main";
         }
 
         private void  add_UC_UserInfo()
         {
             UC_UserInfo uc = new UC_UserInfo();
-            uc.Dock = DockStyle.Fill;
-            mainPanel.Controls.Clear();
-            mainPanel.Controls.Add(uc);
-            uc.BringToFront();
+            addUserControlToMain(uc);
+            currentMainPage = "UC_UserInfo";
         }
 
         private void add_UC_UserSetting()
         {
             UC_UserSetting uc = new UC_UserSetting();
-            uc.Dock = DockStyle.Fill;
-            mainPanel.Controls.Clear();
-            mainPanel.Controls.Add(uc);
-            uc.BringToFront();
+            addUserControlToMain(uc);
+            currentMainPage = "UC_UserSetting";
         }
         private void add_UC_registration()
         {
             UC_Registration uc = new UC_Registration();
-            uc.Dock = DockStyle.Fill;
-            mainPanel.Controls.Clear();
-            mainPanel.Controls.Add(uc);
-            uc.BringToFront();
+            addUserControlToMain(uc);
+            currentMainPage = "UC_Registration";
         }
         private void add_UC_Payment()
         {
             UC_Payment uc = new UC_Payment();
-            uc.Dock = DockStyle.Fill;
-            mainPanel.Controls.Clear();
-            mainPanel.Controls.Add(uc);
-            uc.BringToFront();
-
+            addUserControlToMain(uc);
+            currentMainPage = "UC_Payment";
         }
 
         private void  add_task_cards()
         {
             UC_TaskCards uc = new UC_TaskCards();
-            uc.Dock = DockStyle.Fill;
-            mainPanel.Controls.Clear();
-            mainPanel.Controls.Add(uc);
-            uc.BringToFront();
+            addUserControlToMain(uc);
+            currentMainPage = "UC_TaskCards";
         }
 
         private void add_Cus_OrderDetails()
         {
             UC_Cus_OrderDetails uc = new UC_Cus_OrderDetails();
-            uc.Dock = DockStyle.Fill;
-            mainPanel.Controls.Clear();
-            mainPanel.Controls.Add(uc);
-            uc.BringToFront();
+            addUserControlToMain(uc);
+            currentMainPage = "UC_Cus_OrderDetails";
         }
 
         private void add_UC_ServiceReport()
         {
             UC_ServiceReport uc = new UC_ServiceReport();
-            uc.Dock = DockStyle.Fill;
-            mainPanel.Controls.Clear();
-            mainPanel.Controls.Add(uc);
-            uc.BringToFront();
+            addUserControlToMain(uc);
+            currentMainPage = "UC_ServiceReport";
         }
 
         private void add_UC_IncomeAnalysis()
         {
             UC_IncomeAnalysis uc = new UC_IncomeAnalysis();
-            uc.Dock = DockStyle.Fill;
-            mainPanel.Controls.Clear();
-            mainPanel.Controls.Add(uc);
-            uc.BringToFront();
+            addUserControlToMain(uc);
+            currentMainPage = "UC_IncomeAnalysis";
         }
 
         private void add_UC_Cus_dashboard()
         {
             UC_Cus_dashboard uc = new UC_Cus_dashboard();
-            uc.Dock = DockStyle.Fill;
-            mainPanel.Controls.Clear();
-            mainPanel.Controls.Add(uc);
-            uc.BringToFront();
+            addUserControlToMain(uc);
+            currentMainPage = "UC_Cus_dashboard";
         }
 
         private void add_task_table()
         {
             UC_TaskList uc = new UC_TaskList();
-            uc.Dock = DockStyle.Fill;
-            mainPanel.Controls.Clear();
-            mainPanel.Controls.Add(uc);
-            uc.BringToFront();
+            addUserControlToMain(uc);
+            currentMainPage = "UC_TaskList";
         }
         #endregion
 
@@ -517,7 +526,7 @@ namespace miniSys0._3
                 User_type.user_theme = "dark";
                 prepareData();
                 InitTheme();
-                add_UC_Mainto_Panel();
+                lodaNewMainPage(currentMainPage);
                 addNavMenu();
             }
             else if (User_type.user_theme == "dark")
@@ -525,11 +534,60 @@ namespace miniSys0._3
                 User_type.user_theme = "light";
                 prepareData();
                 InitTheme();
-                add_UC_Mainto_Panel();
+                lodaNewMainPage(currentMainPage);
                 addNavMenu();
+            } 
+        }
+        
+        private void lodaNewMainPage(string currentControlStr)
+        {
+            Console.WriteLine(currentControlStr);
+            if (currentControlStr == ("UC_main"))
+            {
+                add_UC_Mainto_Panel();
             }
-            
+            else if(currentControlStr == ("UC_UserInfo"))
+            {
+                add_UC_UserInfo();
+            }
+            else if (currentControlStr == ("UC_UserSetting"))
+            {
+                add_UC_UserSetting();
+            }
+            else if (currentControlStr == ("UC_Registration"))
+            {
+                add_UC_registration();
 
+            }
+            else if (currentControlStr == ("UC_Payment"))
+            {
+                add_UC_Payment();
+            }
+            else if (currentControlStr == ("UC_TaskCards"))
+            {
+                add_task_cards();
+            }
+            else if (currentControlStr == ("UC_Cus_OrderDetails"))
+            {
+                add_Cus_OrderDetails();
+            }
+            else if (currentControlStr == ("UC_ServiceReport"))
+            {
+                add_UC_ServiceReport();
+
+            }
+            else if (currentControlStr == ("UC_IncomeAnalysis"))
+            {
+                add_UC_IncomeAnalysis();
+            }
+            else if (currentControlStr == ("UC_Cus_dashboard"))
+            {
+                add_UC_Cus_dashboard(); 
+            }
+            else if (currentControlStr == ("UC_TaskList"))
+            {
+                add_task_table();
+            }
         }
     }
 

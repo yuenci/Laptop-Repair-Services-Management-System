@@ -71,31 +71,37 @@ namespace miniSys0._3.Controls
             {
                 UC_UserInfo uc = new UC_UserInfo();
                 addUserControl(uc);
+                Main.main.currentMainPage = "UC_UserInfo";
             }
             else if (nodeSelect == "User settings")
             {
                 UC_UserSetting uc = new UC_UserSetting();
                 addUserControl(uc);
+                Main.main.currentMainPage = "UC_UserSetting";
             }
             else if (nodeSelect == "Workbench")
             {
                 UC_main uc = new UC_main();
                 addUserControl(uc);
+                Main.main.currentMainPage = "UC_main";
             }
             else if (nodeSelect == "Register")
             {
                 UC_Registration uc = new UC_Registration();
                 addUserControl(uc);
+                Main.main.currentMainPage = "UC_Registration";
             }
             else if (nodeSelect == "Service report")
             {
                 UC_ServiceReport uc = new UC_ServiceReport();
                 addUserControl(uc);
+                Main.main.currentMainPage = "UC_ServiceReport";
             }
             else if (nodeSelect == "Income analysis")
             {
                 UC_IncomeAnalysis uc = new UC_IncomeAnalysis();
                 addUserControl(uc);
+                Main.main.currentMainPage = "UC_IncomeAnalysis";
             }
         }
     }

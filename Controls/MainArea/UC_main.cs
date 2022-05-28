@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CefSharp;
 using CefSharp.WinForms;
+using miniSys0._3.Controls.MainArea;
 
 namespace miniSys0._3.Controls
 {
@@ -981,8 +982,64 @@ namespace miniSys0._3.Controls
                 //
             }
         }
+        public void addUserControlToMain(UserControl userControl)
+        {
+            userControl.Dock = DockStyle.Fill;
+            Main.main.mainPanel.Controls.Clear();
+            Main.main.mainPanel.Controls.Add(userControl);
+            userControl.BringToFront();
+        }
+        private void shortcutButton1_Click(object sender, EventArgs e)
+        {
+            string type = shortcutText1.Text;
+            if(type== "Register" )
+            {
+                UC_Registration uc = new UC_Registration();
+                addUserControlToMain(uc);
+            }
+            else if (type == "Requests" )
+            {
+                UC_TaskList uc = new UC_TaskList();
+                addUserControlToMain(uc);
+            }
+        }
+
+        private void shortcutButton2_Click(object sender, EventArgs e)
+        {
+            string type = shortcutText2.Text;
+            if (type == "Receipt")
+            {
+                UC_Payment uc = new UC_Payment();
+                addUserControlToMain(uc);
+            }
+            else if (type == "Describe")
+            {
+                UC_TaskCards uc = new UC_TaskCards();
+                addUserControlToMain(uc);
+            }
+            else if (type == "Report")
+            {
+                UC_ServiceReport uc = new UC_ServiceReport();
+                addUserControlToMain(uc);
+            }
+        }
+
+        private void shortcutButton3_Click(object sender, EventArgs e)
+        {
+            string type = shortcutText3.Text;
+            if (type == "Profile")
+            {
+                UC_UserInfo uc = new UC_UserInfo();
+                addUserControlToMain(uc);
+            }
+            else if (type == "Income")
+            {
+                UC_IncomeAnalysis uc = new UC_IncomeAnalysis();
+                addUserControlToMain(uc);
+            }
+        }
     }
-    
+
     class MyException : Exception
     {
         public MyException(string message) : base(message)

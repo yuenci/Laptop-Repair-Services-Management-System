@@ -69,29 +69,38 @@ namespace miniSys0._3.Controls
 
             if (nodeSelect == "Workbench")
             {
-                Console.WriteLine("Workbench");
                 UC_main uc = new UC_main();
                 addUserControl(uc);
+                Main.main.currentMainPage = "UC_main";
+
             }
             else if (nodeSelect == "User info")
             {
                 UC_UserInfo uc = new UC_UserInfo();
                 addUserControl(uc);
+                Main.main.currentMainPage = "UC_UserInfo";
+
             }
             else if (nodeSelect == "User settings")
             {
                 UC_UserSetting uc = new UC_UserSetting();
                 addUserControl(uc);
+                Main.main.currentMainPage = "UC_UserSetting";
+
             }
             else if (nodeSelect == "Register" )
             {
                 UC_Registration uc = new UC_Registration();
                 addUserControl(uc);
+                Main.main.currentMainPage = "UC_Registration";
+
             }
             else if (nodeSelect ==  "Payment")
             {
                 UC_Payment uc = new UC_Payment();
                 addUserControl(uc);
+                Main.main.currentMainPage = "UC_Payment";
+
             }
         }
         }

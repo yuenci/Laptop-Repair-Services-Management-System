@@ -491,6 +491,7 @@
             this.shortcutButton2.TabIndex = 46;
             this.shortcutButton2.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.shortcutButton2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.shortcutButton2.Click += new System.EventHandler(this.shortcutButton2_Click);
             // 
             // shortcutText1
             // 
@@ -517,6 +518,7 @@
             this.shortcutButton1.TabIndex = 45;
             this.shortcutButton1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.shortcutButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.shortcutButton1.Click += new System.EventHandler(this.shortcutButton1_Click);
             // 
             // shortcutButton3
             // 
@@ -532,6 +534,7 @@
             this.shortcutButton3.TabIndex = 47;
             this.shortcutButton3.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.shortcutButton3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.shortcutButton3.Click += new System.EventHandler(this.shortcutButton3_Click);
             // 
             // uiUserControl5
             // 

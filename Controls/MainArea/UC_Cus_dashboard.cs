@@ -21,13 +21,53 @@ namespace miniSys0._3.Controls.MainArea
             InitializeComponent();
             InitName();
             InitStyle();
+            
             InitBtnEvent();
             InitProcess();
             InitNewsStyle();
             InitNewsContent();
             InitNewsEvents();
+
+            InitTheme();
+
             uc_Cus_dashboard = this;
             SetTimer();
+        }
+        private void InitTheme()
+        {
+            if (User_type.user_theme == "dark")
+            {
+                this.BackColor = Color.FromArgb(18, 31, 43);
+
+                dynamic[] container = { uiUserControl1, uiUserControl2, uiUserControl4, uiUserControl5, uiUserControl6 };
+                foreach (var item in container)
+                {
+                    item.FillColor = Color.FromArgb(28, 47, 70);
+                    item.BackColor = Color.FromArgb(28, 47, 70);
+                    item.RectColor = Color.Transparent;
+                }
+
+
+
+                dynamic[] lable = { name_lable, label14, shortcutText1, shortcutText2, shortcutText3,
+                    orderStatus, modelText, staffName, label19, doc1, doc2, doc3, doc4, label16, 
+                    label17, news1, news2, news3, news4, news5, newslabel1, newslabel2, newslabel3, 
+                    newslabel4, newslabel5 };
+                foreach (var item in lable)
+                {
+                    item.ForeColor = Color.White;
+                }
+
+                modelIcon.BackColor = Color.FromArgb(55, 55, 57);
+                modelIcon.FillColor = Color.FromArgb(55, 55, 57);
+                modelIcon.ForeColor = Color.FromArgb(22, 93, 255);
+
+
+                staffIcon.BackColor = Color.FromArgb(55, 55, 57);
+                staffIcon.FillColor = Color.FromArgb(55, 55, 57);
+                staffIcon.ForeColor = Color.FromArgb(22, 93, 255);
+
+            }
         }
 
         private void UC_Cus_dashboard_Load(object sender, EventArgs e)
@@ -41,12 +81,15 @@ namespace miniSys0._3.Controls.MainArea
         }
         private void InitStyle()
         {
-            modelIcon.RectDisableColor = Color.White;
-            staffIcon.RectDisableColor = Color.White;
+            if (User_type.user_theme == "light")
+            {
+                modelIcon.FillColor = Color.FromArgb(242, 243, 245);
+                staffIcon.FillColor = Color.FromArgb(242, 243, 245);
 
-            modelIcon.Enabled = false;
-            staffIcon.Enabled = false;
-
+                imageBtn1.FillColor = Color.FromArgb(252, 210, 80);
+                imageBtnLeft.FillColor = Color.White;
+                imageBtnRight.FillColor = Color.White;
+            }
             Process.ProcessBackColor = Color.White;
             Process.ProcessColor = Color.FromArgb(0, 180, 42);
 
@@ -54,34 +97,19 @@ namespace miniSys0._3.Controls.MainArea
             shortcutButton2.FillColor = Color.FromArgb(242, 243, 245);
             shortcutButton3.FillColor = Color.FromArgb(242, 243, 245);
 
-            modelIcon.FillColor = Color.FromArgb(242, 243, 245);
-            staffIcon.FillColor = Color.FromArgb(242, 243, 245);
 
             shortcutButton1.SymbolColor = Color.Black;
             shortcutButton2.SymbolColor = Color.Black;
             shortcutButton3.SymbolColor = Color.Black;
-            modelIcon.SymbolColor = Color.Black;
-            staffIcon.SymbolColor = Color.Black;
-
+            
             shortcutButton1.SymbolHoverColor = Color.Black;
             shortcutButton2.SymbolHoverColor = Color.Black;
             shortcutButton3.SymbolHoverColor = Color.Black;
-            modelIcon.SymbolHoverColor = Color.Black;
-            staffIcon.SymbolHoverColor = Color.Black;
-
+            
             shortcutButton1.RectColor = Color.Transparent;
             shortcutButton2.RectColor = Color.Transparent;
             shortcutButton3.RectColor = Color.Transparent;
-            modelIcon.RectColor = Color.Transparent;
-            staffIcon.RectColor = Color.Transparent;
 
-            imageBtn1.FillColor = Color.FromArgb(252, 210, 80);
-            imageBtnLeft.FillColor = Color.White;
-            imageBtnRight.FillColor = Color.White;
-
-            orderStatus.RectColor = Color.White;
-            modelText.RectColor = Color.White;
-            staffName.RectColor = Color.White;
         }
         public void InitBtnEvent()
         {

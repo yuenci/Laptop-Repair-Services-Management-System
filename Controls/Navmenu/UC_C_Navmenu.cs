@@ -72,21 +72,28 @@ namespace miniSys0._3.Controls
             {
                 UC_Cus_dashboard uc = new UC_Cus_dashboard();
                 addUserControl(uc);
+                Main.main.currentMainPage = "UC_Cus_dashboard";
+
             }
             else if (nodeSelect == "Order details")
             {
                 UC_Cus_OrderDetails uc = new UC_Cus_OrderDetails();
                 addUserControl(uc);
+                Main.main.currentMainPage = "UC_Cus_OrderDetails";
+
             }
             else if (nodeSelect == "User info")
             {
                 UC_UserInfo uc = new UC_UserInfo();
                 addUserControl(uc);
+                Main.main.currentMainPage = "UC_UserInfo";
+
             }
             else if (nodeSelect == "User settings")
             {
                 UC_UserSetting uc = new UC_UserSetting();
                 addUserControl(uc);
+                Main.main.currentMainPage = "UC_UserSetting";
             }
 
 

@@ -56,11 +56,6 @@
             this.uiUserControl5 = new Sunny.UI.UIUserControl();
             this.Process = new Sunny.UI.UIRoundProcess();
             this.uiUserControl1 = new Sunny.UI.UIUserControl();
-            this.modelIcon = new Sunny.UI.UISymbolButton();
-            this.orderStatus = new Sunny.UI.UITextBox();
-            this.staffName = new Sunny.UI.UITextBox();
-            this.staffIcon = new Sunny.UI.UISymbolButton();
-            this.modelText = new Sunny.UI.UITextBox();
             this.uiUserControl4 = new Sunny.UI.UIUserControl();
             this.newslabel5 = new System.Windows.Forms.Label();
             this.newslabel4 = new System.Windows.Forms.Label();
@@ -78,6 +73,11 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.orderStatus = new Sunny.UI.UILabel();
+            this.modelText = new Sunny.UI.UILabel();
+            this.staffName = new Sunny.UI.UILabel();
+            this.staffIcon = new Sunny.UI.UIAvatar();
+            this.modelIcon = new Sunny.UI.UIAvatar();
             this.uiUserControl6.SuspendLayout();
             this.uiUserControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -164,6 +164,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label20.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(112)))), ((int)(((byte)(255)))));
@@ -176,6 +177,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
             this.label19.Location = new System.Drawing.Point(6, 6);
             this.label19.Name = "label19";
@@ -211,6 +213,7 @@
             // shortcutText3
             // 
             this.shortcutText3.AutoSize = true;
+            this.shortcutText3.BackColor = System.Drawing.Color.Transparent;
             this.shortcutText3.Font = new System.Drawing.Font(".萍方-简", 10F);
             this.shortcutText3.Location = new System.Drawing.Point(203, 107);
             this.shortcutText3.Name = "shortcutText3";
@@ -222,6 +225,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
             this.label14.Location = new System.Drawing.Point(6, 4);
             this.label14.Name = "label14";
@@ -232,6 +236,7 @@
             // shortcutText2
             // 
             this.shortcutText2.AutoSize = true;
+            this.shortcutText2.BackColor = System.Drawing.Color.Transparent;
             this.shortcutText2.Font = new System.Drawing.Font(".萍方-简", 10F);
             this.shortcutText2.Location = new System.Drawing.Point(106, 107);
             this.shortcutText2.Name = "shortcutText2";
@@ -258,6 +263,7 @@
             // shortcutText1
             // 
             this.shortcutText1.AutoSize = true;
+            this.shortcutText1.BackColor = System.Drawing.Color.Transparent;
             this.shortcutText1.Font = new System.Drawing.Font(".萍方-简", 10F);
             this.shortcutText1.Location = new System.Drawing.Point(7, 107);
             this.shortcutText1.Name = "shortcutText1";
@@ -300,7 +306,7 @@
             // name_lable
             // 
             this.name_lable.AutoSize = true;
-            this.name_lable.BackColor = System.Drawing.Color.White;
+            this.name_lable.BackColor = System.Drawing.Color.Transparent;
             this.name_lable.Font = new System.Drawing.Font(".萍方-简", 16F);
             this.name_lable.Location = new System.Drawing.Point(51, 9);
             this.name_lable.Name = "name_lable";
@@ -328,7 +334,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.White;
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::miniSys0._3.Properties.Resources.clap;
             this.pictureBox3.Location = new System.Drawing.Point(15, 10);
             this.pictureBox3.Name = "pictureBox3";
@@ -473,11 +479,11 @@
             // uiUserControl1
             // 
             this.uiUserControl1.BackColor = System.Drawing.Color.White;
+            this.uiUserControl1.Controls.Add(this.staffIcon);
             this.uiUserControl1.Controls.Add(this.modelIcon);
+            this.uiUserControl1.Controls.Add(this.modelText);
             this.uiUserControl1.Controls.Add(this.orderStatus);
             this.uiUserControl1.Controls.Add(this.staffName);
-            this.uiUserControl1.Controls.Add(this.staffIcon);
-            this.uiUserControl1.Controls.Add(this.modelText);
             this.uiUserControl1.Controls.Add(this.Process);
             this.uiUserControl1.FillColor = System.Drawing.Color.White;
             this.uiUserControl1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -491,84 +497,6 @@
             this.uiUserControl1.Text = "uiUserControl1";
             this.uiUserControl1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiUserControl1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // modelIcon
-            // 
-            this.modelIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.modelIcon.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.modelIcon.Location = new System.Drawing.Point(16, 129);
-            this.modelIcon.MinimumSize = new System.Drawing.Size(1, 1);
-            this.modelIcon.Name = "modelIcon";
-            this.modelIcon.Size = new System.Drawing.Size(38, 39);
-            this.modelIcon.Style = Sunny.UI.UIStyle.Custom;
-            this.modelIcon.Symbol = 57358;
-            this.modelIcon.SymbolSize = 26;
-            this.modelIcon.TabIndex = 52;
-            this.modelIcon.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.modelIcon.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // orderStatus
-            // 
-            this.orderStatus.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.orderStatus.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
-            this.orderStatus.Location = new System.Drawing.Point(128, 50);
-            this.orderStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.orderStatus.MinimumSize = new System.Drawing.Size(1, 16);
-            this.orderStatus.Name = "orderStatus";
-            this.orderStatus.ShowText = false;
-            this.orderStatus.Size = new System.Drawing.Size(92, 29);
-            this.orderStatus.Style = Sunny.UI.UIStyle.Custom;
-            this.orderStatus.TabIndex = 31;
-            this.orderStatus.Text = "Ordered";
-            this.orderStatus.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.orderStatus.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // staffName
-            // 
-            this.staffName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.staffName.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.staffName.Location = new System.Drawing.Point(82, 178);
-            this.staffName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.staffName.MinimumSize = new System.Drawing.Size(1, 16);
-            this.staffName.Name = "staffName";
-            this.staffName.ShowText = false;
-            this.staffName.Size = new System.Drawing.Size(169, 39);
-            this.staffName.Style = Sunny.UI.UIStyle.Custom;
-            this.staffName.TabIndex = 30;
-            this.staffName.Text = "Technician name";
-            this.staffName.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.staffName.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // staffIcon
-            // 
-            this.staffIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.staffIcon.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.staffIcon.Location = new System.Drawing.Point(16, 178);
-            this.staffIcon.MinimumSize = new System.Drawing.Size(1, 1);
-            this.staffIcon.Name = "staffIcon";
-            this.staffIcon.Size = new System.Drawing.Size(38, 39);
-            this.staffIcon.Style = Sunny.UI.UIStyle.Custom;
-            this.staffIcon.Symbol = 362718;
-            this.staffIcon.SymbolSize = 26;
-            this.staffIcon.TabIndex = 51;
-            this.staffIcon.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.staffIcon.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // modelText
-            // 
-            this.modelText.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.modelText.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.modelText.Location = new System.Drawing.Point(82, 129);
-            this.modelText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.modelText.MinimumSize = new System.Drawing.Size(1, 16);
-            this.modelText.Name = "modelText";
-            this.modelText.ShowText = false;
-            this.modelText.Size = new System.Drawing.Size(169, 39);
-            this.modelText.Style = Sunny.UI.UIStyle.Custom;
-            this.modelText.TabIndex = 29;
-            this.modelText.Text = "Computer Model";
-            this.modelText.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.modelText.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiUserControl4
             // 
@@ -780,6 +708,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label17.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(112)))), ((int)(((byte)(255)))));
@@ -793,12 +722,82 @@
             // label16
             // 
             this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
             this.label16.Location = new System.Drawing.Point(10, 1);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(66, 28);
             this.label16.TabIndex = 34;
             this.label16.Text = "News";
+            // 
+            // orderStatus
+            // 
+            this.orderStatus.BackColor = System.Drawing.Color.Transparent;
+            this.orderStatus.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
+            this.orderStatus.Location = new System.Drawing.Point(123, 49);
+            this.orderStatus.Name = "orderStatus";
+            this.orderStatus.Size = new System.Drawing.Size(100, 29);
+            this.orderStatus.Style = Sunny.UI.UIStyle.Custom;
+            this.orderStatus.TabIndex = 53;
+            this.orderStatus.Text = "Ordered";
+            this.orderStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.orderStatus.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // modelText
+            // 
+            this.modelText.BackColor = System.Drawing.Color.Transparent;
+            this.modelText.Font = new System.Drawing.Font(".萍方-简", 12F);
+            this.modelText.Location = new System.Drawing.Point(73, 129);
+            this.modelText.Name = "modelText";
+            this.modelText.Size = new System.Drawing.Size(180, 39);
+            this.modelText.Style = Sunny.UI.UIStyle.Custom;
+            this.modelText.TabIndex = 54;
+            this.modelText.Text = "Computer Model";
+            this.modelText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.modelText.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // staffName
+            // 
+            this.staffName.BackColor = System.Drawing.Color.Transparent;
+            this.staffName.Font = new System.Drawing.Font(".萍方-简", 12F);
+            this.staffName.Location = new System.Drawing.Point(73, 178);
+            this.staffName.Name = "staffName";
+            this.staffName.Size = new System.Drawing.Size(180, 39);
+            this.staffName.Style = Sunny.UI.UIStyle.Custom;
+            this.staffName.TabIndex = 55;
+            this.staffName.Text = "Technician name";
+            this.staffName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.staffName.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // staffIcon
+            // 
+            this.staffIcon.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.staffIcon.Location = new System.Drawing.Point(16, 178);
+            this.staffIcon.MinimumSize = new System.Drawing.Size(1, 1);
+            this.staffIcon.Name = "staffIcon";
+            this.staffIcon.Shape = Sunny.UI.UIShape.Square;
+            this.staffIcon.Size = new System.Drawing.Size(39, 39);
+            this.staffIcon.Style = Sunny.UI.UIStyle.Custom;
+            this.staffIcon.Symbol = 57358;
+            this.staffIcon.SymbolSize = 35;
+            this.staffIcon.TabIndex = 48;
+            this.staffIcon.Text = "uiAvatar2";
+            this.staffIcon.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // modelIcon
+            // 
+            this.modelIcon.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.modelIcon.Location = new System.Drawing.Point(16, 129);
+            this.modelIcon.MinimumSize = new System.Drawing.Size(1, 1);
+            this.modelIcon.Name = "modelIcon";
+            this.modelIcon.Shape = Sunny.UI.UIShape.Square;
+            this.modelIcon.Size = new System.Drawing.Size(39, 39);
+            this.modelIcon.Style = Sunny.UI.UIStyle.Custom;
+            this.modelIcon.Symbol = 362718;
+            this.modelIcon.SymbolSize = 35;
+            this.modelIcon.TabIndex = 49;
+            this.modelIcon.Text = "uiAvatar1";
+            this.modelIcon.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // UC_Cus_dashboard
             // 
@@ -860,11 +859,6 @@
         private Sunny.UI.UIUserControl uiUserControl5;
         private Sunny.UI.UIRoundProcess Process;
         private Sunny.UI.UIUserControl uiUserControl1;
-        private Sunny.UI.UISymbolButton modelIcon;
-        private Sunny.UI.UITextBox orderStatus;
-        private Sunny.UI.UITextBox staffName;
-        private Sunny.UI.UISymbolButton staffIcon;
-        private Sunny.UI.UITextBox modelText;
         private Sunny.UI.UIUserControl uiUserControl4;
         private System.Windows.Forms.Label newslabel5;
         private System.Windows.Forms.Label newslabel4;
@@ -882,5 +876,10 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
+        private Sunny.UI.UILabel modelText;
+        private Sunny.UI.UILabel orderStatus;
+        private Sunny.UI.UILabel staffName;
+        private Sunny.UI.UIAvatar staffIcon;
+        private Sunny.UI.UIAvatar modelIcon;
     }
 }

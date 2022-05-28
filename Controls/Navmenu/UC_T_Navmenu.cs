@@ -43,26 +43,36 @@ namespace miniSys0._3.Controls
             {
                 UC_main uc = new UC_main();
                 addUserControl(uc);
+                Main.main.currentMainPage = "UC_main";
+
             }
             else if (nodeSelect == "List view")
             {
                 UC_TaskList uc = new UC_TaskList();
                 addUserControl(uc);
+                Main.main.currentMainPage = "UC_TaskList";
+
             }
             else if (nodeSelect == "Card view")
             {
                 UC_TaskCards uc = new UC_TaskCards();
                 addUserControl(uc);
+                Main.main.currentMainPage = "UC_TaskCards";
+
             }
             else if (nodeSelect == "User info")
             {
                 UC_UserInfo uc = new UC_UserInfo();
                 addUserControl(uc);
+                Main.main.currentMainPage = "UC_UserInfo";
+
             }
             else if (nodeSelect == "User settings")
             {
                 UC_UserSetting uc = new UC_UserSetting();
                 addUserControl(uc);
+                Main.main.currentMainPage = "UC_UserSetting";
+
             }
         }
 
