@@ -30,7 +30,6 @@
         {
             this.container = new System.Windows.Forms.Panel();
             this.uiUserControl2 = new Sunny.UI.UIUserControl();
-            this.about = new Sunny.UI.UIRichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.uiUserControl1 = new Sunny.UI.UIUserControl();
             this.regtime = new Sunny.UI.UILabel();
@@ -45,7 +44,7 @@
             this.uiLabel7 = new Sunny.UI.UILabel();
             this.label1 = new System.Windows.Forms.Label();
             this.uiUserControl3 = new Sunny.UI.UIUserControl();
-            this.uiAvatar5 = new Sunny.UI.UIAvatar();
+            this.contact = new Sunny.UI.UIAvatar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.name = new Sunny.UI.UILabel();
             this.post = new Sunny.UI.UILabel();
@@ -58,6 +57,7 @@
             this.department = new Sunny.UI.UILabel();
             this.uiAvatar4 = new Sunny.UI.UIAvatar();
             this.country = new Sunny.UI.UILabel();
+            this.about = new Sunny.UI.UIRichTextBox();
             this.container.SuspendLayout();
             this.uiUserControl2.SuspendLayout();
             this.uiUserControl1.SuspendLayout();
@@ -95,23 +95,6 @@
             this.uiUserControl2.Text = "uiUserControl2";
             this.uiUserControl2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiUserControl2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // about
-            // 
-            this.about.FillColor = System.Drawing.Color.White;
-            this.about.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.about.Location = new System.Drawing.Point(17, 37);
-            this.about.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.about.MinimumSize = new System.Drawing.Size(1, 1);
-            this.about.Name = "about";
-            this.about.Padding = new System.Windows.Forms.Padding(2);
-            this.about.ShowText = false;
-            this.about.Size = new System.Drawing.Size(332, 159);
-            this.about.Style = Sunny.UI.UIStyle.Custom;
-            this.about.TabIndex = 2;
-            this.about.Text = "User instruaction";
-            this.about.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.about.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // label2
             // 
@@ -296,7 +279,7 @@
             // uiUserControl3
             // 
             this.uiUserControl3.BackColor = System.Drawing.Color.White;
-            this.uiUserControl3.Controls.Add(this.uiAvatar5);
+            this.uiUserControl3.Controls.Add(this.contact);
             this.uiUserControl3.Controls.Add(this.pictureBox1);
             this.uiUserControl3.Controls.Add(this.name);
             this.uiUserControl3.Controls.Add(this.post);
@@ -323,23 +306,24 @@
             this.uiUserControl3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiUserControl3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiAvatar5
+            // contact
             // 
-            this.uiAvatar5.AvatarSize = 35;
-            this.uiAvatar5.BackColor = System.Drawing.Color.Transparent;
-            this.uiAvatar5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiAvatar5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiAvatar5.Location = new System.Drawing.Point(697, 12);
-            this.uiAvatar5.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiAvatar5.Name = "uiAvatar5";
-            this.uiAvatar5.Shape = Sunny.UI.UIShape.Square;
-            this.uiAvatar5.Size = new System.Drawing.Size(35, 35);
-            this.uiAvatar5.Style = Sunny.UI.UIStyle.Custom;
-            this.uiAvatar5.Symbol = 262074;
-            this.uiAvatar5.SymbolSize = 30;
-            this.uiAvatar5.TabIndex = 106;
-            this.uiAvatar5.Text = "uiAvatar5";
-            this.uiAvatar5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.contact.AvatarSize = 35;
+            this.contact.BackColor = System.Drawing.Color.Transparent;
+            this.contact.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.contact.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.contact.Location = new System.Drawing.Point(697, 12);
+            this.contact.MinimumSize = new System.Drawing.Size(1, 1);
+            this.contact.Name = "contact";
+            this.contact.Shape = Sunny.UI.UIShape.Square;
+            this.contact.Size = new System.Drawing.Size(35, 35);
+            this.contact.Style = Sunny.UI.UIStyle.Custom;
+            this.contact.Symbol = 262074;
+            this.contact.SymbolSize = 30;
+            this.contact.TabIndex = 106;
+            this.contact.Text = "uiAvatar5";
+            this.contact.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.contact.Click += new System.EventHandler(this.contact_Click);
             // 
             // pictureBox1
             // 
@@ -505,6 +489,24 @@
             this.country.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.country.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // about
+            // 
+            this.about.FillColor = System.Drawing.Color.White;
+            this.about.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.about.Location = new System.Drawing.Point(19, 37);
+            this.about.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.about.MinimumSize = new System.Drawing.Size(1, 1);
+            this.about.Name = "about";
+            this.about.Padding = new System.Windows.Forms.Padding(8);
+            this.about.ReadOnly = true;
+            this.about.ShowText = false;
+            this.about.Size = new System.Drawing.Size(330, 159);
+            this.about.Style = Sunny.UI.UIStyle.Custom;
+            this.about.TabIndex = 2;
+            this.about.Text = "User instruaction";
+            this.about.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.about.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
             // ViewProfile
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -517,6 +519,7 @@
             this.Style = Sunny.UI.UIStyle.Custom;
             this.Text = "User Profile";
             this.TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.TopMost = true;
             this.ZoomScaleRect = new System.Drawing.Rectangle(15, 15, 800, 450);
             this.container.ResumeLayout(false);
             this.uiUserControl2.ResumeLayout(false);
@@ -533,7 +536,6 @@
 
         private System.Windows.Forms.Panel container;
         private Sunny.UI.UIUserControl uiUserControl2;
-        private Sunny.UI.UIRichTextBox about;
         private System.Windows.Forms.Label label2;
         private Sunny.UI.UIUserControl uiUserControl1;
         private Sunny.UI.UILabel regtime;
@@ -548,7 +550,7 @@
         private Sunny.UI.UILabel uiLabel7;
         private System.Windows.Forms.Label label1;
         private Sunny.UI.UIUserControl uiUserControl3;
-        private Sunny.UI.UIAvatar uiAvatar5;
+        private Sunny.UI.UIAvatar contact;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Sunny.UI.UILabel name;
         private Sunny.UI.UILabel post;
@@ -561,5 +563,6 @@
         private Sunny.UI.UILabel department;
         private Sunny.UI.UIAvatar uiAvatar4;
         private Sunny.UI.UILabel country;
+        private Sunny.UI.UIRichTextBox about;
     }
 }

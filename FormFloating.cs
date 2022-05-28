@@ -40,7 +40,7 @@ namespace miniSys0._3
             if (User_type.user_theme == "dark")
             {
                 this.BackColor = Color.FromArgb(28, 47, 70);
-                rectColor = Color.Transparent;
+                rectColor = Color.FromArgb(28, 47, 70);
 
                 dynamic[] lable = { userName, userPost };
                 foreach (var item in lable)
@@ -63,6 +63,7 @@ namespace miniSys0._3
 
         private void uiSymbolButton1_Click(object sender, EventArgs e)
         {
+            SearchBox.Instance.Hide();
             FormFloating.profileFloating.Dispose();
             Main.main.Dispose();    
             //UC_main.WebBrowser.Dispose();

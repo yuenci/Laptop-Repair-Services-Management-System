@@ -241,7 +241,7 @@
     <value>2</value>
   </data>
   <data name="searchBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微软雅黑, 12pt</value>
+    <value>.萍方-简, 12pt, style=Bold</value>
   </data>
   <data name="searchBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>617, 16</value>
@@ -256,7 +256,7 @@
     <value>20, 0, 0, 0</value>
   </data>
   <data name="searchBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>431, 32</value>
+    <value>430, 32</value>
   </data>
   <data name="searchBox.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -468,6 +468,36 @@
   <data name="&gt;&gt;profile.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="copyRight.Font" type="System.Drawing.Font, System.Drawing">
+    <value>.萍方-简, 12pt</value>
+  </data>
+  <data name="copyRight.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 693</value>
+  </data>
+  <data name="copyRight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 23</value>
+  </data>
+  <data name="copyRight.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="copyRight.Text" xml:space="preserve">
+    <value>© 2022 YUENCI IOOP</value>
+  </data>
+  <data name="copyRight.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;copyRight.Name" xml:space="preserve">
+    <value>copyRight</value>
+  </data>
+  <data name="&gt;&gt;copyRight.Type" xml:space="preserve">
+    <value>Sunny.UI.UILabel, SunnyUI, Version=3.1.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;copyRight.Parent" xml:space="preserve">
+    <value>uiUserControl1</value>
+  </data>
+  <data name="&gt;&gt;copyRight.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="navMenuPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 7</value>
   </data>
@@ -487,7 +517,7 @@
     <value>uiUserControl1</value>
   </data>
   <data name="&gt;&gt;navMenuPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="uiUserControl1.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 12pt</value>

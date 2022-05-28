@@ -13,15 +13,18 @@ namespace miniSys0._3
 {
     public partial class ViewProfile : UIForm
     {
+        public static ViewProfile Instance;
         //use type(staff/customer) whose profile be watch 
         //if check by seld
         public ViewProfile()
         {
+            Instance = this;
             InitializeComponent();
             initLabel();
             InitTheme();
+            Main.main.ifViewProfileExist = true;
         }
-        private void InitTheme()
+        public void InitTheme()
         {
             if (User_type.user_theme == "dark")
             {
@@ -31,7 +34,6 @@ namespace miniSys0._3
                 TitleForeColor = Color.White;
                 ControlBoxForeColor = Color.White;
                 rectColor = Color.FromArgb(55, 55, 57);
-
 
                 about.FillColor = Color.FromArgb(55, 55, 57);
                 about.RectColor = Color.Transparent;
@@ -54,18 +56,56 @@ namespace miniSys0._3
                 }
                 
 
-                dynamic[] icons = { uiAvatar1, uiAvatar2, uiAvatar3, uiAvatar4, uiAvatar5 };
+                dynamic[] icons = { uiAvatar1, uiAvatar2, uiAvatar3, uiAvatar4, contact };
                 foreach (var item in icons)
                 {
                     item.FillColor = Color.FromArgb(55, 55, 57);
                     item.ForeColor = Color.White;
                 }
+
+                
+            }
+            else if (User_type.user_theme == "light")
+            {
+                this.BackColor = Color.FromArgb(247, 248, 250);
+                container.BackColor = Color.White;
+                TitleColor = Color.FromArgb(64, 128, 255);
+                TitleForeColor = Color.White;
+                ControlBoxForeColor = Color.White;
+                rectColor = Color.FromArgb(64, 128, 255);
+
+                about.FillColor = Color.White;
+                about.RectColor = Color.Gainsboro;
+
+
+                dynamic[] lable = { name, post, country, phone, department, email, label2,
+                    about, label1, uiLabel9, gender, uiLabel8, birthday, uiLabel10, address,
+                    uiLabel7, useID, uiLabel11, regtime };
+                foreach (var item in lable)
+                {
+                    item.ForeColor = Color.Black;
+                }
+
+                dynamic[] containers = { uiUserControl1, uiUserControl2, uiUserControl3 };
+                foreach (var item in containers)
+                {
+                    item.FillColor = Color.White;
+                    item.BackColor = Color.White;
+                    item.RectColor = Color.Gainsboro;
+                }
+
+
+                dynamic[] icons = { uiAvatar1, uiAvatar2, uiAvatar3, uiAvatar4, contact };
+                foreach (var item in icons)
+                {
+                    item.FillColor = Color.Transparent;
+                    item.ForeColor = Color.FromArgb(64, 128, 255);
+                }
             }
         }
         private void initLabel()
         {
-            string useType = "Staff";
-            //string useType = "Customer";
+
             name.Text = RegisterInfoCache.user_name;
             post.Text = RegisterInfoCache.user_post;
             country.Text = RegisterInfoCache.user_Country;
@@ -78,19 +118,100 @@ namespace miniSys0._3
             useID.Text = RegisterInfoCache.user_ID;
             regtime.Text = RegisterInfoCache.user_regtime;
             about.Text = RegisterInfoCache.user_about;
-            if (useType == "Staff")
+            if (User_type.user_deparment == "Admin")
             {
                 // do nothing
             }
-            else if (useType == "Customer")
+            else if (User_type.user_deparment == "Receptionist")
             {
                 post.Hide();
                 department.Text = "Customer";
             }
+
+
+        }
+        
+        private void privacy(string staffID)
+        {
+            if (User_type.user_deparment == "Customer")
+            {
+                phone.Text = "********";
+                regtime.Text = "********";
+                address.Text = "********";
+                birthday.Text = "********";
+                again.Visible = false;
+                //about.Enabled = false;
+            }
+            else if (User_type.user_deparment != "Admin")
+            {
+                if(staffID != User_type.user_ID)
+                {
+                    again.Visible = false;
+                    //about.Enabled = false;
+                }
+            }
+        }
+
+        public void InitStaff(string staffID)
+        {
+            dynamic[] data = SQLCursor.Query("SELECT Name, Post,Country,Phone_number,Email," +
+                "Gender,Birthday,Address,StaffID,Regtime,About  " +
+                $"FROM Staff WHERE StaffID = '{staffID}';");
+
+            if (data.Length == 0)
+            {
+                MessageBox.Show($"{staffID} doesn't exist");
+            }
             else
             {
-                MessageBox.Show("Wrong arg in viewprofile in line 49");
+                name.Text = data[0];
+                post.Text = data[1];
+                country.Text = data[2];
+                phone.Text = data[3];
+                email.Text = data[4];
+                gender.Text = data[5];
+                birthday.Text = data[6];
+                address.Text = data[7];
+                useID.Text = data[8];
+                regtime.Text = data[9];
+                about.Text = data[10];
+
+                post.Show();
+                privacy(staffID);
             }
+            
+        }
+
+        public void InitCus(string cusID)
+        {
+            dynamic[] data = SQLCursor.Query("SELECT Name,Country,Phone_number,Email," +
+                "Gender,Birthday,Address,CustomerID,Regtime,About " +
+                $"FROM Customer WHERE CustomerID = '{cusID}';");
+            if (data.Length == 0)
+            {
+                MessageBox.Show($"{cusID} doesn't exist,lalalallal");
+            }
+            else
+            {
+                name.Text = data[0];
+                country.Text = data[1];
+                phone.Text = data[2];
+                email.Text = data[3];
+                gender.Text = data[4];
+                birthday.Text = data[5];
+                address.Text = data[6];
+                useID.Text = data[7];
+                regtime.Text = data[8];
+                about.Text = data[9];
+                privacy(cusID);
+            }
+           
+
+        }
+
+        private void contact_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

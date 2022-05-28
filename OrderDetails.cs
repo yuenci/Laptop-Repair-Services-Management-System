@@ -90,6 +90,7 @@ namespace miniSys0._3
                 line1.LineColor = Color.FromArgb(242, 243, 245);
                 line2.LineColor = Color.FromArgb(242, 243, 245);
                 line3.LineColor = Color.FromArgb(242, 243, 245);
+                dot1.FillColor = Color.FromArgb(64, 128, 255);
                 dot2.FillColor= Color.FromArgb(242, 243, 245);
                 dot3.FillColor = Color.FromArgb(242, 243, 245);
                 dot4.FillColor = Color.FromArgb(242, 243, 245);
@@ -110,6 +111,8 @@ namespace miniSys0._3
 
                 line2.LineColor = Color.FromArgb(242, 243, 245);
                 line3.LineColor = Color.FromArgb(242, 243, 245);
+                dot1.FillColor = Color.FromArgb(64, 128, 255);
+                dot2.FillColor = Color.FromArgb(64, 128, 255);
                 dot3.FillColor = Color.FromArgb(242, 243, 245);
                 dot4.FillColor = Color.FromArgb(242, 243, 245);
 
@@ -127,6 +130,9 @@ namespace miniSys0._3
             {
 
                 line3.LineColor = Color.FromArgb(242, 243, 245);
+                dot1.FillColor = Color.FromArgb(64, 128, 255);
+                dot2.FillColor = Color.FromArgb(64, 128, 255);
+                dot3.FillColor = Color.FromArgb(64, 128, 255);
                 dot4.FillColor = Color.FromArgb(242, 243, 245);
 
                 status4.Visible = false;
@@ -145,6 +151,11 @@ namespace miniSys0._3
                 status2Time.Text = getTime("Progress");
                 status3Time.Text = getTime("Completed");
                 status4Time.Text = getTime("Finished");
+
+                dot1.FillColor = Color.FromArgb(64, 128, 255);
+                dot2.FillColor = Color.FromArgb(64, 128, 255);
+                dot3.FillColor = Color.FromArgb(64, 128, 255);
+                dot4.FillColor = Color.FromArgb(64, 128, 255);
                 return "Order finish";
             }
             else
@@ -157,9 +168,7 @@ namespace miniSys0._3
         {
             if (type == "Order")
             {
-
-
-                string time =  SQLCursor.Query("Select Time from Schedule Where " +
+                string time =  SQLCursor.Query("Select  TOP 1 Time from Schedule Where " +
                     $"OrderID ='{orderIDCache}' " +
                     "And Status = 'Order';")[0];
 
@@ -167,7 +176,7 @@ namespace miniSys0._3
             }
             else if (type == "Progress")
             {
-                string time = SQLCursor.Query("Select Time from Schedule Where " +
+                string time = SQLCursor.Query("Select TOP 1 Time from Schedule Where " +
                                     $"OrderID ='{orderIDCache}' " +
                                     "And Status = 'Progress';")[0];
 
@@ -176,7 +185,7 @@ namespace miniSys0._3
             else if (type == "Completed")
             {
 
-                string time = SQLCursor.Query("Select Time from Schedule Where " +
+                string time = SQLCursor.Query("Select  TOP 1 Time from Schedule Where " +
                                     $"OrderID ='{orderIDCache}' " +
                                     "And Status = 'Completed';")[0];
 
@@ -184,7 +193,7 @@ namespace miniSys0._3
             }
             else if (type == "Finished")
             {
-                string time = SQLCursor.Query("Select Time from Schedule Where " +
+                string time = SQLCursor.Query("Select TOP 1 Time from Schedule Where " +
                     $"OrderID ='{orderIDCache}' " +
                     "And Status = 'Finished';")[0];
 

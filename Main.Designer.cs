@@ -41,6 +41,7 @@
             this.uiUserControl1 = new Sunny.UI.UIUserControl();
             this.navMenuPanel = new System.Windows.Forms.Panel();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.copyRight = new Sunny.UI.UILabel();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.uiUserControl1.SuspendLayout();
@@ -73,6 +74,7 @@
             this.searchBox.Style = Sunny.UI.UIStyle.Custom;
             this.searchBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.searchBox.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
             this.searchBox.Leave += new System.EventHandler(this.search_leave);
             this.searchBox.Enter += new System.EventHandler(this.search_enter);
             // 
@@ -187,6 +189,7 @@
             // uiUserControl1
             // 
             this.uiUserControl1.BackColor = System.Drawing.Color.White;
+            this.uiUserControl1.Controls.Add(this.copyRight);
             this.uiUserControl1.Controls.Add(this.navMenuPanel);
             this.uiUserControl1.FillColor = System.Drawing.Color.White;
             resources.ApplyResources(this.uiUserControl1, "uiUserControl1");
@@ -206,6 +209,14 @@
             // 
             resources.ApplyResources(this.mainPanel, "mainPanel");
             this.mainPanel.Name = "mainPanel";
+            // 
+            // copyRight
+            // 
+            resources.ApplyResources(this.copyRight, "copyRight");
+            this.copyRight.Name = "copyRight";
+            this.copyRight.Style = Sunny.UI.UIStyle.Custom;
+            this.copyRight.TagString = "";
+            this.copyRight.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // Main
             // 
@@ -237,8 +248,9 @@
         private Sunny.UI.UIUserControl uiUserControl1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private Sunny.UI.UITextBox searchBox;
+        public Sunny.UI.UITextBox searchBox;
         private System.Windows.Forms.Panel navMenuPanel;
         public System.Windows.Forms.Panel mainPanel;
+        private Sunny.UI.UILabel copyRight;
     }
 }

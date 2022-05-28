@@ -67,6 +67,11 @@ namespace miniSys0._3.Controls.MainArea
                 staffIcon.FillColor = Color.FromArgb(55, 55, 57);
                 staffIcon.ForeColor = Color.FromArgb(22, 93, 255);
 
+                imageBtnRight.FillColor = Color.FromArgb(28, 47, 70);
+                imageBtnLeft.FillColor = Color.FromArgb(28, 47, 70);
+                imageBtnRight.BackColor = Color.FromArgb(28, 47, 70);
+                imageBtnLeft.BackColor = Color.FromArgb(28, 47, 70);
+
             }
         }
 

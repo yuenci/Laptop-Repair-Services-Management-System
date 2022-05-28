@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace miniSys0._3
 {
@@ -14,8 +15,19 @@ namespace miniSys0._3
         {
             
             dynamic[] connTools = getDataReader(SQL);
-            SqlDataReader dr = connTools[1];
-            SqlConnection conn = connTools[0];
+            SqlDataReader dr = null;
+            SqlConnection conn = null;
+            try
+            {
+                dr = connTools[1];
+                conn = connTools[0];
+            }
+            catch
+            {
+                string[] resultEmpty = new String[0];
+                return resultEmpty;
+            }
+            
 
             //if has result
             if (dr.HasRows.ToString() == "false")
@@ -228,9 +240,18 @@ namespace miniSys0._3
             conn.Open();
 
             SqlCommand cmd = new SqlCommand(sql, conn);
-            SqlDataReader dr = cmd.ExecuteReader();
-            dynamic[] connTools = { conn, dr };
-            return connTools;
+            try
+            {
+                SqlDataReader dr = cmd.ExecuteReader();
+                dynamic[] connTools = { conn, dr };
+                return connTools;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error occurred in database.{ex}");
+                return null;
+            }
+            
         }
     }
 }
