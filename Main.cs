@@ -28,10 +28,13 @@ namespace miniSys0._3
             InitCef();
             InitProfile();
             InitReader();
-            InitTheme();
+            
 
             Init_search_box();
+            checkMessage();
+            //show_message();
 
+            InitTheme();
 
             //left bat
             addNavMenu();
@@ -81,6 +84,7 @@ namespace miniSys0._3
 
                 //uiUserControl2.BackColor = Color.FromArgb(28, 47, 70);
                 navMenuPanel.BackColor = Color.FromArgb(28, 47, 70);
+                
             }
             else if (User_type.user_theme == "light")
             {
@@ -94,6 +98,17 @@ namespace miniSys0._3
 
                 //uiUserControl2.BackColor = Color.FromArgb(28, 47, 70);
                 navMenuPanel.BackColor = Color.White;
+            }
+
+            if (ifReciveNewMessage)
+            {
+                message.FillColor = Color.FromArgb(245, 63, 63);
+                message.FillHoverColor = Color.Red;
+            }
+            else
+            {
+                message.FillColor = Color.White;
+                message.FillHoverColor = Color.FromArgb(242, 243, 245);
             }
         }
         private void InitReader()
@@ -204,49 +219,6 @@ namespace miniSys0._3
         }
 
 
-        /*void addIcon()
-        {
-            for (int i = 0; i < receptionistNavMenu.Nodes.Count; i++)
-            {
-                receptionistNavMenu.ImageList = receptionistNavMenuImageList;
-                if (i == 0)
-                {
-                    //NavMenu.Nodes[i].Text = "\ue901";
-                    receptionistNavMenu.Nodes[i].ImageIndex = 0;
-                    //NavMenu.Nodes[i].NodeFont = new Font(IconfontHelper.PFCC.Families[0], 15);
-                }
-            }
-
-            label33.Text = "\ue902 Dashboard";
-            label33.Font = new Font(IconfontHelper.PFCC.Families[0], 20);
-
-
-            foreach (TreeNode item in NavMenu.Nodes)
-            {
-                item.Text = "lala";
-            }
-        }*/
-
-
-        private void node_click(object sender, TreeNodeMouseClickEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left) 
-            {
-                /*if (e.Node.Level == 0)
-                {
-                    //e.Node.Text = "<span style ='color:red'>lalala</span>";
-                    //ForeColor = Color.Red;
-                    //e.Node.ForeColor = Color.Red;
-                    MessageBox.Show(e.Node.Text);
-                }*/
-                if (e.Node.Level == 1)                              
-                {
-
-                    //MessageBox.Show(e.Node.Parent.Text);
-                    //e.Node.Parent.Text = "laaa";
-                }
-            }
-        }
         public void addUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
@@ -285,38 +257,7 @@ namespace miniSys0._3
 
         
 
-        void initShortcut()
-        {
-            /*void addUserControl(UserControl userControl)
-            {
-                userControl.Dock = DockStyle.Fill;
-                panel1.Controls.Clear();
-                panel1.Controls.Add(userControl);
-                userControl.BringToFront();
-            }*/
 
-            /*if (User_type.user_type == "Receptionist")
-            {
-                UC_R_Shortcut uc = new UC_R_Shortcut();
-                addUserControl(uc);
-            }
-            else if (User_type.user_type == "Technician")
-            {
-                UC_T_Shortcut uc = new UC_T_Shortcut();
-                addUserControl(uc);
-            }
-            else if (User_type.user_type == "Customer")
-            {
-                UC_C_Shortcut uc = new UC_C_Shortcut();
-                addUserControl(uc);
-            }
-            else if (User_type.user_type == "Admin")
-            {
-                UC_A_Shortcut uc = new UC_A_Shortcut();
-                addUserControl(uc);
-            }
-*/
-        }
         void randomLogoColor()
         {
             Color[] colorListR = { //6
@@ -652,6 +593,91 @@ namespace miniSys0._3
             }
             
         }
+    
+        private List<dynamic> messagesList = new List<dynamic>();
+        private bool ifReciveNewMessage;
+        private void checkMessage()
+        {
+            string sql_messageToall = "SELECT　Message,Type,Time,SenderID_cus,receiverID_cus　FROM  Messages " +
+                "WhERE Type ='@all' AND Status = 0;";
+            dynamic[] data1 = SQLCursor.Query(sql_messageToall);
+
+            addMessageTolist(data1);
+
+
+            string reciverType = "";
+            if (User_type.user_deparment == "Customer")
+            {
+                reciverType = "receiverID_cus";
+            }
+            else
+            {
+                reciverType = "receiverID_sta";
+            }
+
+            string sql2 = $"SELECT　Message,Type,Time,SenderID_cus,SenderID_sta　" +
+                $"FROM  Messages WhERE Type ='message' " +
+                $"AND Status = 0 AND {reciverType} = '{User_type.user_ID}';";
+            dynamic[] data2 = SQLCursor.Query(sql2);
+            addMessageTolist(data2);
+
+            if (messagesList.Count >0)
+            {
+                ifReciveNewMessage =  true;
+            }
+            else
+            {
+                ifReciveNewMessage = false;
+            }
+            
+        }
+
+        private void addMessageTolist(dynamic messges)
+        {
+            try
+            {
+                int num = messges.Length;
+                messagesList.Add(messges);
+            }
+            catch
+            {
+                for (int i = 0; i < messges.Count; i++)
+                {
+                    messagesList.Add(messges[i]);
+                }
+            }
+        }
+
+        private void uiSymbolButton2_Click(object sender, EventArgs e)
+        {
+            show_message();
+        }
+        private MessageBoxForm messageBox_instance = null;
+        private void Init_MessageBox()
+        {
+
+        }
+        private void show_message()
+        {
+            if (messageBox_instance == null)
+            {
+                messageBox_instance = new MessageBoxForm();
+                int PositionX = this.Location.X;
+                int PositionY = this.Location.Y;
+                messageBox_instance.StartPosition = FormStartPosition.Manual;
+                messageBox_instance.Location = (Point)new Size(PositionX + 872, PositionY + 68);
+                messageBox_instance.Visible = true;
+            }
+            else if (messageBox_instance.Visible == false)
+            {
+                messageBox_instance.Visible = true;
+            }
+            else if(messageBox_instance.Visible == true)
+            {
+                messageBox_instance.Visible = false;
+            }
+        }
+
     }
 
 

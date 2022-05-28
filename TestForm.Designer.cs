@@ -59,6 +59,7 @@
             this.uC_Task_Card1 = new miniSys0._3.Controls.Others.UC_Task_Card();
             this.urC_Crumbs1 = new miniSys0._3.Controls.Others.UrC_Crumbs();
             this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.csharpRepairerIncDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.csharpRepairerIncDataSet)).BeginInit();
@@ -314,7 +315,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(748, 366);
+            this.button5.Location = new System.Drawing.Point(664, 364);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 13;
@@ -322,11 +323,22 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(769, 364);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 14;
+            this.button6.Text = "button6";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 599);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.urC_Crumbs1);
             this.Controls.Add(this.uC_Task_Card1);
@@ -387,5 +399,6 @@
         private Controls.Others.UC_Task_Card uC_Task_Card1;
         private Controls.Others.UrC_Crumbs urC_Crumbs1;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }

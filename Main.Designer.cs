@@ -34,14 +34,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.searchIcon = new Sunny.UI.UISymbolButton();
-            this.uiSymbolButton3 = new Sunny.UI.UISymbolButton();
-            this.uiSymbolButton2 = new Sunny.UI.UISymbolButton();
+            this.swithTheme = new Sunny.UI.UISymbolButton();
+            this.message = new Sunny.UI.UISymbolButton();
             this.uiSymbolButton1 = new Sunny.UI.UISymbolButton();
             this.profile = new Sunny.UI.UIAvatar();
             this.uiUserControl1 = new Sunny.UI.UIUserControl();
+            this.copyRight = new Sunny.UI.UILabel();
             this.navMenuPanel = new System.Windows.Forms.Panel();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.copyRight = new Sunny.UI.UILabel();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.uiUserControl1.SuspendLayout();
@@ -54,8 +54,8 @@
             this.panelTop.Controls.Add(this.label1);
             this.panelTop.Controls.Add(this.pictureBox2);
             this.panelTop.Controls.Add(this.searchIcon);
-            this.panelTop.Controls.Add(this.uiSymbolButton3);
-            this.panelTop.Controls.Add(this.uiSymbolButton2);
+            this.panelTop.Controls.Add(this.swithTheme);
+            this.panelTop.Controls.Add(this.message);
             this.panelTop.Controls.Add(this.uiSymbolButton1);
             this.panelTop.Controls.Add(this.profile);
             resources.ApplyResources(this.panelTop, "panelTop");
@@ -111,46 +111,47 @@
             this.searchIcon.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.searchIcon.Click += new System.EventHandler(this.searchIcon_Click);
             // 
-            // uiSymbolButton3
+            // swithTheme
             // 
-            this.uiSymbolButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiSymbolButton3.FillColor = System.Drawing.Color.White;
-            this.uiSymbolButton3.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            resources.ApplyResources(this.uiSymbolButton3, "uiSymbolButton3");
-            this.uiSymbolButton3.Name = "uiSymbolButton3";
-            this.uiSymbolButton3.Radius = 32;
-            this.uiSymbolButton3.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
-            this.uiSymbolButton3.RectDisableColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
-            this.uiSymbolButton3.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
-            this.uiSymbolButton3.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
-            this.uiSymbolButton3.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
-            this.uiSymbolButton3.Style = Sunny.UI.UIStyle.Custom;
-            this.uiSymbolButton3.Symbol = 61506;
-            this.uiSymbolButton3.SymbolColor = System.Drawing.Color.Black;
-            this.uiSymbolButton3.SymbolHoverColor = System.Drawing.Color.Black;
-            this.uiSymbolButton3.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiSymbolButton3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.uiSymbolButton3.Click += new System.EventHandler(this.uiSymbolButton3_Click);
+            this.swithTheme.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swithTheme.FillColor = System.Drawing.Color.White;
+            this.swithTheme.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            resources.ApplyResources(this.swithTheme, "swithTheme");
+            this.swithTheme.Name = "swithTheme";
+            this.swithTheme.Radius = 32;
+            this.swithTheme.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
+            this.swithTheme.RectDisableColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
+            this.swithTheme.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
+            this.swithTheme.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
+            this.swithTheme.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
+            this.swithTheme.Style = Sunny.UI.UIStyle.Custom;
+            this.swithTheme.Symbol = 61506;
+            this.swithTheme.SymbolColor = System.Drawing.Color.Black;
+            this.swithTheme.SymbolHoverColor = System.Drawing.Color.Black;
+            this.swithTheme.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.swithTheme.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.swithTheme.Click += new System.EventHandler(this.uiSymbolButton3_Click);
             // 
-            // uiSymbolButton2
+            // message
             // 
-            this.uiSymbolButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiSymbolButton2.FillColor = System.Drawing.Color.White;
-            this.uiSymbolButton2.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            resources.ApplyResources(this.uiSymbolButton2, "uiSymbolButton2");
-            this.uiSymbolButton2.Name = "uiSymbolButton2";
-            this.uiSymbolButton2.Radius = 32;
-            this.uiSymbolButton2.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
-            this.uiSymbolButton2.RectDisableColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
-            this.uiSymbolButton2.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
-            this.uiSymbolButton2.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
-            this.uiSymbolButton2.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
-            this.uiSymbolButton2.Style = Sunny.UI.UIStyle.Custom;
-            this.uiSymbolButton2.Symbol = 61683;
-            this.uiSymbolButton2.SymbolColor = System.Drawing.Color.Black;
-            this.uiSymbolButton2.SymbolHoverColor = System.Drawing.Color.Black;
-            this.uiSymbolButton2.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiSymbolButton2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.message.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.message.FillColor = System.Drawing.Color.White;
+            this.message.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            resources.ApplyResources(this.message, "message");
+            this.message.Name = "message";
+            this.message.Radius = 32;
+            this.message.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
+            this.message.RectDisableColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
+            this.message.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
+            this.message.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
+            this.message.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
+            this.message.Style = Sunny.UI.UIStyle.Custom;
+            this.message.Symbol = 61683;
+            this.message.SymbolColor = System.Drawing.Color.Black;
+            this.message.SymbolHoverColor = System.Drawing.Color.Black;
+            this.message.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.message.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.message.Click += new System.EventHandler(this.uiSymbolButton2_Click);
             // 
             // uiSymbolButton1
             // 
@@ -200,6 +201,14 @@
             this.uiUserControl1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiUserControl1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // copyRight
+            // 
+            resources.ApplyResources(this.copyRight, "copyRight");
+            this.copyRight.Name = "copyRight";
+            this.copyRight.Style = Sunny.UI.UIStyle.Custom;
+            this.copyRight.TagString = "";
+            this.copyRight.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
             // navMenuPanel
             // 
             resources.ApplyResources(this.navMenuPanel, "navMenuPanel");
@@ -209,14 +218,6 @@
             // 
             resources.ApplyResources(this.mainPanel, "mainPanel");
             this.mainPanel.Name = "mainPanel";
-            // 
-            // copyRight
-            // 
-            resources.ApplyResources(this.copyRight, "copyRight");
-            this.copyRight.Name = "copyRight";
-            this.copyRight.Style = Sunny.UI.UIStyle.Custom;
-            this.copyRight.TagString = "";
-            this.copyRight.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // Main
             // 
@@ -242,8 +243,8 @@
         private System.Windows.Forms.Panel panelTop;
         private Sunny.UI.UIAvatar profile;
         private Sunny.UI.UISymbolButton searchIcon;
-        private Sunny.UI.UISymbolButton uiSymbolButton3;
-        private Sunny.UI.UISymbolButton uiSymbolButton2;
+        private Sunny.UI.UISymbolButton swithTheme;
+        private Sunny.UI.UISymbolButton message;
         private Sunny.UI.UISymbolButton uiSymbolButton1;
         private Sunny.UI.UIUserControl uiUserControl1;
         private System.Windows.Forms.Label label1;

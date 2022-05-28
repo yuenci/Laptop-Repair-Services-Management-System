@@ -103,6 +103,7 @@ namespace miniSys0._3
                 }
             }
         }
+        private string userID_cache;
         private void initLabel()
         {
 
@@ -128,7 +129,7 @@ namespace miniSys0._3
                 department.Text = "Customer";
             }
 
-
+            userID_cache = RegisterInfoCache.user_ID;
         }
         
         private void privacy(string staffID)
@@ -178,6 +179,8 @@ namespace miniSys0._3
 
                 post.Show();
                 privacy(staffID);
+
+                userID_cache = data[8];
             }
             
         }
@@ -204,6 +207,8 @@ namespace miniSys0._3
                 regtime.Text = data[8];
                 about.Text = data[9];
                 privacy(cusID);
+
+                userID_cache = data[7];
             }
            
 
@@ -211,7 +216,10 @@ namespace miniSys0._3
 
         private void contact_Click(object sender, EventArgs e)
         {
-
+            AddDescription addDescription = new AddDescription();
+            addDescription.InitChatting(userID_cache,name.Text);
+            //recvicer id
+            addDescription.Show();
         }
     }
 }

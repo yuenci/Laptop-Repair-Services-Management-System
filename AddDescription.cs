@@ -19,6 +19,7 @@ namespace miniSys0._3
             uiSymbolLabel.Visible = false;
             InitTheme();
         }
+        private string mode = null;
         private void InitTheme()
         {
             if (User_type.user_theme == "dark")
@@ -52,14 +53,15 @@ namespace miniSys0._3
         {
             this.OrderID= ordID;
             textBox.Text = SQLCursor.Query($"select Description from Orders where OrderID = '{OrderID}';")[0];
+            mode = "add_description";
         }
         private void ok_Click(object sender, EventArgs e)
         {
-            if(User_type.user_deparment == "Customer")
+            if(mode== "cus_view")
             {
                 this.Close();
             }
-            else
+            else if(mode == "add_description")
             {
                 if (textBox.Text != "" && OrderID != "")
                 {
@@ -71,6 +73,27 @@ namespace miniSys0._3
                 else if (textBox.Text == "")
                 {
                     textBox.RectColor = Color.Red;
+                }
+            }
+            else if (mode == "chatting")
+            {
+                string message = textBox.Text;
+                string status = "0";
+                string time = DateTime.Now.ToString();
+                string type = "message";
+
+                string peopleInfo = getSenderRecevicerInfo();
+
+                if (message.Length <280)
+                {
+                    string sql = $"insert into Messages values ( " +
+                        $"'{message}', {status},'{time}','{type}'," + peopleInfo + ");";
+                    SQLCursor.Execute(sql);
+                    uiSymbolLabel.Visible =true;
+                }
+                else
+                {
+                    MessageBox.Show("Message cannot exceed 280 characters");
                 }
             }
             
@@ -86,6 +109,45 @@ namespace miniSys0._3
             cancel.Hide();
             textBox.Text = str;
             textBox.Enabled = false;
+            mode = "cus_view";
+        }
+
+        private string recevicerIDCache ;
+        public void InitChatting(string receiverID,string  receiverName)
+        {
+            mode = "chatting";
+            cancel.Show();
+            this.Text = $"Send Message to {receiverName}";
+            uiSymbolLabel.Text = "Message sent successfully";
+            recevicerIDCache = receiverID;
+        }
+
+        private string getSenderRecevicerInfo()
+        {
+            string[] data = { "null", "null", "null", "null" };
+
+            string sender3 = User_type.user_ID.Substring(0, 3);
+            string reveiver3 = recevicerIDCache.Substring(0, 3);
+
+            if (sender3 == "Cus")
+            {
+                data[0] = $"'{User_type.user_ID}'";
+            }
+            else
+            {
+                data[1] = $"'{User_type.user_ID}'";
+            }
+
+            if (reveiver3 == "Cus")
+            {
+                data[2] = $"'{recevicerIDCache}'";
+            }
+            else
+            {
+                data[3] = $"'{recevicerIDCache}'";
+            }
+
+            return String.Join(",", data);
         }
     }
 }

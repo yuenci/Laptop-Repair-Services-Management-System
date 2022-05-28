@@ -155,6 +155,7 @@
             this.Text = "Add Description";
             this.TitleColor = System.Drawing.Color.White;
             this.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
+            this.TopMost = true;
             this.ZoomScaleRect = new System.Drawing.Rectangle(15, 15, 800, 450);
             this.ResumeLayout(false);
 

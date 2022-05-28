@@ -64,6 +64,7 @@ namespace miniSys0._3
         private void uiSymbolButton1_Click(object sender, EventArgs e)
         {
             SearchBox.Instance.Hide();
+            MessageBoxForm.Instance.Hide();
             FormFloating.profileFloating.Dispose();
             Main.main.Dispose();    
             //UC_main.WebBrowser.Dispose();
