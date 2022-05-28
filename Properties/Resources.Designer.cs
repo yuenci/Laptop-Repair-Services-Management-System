@@ -93,6 +93,26 @@ namespace miniSys0._3.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap avatar_female {
+            get {
+                object obj = ResourceManager.GetObject("avatar_female", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap avatar_male {
+            get {
+                object obj = ResourceManager.GetObject("avatar_male", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap banner_012 {
             get {
                 object obj = ResourceManager.GetObject("banner_012", resourceCulture);
@@ -296,6 +316,16 @@ namespace miniSys0._3.Properties {
         internal static System.Drawing.Bitmap Software_code_testing_pana {
             get {
                 object obj = ResourceManager.GetObject("Software code testing-pana", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap starShip {
+            get {
+                object obj = ResourceManager.GetObject("starShip", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

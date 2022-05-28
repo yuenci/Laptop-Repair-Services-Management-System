@@ -202,6 +202,12 @@
     <Compile Include="Controls\Others\UC_BasicInfo.Designer.cs">
       <DependentUpon>UC_BasicInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Others\UC_Message_Card.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Others\UC_Message_Card.Designer.cs">
+      <DependentUpon>UC_Message_Card.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Others\UC_Pagination.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -424,6 +430,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Others\UC_BasicInfo.resx">
       <DependentUpon>UC_BasicInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Others\UC_Message_Card.resx">
+      <DependentUpon>UC_Message_Card.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Others\UC_Pagination.resx">
       <DependentUpon>UC_Pagination.cs</DependentUpon>
@@ -780,6 +789,9 @@
     <Content Include="Html\chart.js" />
     <Content Include="Html\mainLineChart.html" />
     <Content Include="Html\mainPieChart.html" />
+    <None Include="Resources\starShip.png" />
+    <None Include="Resources\avatar_male.png" />
+    <None Include="Resources\avatar_female.png" />
     <None Include="Resources\Ask_me_anything_dark.png" />
     <None Include="Resources\032.png" />
     <None Include="Resources\022.png" />

@@ -123,7 +123,16 @@ namespace miniSys0._3
             SqlConnection conn = new SqlConnection(connStr);
             conn.Open();
             SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.ExecuteNonQuery();
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(sql);
+                MessageBox.Show("SQL:" + sql + ex.Message);
+            }
+            
             conn.Close();
         }
         public static void ExecuteMany(string sql,dynamic list)
@@ -252,6 +261,70 @@ namespace miniSys0._3
                 return null;
             }
             
+        }
+
+        public static string getName(string useID)
+        {
+            if (useID =="")
+            {
+                return null;
+            }
+            string first = useID.Substring(0, 3).ToLower();
+            if (first == "cus")
+            {
+                dynamic res =  Query($"SELECT Name FROM  Customer WHERE CustomerID = '{useID}';");
+                if (res.Length == 1)
+                {
+                    return res[0];
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            else if(first == "sta")
+            {
+                dynamic res =  Query($"SELECT Name FROM  Staff WHERE StaffID = '{useID}';");
+                if (res.Length ==1)
+                {
+                    return res[0];
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            return null;
+        }
+
+        public static string getGender(string useID)
+        {
+            string first = useID.Substring(0, 3).ToLower();
+            if (first == "cus")
+            {
+                dynamic res = Query($"SELECT Gender FROM  Customer WHERE CustomerID = '{useID}';");
+                if (res.Length == 1)
+                {
+                    return res[0];
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            else if (first == "sta")
+            {
+                dynamic res = Query($"SELECT Gender FROM  Staff WHERE StaffID = '{useID}';");
+                if (res.Length == 1)
+                {
+                    return res[0];
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            return null;
         }
     }
 }

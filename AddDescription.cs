@@ -108,7 +108,7 @@ namespace miniSys0._3
         {
             cancel.Hide();
             textBox.Text = str;
-            textBox.Enabled = false;
+            textBox.ReadOnly = true;
             mode = "cus_view";
         }
 

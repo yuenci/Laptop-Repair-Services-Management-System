@@ -182,15 +182,8 @@ namespace miniSys0._3
 
         private void button6_Click(object sender, EventArgs e)
         {
-            List<dynamic> list = new List<dynamic>();
-
-            string[] str1 = { "lala", "lala" };
-            string[] str2 = { "lala2", "lala2" };
-
-            list.Add(str2);
-            list.Add(str1);
-
-            //MessageBox.Show(list.Count);
+            string data = SQLCursor.getName("sta000009");
+            MessageBox.Show(data);
         }
     }
 }

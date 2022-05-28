@@ -99,17 +99,7 @@ namespace miniSys0._3
                 //uiUserControl2.BackColor = Color.FromArgb(28, 47, 70);
                 navMenuPanel.BackColor = Color.White;
             }
-
-            if (ifReciveNewMessage)
-            {
-                message.FillColor = Color.FromArgb(245, 63, 63);
-                message.FillHoverColor = Color.Red;
-            }
-            else
-            {
-                message.FillColor = Color.White;
-                message.FillHoverColor = Color.FromArgb(242, 243, 245);
-            }
+            set_notice_color();
         }
         private void InitReader()
         {
@@ -135,6 +125,16 @@ namespace miniSys0._3
                 {
                     uniqueInstance.Location = new Point(this.Location.X + 1080 + e.X - mPoint.X, this.Location.Y + 68 + e.Y - mPoint.Y);
                 }
+
+                if (searchBox_instance != null)
+                {
+                    searchBox_instance.Location = new Point(this.Location.X + 615 + e.X - mPoint.X, this.Location.Y + 50 + e.Y - mPoint.Y);
+                }
+
+                if (messageBox_instance != null)
+                {
+                    messageBox_instance.Location = new Point(this.Location.X + 877 + e.X - mPoint.X, this.Location.Y + 68 + e.Y - mPoint.Y);
+                }
             }
             
         }
@@ -148,12 +148,19 @@ namespace miniSys0._3
                 int PositionY = this.Location.Y;
                 uniqueInstance.StartPosition = FormStartPosition.Manual;
                 uniqueInstance.Location = (Point)new Size(PositionX + 1080, PositionY + 68);
-                uniqueInstance.Show();
+
+                hideOtherControls();
+
+                uniqueInstance.Visible =true;
             }
-            else
+            else if  (uniqueInstance.Visible == false)
             {
-                uniqueInstance.Close();
-                uniqueInstance = null;
+                hideOtherControls();
+                uniqueInstance.Visible = true;
+            }
+            else if (uniqueInstance.Visible == true)
+            {
+                uniqueInstance.Visible = false;
             }
 
         }
@@ -178,6 +185,7 @@ namespace miniSys0._3
             }
             else if(!searchBox.Visible)
             {
+                hideOtherControls();
                 searchBox.Visible = true;
                 searchBox.Focus();
                 show_search();
@@ -594,16 +602,32 @@ namespace miniSys0._3
             
         }
     
-        private List<dynamic> messagesList = new List<dynamic>();
+        public List<dynamic> messagesList = new List<dynamic>();
         private bool ifReciveNewMessage;
-        private void checkMessage()
+        public void checkMessage()
         {
-            string sql_messageToall = "SELECT　Message,Type,Time,SenderID_cus,receiverID_cus　FROM  Messages " +
-                "WhERE Type ='@all' AND Status = 0;";
+            Init_message_data();
+
+            if (messagesList.Count >0)
+            {
+                ifReciveNewMessage =  true;
+                set_notice_color();
+            }
+            else
+            {
+                ifReciveNewMessage = false;
+                set_notice_color();
+            }
+        }
+
+        private void Init_message_data()
+        {
+            messagesList.Clear();
+            string sql_messageToall = "SELECT　Message,Type,Time,SenderID_cus,receiverID_cus,Status　FROM  Messages " +
+    "WhERE Type ='@all' AND Status = 0  Order By Time DESC ;";
             dynamic[] data1 = SQLCursor.Query(sql_messageToall);
 
             addMessageTolist(data1);
-
 
             string reciverType = "";
             if (User_type.user_deparment == "Customer")
@@ -615,49 +639,56 @@ namespace miniSys0._3
                 reciverType = "receiverID_sta";
             }
 
-            string sql2 = $"SELECT　Message,Type,Time,SenderID_cus,SenderID_sta　" +
+            string sql2 = $"SELECT　Message,Type,Time,SenderID_cus,SenderID_sta,Status　" +
                 $"FROM  Messages WhERE Type ='message' " +
-                $"AND Status = 0 AND {reciverType} = '{User_type.user_ID}';";
+                $"AND Status = 0 AND {reciverType} = '{User_type.user_ID}'  Order By Time DESC;";
             dynamic[] data2 = SQLCursor.Query(sql2);
             addMessageTolist(data2);
 
-            if (messagesList.Count >0)
+            string sql3 = $"SELECT　Message,Type,Time,SenderID_cus,SenderID_sta,Status　" +
+                $"FROM  Messages WhERE Type ='message' " +
+                $"AND Status = 1 AND {reciverType} = '{User_type.user_ID}'  Order By Time DESC;";
+            dynamic[] data3 = SQLCursor.Query(sql3);
+            addMessageTolist(data3);
+        }
+        private void set_notice_color()
+        {
+            if (ifReciveNewMessage)
             {
-                ifReciveNewMessage =  true;
+                message.FillColor = Color.FromArgb(245, 63, 63);
+                message.FillHoverColor = Color.Red;
             }
             else
             {
-                ifReciveNewMessage = false;
+                message.FillColor = Color.White;
+                message.FillHoverColor = Color.FromArgb(242, 243, 245);
             }
-            
         }
 
-        private void addMessageTolist(dynamic messges)
+        private void addMessageTolist(dynamic messages)
         {
             try
             {
-                int num = messges.Length;
-                messagesList.Add(messges);
+                string res = messages[0][0];
+                for (int i = 0; i < messages.Length; i++)
+                {
+                    if (messages[i].Length != 0)
+                    {
+                        messagesList.Add(messages[i]);
+                    } 
+                }
             }
             catch
             {
-                for (int i = 0; i < messges.Count; i++)
+                if (messages.Length != 0)
                 {
-                    messagesList.Add(messges[i]);
+                    messagesList.Add(messages);
                 }
+               
             }
         }
 
         private void uiSymbolButton2_Click(object sender, EventArgs e)
-        {
-            show_message();
-        }
-        private MessageBoxForm messageBox_instance = null;
-        private void Init_MessageBox()
-        {
-
-        }
-        private void show_message()
         {
             if (messageBox_instance == null)
             {
@@ -665,19 +696,47 @@ namespace miniSys0._3
                 int PositionX = this.Location.X;
                 int PositionY = this.Location.Y;
                 messageBox_instance.StartPosition = FormStartPosition.Manual;
-                messageBox_instance.Location = (Point)new Size(PositionX + 872, PositionY + 68);
+                messageBox_instance.Location = (Point)new Size(PositionX + 877, PositionY + 68);
+
+                messageBox_instance.Init(messagesList);
+
+                hideOtherControls();
                 messageBox_instance.Visible = true;
             }
             else if (messageBox_instance.Visible == false)
             {
+                messageBox_instance.Init(messagesList);
+
+                hideOtherControls();
                 messageBox_instance.Visible = true;
+
+
             }
-            else if(messageBox_instance.Visible == true)
+            else if (messageBox_instance.Visible == true)
             {
                 messageBox_instance.Visible = false;
             }
         }
+        private MessageBoxForm messageBox_instance = null;
 
+        private void hideOtherControls()
+        {  
+            if (uniqueInstance != null && uniqueInstance.Visible)
+            {
+                uniqueInstance.Visible = false;
+            }
+
+            if (searchBox_instance != null && searchBox_instance.Visible)
+            {
+                searchBox_instance.Visible = false;
+                searchBox.Visible = false;
+            }
+
+            if (messageBox_instance != null && messageBox_instance.Visible)
+            {
+                messageBox_instance.Visible = false;
+            }
+        }
     }
 
 

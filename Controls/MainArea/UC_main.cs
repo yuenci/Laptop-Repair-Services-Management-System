@@ -235,7 +235,15 @@ namespace miniSys0._3.Controls
             if (orderYesterday> orderToday)
             {
                 upperTriangle.Symbol = 67;
-                BannerLabel4.Text = (100 * (orderToday - orderYesterday) / orderToday).ToString() + "%";
+                if (orderToday == 0)
+                {
+                    BannerLabel4.Text = "0%";
+                }
+                else
+                {
+                    BannerLabel4.Text = (100 * (orderToday - orderYesterday) / orderToday).ToString() + "%";
+                }
+                
             }
             else
             {
