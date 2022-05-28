@@ -19,6 +19,7 @@ namespace miniSys0._3.Controls.MainArea
         {
             InitializeComponent();
             InitCrumb();
+            InitTheme();
             InitCef();
             InDateNum();
             InitData();
@@ -30,6 +31,14 @@ namespace miniSys0._3.Controls.MainArea
             urC_Crumbs1.crumbText.Text = "Service report";
             urC_Crumbs1.crumbsHome.Text = " / Data /            rt";
         }
+        private void InitTheme()
+        {
+            if (User_type.user_theme == "dark")
+            {
+                this.BackColor = Color.FromArgb(28, 47, 70);
+            }
+        }
+
         private void InitCef()
         {
 
@@ -328,7 +337,7 @@ namespace miniSys0._3.Controls.MainArea
         }
         private void storeToFile()
         {
-            string[] data = new string[32];
+            string[] data = new string[33];
             data[0] = "dataset1 " + "=" + dataset1 + ";";
             data[1] = "dataset2 " + "=" + dataset2 + ";";
             data[2] = "dataset3 " + "=" + dataset3 + ";";
@@ -361,6 +370,7 @@ namespace miniSys0._3.Controls.MainArea
             data[29] = "serverTypeRatio " + "=" + serverTypeRatio + ";";
             data[30] = "starRatio " + "=" + starRatio + ";";
             data[31] = "speedRatio " + "=" + speedRatio + ";";
+            data[32] = $"; theme = '{User_type.user_theme}';";
 
             // read file content 
             string path = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin")) +

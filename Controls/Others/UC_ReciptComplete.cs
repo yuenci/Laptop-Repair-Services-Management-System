@@ -16,10 +16,44 @@ namespace miniSys0._3.Controls.Others
     {
         public UC_ReciptComplete()
         {
-            InitializeComponent();
+            InitializeComponent();  
             InitStyle();
+            InitTheme();
             intiData();
             creatQRCode();
+        }
+        private void InitTheme()
+        {
+            if (User_type.user_theme == "dark")
+            {
+                this.BackColor= Color.FromArgb(28, 47, 70);
+                uiUserControl1.BackColor = Color.FromArgb(28, 47, 70);
+                uiUserControl1.FillColor = Color.FromArgb(28, 47, 70);
+                uiUserControl2.BackColor = Color.FromArgb(28, 47, 70);
+                uiUserControl2.FillColor = Color.FromArgb(28, 47, 70);
+                uiUserControl3.BackColor = Color.FromArgb(28, 47, 70);
+                uiUserControl3.FillColor = Color.FromArgb(28, 47, 70);
+
+                printInvoice.ForeColor = Color.White;
+                printReceipt.ForeColor = Color.White;
+                printInvoice.ForeHoverColor = Color.FromArgb(22, 93, 255);
+                printReceipt.ForeHoverColor = Color.FromArgb(22, 93, 255);
+
+                printInvoice.SymbolColor = Color.White;
+                printReceipt.SymbolColor = Color.White;
+                printInvoice.SymbolHoverColor = Color.FromArgb(22, 93, 255);
+                printReceipt.SymbolHoverColor = Color.FromArgb(22, 93, 255);
+
+                dynamic[] lable = { uiLabel1, uiLabel3, datetime, uiLabel2, customerName, uiLabel4, 
+                    receptionstName, uiLabel5, address, uiLabel12, money, mmmTime, uiLabel15, 
+                    receiptNum, uiLabel16, invoiceNum, uiLabel17, method, cardNumberLabel, 
+                    cardNumber, orderNum, server, price, uiLabel13, urgent, uiLabel14, uiLabel9, 
+                    totalPrice, QRpictureBox, amountPrice, uiLabel10, uiLabel21 };
+                foreach (var item in lable)
+                {
+                    item.ForeColor = Color.White;
+                }
+            }
         }
 
         private string datatimeCache;

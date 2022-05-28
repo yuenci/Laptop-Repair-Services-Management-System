@@ -30,3 +30,4 @@ completion_speed_month =[176,153,169,185,170,160,174,156,158,175,174,165,];
 serverTypeRatio =[35,40,43,45,48,39,45,54,];
 starRatio =[3,3,2,2,3,];
 speedRatio =[0,0,11,39,49,];
+; theme = 'light';

@@ -193,7 +193,6 @@
             this.submitButton.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.submitButton.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
-            //this.submitButton.MouseHover += new System.EventHandler(this.submitButton_MouseHover);
             // 
             // uiLabel5
             // 
@@ -288,6 +287,7 @@
             // 
             // successIcon
             // 
+            this.successIcon.BackColor = System.Drawing.Color.Transparent;
             this.successIcon.FillColor = System.Drawing.Color.White;
             this.successIcon.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.successIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(42)))));

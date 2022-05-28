@@ -57,6 +57,8 @@
             this.NavMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
             this.NavMenu.FullRowSelect = true;
             this.NavMenu.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.NavMenu.ImageIndex = 0;
+            this.NavMenu.ImageList = this.imageList;
             this.NavMenu.ItemHeight = 50;
             this.NavMenu.Location = new System.Drawing.Point(0, 0);
             this.NavMenu.MenuStyle = Sunny.UI.UIMenuStyle.Custom;
@@ -92,6 +94,7 @@
             this.NavMenu.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
             this.NavMenu.SelectedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
             this.NavMenu.SelectedHighColor = System.Drawing.Color.Transparent;
+            this.NavMenu.SelectedImageIndex = 0;
             this.NavMenu.ShowLines = false;
             this.NavMenu.Size = new System.Drawing.Size(187, 670);
             this.NavMenu.Style = Sunny.UI.UIStyle.Custom;
@@ -110,6 +113,12 @@
             this.imageList.Images.SetKeyName(3, "1formBlue.png");
             this.imageList.Images.SetKeyName(4, "1profile.png");
             this.imageList.Images.SetKeyName(5, "1profileBlue.png");
+            this.imageList.Images.SetKeyName(6, "21dashboardBlue.png");
+            this.imageList.Images.SetKeyName(7, "21formBlue.png");
+            this.imageList.Images.SetKeyName(8, "21profileBlue.png");
+            this.imageList.Images.SetKeyName(9, "22dashboard.png");
+            this.imageList.Images.SetKeyName(10, "22form.png");
+            this.imageList.Images.SetKeyName(11, "22profile.png");
             // 
             // UC_R_Navmenu
             // 

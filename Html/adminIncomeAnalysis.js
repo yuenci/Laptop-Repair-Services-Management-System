@@ -29,6 +29,45 @@ document.getElementById("sale6").innerHTML = "RM" + top_saler_value[5];
 document.getElementById("name7").innerHTML = top_saler[6];
 document.getElementById("sale7").innerHTML = "RM" + top_saler_value[6];
 
+let axisColor = "#666666"
+let alpha = 0.2;
+if (theme == "dark") {
+    setDarkBgc();
+    setCardDarkStyle();
+    setMainDarkStyle();
+    setPage2DarkStyle()
+
+    axisColor = "white"
+    alpha = 0.6
+}
+function setDarkBgc() {
+    document.body.style.background = "rgb(18, 31, 43)";
+    document.getElementById("cards").style.background = "rgb(18, 31, 43)";
+    document.getElementById("mainCharts").style.background = "rgb(18, 31, 43)";
+    document.getElementById("page2").style.background = "rgb(18, 31, 43)";
+    document.getElementById("serverType").style.background = "rgb(18, 31, 43)";
+    document.getElementById("method").style.background = "rgb(18, 31, 43)";
+}
+function setCardDarkStyle() {
+    let cards = document.getElementsByClassName("card");
+    for (let index = 0; index < cards.length; index++) {
+        const element = cards[index];
+        element.className = "card  card-dark";
+    }
+}
+function setMainDarkStyle() {
+    let els = document.getElementById("mainCharts").childNodes;
+    for (let index = 0; index < els.length; index++) {
+        const element = els[index];
+        element.className += "card-dark";
+    }
+}
+function setPage2DarkStyle() {
+    document.getElementById("myLineChartTime").className += "card-dark";
+    document.getElementById("myPieChartServerType").className += "card-dark";
+    document.getElementById("myPieChartMethod").className += "card-dark";
+}
+
 
 function toPercent(point) {
     if (point == 0) {
@@ -90,7 +129,7 @@ var myChartPay = new Chart(ctxPay, {
                 lineTension: 0.4,
                 pointRadius: 0,
                 borderColor: "#d91ad9",
-                backgroundColor: "rgba(217, 26, 217, 0.2)",
+                backgroundColor: `rgba(217, 26, 217, ${alpha})`,
                 //pointRadius: 6,
                 data: paymentsNum_month,
                 borderWidth: 1
@@ -195,7 +234,7 @@ var myChartHRE = new Chart(ctxHRE, {
                 lineTension: 0.4,
                 pointRadius: 0,
                 borderColor: "#34c9ca",
-                backgroundColor: "rgba(52, 201, 202, 0.2)",
+                backgroundColor: `rgba(52, 201, 202,  ${alpha})`,
                 //pointRadius: 6,
                 data: HRE_month,
                 borderWidth: 1
@@ -286,12 +325,18 @@ var myBarChartIncome = new Chart(ctxIncome, {
                 display: true,
                 grid: {
                     color: "rgba(232, 232, 232,0.5)",
+                },
+                ticks: {
+                    color: axisColor
                 }
             },
             x: {
                 display: true,
                 grid: {
                     display: false,
+                },
+                ticks: {
+                    color: axisColor
                 }
             },
         }
@@ -312,7 +357,7 @@ var myChartTime = new Chart(ctxTime, {
                 lineTension: 0.4,
                 pointRadius: 1,
                 borderColor: "#4080ff",
-                backgroundColor: "rgba(22, 93, 255, 0.2)",
+                backgroundColor: `rgba(22, 93, 255,  ${alpha})`,
                 //pointRadius: 6,
                 data: time_income_value,
                 borderWidth: 1,
@@ -323,7 +368,7 @@ var myChartTime = new Chart(ctxTime, {
                 lineTension: 0.4,
                 pointRadius: 1,
                 borderColor: "#ff7d00",
-                backgroundColor: "rgba(255, 125, 0, 0.2)",
+                backgroundColor: `rgba(255, 125, 0,  ${alpha})`,
                 //pointRadius: 6,
                 data: time_order_value,
                 borderWidth: 1,
@@ -342,10 +387,14 @@ var myChartTime = new Chart(ctxTime, {
         plugins: {
             legend: {
                 display: true,
+                labels: {
+                    color: axisColor
+                }
             },
             title: {
                 display: true,
-                text: 'Monthly income per hour'
+                text: 'Monthly income per hour',
+                color: axisColor
             },
             tooltip: {
                 callbacks: {
@@ -369,7 +418,11 @@ var myChartTime = new Chart(ctxTime, {
                 },
                 title: {
                     display: true,
-                    text: 'Hour'
+                    text: 'Hour',
+                    color: axisColor
+                },
+                ticks: {
+                    color: axisColor
                 }
             },
             y: {
@@ -377,10 +430,16 @@ var myChartTime = new Chart(ctxTime, {
                 min: 0,
                 grid: {
                     color: "rgba(242, 243, 245,1)"
+                },
+                ticks: {
+                    color: axisColor
                 }
             },
             order: {
-                position: "right"
+                position: "right",
+                ticks: {
+                    color: axisColor
+                }
             }
         },
 
@@ -411,11 +470,15 @@ var myChartServerType = new Chart(ctxServerType, {
         responsive: true,
         plugins: {
             legend: {
-                position: "right"
+                position: "right",
+                labels: {
+                    color: axisColor
+                }
             },
             title: {
                 display: true,
-                text: 'Monthly ratio of service type to income'
+                text: 'Monthly ratio of service type to income',
+                color: axisColor
             },
             tooltip: {
                 callbacks: {
@@ -453,11 +516,15 @@ var myChartMethod = new Chart(ctxMethod, {
 
         plugins: {
             legend: {
-                position: "right"
+                position: "right",
+                labels: {
+                    color: axisColor
+                }
             },
             title: {
                 display: true,
-                text: 'Monthly payment method ratio'
+                text: 'Monthly payment method ratio',
+                color: axisColor
             },
             tooltip: {
                 callbacks: {

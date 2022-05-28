@@ -19,6 +19,7 @@ namespace miniSys0._3.Controls.MainArea
         {
             InitializeComponent();
             InitCrumb();
+            InitTheme();
             InitCef();
             InDateNum();
             InitData();
@@ -28,6 +29,13 @@ namespace miniSys0._3.Controls.MainArea
         {
             urC_Crumbs1.crumbText.Text = "Income Analysis";
             urC_Crumbs1.crumbsHome.Text = " / Data /            rt";
+        }
+        private void InitTheme()
+        {
+            if (User_type.user_theme == "dark")
+            {
+                this.BackColor = Color.FromArgb(28, 47, 70);
+            }
         }
         private void InitCef()
         {
@@ -281,7 +289,7 @@ namespace miniSys0._3.Controls.MainArea
 
         private void storeToFile()
         {
-            string[] data = new string[20];
+            string[] data = new string[21];
             data[0]= "totalIncome" + "=" + totalIncome+";" ;
             data[1]= "totalIncome_AD" + "=" + totalIncome_AD + ";";
             data[2]= "weekOn" + "=" + weekOn + ";";
@@ -302,6 +310,7 @@ namespace miniSys0._3.Controls.MainArea
             data[17] = "time_order_value" + "=" + time_order_value + ";";
             data[18] = "server_type_income" + "=" + server_type_income + ";";
             data[19] = "payment_method" + "=" + payment_method + ";";
+            data[20] = $"; theme = '{User_type.user_theme}';";
 
             // read file content 
             string path = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin")) +

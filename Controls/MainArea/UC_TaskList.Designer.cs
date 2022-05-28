@@ -272,7 +272,7 @@
             this.urC_Crumbs1.BackColor = System.Drawing.Color.Transparent;
             this.urC_Crumbs1.Location = new System.Drawing.Point(4, 5);
             this.urC_Crumbs1.Name = "urC_Crumbs1";
-            this.urC_Crumbs1.Size = new System.Drawing.Size(300, 35);
+            this.urC_Crumbs1.Size = new System.Drawing.Size(291, 35);
             this.urC_Crumbs1.TabIndex = 2;
             // 
             // UC_TaskList

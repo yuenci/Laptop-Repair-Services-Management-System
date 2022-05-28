@@ -44,6 +44,7 @@ body::-webkit-scrollbar-thumb:hover {
     width: 1125px;
     height: 300px;
     background-color: #f7f8fa;
+    margin-top: 10px;
 }
 
 #title {
@@ -58,7 +59,6 @@ body::-webkit-scrollbar-thumb:hover {
     height: 550px;
     background-color: white;
     border-radius: 5px;
-    margin-left: 5px;
 }
 
 .text {
@@ -182,17 +182,25 @@ body::-webkit-scrollbar-thumb:hover {
     margin-left: 30px;
 }
 
-#container4 {
+/* #container4 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 1125px;
     justify-items: center;
     margin-top: 10px;
+} */
+
+#container4 {
+    display: flex;
+    flex-direction: row;
+    width: 1120px;
+    margin-top: 10px;
 }
+
 
 .littleChart {
     background-color: white;
-    width: 270px;
+    width: 280px;
     height: 150px;
     border-radius: 5px;
 }
@@ -236,12 +244,12 @@ body::-webkit-scrollbar-thumb:hover {
     height: 85px;
     position: relative;
     bottom: 5px;
+    width: 100%;
 }
 
 #pie1_2 {
     height: 300px;
     width: auto;
-    margin-left: 5px;
     margin-right: 5px;
     background-color: white;
 }
@@ -265,4 +273,9 @@ body::-webkit-scrollbar-thumb:hover {
     display: inline-block;
     height: 300px;
     width: 33%;
+}
+
+.card-dark {
+    background-color: rgb(28, 47, 70) !important;
+    color: white !important;
 }

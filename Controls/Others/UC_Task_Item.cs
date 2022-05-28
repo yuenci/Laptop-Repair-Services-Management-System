@@ -16,12 +16,22 @@ namespace miniSys0._3.Controls.Others
         public UC_Task_Item()
         {
             InitializeComponent();
-            InitStyle();
+            InitTheme();
         }
-        private void InitStyle()
+        private void InitTheme()
         {
-            
+            if (User_type.user_theme == "dark")
+            {
+                this.BackColor = Color.FromArgb(55, 55, 57);
+                dynamic[] lable = { orderId, description, statusText, updateTime };
+                foreach (var item in lable)
+                {
+                    item.ForeColor = Color.White;
+                }
+            }
         }
+
+
         private string orderIDcache;
         public void Init(string orderID)
         {

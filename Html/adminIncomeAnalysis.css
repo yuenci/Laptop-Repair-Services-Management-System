@@ -25,10 +25,10 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 #cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-items: center;
-    width: 1125px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1120px;
     height: 210px;
     background-color: #f7f8fa;
 }
@@ -41,7 +41,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .card {
-    margin: 0px 5px 0px 5px;
+    margin: 0px 5px 0px 0px;
     /* border: 2px solid red; */
     background-color: #fff;
     width: 260px;
@@ -85,7 +85,6 @@ svg {
     background-color: white;
     width: 790px;
     height: 450px;
-    margin-left: 10px;
 }
 
 
@@ -95,14 +94,14 @@ svg {
     width: 780px;
     padding: 10px 10px 10px 10px;
     font-size: 16px;
-    margin-left: 10px;
 }
 
 #rankList {
     position: absolute;
-    width: 315px;
-    top: 212px;
-    left: 800px;
+    width: 325px;
+    height: 492px;
+    top: 210px;
+    left: 790px;
     background-color: white;
 }
 
@@ -156,25 +155,32 @@ svg {
 
 #time {
     background-color: white;
-    margin: 0px 10px 0px 10px;
+    margin: 0px 10px 0px 0px;
     height: 300px;
 }
 
 #serverType {
     background-color: #fff;
     display: inline-block;
-    width: 550px;
+    width: 555px;
     height: 350px;
     margin-top: 10px;
-    margin-left: 10px;
-    padding-bottom: 10px;
 }
 
 #method {
     background-color: #fff;
     display: inline-block;
     margin-top: 10px;
-    width: 550px;
+    width: 555px;
     height: 350px;
-    padding-bottom: 10px;
+}
+
+.pie-chart-room {
+    height: 20px;
+    background-color: rgb(28, 47, 70);
+}
+
+.card-dark {
+    background-color: rgb(28, 47, 70) !important;
+    color: white !important;
 }

@@ -19,6 +19,48 @@ namespace miniSys0._3
         {
             InitializeComponent();
             initLabel();
+            InitTheme();
+        }
+        private void InitTheme()
+        {
+            if (User_type.user_theme == "dark")
+            {
+                this.BackColor = Color.FromArgb(18, 31, 43);
+                container.BackColor = Color.FromArgb(18, 31, 43);
+                TitleColor = Color.FromArgb(28, 47, 70);
+                TitleForeColor = Color.White;
+                ControlBoxForeColor = Color.White;
+                rectColor = Color.FromArgb(55, 55, 57);
+
+
+                about.FillColor = Color.FromArgb(55, 55, 57);
+                about.RectColor = Color.Transparent;
+
+
+                dynamic[] lable = { name, post, country, phone, department, email, label2, 
+                    about, label1, uiLabel9, gender, uiLabel8, birthday, uiLabel10, address, 
+                    uiLabel7, useID, uiLabel11, regtime };
+                foreach (var item in lable)
+                {
+                    item.ForeColor = Color.White;
+                }
+
+                dynamic[] containers = { uiUserControl1, uiUserControl2, uiUserControl3 };
+                foreach (var item in containers)
+                {
+                    item.FillColor = Color.FromArgb(28, 47, 70);
+                    item.BackColor = Color.FromArgb(28, 47, 70);
+                    item.RectColor = Color.FromArgb(55, 55, 57);
+                }
+                
+
+                dynamic[] icons = { uiAvatar1, uiAvatar2, uiAvatar3, uiAvatar4, uiAvatar5 };
+                foreach (var item in icons)
+                {
+                    item.FillColor = Color.FromArgb(55, 55, 57);
+                    item.ForeColor = Color.White;
+                }
+            }
         }
         private void initLabel()
         {

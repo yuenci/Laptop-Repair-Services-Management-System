@@ -133,6 +133,14 @@
             this.imageList1.Images.SetKeyName(5, "1FrameBlue.png");
             this.imageList1.Images.SetKeyName(6, "1profile.png");
             this.imageList1.Images.SetKeyName(7, "1profileBlue.png");
+            this.imageList1.Images.SetKeyName(8, "21dashboardBlue.png");
+            this.imageList1.Images.SetKeyName(9, "21formBlue.png");
+            this.imageList1.Images.SetKeyName(10, "21FrameBlue.png");
+            this.imageList1.Images.SetKeyName(11, "21profileBlue.png");
+            this.imageList1.Images.SetKeyName(12, "22dashboard.png");
+            this.imageList1.Images.SetKeyName(13, "22form.png");
+            this.imageList1.Images.SetKeyName(14, "22Frame.png");
+            this.imageList1.Images.SetKeyName(15, "22profile.png");
             // 
             // UC_A_Navmenu
             // 

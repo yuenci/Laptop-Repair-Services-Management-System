@@ -40,6 +40,11 @@
         function refresh1() {
             location.reload();
         }
+        let axisColor = "#666666"
+        if (theme == "dark") {
+            document.body.style.background = "rgb(28, 47, 70)"
+            axisColor = "white"
+        }
 
 
         function show1() {
@@ -68,7 +73,10 @@
                     responsive: true,
                     plugins: {
                         legend: {
-                            position: "right"
+                            position: "right",
+                            labels: {
+                                color: axisColor
+                            }
                         }
                     }
                 }

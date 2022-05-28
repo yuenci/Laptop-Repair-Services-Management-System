@@ -34,16 +34,22 @@ namespace miniSys0._3.Controls
             initShortcut();
 
             initNewsDataToGlobal();
+            InitNewsEvent();
             initNoticesStyle();
+            InitNoticeEvent();
             initNoticeDataToGlobal();
-            
+            InitDocEvent();
+
+
             initReader();
             uc_main = this;
         }
+        private Color newsFore = Color.Black;
         private void InitTheme()
         {
             if (User_type.user_theme == "dark")
             {
+                newsFore = Color.White;
                 dynamic[] panels = { uiUserControl2 , uiUserControl3 , uiUserControl4 ,
                 uiUserControl5,uiUserControl6,uiUserControl7 };
 
@@ -516,158 +522,200 @@ namespace miniSys0._3.Controls
         }
 
         #region hover and leave color
-        private void n1_hover(object sender, EventArgs e)
+
+        private void news_hover(object sender, EventArgs e)
         {
-            news1.ForeColor = Color.FromArgb(51, 112, 255);
-            newslabel1.ForeColor = Color.FromArgb(51, 112, 255);
+           
+
+            if (sender.Equals(news1)) {
+                news1.ForeColor = Color.FromArgb(51, 112, 255);
+                newslabel1.ForeColor = Color.FromArgb(51, 112, 255);
+            }
+            else if (sender.Equals(news2))
+            {
+                news2.ForeColor = Color.FromArgb(51, 112, 255);
+                newslabel2.ForeColor = Color.FromArgb(51, 112, 255);
+
+            }
+            else if (sender.Equals(news3))
+            {
+                news3.ForeColor = Color.FromArgb(51, 112, 255);
+                newslabel3.ForeColor = Color.FromArgb(51, 112, 255);
+
+            }
+            else if (sender.Equals(news4))
+            {
+                news4.ForeColor = Color.FromArgb(51, 112, 255);
+                newslabel4.ForeColor = Color.FromArgb(51, 112, 255);
+
+            }
+            else if (sender.Equals(news5))
+            {
+                news5.ForeColor = Color.FromArgb(51, 112, 255);
+                newslabel5.ForeColor = Color.FromArgb(51, 112, 255);
+
+            }
         }
 
-        private void n2_hover(object sender, EventArgs e)
+        private void news_leave(object sender, EventArgs e)
         {
-            news2.ForeColor = Color.FromArgb(51, 112, 255);
-            newslabel2.ForeColor = Color.FromArgb(51, 112, 255);
+
+            
+
+            if (sender.Equals(news1))
+            {
+                news1.ForeColor = newsFore;
+                newslabel1.ForeColor = newsFore;
+            }
+            else if (sender.Equals(news2))
+            {
+                news2.ForeColor = newsFore;
+                newslabel2.ForeColor = newsFore;
+            }
+            else if (sender.Equals(news3))
+            {
+                news3.ForeColor = newsFore;
+                newslabel3.ForeColor = newsFore;
+            }
+            else if (sender.Equals(news4))
+            {
+                news4.ForeColor = newsFore;
+                newslabel4.ForeColor = newsFore;
+            }
+            else if (sender.Equals(news5))
+            {
+                news5.ForeColor = newsFore;
+                newslabel5.ForeColor = newsFore;
+            }
         }
 
-        private void n3_hover(object sender, EventArgs e)
+        private void InitNewsEvent()
         {
-            news3.ForeColor = Color.FromArgb(51, 112, 255);
-            newslabel3.ForeColor = Color.FromArgb(51, 112, 255);
-        }
-
-        private void n4_hover(object sender, EventArgs e)
-        {
-            news4.ForeColor = Color.FromArgb(51, 112, 255);
-            newslabel4.ForeColor = Color.FromArgb(51, 112, 255);
-        }
-
-        private void n5_hover(object sender, EventArgs e)
-        {
-            news5.ForeColor = Color.FromArgb(51, 112, 255);
-            newslabel5.ForeColor = Color.FromArgb(51, 112, 255);
-        }
-
-        private void n1_leave(object sender, EventArgs e)
-        {
-            news1.ForeColor = Color.Black;
-            newslabel1.ForeColor = Color.Black;
-
-        }
-
-        private void n2_leave(object sender, EventArgs e)
-        {
-            news2.ForeColor = Color.Black;
-            newslabel2.ForeColor = Color.Black;
-        }
-
-        private void n3_leave(object sender, EventArgs e)
-        {
-            news3.ForeColor = Color.Black;
-            newslabel3.ForeColor = Color.Black;
-        }
-
-        private void n4_leave(object sender, EventArgs e)
-        {
-            news4.ForeColor = Color.Black;
-            newslabel4.ForeColor = Color.Black;
-        }
-
-        private void n5_leave(object sender, EventArgs e)
-        {
-            news5.ForeColor = Color.Black;
-            newslabel5.ForeColor = Color.Black;
+            dynamic[] newsObj = { news1 , news2, news3, news4, news5  };
+            foreach (var item in newsObj)
+            {
+                item.MouseHover += new EventHandler(news_hover);
+                item.MouseLeave += new EventHandler(news_leave);
+            }
         }
 
 
-        private void noticeText1_hover(object sender, EventArgs e)
+        private void notice_hover(object sender, EventArgs e)
         {
-            noticeText1.ForeColor = Color.FromArgb(51, 112, 255);
+
+
+            if (sender.Equals(noticeText1))
+            {
+                noticeText1.ForeColor = Color.FromArgb(51, 112, 255);
+            }
+            else if (sender.Equals(noticeText2))
+            {
+                noticeText2.ForeColor = Color.FromArgb(51, 112, 255);
+            }
+            else if (sender.Equals(noticeText3))
+            {
+                noticeText3.ForeColor = Color.FromArgb(51, 112, 255);
+            }
+            else if (sender.Equals(noticeText4))
+            {
+                noticeText4.ForeColor = Color.FromArgb(51, 112, 255);
+            }
+            else if (sender.Equals(noticeText5))
+            {
+                noticeText5.ForeColor = Color.FromArgb(51, 112, 255);
+            }
         }
 
-        private void noticeText2_hover(object sender, EventArgs e)
+        private void notice_leave(object sender, EventArgs e)
         {
-            noticeText2.ForeColor = Color.FromArgb(51, 112, 255);
+
+
+
+            if (sender.Equals(noticeText1))
+            {
+                noticeText1.ForeColor = newsFore;
+            }
+            else if (sender.Equals(noticeText2))
+            {
+                noticeText2.ForeColor = newsFore;
+            }
+            else if (sender.Equals(noticeText3))
+            {
+                noticeText3.ForeColor = newsFore;
+            }
+            else if (sender.Equals(noticeText4))
+            {
+                noticeText4.ForeColor = newsFore;
+            }
+            else if (sender.Equals(noticeText5))
+            {
+                noticeText5.ForeColor = newsFore;
+            }
         }
 
-        private void noticeText3_hover(object sender, EventArgs e)
+        private void InitNoticeEvent()
         {
-            noticeText3.ForeColor = Color.FromArgb(51, 112, 255);
+            dynamic[] newsObj = { noticeText1, noticeText2, noticeText3, noticeText4, noticeText5 };
+            foreach (var item in newsObj)
+            {
+                item.MouseHover += new EventHandler(notice_hover);
+                item.MouseLeave += new EventHandler(notice_leave);
+            }
         }
 
-        private void noticeText4_hover(object sender, EventArgs e)
+        private void doc_hover(object sender, EventArgs e)
         {
-            noticeText4.ForeColor = Color.FromArgb(51, 112, 255);
+
+            if (sender.Equals(doc1))
+            {
+                doc1.ForeColor = Color.FromArgb(51, 112, 255);
+            }
+            else if (sender.Equals(doc2))
+            {
+                doc2.ForeColor = Color.FromArgb(51, 112, 255);
+            }
+            else if (sender.Equals(doc3))
+            {
+                doc3.ForeColor = Color.FromArgb(51, 112, 255);
+            }
+            else if (sender.Equals(doc4))
+            {
+                doc4.ForeColor = Color.FromArgb(51, 112, 255);
+            }
         }
 
-        private void noticeText5_hover(object sender, EventArgs e)
+        private void doc_leave(object sender, EventArgs e)
         {
-            noticeText5.ForeColor = Color.FromArgb(51, 112, 255);
+
+            if (sender.Equals(doc1))
+            {
+                doc1.ForeColor = newsFore;
+            }
+            else if (sender.Equals(doc2))
+            {
+                doc2.ForeColor = newsFore;
+            }
+            else if (sender.Equals(doc3))
+            {
+                doc3.ForeColor = newsFore;
+            }
+            else if (sender.Equals(doc4))
+            {
+                doc4.ForeColor = newsFore;
+            }
         }
 
-        private void noticeText1_leave(object sender, EventArgs e)
+        private void InitDocEvent()
         {
-            noticeText1.ForeColor = Color.FromArgb(78, 89, 105);
+            dynamic[] newsObj = { doc1, doc2, doc3, doc4 };
+            foreach (var item in newsObj)
+            {
+                item.MouseHover += new EventHandler(doc_hover);
+                item.MouseLeave += new EventHandler(doc_leave);
+            }
         }
 
-        private void noticeText2_leave(object sender, EventArgs e)
-        {
-            noticeText2.ForeColor = Color.FromArgb(78, 89, 105);
-        }
-
-        private void noticeText3_leave(object sender, EventArgs e)
-        {
-            noticeText3.ForeColor = Color.FromArgb(78, 89, 105);
-        }
-
-        private void noticeText4_leave(object sender, EventArgs e)
-        {
-            noticeText4.ForeColor = Color.FromArgb(78, 89, 105);
-        }
-
-        private void noticeText5_leave(object sender, EventArgs e)
-        {
-            noticeText5.ForeColor = Color.FromArgb(78, 89, 105);
-        }
-
-        private void doc1_hover(object sender, EventArgs e)
-        {
-            doc1.ForeColor = Color.FromArgb(51, 112, 255);
-        }
-
-        private void doc2_hover(object sender, EventArgs e)
-        {
-            doc2.ForeColor = Color.FromArgb(51, 112, 255);
-        }
-
-        private void doc3_hover(object sender, EventArgs e)
-        {
-            doc3.ForeColor = Color.FromArgb(51, 112, 255);
-        }
-
-        private void doc4_hover(object sender, EventArgs e)
-        {
-            doc4.ForeColor = Color.FromArgb(51, 112, 255);
-        }
-
-        private void doc1_leave(object sender, EventArgs e)
-        {
-            doc1.ForeColor = Color.FromArgb(78, 89, 105);
-        }
-
-        private void doc2_leave(object sender, EventArgs e)
-        {
-            doc2.ForeColor = Color.FromArgb(78, 89, 105);
-        }
-
-        private void doc3_leave(object sender, EventArgs e)
-        {
-            doc3.ForeColor = Color.FromArgb(78, 89, 105);
-        }
-        
-        private void doc4_leave(object sender, EventArgs e)
-        {
-            doc4.ForeColor = Color.FromArgb(78, 89, 105);
-        }
-        
+     
         #endregion
 
 

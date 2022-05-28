@@ -38,7 +38,7 @@
             this.urC_Crumbs1.BackColor = System.Drawing.SystemColors.Control;
             this.urC_Crumbs1.Location = new System.Drawing.Point(0, 4);
             this.urC_Crumbs1.Name = "urC_Crumbs1";
-            this.urC_Crumbs1.Size = new System.Drawing.Size(300, 35);
+            this.urC_Crumbs1.Size = new System.Drawing.Size(289, 35);
             this.urC_Crumbs1.TabIndex = 0;
             // 
             // refreshlButton2

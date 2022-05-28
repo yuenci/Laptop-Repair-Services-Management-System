@@ -29,6 +29,13 @@
         <canvas id="myChart" width="400" height="135"></canvas>
     </div>
     <script>
+        let axisColor = "#666666"
+        let bgc = "rgba(22, 93, 255, 0.2)";
+        if (theme == "dark") {
+            document.body.style.background = "rgb(28, 47, 70)"
+            axisColor = "white"
+            bgc = "rgba(22, 93, 255, 0.8)"
+        }
         function refresh() {
             location.reload();
         }
@@ -53,7 +60,7 @@
                         fill: true,
                         lineTension: 0.4,
                         borderColor: "#5a6efd",
-                        backgroundColor: "rgba(22, 93, 255, 0.2)",
+                        backgroundColor: bgc,
                         //pointRadius: 6,
                         data: dataset,
                         borderWidth: 1
@@ -77,16 +84,24 @@
                         x: {
                             grid: {
                                 color: "rgba(242, 243, 245,1)"
+                            },
+                            ticks: {
+                                color: axisColor
                             }
+
                         },
                         y: {
-                            suggestedMax: 100,
+                            //suggestedMax: 100,
                             min: 0,
                             grid: {
                                 color: "rgba(242, 243, 245,1)"
+                            },
+                            ticks: {
+                                color: axisColor
                             }
                         }
-                    }
+                    },
+
                 }
             });
         }

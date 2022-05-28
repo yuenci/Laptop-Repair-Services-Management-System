@@ -35,6 +35,18 @@ namespace miniSys0._3.Controls
 
                 // the bgc of choose item
                 NavMenu.SelectedColor = Color.FromArgb(55, 55, 57);
+
+                dynamic[] nodeText = { NavMenu.Nodes[0], NavMenu.Nodes[1], NavMenu.Nodes[2], NavMenu.Nodes[3] };
+                foreach (dynamic node in nodeText)
+                {
+                    node.ForeColor = Color.White;
+                }
+
+                for (int i = 0; i < 4; i++)
+                {
+                    NavMenu.Nodes[i].ImageIndex = 8 +i;
+                    NavMenu.Nodes[i].SelectedImageIndex = 12+i;
+                }
             }
         }
         private void addUserControl(UserControl userControl)

@@ -16,7 +16,42 @@ namespace miniSys0._3
         public OrderDetails()
         {
             InitializeComponent();
+            InitTheme();
         }
+        private void InitTheme()
+        {
+            if (User_type.user_theme == "dark")
+            {
+                this.BackColor = Color.FromArgb(18, 31, 43);
+                TitleColor = Color.FromArgb(28, 47, 70);
+                TitleForeColor = Color.White;
+                ControlBoxForeColor = Color.White;
+                rectColor = Color.FromArgb(55, 55, 57);
+                /*uiLine2.LineColor = Color.FromArgb(55, 55, 57);
+                textBox.FillColor = Color.FromArgb(55, 55, 57);*/
+
+
+                dynamic[] lable = { uiLabel20, uiLabel1, orderID, uiLabel2, receptionist, uiLabel7, 
+                    technician, uiLabel8, model, uiLabel3, receiveTime, uiLabel4, serviceType, 
+                    uiLabel5, status, status4, status4Time, status3, status3Time, status2,uiLabel19,
+                    status2Time, status1, status1Time, uiLabel21, uiLabel22, name, uiLabel25, 
+                    country, uiLabel23, phone, uiLabel26, address, uiLabel24, 
+                    email, uiLabel27, regtime };
+                foreach (var item in lable)
+                {
+                    item.ForeColor = Color.White;
+                }
+
+                dynamic[] contaners = { uiUserControl1, uiUserControl2, uiUserControl3 };
+                foreach (var item in contaners)
+                {
+                    item.BackColor = Color.FromArgb(55, 55, 57);
+                    item.FillColor = Color.FromArgb(55, 55, 57);
+                    item.RectColor = Color.Transparent;
+                }
+            }
+        }
+
         private string orderIDCache;
         public void Init(string orderId)
         {

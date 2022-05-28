@@ -18,6 +18,38 @@ changeColor(document.getElementById("littleChart-percent2"), new_customers_per);
 changeColor(document.getElementById("littleChart-percent3"), service_score_per);
 changeColor(document.getElementById("littleChart-percent4"), completion_speed_per);
 
+let axisColor = "#666666"
+let alpha = 0.2;
+if (theme == "dark") {
+    setDarkBgc();
+    setCardDarkStyle();
+
+    axisColor = "white"
+    alpha = 0.6;
+}
+
+function setDarkBgc() {
+    document.body.style.backgroundColor = "rgb(18, 31, 43)"
+    document.getElementById("containerPage1").style.backgroundColor = "rgb(18, 31, 43)"
+    document.getElementById("containerPage2").style.backgroundColor = "rgb(18, 31, 43)"
+}
+function setCardDarkStyle() {
+    let els = document.getElementById("containerPage1").childNodes;
+    for (let index = 0; index < els.length - 1; index++) {
+        const element = els[index];
+        element.className += " card-dark"
+    }
+
+    let eles = document.getElementById("container4").childNodes;
+    for (let index = 0; index < eles.length; index++) {
+        const element = eles[index];
+        element.className += " card-dark"
+    }
+
+    document.getElementById("pie1_2").className += " card-dark"
+}
+
+
 function changeColor(obj, value) {
     if (value > 0) {
         obj.innerHTML = "+" + toPercent(value);
@@ -83,7 +115,7 @@ function show() {
                     fill: true,
                     lineTension: 0.4,
                     borderColor: "#F53F3F",
-                    backgroundColor: "rgba(22, 93, 255, 0.2)",
+                    backgroundColor: `rgba(22, 93, 255, ${alpha})`,
                     //pointRadius: 6,
                     data: dataset1,
                     borderWidth: 1
@@ -93,7 +125,7 @@ function show() {
                     fill: true,
                     lineTension: 0.4,
                     borderColor: "#FF7D00",
-                    backgroundColor: "rgba(255, 125, 0, 0.2)",
+                    backgroundColor: `rgba(255, 125, 0,  ${alpha})`,
                     //pointRadius: 6,
                     data: dataset2,
                     borderWidth: 1
@@ -103,7 +135,7 @@ function show() {
                     fill: true,
                     lineTension: 0.4,
                     borderColor: "#FADC19",
-                    backgroundColor: "rgba(250, 220, 25, 0.2)",
+                    backgroundColor: `rgba(250, 220, 25,  ${alpha})`,
                     //pointRadius: 6,
                     data: dataset3,
                     borderWidth: 1
@@ -112,7 +144,7 @@ function show() {
                     fill: true,
                     lineTension: 0.4,
                     borderColor: "#00B42A",
-                    backgroundColor: "rgba(0, 180, 42, 0.2)",
+                    backgroundColor: `rgba(0, 180, 42, ${alpha})`,
                     //pointRadius: 6,
                     data: dataset4,
                     borderWidth: 1
@@ -121,7 +153,7 @@ function show() {
                     fill: true,
                     lineTension: 0.4,
                     borderColor: "#14C9C9",
-                    backgroundColor: "rgba(20, 201, 201, 0.2)",
+                    backgroundColor: `rgba(20, 201, 201, ${alpha})`,
                     //pointRadius: 6,
                     data: dataset5,
                     borderWidth: 1
@@ -130,7 +162,7 @@ function show() {
                     fill: true,
                     lineTension: 0.4,
                     borderColor: "#165DFF",
-                    backgroundColor: "rgba(22, 93, 255, 0.2)",
+                    backgroundColor: `rgba(22, 93, 255,  ${alpha})`,
                     //pointRadius: 6,
                     data: dataset6,
                     borderWidth: 1
@@ -139,7 +171,7 @@ function show() {
                     fill: true,
                     lineTension: 0.4,
                     borderColor: "#D91AD9",
-                    backgroundColor: "rgba(217, 26, 217, 0.2)",
+                    backgroundColor: `rgba(217, 26, 217,  ${alpha})`,
                     //pointRadius: 6,
                     data: dataset7,
                     borderWidth: 1
@@ -148,7 +180,7 @@ function show() {
                     fill: true,
                     lineTension: 0.4,
                     borderColor: "#86909C",
-                    backgroundColor: "rgba(134, 144, 156, 0.2)",
+                    backgroundColor: `rgba(134, 144, 156,  ${alpha})`,
                     //pointRadius: 6,
                     data: dataset8,
                     borderWidth: 1
@@ -165,10 +197,15 @@ function show() {
             plugins: {
                 legend: {
                     display: true,
+                    labels: {
+                        color: axisColor
+                    }
+
                 },
                 title: {
                     display: true,
                     text: "Monthly service type quantity",
+                    color: axisColor
                 }
             },
             scales: {
@@ -178,7 +215,11 @@ function show() {
                     },
                     title: {
                         display: true,
-                        text: 'Month'
+                        text: 'Month',
+                        color: axisColor
+                    },
+                    ticks: {
+                        color: axisColor
                     }
                 },
                 y: {
@@ -186,6 +227,9 @@ function show() {
                     min: 0,
                     grid: {
                         color: "rgba(242, 243, 245,1)"
+                    },
+                    ticks: {
+                        color: axisColor
                     }
                 }
             }
@@ -214,7 +258,9 @@ var myBarChart2 = new Chart(ctx2, {
                 display: false,
             },
             title: {
-                display: false
+                display: false,
+                color: axisColor
+
             }
         },
         barThickness: 10,
@@ -223,6 +269,13 @@ var myBarChart2 = new Chart(ctx2, {
             y: {
                 grid: {
                     display: false,
+                }, ticks: {
+                    color: axisColor
+                }
+            },
+            x: {
+                ticks: {
+                    color: axisColor
                 }
             }
         }
@@ -257,6 +310,13 @@ var myBarChart3 = new Chart(ctx3, {
             y: {
                 grid: {
                     display: false,
+                }, ticks: {
+                    color: axisColor
+                }
+            },
+            x: {
+                ticks: {
+                    color: axisColor
                 }
             }
         }
@@ -479,11 +539,16 @@ var myChartPie1 = new Chart(ctxPie1, {
         responsive: true,
         plugins: {
             legend: {
-                position: "right"
+                position: "right",
+                labels: {
+                    color: axisColor
+                }
+
             },
             title: {
                 display: true,
-                text: 'Service type proportion'
+                text: 'Service type proportion',
+                color: axisColor
             }
         }
     }
@@ -512,11 +577,16 @@ var myChartPie2 = new Chart(ctxPie2, {
         responsive: true,
         plugins: {
             legend: {
-                position: "right"
+                position: "right",
+                labels: {
+                    color: axisColor
+                }
+
             },
             title: {
                 display: true,
-                text: 'Star proportion'
+                text: 'Star proportion',
+                color: axisColor
             }
         }
     }
@@ -545,11 +615,16 @@ var myChartPie3 = new Chart(ctxPie3, {
         responsive: true,
         plugins: {
             legend: {
-                position: "right"
+                position: "right",
+                labels: {
+                    color: axisColor
+                }
+
             },
             title: {
                 display: true,
-                text: 'Time proportion'
+                text: 'Time proportion',
+                color: axisColor
             }
         }
     }

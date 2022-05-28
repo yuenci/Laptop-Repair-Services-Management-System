@@ -42,11 +42,11 @@ namespace miniSys0._3
 
             // main area loading
 
-            //add_UC_Mainto_Panel();
+            add_UC_Mainto_Panel();
             //add_UC_UserInfo();
             //add_UC_UserSetting();
             //add_UC_registration();
-            add_UC_Payment();
+            //add_UC_Payment();
             //add_task_cards();
             //add_task_table();
             //add_Cus_OrderDetails();
@@ -78,6 +78,17 @@ namespace miniSys0._3
 
                 //uiUserControl2.BackColor = Color.FromArgb(28, 47, 70);
                 navMenuPanel.BackColor = Color.FromArgb(28, 47, 70);
+            }else if (User_type.user_theme == "light")
+            {
+                this.BackColor = Color.FromArgb(247, 248, 250);
+                panelTop.BackColor = Color.White;
+                label1.ForeColor = Color.White;
+                uiUserControl1.BackColor = Color.White;
+                uiUserControl1.FillColor = Color.White;
+                uiUserControl1.RectColor = Color.Gainsboro;
+
+                //uiUserControl2.BackColor = Color.FromArgb(28, 47, 70);
+                navMenuPanel.BackColor = Color.White;
             }
         }
         private void InitReader()
@@ -370,6 +381,16 @@ namespace miniSys0._3
                 }
             }
             Content += "]";
+
+            if (User_type.user_theme == "dark")
+            {
+                Content += "; theme = 'dark';";
+            }
+            else
+            {
+                Content += "; theme = 'light';";
+            }
+
             string path = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin")) + $"Html\\{fileName}";
             //empty old js file
             FileStream fs = new FileStream(path, FileMode.Truncate, FileAccess.ReadWrite);
@@ -494,11 +515,21 @@ namespace miniSys0._3
             if (User_type.user_theme == "light")
             {
                 User_type.user_theme = "dark";
+                prepareData();
+                InitTheme();
+                add_UC_Mainto_Panel();
+                addNavMenu();
             }
             else if (User_type.user_theme == "dark")
             {
                 User_type.user_theme = "light";
+                prepareData();
+                InitTheme();
+                add_UC_Mainto_Panel();
+                addNavMenu();
             }
+            
+
         }
     }
 

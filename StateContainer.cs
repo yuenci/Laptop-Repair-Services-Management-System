@@ -18,7 +18,7 @@ namespace miniSys0._3
     {
         //this is defult
         //public static string user_deparment = "Customer";
-        public static string user_deparment = "Receptionist";
+        public static string user_deparment = "Admin";
         //deparment:  Receptionist,Technician, Customer, Admin
 
         //test data
@@ -38,7 +38,7 @@ namespace miniSys0._3
         public static string user_security_qustion = "I love coding right?";
         public static string user_security_answer = "I love coding right?";
         public static string user_password = "password123456";
-        public static string user_theme = "dark";
+        public static string user_theme = "light";
         // light/dark
 
 

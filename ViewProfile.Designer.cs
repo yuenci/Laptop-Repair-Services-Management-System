@@ -380,6 +380,7 @@
             // 
             // again
             // 
+            this.again.BackColor = System.Drawing.Color.Transparent;
             this.again.Cursor = System.Windows.Forms.Cursors.Hand;
             this.again.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.again.Location = new System.Drawing.Point(454, 12);

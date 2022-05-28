@@ -17,7 +17,31 @@ namespace miniSys0._3
         {
             InitializeComponent();
             uiSymbolLabel.Visible = false;
+            InitTheme();
         }
+        private void InitTheme()
+        {
+            if (User_type.user_theme == "dark")
+            {
+                this.BackColor = Color.FromArgb(28, 47, 70);
+                TitleColor = Color.FromArgb(28, 47, 70);
+                TitleForeColor = Color.White;
+                ControlBoxForeColor = Color.White;
+                rectColor = Color.FromArgb(55, 55, 57);
+                uiLine2.LineColor = Color.FromArgb(55, 55, 57);
+
+
+                textBox.FillColor  = Color.FromArgb(55, 55, 57);
+
+
+                dynamic[] lable = { textBox };
+                foreach (var item in lable)
+                {
+                    item.ForeColor = Color.White;
+                }
+            }
+        }
+
 
         private void cancel_Click(object sender, EventArgs e)
         {

@@ -18,11 +18,28 @@ namespace miniSys0._3.Controls.Others
         {
             InitializeComponent();
             InitLabels();
+            InitTheme();
             InitComboBox();
             errorBar.Visible = false;
             successIcon.Visible = false;
             cardID.Visible = false;
         }
+
+        private void InitTheme()
+        {
+            this.BackColor = Color.FromArgb(28, 47, 70);
+            if (User_type.user_theme == "dark")
+            {
+                successIcon.FillColor = Color.FromArgb(28, 47, 70);
+                successIcon.BackColor = Color.FromArgb(28, 47, 70);
+                dynamic[] lable = { uiLabel1, uiLabel2, uiLabel3, uiLabel4, uiLabel5 };
+                foreach (var item in lable)
+                {
+                    item.ForeColor = Color.White;
+                }
+            }
+        }
+
         private void InitLabels()
         {
             TextBoxCE superName = new TextBoxCE(name, "Enter customer's name", Color.Gray);

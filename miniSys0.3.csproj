@@ -136,12 +136,6 @@
     <Compile Include="Controls\MainArea\UC_TaskList.Designer.cs">
       <DependentUpon>UC_TaskList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\MainArea\UC_TaskTable.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\MainArea\UC_TaskTable.Designer.cs">
-      <DependentUpon>UC_TaskTable.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controls\MainArea\UC_UserInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>

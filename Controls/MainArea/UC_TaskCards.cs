@@ -18,12 +18,33 @@ namespace miniSys0._3.Controls.MainArea
         {
             InitializeComponent();
             InitCurmbs();
+            InitTheme();
             InitCard();
             InitStyle();
             uc_TaskCards = this;
             InitSwitchBtns();
         }
+        private void InitTheme()
+        {
+            if (User_type.user_theme == "dark")
+            {
+                this.BackColor = Color.FromArgb(28, 47, 70);
+                Container.BackColor = Color.FromArgb(28, 47, 70);
+                Container.FillColor = Color.FromArgb(28, 47, 70);
+                Container.RectColor = Color.Transparent;
+                contentPanel.BackColor = Color.FromArgb(28, 47, 70);
+                searchIcon.Size = new Size(35, 35);
+                searchIcon.Location = new Point(1020, 48);
 
+                dynamic[] lable = { label1 };
+                foreach (var item in lable)
+                {
+                    item.ForeColor = Color.White;
+                }
+
+                pagination.InitTheme();
+            }
+        }
         private void InitCurmbs()
         {
             urC_Crumbs1.crumbText.Text = "Table";
@@ -73,46 +94,100 @@ namespace miniSys0._3.Controls.MainArea
         private void clearBtnStyle()
         {
             UIButton[] btnList = { allCard, noStartCard, repairingCard, dfinishedCard };
-            foreach (var item in btnList)
+            if (User_type.user_theme == "dark")
             {
-                //  basic
-                item.BackColor = Color.White;
-                item.FillColor=Color.White;
-                item.ForeColor = Color.FromArgb(78, 89, 105);
-                item.RectColor = Color.White;
+                foreach (var item in btnList)
+                {
+                    //  basic
+                    item.BackColor = Color.Transparent;
+                    item.FillColor = Color.FromArgb(242, 243, 245);
+                    item.ForeColor = Color.FromArgb(78, 89, 105);
+                    item.RectColor = Color.White;
+                    item.Font = new Font(".萍方-简", 12, FontStyle.Regular);
 
-                //hover
-                item.BackColor = Color.White;
-                item.FillHoverColor = Color.FromArgb(242, 243, 245);
-                item.ForeHoverColor = Color.FromArgb(78, 89, 105);
-                item.RectHoverColor = Color.White;
+                    //hover
+                    item.BackColor = Color.Transparent;
+                    item.FillHoverColor = Color.FromArgb(242, 243, 245);
+                    item.ForeHoverColor = Color.FromArgb(78, 89, 105);
+                    item.RectHoverColor = Color.Transparent;
 
-                //click
-                item.BackColor = Color.White;
-                item.FillPressColor = Color.FromArgb(242, 243, 245);
-                item.ForePressColor = Color.FromArgb(78, 89, 105);
-                item.RectPressColor = Color.White;
+                    //click
+                    item.BackColor = Color.Transparent;
+                    item.FillPressColor = Color.FromArgb(242, 243, 245);
+                    item.ForePressColor = Color.FromArgb(78, 89, 105);
+                    item.RectPressColor = Color.Transparent;
+                }
             }
+            else
+            {
+                foreach (var item in btnList)
+                {
+                    //  basic
+                    item.BackColor = Color.White;
+                    item.FillColor = Color.Transparent;
+                    item.ForeColor = Color.FromArgb(78, 89, 105);
+                    item.RectColor = Color.White;
+
+                    //hover
+                    item.BackColor = Color.White;
+                    item.FillHoverColor = Color.FromArgb(242, 243, 245);
+                    item.ForeHoverColor = Color.FromArgb(78, 89, 105);
+                    item.RectHoverColor = Color.White;
+
+                    //click
+                    item.BackColor = Color.White;
+                    item.FillPressColor = Color.FromArgb(242, 243, 245);
+                    item.ForePressColor = Color.FromArgb(78, 89, 105);
+                    item.RectPressColor = Color.White;
+                }
+            }
+            
         }
         private void clickBtnStyle(UIButton btn)
         {
-            //  basic
-            btn.BackColor = Color.White;
-            btn.FillColor = Color.FromArgb(242, 243, 245);
-            btn.ForeColor = Color.FromArgb(22, 93, 255);
-            btn.RectColor = Color.White;
+            if (User_type.user_theme == "dark")
+            {
+                //  basic
+                btn.BackColor = Color.Transparent;
+                btn.FillColor = Color.FromArgb(242, 243, 245);
+                btn.ForeColor = Color.FromArgb(22, 93, 255);
+                btn.RectColor = Color.White;
+                btn.Font = new Font(".萍方-简", 12, FontStyle.Bold);
 
-            //hover
-            btn.BackColor = Color.White;
-            btn.FillHoverColor = Color.FromArgb(242, 243, 245);
-            btn.ForeHoverColor = Color.FromArgb(22, 93, 255);
-            btn.RectHoverColor = Color.White;
 
-            //click
-            btn.BackColor = Color.White;
-            btn.FillPressColor = Color.FromArgb(242, 243, 245);
-            btn.ForePressColor = Color.FromArgb(22, 93, 255);
-            btn.RectPressColor = Color.White;
+                //hover
+                btn.BackColor = Color.Transparent;
+                btn.FillHoverColor = Color.FromArgb(242, 243, 245);
+                btn.ForeHoverColor = Color.FromArgb(22, 93, 255);
+                btn.RectHoverColor = Color.White;
+
+                //click
+                btn.BackColor = Color.Transparent;
+                btn.FillPressColor = Color.FromArgb(242, 243, 245);
+                btn.ForePressColor = Color.FromArgb(22, 93, 255);
+                btn.RectPressColor = Color.White;
+            }
+            else
+            {
+                //  basic
+                btn.BackColor = Color.White;
+                btn.FillColor = Color.FromArgb(242, 243, 245);
+                btn.ForeColor = Color.FromArgb(22, 93, 255);
+                btn.RectColor = Color.White;
+
+                //hover
+                btn.BackColor = Color.White;
+                btn.FillHoverColor = Color.FromArgb(242, 243, 245);
+                btn.ForeHoverColor = Color.FromArgb(22, 93, 255);
+                btn.RectHoverColor = Color.White;
+
+                //click
+                btn.BackColor = Color.White;
+                btn.FillPressColor = Color.FromArgb(242, 243, 245);
+                btn.ForePressColor = Color.FromArgb(22, 93, 255);
+                btn.RectPressColor = Color.White;
+            }
+           
         }
        
 

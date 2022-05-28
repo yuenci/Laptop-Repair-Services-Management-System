@@ -33,7 +33,33 @@ namespace miniSys0._3
             icon.Text = User_type.user_name.Substring(0,1);
             icon.ForeColor = User_type.LogoFore;
             icon.FillColor = User_type.LogoBkg;
+            InitTheme();
         }
+        private void InitTheme()
+        {
+            if (User_type.user_theme == "dark")
+            {
+                this.BackColor = Color.FromArgb(28, 47, 70);
+                rectColor = Color.Transparent;
+
+                dynamic[] lable = { userName, userPost };
+                foreach (var item in lable)
+                {
+                    item.ForeColor = Color.White;
+                }
+
+                dynamic[] btns = { logoutButton2, exitButton1 };
+                foreach (var item in btns)
+                {
+                    item.ForeColor = Color.White;
+                    item.SymbolColor = Color.White;
+                    item.FillColor = Color.FromArgb(55, 55, 57);
+                }
+               
+                //logoutButton2.SymbolColor = Color.White;
+            }
+        }
+
 
         private void uiSymbolButton1_Click(object sender, EventArgs e)
         {

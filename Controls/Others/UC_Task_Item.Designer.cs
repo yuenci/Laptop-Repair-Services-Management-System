@@ -30,12 +30,12 @@
         {
             this.statusIcon = new Sunny.UI.UIUserControl();
             this.uiMarkLabel1 = new Sunny.UI.UIMarkLabel();
-            this.finish = new Sunny.UI.UILabel();
-            this.start = new Sunny.UI.UILabel();
             this.updateTime = new Sunny.UI.UILabel();
             this.statusText = new Sunny.UI.UILabel();
             this.description = new Sunny.UI.UILabel();
             this.orderId = new Sunny.UI.UILabel();
+            this.start = new Sunny.UI.UIButton();
+            this.finish = new Sunny.UI.UIButton();
             this.SuspendLayout();
             // 
             // statusIcon
@@ -65,36 +65,6 @@
             this.uiMarkLabel1.TabIndex = 10;
             this.uiMarkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiMarkLabel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // finish
-            // 
-            this.finish.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.finish.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.finish.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
-            this.finish.Location = new System.Drawing.Point(998, 9);
-            this.finish.Name = "finish";
-            this.finish.Size = new System.Drawing.Size(62, 29);
-            this.finish.Style = Sunny.UI.UIStyle.Custom;
-            this.finish.TabIndex = 22;
-            this.finish.Text = "Finish";
-            this.finish.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.finish.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.finish.Click += new System.EventHandler(this.finish_TextChanged);
-            // 
-            // start
-            // 
-            this.start.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.start.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.start.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
-            this.start.Location = new System.Drawing.Point(927, 9);
-            this.start.Name = "start";
-            this.start.Size = new System.Drawing.Size(54, 29);
-            this.start.Style = Sunny.UI.UIStyle.Custom;
-            this.start.TabIndex = 21;
-            this.start.Text = "Start";
-            this.start.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.start.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.start.Click += new System.EventHandler(this.start_TextChanged);
             // 
             // updateTime
             // 
@@ -144,6 +114,64 @@
             this.orderId.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.orderId.Click += new System.EventHandler(this.orderId_Click);
             // 
+            // start
+            // 
+            this.start.BackColor = System.Drawing.Color.Transparent;
+            this.start.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.start.FillColor = System.Drawing.Color.Transparent;
+            this.start.FillDisableColor = System.Drawing.Color.Transparent;
+            this.start.FillHoverColor = System.Drawing.Color.Transparent;
+            this.start.FillPressColor = System.Drawing.Color.Transparent;
+            this.start.FillSelectedColor = System.Drawing.Color.Transparent;
+            this.start.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.start.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
+            this.start.ForeDisableColor = System.Drawing.Color.DarkGray;
+            this.start.Location = new System.Drawing.Point(927, 9);
+            this.start.MinimumSize = new System.Drawing.Size(1, 1);
+            this.start.Name = "start";
+            this.start.Radius = 0;
+            this.start.RectColor = System.Drawing.Color.Transparent;
+            this.start.RectDisableColor = System.Drawing.Color.Transparent;
+            this.start.RectHoverColor = System.Drawing.Color.Transparent;
+            this.start.RectPressColor = System.Drawing.Color.Transparent;
+            this.start.RectSelectedColor = System.Drawing.Color.Transparent;
+            this.start.Size = new System.Drawing.Size(54, 29);
+            this.start.Style = Sunny.UI.UIStyle.Custom;
+            this.start.TabIndex = 21;
+            this.start.Text = "Start";
+            this.start.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.start.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.start.Click += new System.EventHandler(this.start_TextChanged);
+            // 
+            // finish
+            // 
+            this.finish.BackColor = System.Drawing.Color.Transparent;
+            this.finish.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.finish.FillColor = System.Drawing.Color.Transparent;
+            this.finish.FillDisableColor = System.Drawing.Color.Transparent;
+            this.finish.FillHoverColor = System.Drawing.Color.Transparent;
+            this.finish.FillPressColor = System.Drawing.Color.Transparent;
+            this.finish.FillSelectedColor = System.Drawing.Color.Transparent;
+            this.finish.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.finish.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
+            this.finish.ForeDisableColor = System.Drawing.Color.DarkGray;
+            this.finish.Location = new System.Drawing.Point(998, 9);
+            this.finish.MinimumSize = new System.Drawing.Size(1, 1);
+            this.finish.Name = "finish";
+            this.finish.Radius = 0;
+            this.finish.RectColor = System.Drawing.Color.Transparent;
+            this.finish.RectDisableColor = System.Drawing.Color.Transparent;
+            this.finish.RectHoverColor = System.Drawing.Color.Transparent;
+            this.finish.RectPressColor = System.Drawing.Color.Transparent;
+            this.finish.RectSelectedColor = System.Drawing.Color.Transparent;
+            this.finish.Size = new System.Drawing.Size(62, 29);
+            this.finish.Style = Sunny.UI.UIStyle.Custom;
+            this.finish.TabIndex = 22;
+            this.finish.Text = "Finish";
+            this.finish.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.finish.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.finish.Click += new System.EventHandler(this.finish_TextChanged);
+            // 
             // UC_Task_Item
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -165,11 +193,11 @@
         #endregion
         private Sunny.UI.UIUserControl statusIcon;
         private Sunny.UI.UIMarkLabel uiMarkLabel1;
-        private Sunny.UI.UILabel finish;
-        private Sunny.UI.UILabel start;
         private Sunny.UI.UILabel updateTime;
         private Sunny.UI.UILabel statusText;
         private Sunny.UI.UILabel description;
         private Sunny.UI.UILabel orderId;
+        private Sunny.UI.UIButton start;
+        private Sunny.UI.UIButton finish;
     }
 }

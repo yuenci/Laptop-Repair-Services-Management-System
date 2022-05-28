@@ -20,9 +20,29 @@ namespace miniSys0._3.Controls.MainArea
             InitializeComponent();
             uc_Payment = this;
             InitCurmbs();
+            InitTheme();
             Initcontent();
             
         }
+        private void InitTheme()
+        {
+            if (User_type.user_theme == "dark")
+            {
+                this.BackColor = Color.FromArgb(28, 47, 70);
+                contentPanel.BackColor = Color.FromArgb(28, 47, 70);
+                Container.BackColor = Color.FromArgb(28, 47, 70);
+                Container.FillColor = Color.FromArgb(28, 47, 70);
+                Container.RectColor = Color.Transparent;
+
+                dynamic[] lable = { label1 };
+                foreach (var item in lable)
+                {
+                    item.ForeColor = Color.White;
+                }
+            }
+        }
+
+
         private void InitCurmbs()
         {
             urC_Crumbs1.crumbText.Text = "Payment";

@@ -23,8 +23,9 @@ namespace miniSys0._3.Controls.Others
 
         public UC_Pagination()
         {     
-            InitializeComponent();   
+            InitializeComponent();
         }
+
         
         //card ; list
         public void Init(int dataAmount,int perPage)
@@ -37,8 +38,33 @@ namespace miniSys0._3.Controls.Others
             InitButtonEvent();
 
         }
+        public void InitTheme()
+        {    
+            if (User_type.user_theme == "dark")
+            {
+                this.BackColor = Color.FromArgb(28, 47, 70);
 
-        private bool ifLessEight;
+                dynamic[] lable = { total, uiLabel4, uiLabel1 };
+                foreach (var item in lable)
+                {
+                    item.ForeColor = Color.White;
+                }
+
+                dynamic[] btns = {symButton0,symButton1,symButton2,symButton3,symButton4,symButton5,
+                                  symButton6,symButton7,symButton8,symButton9,symButton10 };
+                foreach (var item in btns)
+                {
+                    item.FillColor = Color.FromArgb(55, 55, 57);
+                    item.BackColor = Color.FromArgb(55, 55, 57);
+                    item.ForeColor = Color.White;
+                }
+
+            }
+        }
+
+
+
+        //private bool ifLessEight;
         private void InitTotal()
         {
             total.Text = $"Total {DataAmount} items";
@@ -185,14 +211,14 @@ namespace miniSys0._3.Controls.Others
         }
         private void IntButtonRender(int pages)
         {
-            if (pages < 8)
+            /*if (pages < 8)
             {
                 ifLessEight = true;
             }
             else
             {
                 ifLessEight = false;
-            }
+            }*/
 
             pageNum = pages;
             Dictionary<int, string> eleDict = new Dictionary<int, string>();

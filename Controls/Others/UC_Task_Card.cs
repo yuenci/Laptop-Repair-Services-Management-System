@@ -17,6 +17,18 @@ namespace miniSys0._3.Controls.Others
             InitializeComponent();
             InitStyle();
         }
+        private void InitTheme()
+        {
+            if (User_type.user_theme == "dark")
+            {
+                dynamic[] lable = { };
+                foreach (var item in lable)
+                {
+                    item.ForeColor = Color.White;
+                }
+            }
+        }
+
         private void InitStyle() 
         {
             uiLine1.FillColor = Color.Transparent;

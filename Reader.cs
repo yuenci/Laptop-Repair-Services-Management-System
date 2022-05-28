@@ -24,6 +24,7 @@ namespace miniSys0._3
             InitializeComponent();
             InitializeChromeForMainLineChart();
             reader = this;
+            InitTheme();
         }
 
         public ChromiumWebBrowser WebBrowser2;
@@ -50,7 +51,18 @@ namespace miniSys0._3
             e.Cancel = true;
             this.Hide();
         }
-        
+        private void InitTheme()
+        {
+            if (User_type.user_theme == "dark")
+            {
+                this.BackColor = Color.FromArgb(28, 47, 70);
+                TitleColor = Color.FromArgb(28, 47, 70);
+                TitleForeColor = Color.White;
+                ControlBoxForeColor = Color.White;
+                rectColor = Color.FromArgb(55, 55, 57);
+            }
+        }
+
     }
     public class BoundObject
     {

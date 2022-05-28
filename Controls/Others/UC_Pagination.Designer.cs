@@ -102,7 +102,7 @@
             // 
             // uiLabel1
             // 
-            this.uiLabel1.BackColor = System.Drawing.Color.White;
+            this.uiLabel1.BackColor = System.Drawing.Color.Transparent;
             this.uiLabel1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel1.ForeColor = System.Drawing.Color.Black;
             this.uiLabel1.Location = new System.Drawing.Point(932, 5);
@@ -150,7 +150,7 @@
             // 
             // uiLabel4
             // 
-            this.uiLabel4.BackColor = System.Drawing.Color.White;
+            this.uiLabel4.BackColor = System.Drawing.Color.Transparent;
             this.uiLabel4.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel4.ForeColor = System.Drawing.Color.Black;
             this.uiLabel4.Location = new System.Drawing.Point(788, 5);
@@ -517,7 +517,7 @@
             // 
             // total
             // 
-            this.total.BackColor = System.Drawing.Color.White;
+            this.total.BackColor = System.Drawing.Color.Transparent;
             this.total.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.total.ForeColor = System.Drawing.Color.Black;
             this.total.Location = new System.Drawing.Point(13, 5);
