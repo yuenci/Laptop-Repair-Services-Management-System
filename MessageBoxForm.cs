@@ -15,7 +15,8 @@ namespace miniSys0._3
     public partial class MessageBoxForm : UIForm
     {
         public static MessageBoxForm Instance;
-        Color btnColor = Color.Black;
+        private Color btnColor = Color.Black;
+
         public MessageBoxForm()
         {
             InitializeComponent();
@@ -93,6 +94,7 @@ namespace miniSys0._3
             }
         }
 
+
         private void btnLeave(object sender, EventArgs e)
         {
             if (sender.Equals(mark))
@@ -105,6 +107,7 @@ namespace miniSys0._3
             }
         }
 
+
         private void mark_Click(object sender, EventArgs e)
         {
             string sql = "UPDATE Messages SET Status = 1 WHERE " + curOrSta();
@@ -113,6 +116,8 @@ namespace miniSys0._3
             Main.main.checkMessage();
             Init(Main.main.messagesList);
         }
+        
+        
         private void delect_Click(object sender, EventArgs e)
         {
             string sql = "UPDATE Messages SET Status = -1 WHERE " + curOrSta();

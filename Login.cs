@@ -16,6 +16,8 @@ namespace miniSys0._3
     public partial class Login : Form
     {
         public static Login login;
+        private Point mPoint;
+
         public Login()
         {
             InitializeComponent();
@@ -26,6 +28,7 @@ namespace miniSys0._3
             addUserControl(uc);
 
         }
+
 
         private void uiSymbolButton1_Click(object sender, EventArgs e)
         {
@@ -38,11 +41,13 @@ namespace miniSys0._3
             Cef.Shutdown();
             Environment.Exit(0);
         }
-        Point mPoint;
+        
+
         private void drag_down(object sender, MouseEventArgs e)
         {
             mPoint = new Point(e.X, e.Y);
         }
+
 
         private void drag_move(object sender, MouseEventArgs e)
         {
@@ -52,6 +57,8 @@ namespace miniSys0._3
 
             }
         }
+        
+
         private void addUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
@@ -62,9 +69,4 @@ namespace miniSys0._3
 
 
     }
-
-    /*public class user_type
-    {
-        public string type = "";
-    }*/
 }

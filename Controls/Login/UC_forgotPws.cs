@@ -35,7 +35,7 @@ namespace miniSys0._3.Controls
             addUserControl(uc);
         }
 
-        void allBlack()
+        private void allBlack()
         {
             phone.ForeColor = Color.Black;
             email.ForeColor = Color.Black;

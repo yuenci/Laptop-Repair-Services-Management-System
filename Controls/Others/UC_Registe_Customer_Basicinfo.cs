@@ -19,6 +19,7 @@ namespace miniSys0._3.Controls.Others
             InitTheme();
             TextBoxCE superName = new TextBoxCE(nameTextBox, "Enter Customer's name",Color.Gray);
         }
+
         private void InitTheme()
         {
             if (User_type.user_theme == "dark")

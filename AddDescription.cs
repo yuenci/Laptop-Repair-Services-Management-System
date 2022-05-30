@@ -13,13 +13,18 @@ namespace miniSys0._3
 {
     public partial class AddDescription : UIForm
     {
+        private string mode = null;
+        private string OrderID = "";
+        private string recevicerIDCache;
+
         public AddDescription()
         {
             InitializeComponent();
             uiSymbolLabel.Visible = false;
             InitTheme();
         }
-        private string mode = null;
+        
+
         private void InitTheme()
         {
             if (User_type.user_theme == "dark")
@@ -48,13 +53,16 @@ namespace miniSys0._3
         {
             this.Close();
         }
-        private string OrderID = "";
+
+        
         public void Init(string ordID)
         {
             this.OrderID= ordID;
             textBox.Text = SQLCursor.Query($"select Description from Orders where OrderID = '{OrderID}';")[0];
             mode = "add_description";
         }
+        
+
         private void ok_Click(object sender, EventArgs e)
         {
             if(mode== "cus_view")
@@ -99,10 +107,12 @@ namespace miniSys0._3
             
         }
 
+
         private void textBox_Enter(object sender, EventArgs e)
         {
             textBox.RectColor = Color.FromArgb(22, 93, 255);
         }
+
 
         public void cusInit(string  str)
         {
@@ -112,7 +122,7 @@ namespace miniSys0._3
             mode = "cus_view";
         }
 
-        private string recevicerIDCache ;
+        
         public void InitChatting(string receiverID,string  receiverName)
         {
             mode = "chatting";
@@ -121,6 +131,7 @@ namespace miniSys0._3
             uiSymbolLabel.Text = "Message sent successfully";
             recevicerIDCache = receiverID;
         }
+
 
         private string getSenderRecevicerInfo()
         {

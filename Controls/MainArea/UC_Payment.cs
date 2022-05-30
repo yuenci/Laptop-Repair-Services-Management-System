@@ -24,6 +24,7 @@ namespace miniSys0._3.Controls.MainArea
             Initcontent();
             
         }
+        
         private void InitTheme()
         {
             if (User_type.user_theme == "dark")
@@ -41,7 +42,6 @@ namespace miniSys0._3.Controls.MainArea
                 }
             }
         }
-
 
         private void InitCurmbs()
         {

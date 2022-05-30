@@ -12,13 +12,15 @@ namespace miniSys0._3.Controls.Others
 {
     public partial class UC_Message_Card : UserControl
     {
+        private string messageCache;
+
         public UC_Message_Card()
         {
             InitializeComponent();
             InitTheme();
             InitEvent();
         }
-        private string messageCache;
+        
         public void Init(dynamic  userUnfo)
         {
             string useID = userUnfo[3] + userUnfo[4];

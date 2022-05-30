@@ -40,14 +40,19 @@ namespace miniSys0._3.Controls.Others
             TextBoxCE superTextbox = new TextBoxCE(nameTextBox, "Enter the user's name", Color.Gray);
             TextBoxCE superTextbox1 = new TextBoxCE(IDnumberTextBox, "Enter the user's ID number", Color.Gray);
         }
+        
+
         private void nameTextBox_Enter(object sender, EventArgs e)
         {
             nameTextBox.RectSize = 1;
         }
+        
+        
         private void IDnumberTextBox_Enter(object sender, EventArgs e)
         {
             IDnumberTextBox.RectSize = 1;
         }
+
 
         private void selectDepartment_DropDown(object sender, EventArgs e)
         {
@@ -56,6 +61,7 @@ namespace miniSys0._3.Controls.Others
             selectPost.Enabled = true;
             selectPost.FillColor = Color.FromArgb(242, 243, 245);
         }
+
 
         private void selectDepartment_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -77,6 +83,7 @@ namespace miniSys0._3.Controls.Others
             }
         }
 
+
         private void selectDepartment_DropDownClosed(object sender, EventArgs e)
         {
             if (selectDepartment.SelectedIndex == -1)
@@ -90,12 +97,14 @@ namespace miniSys0._3.Controls.Others
             }
         }
 
+
         private void selectPost_DropDown(object sender, EventArgs e)
         {
             selectPost.RectColor = Color.Gray;
             selectPost.RectSize = 1;
             
         }
+
 
         private void nextStepBtn_Click(object sender, EventArgs e)
         {

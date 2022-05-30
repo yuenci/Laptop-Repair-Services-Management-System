@@ -316,12 +316,6 @@
       <DependentUpon>SearchBox.cs</DependentUpon>
     </Compile>
     <Compile Include="SQLCursor.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="IconFont.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -472,9 +466,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Others\UrC_Crumbs.resx">
       <DependentUpon>UrC_Crumbs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Loading.resx">
       <DependentUpon>Loading.cs</DependentUpon>

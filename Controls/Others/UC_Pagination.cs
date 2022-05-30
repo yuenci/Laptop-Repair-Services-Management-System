@@ -20,6 +20,7 @@ namespace miniSys0._3.Controls.Others
         public int pageID;
         public int currentPerNum = 10;
         public string type = "";
+        public dynamic[] orderList;
 
         public UC_Pagination()
         {     
@@ -38,6 +39,8 @@ namespace miniSys0._3.Controls.Others
             InitButtonEvent();
 
         }
+        
+        
         public void InitTheme()
         {    
             if (User_type.user_theme == "dark")
@@ -70,6 +73,8 @@ namespace miniSys0._3.Controls.Others
             total.Text = $"Total {DataAmount} items";
             pageNumEnter.Text = "";
         }
+        
+        
         private void BoldFont(object senter, EventArgs e)
         {
             if (senter.Equals(symButton1))
@@ -113,6 +118,8 @@ namespace miniSys0._3.Controls.Others
             }
 
         }
+        
+        
         private void BoldRegular(object senter, EventArgs e)
         {
             if (senter.Equals(symButton1))
@@ -160,6 +167,8 @@ namespace miniSys0._3.Controls.Others
             }
 
         }
+        
+        
         private void InitButtonEvent()
         {
 
@@ -209,6 +218,8 @@ namespace miniSys0._3.Controls.Others
 
             symButton10.Click += new EventHandler(symButtonsClick);
         }
+        
+        
         private void IntButtonRender(int pages)
         {
             /*if (pages < 8)
@@ -294,7 +305,11 @@ namespace miniSys0._3.Controls.Others
             render(eleDict);
 
         }
+        
+        
         private string status = "odd";
+        
+        
         private void render(Dictionary<int, string> eleDict)
         {
             //sort
@@ -375,6 +390,8 @@ namespace miniSys0._3.Controls.Others
             }
             //Console.WriteLine("____________________");
         }
+        
+        
         private void symButtonsClick(object senter, EventArgs e)
         {
             string buttonText = "";
@@ -440,6 +457,8 @@ namespace miniSys0._3.Controls.Others
             logic(buttonText, symBum, currentBlueNum);
 
         }
+        
+        
         private void logic(string ClikedButtonText, int ClikedButtonSymbol, UISymbolButton currentBlueObj)
         {
             if (pageNum == 2)
@@ -816,6 +835,8 @@ namespace miniSys0._3.Controls.Others
             Console.WriteLine(pageID);
             cardCallBack();
         }
+        
+        
         private void clearRect()
         {
             UISymbolButton[] uISymbolButtons = { symButton0,
@@ -829,13 +850,16 @@ namespace miniSys0._3.Controls.Others
                 item.RectColor = Color.White;
             }
         }
+        
+        
         private void justOnePage(UISymbolButton symBtn)
         {
             clearRect();
             symBtn.RectColor = Color.FromArgb(22, 93, 255);
             symBtn.RectHoverColor = Color.FromArgb(22, 93, 255);
         }
-
+  
+        
         private UISymbolButton currentBlue()
         {
             UISymbolButton[] uISymbolButtons = { symButton0,
@@ -854,6 +878,7 @@ namespace miniSys0._3.Controls.Others
             return null;
         }
 
+        
         private void leftRightHover(object senter, EventArgs e)
         {
             if (senter.Equals(symButton2))
@@ -882,7 +907,8 @@ namespace miniSys0._3.Controls.Others
                 }
             }
         }
-
+ 
+        
         private void leftRightLeave(object senter, EventArgs e)
         {
             if (senter.Equals(symButton2))
@@ -911,6 +937,7 @@ namespace miniSys0._3.Controls.Others
                 }
             }
         }
+        
         
         private void ComboBox_DropDownClosed(object sender, EventArgs e)
         {
@@ -945,16 +972,20 @@ namespace miniSys0._3.Controls.Others
             UC_TaskList.instance.renderNewList(0, currentPerNum);
 
         }
+        
+
         private int culPageNum(int perPage = 10)
         {
             int totalPages = (int)Math.Ceiling((double)DataAmount / perPage);
             return totalPages;
         }
 
+
         private void UITextBoxPageNo_KeyDown(object sender, KeyEventArgs e)
         {
             
         }
+
 
         private void pageNumEnter_KeyDown(object sender, KeyEventArgs e)
         {
@@ -973,7 +1004,7 @@ namespace miniSys0._3.Controls.Others
             }
         }
 
-        public dynamic[] orderList;
+
         private void cardCallBack()
         {
             if (type == "card")

@@ -16,6 +16,8 @@ namespace miniSys0._3
     public partial class FormFloating : UIForm
     {
         public static FormFloating profileFloating;
+        
+
         public FormFloating()
         {
             InitializeComponent();
@@ -35,6 +37,8 @@ namespace miniSys0._3
             icon.FillColor = User_type.LogoBkg;
             InitTheme();
         }
+        
+        
         private void InitTheme()
         {
             if (User_type.user_theme == "dark")
@@ -79,6 +83,7 @@ namespace miniSys0._3
                 MessageBoxForm.Instance.Hide();
             }
         }
+
 
         private void logoutButton2_Click(object sender, EventArgs e)
         {

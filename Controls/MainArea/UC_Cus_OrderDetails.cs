@@ -12,14 +12,16 @@ namespace miniSys0._3.Controls.MainArea
 {
     public partial class UC_Cus_OrderDetails : UserControl
     {
+        private string ordIDCache = SQLCursor.Query($"select Top 1 OrderId From Orders Where CustomerID = '{User_type.user_ID}' Order by Time DESC;")[0];
+        private bool urgent;
+
         public UC_Cus_OrderDetails()
         {
             InitializeComponent();
             InitStyle();
             Init();
         }
-        private string ordIDCache = SQLCursor.Query($"select Top 1 OrderId From Orders Where CustomerID = '{User_type.user_ID}' Order by Time DESC;")[0];
-        private bool urgent;
+        
         private void InitStyle()
         {
             dot1.FillColor = Color.FromArgb(22, 93, 255);
@@ -35,6 +37,7 @@ namespace miniSys0._3.Controls.MainArea
             line2.FillColor = Color.Transparent;
             line3.FillColor = Color.Transparent;
         }
+        
         private void Init()
         {
             // order info
@@ -72,6 +75,7 @@ namespace miniSys0._3.Controls.MainArea
 
             InitRecentRepair();
         }
+        
         private void edit_Click(object sender, EventArgs e)
         {
             if (edit.Text =="Edit")
@@ -184,6 +188,7 @@ namespace miniSys0._3.Controls.MainArea
                 return null;
             }
         }
+        
         private void setStatusButton(string status)
         {
             infoBar.Hide();
@@ -205,6 +210,7 @@ namespace miniSys0._3.Controls.MainArea
                 statusBtn.Enabled = false;
             }
         }
+        
         private string getTime(string type)
         {
             if (type == "Order")
@@ -309,7 +315,6 @@ namespace miniSys0._3.Controls.MainArea
             Init();
             Console.WriteLine("333");
         }
-
 
         private void card4_Click(object sender, EventArgs e)
         {

@@ -19,6 +19,7 @@ namespace miniSys0._3.Controls
             NavMenu.ImageList = imageList;
             InitTheme();
         }
+        
         private void addUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
@@ -26,6 +27,7 @@ namespace miniSys0._3.Controls
             Main.main.mainPanel.Controls.Add(userControl);
             userControl.BringToFront();
         }
+        
         private void InitTheme()
         {
             if (User_type.user_theme == "dark")

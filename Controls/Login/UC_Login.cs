@@ -56,7 +56,7 @@ namespace miniSys0._3.Controls
             }
 
 
-            void login(string nameInput, string passwordInput)
+             void login(string nameInput, string passwordInput)
             {
                 string connStr = Setting.DBString;
 

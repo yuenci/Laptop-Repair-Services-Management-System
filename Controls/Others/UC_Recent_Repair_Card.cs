@@ -12,13 +12,15 @@ namespace miniSys0._3.Controls.Others
 {
     public partial class UC_Recent_Repair_Card : UserControl
     {
+        public string ordIDCache = "";
+
         public UC_Recent_Repair_Card()
         {
             InitializeComponent();
             line.LineColor = Color.Gainsboro;
             line.FillColor = Color.Transparent;
         }
-        public string  ordIDCache ="";
+        
         public void Init(string ordID)
         {
             ordIDCache = ordID;

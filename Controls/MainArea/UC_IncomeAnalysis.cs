@@ -15,45 +15,7 @@ namespace miniSys0._3.Controls.MainArea
 {
     public partial class UC_IncomeAnalysis : UserControl
     {
-        public UC_IncomeAnalysis()
-        {
-            InitializeComponent();
-            InitCrumb();
-            InitTheme();
-            InitCef();
-            InDateNum();
-            InitData();
-        }
         public static ChromiumWebBrowser WebBrowserIA;
-        private void InitCrumb()
-        {
-            urC_Crumbs1.crumbText.Text = "Income Analysis";
-            urC_Crumbs1.crumbsHome.Text = " / Data /            rt";
-        }
-        private void InitTheme()
-        {
-            if (User_type.user_theme == "dark")
-            {
-                this.BackColor = Color.FromArgb(28, 47, 70);
-            }
-        }
-        private void InitCef()
-        {
-            string path = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin")) + 
-                $"Html\\adminIncomeAnalysis.html";
-            WebBrowserIA = new ChromiumWebBrowser(path);
-            WebBrowserIA.Dock = DockStyle.Fill;                                                  
-            WebBrowserIA.Dock = DockStyle.Fill;
-            WebBrowserIA.MenuHandler = new MenuHandler();
-            this.chartPanel.Controls.Add(WebBrowserIA);
-
-        }
-
-        private async void refreshlButton2_Click(object sender, EventArgs e)
-        {
-            InitData();
-            await WebBrowserIA.GetBrowser().MainFrame.EvaluateScriptAsync("refresh()");
-        }
         private int dateNum;
         private string totalIncome = "";
         private string totalIncome_AD = "";
@@ -75,10 +37,55 @@ namespace miniSys0._3.Controls.MainArea
         private string time_order_value = "";
         private string server_type_income = "";
         private string payment_method = "";
+
+        public UC_IncomeAnalysis()
+        {
+            InitializeComponent();
+            InitCrumb();
+            InitTheme();
+            InitCef();
+            InDateNum();
+            InitData();
+        }
+        
+        private void InitCrumb()
+        {
+            urC_Crumbs1.crumbText.Text = "Income Analysis";
+            urC_Crumbs1.crumbsHome.Text = " / Data /            rt";
+        }
+
+
+        private void InitTheme()
+        {
+            if (User_type.user_theme == "dark")
+            {
+                this.BackColor = Color.FromArgb(28, 47, 70);
+            }
+        }
+        
+        private void InitCef()
+        {
+            string path = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin")) + 
+                $"Html\\adminIncomeAnalysis.html";
+            WebBrowserIA = new ChromiumWebBrowser(path);
+            WebBrowserIA.Dock = DockStyle.Fill;                                                  
+            WebBrowserIA.Dock = DockStyle.Fill;
+            WebBrowserIA.MenuHandler = new MenuHandler();
+            this.chartPanel.Controls.Add(WebBrowserIA);
+
+        }
+
+        private async void refreshlButton2_Click(object sender, EventArgs e)
+        {
+            InitData();
+            await WebBrowserIA.GetBrowser().MainFrame.EvaluateScriptAsync("refresh()");
+        }
+        
         private void InDateNum()
         {
             dateNum = int.Parse(DateTime.Now.ToString("dd"));
         }
+        
         private void InitData()
         {
             // card1

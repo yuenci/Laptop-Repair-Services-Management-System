@@ -15,7 +15,12 @@ namespace miniSys0._3.Controls.MainArea
 {
     public partial class UC_Cus_dashboard : UserControl
     {
-        UC_Cus_dashboard uc_Cus_dashboard;
+        public UC_Cus_dashboard uc_Cus_dashboard;
+        private int imageID = 1;
+        private System.Timers.Timer aTimer;
+        string cusID = User_type.user_ID;
+        private string[] urls;
+
         public UC_Cus_dashboard()
         {
             InitializeComponent();
@@ -75,15 +80,11 @@ namespace miniSys0._3.Controls.MainArea
             }
         }
 
-        private void UC_Cus_dashboard_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void InitName()
         {
             name_lable.Text = $"Welcome back，{User_type.user_name}";
         }
+        
         private void InitStyle()
         {
             if (User_type.user_theme == "light")
@@ -116,6 +117,7 @@ namespace miniSys0._3.Controls.MainArea
             shortcutButton3.RectColor = Color.Transparent;
 
         }
+        
         public void InitBtnEvent()
         {
             imageBtn1.Click += new EventHandler(Button_Click);
@@ -124,7 +126,7 @@ namespace miniSys0._3.Controls.MainArea
             imageBtnLeft.Click += new EventHandler(imageSwith);
             imageBtnRight.Click += new EventHandler(imageSwith);
         }
-        private int imageID= 1;
+        
         public void Button_Click(object senter, EventArgs e)
         {
 
@@ -147,7 +149,6 @@ namespace miniSys0._3.Controls.MainArea
                 setBelowBtn(3);
             }
         }
-
 
 
         private void imageSwith(object sender, EventArgs e)
@@ -215,8 +216,6 @@ namespace miniSys0._3.Controls.MainArea
             }
         }
 
-        private  System.Timers.Timer aTimer;
-
         private  void SetTimer()
         {
             aTimer = new System.Timers.Timer(4000);
@@ -249,6 +248,7 @@ namespace miniSys0._3.Controls.MainArea
             UC_UserSetting uc = new UC_UserSetting();
             addUserControl(uc);
         }
+        
         private void addUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
@@ -262,7 +262,7 @@ namespace miniSys0._3.Controls.MainArea
             UC_Cus_OrderDetails uc = new UC_Cus_OrderDetails();
             addUserControl(uc);
         }
-        string cusID = User_type.user_ID;
+        
         private void shortcutButton2_Click(object sender, EventArgs e)
         { 
             dynamic[] description = SQLCursor.Query($"select Top 1 Description from Orders where CustomerID = '{cusID}' Order by Time DESC;;");
@@ -356,11 +356,6 @@ namespace miniSys0._3.Controls.MainArea
             return valueText;
         }
 
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void InitNewsStyle()
         {
             newsTopBar.RectColor = Color.Transparent;
@@ -385,7 +380,7 @@ namespace miniSys0._3.Controls.MainArea
             shortcutButton2.RectColor = Color.Transparent;
             shortcutButton3.RectColor = Color.Transparent;
         }
-        private string[] urls;
+        
         private void InitNewsContent()
         {
             dynamic data = SQLCursor.Query("SELECT TOP  5 Title,Views,Url FROM Articles ORDER BY Views DESC;");
@@ -399,6 +394,7 @@ namespace miniSys0._3.Controls.MainArea
                 urls[i] = data[i][2];
             }
         }
+        
         private void readerShow(int newsID)
         {
             string path = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin"))
@@ -413,6 +409,7 @@ namespace miniSys0._3.Controls.MainArea
 
 
         }
+        
         private void add1ToViews(string url)
         {
             Label[] lables = { newslabel1, newslabel2, newslabel3, newslabel4, newslabel5 };
@@ -421,6 +418,7 @@ namespace miniSys0._3.Controls.MainArea
             string sql = $"update Articles set Views=Views+1 where Url='{url}';";
             SQLCursor.Execute(sql);
         }
+        
         private void InitNewsEvents()
         {
             news1.Click  += new EventHandler(newsClick);
@@ -441,6 +439,7 @@ namespace miniSys0._3.Controls.MainArea
             news4.MouseLeave += new EventHandler(newsLeave);
             news5.MouseLeave += new EventHandler(newsLeave);
         }
+        
         private void newsClick(object sender, EventArgs e)
         {
             if (sender.Equals(news1))
@@ -522,7 +521,6 @@ namespace miniSys0._3.Controls.MainArea
                 newslabel5.ForeColor = Color.Black;
             }
         }
-
 
     }
 

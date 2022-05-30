@@ -14,6 +14,9 @@ namespace miniSys0._3
 {
     public partial class Loading : UIForm
     {
+        private Random rand = new Random();
+        private int num = 0;
+
         public Loading()
         {
             InitializeComponent();
@@ -32,30 +35,8 @@ namespace miniSys0._3
             }
             progressBar.Size = new Size(0, 4);
         }
-
-        /*private void LoadingText()
-        {
-            timer1.Interval = 1000;
-            timer1.Start();
-        }
-
-        private int num = 0;
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            Label[] loadingLael = { load1, load2, load3, load4, load5, load6, load7 };
-            loadingLael[num].Show();
-            progressBar.Size = new Size(108 * (num + 1),4 );
-            num++;
-            if (num == 7)
-            {
-                timer1.Stop();
-            }
-
-        }*/
         
         
-        Random rand = new Random();
-        private int num = 0;
         private void RandomLoadingText()
         {
             this.mytimer.Tick += new System.EventHandler(this.TimerEventProcessor);
@@ -64,6 +45,7 @@ namespace miniSys0._3
             mytimer.Enabled = true;
             mytimer.Start();
         }
+
 
         public void TimerEventProcessor(Object myObject, EventArgs myEventArgs)
         {

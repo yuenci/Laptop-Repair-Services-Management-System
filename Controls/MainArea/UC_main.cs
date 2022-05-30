@@ -19,6 +19,11 @@ namespace miniSys0._3.Controls
     public partial class UC_main : UserControl
     {
         public UC_main uc_main;
+        private Color newsFore = Color.Black;
+        public static ChromiumWebBrowser WebBrowser;
+        public static ChromiumWebBrowser WebBrowser1;
+        public static ChromiumWebBrowser WebBrowser2;
+
         public UC_main()
         {
             InitializeComponent();
@@ -45,7 +50,7 @@ namespace miniSys0._3.Controls
             initReader();
             uc_main = this;
         }
-        private Color newsFore = Color.Black;
+        
         private void InitTheme()
         {
             if (User_type.user_theme == "dark")
@@ -74,6 +79,7 @@ namespace miniSys0._3.Controls
                 }
             }
         }
+        
         void initsunnyUI()
         {
             upperTriangle.ForeColor = Color.Red;
@@ -118,11 +124,13 @@ namespace miniSys0._3.Controls
             refreshlButton2.RectHoverColor = Color.Transparent;
             refreshlButton2.RectPressColor = Color.Transparent;
         }
+        
         private void initName()
         {
             string greet = $"Welcome back，{User_type.user_name}";
             name_lable.Text = greet;
         }
+        
         public  static  dynamic getDataReader(string sql)
         {
             string connStr = Setting.DBString;
@@ -189,6 +197,7 @@ namespace miniSys0._3.Controls
             conn2.Close();
             return result;
         }
+        
         private void initDataBanner()
         {
 
@@ -261,7 +270,6 @@ namespace miniSys0._3.Controls
 
         }
 
-        
         private void initNewsDataToGlobal()
         {
             dynamic[] connTools = getDataReader("SELECT TOP 5 ArticlelD,Title, PosterID,Time,Url,Views,Likes FROM Articles WHERE TYPE ='News' ORDER BY  Views DESC");
@@ -318,8 +326,7 @@ namespace miniSys0._3.Controls
 
         }
 
-
-        void noticeStyle(dynamic noticeObj,string type)
+        private void noticeStyle(dynamic noticeObj,string type)
         {
             if (type == "Activity")
             {
@@ -345,7 +352,8 @@ namespace miniSys0._3.Controls
             }
         }
 
-        void initNoticesStyle()
+
+        private void initNoticesStyle()
         {
             notice1.RectDisableColor = Color.Transparent;
             notice2.RectDisableColor = Color.Transparent;
@@ -397,7 +405,8 @@ namespace miniSys0._3.Controls
             conn.Close();
 
         }
-        void initShortcut()
+
+        private void initShortcut()
         {
 
             if (User_type.user_deparment == "Receptionist")
@@ -473,8 +482,6 @@ namespace miniSys0._3.Controls
             }
         }
         
-        public static ChromiumWebBrowser WebBrowser;
-
         
         private void InitializeChromeForMainLineChart()
         {
@@ -496,12 +503,13 @@ namespace miniSys0._3.Controls
             //refreshlButton.PerformClick();
 
         }
+        
         private async void refreshlButton_Click(object sender, EventArgs e)
         {
             await WebBrowser.GetBrowser().MainFrame.EvaluateScriptAsync("refresh()");
         }
 
-        public static ChromiumWebBrowser WebBrowser1;
+        
         private void InitializeChromeForMainPieChart()
         {
             /* var setting1 = new CefSettings();
@@ -518,6 +526,7 @@ namespace miniSys0._3.Controls
             //refreshlButton.PerformClick();
 
         }
+        
         private void CefinitStatus()
         {
             if (User_type.ifCefInit == false)
@@ -525,6 +534,7 @@ namespace miniSys0._3.Controls
                 User_type.ifCefInit = true;
             }
         }
+        
         private async void refreshlButton2_Click(object sender, EventArgs e)
         {
             await WebBrowser1.GetBrowser().MainFrame.EvaluateScriptAsync("refresh1()");
@@ -607,7 +617,6 @@ namespace miniSys0._3.Controls
                 item.MouseLeave += new EventHandler(news_leave);
             }
         }
-
 
         private void notice_hover(object sender, EventArgs e)
         {
@@ -728,11 +737,11 @@ namespace miniSys0._3.Controls
         #endregion
 
 
-        public static ChromiumWebBrowser WebBrowser2;
         void initReader()
         {
             Reader readerInst= new Reader();
         }
+
         private void initArticleData(string type,int  no)
         {
             // create text and store in to js file
@@ -792,6 +801,7 @@ namespace miniSys0._3.Controls
             }
 
         }
+        
         public  void readerShow(string type,int num)
         {
             if (type == "news")
@@ -837,6 +847,7 @@ namespace miniSys0._3.Controls
             }
             
         }
+        
         public static void add1ToViewsOrLikesToDB(string type)
         {
             string atrID = ArticlesInfo.currentArticlelD;
@@ -990,6 +1001,7 @@ namespace miniSys0._3.Controls
                 //
             }
         }
+        
         public void addUserControlToMain(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
@@ -997,6 +1009,7 @@ namespace miniSys0._3.Controls
             Main.main.mainPanel.Controls.Add(userControl);
             userControl.BringToFront();
         }
+        
         private void shortcutButton1_Click(object sender, EventArgs e)
         {
             string type = shortcutText1.Text;
@@ -1055,5 +1068,4 @@ namespace miniSys0._3.Controls
         }
         //throw new MyException("Sql statement has mistakes");
     }
-    public static class Temp { }
 }

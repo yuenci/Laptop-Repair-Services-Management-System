@@ -28,6 +28,7 @@ namespace miniSys0._3.Controls
             userControl.BringToFront();
         }
 
+
         private void NavMenu_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
             string nodeSelect = "";
@@ -75,6 +76,7 @@ namespace miniSys0._3.Controls
 
             }
         }
+
 
         private void InitTheme()
         {

@@ -15,6 +15,8 @@ namespace miniSys0._3.Controls.MainArea
     public partial class UC_Registration : UserControl
     {
         public static UC_Registration uc_Registration;
+        public Panel contentArea;
+
         public UC_Registration()
         {
             InitializeComponent();
@@ -27,6 +29,7 @@ namespace miniSys0._3.Controls.MainArea
             //button1.Click += new EventHandler(buttonClickCallfuc);
 
         }
+        
         private void InitTheme()
         {
             if (User_type.user_theme == "dark")
@@ -45,12 +48,13 @@ namespace miniSys0._3.Controls.MainArea
                 }
             }
         }
+        
         private void InitCurmbs()
         {
             urC_Crumbs1.crumbText.Text = "Registration";
             urC_Crumbs1.crumbsHome.Text = " / Form / Register";
         }
-        public Panel contentArea;
+        
 
         public static void iconSelect(UIAvatar icon,Label iconLabel)
         {
@@ -59,6 +63,8 @@ namespace miniSys0._3.Controls.MainArea
 
             iconLabel.Font = new Font(".萍方-简", 12, FontStyle.Bold);
         }
+        
+
         public static void iconUnSelect(UIAvatar icon, Label iconLabel)
         {
             icon.FillColor = Color.FromArgb(242, 243, 245);
@@ -67,12 +73,14 @@ namespace miniSys0._3.Controls.MainArea
             iconLabel.Font = new Font(".萍方-简", 12, FontStyle.Regular);
         }
 
+
         private void InitIcon()
         {
             iconSelect(icon1, iconLabel1);
             iconUnSelect(icon2, iconLabel2);
             iconUnSelect(icon3, iconLabel3);
         }
+
 
         private void  icon1OrLabel1Click(object senter, EventArgs e)
         {
@@ -108,6 +116,7 @@ namespace miniSys0._3.Controls.MainArea
             }
             
         }
+
 
         private void icon2OrLabel2Click(object senter, EventArgs e)
         {
@@ -157,6 +166,7 @@ namespace miniSys0._3.Controls.MainArea
             
         }
 
+
         private void icon3OrLabel3Click(object senter, EventArgs e)
         {
             if (RegisterInfoCache.step3Activate == true)
@@ -170,6 +180,7 @@ namespace miniSys0._3.Controls.MainArea
                 
         }
 
+
         private void IconEventRegister()
         {
             icon1.Click += new EventHandler(icon1OrLabel1Click);
@@ -181,7 +192,6 @@ namespace miniSys0._3.Controls.MainArea
             icon3.Click += new EventHandler(icon3OrLabel3Click);
             iconLabel3.Click += new EventHandler(icon3OrLabel3Click);
         }
-
 
 
         private void InitContent()

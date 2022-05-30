@@ -14,6 +14,19 @@ namespace miniSys0._3.Controls.Others
 {
     public partial class UC_ReciptComplete : UserControl
     {
+        private string datatimeCache;
+        private string customerCache;
+        private string receptionstCache;
+        private string addressCache;
+        private string receiptNumCache;
+        private string invoiceNumCache;
+        private string pymentMethodCache;
+        private string cardNumberCache;
+        private string orderNumCache;
+        private string serviceCache;
+        private string priceCache;
+        private string urgentCache;
+
         public UC_ReciptComplete()
         {
             InitializeComponent();  
@@ -56,18 +69,7 @@ namespace miniSys0._3.Controls.Others
             }
         }
 
-        private string datatimeCache;
-        private string customerCache;
-        private string receptionstCache;
-        private string addressCache;
-        private string receiptNumCache;
-        private string invoiceNumCache;
-        private string pymentMethodCache;
-        private string cardNumberCache;
-        private string orderNumCache;
-        private string serviceCache;
-        private string priceCache;
-        private string urgentCache;
+        
         private void InitStyle()
         {
             uiLine1.LineColor = Color.Gainsboro;
@@ -104,6 +106,8 @@ namespace miniSys0._3.Controls.Others
             printReceipt.SymbolHoverColor = Color.Black;
             printReceipt.SymbolPressColor = Color.Black;
         }
+        
+        
         private void intiData()
         {
             datetime.Text = ReceiptInfoCache.time;
@@ -164,25 +168,29 @@ namespace miniSys0._3.Controls.Others
             cardNumberCache = cardNumber.Text;
 
     }
-    private string getDateTIme(string type)
-        {
-            if(type =="MMM")
+        
+        
+        private string getDateTIme(string type)
             {
-                string Datetime = DateTime.Now.ToString("dd-MMM-yyyy", new System.Globalization.CultureInfo("en-US"));
-                //25-Apr-2022
-                string[] args = Datetime.Split('-');
-                return args[1].ToUpper() + " " + args[0] + ", "+args[2];
+                if(type =="MMM")
+                {
+                    string Datetime = DateTime.Now.ToString("dd-MMM-yyyy", new System.Globalization.CultureInfo("en-US"));
+                    //25-Apr-2022
+                    string[] args = Datetime.Split('-');
+                    return args[1].ToUpper() + " " + args[0] + ", "+args[2];
 
+                }
+                else if(type == "MMMM")
+                {
+                    string Datetime =  DateTime.Now.ToString("dd-MMMM-yyyy", new System.Globalization.CultureInfo("en-US"));
+                    //25 - April - 2022
+                    string[] args = Datetime.Split('-');
+                    return args[1] + " " + args[0] + ", " + args[2];
+                }
+                return null;
             }
-            else if(type == "MMMM")
-            {
-                string Datetime =  DateTime.Now.ToString("dd-MMMM-yyyy", new System.Globalization.CultureInfo("en-US"));
-                //25 - April - 2022
-                string[] args = Datetime.Split('-');
-                return args[1] + " " + args[0] + ", " + args[2];
-            }
-            return null;
-        }
+        
+        
         private void moneyLable()
         {
             money.Text = "RM"+ ReceiptInfoCache.price;
@@ -191,6 +199,8 @@ namespace miniSys0._3.Controls.Others
             amountPrice.Text = "RM" + ReceiptInfoCache.price;
             priceCache = money.Text;
         }
+        
+        
         private string getUrgent()
         {
             if (ReceiptInfoCache.urgent == "1")
@@ -207,6 +217,7 @@ namespace miniSys0._3.Controls.Others
             }
             
         }
+
 
         private void setReciptInvoiceID()
         {
@@ -225,6 +236,7 @@ namespace miniSys0._3.Controls.Others
         
     }
 
+
         public static Bitmap QRCode(string msg, int version, int pixel, string icon_path, int icon_size, int icon_border, bool white_edge)
         {
 
@@ -242,7 +254,6 @@ namespace miniSys0._3.Controls.Others
             return bmp;
 
         }
-
 
         private void creatQRCode()
         {
@@ -269,6 +280,7 @@ namespace miniSys0._3.Controls.Others
             Bitmap bmp = QRCode(str_msg, version, pixel, iconLocation, int_icon_size, int_icon_border, b_we);
             QRpictureBox.Image = bmp;
         }
+
 
         public static void PrintControl(string docName, string printerName, Panel ucToPrint, bool isPrintView)
         {
@@ -308,10 +320,12 @@ namespace miniSys0._3.Controls.Others
             }
         }
 
+
         private void printReceipt_Click(object sender, EventArgs e)
         {
             PrintControl("recepti", "Microsoft Print to PDF", UC_Payment.uc_Payment.contentPanel, true);
         }
+
 
         private void printInvoice_Click(object sender, EventArgs e)
         {

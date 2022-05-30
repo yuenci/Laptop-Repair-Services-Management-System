@@ -14,6 +14,8 @@ namespace miniSys0._3
     public partial class SearchBox : UIForm
     {
         public static SearchBox Instance;
+        private Color userControlBgcColor = Color.Transparent;
+        private Color userControlHoverColor = Color.FromArgb(115, 179, 255);
         public SearchBox()
         {
             Instance = this;
@@ -21,8 +23,7 @@ namespace miniSys0._3
             InitTheme();
             InitEvent();
         }
-        Color userControlBgcColor = Color.Transparent;
-        Color userControlHoverColor = Color.FromArgb(115, 179, 255);
+        
         public void InitTheme()
         {
 
@@ -111,6 +112,7 @@ namespace miniSys0._3
             }
         }
 
+
         private void userControl_leave(object sender, EventArgs e)
         {
 
@@ -131,6 +133,7 @@ namespace miniSys0._3
                 uiUserControl4.FillColor = userControlBgcColor;
             }
         }
+
 
         private void userControl_click(object sender, EventArgs e)
         {
@@ -157,6 +160,7 @@ namespace miniSys0._3
             }
         }
 
+
         private void InitEvent()
         {
             dynamic[] userControls = { uiUserControl1, uiUserControl4, uiUserControl2, uiUserControl3 };
@@ -175,6 +179,7 @@ namespace miniSys0._3
                 item.Click += new EventHandler(userControl_click);
             }
         }
+
 
         private void clickEvent(int num)
         {
@@ -360,6 +365,7 @@ namespace miniSys0._3
             }
         }
 
+
         private void empty_hide_search_box()
         {
             this.Visible = false;
@@ -368,6 +374,8 @@ namespace miniSys0._3
             uiLabel3.Text = "Search staff:";
             uiLabel4.Text = "Search order:";
         }
+        
+
         private dynamic formatInput(string str, string type)
         {
             // return null / useID(11)

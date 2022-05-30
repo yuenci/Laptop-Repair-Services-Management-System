@@ -28,11 +28,12 @@ namespace miniSys0._3.Controls.MainArea
             InitSwitchBtns();
             Initpagenation();
 
-            
             //Init10Items();
             allCard.PerformClick(); 
 
         }
+        
+        
         private void InitTheme()
         {
             if (User_type.user_theme == "dark")
@@ -62,6 +63,7 @@ namespace miniSys0._3.Controls.MainArea
             urC_Crumbs1.crumbsHome.Text = " / Table / Card list";
         }
 
+
         private void InitStyle()
         {
             /*dynamic[] lables = { uiLabel1, uiLabel2, uiLabel3, uiLabel4, uiLabel5 };
@@ -77,11 +79,14 @@ namespace miniSys0._3.Controls.MainArea
             searchIcon.ForeColor = Color.FromArgb(78, 89, 105);
         }
 
+
         private void InitSwitchBtns()
         {
             clearBtnStyle();
             clickBtnStyle(allCard);
         }
+        
+        
         private void clearBtnStyle()
         {
             UIButton[] btnList = { allCard, noStartCard, repairingCard, dfinishedCard };
@@ -133,6 +138,8 @@ namespace miniSys0._3.Controls.MainArea
                 }
             }
         }
+        
+        
         private void clickBtnStyle(UIButton btn)
         {
             if (User_type.user_theme == "dark")
@@ -179,7 +186,6 @@ namespace miniSys0._3.Controls.MainArea
             }
         }
 
-
         private void searchBox_Enter(object sender, EventArgs e)
         {
             if (searchBox.Text == "Search")
@@ -195,10 +201,14 @@ namespace miniSys0._3.Controls.MainArea
                 searchBox.Text = "Search";
             }
         }
+        
+        
         private void Initpagenation()
         {
             pagination.type = "list";
         }
+        
+        
         private void switchButton1_Click(object sender, EventArgs e)
         {
             clearBtnStyle();
@@ -212,6 +222,7 @@ namespace miniSys0._3.Controls.MainArea
 
             renderNewList(0,pagination.currentPerNum);
         }
+
 
         private void switchButton2_Click(object sender, EventArgs e)
         {
@@ -227,6 +238,7 @@ namespace miniSys0._3.Controls.MainArea
             renderNewList(0,pagination.currentPerNum);
         }
 
+
         private void switchButton3_Click(object sender, EventArgs e)
         {
             clearBtnStyle();
@@ -240,6 +252,7 @@ namespace miniSys0._3.Controls.MainArea
 
             renderNewList(0, pagination.currentPerNum);
         }
+
 
         private void switchButton4_Click(object sender, EventArgs e)
         {
@@ -304,6 +317,7 @@ namespace miniSys0._3.Controls.MainArea
             
         }
 
+
         private void searchIcon_Click(object sender, EventArgs e)
         {
             string sql;
@@ -357,6 +371,7 @@ namespace miniSys0._3.Controls.MainArea
             }
         }
     }
+
     public static class Order_Search
     {
         static int  orderNum ;

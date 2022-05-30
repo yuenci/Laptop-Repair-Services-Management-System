@@ -13,6 +13,8 @@ namespace miniSys0._3
 {
     public partial class OrderDetails : UIForm
     {
+        private string orderIDCache;
+
         public OrderDetails()
         {
             InitializeComponent();
@@ -52,7 +54,7 @@ namespace miniSys0._3
             }
         }
 
-        private string orderIDCache;
+        
         public void Init(string orderId)
         {
             // order info

@@ -20,6 +20,8 @@ namespace miniSys0._3.Controls.Others
             InitWarningBar();
             InitTheme();
         }
+
+
         private void InitTheme()
         {
             if (User_type.user_theme == "dark")
@@ -33,10 +35,13 @@ namespace miniSys0._3.Controls.Others
             }
         }
 
+
         private void viewMore_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MessageBox.Show("agreement");
         }
+        
+        
         private void InitData()
         {
             name.Text = RegisterInfoCache.user_name;
@@ -47,11 +52,15 @@ namespace miniSys0._3.Controls.Others
             password.BackColor = Color.Transparent;
             password.FillColor = Color.FromArgb(242, 243, 245);
         }
+        
+        
         private void InitWarningBar()
         {
             warningBar.BackColor = Color.FromArgb(255, 247, 232);
             warningBar.SymbolColor = Color.FromArgb(255, 125, 0);
         }
+        
+        
         private void again_Click(object sender, EventArgs e)
         {
 
@@ -100,6 +109,7 @@ namespace miniSys0._3.Controls.Others
             uc.Location = new Point(320, 80);
             AddUserControl.Add(uc, UC_Registration.uc_Registration.contentPanel);
         }
+
 
         private void CheckButton_Click(object sender, EventArgs e)
         {

@@ -135,6 +135,8 @@ namespace miniSys0._3
             
             conn.Close();
         }
+       
+
         public static void ExecuteMany(string sql,dynamic list)
         {
             // how to use 
@@ -192,6 +194,8 @@ namespace miniSys0._3
             conn.Close();    
             
         }
+        
+
         public static void AddOne(string rowIDName, string IDvalue, string colname, string tableName )
         {
             //args = {rowIDName,IDvalue,colname, tableName}
@@ -224,6 +228,7 @@ namespace miniSys0._3
             conn.Close();
         }
 
+
         public static string AddOneToLastID(string rowIDName ,string tableName)
         {
             string lastOneID = Query($"SELECT TOP 1 {rowIDName} FROM {tableName} ORDER BY  {rowIDName} DESC;")[0];
@@ -241,6 +246,8 @@ namespace miniSys0._3
             newID = rowIDName.Substring(0, 3) + newValue.ToString().PadLeft(6, '0');
             return newID;
         }
+       
+
         public static dynamic getDataReader(string sql)
         {
             string DBString = Setting.DBString;
@@ -262,6 +269,7 @@ namespace miniSys0._3
             }
             
         }
+
 
         public static string getName(string useID)
         {

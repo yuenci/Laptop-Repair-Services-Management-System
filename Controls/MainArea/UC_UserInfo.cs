@@ -24,9 +24,9 @@ namespace miniSys0._3.Controls.MainArea
             InitTheme();
             string[] staffIDArray = { "Sta000001", "Sta000004", "Sta000037", "Sta000063" };
             InitRlatedStaff(staffIDArray);
-
-            
         }
+        
+        
         private void InitTheme()
         {
             if (User_type.user_theme == "dark")
@@ -50,7 +50,6 @@ namespace miniSys0._3.Controls.MainArea
                 uC_StaffCard14.BackColor = Color.FromArgb(55, 55, 57);
             }
         }
-
 
         private void InitUserInfoBar()
         {
@@ -87,6 +86,7 @@ namespace miniSys0._3.Controls.MainArea
                 ButtonUserCoutry.Location = new Point(660, 150);
             }
         }
+        
         private void InitDeviceCard()
         {
             this.macLabel.Parent = this.pictureBoxMacbook;
@@ -111,6 +111,8 @@ namespace miniSys0._3.Controls.MainArea
 
             
         }
+        
+        
         private void InitRlatedStaff(string[] stuffArry)
         {
             if (stuffArry.Length != 4)
@@ -150,46 +152,7 @@ namespace miniSys0._3.Controls.MainArea
             dr2.Close();
             conn2.Close();
         }
-        /*private void InitRlatedStaff(string[] stuffArry)
-        {
-        uC_StaffCard11
-            if (stuffArry.Length != 4)
-            {
-                throw new MyException("staff number has mistake");
-            }
-
-            uC_StaffCard1.pictureHead.Image = Resources.head1;
-            uC_StaffCard2.pictureHead.Image = Resources.head2;
-            uC_StaffCard3.pictureHead.Image = Resources.head3;
-            uC_StaffCard4.pictureHead.Image = Resources.head4;
-
-            dynamic[] staffCardObjArray = { uC_StaffCard1 , uC_StaffCard2 , uC_StaffCard3 , uC_StaffCard4 };
-
-            //staffNameLable
-            //deparNameLable
-
-            string allsql = "";
-            for (int i = 0; i < 4; i++)
-            {
-                var sqlpart = $"select Name,Post from Staff where StaffID = '{stuffArry[i]}';";
-                allsql += sqlpart;
-            }
-            dynamic[] connTools2 = UC_main.getDataReader(allsql);
-            SqlDataReader dr2 = connTools2[1];
-            SqlConnection conn2 = connTools2[0];
-            int ii = 0;
-            do
-            {
-                dr2.Read();
-                staffCardObjArray[ii].staffNameLable.Text = dr2["Name"].ToString();
-                staffCardObjArray[ii].deparNameLable.Text = dr2["Post"].ToString();
-                ii++;
-
-            }
-            while (dr2.NextResult()); //next method
-            dr2.Close();
-            conn2.Close();
-        }*/
+        
 
         #region Phone and Mac card init
         private void phone_hover(object sender, EventArgs e)
@@ -198,6 +161,7 @@ namespace miniSys0._3.Controls.MainArea
             buttonGarbage1.Show();
         }
 
+        
         private async void phone_leave(object sender, EventArgs e)
         {
             var result = sleepForms(3000);
@@ -206,6 +170,7 @@ namespace miniSys0._3.Controls.MainArea
             buttonGarbage1.Hide();
         }
 
+        
         private async void macCard_leave(object sender, EventArgs e)
         {
             var result = sleepForms(3000);
@@ -214,6 +179,7 @@ namespace miniSys0._3.Controls.MainArea
             buttonGarbage2.Hide();
         }
 
+        
         private Task<string> sleepForms(int ms)
         {
             var task = Task.Run(() =>
@@ -225,11 +191,13 @@ namespace miniSys0._3.Controls.MainArea
             return task;
         }
 
+
         private void mac_hover(object sender, EventArgs e)
         {
             ButtonEdit2.Show();
             buttonGarbage2.Show();
         }
+
 
         private async void mac_leave(object sender, EventArgs e)
         {
@@ -240,8 +208,8 @@ namespace miniSys0._3.Controls.MainArea
         }
 
 
-
         #endregion
+
 
         private void ButtonEditPhoto_Click(object sender, EventArgs e)
         {

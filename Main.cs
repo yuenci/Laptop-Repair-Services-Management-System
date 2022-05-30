@@ -20,6 +20,14 @@ namespace miniSys0._3
     public partial class Main : Form
     {
         public static Main main;
+        private Point mPoint;
+        private static FormFloating uniqueInstance;
+        private SearchBox searchBox_instance = null;
+        public bool ifViewProfileExist = false;
+        public List<dynamic> messagesList = new List<dynamic>();
+        private bool ifReciveNewMessage;
+        private MessageBoxForm messageBox_instance = null;
+
         public Main()
         {
             InitializeComponent();
@@ -62,13 +70,15 @@ namespace miniSys0._3
 
 
         }
-        Point mPoint;
+       
+
         private void InitCef()
         {
             var setting = new CefSettings();
             setting.MultiThreadedMessageLoop = true;
             CefSharp.Cef.Initialize(setting);
         }
+
 
         private void InitTheme()
         {
@@ -101,19 +111,26 @@ namespace miniSys0._3
             }
             set_notice_color();
         }
+        
+
         private void InitReader()
         {
             Reader reader = new Reader();
         }
+        
+
         private void InitProfile()
         {
             this.profile.Text = User_type.user_name.Substring(0, 1);
             searchBox.Visible = false;
         }
+        
+
         private void drag_down(object sender, MouseEventArgs e)
         {
             mPoint = new Point(e.X, e.Y);
         }
+
 
         private void drag_move(object sender, MouseEventArgs e)
         {
@@ -138,7 +155,8 @@ namespace miniSys0._3
             }
             
         }
-        private static FormFloating uniqueInstance;
+        
+
         private void profile_Click(object sender, EventArgs e)
         {
             if (uniqueInstance == null)
@@ -166,7 +184,6 @@ namespace miniSys0._3
         }
 
 
-
         private void searchIcon_Click(object sender, EventArgs e)
         {
             searchBox.RectColor = Color.FromArgb(187, 191, 196);
@@ -192,6 +209,8 @@ namespace miniSys0._3
             }
             
         }
+        
+
         private void empty_search_box_content()
         {
             SearchBox.Instance.uiLabel1.Text = "Go to page";
@@ -200,22 +219,26 @@ namespace miniSys0._3
             SearchBox.Instance.uiLabel3.Text = "Search order:" ;
         }
 
+
         private void search_enter(object sender, EventArgs e)
         {
             searchBox.Text = "";
             show_search();
         }
 
+
         private void search_leave(object sender, EventArgs e)
         {
             searchBox.Text = "Type here to search";
         }
-        private SearchBox searchBox_instance = null;
+        
+
         private void Init_search_box()
         {
             SearchBox searchBoxForm = new SearchBox();
             searchBox_instance = searchBoxForm;
         }
+
 
         private void show_search()
         {
@@ -234,6 +257,8 @@ namespace miniSys0._3
             navMenuPanel.Controls.Add(userControl);
             userControl.BringToFront();
         }
+        
+
         private void addNavMenu()
         {
             /*UC_Test uc = new UC_Test();
@@ -262,11 +287,9 @@ namespace miniSys0._3
             }
 
         }
-
         
 
-
-        void randomLogoColor()
+        private void randomLogoColor()
         {
             Color[] colorListR = { //6
 
@@ -350,10 +373,13 @@ namespace miniSys0._3
             
 
         }
+        
+
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
 
         private void writeDataToJsFIle(string type, List<int> parameter)
         {
@@ -398,6 +424,7 @@ namespace miniSys0._3
             sw.Dispose();
         }
 
+
         private void prepareData()
         {
             List<int> weekOrderNum = UC_main.getOneWeekOrderNum();
@@ -405,6 +432,7 @@ namespace miniSys0._3
             writeDataToJsFIle("lineChart",weekOrderNum);
             writeDataToJsFIle("pieChart",monthOrderNRatio);
         }
+
 
         #region
         public string currentMainPage;
@@ -523,7 +551,8 @@ namespace miniSys0._3
                 InitOtherPageTheme();
             } 
         }
-        public bool ifViewProfileExist = false;
+        
+
         private void InitOtherPageTheme()
         {
             SearchBox.Instance.InitTheme();
@@ -534,6 +563,7 @@ namespace miniSys0._3
             }
         }
         
+
         private void lodaNewMainPage(string currentControlStr)
         {
             Console.WriteLine(currentControlStr);
@@ -585,6 +615,7 @@ namespace miniSys0._3
             }
         }
 
+
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
             searchBox.RectColor = Color.FromArgb(187, 191, 196);
@@ -602,8 +633,7 @@ namespace miniSys0._3
             
         }
     
-        public List<dynamic> messagesList = new List<dynamic>();
-        private bool ifReciveNewMessage;
+        
         public void checkMessage()
         {
             Init_message_data();
@@ -619,6 +649,7 @@ namespace miniSys0._3
                 set_notice_color();
             }
         }
+
 
         private void Init_message_data()
         {
@@ -651,6 +682,8 @@ namespace miniSys0._3
             dynamic[] data3 = SQLCursor.Query(sql3);
             addMessageTolist(data3);
         }
+        
+
         private void set_notice_color()
         {
             if (ifReciveNewMessage)
@@ -664,6 +697,7 @@ namespace miniSys0._3
                 message.FillHoverColor = Color.FromArgb(242, 243, 245);
             }
         }
+
 
         private void addMessageTolist(dynamic messages)
         {
@@ -687,6 +721,7 @@ namespace miniSys0._3
                
             }
         }
+
 
         private void uiSymbolButton2_Click(object sender, EventArgs e)
         {
@@ -717,7 +752,7 @@ namespace miniSys0._3
                 messageBox_instance.Visible = false;
             }
         }
-        private MessageBoxForm messageBox_instance = null;
+        
 
         private void hideOtherControls()
         {  

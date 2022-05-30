@@ -24,6 +24,8 @@ namespace miniSys0._3.Controls.MainArea
             uc_TaskCards = this;
             InitSwitchBtns();
         }
+        
+
         private void InitTheme()
         {
             if (User_type.user_theme == "dark")
@@ -45,11 +47,15 @@ namespace miniSys0._3.Controls.MainArea
                 pagination.InitTheme();
             }
         }
+        
+        
         private void InitCurmbs()
         {
             urC_Crumbs1.crumbText.Text = "Table";
             urC_Crumbs1.crumbsHome.Text = " / Table / Card list";
         }
+        
+        
         private void InitCard()
         {
             string sql1 = "WITH A AS(SELECT DISTINCT OrderID,Time from Schedule WhERE Status = 'Finished'),";
@@ -78,6 +84,8 @@ namespace miniSys0._3.Controls.MainArea
             pagination.ComboBox.Enabled = false;
             pagination.type = "card";
         }
+        
+        
         private void InitStyle()
         {
             searchBox.RectColor = Color.White;
@@ -86,11 +94,15 @@ namespace miniSys0._3.Controls.MainArea
             searchIcon.FillColor = Color.FromArgb(242, 243, 245);
             searchIcon.ForeColor = Color.FromArgb(78, 89, 105);
         }
+        
+        
         private void InitSwitchBtns()
         {
             clearBtnStyle();
             clickBtnStyle(allCard);
         }
+        
+        
         private void clearBtnStyle()
         {
             UIButton[] btnList = { allCard, noStartCard, repairingCard, dfinishedCard };
@@ -143,6 +155,8 @@ namespace miniSys0._3.Controls.MainArea
             }
             
         }
+        
+        
         private void clickBtnStyle(UIButton btn)
         {
             if (User_type.user_theme == "dark")
@@ -190,7 +204,6 @@ namespace miniSys0._3.Controls.MainArea
            
         }
        
-
         private void searchBox_Enter(object sender, EventArgs e)
         {
             if (searchBox.Text=="Search")
@@ -199,6 +212,7 @@ namespace miniSys0._3.Controls.MainArea
             }
         }
 
+
         private void searchBox_Leave(object sender, EventArgs e)
         {
             if (searchBox.Text == "")
@@ -206,6 +220,7 @@ namespace miniSys0._3.Controls.MainArea
                 searchBox.Text = "Search";
             }
         }
+
 
         private void switchButton1_Click(object sender, EventArgs e)
         {
@@ -218,6 +233,7 @@ namespace miniSys0._3.Controls.MainArea
             renderCard(pagination.orderList);
             pagination.Init(pagination.orderList.Length, 9);
         }
+
 
         private void switchButton2_Click(object sender, EventArgs e)
         {

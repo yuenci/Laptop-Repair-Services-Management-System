@@ -19,6 +19,8 @@ namespace miniSys0._3.Controls
             NavMenu.ImageList = imageList1;
             InitTheme();
         }
+        
+        
         private void InitTheme()
         {
             if (User_type.user_theme == "dark")
@@ -48,6 +50,7 @@ namespace miniSys0._3.Controls
                 }
             }
         }
+
 
         private void addUserControl(UserControl userControl)
         {

@@ -51,6 +51,7 @@ namespace miniSys0._3.Controls.Others
                 "Enter user's personal introduction with a maximum of 300 characters.", Color.Gray);
         }
 
+
         private void nextStepBtn_Click(object sender, EventArgs e)
         {
             if (phone.Text == "" || phone.Text == "Enter user's phone")
@@ -145,6 +146,7 @@ namespace miniSys0._3.Controls.Others
             }
         }
         
+
         private string generatePWD()
         {
             string chars = "0123456789ABCDEFGHIJKLMNOPQSTUVWXYZabcdefghijklmnpqrstuvwxyz";

@@ -14,6 +14,9 @@ namespace miniSys0._3.Controls.Others
 {
     public partial class UC_ReciptSubmit : UserControl
     {
+        private static string customerIDCashe = "";
+        private string Card_Account_ID;
+
         public UC_ReciptSubmit()
         {
             InitializeComponent();
@@ -24,6 +27,7 @@ namespace miniSys0._3.Controls.Others
             successIcon.Visible = false;
             cardID.Visible = false;
         }
+
 
         private void InitTheme()
         {
@@ -39,6 +43,7 @@ namespace miniSys0._3.Controls.Others
                 }
             }
         }
+
 
         private void InitLabels()
         {
@@ -58,6 +63,8 @@ namespace miniSys0._3.Controls.Others
             cardID.Enabled = false;
 
         }
+        
+
         private void InitComboBox()
         {
             switch1.ActiveColor = Color.FromArgb(255, 128, 128);
@@ -70,6 +77,7 @@ namespace miniSys0._3.Controls.Others
             method.FillColor = Color.FromArgb(242, 243, 245);
 
         }
+
 
         private void submitButton_Click(object sender, EventArgs e)
         {
@@ -155,6 +163,7 @@ namespace miniSys0._3.Controls.Others
             }
         }
 
+
         private void resetButton_Click(object sender, EventArgs e)
         {
             UITextBox[] Labels = { name, brand, model };
@@ -178,7 +187,8 @@ namespace miniSys0._3.Controls.Others
             switch1.Active = false;
 
         }
-        private static string customerIDCashe = "";
+        
+        
         private void name_Leave(object sender, EventArgs e)
         {
             var customerID = SQLCursor.Query($"Select CustomerID From  Customer Where Name =  '{name.Text}'");
@@ -194,11 +204,14 @@ namespace miniSys0._3.Controls.Others
             }
         }
 
+
         private void name_Enter(object sender, EventArgs e)
         {
             errorBar.Visible = false;
             successIcon.Visible = false;
         }
+        
+
         private int ifUrgent()
         {
             if (switch1.ActiveText =="Yes")
@@ -213,12 +226,16 @@ namespace miniSys0._3.Controls.Others
                 return -1;
             }
         }
+        
+        
         private string getService_Type()
         {
             int index = type.SelectedIndex +1;
             string serverID = index.ToString().PadLeft(3, '0');
             return serverID;
         }
+        
+        
         private int TotalPrice()
         {
             int[,] pricelist = { { 50, 80 }, { 60, 90 }, { 380, 430 }, { 160, 200 },
@@ -229,6 +246,7 @@ namespace miniSys0._3.Controls.Others
             int row = type.SelectedIndex;
             return pricelist[row, col];
         }
+
 
         private void method_DropDownClosed(object sender, EventArgs e)
         {
@@ -253,13 +271,15 @@ namespace miniSys0._3.Controls.Others
 
         }
 
+
         private void cardID_Enter(object sender, EventArgs e)
         {
             cardID.RectColor = Color.Gray;
             cardID.RectSize = 1;
             cardID.Text = "";
         }
-        private string Card_Account_ID;
+        
+
         private bool IfcardIDOKTosubmit()
         {
             if (method.SelectedIndex == 2)

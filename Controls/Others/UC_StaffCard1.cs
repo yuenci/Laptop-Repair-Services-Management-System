@@ -17,6 +17,7 @@ namespace miniSys0._3.Controls.Others
             InitializeComponent();
             InitTheme();
         }
+
         private void InitTheme()
         {
             if (User_type.user_theme == "dark")

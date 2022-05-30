@@ -12,11 +12,16 @@ namespace miniSys0._3.Controls.Others
 {
     public partial class UC_Task_Card : UserControl
     {
+        private string ordIDCache = "";
+        private string name = "";
+
+
         public UC_Task_Card()
         {
             InitializeComponent();
             InitStyle();
         }
+        
         private void InitTheme()
         {
             if (User_type.user_theme == "dark")
@@ -28,6 +33,7 @@ namespace miniSys0._3.Controls.Others
                 }
             }
         }
+
 
         private void InitStyle() 
         {
@@ -49,7 +55,7 @@ namespace miniSys0._3.Controls.Others
             avatar.ForeColor = Color.White;
 
         }
-        private  string ordIDCache = "";
+       
         public void Init(string ordID)
         {
             clearStyle();
@@ -76,6 +82,7 @@ namespace miniSys0._3.Controls.Others
 
        
         }
+        
         private  void clearStyle()
         {
             uiUserControl1.FillColor = Color.White;
@@ -85,11 +92,12 @@ namespace miniSys0._3.Controls.Others
             more.ForeColor = Color.Silver;
         }
         
-        private string  name ="";
+        
         private void avatar_MouseHover(object sender, EventArgs e)
         {
             toolTip1.Show($"{name}", avatar);
         }
+
 
         private void start_Click(object sender, EventArgs e)
         {
@@ -102,6 +110,7 @@ namespace miniSys0._3.Controls.Others
 
         }
 
+
         private void done_Click(object sender, EventArgs e)
         {
             start.Enabled = false;
@@ -112,6 +121,7 @@ namespace miniSys0._3.Controls.Others
             done.Enabled = false;
             uiUserControl1.FillColor = Color.FromArgb(232, 255, 234);
         }
+
 
         private void InitStatus(string status)
         {
@@ -142,6 +152,7 @@ namespace miniSys0._3.Controls.Others
             }
         }
 
+
         private void InitDescriptionIcon(string description)
         {
             if (description != "")
@@ -156,12 +167,14 @@ namespace miniSys0._3.Controls.Others
             }
         }
 
+
         private void more_Click(object sender, EventArgs e)
         {
             OrderDetails orderDetails = new OrderDetails();
             orderDetails.Init(ordIDCache);
             orderDetails.Show();
         }
+
 
         private void edit_Click(object sender, EventArgs e)
         {
@@ -170,10 +183,12 @@ namespace miniSys0._3.Controls.Others
             addDescription.Show();
         }
 
+
         private void start_MouseHover(object sender, EventArgs e)
         {
             toolTip2.Show("Start repair", start);
         }
+
 
         private void done_MouseHover(object sender, EventArgs e)
         {

@@ -50,11 +50,14 @@ namespace miniSys0._3.Controls.MainArea
             }
         }
 
+
         private void InitCurmbs()
         {
             urC_Crumbs1.crumbText.Text = "User setting";
 
         }
+        
+
         private void InitIcon()
         {
             //urC_Crumbs1.crumbText.Text = "User Setting";
@@ -71,6 +74,8 @@ namespace miniSys0._3.Controls.MainArea
 
 
         }
+        
+        
         private string encryptedPhoneNum(string phoneNum)
         {
             double lengthdouble = phoneNum.Length - (phoneNum.Length % 3) ;
@@ -87,6 +92,8 @@ namespace miniSys0._3.Controls.MainArea
 
 
         }
+        
+
         private void InitUserInfo()
         {
             uiLabel7.Text = User_type.user_name;
@@ -101,6 +108,7 @@ namespace miniSys0._3.Controls.MainArea
 
         }
 
+
         private void SelectedButtonStyle(UIUserControl userControl,Label lable)
         {
             lable.ForeColor = Color.FromArgb(22, 93, 255);
@@ -109,12 +117,16 @@ namespace miniSys0._3.Controls.MainArea
             userControl.FillColor = Color.FromArgb(242, 243, 245);
 
         }
+        
+
         private void UnSelectedButtonStyle(UIUserControl userControl, Label lable)
         {
             lable.ForeColor = Color.FromArgb(78, 89, 105);
             lable.Font = new Font(".萍方-简", 12, FontStyle.Regular);
             userControl.FillColor = Color.Transparent;
         }
+        
+        
         private void InitChangeButton()
         {
             bgBI.RectColor = Color.White;
@@ -123,6 +135,7 @@ namespace miniSys0._3.Controls.MainArea
             UnSelectedButtonStyle(bgSS,labelSS);
         }
 
+
         private void addUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
@@ -130,6 +143,8 @@ namespace miniSys0._3.Controls.MainArea
             contentPanel.Controls.Add(userControl);
             userControl.BringToFront();
         }
+        
+        
         private void InitContentPanel()
         {
             UC_BasicInfo uc = new UC_BasicInfo();
@@ -146,6 +161,7 @@ namespace miniSys0._3.Controls.MainArea
             addUserControl(uc);
         }
 
+
         private void labelBI_Click(object sender, EventArgs e)
         {
             SelectedButtonStyle(bgBI, labelBI);
@@ -153,6 +169,7 @@ namespace miniSys0._3.Controls.MainArea
             UC_BasicInfo uc = new UC_BasicInfo();
             addUserControl(uc);
         }
+
 
         private void editPhone_Click(object sender, EventArgs e)
         {
@@ -202,13 +219,19 @@ namespace miniSys0._3.Controls.MainArea
 
 
         }
+        
+
         private void InitAuthStatus()
         {
             authStatus.RectColor = Color.White;
             authStatus.FillColor = Color.FromArgb(232, 255, 234);
             authStatus.ForeColor = Color.FromArgb(0, 180, 42);
         }
+        
+        
         private UITextBox idCardNum = new UITextBox();
+        
+        
         private void editIDCardNum_Click(object sender, EventArgs e)
         {
             if (editIDCardNum.Text == "Edit")
@@ -240,6 +263,7 @@ namespace miniSys0._3.Controls.MainArea
                 }
             }
         }
+
 
         private void ButtonEditPhoto_Click(object sender, EventArgs e)
         {

@@ -13,11 +13,14 @@ namespace miniSys0._3.Controls.Others
 {
     public partial class UC_Task_Item : UserControl
     {
+        private string orderIDcache;
+
         public UC_Task_Item()
         {
             InitializeComponent();
             InitTheme();
         }
+
         private void InitTheme()
         {
             if (User_type.user_theme == "dark")
@@ -31,8 +34,7 @@ namespace miniSys0._3.Controls.Others
             }
         }
 
-
-        private string orderIDcache;
+        
         public void Init(string orderID)
         {
             orderIDcache = orderID;
@@ -59,6 +61,7 @@ namespace miniSys0._3.Controls.Others
             
         }
 
+
         private void setStatus(string status)
         {
             if (status == "Order")
@@ -82,12 +85,14 @@ namespace miniSys0._3.Controls.Others
             }
         }
 
+
         private void description_TextChanged(object sender, EventArgs e)
         {
             AddDescription descriptionForm = new AddDescription();
             descriptionForm.Init(orderIDcache);
             descriptionForm.Show();
         }
+
 
         private void start_TextChanged(object sender, EventArgs e)
         {
@@ -101,6 +106,7 @@ namespace miniSys0._3.Controls.Others
             updateTime.Text = time;
         }
 
+
         private void finish_TextChanged(object sender, EventArgs e)
         {
             //green
@@ -113,6 +119,7 @@ namespace miniSys0._3.Controls.Others
             finish.Enabled = false;
             updateTime.Text = time;
         }
+
 
         private void orderId_Click(object sender, EventArgs e)
         {

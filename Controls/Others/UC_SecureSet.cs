@@ -13,6 +13,11 @@ namespace miniSys0._3.Controls.Others
 {
     public partial class UC_SecureSet : UserControl
     {
+        UILabel passwordLable = new UILabel();
+        UILabel secriteLable = new UILabel();
+        UILabel phoneLable = new UILabel();
+        UILabel eamilLable = new UILabel();
+
         public UC_SecureSet()
         {
             InitializeComponent();
@@ -20,6 +25,7 @@ namespace miniSys0._3.Controls.Others
             ShowInfoLable("all");
             InitTheme();
         }
+
         private void InitTheme()
         {
             if (User_type.user_theme == "dark")
@@ -174,6 +180,7 @@ namespace miniSys0._3.Controls.Others
             sendButton1.Hide();
             sendButton2.Hide();
         }
+        
         private void ShowInfoLable(int num)
         {
             if (num == 1)
@@ -200,15 +207,11 @@ namespace miniSys0._3.Controls.Others
                 sendButton2.Show();
             }
         }
-        UILabel passwordLable = new UILabel();
-        UILabel secriteLable = new UILabel();
-        UILabel phoneLable = new UILabel();
-        UILabel eamilLable = new UILabel();
+        
 
         private void ShowInfoLable(string all)
         {
             
-
             passwordLable.Size = new Size(738, 29);
             secriteLable.Size = new Size(738, 29);
             phoneLable.Size = new Size(738, 29);
@@ -264,6 +267,7 @@ namespace miniSys0._3.Controls.Others
             this.Controls.Add(eamilLable);
         }
 
+
         private void editPassword_Click(object sender, EventArgs e)
         {
             if (editPassword.Text == "Edit")
@@ -312,10 +316,9 @@ namespace miniSys0._3.Controls.Others
 
         }
 
+
         private void editQuestion_Click(object sender, EventArgs e)
         {
-
-
 
             if (editQuestion.Text == "Edit")
             {
@@ -362,6 +365,7 @@ namespace miniSys0._3.Controls.Others
             
         }
 
+
         private void editPhone_Click(object sender, EventArgs e)
         {
             
@@ -404,6 +408,7 @@ namespace miniSys0._3.Controls.Others
             
             
         }
+
 
         private void editEmail_Click(object sender, EventArgs e)
         {
@@ -448,15 +453,18 @@ namespace miniSys0._3.Controls.Others
             
         }
 
+
         private void sendButton1_Click(object sender, EventArgs e)
         {
             MessageBox.Show($"Verified code has been sent to {phone1.Text}, please check");
         }
 
+
         private void sendButton2_Click(object sender, EventArgs e)
         {
             MessageBox.Show($"Verified code has been sent to {email1.Text}, please check");
         }
+
 
         private void secureComb_DropDown(object sender, EventArgs e)
         {

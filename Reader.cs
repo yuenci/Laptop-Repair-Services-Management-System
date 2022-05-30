@@ -19,6 +19,8 @@ namespace miniSys0._3
     public partial class Reader : UIForm
     {
         public static Reader reader;
+        public ChromiumWebBrowser WebBrowser2;
+
         public Reader()
         {
             InitializeComponent();
@@ -27,7 +29,7 @@ namespace miniSys0._3
             InitTheme();
         }
 
-        public ChromiumWebBrowser WebBrowser2;
+        
         private void InitializeChromeForMainLineChart()
         {
 
@@ -46,11 +48,14 @@ namespace miniSys0._3
 
         }
 
+
         private void form_closing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = true;
             this.Hide();
         }
+        
+
         private void InitTheme()
         {
             if (User_type.user_theme == "dark")
@@ -64,6 +69,7 @@ namespace miniSys0._3
         }
 
     }
+
     public class BoundObject
     {
         public string MessageText { get; set; }

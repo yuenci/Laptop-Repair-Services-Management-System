@@ -14,6 +14,7 @@ namespace miniSys0._3
     public partial class ViewProfile : UIForm
     {
         public static ViewProfile Instance;
+        private string userID_cache;
         //use type(staff/customer) whose profile be watch 
         //if check by seld
         public ViewProfile()
@@ -103,7 +104,8 @@ namespace miniSys0._3
                 }
             }
         }
-        private string userID_cache;
+        
+
         private void initLabel()
         {
 
@@ -132,6 +134,7 @@ namespace miniSys0._3
             userID_cache = RegisterInfoCache.user_ID;
         }
         
+
         private void privacy(string staffID)
         {
             if (User_type.user_deparment == "Customer")
@@ -152,6 +155,7 @@ namespace miniSys0._3
                 }
             }
         }
+
 
         public void InitStaff(string staffID)
         {
@@ -185,6 +189,7 @@ namespace miniSys0._3
             
         }
 
+
         public void InitCus(string cusID)
         {
             dynamic[] data = SQLCursor.Query("SELECT Name,Country,Phone_number,Email," +
@@ -213,6 +218,7 @@ namespace miniSys0._3
            
 
         }
+
 
         private void contact_Click(object sender, EventArgs e)
         {
