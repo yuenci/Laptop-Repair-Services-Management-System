@@ -905,7 +905,7 @@
             this.BannerLabel4.AutoSize = true;
             this.BannerLabel4.BackColor = System.Drawing.Color.Transparent;
             this.BannerLabel4.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Bold);
-            this.BannerLabel4.Location = new System.Drawing.Point(719, 94);
+            this.BannerLabel4.Location = new System.Drawing.Point(709, 94);
             this.BannerLabel4.Name = "BannerLabel4";
             this.BannerLabel4.Size = new System.Drawing.Size(76, 34);
             this.BannerLabel4.TabIndex = 28;
@@ -916,7 +916,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font(".萍方-简", 12F);
-            this.label10.Location = new System.Drawing.Point(721, 68);
+            this.label10.Location = new System.Drawing.Point(711, 68);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(78, 22);
             this.label10.TabIndex = 27;
@@ -991,7 +991,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::miniSys0._3.Properties.Resources.todayorder;
-            this.pictureBox7.Location = new System.Drawing.Point(655, 68);
+            this.pictureBox7.Location = new System.Drawing.Point(645, 68);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(60, 60);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

@@ -29,6 +29,13 @@ namespace miniSys0._3.Controls.MainArea
         
         private void InitTheme()
         {
+            if (User_type.user_deparment =="Customer")
+            {
+                ButtonUserPost.Visible = false;
+                ButtonUserDepart.Visible = false;
+                ButtonUserCoutry.Visible = false;
+            }
+
             if (User_type.user_theme == "dark")
             {
                 this.BackColor = Color.FromArgb(28, 47, 70);

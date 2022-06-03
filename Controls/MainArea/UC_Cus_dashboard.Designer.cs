@@ -124,6 +124,7 @@
             this.doc4.Size = new System.Drawing.Size(76, 22);
             this.doc4.TabIndex = 52;
             this.doc4.Text = "About us";
+            this.doc4.Click += new System.EventHandler(this.doc4_Click);
             // 
             // doc3
             // 
@@ -136,6 +137,7 @@
             this.doc3.Size = new System.Drawing.Size(92, 22);
             this.doc3.TabIndex = 51;
             this.doc3.Text = "Contact us";
+            this.doc3.Click += new System.EventHandler(this.doc3_Click);
             // 
             // doc2
             // 
@@ -148,6 +150,7 @@
             this.doc2.Size = new System.Drawing.Size(75, 22);
             this.doc2.TabIndex = 50;
             this.doc2.Text = "Tutorials";
+            this.doc2.Click += new System.EventHandler(this.doc2_Click);
             // 
             // doc1
             // 
@@ -160,6 +163,7 @@
             this.doc1.Size = new System.Drawing.Size(94, 22);
             this.doc1.TabIndex = 49;
             this.doc1.Text = "Quick Start";
+            this.doc1.Click += new System.EventHandler(this.doc1_Click);
             // 
             // label20
             // 
@@ -353,6 +357,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // imageBtnLeft
             // 

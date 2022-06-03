@@ -243,15 +243,18 @@
             // secureComb
             // 
             this.secureComb.DataSource = null;
+            this.secureComb.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.secureComb.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
             this.secureComb.FilterMaxCount = 50;
             this.secureComb.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.secureComb.Items.AddRange(new object[] {
-            "Q11111111111",
-            "Q2222222222222",
-            "Q333333333333",
-            "Q4444444444444",
-            "Q555555555555"});
+            "What is your favorie food?",
+            "What is your first teacher\'s name?",
+            "What is your father\'s middle name?",
+            "What is your city of birth?",
+            "What is your library card number?",
+            "What is your frequent flyer number",
+            "What is your first phone number?"});
             this.secureComb.ItemSelectBackColor = System.Drawing.Color.Silver;
             this.secureComb.Location = new System.Drawing.Point(207, 99);
             this.secureComb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -262,7 +265,6 @@
             this.secureComb.Size = new System.Drawing.Size(255, 40);
             this.secureComb.Style = Sunny.UI.UIStyle.Custom;
             this.secureComb.TabIndex = 74;
-            this.secureComb.Text = "Select a question";
             this.secureComb.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.secureComb.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.secureComb.DropDown += new System.EventHandler(this.secureComb_DropDown);

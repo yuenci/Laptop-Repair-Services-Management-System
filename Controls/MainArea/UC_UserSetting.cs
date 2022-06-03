@@ -25,6 +25,7 @@ namespace miniSys0._3.Controls.MainArea
             InitAuthStatus();
             InitContentPanel();
             InitChangeButton();
+            InitSQLArgs();
         }
         private void InitTheme()
         {
@@ -72,7 +73,12 @@ namespace miniSys0._3.Controls.MainArea
             /*ButtonEditPhoto.Parent = icon;
             ButtonEditPhoto.Location = new Point(70, 95);*/
 
-
+            if (User_type.user_deparment == "Customer")
+            {
+                uiLabel6.Visible = false;
+                authStatus.Visible = false;
+                editIDCardNum.Visible = false;
+            }
         }
         
         
@@ -170,7 +176,21 @@ namespace miniSys0._3.Controls.MainArea
             addUserControl(uc);
         }
 
-
+        private string userIDType;
+        private string userTable;
+        private void InitSQLArgs()
+        {
+            if (User_type.user_ID.Substring(0, 3) == "Cus")
+            {
+                userIDType = "CustomerID";
+                userTable = "Customer";
+            }
+            else
+            {
+                userIDType = "StaffID";
+                userTable = "Staff";
+            }
+        }
         private void editPhone_Click(object sender, EventArgs e)
         {
             string oldPhoneNum = phoneTextBox.Text;
@@ -192,16 +212,25 @@ namespace miniSys0._3.Controls.MainArea
                 {
                     try
                     {
-                        Console.WriteLine("!=!=!==");
                         Regex.IsMatch(phoneTextBox.Text, @"Expression");
                         phoneTextBox.Enabled = false;
+
+                        string sql = $"UPDATE {userTable} SET Phone_number = '{phoneTextBox.Text}' " +
+                                $"WHERE {userIDType} = '{User_type.user_ID}';";
+                        SQLCursor.Execute(sql);
+
+                        User_type.user_phone = phoneTextBox.Text;
+
+
                         string orginalNum = phoneTextBox.Text;
                         string encryNum = encryptedPhoneNum(phoneTextBox.Text);
                         phoneTextBox.Text = encryNum;
                         phoneTextBox.RectColor = Color.White;
                         editPhone.Text = "Edit";
                         User_type.user_phone = orginalNum;
-                        MessageBox.Show($"send new phone:{orginalNum} to db");
+                        MessageBox.Show($"Reset phone to {orginalNum} successfully");
+
+                        
                     }
                     catch
                     {
@@ -250,10 +279,18 @@ namespace miniSys0._3.Controls.MainArea
                 if (idCardNum.Text != User_type.user_ID_number)
                 {
                     string id_num = idCardNum.Text;
+
+                    string sql = $"UPDATE {userTable} SET ID_number = '{id_num}' " +
+                                $"WHERE {userIDType} = '{User_type.user_ID}';";
+                    SQLCursor.Execute(sql);
+
+                    User_type.user_phone = phoneTextBox.Text;
+                    MessageBox.Show($"Reset ID number to {id_num} successfully");
+
                     container1.Controls.Remove(idCardNum);
                     authStatus.Show();
                     editIDCardNum.Text = "Edit";
-                    MessageBox.Show($"send new id num:{id_num} to db");
+                    
                 }
                 else
                 {

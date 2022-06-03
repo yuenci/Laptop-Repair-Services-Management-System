@@ -64,84 +64,100 @@ namespace miniSys0._3.Controls
                 MessageBox.Show("Can't connect to the database, please contact the system administrator.");
             }
 
+        }
 
-             void login(string nameInput, string passwordInput)
+        private void loginToMain(string nameInput, string passwordInput)
+        {
+            string userID = SQLCursor.ifStaOrCus(nameInput);
+            if (userID.Substring(0,3) == "Cus")
             {
-                string connStr = Setting.DBString;
-
-                SqlConnection conn = new SqlConnection(connStr);
-                conn.Open();
-
-                //match staff
-                string sql = $"SELECT Password,Name,Department,Post,StaffID," +
-                    $"Country,Regtime,Gender,Phone_number,Email," +
-                    $" ID_number FROM Staff WHERE Name = '{nameInput}'";
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                SqlDataReader dr = cmd.ExecuteReader();
-
-                if (dr.Read())
+                if (SQLCursor.PasswordVerification(nameInput, passwordInput))
                 {
-                    if (passwordInput == dr["Password"].ToString())
-                    {
-                        User_type.user_name = dr["Name"].ToString();
-                        User_type.user_deparment = dr["Department"].ToString();
-                        User_type.user_post = dr["Post"].ToString();
-                        User_type.user_ID = dr["StaffID"].ToString();
-                        User_type.user_Country = dr["Country"].ToString();
-                        User_type.user_regtime = dr["Regtime"].ToString();
-                        User_type.user_gender = dr["Gender"].ToString();
-                        User_type.user_phone = dr["Phone_number"].ToString();
-                        User_type.user_email = dr["Email"].ToString();
-                        User_type.user_ID_number = dr["ID_number"].ToString() ;
+                    string sql = $"SELECT * FROM Customer WHERE Name = '{nameInput}';";
+                    dynamic[] data = SQLCursor.Query(sql);
 
-                        Main main = new Main();
-                        main.Show();
-                        Login.login.Hide();
-                        //MessageBox.Show("Login success");
-                        dr.Close();
-                    }
+                    User_type.user_deparment = "Customer";
+                    User_type.user_ID = data[0];
+                    User_type.user_name = data[1];
+                    User_type.user_phone = data[2];
+                    User_type.user_email = data[3];
+                    User_type.Birthday = data[4];
+                    User_type.user_gender = data[5];
+                    User_type.user_post = "Customer";
+                    User_type.user_ID_number = "";
+                    User_type.user_about = data[8];
+                    User_type.user_Country = data[6];
+                    User_type.user_Address = data[7];
+                    User_type.user_regtime = data[9];
+                    User_type.user_security_qustion = data[10];
+                    User_type.user_security_answer = data[11];
+                    User_type.user_password = data[12];
+                    User_type.user_theme = "light";
 
-                    else
-                    {
-                        MessageBox.Show("Wrong password");
-                        dr.Close();
-                    }
+                    Main main = new Main();
+                    main.StartPosition = FormStartPosition.CenterScreen;
+                    main.Show();
+                    Login.login.Hide();
                 }
                 else
                 {
-                    dr.Close();
-                    //match customer
-                    string sql1 = $"SELECT Password,Name,CustomerID FROM Customer WHERE Name = '{nameInput}'";
-                    SqlCommand cmd1 = new SqlCommand(sql1, conn);
-                    SqlDataReader dr1 = cmd1.ExecuteReader();
-                    if (dr1.Read())
-                    {
-                        if (passwordInput == dr1["Password"].ToString())
-                        {
-                            User_type.user_name = dr1["Name"].ToString();
-                            User_type.user_ID = dr1["CustomerID"].ToString();
-                            Main main = new Main();
-                            main.Show();
-                            Login.login.Hide();
-
-                            //MessageBox.Show("Login success");
-
-                            dr1.Close();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Wrong password");
-                            dr1.Close();
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show($"{nameInput} does not exist");
-                        dr1.Close();
-                    }
+                    MessageBox.Show("Wrong password");
                 }
 
-                conn.Close();
+
+            }
+            else if (userID.Substring(0, 3) == "Sta")
+            {
+                if (SQLCursor.PasswordVerification(nameInput, passwordInput))
+                {
+                    string sql = $"SELECT * FROM Staff WHERE Name = '{nameInput}';";
+                    dynamic[] data = SQLCursor.Query(sql);
+
+                    if (data[7] == "Admin")
+                    {
+                        User_type.user_deparment = "Admin";
+                    }
+                    else if (data[7] == "Service department")
+                    {
+                        User_type.user_deparment = "Receptionist";
+                    }
+                    else if (data[7] == "Technican department")
+                    {
+                        User_type.user_deparment = "Technician";
+                    }
+                    User_type.user_ID = data[0];
+                    User_type.user_name = data[1];
+                    User_type.user_phone = data[2];
+                    User_type.user_email = data[3];
+                    User_type.Birthday = data[4];
+                    User_type.user_gender = data[5];
+                    User_type.user_post = data[6];
+                    User_type.user_ID_number = data[10];
+                    User_type.user_about = data[11];
+                    User_type.user_Country = data[8];
+                    User_type.user_Address = data[9];
+                    User_type.user_regtime = data[12];
+                    User_type.user_security_qustion = data[13];
+                    User_type.user_security_answer = data[14];
+                    User_type.user_password = data[15];
+                    User_type.user_theme = "light";
+
+                    Main main = new Main();
+                    main.StartPosition = FormStartPosition.CenterScreen;
+                    main.Show();
+                    Login.login.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Wrong password");
+                }
+                    
+
+
+            }
+            else
+            {
+                MessageBox.Show($"{nameInput} doesn't exist");
             }
         }
 
@@ -259,64 +275,7 @@ namespace miniSys0._3.Controls
 
         }
 
-        private void loginToMain(string nameInput, string passwordInput)
-        {
-            
-            dynamic resultStaff = SQLCursor.Query($"Select * From Staff Where Name = '{nameInput}'");
-            if (resultStaff.Length != 0)
-            {
-                if (resultStaff[15] == passwordInput)
-                {
-                    // set department for user
-                    string department = resultStaff[6];
-                    if (department == "Admin")
-                    {
-                        User_type.user_deparment = "Admin";
-                    }
-                    else if(department == "Service department")
-                    {
-                        User_type.user_deparment = "Receptionist";
-                    }
-                    else if (department == "Technican department")
-                    {
-                        User_type.user_deparment = "Technician";
-                    }
-
-                    //Console.WriteLine(User_type.user_deparment);
-                    Loading loading = new Loading();
-                    loading.Show();
-                    Login.login.Hide();
-                    //MessageBox.Show("Login success")
-                }
-                else
-                {
-                    MessageBox.Show("Wrong password, try again please");
-                }
-            }
-            else
-            {
-                dynamic resultCus = SQLCursor.Query($"Select * From Customer Where Name = '{nameInput}'");
-                if (resultCus.Length != 0)
-                {
-
-                    if (resultCus[12] == passwordInput)
-                    {
-                        User_type.user_deparment = "Customer";
-                        Loading loading = new Loading();
-                        loading.Show();
-                        Login.login.Hide();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Wrong password, try again please");
-                    }
-                }
-                else
-                {
-                    MessageBox.Show($"{nameInput} does not exist");
-                }
-            }      
-        }
+ 
 
         private bool IfDBConnect()
         {

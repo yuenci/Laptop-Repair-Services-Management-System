@@ -24,6 +24,7 @@ namespace miniSys0._3.Controls.Others
             HideAllTextBox();
             ShowInfoLable("all");
             InitTheme();
+            InitSQLArgs();
         }
 
         private void InitTheme()
@@ -266,7 +267,58 @@ namespace miniSys0._3.Controls.Others
             this.Controls.Add(phoneLable);
             this.Controls.Add(eamilLable);
         }
+        private void HideInfoLable(int num)
+        {
+            if(num == 1)
+            {
+                password1.Hide();
+                password2.Hide();
+                passwordLable.Show();
+                editPassword.Text = "Edit";
+            }
+            else if(num == 2)
+            {
+                secureComb.Hide();
+                secure2.Hide();
+                secriteLable.Show();
+                editQuestion.Text = "Edit";
+            }
+            else if (num == 3)
+            {
+                phone1.Hide();
+                sendButton1.Hide();
+                phone2.Hide();
+                phoneLable.Text = $"Bound: {User_type.user_phone}";
+                phoneLable.Show();
+                editPhone.Text = "Edit";
+            }
+            else if (num == 4)
+            {
+                email1.Hide();
+                sendButton2.Hide();
+                email2.Hide();
+                eamilLable.Text = $"Bound: {User_type.user_email}";
+                eamilLable.Show();
+                editEmail.Text = "Edit";
+            }
+        }
 
+
+        private string userIDType;
+        private string userTable;
+        private void InitSQLArgs()
+        {
+            if (User_type.user_ID.Substring(0,3) =="Cus")
+            {
+                userIDType = "CustomerID";
+                userTable = "Customer";
+            }
+            else
+            {
+                userIDType = "StaffID";
+                userTable = "Staff";
+            }
+        }
 
         private void editPassword_Click(object sender, EventArgs e)
         {
@@ -294,19 +346,23 @@ namespace miniSys0._3.Controls.Others
                 {
                     if (password1.Text != password2.Text)
                     {
-                        MessageBox.Show("You entered different passwords twice.");
+                        MessageBox.Show("You entered different passwords.");
                     }
                     else
                     {
                         if (password1.Text != User_type.user_password)
                         {
-                            MessageBox.Show($"send new pwd {password1.Text} to db");
-                        }
-                        password1.Hide();
-                        password2.Hide();
-                        passwordLable.Show();
-                        editPassword.Text = "Edit";
+                            
+                            string sql = $"UPDATE {userTable} SET Password = '{password1.Text}' " +
+                                $"WHERE {userIDType} = '{User_type.user_ID}';";
+                            SQLCursor.Execute(sql);
 
+                            User_type.user_password = password1.Text;
+
+                            MessageBox.Show($"Reset the password to {password1.Text} successfully");
+                        }
+
+                        HideInfoLable(1);
                     }
                 }  
             }
@@ -345,14 +401,19 @@ namespace miniSys0._3.Controls.Others
                 {
                     string question = secureComb.SelectedItem.ToString();
                     string answer = secure2.Text;
-                    if (question == User_type.user_security_qustion && answer == User_type.user_security_answer)
-                    {
-                        // do nothing
-                    }
-                    else
-                    {
-                        MessageBox.Show($"send Q:{question} and A:{answer} to db");
-                    }
+
+                    //MessageBox.Show($" send Q:{question} and A:{answer} to db");
+                    MessageBox.Show($"Reset the security question to {question} and security answer to {answer} successfully");
+                    string sql = $"UPDATE {userTable} SET " +
+                        $"Validation_problem = '{question}', " +
+                        $"Validation_answer = '{answer}' " +
+                        $"WHERE {userIDType} = '{User_type.user_ID}';";
+                    SQLCursor.Execute(sql);
+
+                    User_type.user_security_qustion = question;
+                    User_type.user_security_answer = answer;
+
+                    HideInfoLable(2);
                 }
 
                 
@@ -394,11 +455,22 @@ namespace miniSys0._3.Controls.Others
                 {
                     if (phone1.Text == User_type.user_phone)
                     {
-                        // do nothing
+                        MessageBox.Show($"{phone1.Text} has already been bound");
+                    }
+                    else if (phone2.Text != "123456")
+                    {
+                        MessageBox.Show($"Wrong PIN code");
                     }
                     else
                     {
-                        MessageBox.Show($"send new phone: {phone1.Text} to db");
+                        MessageBox.Show($"Reset bound phone to {phone1.Text} successfully");
+                        string sql = $"UPDATE {userTable} SET Phone_number = '{phone1.Text}' " +
+                                $"WHERE {userIDType} = '{User_type.user_ID}';";
+                        SQLCursor.Execute(sql);
+
+                        User_type.user_phone = phone1.Text;
+
+                        HideInfoLable(3);
                     }
                 }
                 
@@ -438,11 +510,22 @@ namespace miniSys0._3.Controls.Others
                 {
                     if (email1.Text == User_type.user_email)
                     {
-                        // do nothing
+                        MessageBox.Show($"{email1.Text} has already been bound");
+                    }
+                    else if (email2.Text != "123456")
+                    {
+                        MessageBox.Show($"Wrong PIN code");
                     }
                     else
                     {
-                        MessageBox.Show($"send new phone: {email1.Text} to db");
+                        MessageBox.Show($"Reset bound phone to {email1.Text} successfully");
+                        string sql = $"UPDATE {userTable} SET Email = '{email1.Text}' " +
+                                $"WHERE {userIDType} = '{User_type.user_ID}';";
+                        SQLCursor.Execute(sql);
+
+                        User_type.user_email = email1.Text;
+
+                        HideInfoLable(4);
                     }
                 }
                 

@@ -352,5 +352,45 @@ namespace miniSys0._3
 
 
         }
+
+        public static bool PasswordVerification(string nameOrID, string password)
+        {
+            //must exist then use this function
+            if (nameOrID.Length == 9 && 
+                (nameOrID.Substring(0,3) =="Cus" || nameOrID.Substring(0, 3) == "Sta"))
+            {
+                nameOrID = nameOrID;
+            }
+            else
+            {
+                nameOrID = ifStaOrCus(nameOrID);
+            }
+
+            if (nameOrID.Contains("Cus"))
+            {
+                string sql = $"SELECT Password FROM Customer WHERE CustomerID = '{nameOrID}';";
+                if (password == Query(sql)[0])
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else if (nameOrID.Contains("Sta"))
+            {
+                string sql = $"SELECT Password FROM Staff WHERE StaffID = '{nameOrID}';";
+                if (password == Query(sql)[0])
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            return false;
+        }
     }
 }

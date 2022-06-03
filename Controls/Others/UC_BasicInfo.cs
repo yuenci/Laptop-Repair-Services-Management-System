@@ -23,7 +23,7 @@ namespace miniSys0._3.Controls.Others
             if (User_type.user_theme == "dark")
             {
                 this.BackColor = Color.FromArgb(28, 47, 70);
-                dynamic[] lable = { uiLabel11, uiLabel12, uiLabel13, uiLabel14, uiLabel15, uiLabel16 };
+                dynamic[] lable = { uiLabel11, uiLabel12, uiLabel13, uiLabel14, uiLabel16 };
                 foreach (var item in lable)
                 {
                     item.ForeColor = Color.White;
@@ -35,44 +35,59 @@ namespace miniSys0._3.Controls.Others
 
         private void email_enter(object sender, EventArgs e)
         {
-            email.RectColor = Color.White;
-            email.Text = "";
-            email.ForeColor = Color.Black;
+            if (email.Text == "Enter your email address")
+            {
+                email.RectColor = Color.White;
+                email.Text = "";
+                email.ForeColor = Color.Black;
+            }
+
         }
 
         private void name_Enter(object sender, EventArgs e)
         {
-            name.RectColor = Color.White;
-            name.Text = "";
-            name.ForeColor = Color.Black;
+            if (name.Text == "Enter your name")
+            {
+                name.RectColor = Color.White;
+                name.Text = "";
+                name.ForeColor = Color.Black;
+            }
+            
         }
 
         private void country_Enter(object sender, EventArgs e)
         {
-            country.RectColor = Color.White;
-            country.Text = "";
-            country.ForeColor = Color.Black;
+            if (country.Text == "Enter your country")
+            {
+                country.RectColor = Color.White;
+                country.Text = "";
+                country.ForeColor = Color.Black;
+            }
+            
         }
 
         private void street_Enter(object sender, EventArgs e)
         {
-            street.RectColor = Color.White;
-            street.Text = "";
-            street.ForeColor = Color.Black;
+            if (street.Text == "Enter the street where you live")
+            {
+                street.RectColor = Color.White;
+                street.Text = "";
+                street.ForeColor = Color.Black;
+            }
+            
         }
 
-        private void address_Enter(object sender, EventArgs e)
-        {
-            address.RectColor = Color.White;
-            address.Text = "";
-            address.ForeColor = Color.Black;
-        }
+
 
         private void profile_Enter(object sender, EventArgs e)
         {
-            profile.RectColor = Color.White;
-            profile.Text = "";
-            profile.ForeColor = Color.Black;
+            if (profile.Text == "Please enter your personal introduction with a maximum of 300 characters.")
+            {
+                profile.RectColor = Color.White;
+                profile.Text = "";
+                profile.ForeColor = Color.Black;
+            }
+            
         }
 
         
@@ -113,14 +128,7 @@ namespace miniSys0._3.Controls.Others
             }
         }
 
-        private void address_Leave_1(object sender, EventArgs e)
-        {
-            if (address.Text == "")
-            {
-                address.Text = "Enter the detailed address";
-                address.ForeColor = Color.Gray;
-            }
-        }
+
 
         private void profile_Leave_1(object sender, EventArgs e)
         {
@@ -134,13 +142,12 @@ namespace miniSys0._3.Controls.Others
 
         private void ResetButton_Click(object sender, EventArgs e)
         {
-            dynamic[] uITextBoxes = { email, name, country, street ,address, profile };
+            dynamic[] uITextBoxes = { email, name, country, street , profile };
             string[] textBoxContent = {
                 "Enter your email address",
                 "Enter your name",
                 "Enter your country",
                 "Enter the street where you live",
-                "Enter the detailed address",
                 "Please enter your personal introduction with a maximum of 300 characters."
             };
             for (int i = 0; i < textBoxContent.Length; i++)
@@ -171,9 +178,66 @@ namespace miniSys0._3.Controls.Others
             }
             if (ifAnyEmpty == false)
             {
+                dynamic[] uITextBox = { email,name,country,street,profile};
 
-                MessageBox.Show("sent all info to db!");
+                string useId = User_type.user_ID;
+                string useTable = "";
+                string useIdType = "";
+                if (User_type.user_deparment == "Customer")
+                {
+                    useTable = "Customer";
+                    useIdType = "CustomerID";
+                }
+                else
+                {
+                    useTable = "Staff";
+                    useIdType = "StaffID";
+                }
+                
+
+                string[] placeHolders = { "","Enter your email address", "Enter your name", "Enter your country", 
+                    "Enter the street where you live", "Enter the detailed address",
+                    "Please enter your personal introduction with a maximum of 300 characters." };
+
+                List<string> newCentent = new List<string>();
+                if (placeHolders.Contains(email.Text) == false)
+                {
+                    newCentent.Add($"Email = '{email.Text}'");
+                }
+                 if (placeHolders.Contains(name.Text) == false)
+                {
+                    newCentent.Add($"Name = '{name.Text}'");
+                }
+                 if (placeHolders.Contains(country.Text) == false)
+                {
+                    newCentent.Add($"Country = '{country.Text}'");
+                }
+                 if(placeHolders.Contains(street.Text) == false )
+                {
+                    newCentent.Add($"Address = '{street.Text}'");
+                }
+
+                 if (placeHolders.Contains(profile.Text) == false)
+                {
+                    newCentent.Add($"About = '{profile.Text}'");
+                }
+
+                string sql = $"UPDATE {useTable}  SET " + String.Join(",", newCentent) + $" WHERE {useIdType} = '{useId}';";
+
+                Console.WriteLine(sql);
+
+                SQLCursor.Execute(sql);
+                MessageBox.Show("Profile modify successfully");
             }
+        }
+
+        private void profile_TextChanged(object sender, EventArgs e)
+        {
+            if (profile.Text.Length >290)
+            {
+                profile.Text = profile.Text.Substring(0, 290);
+            }
+            
         }
     }
 }

@@ -61,11 +61,25 @@ namespace miniSys0._3.Controls.MainArea
             string customerName = data[1];
 
             // order staff
-            dynamic[] data2 = SQLCursor.Query($"select TOP 1 Staff.Name,Schedule.Status" +
+            string sqlOrderStaff = $"select TOP 1 Staff.Name,Schedule.Status" +
                 $" From Schedule " +
                 $"Inner join Staff On Staff.StaffID = Schedule.TechnicianID " +
-                $"Where OrderID ='{ordIDCache}' Order by Time DESC");
-            technician.Text = data2[0];
+                $"Where OrderID ='{ordIDCache}' Order by Time DESC";
+
+            Console.WriteLine("----------------");
+            Console.WriteLine(sqlOrderStaff);
+            Console.WriteLine("----------------");
+            dynamic[] data2 = SQLCursor.Query(sqlOrderStaff);
+
+            if (data2.Length >0)
+            {
+                technician.Text = data2[0];
+            }
+            else
+            {
+                technician.Text = "";
+            }
+            
 
             status.Text = statusStr(data2[1]);
             setStatusButton(data2[1]);

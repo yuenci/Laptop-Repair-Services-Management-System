@@ -31,15 +31,29 @@ namespace miniSys0._3.Controls.Others
 
         private void InitTheme()
         {
-            this.BackColor = Color.FromArgb(28, 47, 70);
+            
             if (User_type.user_theme == "dark")
             {
+                this.BackColor = Color.FromArgb(28, 47, 70);
                 successIcon.FillColor = Color.FromArgb(28, 47, 70);
                 successIcon.BackColor = Color.FromArgb(28, 47, 70);
+
                 dynamic[] lable = { uiLabel1, uiLabel2, uiLabel3, uiLabel4, uiLabel5 };
                 foreach (var item in lable)
                 {
                     item.ForeColor = Color.White;
+                }
+            }
+            else
+            {
+                this.BackColor = Color.White;
+                successIcon.FillColor = Color.Transparent;
+                successIcon.BackColor = Color.Transparent;
+
+                dynamic[] lable = { uiLabel1, uiLabel2, uiLabel3, uiLabel4, uiLabel5 };
+                foreach (var item in lable)
+                {
+                    item.ForeColor = Color.Black;
                 }
             }
         }
@@ -177,6 +191,11 @@ namespace miniSys0._3.Controls.Others
 
                 //Console.WriteLine(sql);
                 SQLCursor.Execute(sql);
+
+                string schID = SQLCursor.AddOneToLastID("ScheduleID", "Schedule");
+                string sqlSch = $"INSERT INTO Schedule VALUES ('{schID}','Order'" +
+                    $",'{ReceiptInfoCache.time}',null,'{ReceiptInfoCache.orderID}')";
+                SQLCursor.Execute(sqlSch);
             }
 
 

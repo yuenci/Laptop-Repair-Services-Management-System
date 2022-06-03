@@ -18,7 +18,7 @@ namespace miniSys0._3.Controls.MainArea
         public UC_Cus_dashboard uc_Cus_dashboard;
         private int imageID = 1;
         private System.Timers.Timer aTimer;
-        string cusID = User_type.user_ID;
+        private string cusID = User_type.user_ID;
         private string[] urls;
 
         public UC_Cus_dashboard()
@@ -522,6 +522,40 @@ namespace miniSys0._3.Controls.MainArea
             }
         }
 
+        private void docShow(string docFileName)
+        {
+            string path = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin"))
+                + $"Html\\Document\\{docFileName}.html";
+            Reader.reader.WebBrowser2.Load(path);
+            Thread.Sleep(100);
+            Reader.reader.Show();
+        }
+        
+        private void doc1_Click(object sender, EventArgs e)
+        {
+            docShow("Doc000001");
+        }
+
+        private void doc2_Click(object sender, EventArgs e)
+        {
+            docShow("Doc000002");
+        }
+
+        private void doc3_Click(object sender, EventArgs e)
+        {
+            docShow("Doc000003");
+        }
+
+        private void doc4_Click(object sender, EventArgs e)
+        {
+            docShow("Doc000004");
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            VideoPlayer videoPlayer = new VideoPlayer();
+            videoPlayer.Show();
+        }
     }
 
 

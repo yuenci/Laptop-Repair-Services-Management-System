@@ -288,7 +288,7 @@
             // successIcon
             // 
             this.successIcon.BackColor = System.Drawing.Color.Transparent;
-            this.successIcon.FillColor = System.Drawing.Color.White;
+            this.successIcon.FillColor = System.Drawing.Color.Transparent;
             this.successIcon.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.successIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(42)))));
             this.successIcon.Location = new System.Drawing.Point(971, 75);

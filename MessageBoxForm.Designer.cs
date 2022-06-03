@@ -112,7 +112,9 @@
             this.Controls.Add(this.panel);
             this.Name = "MessageBoxForm";
             this.Padding = new System.Windows.Forms.Padding(0);
+            this.ShowRadius = false;
             this.ShowRect = false;
+            this.ShowShadow = true;
             this.ShowTitle = false;
             this.Style = Sunny.UI.UIStyle.Custom;
             this.Text = "MessageBox";

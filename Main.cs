@@ -71,14 +71,14 @@ namespace miniSys0._3
 
         }
        
-        private bool cefInitStatus = false;
         private void InitCef()
         {
-            if (!cefInitStatus)
+            if (!User_type.ifCefInit)
             {
                 var setting = new CefSettings();
                 setting.MultiThreadedMessageLoop = true;
                 CefSharp.Cef.Initialize(setting);
+                User_type.ifCefInit = true;
             }
         }
 
