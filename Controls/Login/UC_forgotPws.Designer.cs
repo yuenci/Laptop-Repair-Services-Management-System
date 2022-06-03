@@ -28,64 +28,65 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.password_input = new Sunny.UI.UITextBox();
-            this.LoginButton = new Sunny.UI.UIButton();
+            this.pin_code_input = new Sunny.UI.UITextBox();
+            this.resetButton = new Sunny.UI.UIButton();
             this.name_input = new Sunny.UI.UITextBox();
             this.Back_Button = new Sunny.UI.UISymbolButton();
-            this.uiTextBox1 = new Sunny.UI.UITextBox();
+            this.new_pws_input = new Sunny.UI.UITextBox();
             this.phone = new System.Windows.Forms.Label();
             this.email = new System.Windows.Forms.Label();
             this.valid = new System.Windows.Forms.Label();
             this.phone_line = new System.Windows.Forms.Panel();
             this.email_line = new System.Windows.Forms.Panel();
             this.valid_line = new System.Windows.Forms.Panel();
-            this.uiButton1 = new Sunny.UI.UIButton();
+            this.sendBtn = new Sunny.UI.UIButton();
             this.SuspendLayout();
             // 
-            // password_input
+            // pin_code_input
             // 
-            this.password_input.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
-            this.password_input.ButtonRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
-            this.password_input.ButtonRectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
-            this.password_input.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.password_input.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.password_input.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
-            this.password_input.Location = new System.Drawing.Point(15, 265);
-            this.password_input.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.password_input.MinimumSize = new System.Drawing.Size(1, 16);
-            this.password_input.Name = "password_input";
-            this.password_input.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.password_input.Radius = 10;
-            this.password_input.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
-            this.password_input.ShowText = false;
-            this.password_input.Size = new System.Drawing.Size(463, 50);
-            this.password_input.Style = Sunny.UI.UIStyle.Custom;
-            this.password_input.TabIndex = 37;
-            this.password_input.Text = "Enter the PIN code";
-            this.password_input.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.password_input.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.pin_code_input.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
+            this.pin_code_input.ButtonRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
+            this.pin_code_input.ButtonRectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
+            this.pin_code_input.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.pin_code_input.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.pin_code_input.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
+            this.pin_code_input.Location = new System.Drawing.Point(15, 265);
+            this.pin_code_input.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pin_code_input.MinimumSize = new System.Drawing.Size(1, 16);
+            this.pin_code_input.Name = "pin_code_input";
+            this.pin_code_input.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.pin_code_input.Radius = 10;
+            this.pin_code_input.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
+            this.pin_code_input.ShowText = false;
+            this.pin_code_input.Size = new System.Drawing.Size(463, 50);
+            this.pin_code_input.Style = Sunny.UI.UIStyle.Custom;
+            this.pin_code_input.TabIndex = 37;
+            this.pin_code_input.Text = "Enter the PIN code";
+            this.pin_code_input.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pin_code_input.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // LoginButton
+            // resetButton
             // 
-            this.LoginButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LoginButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
-            this.LoginButton.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(100)))), ((int)(((byte)(221)))));
-            this.LoginButton.Font = new System.Drawing.Font(".萍方-简", 18F);
-            this.LoginButton.Location = new System.Drawing.Point(14, 425);
-            this.LoginButton.MinimumSize = new System.Drawing.Size(1, 1);
-            this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Radius = 10;
-            this.LoginButton.RectColor = System.Drawing.Color.Transparent;
-            this.LoginButton.RectDisableColor = System.Drawing.Color.Transparent;
-            this.LoginButton.RectHoverColor = System.Drawing.Color.Transparent;
-            this.LoginButton.RectPressColor = System.Drawing.Color.Transparent;
-            this.LoginButton.RectSelectedColor = System.Drawing.Color.Transparent;
-            this.LoginButton.Size = new System.Drawing.Size(463, 50);
-            this.LoginButton.Style = Sunny.UI.UIStyle.Custom;
-            this.LoginButton.TabIndex = 40;
-            this.LoginButton.Text = "Reset";
-            this.LoginButton.TipsFont = null;
-            this.LoginButton.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.resetButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.resetButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
+            this.resetButton.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(100)))), ((int)(((byte)(221)))));
+            this.resetButton.Font = new System.Drawing.Font(".萍方-简", 18F);
+            this.resetButton.Location = new System.Drawing.Point(14, 425);
+            this.resetButton.MinimumSize = new System.Drawing.Size(1, 1);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Radius = 10;
+            this.resetButton.RectColor = System.Drawing.Color.Transparent;
+            this.resetButton.RectDisableColor = System.Drawing.Color.Transparent;
+            this.resetButton.RectHoverColor = System.Drawing.Color.Transparent;
+            this.resetButton.RectPressColor = System.Drawing.Color.Transparent;
+            this.resetButton.RectSelectedColor = System.Drawing.Color.Transparent;
+            this.resetButton.Size = new System.Drawing.Size(463, 50);
+            this.resetButton.Style = Sunny.UI.UIStyle.Custom;
+            this.resetButton.TabIndex = 40;
+            this.resetButton.Text = "Reset";
+            this.resetButton.TipsFont = null;
+            this.resetButton.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // name_input
             // 
@@ -141,28 +142,28 @@
             this.Back_Button.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.Back_Button.Click += new System.EventHandler(this.Back_Click);
             // 
-            // uiTextBox1
+            // new_pws_input
             // 
-            this.uiTextBox1.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
-            this.uiTextBox1.ButtonRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
-            this.uiTextBox1.ButtonRectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
-            this.uiTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox1.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
-            this.uiTextBox1.Location = new System.Drawing.Point(14, 345);
-            this.uiTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox1.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox1.Name = "uiTextBox1";
-            this.uiTextBox1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.uiTextBox1.Radius = 10;
-            this.uiTextBox1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
-            this.uiTextBox1.ShowText = false;
-            this.uiTextBox1.Size = new System.Drawing.Size(463, 50);
-            this.uiTextBox1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTextBox1.TabIndex = 38;
-            this.uiTextBox1.Text = "Enter the New password";
-            this.uiTextBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.new_pws_input.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
+            this.new_pws_input.ButtonRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
+            this.new_pws_input.ButtonRectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
+            this.new_pws_input.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.new_pws_input.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.new_pws_input.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
+            this.new_pws_input.Location = new System.Drawing.Point(14, 345);
+            this.new_pws_input.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.new_pws_input.MinimumSize = new System.Drawing.Size(1, 16);
+            this.new_pws_input.Name = "new_pws_input";
+            this.new_pws_input.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.new_pws_input.Radius = 10;
+            this.new_pws_input.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
+            this.new_pws_input.ShowText = false;
+            this.new_pws_input.Size = new System.Drawing.Size(463, 50);
+            this.new_pws_input.Style = Sunny.UI.UIStyle.Custom;
+            this.new_pws_input.TabIndex = 38;
+            this.new_pws_input.Text = "Enter the New password";
+            this.new_pws_input.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.new_pws_input.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // phone
             // 
@@ -227,44 +228,44 @@
             this.valid_line.Size = new System.Drawing.Size(100, 3);
             this.valid_line.TabIndex = 51;
             // 
-            // uiButton1
+            // sendBtn
             // 
-            this.uiButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
-            this.uiButton1.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(100)))), ((int)(((byte)(221)))));
-            this.uiButton1.Font = new System.Drawing.Font(".萍方-简", 18F);
-            this.uiButton1.Location = new System.Drawing.Point(405, 185);
-            this.uiButton1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton1.Name = "uiButton1";
-            this.uiButton1.Radius = 10;
-            this.uiButton1.RectColor = System.Drawing.Color.Transparent;
-            this.uiButton1.RectDisableColor = System.Drawing.Color.Transparent;
-            this.uiButton1.RectHoverColor = System.Drawing.Color.Transparent;
-            this.uiButton1.RectPressColor = System.Drawing.Color.Transparent;
-            this.uiButton1.RectSelectedColor = System.Drawing.Color.Transparent;
-            this.uiButton1.Size = new System.Drawing.Size(72, 50);
-            this.uiButton1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiButton1.TabIndex = 52;
-            this.uiButton1.Text = "Send";
-            this.uiButton1.TipsFont = null;
-            this.uiButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.sendBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sendBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
+            this.sendBtn.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(100)))), ((int)(((byte)(221)))));
+            this.sendBtn.Font = new System.Drawing.Font(".萍方-简", 18F);
+            this.sendBtn.Location = new System.Drawing.Point(405, 185);
+            this.sendBtn.MinimumSize = new System.Drawing.Size(1, 1);
+            this.sendBtn.Name = "sendBtn";
+            this.sendBtn.Radius = 10;
+            this.sendBtn.RectColor = System.Drawing.Color.Transparent;
+            this.sendBtn.RectDisableColor = System.Drawing.Color.Transparent;
+            this.sendBtn.RectHoverColor = System.Drawing.Color.Transparent;
+            this.sendBtn.RectPressColor = System.Drawing.Color.Transparent;
+            this.sendBtn.RectSelectedColor = System.Drawing.Color.Transparent;
+            this.sendBtn.Size = new System.Drawing.Size(72, 50);
+            this.sendBtn.Style = Sunny.UI.UIStyle.Custom;
+            this.sendBtn.TabIndex = 52;
+            this.sendBtn.Text = "Send";
+            this.sendBtn.TipsFont = null;
+            this.sendBtn.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // Control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.uiButton1);
+            this.Controls.Add(this.sendBtn);
             this.Controls.Add(this.valid_line);
             this.Controls.Add(this.email_line);
             this.Controls.Add(this.phone_line);
             this.Controls.Add(this.valid);
             this.Controls.Add(this.email);
             this.Controls.Add(this.phone);
-            this.Controls.Add(this.uiTextBox1);
+            this.Controls.Add(this.new_pws_input);
             this.Controls.Add(this.Back_Button);
-            this.Controls.Add(this.password_input);
-            this.Controls.Add(this.LoginButton);
+            this.Controls.Add(this.pin_code_input);
+            this.Controls.Add(this.resetButton);
             this.Controls.Add(this.name_input);
             this.Name = "Control";
             this.Size = new System.Drawing.Size(490, 530);
@@ -274,17 +275,17 @@
         }
 
         #endregion
-        private Sunny.UI.UITextBox password_input;
-        private Sunny.UI.UIButton LoginButton;
+        private Sunny.UI.UITextBox pin_code_input;
+        private Sunny.UI.UIButton resetButton;
         private Sunny.UI.UITextBox name_input;
         private Sunny.UI.UISymbolButton Back_Button;
-        private Sunny.UI.UITextBox uiTextBox1;
+        private Sunny.UI.UITextBox new_pws_input;
         private System.Windows.Forms.Label phone;
         private System.Windows.Forms.Label email;
         private System.Windows.Forms.Label valid;
         private System.Windows.Forms.Panel phone_line;
         private System.Windows.Forms.Panel email_line;
         private System.Windows.Forms.Panel valid_line;
-        private Sunny.UI.UIButton uiButton1;
+        private Sunny.UI.UIButton sendBtn;
     }
 }

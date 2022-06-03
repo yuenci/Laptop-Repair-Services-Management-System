@@ -56,7 +56,7 @@ namespace miniSys0._3.Controls.MainArea
 
                 dynamic[] lable = { name_lable, label14, shortcutText1, shortcutText2, shortcutText3,
                     orderStatus, modelText, staffName, label19, doc1, doc2, doc3, doc4, label16, 
-                    label17, news1, news2, news3, news4, news5, newslabel1, newslabel2, newslabel3, 
+                     news1, news2, news3, news4, news5, newslabel1, newslabel2, newslabel3, 
                     newslabel4, newslabel5 };
                 foreach (var item in lable)
                 {

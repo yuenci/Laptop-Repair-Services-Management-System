@@ -12,7 +12,7 @@ namespace miniSys0._3.Controls.MainArea
 {
     public partial class UC_Cus_OrderDetails : UserControl
     {
-        private string ordIDCache = SQLCursor.Query($"select Top 1 OrderId From Orders Where CustomerID = '{User_type.user_ID}' Order by Time DESC;")[0];
+        private string ordIDCache = null;
         private bool urgent;
 
         public UC_Cus_OrderDetails()
@@ -21,7 +21,7 @@ namespace miniSys0._3.Controls.MainArea
             InitStyle();
             Init();
         }
-        
+
         private void InitStyle()
         {
             dot1.FillColor = Color.FromArgb(22, 93, 255);
@@ -40,6 +40,8 @@ namespace miniSys0._3.Controls.MainArea
         
         private void Init()
         {
+            ordIDCache = SQLCursor.Query($"select Top 1 OrderId From Orders Where CustomerID = '{User_type.user_ID}' Order by Time DESC;")[0];
+
             // order info
             orderID.Text = ordIDCache;
             dynamic[] data = SQLCursor.Query("select Orders.Model, Customer.Name,Service.Type,Orders.Time " +

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CefSharp.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,10 +15,18 @@ namespace miniSys0._3.Controls
 {
     public partial class UC_Login : UserControl
     {
+        public static UC_Login Instance;
+        public string userName;
+        public string useIDCashe;
+        public string useTypeCashe;
+        // Customer; Staff
         public UC_Login()
         {
             InitializeComponent();
+            Instance = this;
         }
+
+
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
@@ -203,9 +212,51 @@ namespace miniSys0._3.Controls
         }
         private void forgot_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Control uc = new Control();
-            addUserControl(uc);
+            string user_name_input = name_input.Text;
+            if (user_name_input == "")
+            {
+                MessageBox.Show("Please enter your name first");
+            }
+            else if (!UserValid())
+            {
+                MessageBox.Show($"{user_name_input} doesn't exist");
+            }
+            else
+            {
+                userName = user_name_input;
+                this.Hide();
+                Control uc = new Control();
+                addUserControl(uc);
+            }
+        }
+        
+        
+        private bool UserValid()
+        {
+            string user_name_input = name_input.Text;
+            useIDCashe = SQLCursor.ifStaOrCus(user_name_input);
+            if (useIDCashe != null)
+            {
+                if (useIDCashe.Substring(0, 3) == "Cus")
+                {
+                    useTypeCashe = "Customer";
+                    return true;
+                }
+                else if (useIDCashe.Substring(0, 3) == "Sta")
+                {
+                    useTypeCashe = "Staff";
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+
         }
 
         private void loginToMain(string nameInput, string passwordInput)
@@ -281,6 +332,16 @@ namespace miniSys0._3.Controls
             {
                 return false;
             }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://policies.google.com/privacy?hl=en-US");
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://policies.google.com/terms?hl=en-US");
         }
     }
 }

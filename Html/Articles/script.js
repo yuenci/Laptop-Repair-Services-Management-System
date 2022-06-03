@@ -1,10 +1,10 @@
-let titlePara = "[News]Half right daughter newspaper husband.";
-let posterPara = "Dylan Jackson";
+let titlePara = "[News]Within evidence those dinner form left recognize.";
+let posterPara = "Kevin Hodges";
 let staffpostPara = "Receptionist";
-let viewsPara = "9740";
-let likesPara = "1106";
-let timePara = "2022/3/21 19:53:50";
-let urlPara = "Art000031.html";
+let viewsPara = "9871";
+let likesPara = "9081";
+let timePara = "2021/12/28 13:52:09";
+let urlPara = "Art000186.html";
 
 function refresh() {
     location.reload();

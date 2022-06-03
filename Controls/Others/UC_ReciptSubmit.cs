@@ -160,7 +160,26 @@ namespace miniSys0._3.Controls.Others
                 UC_ReciptComplete uc = new UC_ReciptComplete();
                 AddUserControl.Add(uc, UC_Payment.uc_Payment.contentPanel);
 
+                string sql = $"INSERT INTO Orders VALUES ("
+                    + $"'{ReceiptInfoCache.orderID}',"
+                    + $"'Ser{ReceiptInfoCache.service_Type}',"
+                    + $"'{ReceiptInfoCache.customerID}',"
+                    + $"'{ReceiptInfoCache.receptionist}',"
+                    + $"{ReceiptInfoCache.urgent},"
+                    + $"'{ReceiptInfoCache.model}',"
+                    + $"'{ReceiptInfoCache.time}',"
+                    + $"null," //description
+                    + $"{ReceiptInfoCache.price},"
+                    + $"'{ReceiptInfoCache.payment_method}',"
+                    + $"null," //start
+                    + $"'{ReceiptInfoCache.Card_Account_ID}'"
+                    + ");";
+
+                //Console.WriteLine(sql);
+                SQLCursor.Execute(sql);
             }
+
+
         }
 
 

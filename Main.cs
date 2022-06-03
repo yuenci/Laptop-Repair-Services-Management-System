@@ -71,12 +71,15 @@ namespace miniSys0._3
 
         }
        
-
+        private bool cefInitStatus = false;
         private void InitCef()
         {
-            var setting = new CefSettings();
-            setting.MultiThreadedMessageLoop = true;
-            CefSharp.Cef.Initialize(setting);
+            if (!cefInitStatus)
+            {
+                var setting = new CefSettings();
+                setting.MultiThreadedMessageLoop = true;
+                CefSharp.Cef.Initialize(setting);
+            }
         }
 
 
@@ -425,7 +428,7 @@ namespace miniSys0._3
         }
 
 
-        private void prepareData()
+        public void prepareData()
         {
             List<int> weekOrderNum = UC_main.getOneWeekOrderNum();
             List<int> monthOrderNRatio = UC_main.getOnemonthratio();

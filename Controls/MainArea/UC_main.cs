@@ -27,11 +27,12 @@ namespace miniSys0._3.Controls
         public UC_main()
         {
             InitializeComponent();
+            Main.main.prepareData();
             InitializeChromeForMainLineChart();
             InitializeChromeForMainPieChart();
             CefinitStatus();
 
-
+ 
             initsunnyUI();
             InitTheme();
 

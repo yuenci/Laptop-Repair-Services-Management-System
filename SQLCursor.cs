@@ -51,7 +51,6 @@ namespace miniSys0._3
                 result.Add(resultSingle);
                 
             }
-
             dr.Close();
             conn.Close();
 
@@ -333,6 +332,25 @@ namespace miniSys0._3
                 }
             }
             return null;
+        }
+
+        public static string ifStaOrCus(string userName)
+        {
+            dynamic[] staffInfo  = Query($"SELECT StaffID FROM　Staff　WHERE Name = '{userName}';");
+            if (staffInfo.Length > 0)
+            {
+                return staffInfo[0];
+            }
+
+            dynamic[] customerInfo = Query($"SELECT CustomerID FROM　Customer　WHERE Name = '{userName}';");
+            if (customerInfo.Length > 0)
+            {
+                return customerInfo[0];
+            }
+
+            return null;
+
+
         }
     }
 }
