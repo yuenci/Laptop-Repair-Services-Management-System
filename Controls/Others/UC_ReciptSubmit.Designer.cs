@@ -70,7 +70,7 @@
             this.brand.ShowText = false;
             this.brand.Size = new System.Drawing.Size(245, 40);
             this.brand.Style = Sunny.UI.UIStyle.Custom;
-            this.brand.TabIndex = 23;
+            this.brand.TabIndex = 4;
             this.brand.Text = "Customer\'s computer Brand";
             this.brand.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.brand.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -94,7 +94,7 @@
             this.method.Padding = new System.Windows.Forms.Padding(8, 0, 30, 2);
             this.method.Size = new System.Drawing.Size(555, 40);
             this.method.Style = Sunny.UI.UIStyle.Custom;
-            this.method.TabIndex = 25;
+            this.method.TabIndex = 6;
             this.method.Text = "Select a Payment Method";
             this.method.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.method.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -123,7 +123,7 @@
             this.type.Padding = new System.Windows.Forms.Padding(8, 0, 30, 2);
             this.type.Size = new System.Drawing.Size(553, 40);
             this.type.Style = Sunny.UI.UIStyle.Custom;
-            this.type.TabIndex = 21;
+            this.type.TabIndex = 2;
             this.type.Text = "Select a service type";
             this.type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.type.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -140,7 +140,7 @@
             this.model.ShowText = false;
             this.model.Size = new System.Drawing.Size(245, 40);
             this.model.Style = Sunny.UI.UIStyle.Custom;
-            this.model.TabIndex = 24;
+            this.model.TabIndex = 5;
             this.model.Text = "Customer\'s computer model";
             this.model.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.model.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -157,7 +157,7 @@
             this.name.ShowText = false;
             this.name.Size = new System.Drawing.Size(553, 40);
             this.name.Style = Sunny.UI.UIStyle.Custom;
-            this.name.TabIndex = 20;
+            this.name.TabIndex = 1;
             this.name.Text = "Enter customer\'s name";
             this.name.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.name.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -229,7 +229,7 @@
             this.switch1.Name = "switch1";
             this.switch1.Size = new System.Drawing.Size(75, 29);
             this.switch1.Style = Sunny.UI.UIStyle.Custom;
-            this.switch1.TabIndex = 22;
+            this.switch1.TabIndex = 3;
             this.switch1.Text = "uiSwitch1";
             this.switch1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
@@ -313,7 +313,7 @@
             this.cardID.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.cardID.ShowText = false;
             this.cardID.Size = new System.Drawing.Size(553, 40);
-            this.cardID.TabIndex = 29;
+            this.cardID.TabIndex = 7;
             this.cardID.Text = "Enter bank card / Account  ID";
             this.cardID.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cardID.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);

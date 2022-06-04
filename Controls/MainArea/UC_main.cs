@@ -68,7 +68,7 @@ namespace miniSys0._3.Controls
                 }
                 dynamic[] lables = { name_lable ,label3,BannerLabel1,label6,BannerLabel2,label8,
                                         BannerLabel3,label10,BannerLabel4,label14,shortcutText1,
-                                        shortcutText2,shortcutText3,label15,label1,
+                                        shortcutText2,shortcutText3,label15,ratioLabel,
                                         noticeText1,noticeText2,noticeText3,noticeText4,noticeText5,
                                         label19, doc1,doc2,doc3,doc4,label16,
                                         news1,news2,news3,news4,news5,
@@ -1059,6 +1059,39 @@ namespace miniSys0._3.Controls
                 UC_IncomeAnalysis uc = new UC_IncomeAnalysis();
                 addUserControlToMain(uc);
             }
+        }
+
+        private void ratioLabel_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Order ratio of each service in this month", ratioLabel);
+        }
+
+
+        private void readMoreNews_Click(object sender, EventArgs e)
+        {
+            string path = Setting.path + "\\Html\\Articles\\newsMore.html";
+            Reader.reader.WebBrowser2.Load(path);
+
+            Thread.Sleep(100);
+            Reader.reader.Show();
+        }
+
+        private void readMoreNotice_Click(object sender, EventArgs e)
+        {
+            string path = Setting.path + "\\Html\\Articles\\noticeMore.html";
+            Reader.reader.WebBrowser2.Load(path);
+
+            Thread.Sleep(100);
+            Reader.reader.Show();
+        }
+
+        private void readMoreDoc_Click(object sender, EventArgs e)
+        {
+            string path = Setting.path + "\\Html\\Document\\docMore.html";
+            Reader.reader.WebBrowser2.Load(path);
+
+            Thread.Sleep(100);
+            Reader.reader.Show();
         }
     }
 

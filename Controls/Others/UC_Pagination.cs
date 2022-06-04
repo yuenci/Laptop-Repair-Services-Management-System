@@ -15,7 +15,7 @@ namespace miniSys0._3.Controls.Others
 {
     public partial class UC_Pagination : UserControl
     {
-        private int pageNum;
+        public int pageNum;
         private int DataAmount;
         public int pageID;
         public int currentPerNum = 10;

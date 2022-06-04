@@ -73,14 +73,29 @@ namespace miniSys0._3
             serviceType.Text = data[2];
             string customerName = data[1];
 
-            // order staff
-            dynamic[] data2 = SQLCursor.Query($"select TOP 1 Staff.Name,Schedule.Status" +
+            if (SQLCursor.ifCurrentOrderNotStart(orderId))
+            {
+                // order staff
+                dynamic[] data2 = SQLCursor.Query($"select TOP 1  Schedule.Status" +
+                $" From Schedule " +
+                $"Where OrderID ='{orderId}' Order by Time DESC");
+                technician.Text = "None";
+                status.Text = statusStr(data2[0]);
+                //Console.WriteLine(statusStr(data2[1]));
+            }
+            else
+            {
+                // order staff
+                dynamic[] data2 = SQLCursor.Query($"select TOP 1 Staff.Name,Schedule.Status" +
                 $" From Schedule " +
                 $"Inner join Staff On Staff.StaffID = Schedule.TechnicianID " +
                 $"Where OrderID ='{orderId}' Order by Time DESC");
-            technician.Text = data2[0];
-            status.Text = statusStr(data2[1]);
-            Console.WriteLine(statusStr(data2[1]));
+                technician.Text = data2[0];
+                status.Text = statusStr(data2[1]);
+                //Console.WriteLine(statusStr(data2[1]));
+            }
+            
+            
             // customer info
             initCusInfo(customerName);
         }

@@ -392,5 +392,61 @@ namespace miniSys0._3
             }
             return false;
         }
+    
+        public static bool IfthereAnyOrder()
+        {
+            string sql = $"SELECT OrderID FROM Orders WHERE CustomerID = '{User_type.user_ID}';";     
+            dynamic[] data= Query(sql);
+            if (data.Length>0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static bool ifCurrentOrderNotStart()
+        {
+            string sql = "Select Status from Schedule Where OrderID " +
+                $"= (Select top 1 OrderID from Orders Where CustomerID = '{User_type.user_ID}' " +
+                $"ORDER BY OrderID DESC);";
+            Console.WriteLine(sql);
+            dynamic[] data= Query(sql);
+            if (data.Length == 1)
+            {
+                return true;
+            }
+            else if(data.Length > 1)
+            {
+                return false;
+            }
+            else
+            {
+                MessageBox.Show("SQLCursor Line425 ifCurrentOrderNotStart() Error");
+            }
+            return false;
+        }
+
+        public static bool ifCurrentOrderNotStart(string orderID)
+        {
+            string sql = $"Select Status from Schedule Where OrderID = '{orderID}'";
+            Console.WriteLine(sql);
+            dynamic[] data = Query(sql);
+            if (data.Length ==1 )
+            {
+                return true;
+            }
+            else if (data.Length > 1)
+            {
+                return false;
+            }
+            else
+            {
+                MessageBox.Show("SQLCursor Line460 ifCurrentOrderNotStart() Error");
+            }
+            return false;
+        }
     }
 }

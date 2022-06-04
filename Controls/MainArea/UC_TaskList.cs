@@ -215,12 +215,24 @@ namespace miniSys0._3.Controls.MainArea
             clickBtnStyle(allCard);
 
             string sql = "SELECT OrderID FROM Schedule WHERE Status = 'Order' ORDER　BY Time DESC;";
-            pagination.orderList = SQLCursor.Query(sql);
 
-            //renderCard(pagination.orderList);
-            pagination.Init(pagination.orderList.Length, pagination.currentPerNum);
+            dynamic[] data = SQLCursor.Query(sql);
+            if (data.Length>0)
+            {
+                pagination.orderList = SQLCursor.Query(sql);
 
-            renderNewList(0,pagination.currentPerNum);
+                //renderCard(pagination.orderList);
+                pagination.Init(pagination.orderList.Length, pagination.currentPerNum);
+
+                renderNewList(0, pagination.currentPerNum);
+            }
+            else
+            {
+                contentPanel.Controls.Clear();
+                pagination.Init(0, pagination.currentPerNum);
+            }
+
+
         }
 
 
@@ -229,13 +241,31 @@ namespace miniSys0._3.Controls.MainArea
             clearBtnStyle();
             clickBtnStyle(noStartCard);
 
-            string sql = "SELECT OrderID FROM Schedule WHERE Status = 'Order' ORDER　BY Time;";
-            pagination.orderList = SQLCursor.Query(sql);
+            string sql = "Select OrderID From Schedule Where OrderID in " +
+                "(select OrderID from Schedule group by OrderID having COUNT(*) =1) " +
+                "Order by Time ;";
 
-            //renderCard(pagination.orderList);
-            pagination.Init(pagination.orderList.Length, pagination.currentPerNum);
+            dynamic[] data = SQLCursor.Query(sql);
+            if (data.Length > 0)
+            {
+                pagination.orderList = SQLCursor.Query(sql);
+                //Console.WriteLine(sql);
 
-            renderNewList(0,pagination.currentPerNum);
+
+
+                //renderCard(pagination.orderList);
+                pagination.Init(pagination.orderList.Length, pagination.currentPerNum);
+
+                renderNewList(0, pagination.currentPerNum);
+            }
+            else
+            {
+                contentPanel.Controls.Clear();
+                pagination.Init(0, pagination.currentPerNum);
+            }
+
+
+
         }
 
 
@@ -244,13 +274,28 @@ namespace miniSys0._3.Controls.MainArea
             clearBtnStyle();
             clickBtnStyle(repairingCard);
 
-            string sql = "SELECT OrderID FROM Schedule WHERE Status = 'Progress' ORDER　BY Time;";
-            pagination.orderList = SQLCursor.Query(sql);
+            string sql = "Select OrderID From Schedule Where OrderID in " +
+                "(select OrderID from Schedule group by OrderID having COUNT(*) =2) " +
+                "AND Status= 'Progress' Order by Time ;";
+            Console.WriteLine(sql);
+            dynamic[] data = SQLCursor.Query(sql);
+            if (data.Length > 0)
+            {
+                pagination.orderList = SQLCursor.Query(sql);
 
-            //renderCard(pagination.orderList);
-            pagination.Init(pagination.orderList.Length, pagination.currentPerNum);
+                //renderCard(pagination.orderList);
+                pagination.Init(pagination.orderList.Length, pagination.currentPerNum);
 
-            renderNewList(0, pagination.currentPerNum);
+                renderNewList(0, pagination.currentPerNum);
+            }
+            else
+            {
+                contentPanel.Controls.Clear();
+                pagination.Init(0, pagination.currentPerNum);
+            }
+
+
+
         }
 
 
@@ -259,12 +304,25 @@ namespace miniSys0._3.Controls.MainArea
             clearBtnStyle();
             clickBtnStyle(dfinishedCard);
 
-            string sql = "SELECT OrderID FROM Schedule WHERE Status = 'Completed' ORDER　BY Time DESC;";
-            pagination.orderList = SQLCursor.Query(sql);
-            //renderCard(pagination.orderList);
-            pagination.Init(pagination.orderList.Length, pagination.currentPerNum);
+            string sql = "Select OrderID From Schedule Where Status= 'Completed' " +
+                "Order by Time DESC;";
 
-            renderNewList(0, pagination.currentPerNum);
+            dynamic[] data = SQLCursor.Query(sql);
+            if (data.Length > 0)
+            {
+                pagination.orderList = SQLCursor.Query(sql);
+                //renderCard(pagination.orderList);
+                pagination.Init(pagination.orderList.Length, pagination.currentPerNum);
+
+                renderNewList(0, pagination.currentPerNum);
+            }
+            else
+            {
+                contentPanel.Controls.Clear();
+                pagination.Init(0, pagination.currentPerNum);
+            }
+
+            
         }
 
         private void Init10Items()
@@ -295,12 +353,22 @@ namespace miniSys0._3.Controls.MainArea
             contentPanel.Controls.Clear();
             int cardIndex  = 0;
             int end = startIndex + range;
-            if (pagination.orderList.Length ==1)
+            if (pagination.orderList.Length == 1)
             {
                 UC_Task_Item item = new UC_Task_Item();
                 item.Location = new Point(0, 0);
                 item.Init(pagination.orderList[0]);
                 contentPanel.Controls.Add(item);
+            }
+            else if (pagination.pageNum == 1)
+            {
+                for (int i = 0; i < pagination.orderList.Length; i++)
+                {
+                    UC_Task_Item item = new UC_Task_Item();
+                    item.Location = new Point(0, i * 50);
+                    item.Init(pagination.orderList[i][0]);
+                    contentPanel.Controls.Add(item);
+                }
             }
             else
             {

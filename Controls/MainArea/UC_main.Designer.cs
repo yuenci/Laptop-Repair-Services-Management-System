@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.uiUserControl7 = new Sunny.UI.UIUserControl();
             this.notice3 = new Sunny.UI.UIButton();
             this.notice2 = new Sunny.UI.UIButton();
@@ -39,14 +40,14 @@
             this.noticeText3 = new System.Windows.Forms.Label();
             this.noticeText2 = new System.Windows.Forms.Label();
             this.noticeText1 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.readMoreNotice = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.uiUserControl6 = new Sunny.UI.UIUserControl();
             this.doc4 = new System.Windows.Forms.Label();
             this.doc3 = new System.Windows.Forms.Label();
             this.doc2 = new System.Windows.Forms.Label();
             this.doc1 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.readMoreDoc = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.uiUserControl2 = new Sunny.UI.UIUserControl();
             this.shortcutText3 = new System.Windows.Forms.Label();
@@ -58,7 +59,7 @@
             this.shortcutButton3 = new Sunny.UI.UISymbolButton();
             this.uiUserControl5 = new Sunny.UI.UIUserControl();
             this.pieChartPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.ratioLabel = new System.Windows.Forms.Label();
             this.refreshlButton2 = new Sunny.UI.UISymbolButton();
             this.uiUserControl4 = new Sunny.UI.UIUserControl();
             this.newslabel5 = new System.Windows.Forms.Label();
@@ -75,7 +76,7 @@
             this.label32 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.readMoreNews = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.uiUserControl3 = new Sunny.UI.UIUserControl();
             this.lineChartPanel = new System.Windows.Forms.Panel();
@@ -97,6 +98,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.uiUserControl7.SuspendLayout();
             this.uiUserControl6.SuspendLayout();
             this.uiUserControl2.SuspendLayout();
@@ -127,7 +129,7 @@
             this.uiUserControl7.Controls.Add(this.noticeText3);
             this.uiUserControl7.Controls.Add(this.noticeText2);
             this.uiUserControl7.Controls.Add(this.noticeText1);
-            this.uiUserControl7.Controls.Add(this.label18);
+            this.uiUserControl7.Controls.Add(this.readMoreNotice);
             this.uiUserControl7.Controls.Add(this.label15);
             this.uiUserControl7.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.uiUserControl7.FillColor = System.Drawing.Color.White;
@@ -290,18 +292,19 @@
             this.noticeText1.Text = "label21";
             this.noticeText1.Click += new System.EventHandler(this.noticeText1_Click);
             // 
-            // label18
+            // readMoreNotice
             // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label18.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(112)))), ((int)(((byte)(255)))));
-            this.label18.Location = new System.Drawing.Point(160, 9);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(91, 22);
-            this.label18.TabIndex = 37;
-            this.label18.Text = "Read more";
+            this.readMoreNotice.AutoSize = true;
+            this.readMoreNotice.BackColor = System.Drawing.Color.Transparent;
+            this.readMoreNotice.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.readMoreNotice.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.readMoreNotice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(112)))), ((int)(((byte)(255)))));
+            this.readMoreNotice.Location = new System.Drawing.Point(160, 9);
+            this.readMoreNotice.Name = "readMoreNotice";
+            this.readMoreNotice.Size = new System.Drawing.Size(91, 22);
+            this.readMoreNotice.TabIndex = 37;
+            this.readMoreNotice.Text = "Read more";
+            this.readMoreNotice.Click += new System.EventHandler(this.readMoreNotice_Click);
             // 
             // label15
             // 
@@ -321,7 +324,7 @@
             this.uiUserControl6.Controls.Add(this.doc3);
             this.uiUserControl6.Controls.Add(this.doc2);
             this.uiUserControl6.Controls.Add(this.doc1);
-            this.uiUserControl6.Controls.Add(this.label20);
+            this.uiUserControl6.Controls.Add(this.readMoreDoc);
             this.uiUserControl6.Controls.Add(this.label19);
             this.uiUserControl6.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.uiUserControl6.FillColor = System.Drawing.Color.White;
@@ -394,18 +397,19 @@
             this.doc1.Text = "Quick Start";
             this.doc1.Click += new System.EventHandler(this.doc1_Click);
             // 
-            // label20
+            // readMoreDoc
             // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label20.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(112)))), ((int)(((byte)(255)))));
-            this.label20.Location = new System.Drawing.Point(171, 9);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(80, 22);
-            this.label20.TabIndex = 36;
-            this.label20.Text = "Get more";
+            this.readMoreDoc.AutoSize = true;
+            this.readMoreDoc.BackColor = System.Drawing.Color.Transparent;
+            this.readMoreDoc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.readMoreDoc.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.readMoreDoc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(112)))), ((int)(((byte)(255)))));
+            this.readMoreDoc.Location = new System.Drawing.Point(171, 9);
+            this.readMoreDoc.Name = "readMoreDoc";
+            this.readMoreDoc.Size = new System.Drawing.Size(80, 22);
+            this.readMoreDoc.TabIndex = 36;
+            this.readMoreDoc.Text = "Get more";
+            this.readMoreDoc.Click += new System.EventHandler(this.readMoreDoc_Click);
             // 
             // label19
             // 
@@ -556,7 +560,7 @@
             // 
             // pieChartPanel
             // 
-            this.pieChartPanel.Controls.Add(this.label1);
+            this.pieChartPanel.Controls.Add(this.ratioLabel);
             this.pieChartPanel.Controls.Add(this.refreshlButton2);
             this.pieChartPanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pieChartPanel.Location = new System.Drawing.Point(3, 3);
@@ -564,16 +568,17 @@
             this.pieChartPanel.Size = new System.Drawing.Size(378, 273);
             this.pieChartPanel.TabIndex = 0;
             // 
-            // label1
+            // ratioLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(6, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 28);
-            this.label1.TabIndex = 42;
-            this.label1.Text = "Ratio";
+            this.ratioLabel.AutoSize = true;
+            this.ratioLabel.BackColor = System.Drawing.Color.Transparent;
+            this.ratioLabel.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
+            this.ratioLabel.Location = new System.Drawing.Point(6, 4);
+            this.ratioLabel.Name = "ratioLabel";
+            this.ratioLabel.Size = new System.Drawing.Size(64, 28);
+            this.ratioLabel.TabIndex = 42;
+            this.ratioLabel.Text = "Ratio";
+            this.ratioLabel.MouseHover += new System.EventHandler(this.ratioLabel_MouseHover);
             // 
             // refreshlButton2
             // 
@@ -604,7 +609,7 @@
             this.uiUserControl4.Controls.Add(this.news3);
             this.uiUserControl4.Controls.Add(this.news2);
             this.uiUserControl4.Controls.Add(this.newsTopBar);
-            this.uiUserControl4.Controls.Add(this.label17);
+            this.uiUserControl4.Controls.Add(this.readMoreNews);
             this.uiUserControl4.Controls.Add(this.label16);
             this.uiUserControl4.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.uiUserControl4.FillColor = System.Drawing.Color.White;
@@ -801,18 +806,19 @@
             this.label30.TabIndex = 53;
             this.label30.Text = "Top";
             // 
-            // label17
+            // readMoreNews
             // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label17.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(112)))), ((int)(((byte)(255)))));
-            this.label17.Location = new System.Drawing.Point(338, 11);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(91, 22);
-            this.label17.TabIndex = 35;
-            this.label17.Text = "Read more";
+            this.readMoreNews.AutoSize = true;
+            this.readMoreNews.BackColor = System.Drawing.Color.Transparent;
+            this.readMoreNews.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.readMoreNews.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.readMoreNews.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(112)))), ((int)(((byte)(255)))));
+            this.readMoreNews.Location = new System.Drawing.Point(338, 11);
+            this.readMoreNews.Name = "readMoreNews";
+            this.readMoreNews.Size = new System.Drawing.Size(91, 22);
+            this.readMoreNews.TabIndex = 35;
+            this.readMoreNews.Text = "Read more";
+            this.readMoreNews.Click += new System.EventHandler(this.readMoreNews_Click);
             // 
             // label16
             // 
@@ -1124,14 +1130,14 @@
         private System.Windows.Forms.Label noticeText3;
         private System.Windows.Forms.Label noticeText2;
         private System.Windows.Forms.Label noticeText1;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label readMoreNotice;
         private System.Windows.Forms.Label label15;
         private Sunny.UI.UIUserControl uiUserControl6;
         private System.Windows.Forms.Label doc4;
         private System.Windows.Forms.Label doc3;
         private System.Windows.Forms.Label doc2;
         private System.Windows.Forms.Label doc1;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label readMoreDoc;
         private System.Windows.Forms.Label label19;
         private Sunny.UI.UIUserControl uiUserControl2;
         private System.Windows.Forms.Label label14;
@@ -1146,7 +1152,7 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label readMoreNews;
         private System.Windows.Forms.Label label16;
         private Sunny.UI.UIUserControl uiUserControl3;
         private System.Windows.Forms.Panel lineChartPanel;
@@ -1168,7 +1174,7 @@
         private System.Windows.Forms.Panel panel1;
         private Sunny.UI.UISymbolButton refreshlButton1;
         private Sunny.UI.UISymbolButton refreshlButton2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label ratioLabel;
         private Sunny.UI.UIMarkLabel news1;
         private System.Windows.Forms.Label newslabel5;
         private System.Windows.Forms.Label newslabel4;
@@ -1181,5 +1187,6 @@
         private System.Windows.Forms.Label shortcutText1;
         private Sunny.UI.UISymbolButton shortcutButton1;
         private Sunny.UI.UISymbolButton shortcutButton3;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

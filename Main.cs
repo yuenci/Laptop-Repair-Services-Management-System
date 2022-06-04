@@ -50,18 +50,21 @@ namespace miniSys0._3
             //topbar
             randomLogoColor();
 
-            //insert data to js to prepare first time load
+            //insert data to js to prepare first time load for chart
             prepareData();
+
+            //insert data to json to prepare all artical data
+            prepareArticalData();
 
             // main area loading
 
-            add_UC_Mainto_Panel();
+            //add_UC_Mainto_Panel();
             //add_UC_UserInfo();
             //add_UC_UserSetting();
             //add_UC_registration();
             //add_UC_Payment();
             //add_task_cards();
-            //add_task_table();
+            add_task_table();
             //add_Cus_OrderDetails();
             //add_UC_ServiceReport();
             //add_UC_IncomeAnalysis();
@@ -436,7 +439,74 @@ namespace miniSys0._3
             writeDataToJsFIle("pieChart",monthOrderNRatio);
         }
 
+        public void prepareArticalData()
+        {
+            string newsList = fetchDataFromDB("news");
+            string noticeList = fetchDataFromDB("notice");
 
+            writeJsonToFile("Articles\\newsIndex.json", newsList);
+            writeJsonToFile("Articles\\noticeIndex.json", noticeList);
+
+
+            string docList = $"getJson({{\"theme\":\"{User_type.user_theme}\"," +
+                $"\"userName\" : \"{User_type.user_name}\"}})";
+            writeJsonToFile("Document\\theme.json", docList);
+
+        }
+        private string fetchDataFromDB(string articleType)
+        {
+            // articleType = news, notice
+            string sql = "";
+            if (articleType == "news")
+            {
+                sql = "SELECT Title,Staff.Name,Time,Url,Views,Likes FROM Articles  " +
+                "INNER JOIN Staff ON Articles.PosterID = Staff.StaffID " +
+                "WHERE  Type = 'News'  ORDER BY Views DESC ;";
+            }
+            else if (articleType == "notice")
+            {
+                sql = "SELECT Title,Staff.Name,Time,Url,Views,Likes FROM Articles  " +
+                "INNER JOIN Staff ON Articles.PosterID = Staff.StaffID " +
+                "WHERE  Type <> 'News'  ORDER BY Views DESC ;";
+            }
+  
+            dynamic[] Data = SQLCursor.Query(sql);
+            string json = "getJson({";
+            json += $"\"0\":{{\"userName\" : \"{User_type.user_name}\", \"theme\" : \"{User_type.user_theme}\"}},";
+            for (int i = 0; i < Data.Length; i++)
+            {
+                json += $"\"{i+1}\":{{";
+                json += $"\"title\":\"{Data[i][0]}\",";
+                json += $"\"publisher\":\"{Data[i][1]}\",";
+                json += $"\"time\":\"{Data[i][2]}\",";
+                json += $"\"url\":\"{Data[i][3]}\",";
+                json += $"\"views\":\"{Data[i][4]}\",";
+                json += $"\"likes\":\"{Data[i][5]}\"";
+                if (i == Data.Length-1 )
+                {
+                    json += "}";
+                }
+                else
+                {
+                    json += "},";
+                }
+
+            }
+            json += "})";
+            return json;
+        }
+
+        private void writeJsonToFile(string fileName, string content)
+        {
+            string path = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin")) + $"Html\\{fileName}";
+            //empty old js file
+            FileStream fs = new FileStream(path, FileMode.Truncate, FileAccess.ReadWrite);
+            fs.Close();
+            // add new 
+            System.IO.StreamWriter sw = new System.IO.StreamWriter(path, true, System.Text.Encoding.Default);
+            sw.Write(content);
+            sw.Close();
+        }
         #region
         public string currentMainPage;
 
@@ -543,6 +613,7 @@ namespace miniSys0._3
                 lodaNewMainPage(currentMainPage);
                 addNavMenu();
                 InitOtherPageTheme();
+                prepareArticalData();
             }
             else if (User_type.user_theme == "dark")
             {
@@ -552,6 +623,7 @@ namespace miniSys0._3
                 lodaNewMainPage(currentMainPage);
                 addNavMenu();
                 InitOtherPageTheme();
+                prepareArticalData();
             } 
         }
         

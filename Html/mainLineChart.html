@@ -2,8 +2,8 @@
  * @Author: Innis
  * @Description: 
  * @Date: 2022-04-19 10:48:59
- * @LastEditTime: 2022-04-20 23:58:51
- * @FilePath: \fakeDatae:\Materials\【LOOP】\Assignment\miniSys0.3\Html\mainLineChart.html
+ * @LastEditTime: 2022-06-03 17:39:52
+ * @FilePath: \Html\mainLineChart.html
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -78,7 +78,15 @@
                         },
                         title: {
                             display: false
-                        }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (item) {
+                                    //console.log(item.dataset);
+                                    return `Order quantity: ${item.formattedValue}`;
+                                }
+                            }
+                        },
                     },
                     scales: {
                         x: {

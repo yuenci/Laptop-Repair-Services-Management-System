@@ -66,7 +66,7 @@
             this.email.ShowText = false;
             this.email.Size = new System.Drawing.Size(343, 35);
             this.email.Style = Sunny.UI.UIStyle.Custom;
-            this.email.TabIndex = 110;
+            this.email.TabIndex = 3;
             this.email.Text = "Enter user\'s email";
             this.email.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.email.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -87,6 +87,7 @@
             this.phone.ShowText = false;
             this.phone.Size = new System.Drawing.Size(343, 35);
             this.phone.Style = Sunny.UI.UIStyle.Custom;
+            this.phone.SymbolSize = 1;
             this.phone.TabIndex = 107;
             this.phone.Text = "Enter user\'s phone";
             this.phone.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -134,7 +135,7 @@
             this.nextStepBtn.Size = new System.Drawing.Size(100, 35);
             this.nextStepBtn.Style = Sunny.UI.UIStyle.Custom;
             this.nextStepBtn.TabIndex = 103;
-            this.nextStepBtn.Text = "Next";
+            this.nextStepBtn.Text = "Submit";
             this.nextStepBtn.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.nextStepBtn.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.nextStepBtn.Click += new System.EventHandler(this.nextStepBtn_Click);
@@ -164,7 +165,7 @@
             this.squestion.RectColor = System.Drawing.Color.Gray;
             this.squestion.Size = new System.Drawing.Size(343, 35);
             this.squestion.Style = Sunny.UI.UIStyle.Custom;
-            this.squestion.TabIndex = 98;
+            this.squestion.TabIndex = 7;
             this.squestion.Text = "Select a security question";
             this.squestion.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.squestion.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -276,10 +277,10 @@
             this.birthDatePicker.Style = Sunny.UI.UIStyle.Custom;
             this.birthDatePicker.SymbolDropDown = 61555;
             this.birthDatePicker.SymbolNormal = 61555;
-            this.birthDatePicker.TabIndex = 123;
-            this.birthDatePicker.Text = "2022-04-24";
+            this.birthDatePicker.TabIndex = 2;
+            this.birthDatePicker.Text = "2022-04-25";
             this.birthDatePicker.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.birthDatePicker.Value = new System.DateTime(2022, 4, 24, 14, 54, 18, 878);
+            this.birthDatePicker.Value = new System.DateTime(2022, 4, 25, 0, 0, 0, 0);
             this.birthDatePicker.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // profile
@@ -296,7 +297,7 @@
             this.profile.ShowText = false;
             this.profile.Size = new System.Drawing.Size(873, 82);
             this.profile.Style = Sunny.UI.UIStyle.Custom;
-            this.profile.TabIndex = 124;
+            this.profile.TabIndex = 9;
             this.profile.Text = "Enter user\'s personal introduction with a maximum of 300 characters.";
             this.profile.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.profile.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -334,7 +335,7 @@
             this.gender.RectColor = System.Drawing.Color.Gray;
             this.gender.Size = new System.Drawing.Size(343, 35);
             this.gender.Style = Sunny.UI.UIStyle.Custom;
-            this.gender.TabIndex = 113;
+            this.gender.TabIndex = 4;
             this.gender.Text = "Select user\'s gender";
             this.gender.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.gender.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -355,7 +356,7 @@
             this.country.ShowText = false;
             this.country.Size = new System.Drawing.Size(343, 35);
             this.country.Style = Sunny.UI.UIStyle.Custom;
-            this.country.TabIndex = 111;
+            this.country.TabIndex = 5;
             this.country.Text = "Enter user\'s country";
             this.country.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.country.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -376,7 +377,7 @@
             this.address.ShowText = false;
             this.address.Size = new System.Drawing.Size(343, 35);
             this.address.Style = Sunny.UI.UIStyle.Custom;
-            this.address.TabIndex = 112;
+            this.address.TabIndex = 6;
             this.address.Text = "Enter user\'s address";
             this.address.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.address.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -397,7 +398,7 @@
             this.sanswer.ShowText = false;
             this.sanswer.Size = new System.Drawing.Size(343, 35);
             this.sanswer.Style = Sunny.UI.UIStyle.Custom;
-            this.sanswer.TabIndex = 113;
+            this.sanswer.TabIndex = 8;
             this.sanswer.Text = "Enter a answer";
             this.sanswer.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.sanswer.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);

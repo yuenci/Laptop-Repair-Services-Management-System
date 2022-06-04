@@ -177,6 +177,7 @@
             this.label20.Size = new System.Drawing.Size(80, 22);
             this.label20.TabIndex = 36;
             this.label20.Text = "Get more";
+            this.label20.Click += new System.EventHandler(this.readMoreDoc_Click);
             // 
             // label19
             // 
@@ -791,6 +792,7 @@
             this.label17.Size = new System.Drawing.Size(91, 22);
             this.label17.TabIndex = 35;
             this.label17.Text = "Read more";
+            this.label17.Click += new System.EventHandler(this.readMoreNews_Click);
             // 
             // label16
             // 

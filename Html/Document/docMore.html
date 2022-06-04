@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View More documents</title>
+    <link rel="stylesheet" href="iconfont.css">
+    <style>
+        body {
+            font-family: "ping";
+        }
+
+        #container {
+            width: 80%;
+            margin: 50px auto 50px auto;
+        }
+
+        #welcome {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        #number {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: rgb(78, 89, 105);
+        }
+
+        .card {
+            padding: 10px;
+            background-color: white;
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .card-info {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+
+        .card-time,
+        .card-info {
+            margin: 15px;
+        }
+
+        .name-icon {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: rgba(70, 141, 255, 1);
+            border: 1px solid transparent;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .name {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .card-title {
+            font-weight: bold;
+            margin: 15px;
+        }
+
+        .card-title:hover {
+            cursor: pointer;
+        }
+
+        .card-views,
+        .card-likes {
+            line-height: 30px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="welcome"></div>
+        <div id="number"></div>
+        <div id="cards-container"></div>
+    </div>
+    <script>
+        index = {
+            "1": {
+                "title": "Within evidence those dinner form left recognize.",
+                "publisher": "Kevin Hodges",
+                "time": "2021/12/28 13:52:09",
+                "url": "Doc000001.html",
+                "views": "9872",
+                "likes": "9082"
+            },
+            "2": {
+                "title": "Executive agent daughter interesting miss care.",
+                "publisher": "Kevin Hodges",
+                "time": "2021/11/24 12:51:07",
+                "url": "Doc000002.html",
+                "views": "9751",
+                "likes": "2668"
+            },
+            "3": {
+                "title": "Half right daughter newspaper husband.",
+                "publisher": "Kevin Hodges",
+                "time": "2022/3/21 19:53:50",
+                "url": "Doc000003.html",
+                "views": "9739",
+                "likes": "1106"
+            },
+            "4": {
+                "title": "Region make may skin chance situation color.",
+                "publisher": "Kevin Hodges",
+                "time": "2021/6/9 2:16:14",
+                "url": "Doc000004.html",
+                "views": "9485",
+                "likes": "4138"
+            },
+            "5": {
+                "title": "And at between debate behavior parent local.",
+                "publisher": "Kevin Hodges",
+                "time": "2022/4/14 15:40:23",
+                "url": "Doc000005.html",
+                "views": "9373",
+                "likes": "2302"
+            },
+            "6": {
+                "title": "Early have event production resource.",
+                "publisher": "Kevin Hodges",
+                "time": "2021/12/21 9:07:27",
+                "url": "Doc000006.html",
+                "views": "9077",
+                "likes": "2977"
+            },
+            "7": {
+                "title": "Society subject war despite.",
+                "publisher": "Kevin Hodges",
+                "time": "2022/1/18 18:18:39",
+                "url": "Doc000007.html",
+                "views": "8998",
+                "likes": "211"
+            },
+            "8": {
+                "title": "Sister issue sister court ok what.",
+                "publisher": "Kevin Hodges",
+                "time": "2022/1/16 11:50:16",
+                "url": "Doc000008.html",
+                "views": "8962",
+                "likes": "2449"
+            }
+        };
+
+        var themeData;
+        var userName;
+
+
+        function getJson(data) {
+            themeData = data;
+            userName = themeData["userName"];
+        }
+
+    </script>
+    <script>
+        var jsonData = index;
+
+        window.onload = function () {
+            document.getElementById("welcome").innerHTML = `Welcome to the documents, ${userName}`
+            document.getElementById("number").innerHTML = `There are ${8} documents prepared for you.`
+            insertCard();
+            initTheme();
+        }
+
+        function insertCard() {
+            let allKeys = Object.keys(index);
+            for (let index = 0; index < allKeys.length; index++) {
+                const element = jsonData[allKeys[index]];
+                const card = document.createElement("div");
+                card.className = "card";
+                card.innerHTML = `
+                <div class="card-time">${element["time"]}</div>
+                <div class="card-title">${element["title"]}</div>
+                <div class="card-info">
+                    <div class="card-publisher">
+                        <div class="name-icon">${element["publisher"].substring(0, 1)}</div>
+                        <div class="name">${element["publisher"]}</div>
+                    </div>
+                    <div>
+                        <span class="card-views">
+                            <span class="iconfont icon-chakan"> ${element["views"]}</span>
+                        </span>
+                        <span class="card-likes">
+                            <span class="iconfont icon-love"> ${element["likes"]}</span>
+                        </span>
+                    </div>
+                </div>
+                `;
+                assignEvent(card, `${element["url"]}`);
+                document.getElementById("cards-container").append(card);
+            }
+
+        }
+
+        function assignEvent(obj, url) {
+            obj.onclick = function () {
+                location.href = url;
+                //console.log(url);
+            }
+        }
+        document.ge
+
+        function initTheme() {
+            if (themeData["theme"] == "light") {
+                document.body.style.backgroundColor = "#f7f8fa";
+                document.body.style.color = "black";
+                let cards = document.getElementsByClassName("card");
+                for (let index = 0; index < cards.length; index++) {
+                    const element = cards[index];
+                    element.style.backgroundColor = "white";
+                }
+            }
+            else if (themeData["theme"] == "dark") {
+                document.body.style.backgroundColor = "#121f2b";
+                document.body.style.color = "white";
+
+                document.getElementById("number").style.color = "white";
+
+                let cards = document.getElementsByClassName("card");
+                console.log(cards);
+                for (let index = 0; index < cards.length; index++) {
+                    const element = cards[index];
+                    element.style.backgroundColor = "#1c2f46";
+                }
+            }
+
+        }
+    </script>
+    <script src="theme.json?callback=getData"></script>
+    </script>
+</body>
+
+</html>

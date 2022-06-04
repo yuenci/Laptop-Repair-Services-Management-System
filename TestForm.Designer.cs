@@ -60,6 +60,7 @@
             this.urC_Crumbs1 = new miniSys0._3.Controls.Others.UrC_Crumbs();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.csharpRepairerIncDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.csharpRepairerIncDataSet)).BeginInit();
@@ -300,7 +301,7 @@
             // uC_Task_Card1
             // 
             this.uC_Task_Card1.BackColor = System.Drawing.Color.White;
-            this.uC_Task_Card1.Location = new System.Drawing.Point(645, 87);
+            this.uC_Task_Card1.Location = new System.Drawing.Point(211, 66);
             this.uC_Task_Card1.Name = "uC_Task_Card1";
             this.uC_Task_Card1.Size = new System.Drawing.Size(305, 145);
             this.uC_Task_Card1.TabIndex = 11;
@@ -308,7 +309,7 @@
             // urC_Crumbs1
             // 
             this.urC_Crumbs1.BackColor = System.Drawing.SystemColors.Control;
-            this.urC_Crumbs1.Location = new System.Drawing.Point(650, 284);
+            this.urC_Crumbs1.Location = new System.Drawing.Point(271, 243);
             this.urC_Crumbs1.Name = "urC_Crumbs1";
             this.urC_Crumbs1.Size = new System.Drawing.Size(300, 35);
             this.urC_Crumbs1.TabIndex = 12;
@@ -333,11 +334,22 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(745, 151);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(99, 60);
+            this.button7.TabIndex = 15;
+            this.button7.Text = "ArticalData";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 599);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.urC_Crumbs1);
@@ -400,5 +412,6 @@
         private Controls.Others.UrC_Crumbs urC_Crumbs1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }

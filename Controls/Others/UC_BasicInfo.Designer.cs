@@ -142,7 +142,7 @@
             this.street.ShowText = false;
             this.street.Size = new System.Drawing.Size(366, 40);
             this.street.Style = Sunny.UI.UIStyle.Custom;
-            this.street.TabIndex = 13;
+            this.street.TabIndex = 4;
             this.street.Text = "Enter the street where you live";
             this.street.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.street.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -165,7 +165,7 @@
             this.country.ShowText = false;
             this.country.Size = new System.Drawing.Size(366, 40);
             this.country.Style = Sunny.UI.UIStyle.Custom;
-            this.country.TabIndex = 12;
+            this.country.TabIndex = 3;
             this.country.Text = "Enter your country";
             this.country.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.country.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -188,7 +188,7 @@
             this.name.ShowText = false;
             this.name.Size = new System.Drawing.Size(366, 40);
             this.name.Style = Sunny.UI.UIStyle.Custom;
-            this.name.TabIndex = 11;
+            this.name.TabIndex = 2;
             this.name.Text = "Enter your name";
             this.name.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.name.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -211,7 +211,7 @@
             this.email.ShowText = false;
             this.email.Size = new System.Drawing.Size(366, 40);
             this.email.Style = Sunny.UI.UIStyle.Custom;
-            this.email.TabIndex = 10;
+            this.email.TabIndex = 1;
             this.email.Text = "Enter your email address";
             this.email.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.email.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -293,7 +293,7 @@
             this.profile.ShowText = false;
             this.profile.Size = new System.Drawing.Size(700, 99);
             this.profile.Style = Sunny.UI.UIStyle.Custom;
-            this.profile.TabIndex = 14;
+            this.profile.TabIndex = 5;
             this.profile.Text = "Please enter your personal introduction with a maximum of 300 characters.";
             this.profile.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.profile.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);

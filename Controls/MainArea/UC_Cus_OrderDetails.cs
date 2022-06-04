@@ -18,10 +18,15 @@ namespace miniSys0._3.Controls.MainArea
         public UC_Cus_OrderDetails()
         {
             InitializeComponent();
+            InitCrumb();
             InitStyle();
             Init();
         }
-
+        private void InitCrumb()
+        {
+            urC_Crumbs1.crumbText.Text = "Order details";
+            urC_Crumbs1.crumbsHome.Text = " / Data /            rt";
+        }
         private void InitStyle()
         {
             dot1.FillColor = Color.FromArgb(22, 93, 255);
@@ -61,31 +66,30 @@ namespace miniSys0._3.Controls.MainArea
             string customerName = data[1];
 
             // order staff
-            string sqlOrderStaff = $"select TOP 1 Staff.Name,Schedule.Status" +
-                $" From Schedule " +
-                $"Inner join Staff On Staff.StaffID = Schedule.TechnicianID " +
-                $"Where OrderID ='{ordIDCache}' Order by Time DESC";
-
-            Console.WriteLine("----------------");
-            Console.WriteLine(sqlOrderStaff);
-            Console.WriteLine("----------------");
-            dynamic[] data2 = SQLCursor.Query(sqlOrderStaff);
-
-            if (data2.Length >0)
+            if (SQLCursor.ifCurrentOrderNotStart())
             {
-                technician.Text = data2[0];
+                string sqlOrderStaff = $"select TOP 1 Schedule.Status" +
+                $" From Schedule " +
+                $"Where OrderID ='{ordIDCache}' Order by Time DESC";
+                dynamic[] data2 = SQLCursor.Query(sqlOrderStaff);
+                technician.Text = "";
+                status.Text = statusStr(data2[0]);
+                setStatusButton(data2[0]);
             }
             else
             {
-                technician.Text = "";
+                string sqlOrderStaff = $"select TOP 1 Staff.Name,Schedule.Status" +
+                $" From Schedule " +
+                $"Inner join Staff On Staff.StaffID = Schedule.TechnicianID " +
+                $"Where OrderID ='{ordIDCache}' Order by Time DESC";
+                dynamic[] data2 = SQLCursor.Query(sqlOrderStaff);
+                technician.Text = data2[0];
+                status.Text = statusStr(data2[1]);
+                setStatusButton(data2[1]);
             }
-            
-
-            status.Text = statusStr(data2[1]);
-            setStatusButton(data2[1]);
 
 
-            Console.WriteLine(statusStr(data2[1]));
+            //Console.WriteLine(statusStr(data2[1]));
 
             serviceType.Enabled = false;
 
@@ -154,7 +158,7 @@ namespace miniSys0._3.Controls.MainArea
                 status4Time.Visible = false;
 
                 status1Time.Text = getTime("Order");
-                Console.WriteLine("YES------------------------");
+                //Console.WriteLine("YES------------------------");
                 return "Accept order";
             }
             else if (status == "Progress")
@@ -214,6 +218,7 @@ namespace miniSys0._3.Controls.MainArea
                 statusBtn.FillColor = Color.FromArgb(0, 180, 42);
                 statusBtn.FillHoverColor = Color.FromArgb(35, 195, 67);
                 statusBtn.FillPressColor = Color.FromArgb(35, 195, 67);
+                statusBtn.Text = "Finished";
 
             }
             else if(status == "Finished")
@@ -221,9 +226,15 @@ namespace miniSys0._3.Controls.MainArea
                 statusBtn.Enabled = false;
                 statusBtn.Text = "End";
             }
-            else
+            else if(status == "Progress")
             {
                 statusBtn.Enabled = false;
+                statusBtn.Text = "Repairing";
+            }
+            else if (status == "Order")
+            {
+                statusBtn.Enabled = false;
+                statusBtn.Text = "Ordered";
             }
         }
         
@@ -272,18 +283,26 @@ namespace miniSys0._3.Controls.MainArea
 
         private void statusBtn_Click(object sender, EventArgs e)
         {
-            string IfExist = SQLCursor.Query("Select Status From Schedule Where " +
-                $"OrderID = '{ordIDCache}' and Status = 'Finished'")[0];
+            dynamic[] IfExist = SQLCursor.Query("Select Status From Schedule Where " +
+                $"OrderID = '{ordIDCache}'");
 
-            if (IfExist == "")
+            if (IfExist.Length == 3)
             {
                 infoBar.Show();
-                string technicianID = SQLCursor.Query("Select Top1 TechnicianID From Schedule " +
-                    $"Where OrderID = {ordIDCache}")[0];
+
+                string sql1 = "Select Top 1 TechnicianID From Schedule " +
+                    $"Where OrderID = '{ordIDCache}'";
+                Console.WriteLine(sql1);
+                string technicianID = SQLCursor.Query(sql1)[0];
+
                 string time = DateTime.Now.ToString();
                 string ScheduleID = SQLCursor.AddOneToLastID("ScheduleID", "Schedule");
-                SQLCursor.Execute($"INSERT INTO Schedule VALUES('{ScheduleID}','Finished','{time}'," +
-                    $"'{technicianID}','{ordIDCache}');");
+
+                string sql2 = $"INSERT INTO Schedule VALUES('{ScheduleID}','Finished','{time}'," +
+                    $"'{technicianID}','{ordIDCache}');";
+                SQLCursor.Execute(sql2);
+
+                statusBtn.Enabled = false;
             }
 
 

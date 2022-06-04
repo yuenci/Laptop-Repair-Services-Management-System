@@ -23,6 +23,14 @@ namespace miniSys0._3.Controls.Others
 
         private void InitTheme()
         {
+            dynamic[] btns = { start, finish };
+            foreach (dynamic item in btns)
+            {
+                item.ForeColor = Color.FromArgb(22, 93, 255);
+                item.ForeHoverColor = Color.FromArgb(22, 93, 255);
+                item.ForePressColor = Color.FromArgb(22, 93, 255);
+            }
+
             if (User_type.user_theme == "dark")
             {
                 this.BackColor = Color.FromArgb(55, 55, 57);
@@ -39,10 +47,16 @@ namespace miniSys0._3.Controls.Others
         {
             orderIDcache = orderID;
             orderId.Text = orderID.Substring(3,8);
-            dynamic[] Data = SQLCursor.Query($"SELECT TOP 1 Status,Time FROM Schedule " +
-                $"WHERE OrderID = '{orderID}' " +
-                $"ORDER BY Time DESC;");
 
+            string sql = $"SELECT TOP 1 Status,Time FROM Schedule " +
+                $"WHERE OrderID = '{orderID}' " +
+                $"ORDER BY Time DESC;";
+
+            dynamic[] Data = SQLCursor.Query(sql);
+
+            //Console.WriteLine(sql);
+            
+                
             setStatus(Data[0]);
             //updateTime.Text = Data[1].Substring(0, 19);
             updateTime.Text = Data[1];
@@ -104,6 +118,10 @@ namespace miniSys0._3.Controls.Others
             SQLCursor.Execute($"INSERT INTO Schedule VALUES ('{schID}','Progress','{time}','{User_type.user_ID}','{orderIDcache}')");
             start.Enabled = false;
             updateTime.Text = time;
+
+            string updateSQL = $"UPDATE Schedule  SET TechnicianID = '{User_type.user_ID}' " +
+                $"WHERE OrderID = '{orderIDcache}' AND Status ='Order';";
+            SQLCursor.Execute(updateSQL);
         }
 
 

@@ -16,14 +16,18 @@ namespace miniSys0._3
     {
         private Random rand = new Random();
         private int num = 0;
-
+        private Main main = null;
         public Loading()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+            InitMain();
             HideAllLoadingText();
-            //LoadingText();
             RandomLoadingText();
+        }
+        private void InitMain()
+        {
+            main = new Main();
         }
 
         private void HideAllLoadingText()
@@ -60,7 +64,7 @@ namespace miniSys0._3
             if (num == 7)
             {
                 mytimer.Stop();
-                Main main = new Main();
+                //Main main = new Main();
                 main.Show();
                 this.Hide();
             }

@@ -80,9 +80,17 @@ namespace miniSys0._3.Controls
             }
             else if (nodeSelect == "Order details")
             {
-                UC_Cus_OrderDetails uc = new UC_Cus_OrderDetails();
-                addUserControl(uc);
-                Main.main.currentMainPage = "UC_Cus_OrderDetails";
+                if (SQLCursor.IfthereAnyOrder())
+                {
+                    UC_Cus_OrderDetails uc = new UC_Cus_OrderDetails();
+                    addUserControl(uc);
+                    Main.main.currentMainPage = "UC_Cus_OrderDetails";
+                }
+                else
+                {
+                    MessageBox.Show("You haven't made any order");
+                }
+                
 
             }
             else if (nodeSelect == "User info")

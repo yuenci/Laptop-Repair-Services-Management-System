@@ -119,7 +119,7 @@
             this.selectPost.RectColor = System.Drawing.Color.Gray;
             this.selectPost.Size = new System.Drawing.Size(343, 35);
             this.selectPost.Style = Sunny.UI.UIStyle.Custom;
-            this.selectPost.TabIndex = 85;
+            this.selectPost.TabIndex = 4;
             this.selectPost.Text = "Select user\'s post";
             this.selectPost.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.selectPost.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -146,7 +146,7 @@
             this.selectDepartment.RectColor = System.Drawing.Color.Gray;
             this.selectDepartment.Size = new System.Drawing.Size(343, 35);
             this.selectDepartment.Style = Sunny.UI.UIStyle.Custom;
-            this.selectDepartment.TabIndex = 86;
+            this.selectDepartment.TabIndex = 3;
             this.selectDepartment.Text = "Select user\'s department";
             this.selectDepartment.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.selectDepartment.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -209,7 +209,7 @@
             this.nameTextBox.ShowText = false;
             this.nameTextBox.Size = new System.Drawing.Size(343, 35);
             this.nameTextBox.Style = Sunny.UI.UIStyle.Custom;
-            this.nameTextBox.TabIndex = 94;
+            this.nameTextBox.TabIndex = 1;
             this.nameTextBox.Text = "Enter the user\'s name";
             this.nameTextBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.nameTextBox.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -231,7 +231,7 @@
             this.IDnumberTextBox.ShowText = false;
             this.IDnumberTextBox.Size = new System.Drawing.Size(343, 35);
             this.IDnumberTextBox.Style = Sunny.UI.UIStyle.Custom;
-            this.IDnumberTextBox.TabIndex = 97;
+            this.IDnumberTextBox.TabIndex = 2;
             this.IDnumberTextBox.Text = "Enter the user\'s ID number";
             this.IDnumberTextBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.IDnumberTextBox.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);

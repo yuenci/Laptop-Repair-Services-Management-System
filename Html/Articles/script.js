@@ -11,6 +11,50 @@ function refresh() {
 }
 
 
+let botoomBtns = document.createElement("div");
+botoomBtns.id = "botoomBtns";
+botoomBtns.innerHTML = `
+    <button id="menu">Back to article list</button>
+    `;
+if (document.getElementById("artical")) {
+    document.getElementById("artical").append(botoomBtns);
+}
+
+
+
+var jsonData;
+var theme;
+let btns = document.getElementById("btns").children;
+window.onload = function () {
+    let btnColor;
+    if (theme == "dark") {
+        document.body.style.backgroundColor = "#121f2b";
+        document.body.style.color = "white";
+        btnColor = "white";
+    }
+    else if (theme == "light") {
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+        btnColor = "black";
+    }
+    for (let index = 0; index < btns.length; index++) {
+        const element = btns[index];
+        element.style.color = btnColor;
+    }
+    menu.style.color = btnColor;
+}
+
+let scriptObj = document.createElement("script");
+scriptObj.src = "noticeIndex.json?callback=getData";
+document.body.append(scriptObj);
+
+function getJson(data) {
+    jsonData = data;
+    //console.log(jsonData["0"]["theme"]);
+    theme = jsonData["0"]["theme"];
+}
+
+
 function insertTitle(titleStr) {
     var title = document.getElementById("title");
     title.innerHTML = `<h1>${titleStr}</h1>`;
@@ -189,9 +233,14 @@ whatsapp.onclick = function showHW() {
 }
 
 
-// var qrcode1 = document.getElementById("fwin");
-// qrcode1.onclick = function hideqr() {
-//     console.log("hi");
-// }
+let menu = document.getElementById("menu");
+
+
+
+
+menu.onclick = function () {
+    history.back()
+};
+
 
 

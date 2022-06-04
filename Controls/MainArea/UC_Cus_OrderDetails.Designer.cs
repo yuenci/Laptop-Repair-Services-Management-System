@@ -67,11 +67,11 @@
             this.uiLabel2 = new Sunny.UI.UILabel();
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.uiUserControl3 = new Sunny.UI.UIUserControl();
-            this.uiLabel10 = new Sunny.UI.UILabel();
             this.card4 = new miniSys0._3.Controls.Others.UC_Recent_Repair_Card();
             this.card3 = new miniSys0._3.Controls.Others.UC_Recent_Repair_Card();
             this.card2 = new miniSys0._3.Controls.Others.UC_Recent_Repair_Card();
             this.card1 = new miniSys0._3.Controls.Others.UC_Recent_Repair_Card();
+            this.uiLabel10 = new Sunny.UI.UILabel();
             this.urC_Crumbs1 = new miniSys0._3.Controls.Others.UrC_Crumbs();
             this.uiUserControl2.SuspendLayout();
             this.uiUserControl1.SuspendLayout();
@@ -354,7 +354,6 @@
             this.infoBar.Size = new System.Drawing.Size(328, 35);
             this.infoBar.Style = Sunny.UI.UIStyle.Custom;
             this.infoBar.Symbol = 61528;
-            this.infoBar.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(42)))));
             this.infoBar.TabIndex = 90;
             this.infoBar.Text = "Successfully finished the order";
             this.infoBar.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -363,14 +362,14 @@
             // 
             this.statusBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.statusBtn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.statusBtn.Location = new System.Drawing.Point(975, 9);
+            this.statusBtn.Location = new System.Drawing.Point(966, 9);
             this.statusBtn.MinimumSize = new System.Drawing.Size(1, 1);
             this.statusBtn.Name = "statusBtn";
-            this.statusBtn.Size = new System.Drawing.Size(100, 35);
+            this.statusBtn.Size = new System.Drawing.Size(109, 35);
             this.statusBtn.Style = Sunny.UI.UIStyle.Custom;
             this.statusBtn.Symbol = 61528;
             this.statusBtn.TabIndex = 89;
-            this.statusBtn.Text = "Finish";
+            this.statusBtn.Text = "Ordered";
             this.statusBtn.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.statusBtn.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.statusBtn.Click += new System.EventHandler(this.statusBtn_Click);
@@ -629,18 +628,6 @@
             this.uiUserControl3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiUserControl3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiLabel10
-            // 
-            this.uiLabel10.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
-            this.uiLabel10.Location = new System.Drawing.Point(13, 9);
-            this.uiLabel10.Name = "uiLabel10";
-            this.uiLabel10.Size = new System.Drawing.Size(178, 33);
-            this.uiLabel10.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel10.TabIndex = 16;
-            this.uiLabel10.Text = "Recent repair";
-            this.uiLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiLabel10.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
             // card4
             // 
             this.card4.BackColor = System.Drawing.Color.White;
@@ -680,6 +667,18 @@
             this.card1.Size = new System.Drawing.Size(246, 146);
             this.card1.TabIndex = 17;
             this.card1.Click += new System.EventHandler(this.card1_Click);
+            // 
+            // uiLabel10
+            // 
+            this.uiLabel10.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
+            this.uiLabel10.Location = new System.Drawing.Point(13, 9);
+            this.uiLabel10.Name = "uiLabel10";
+            this.uiLabel10.Size = new System.Drawing.Size(178, 33);
+            this.uiLabel10.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel10.TabIndex = 16;
+            this.uiLabel10.Text = "Recent repair";
+            this.uiLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiLabel10.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // urC_Crumbs1
             // 

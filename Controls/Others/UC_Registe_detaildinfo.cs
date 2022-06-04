@@ -49,6 +49,8 @@ namespace miniSys0._3.Controls.Others
 
             RichTextBoxCE superProfile = new RichTextBoxCE(profile,
                 "Enter user's personal introduction with a maximum of 300 characters.", Color.Gray);
+
+            birthDatePicker.Text = DateTime.Now.ToString("yyyy-MM-dd");
         }
 
 
@@ -71,7 +73,7 @@ namespace miniSys0._3.Controls.Others
                     squestionStr = squestion.SelectedItem.ToString();
                 }
 
-                MessageBox.Show($"{phone.Text}" +
+                /*MessageBox.Show($"{phone.Text}" +
                     $"{birthDatePicker.Text}" +
                     $"{email.Text}" +
                     $"{genderStr}" +
@@ -79,7 +81,7 @@ namespace miniSys0._3.Controls.Others
                     $"{address.Text}" +
                     $"{squestionStr}" +
                     $"{sanswer.Text}" +
-                    $"{profile.Text}" );
+                    $"{profile.Text}" );*/
                 if (phone.Text != "Enter user's phone" && phone.Text != "")
                 {
                     RegisterInfoCache.user_phone = phone.Text;
@@ -125,10 +127,12 @@ namespace miniSys0._3.Controls.Others
                 if (User_type.user_deparment =="Admin")
                 {
                     RegisterInfoCache.user_ID = SQLCursor.AddOneToLastID("StaffID", "Staff");
+                    registerSta();
                 }
                 else if(User_type.user_deparment == "Receptionist")
                 {
                     RegisterInfoCache.user_ID = SQLCursor.AddOneToLastID("CustomerID", "Customer");
+                    registerCus();
                 }
 
 
@@ -145,7 +149,89 @@ namespace miniSys0._3.Controls.Others
                 AddUserControl.Add(uc, UC_Registration.uc_Registration.contentPanel);
             }
         }
-        
+        private void registerCus()
+        {
+            string[] registerDataCache = {
+                RegisterInfoCache.user_ID,
+                RegisterInfoCache.user_name,
+                RegisterInfoCache.user_phone,
+                RegisterInfoCache.user_email,
+                RegisterInfoCache.user_Birthday,
+                RegisterInfoCache.user_gender,
+                RegisterInfoCache.user_about,
+                RegisterInfoCache.user_Country,
+                RegisterInfoCache.user_Address,
+                RegisterInfoCache.user_regtime,
+                RegisterInfoCache.user_security_qustion,
+                RegisterInfoCache.user_security_answer,
+                RegisterInfoCache.user_password
+            };
+
+            string[] staffFelid = { "CustomerID", "Name", "Phone_number", "Email",
+                "Birthday", "Gender", "About", "Country",
+                "Address", "Regtime", "Validation_problem","Validation_answer", "Password"};
+
+            List<string> rowName = new List<string>();
+            List<string> sqlData = new List<string>();
+
+            for (int i = 0; i < registerDataCache.Length; i++)
+            {
+                if (registerDataCache[i] != "")
+                {
+                    rowName.Add(staffFelid[i]);
+                    sqlData.Add($"'{registerDataCache[i]}'");
+                }
+            }
+
+            string sql = $"INSERT INTO Customer ({String.Join(",", rowName)}) " +
+                "VALUES (" + String.Join(",", sqlData) + ")";
+
+            Console.WriteLine(sql);
+            SQLCursor.Execute(sql);
+        }
+        private void registerSta()
+        {
+            string[] registerDataCache = {
+                RegisterInfoCache.user_deparment,
+                RegisterInfoCache.user_ID,
+                RegisterInfoCache.user_name,
+                RegisterInfoCache.user_phone,
+                RegisterInfoCache.user_email,
+                RegisterInfoCache.user_Birthday,
+                RegisterInfoCache.user_gender,
+                RegisterInfoCache.user_post,
+                RegisterInfoCache.user_ID_number,
+                RegisterInfoCache.user_about,
+                RegisterInfoCache.user_Country,
+                RegisterInfoCache.user_Address,
+                RegisterInfoCache.user_regtime,
+                RegisterInfoCache.user_security_qustion,
+                RegisterInfoCache.user_security_answer,
+                RegisterInfoCache.user_password
+            };
+
+            string[] staffFelid = { "Department", "StaffID", "Name", "Phone_number", "Email", 
+                "Birthday", "Gender", "Post", "ID_number", "About", "Country", 
+                "Address", "Regtime", "Validation_problem","Validation_answer", "Password"};
+
+            List<string> rowName = new List<string>();
+            List<string> sqlData = new List<string>();
+
+            for (int i = 0; i < registerDataCache.Length; i++)
+            {
+                if (registerDataCache[i] != "")
+                {
+                    rowName.Add(staffFelid[i]);
+                    sqlData.Add($"'{registerDataCache[i]}'");
+                }
+            }
+
+            string sql = $"INSERT INTO Staff ({String.Join(",", rowName)}) " +
+                "VALUES (" + String.Join(",",sqlData) + ")";
+
+            Console.WriteLine(sql);
+            SQLCursor.Execute(sql);
+        }
 
         private string generatePWD()
         {

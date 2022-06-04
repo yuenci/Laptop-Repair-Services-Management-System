@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -184,6 +185,50 @@ namespace miniSys0._3
         {
             string data = SQLCursor.getName("sta000009");
             MessageBox.Show(data);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            string sql = "SELECT Title,Staff.Name,Time,Views,Likes FROM Articles  " +
+                "INNER JOIN Staff ON Articles.PosterID = Staff.StaffID " +
+                "WHERE  Type = 'News'  ORDER BY Views DESC ;";
+            dynamic[] Data = SQLCursor.Query(sql);
+            string json = "{";
+            for (int i = 0; i < Data.Length; i++)
+            {
+                json += $"\"{i}\":{{";
+                json += $"\"title\":\"{Data[i][0]}\",";
+                json += $"\"publisher\":\"{Data[i][1]}\",";
+                json += $"\"time\":\"{Data[i][2]}\",";
+                json += $"\"views\":\"{Data[i][3]}\",";
+                json += $"\"likes\":\"{Data[i][4]}\"";
+                if (i == Data.Length - 1)
+                {
+                    json += "}";
+                }
+                else
+                {
+                    json += "},";
+                }
+
+            }
+            json += "}";
+
+            writeJsonToFile("newsIndex.json", json);
+        }
+
+        private void writeJsonToFile(string fileName, string content)
+        {
+            string path = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin")) + $"Html\\Articles\\{fileName}";
+            //empty old js file
+            FileStream fs = new FileStream(path, FileMode.Truncate, FileAccess.ReadWrite);
+            fs.Close();
+            // add new 
+            System.IO.StreamWriter sw = new System.IO.StreamWriter(path, true, System.Text.Encoding.Default);
+            sw.Write(content);
+            sw.Close();
+
+            MessageBox.Show("Done");
         }
     }
 }

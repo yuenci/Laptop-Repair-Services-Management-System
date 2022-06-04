@@ -1,7 +1,8 @@
 body {
     margin-left: 20px;
     margin-right: 20px;
-    background-color: #E3EDCD;
+    background-color: #f7f8fa;
+    font-family: "ping";
 }
 
 #nameIcon {
@@ -142,4 +143,26 @@ input:hover {
     height: 100%;
     background-color: rgba(220, 220, 220, 0.7);
 
+}
+
+#botoomBtns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 30px auto 10px auto;
+
+}
+
+#botoomBtns button {
+    background-color: rgb(187, 191, 196);
+    border: 0;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+#botoomBtns button:hover {
+    cursor: pointer;
+    color: rgba(70, 141, 255, 1);
+    ;
 }

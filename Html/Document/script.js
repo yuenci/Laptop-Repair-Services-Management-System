@@ -11,6 +11,39 @@ function refresh() {
 }
 
 
+var jsonData;
+var theme;
+let btns = document.getElementById("btns").children;
+window.onload = function () {
+    let btnColor;
+    if (theme == "dark") {
+        document.body.style.backgroundColor = "#121f2b";
+        document.body.style.color = "white";
+        btnColor = "white";
+    }
+    else if (theme == "light") {
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+        btnColor = "black";
+    }
+    for (let index = 0; index < btns.length; index++) {
+        const element = btns[index];
+        element.style.color = btnColor;
+    }
+}
+
+let scriptObj = document.createElement("script");
+scriptObj.src = "theme.json?callback=getData";
+document.body.append(scriptObj);
+
+function getJson(data) {
+    jsonData = data;
+    //console.log(jsonData["theme"]);
+    theme = jsonData["theme"];
+}
+
+
+
 function insertTitle(titleStr) {
     var title = document.getElementById("title");
     title.innerHTML = `<h1>${titleStr}</h1>`;
@@ -191,3 +224,17 @@ whatsapp.onclick = function showHW() {
 // }
 
 
+let botoomBtns = document.createElement("div");
+botoomBtns.id = "botoomBtns";
+botoomBtns.innerHTML = `
+    <button id="menu">Back to article list</button>
+    `;
+if (document.getElementById("artical")) {
+    document.getElementById("artical").append(botoomBtns);
+}
+
+let menu = document.getElementById("menu");
+
+menu.onclick = function () {
+    history.back()
+};

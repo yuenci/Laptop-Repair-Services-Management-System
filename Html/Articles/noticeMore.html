@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View More news</title>
+    <link rel="stylesheet" href="iconfont.css">
+    <style>
+        body {
+            font-family: "ping";
+        }
+
+        #container {
+            width: 80%;
+            margin: 50px auto 50px auto;
+        }
+
+        #welcome {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        #number {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: rgb(78, 89, 105);
+        }
+
+        .card {
+            padding: 10px;
+            background-color: white;
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .card-info {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+
+        .card-time,
+        .card-info {
+            margin: 15px;
+        }
+
+        .name-icon {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: rgba(70, 141, 255, 1);
+            border: 1px solid transparent;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .name {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .card-title {
+            font-weight: bold;
+            margin: 15px;
+        }
+
+        .card-title:hover {
+            cursor: pointer;
+        }
+
+        .card-views,
+        .card-likes {
+            line-height: 30px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="welcome"></div>
+        <div id="number"></div>
+        <div id="cards-container"></div>
+    </div>
+    <script>
+        var jsonData;
+        function getJson(data) {
+            jsonData = data;
+        }
+
+        window.onload = function () {
+            document.getElementById("welcome").innerHTML = `Welcome to the notices, ${jsonData["0"]["userName"]}`
+            document.getElementById("number").innerHTML = `There are ${Object.keys(jsonData).length} notices prepared for you.`
+            insertCard();
+            initTheme();
+        }
+
+        function insertCard() {
+            let allKeys = Object.keys(jsonData);
+            for (let index = 1; index < allKeys.length; index++) {
+                const element = jsonData[allKeys[index]];
+                const card = document.createElement("div");
+                card.className = "card";
+                card.innerHTML = `
+                <div class="card-time">${element["time"]}</div>
+                <div class="card-title">${element["title"]}</div>
+                <div class="card-info">
+                    <div class="card-publisher">
+                        <div class="name-icon">${element["publisher"].substring(0, 1)}</div>
+                        <div class="name">${element["publisher"]}</div>
+                    </div>
+                    <div>
+                        <span class="card-views">
+                            <span class="iconfont icon-chakan"> ${element["views"]}</span>
+                        </span>
+                        <span class="card-likes">
+                            <span class="iconfont icon-love"> ${element["likes"]}</span>
+                        </span>
+                    </div>
+                </div>
+                `;
+                assignEvent(card, `${element["url"]}`);
+                document.getElementById("cards-container").append(card);
+            }
+
+        }
+
+        function assignEvent(obj, url) {
+            obj.onclick = function () {
+                location.href = url;
+            }
+        }
+
+        function initTheme() {
+            if (jsonData["0"]["theme"] == "light") {
+                document.body.style.backgroundColor = "#f7f8fa";
+                document.body.style.color = "black";
+                let cards = document.getElementsByClassName("card");
+                for (let index = 0; index < cards.length; index++) {
+                    const element = cards[index];
+                    element.style.backgroundColor = "white";
+                }
+            }
+            else if (jsonData["0"]["theme"] == "dark") {
+                document.body.style.backgroundColor = "#121f2b";
+                document.body.style.color = "white";
+
+                document.getElementById("number").style.color = "white";
+
+                let cards = document.getElementsByClassName("card");
+                console.log(cards);
+                for (let index = 0; index < cards.length; index++) {
+                    const element = cards[index];
+                    element.style.backgroundColor = "#1c2f46";
+                }
+            }
+
+        }
+    </script>
+    <script src="newsIndex.json?callback=getData"></script>
+    </script>
+</body>
+
+</html>

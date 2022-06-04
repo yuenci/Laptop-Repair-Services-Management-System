@@ -319,7 +319,7 @@
     <value>6</value>
   </data>
   <data name="profile.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微软雅黑, 20pt</value>
+    <value>微软雅黑, 18pt</value>
   </data>
   <data name="profile.Location" type="System.Drawing.Point, System.Drawing">
     <value>1293, 14</value>

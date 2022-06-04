@@ -20,6 +20,7 @@ namespace miniSys0._3.Controls.MainArea
         private System.Timers.Timer aTimer;
         private string cusID = User_type.user_ID;
         private string[] urls;
+        private Color newsForeColor = Color.Black;
 
         public UC_Cus_dashboard()
         {
@@ -38,10 +39,12 @@ namespace miniSys0._3.Controls.MainArea
             uc_Cus_dashboard = this;
             SetTimer();
         }
+        
         private void InitTheme()
         {
             if (User_type.user_theme == "dark")
             {
+                newsForeColor = Color.White;
                 this.BackColor = Color.FromArgb(18, 31, 43);
 
                 dynamic[] container = { uiUserControl1, uiUserControl2, uiUserControl4, uiUserControl5, uiUserControl6 };
@@ -259,8 +262,16 @@ namespace miniSys0._3.Controls.MainArea
 
         private void shortcutButton1_Click(object sender, EventArgs e)
         {
-            UC_Cus_OrderDetails uc = new UC_Cus_OrderDetails();
-            addUserControl(uc);
+            if (SQLCursor.IfthereAnyOrder())
+            {
+                UC_Cus_OrderDetails uc = new UC_Cus_OrderDetails();
+                addUserControl(uc);
+            }
+            else
+            {
+                MessageBox.Show("You haven't made any order");
+            }
+            
         }
         
         private void shortcutButton2_Click(object sender, EventArgs e)
@@ -289,42 +300,64 @@ namespace miniSys0._3.Controls.MainArea
 
         private void InitProcess()
         {
-            dynamic[] data = SQLCursor.Query($"SELECT TOP 1 Schedule.Status,Orders.Model,Staff.Name " +
+            if (SQLCursor.IfthereAnyOrder())
+            {
+                string sql = $"SELECT TOP 1 Schedule.Status,Orders.Model,Staff.Name " +
                 $"FROM Schedule " +
                 $"INNER JOIN Orders ON Orders.OrderID = Schedule.OrderID " +
                 $"INNER JOIN Staff ON Staff.StaffID = Schedule.TechnicianID " +
                 $"WHERE Orders.CustomerID = '{cusID}' " +
-                $"ORDER BY Schedule.Time DESC; ");
+                $"ORDER BY Schedule.Time DESC; ";
+                dynamic[] data = SQLCursor.Query(sql);
 
-            //MessageBox.Show(data[0]);
+                //Console.WriteLine(sql);
+                //MessageBox.Show(data[0]);
 
-            if (data.Length ==0)
-            {
-                Process.Text = "0";
-                orderStatus.Text = " ";
-                modelText.Text = "None";
-                staffName.Text = "None";
-            }
-            else
-            {
-
-                Process.Value = int.Parse(prcessValue(data[0])[0]);
-                orderStatus.Text = prcessValue(data[0])[1];
-                modelText.Text = data[1];
-
-                if (data[2] !=null)
+                if (data.Length == 0)
                 {
-                    staffName.Text = data[2];
+                    Process.Text = "0";
+                    Process.Value = 0;
+                    orderStatus.Text = "Odered";
+                    staffName.Text = "None";
+
+                    sql = $"SELECT TOP 1 Orders.Model " +
+                    $"FROM Schedule " +
+                    $"INNER JOIN Orders ON Orders.OrderID = Schedule.OrderID " +
+                    $"WHERE Orders.CustomerID = '{cusID}' " +
+                    $"ORDER BY Schedule.Time DESC; ";
+                    data = SQLCursor.Query(sql);
+                    modelText.Text = data[0];
                 }
                 else
                 {
-                    staffName.Text = "None";
-                }
 
+                    Process.Value = int.Parse(prcessValue(data[0])[0]);
+                    orderStatus.Text = prcessValue(data[0])[1];
+                    modelText.Text = data[1];
+
+                    if (data[2] != null)
+                    {
+                        staffName.Text = data[2];
+                    }
+                    else
+                    {
+                        staffName.Text = "None";
+                    }
+                }
+            }
+            else
+            {
+                Process.Text = "0";
+                Process.Value = 100;
+                Process.ShowProcess = false;
+                modelText.Text = "None";
+                orderStatus.Text = "None";
+                staffName.Text = "None";
+            }
             }
 
             /*Process.Text = */
-        }
+        
 
         private string[] prcessValue(string str)
         {
@@ -497,28 +530,28 @@ namespace miniSys0._3.Controls.MainArea
         {
             if (sender.Equals(news1))
             {
-                news1.ForeColor = Color.Black;
-                newslabel1.ForeColor = Color.Black;
+                news1.ForeColor = newsForeColor;
+                newslabel1.ForeColor = newsForeColor;
             }
             else if (sender.Equals(news2))
             {
-                news2.ForeColor = Color.Black;
-                newslabel2.ForeColor = Color.Black;
+                news2.ForeColor = newsForeColor;
+                newslabel2.ForeColor = newsForeColor;
             }
             else if (sender.Equals(news3))
             {
-                news3.ForeColor = Color.Black;
-                newslabel3.ForeColor = Color.Black;
+                news3.ForeColor = newsForeColor;
+                newslabel3.ForeColor = newsForeColor;
             }
             else if (sender.Equals(news4))
             {
-                news4.ForeColor = Color.Black;
-                newslabel4.ForeColor = Color.Black;
+                news4.ForeColor = newsForeColor;
+                newslabel4.ForeColor = newsForeColor;
             }
             else if (sender.Equals(news5))
             {
-                news5.ForeColor = Color.Black;
-                newslabel5.ForeColor = Color.Black;
+                news5.ForeColor = newsForeColor;
+                newslabel5.ForeColor = newsForeColor;
             }
         }
 
@@ -556,6 +589,25 @@ namespace miniSys0._3.Controls.MainArea
             VideoPlayer videoPlayer = new VideoPlayer();
             videoPlayer.Show();
         }
+
+        private void readMoreNews_Click(object sender, EventArgs e)
+        {
+            string path = Setting.path + "\\Html\\Articles\\newsMore.html";
+            Reader.reader.WebBrowser2.Load(path);
+
+            Thread.Sleep(100);
+            Reader.reader.Show();
+        }
+
+        private void readMoreDoc_Click(object sender, EventArgs e)
+        {
+            string path = Setting.path + "\\Html\\Document\\docMore.html";
+            Reader.reader.WebBrowser2.Load(path);
+
+            Thread.Sleep(100);
+            Reader.reader.Show();
+        }
+
     }
 
 

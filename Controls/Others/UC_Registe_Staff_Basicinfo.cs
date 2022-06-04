@@ -25,12 +25,22 @@ namespace miniSys0._3.Controls.Others
             if (User_type.user_theme == "dark")
             {
                 this.BackColor = Color.FromArgb(28, 47, 70);
+                dynamic[] lable = { uiLabel1, IDnumber, uiLabel2, uiLabel3 };
+                foreach (var item in lable)
+                {
+                    item.ForeColor = Color.White;
+                }
             }
-            dynamic[] lable = { uiLabel1, IDnumber, uiLabel2, uiLabel3};
-            foreach (var item in lable)
+            else if (User_type.user_theme == "light")
             {
-                item.ForeColor = Color.White;
+                this.BackColor = Color.White;
+                dynamic[] lable = { uiLabel1, IDnumber, uiLabel2, uiLabel3 };
+                foreach (var item in lable)
+                {
+                    item.ForeColor = Color.Black;
+                }
             }
+            
 
         }
 
@@ -131,9 +141,9 @@ namespace miniSys0._3.Controls.Others
                 {
                     if (selectDepartment.SelectedIndex != -1 && selectPost.SelectedIndex != -1)
                     {
-                        MessageBox.Show($"store [{nameTextBox.Text}," +
+                        /*MessageBox.Show($"store [{nameTextBox.Text}," +
                             $"{selectDepartment.SelectedItem.ToString()}," +
-                            $"{selectPost.SelectedItem.ToString()}]");
+                            $"{selectPost.SelectedItem.ToString()}]");*/
 
                         RegisterInfoCache.user_name = nameTextBox.Text;
                         RegisterInfoCache.user_ID_number = IDnumberTextBox.Text;
