@@ -194,5 +194,23 @@ namespace miniSys0._3.Controls.Others
         {
             toolTip3.Show("Complete repair", done);
         }
+
+        private void service_Click(object sender, EventArgs e)
+        {
+            OrderDetails orderDetails = new OrderDetails();
+            orderDetails.Init(ordIDCache);
+            orderDetails.Show();
+        }
+
+        private void avatar_Click(object sender, EventArgs e)
+        {
+            string useID = SQLCursor.ifStaOrCus(name);
+            if (useID != null)
+            {
+                ViewProfile profile = new ViewProfile();
+                profile.InitCus(useID);
+                profile.Show();
+            }
+        }
     }
 }

@@ -22,6 +22,8 @@ namespace miniSys0._3.Controls.Others
 
         private void InitTheme()
         {
+            errorBar.Visible = false;
+            successIcon.Visible = false;
             if (User_type.user_theme == "dark")
             {
                 this.BackColor = Color.FromArgb(28, 47, 70);
@@ -44,22 +46,49 @@ namespace miniSys0._3.Controls.Others
             }
             if (nameTextBox.Text != "" && nameTextBox.Text != "Enter Customer's name")
             {
-                RegisterInfoCache.user_name = nameTextBox.Text;
+                if (SQLCursor.ifStaOrCus(nameTextBox.Text) !=null)
+                {
+                    MessageBox.Show($"{nameTextBox.Text} has already existed, please try others");
+                }
+                else
+                {
+                    RegisterInfoCache.user_name = nameTextBox.Text;
 
-                RegisterInfoCache.step2Activate = true;
+                    RegisterInfoCache.step2Activate = true;
 
-                UC_Registration.iconSelect(UC_Registration.uc_Registration.icon2,
-                UC_Registration.uc_Registration.iconLabel2);
-                UC_Registration.iconUnSelect(UC_Registration.uc_Registration.icon1,
-                    UC_Registration.uc_Registration.iconLabel1);
-                UC_Registration.iconUnSelect(UC_Registration.uc_Registration.icon3,
-                    UC_Registration.uc_Registration.iconLabel3);
+                    UC_Registration.iconSelect(UC_Registration.uc_Registration.icon2,
+                    UC_Registration.uc_Registration.iconLabel2);
+                    UC_Registration.iconUnSelect(UC_Registration.uc_Registration.icon1,
+                        UC_Registration.uc_Registration.iconLabel1);
+                    UC_Registration.iconUnSelect(UC_Registration.uc_Registration.icon3,
+                        UC_Registration.uc_Registration.iconLabel3);
 
-                UC_Registe_detaildinfo uc = new UC_Registe_detaildinfo();
-                uc.Location = new Point(320, 80);
-                AddUserControl.Add(uc, UC_Registration.uc_Registration.contentPanel);
+                    UC_Registe_detaildinfo uc = new UC_Registe_detaildinfo();
+                    uc.Location = new Point(320, 80);
+                    AddUserControl.Add(uc, UC_Registration.uc_Registration.contentPanel);
+                }
+                
             }
 
+            
+        }
+
+        private void nameTextBox_Enter(object sender, EventArgs e)
+        {
+            errorBar.Visible = false;
+            successIcon.Visible = false;
+        }
+
+        private void nameTextBox_Leave(object sender, EventArgs e)
+        {
+            if (SQLCursor.ifStaOrCus(nameTextBox.Text) != null)
+            {
+                errorBar.Visible = true;
+            }
+            else
+            {
+                successIcon.Visible = false;
+            }
             
         }
     }

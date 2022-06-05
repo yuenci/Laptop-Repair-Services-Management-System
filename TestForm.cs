@@ -1,4 +1,5 @@
-﻿using miniSys0._3.Controls.Others;
+﻿using miniSys0._3.Controls.MainArea;
+using miniSys0._3.Controls.Others;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -229,6 +230,14 @@ namespace miniSys0._3
             sw.Close();
 
             MessageBox.Show("Done");
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            string str = textBox1.Text;
+            string sql =  OrderSearch.search(str);
+            Console.WriteLine(sql);
+            MessageBox.Show(sql);
         }
     }
 }

@@ -36,6 +36,9 @@ namespace miniSys0._3.Controls.MainArea
         
         private void InitTheme()
         {
+            info.BackColor = Color.Transparent;
+            info.ForeColor = Color.White;
+            info.FillColor = Color.FromArgb(57, 117, 255);
             if (User_type.user_theme == "dark")
             {
                 this.BackColor = Color.FromArgb(28, 47, 70);
@@ -388,7 +391,8 @@ namespace miniSys0._3.Controls.MainArea
 
         private void searchIcon_Click(object sender, EventArgs e)
         {
-            string sql;
+            #region
+            /*string sql;
             if (searchBox.Text == null || searchBox.Text == "Search")
             {
                 MessageBox.Show("Enter OrderID / Time please.");
@@ -436,6 +440,56 @@ namespace miniSys0._3.Controls.MainArea
                 }
                 //renderCard(pagination.orderList);
                 
+            }*/
+            #endregion
+
+            SearchEvent();
+        }
+
+        private void SearchEvent()
+        {
+            if (searchBox.Text == null || searchBox.Text == "Search")
+            {
+                MessageBox.Show("Invalid value, empty input");
+            }
+            else
+            {
+                string sql = OrderSearch.search(searchBox.Text);
+                Console.WriteLine(sql);
+                if (sql != null)
+                {
+                    dynamic[] res = SQLCursor.Query(sql);
+                    if (res.Length > 0)
+                    {
+                        pagination.orderList = res;
+                        //renderNewList(0, pagination.orderList.Length);
+                        pagination.Init(pagination.orderList.Length, pagination.currentPerNum);
+                        renderNewList(0, pagination.currentPerNum);
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Can't find order from {searchBox.Text}");
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Invalid input");
+                }
+
+            }
+        }
+
+        private void info_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Enter Order ID or Customer ID,\nor Technican ID or Datetime to search ", info);
+        }
+
+        private void searchBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SearchEvent();
             }
         }
     }
@@ -472,4 +526,155 @@ namespace miniSys0._3.Controls.MainArea
             return null;
         }
     }
+
+    public static class OrderSearch {
+        public static string search(string str)
+        {
+            int num;
+            // num
+            if (int.TryParse(str, out num))
+            {
+                if (str.Length<9)
+                {
+                    string sql = $"SELECT DISTINCT OrderID FROM Schedule Where OrderID = 'Ord{str.PadLeft(8, '0')}';";
+                    return sql;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            // str
+            else if(str.Length==9 && str.Substring(0,3).ToLower()=="cus")
+            {
+                string sql = $"SELECT  DISTINCT OrderID FROM Orders WHERE CustomerID = '{str}';";
+                return sql;
+            }
+            else if (str.Length == 9 && str.Substring(0, 3).ToLower() == "sta")
+            {
+                string sql = $"SELECT DISTINCT OrderID FROM Schedule WHERE TechnicianID = '{str}';";
+                return sql;
+            }
+            else if (str.Length == 11 && str.Substring(0, 3).ToLower() == "ord")
+            {
+                string sql = $"SELECT DISTINCT OrderID FROM Orders WHERE OrderID = '{str}';";
+                return sql;
+            }
+            else if (IfADate(str))
+            {
+                if (str.Length == 10)
+                {
+                    string sql = $"SELECT  DISTINCT OrderID FROM Schedule WHERE Time BETWEEN '{str} 0:0:0' AND '{str} 23:59:59';";
+                    return sql;
+                }
+                else if (str.Length == 21)
+                {
+                    string[] data = str.Split("-");
+                    string t1 = $"{data[0]}-{data[1]}-{data[2]}";
+                    string t2 = $"{data[3]}-{data[4]}-{data[5]}";
+
+                    string sql = $"SELECT  DISTINCT OrderID FROM Schedule WHERE Time BETWEEN '{t1} 0:0:0' AND '{t2} 23:59:59';";
+                    return sql;
+                }
+            }
+            else
+            {
+                string userID = SQLCursor.ifStaOrCus(str);
+                if (userID !=null)
+                {
+                    if (userID.Substring(0,3) == "Cus")
+                    {
+                        string sql = $"SELECT OrderID FROM Orders WHERE CustomerID = '{userID}';";
+                        return sql;
+                    }
+                    else if (userID.Substring(0, 3) == "Sta")
+                    {
+                        string sql = $"SELECT DISTINCT OrderID FROM Schedule WHERE TechnicianID = '{userID}';";
+                        return sql;
+                    }
+                }
+                else 
+                {
+                    return null;
+                }
+            }
+            return null;
+        }
+
+        private static bool IfADate(string str)
+        {
+            string[] data = str.Split("-");
+            if(data.Length == 3)
+            {
+                bool flag = true;
+                int num = 0;
+                for (int i = 0; i < data.Length; i++)
+                {
+                    if (!int.TryParse(data[i], out num))
+                    {
+                        flag = false;
+                    }
+                }
+
+                if (data[0].Length == 4 && data[1].Length == 2 && data[2].Length == 2)
+                {
+                    flag = true;
+                }
+                else
+                {
+                    flag = false;
+                }
+
+                if (flag == true)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            
+            }
+            else if (data.Length == 6)
+            {
+                bool flag = true;
+                int num = 0;
+                for (int i = 0; i < data.Length; i++)
+                {
+                    if (!int.TryParse(data[i], out num))
+                    {
+                        flag = false;
+                    }
+                }
+
+                if (data[0].Length == 4 && data[1].Length == 2 && data[2].Length == 2)
+                {
+                    if (data[3].Length == 4 && data[4].Length == 2 && data[5].Length == 2)
+                    {
+                        flag = true;
+                    }
+                    else
+                    {
+                        flag = false;
+                    }            
+                }
+                else
+                {
+                    flag = false;
+                }
+
+                if (flag == true)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            return false;
+        }
+    }
+
 }

@@ -28,6 +28,9 @@ namespace miniSys0._3.Controls.MainArea
 
         private void InitTheme()
         {
+            info.BackColor = Color.Transparent;
+            info.ForeColor = Color.White;
+            info.FillColor = Color.FromArgb(57, 117, 255);
             if (User_type.user_theme == "dark")
             {
                 this.BackColor = Color.FromArgb(28, 47, 70);
@@ -240,7 +243,9 @@ namespace miniSys0._3.Controls.MainArea
             clearBtnStyle();
             clickBtnStyle(noStartCard);
 
-            string sql = "SELECT OrderID FROM Schedule WHERE Status = 'Order' ORDER　BY Time;";
+            string sql = "Select OrderID From Schedule Where OrderID in " +
+               "(select OrderID from Schedule group by OrderID having COUNT(*) =1) " +
+               "Order by Time ;";
             pagination.orderList = SQLCursor.Query(sql);
 
             renderCard(pagination.orderList);
@@ -252,7 +257,9 @@ namespace miniSys0._3.Controls.MainArea
             clearBtnStyle();
             clickBtnStyle(repairingCard);
 
-            string sql = "SELECT OrderID FROM Schedule WHERE Status = 'Progress' ORDER　BY Time;";
+            string sql = "Select OrderID From Schedule Where OrderID in " +
+                "(select OrderID from Schedule group by OrderID having COUNT(*) =2) " +
+                "AND Status= 'Progress' Order by Time ;";
             pagination.orderList = SQLCursor.Query(sql);
 
             renderCard(pagination.orderList);
@@ -316,11 +323,57 @@ namespace miniSys0._3.Controls.MainArea
 
         private void searchIcon_Click(object sender, EventArgs e)
         {
-            string orderID = searchBox.Text;
-            string sql = $"SELECT TOP 1  OrderID FROM Schedule WHERE OrderID = '{orderID}';";
-            pagination.orderList = SQLCursor.Query(sql);
-            renderCard(pagination.orderList);
-            pagination.Init(pagination.orderList.Length, 9);
+            SearchEvent();
+        }
+
+        private void SearchEvent()
+        {
+            if (searchBox.Text == null || searchBox.Text == "Search")
+            {
+                MessageBox.Show("Invalid value, empty input");
+            }
+            else
+            {
+                string sql = OrderSearch.search(searchBox.Text);
+                Console.WriteLine(sql);
+                if (sql != null)
+                {
+                    dynamic[] res = SQLCursor.Query(sql);
+                    if (res.Length > 0)
+                    {
+                        //pagination.orderList = res;
+                        //renderNewList(0, pagination.orderList.Length);
+                        //pagination.Init(pagination.orderList.Length, pagination.currentPerNum);
+                        //(0, pagination.currentPerNum);
+
+
+                        pagination.orderList = res;
+                        renderCard(pagination.orderList);
+                        pagination.Init(pagination.orderList.Length, 9);
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Can't find order from {searchBox.Text}");
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Invalid input");
+                }
+
+            }
+        }
+        private void searchBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SearchEvent();
+            }
+        }
+        private void info_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Enter Order ID or Customer ID,\n orTechnican ID or Datetime to search ", info);
         }
     }
 }

@@ -29,10 +29,11 @@ namespace miniSys0._3
         public static string user_ID = "Cus000002";*/
 
         //staff
-        public static string user_deparment = "Technican";
+        public static string user_deparment = "Receptionist";
+        public static string user_ID = "Sta000001";
         //public static string user_ID = "Sta000011";
-        public static string user_ID = "Sta000052";
-  
+        //public static string user_ID = "Sta000052";
+
 
 
         public static string user_name = "Jill Taylor";

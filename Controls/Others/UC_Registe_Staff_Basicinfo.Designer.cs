@@ -41,6 +41,8 @@
             this.IDnumberTextBox = new Sunny.UI.UITextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.IDnumber = new Sunny.UI.UILabel();
+            this.successIcon = new Sunny.UI.UIAvatar();
+            this.errorBar = new Sunny.UI.UISymbolLabel();
             this.SuspendLayout();
             // 
             // label3
@@ -213,6 +215,7 @@
             this.nameTextBox.Text = "Enter the user\'s name";
             this.nameTextBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.nameTextBox.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.nameTextBox.Leave += new System.EventHandler(this.nameTextBox_Leave);
             this.nameTextBox.Enter += new System.EventHandler(this.nameTextBox_Enter);
             // 
             // IDnumberTextBox
@@ -262,10 +265,45 @@
             this.IDnumber.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IDnumber.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // successIcon
+            // 
+            this.successIcon.BackColor = System.Drawing.Color.Transparent;
+            this.successIcon.FillColor = System.Drawing.Color.Transparent;
+            this.successIcon.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.successIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(42)))));
+            this.successIcon.Location = new System.Drawing.Point(789, 66);
+            this.successIcon.MinimumSize = new System.Drawing.Size(1, 1);
+            this.successIcon.Name = "successIcon";
+            this.successIcon.Size = new System.Drawing.Size(50, 50);
+            this.successIcon.Style = Sunny.UI.UIStyle.Custom;
+            this.successIcon.Symbol = 61528;
+            this.successIcon.SymbolSize = 30;
+            this.successIcon.TabIndex = 98;
+            this.successIcon.Text = "uiAvatar1";
+            this.successIcon.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // errorBar
+            // 
+            this.errorBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(236)))), ((int)(((byte)(232)))));
+            this.errorBar.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.errorBar.Location = new System.Drawing.Point(435, 18);
+            this.errorBar.MinimumSize = new System.Drawing.Size(1, 1);
+            this.errorBar.Name = "errorBar";
+            this.errorBar.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
+            this.errorBar.Size = new System.Drawing.Size(343, 35);
+            this.errorBar.Style = Sunny.UI.UIStyle.Custom;
+            this.errorBar.Symbol = 61527;
+            this.errorBar.SymbolColor = System.Drawing.Color.Red;
+            this.errorBar.TabIndex = 97;
+            this.errorBar.Text = "Name has already existed";
+            this.errorBar.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
             // UC_Registe_Staff_Basicinfo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.successIcon);
+            this.Controls.Add(this.errorBar);
             this.Controls.Add(this.IDnumberTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nameTextBox);
@@ -301,5 +339,7 @@
         public Sunny.UI.UITextBox IDnumberTextBox;
         private System.Windows.Forms.Label label1;
         private Sunny.UI.UILabel IDnumber;
+        public Sunny.UI.UIAvatar successIcon;
+        private Sunny.UI.UISymbolLabel errorBar;
     }
 }

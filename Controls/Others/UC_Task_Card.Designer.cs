@@ -48,7 +48,6 @@
             // uiLine1
             // 
             this.uiLine1.BackColor = System.Drawing.Color.Transparent;
-            this.uiLine1.FillColor = System.Drawing.Color.Transparent;
             this.uiLine1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLine1.Location = new System.Drawing.Point(3, 36);
             this.uiLine1.MinimumSize = new System.Drawing.Size(1, 1);
@@ -62,6 +61,7 @@
             // 
             this.avatar.AvatarSize = 30;
             this.avatar.BackColor = System.Drawing.Color.Transparent;
+            this.avatar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.avatar.Font = new System.Drawing.Font("微软雅黑", 15F);
             this.avatar.Icon = Sunny.UI.UIAvatar.UIIcon.Text;
             this.avatar.Location = new System.Drawing.Point(7, 102);
@@ -74,13 +74,13 @@
             this.avatar.TabIndex = 2;
             this.avatar.Text = "I";
             this.avatar.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.avatar.Click += new System.EventHandler(this.avatar_Click);
             this.avatar.MouseHover += new System.EventHandler(this.avatar_MouseHover);
             // 
             // edit
             // 
             this.edit.AvatarSize = 32;
             this.edit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.edit.FillColor = System.Drawing.Color.Transparent;
             this.edit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.edit.Location = new System.Drawing.Point(227, 2);
             this.edit.MinimumSize = new System.Drawing.Size(1, 1);
@@ -123,18 +123,19 @@
             // service
             // 
             this.service.BackColor = System.Drawing.Color.Transparent;
+            this.service.Cursor = System.Windows.Forms.Cursors.Hand;
             this.service.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.service.Location = new System.Drawing.Point(7, 46);
             this.service.Name = "service";
             this.service.Size = new System.Drawing.Size(290, 53);
             this.service.TabIndex = 8;
             this.service.Text = "Troubleshot and fix computer running slow";
+            this.service.Click += new System.EventHandler(this.service_Click);
             // 
             // more
             // 
             this.more.AvatarSize = 32;
             this.more.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.more.FillColor = System.Drawing.Color.Transparent;
             this.more.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.more.Location = new System.Drawing.Point(265, 2);
             this.more.MinimumSize = new System.Drawing.Size(1, 1);
@@ -152,7 +153,6 @@
             // 
             this.start.AvatarSize = 32;
             this.start.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.start.FillColor = System.Drawing.Color.Transparent;
             this.start.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.start.Location = new System.Drawing.Point(227, 102);
             this.start.MinimumSize = new System.Drawing.Size(1, 1);
@@ -172,7 +172,6 @@
             this.done.AvatarSize = 32;
             this.done.Cursor = System.Windows.Forms.Cursors.Hand;
             this.done.Enabled = false;
-            this.done.FillColor = System.Drawing.Color.Transparent;
             this.done.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.done.Location = new System.Drawing.Point(265, 102);
             this.done.MinimumSize = new System.Drawing.Size(1, 1);

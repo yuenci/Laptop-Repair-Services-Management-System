@@ -58,13 +58,13 @@ namespace miniSys0._3
 
             // main area loading
 
-            //add_UC_Mainto_Panel();
+            add_UC_Mainto_Panel();
             //add_UC_UserInfo();
             //add_UC_UserSetting();
             //add_UC_registration();
             //add_UC_Payment();
             //add_task_cards();
-            add_task_table();
+            //add_task_table();
             //add_Cus_OrderDetails();
             //add_UC_ServiceReport();
             //add_UC_IncomeAnalysis();

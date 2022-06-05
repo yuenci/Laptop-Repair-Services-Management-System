@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Container = new Sunny.UI.UIUserControl();
+            this.info = new Sunny.UI.UIAvatar();
             this.uiLabel6 = new Sunny.UI.UILabel();
             this.pagination = new miniSys0._3.Controls.Others.UC_Pagination();
             this.uiLabel7 = new Sunny.UI.UILabel();
@@ -44,12 +46,14 @@
             this.contentPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.urC_Crumbs1 = new miniSys0._3.Controls.Others.UrC_Crumbs();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.Container.SuspendLayout();
             this.SuspendLayout();
             // 
             // Container
             // 
             this.Container.BackColor = System.Drawing.Color.White;
+            this.Container.Controls.Add(this.info);
             this.Container.Controls.Add(this.uiLabel6);
             this.Container.Controls.Add(this.pagination);
             this.Container.Controls.Add(this.uiLabel7);
@@ -76,6 +80,23 @@
             this.Container.Text = "uiUserControl1";
             this.Container.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.Container.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // info
+            // 
+            this.info.AvatarSize = 20;
+            this.info.BackColor = System.Drawing.Color.Transparent;
+            this.info.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.info.Location = new System.Drawing.Point(1046, 45);
+            this.info.MinimumSize = new System.Drawing.Size(1, 1);
+            this.info.Name = "info";
+            this.info.Size = new System.Drawing.Size(35, 35);
+            this.info.Style = Sunny.UI.UIStyle.Custom;
+            this.info.Symbol = 61737;
+            this.info.SymbolSize = 17;
+            this.info.TabIndex = 99;
+            this.info.Text = "uiAvatar1";
+            this.info.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.info.MouseHover += new System.EventHandler(this.info_MouseHover);
             // 
             // uiLabel6
             // 
@@ -125,7 +146,7 @@
             // 
             this.searchIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchIcon.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.searchIcon.Location = new System.Drawing.Point(1021, 47);
+            this.searchIcon.Location = new System.Drawing.Point(1007, 47);
             this.searchIcon.MinimumSize = new System.Drawing.Size(1, 1);
             this.searchIcon.Name = "searchIcon";
             this.searchIcon.Shape = Sunny.UI.UIShape.Square;
@@ -154,7 +175,7 @@
             // 
             this.searchBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.searchBox.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.searchBox.Location = new System.Drawing.Point(753, 46);
+            this.searchBox.Location = new System.Drawing.Point(739, 46);
             this.searchBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.searchBox.MinimumSize = new System.Drawing.Size(1, 16);
             this.searchBox.Name = "searchBox";
@@ -166,6 +187,7 @@
             this.searchBox.Text = "Search";
             this.searchBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.searchBox.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.searchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchBox_KeyDown);
             this.searchBox.Leave += new System.EventHandler(this.searchBox_Leave);
             this.searchBox.Enter += new System.EventHandler(this.searchBox_Enter);
             // 
@@ -307,5 +329,7 @@
         private Sunny.UI.UILabel uiLabel8;
         private Sunny.UI.UILabel uiLabel9;
         private Sunny.UI.UILabel uiLabel10;
+        private Sunny.UI.UIAvatar info;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

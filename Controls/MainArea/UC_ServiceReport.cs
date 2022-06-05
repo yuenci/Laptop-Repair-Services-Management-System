@@ -97,12 +97,43 @@ namespace miniSys0._3.Controls.MainArea
         //UC_IncomeAnalysis.arrayToStrList
         private void InitData()
         {
-            monthOrders = SQLCursor.Query("select COUNT(*) from Orders where datediff(MONTH,Time,getdate()) = 0")[0];
 
-            monthFinised = SQLCursor.Query("select COUNT(*) from Schedule where datediff(MONTH,Time,getdate()) = 0 and Status ='Finished';")[0];
+            //monthOrders = SQLCursor.Query(monthOrders_sql)[0];
+            string monthOrders_sql = "select COUNT(*) from Orders where datediff(MONTH,Time,getdate()) = 0";
+            dynamic[] monthOrders_data = SQLCursor.Query(monthOrders_sql);
+            if (monthOrders_data.Length >0)
+            {
+                monthOrders = monthOrders_data[0];
+            }
+            else
+            {
+                monthOrders = "0";
+            }
+            
+            //monthFinised = SQLCursor.Query("select COUNT(*) from Schedule where datediff(MONTH,Time,getdate()) = 0 and Status ='Completed';")[0];
+            string monthFinised_sql = "select COUNT(*) from Schedule where datediff(MONTH,Time,getdate()) = 0 and Status ='Completed';";
+            dynamic[] monthFinised_data = SQLCursor.Query(monthFinised_sql);
+            if (monthFinised_data.Length >0)
+            {
+                monthFinised = monthFinised_data[0];
+            }
+            else
+            {
+                monthFinised = "0";
+            }
 
-            monthCustomers = SQLCursor.Query("SELECT  COUNT( DISTINCT CustomerID) from Orders where datediff(MONTH,Time,getdate()) = 0")[0];
 
+            //monthCustomers = SQLCursor.Query("SELECT  COUNT( DISTINCT CustomerID) from Orders where datediff(MONTH,Time,getdate()) = 0")[0];
+            string monthCustomers_sql = "";
+            dynamic[] monthCustomers_data = SQLCursor.Query(monthCustomers_sql);
+            if (monthCustomers_data.Length>0)
+            {
+                monthCustomers = monthCustomers_data[0];
+            }
+            else
+            {
+                monthCustomers = "0";
+            }
 
             // multi line chart
             dataset1 = UC_IncomeAnalysis.arrayToListStr(get12MonthsServerTpyeData($"Ser00{1}"));
@@ -120,7 +151,7 @@ namespace miniSys0._3.Controls.MainArea
             dynamic[] topServicerData = SQLCursor.Query("with temp AS ( select Orders.Time, Orders.ReceptionistID, Staff.Name From Orders " +
                 "INNER JOIN Staff ON Staff.StaffID = Orders.ReceptionistID) " +
                 "Select TOP 5 temp.Name,COUNT(*) From temp " +
-                "where datediff(MONTH, temp.Time, getdate()) = 0 " +
+                "where datediff(DD, temp.Time, getdate()) <= 30 " +
                 "GROUP BY temp.Name " +
                 "ORDER BY COUNT(*) DESC; ");
             string[] topServicerNameList = new string[5];
@@ -132,14 +163,16 @@ namespace miniSys0._3.Controls.MainArea
             }
             topServiceVolumeLabel = UC_IncomeAnalysis.arrayToStrList(topServicerNameList);
             topServiceVolumeData = UC_IncomeAnalysis.arrayToListStr(topServicerValueList);
-            
+
             //top repair
-            dynamic topRepairData = SQLCursor.Query("with temp AS (select Schedule.Time,Schedule.Status, Schedule.TechnicianID, Staff.Name From Schedule " +
+            string topRepairSql = "with temp AS (select Schedule.Time,Schedule.Status, Schedule.TechnicianID, Staff.Name From Schedule " +
                 "INNER JOIN Staff ON Staff.StaffID = Schedule.TechnicianID ) " +
                 "Select TOP 5 temp.Name,COUNT(*) From temp " +
-                "where datediff(MONTH, temp.Time, getdate()) = 0 and temp.Status ='Finished' " +
+                "where datediff(DD, temp.Time, getdate()) <= 30 and temp.Status ='Completed' " +
                 "GROUP BY temp.Name " +
-                "ORDER BY COUNT(*) DESC; ");
+                "ORDER BY COUNT(*) DESC; ";
+            //Console.WriteLine(topRepairSql);
+            dynamic topRepairData = SQLCursor.Query(topRepairSql);
             string[] topRepairNameList = new string[5];
             string[] topRepairValueList = new string[5];
             for (int i = 0; i < topRepairData.Length; i++)
@@ -313,9 +346,11 @@ namespace miniSys0._3.Controls.MainArea
         private List<int> completeSpeed(int monthDiff)
         {
             string SQLSpeed = $"WITH A AS(Select OrderID,Time From Schedule Where datediff(MONTH,Time,getdate()) = {monthDiff}  and Status = 'Order'), " +
-                $"B AS(Select OrderID, Time From Schedule Where datediff(MONTH, Time, getdate()) =  {monthDiff}  and Status = 'Finished') " +
+                $"B AS(Select OrderID, Time From Schedule Where datediff(MONTH, Time, getdate()) =  {monthDiff}  " +
+                $"and Status = 'Completed') " +
                 "SELECT A.time,B.Time,A.OrderID From A " +
                 "INNER JOIN B ON B.OrderID = A.OrderID; ";
+            Console.WriteLine(SQLSpeed);
             dynamic speedData = SQLCursor.Query(SQLSpeed);
             List<int> result = new List<int>();
             for (int i = 0; i < speedData.Length; i++)

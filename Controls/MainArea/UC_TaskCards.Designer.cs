@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Container = new Sunny.UI.UIUserControl();
             this.searchIcon = new Sunny.UI.UIAvatar();
             this.searchBox = new Sunny.UI.UITextBox();
@@ -48,6 +49,8 @@
             this.uC_Task_Card1 = new miniSys0._3.Controls.Others.UC_Task_Card();
             this.label1 = new System.Windows.Forms.Label();
             this.urC_Crumbs1 = new miniSys0._3.Controls.Others.UrC_Crumbs();
+            this.info = new Sunny.UI.UIAvatar();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.Container.SuspendLayout();
             this.contentPanel.SuspendLayout();
             this.SuspendLayout();
@@ -55,6 +58,7 @@
             // Container
             // 
             this.Container.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.Container.Controls.Add(this.info);
             this.Container.Controls.Add(this.searchIcon);
             this.Container.Controls.Add(this.searchBox);
             this.Container.Controls.Add(this.dfinishedCard);
@@ -110,6 +114,7 @@
             this.searchBox.Text = "Search";
             this.searchBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.searchBox.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.searchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchBox_KeyDown);
             this.searchBox.Leave += new System.EventHandler(this.searchBox_Leave);
             this.searchBox.Enter += new System.EventHandler(this.searchBox_Enter);
             // 
@@ -297,6 +302,25 @@
             this.urC_Crumbs1.Size = new System.Drawing.Size(295, 35);
             this.urC_Crumbs1.TabIndex = 0;
             // 
+            // info
+            // 
+            this.info.AvatarSize = 20;
+            this.info.BackColor = System.Drawing.Color.Transparent;
+            this.info.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
+            this.info.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.info.ForeColor = System.Drawing.Color.White;
+            this.info.Location = new System.Drawing.Point(1058, 48);
+            this.info.MinimumSize = new System.Drawing.Size(1, 1);
+            this.info.Name = "info";
+            this.info.Size = new System.Drawing.Size(35, 35);
+            this.info.Style = Sunny.UI.UIStyle.Custom;
+            this.info.Symbol = 61737;
+            this.info.SymbolSize = 17;
+            this.info.TabIndex = 100;
+            this.info.Text = "uiAvatar1";
+            this.info.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.info.MouseHover += new System.EventHandler(this.info_MouseHover);
+            // 
             // UC_TaskCards
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -335,5 +359,7 @@
         private Sunny.UI.UIButton allCard;
         private Sunny.UI.UITextBox searchBox;
         private Sunny.UI.UIAvatar searchIcon;
+        private Sunny.UI.UIAvatar info;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

@@ -176,11 +176,20 @@ svg {
 }
 
 .pie-chart-room {
-    height: 20px;
-    background-color: rgb(28, 47, 70);
+    height: 40px;
+    background-color: #f7f8fa;
 }
 
 .card-dark {
     background-color: rgb(28, 47, 70) !important;
     color: white !important;
 }
+
+/* #serverType,
+#method {
+    position: relative;
+}
+
+#myPieChartServerType ,#myPieChartMethod{
+    position: absolute;
+} */

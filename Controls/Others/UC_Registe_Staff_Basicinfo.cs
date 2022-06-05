@@ -22,6 +22,8 @@ namespace miniSys0._3.Controls.Others
 
         private void InitTheme()
         {
+            errorBar.Visible = false;
+            successIcon.Visible = false;
             if (User_type.user_theme == "dark")
             {
                 this.BackColor = Color.FromArgb(28, 47, 70);
@@ -55,6 +57,9 @@ namespace miniSys0._3.Controls.Others
         private void nameTextBox_Enter(object sender, EventArgs e)
         {
             nameTextBox.RectSize = 1;
+
+            errorBar.Visible = false;
+            successIcon.Visible = false;
         }
         
         
@@ -139,7 +144,7 @@ namespace miniSys0._3.Controls.Others
             {
                 if (IDnumberTextBox.Text != "" || IDnumberTextBox.Text != "Enter the user's ID number")
                 {
-                    if (selectDepartment.SelectedIndex != -1 && selectPost.SelectedIndex != -1)
+                    if (selectDepartment.SelectedIndex != -1 && selectPost.SelectedIndex != -1 && ifUserNameExist ==false)
                     {
                         /*MessageBox.Show($"store [{nameTextBox.Text}," +
                             $"{selectDepartment.SelectedItem.ToString()}," +
@@ -163,6 +168,10 @@ namespace miniSys0._3.Controls.Others
                         uc.Location = new Point(320,80);
                         AddUserControl.Add(uc, UC_Registration.uc_Registration.contentPanel);
                     }
+                    else
+                    {
+                        MessageBox.Show($"{nameTextBox.Text} has already existed, please try others");
+                    }
                 }   
             }
             
@@ -182,7 +191,20 @@ namespace miniSys0._3.Controls.Others
                 selectPost.Font = new Font(".萍方-简", 12, FontStyle.Bold);
             }
         }
-
-
+        private bool ifUserNameExist = false;
+        private void nameTextBox_Leave(object sender, EventArgs e)
+        {
+            if (SQLCursor.ifStaOrCus(nameTextBox.Text) !=null)
+            {
+                ifUserNameExist = true;
+                errorBar.Visible = true;
+                
+            }
+            else
+            {
+                successIcon.Visible = true;
+                ifUserNameExist = false;
+            }
+        }
     }
 }

@@ -21,6 +21,8 @@ namespace miniSys0._3
             this.Source.Enter += new EventHandler(TextBoxEnter);
             this.Source.Leave += new EventHandler(TextBoxLeave);
         }
+        
+        
         public TextBoxCE(UITextBox textBox, string textContent, Color RectColor)
         {
             this.Source = textBox;
@@ -29,6 +31,8 @@ namespace miniSys0._3
             this.Source.Enter += new EventHandler(TextBoxEnter);
             this.Source.Leave += new EventHandler(TextBoxLeave);
         }
+        
+        
         private void TextBoxEnter(object senter, EventArgs e)
         {
             this.Source.RectColor = this.RectColor;
@@ -38,6 +42,8 @@ namespace miniSys0._3
                 this.Source.Text = "";
             }
         }
+        
+        
         private void TextBoxLeave(object senter, EventArgs e)
         {
             if (this.Source.Text == "")

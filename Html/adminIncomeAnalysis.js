@@ -47,6 +47,11 @@ function setDarkBgc() {
     document.getElementById("page2").style.background = "rgb(18, 31, 43)";
     document.getElementById("serverType").style.background = "rgb(18, 31, 43)";
     document.getElementById("method").style.background = "rgb(18, 31, 43)";
+    let rooms = document.getElementsByClassName("pie-chart-room")
+    for (let index = 0; index < rooms.length; index++) {
+        const element = rooms[index];
+        element.style.background = "rgb(28, 47, 70) "
+    }
 }
 function setCardDarkStyle() {
     let cards = document.getElementsByClassName("card");
