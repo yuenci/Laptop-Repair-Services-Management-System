@@ -286,6 +286,30 @@
     <Compile Include="Controls\Others\UrC_Crumbs.Designer.cs">
       <DependentUpon>UrC_Crumbs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Settings\UC_Setting_Expost.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Settings\UC_Setting_Expost.Designer.cs">
+      <DependentUpon>UC_Setting_Expost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Settings\UC_Setting_General.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Settings\UC_Setting_General.Designer.cs">
+      <DependentUpon>UC_Setting_General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Settings\UC_Setting_Message.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Settings\UC_Setting_Message.Designer.cs">
+      <DependentUpon>UC_Setting_Message.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Settings\UC_Setting_Privacy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Settings\UC_Setting_Privacy.Designer.cs">
+      <DependentUpon>UC_Setting_Privacy.cs</DependentUpon>
+    </Compile>
     <Compile Include="CsharpRepairerIncDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -314,6 +338,12 @@
     </Compile>
     <Compile Include="SearchBox.Designer.cs">
       <DependentUpon>SearchBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingForm.Designer.cs">
+      <DependentUpon>SettingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SQLCursor.cs" />
     <Compile Include="IconFont.cs" />
@@ -467,6 +497,18 @@
     <EmbeddedResource Include="Controls\Others\UrC_Crumbs.resx">
       <DependentUpon>UrC_Crumbs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Settings\UC_Setting_Expost.resx">
+      <DependentUpon>UC_Setting_Expost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Settings\UC_Setting_General.resx">
+      <DependentUpon>UC_Setting_General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Settings\UC_Setting_Message.resx">
+      <DependentUpon>UC_Setting_Message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Settings\UC_Setting_Privacy.resx">
+      <DependentUpon>UC_Setting_Privacy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Loading.resx">
       <DependentUpon>Loading.cs</DependentUpon>
     </EmbeddedResource>
@@ -503,6 +545,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SearchBox.resx">
       <DependentUpon>SearchBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingForm.resx">
+      <DependentUpon>SettingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TestForm.resx">
       <DependentUpon>TestForm.cs</DependentUpon>

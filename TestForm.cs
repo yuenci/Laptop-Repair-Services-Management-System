@@ -147,7 +147,7 @@ namespace miniSys0._3
 
         private void uiButton2_Click(object sender, EventArgs e)
         {
-            string connStr = Setting.DBString;
+            string connStr = AppSetting.DBString;
             SqlConnection conn = null;
             try
             {
@@ -238,6 +238,52 @@ namespace miniSys0._3
             string sql =  OrderSearch.search(str);
             Console.WriteLine(sql);
             MessageBox.Show(sql);
+        }
+        private void InitSetting()
+        {
+            string UseIDRowName;
+
+            if (User_type.user_ID.Substring(0, 3) == "Cus")
+            {
+                UseIDRowName = "UseID_cus";
+            }
+            else
+            {
+                UseIDRowName = "UseID_sta";
+            }
+
+            string[] typeList = {"theme","autoTheme","rejectAllMs","rejectAllSy","rejectAllCus",
+                                "allowSearch", "allowShowProfile","privateMode"};
+
+            string allSQL = "";
+            for (int i = 0; i < typeList.Length; i++)
+            {
+                string sql = $"SELECT Value FROM Settings WHERE {UseIDRowName} = '{User_type.user_ID}' " +
+                    $"AND Type = '{typeList[i]}';";
+                allSQL += sql;
+            }
+
+            string[] valueCacheList = { UserSettings.theme, UserSettings.autoTheme, UserSettings.rejectAllMs,
+                                        UserSettings.rejectAllSy,UserSettings.rejectAllCus,UserSettings.allowSearch,
+                                        UserSettings.allowShowProfile,UserSettings.privateMode};
+
+
+            dynamic[] allData = SQLCursor.QueryMany(allSQL);
+            for (int i = 0; i < allData.Length; i++)
+            {
+                if (allData[i][0] != "")
+                {
+                    valueCacheList[i] = allData[i][0];
+                    //Console.WriteLine($"{typeList[i]}:{allData[i][0]}");
+                }
+            }
+
+        }
+
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            InitSetting();
         }
     }
 }

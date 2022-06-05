@@ -22,6 +22,7 @@ namespace miniSys0._3
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             InitMain();
+            InitSetting();
             HideAllLoadingText();
             RandomLoadingText();
         }
@@ -70,6 +71,9 @@ namespace miniSys0._3
             }
         }
 
-
+        private void InitSetting()
+        {
+            UserSettings.InitStatusData();
+        }
     }
 }

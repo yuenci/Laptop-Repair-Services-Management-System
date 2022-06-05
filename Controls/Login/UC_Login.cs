@@ -296,7 +296,7 @@ namespace miniSys0._3.Controls
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(Setting.DBString))
+                using (SqlConnection conn = new SqlConnection(AppSetting.DBString))
                 {
                     conn.Open();
                 }

@@ -50,12 +50,12 @@
             this.uiUserControl2 = new Sunny.UI.UIUserControl();
             this.pictureBoxIphone = new System.Windows.Forms.PictureBox();
             this.uiUserControl3 = new Sunny.UI.UIUserControl();
-            this.uiUserControl4 = new Sunny.UI.UIUserControl();
-            this.urC_Crumbs1 = new miniSys0._3.Controls.Others.UrC_Crumbs();
             this.uC_StaffCard14 = new miniSys0._3.Controls.Others.UC_StaffCard1();
             this.uC_StaffCard13 = new miniSys0._3.Controls.Others.UC_StaffCard1();
             this.uC_StaffCard12 = new miniSys0._3.Controls.Others.UC_StaffCard1();
             this.uC_StaffCard11 = new miniSys0._3.Controls.Others.UC_StaffCard1();
+            this.uiUserControl4 = new Sunny.UI.UIUserControl();
+            this.urC_Crumbs1 = new miniSys0._3.Controls.Others.UrC_Crumbs();
             this.picContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBg)).BeginInit();
             this.uiUserControl1.SuspendLayout();
@@ -407,31 +407,6 @@
             this.uiUserControl3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiUserControl3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiUserControl4
-            // 
-            this.uiUserControl4.BackColor = System.Drawing.Color.White;
-            this.uiUserControl4.FillColor = System.Drawing.Color.White;
-            this.uiUserControl4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiUserControl4.Location = new System.Drawing.Point(0, 273);
-            this.uiUserControl4.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiUserControl4.Name = "uiUserControl4";
-            this.uiUserControl4.Radius = 0;
-            this.uiUserControl4.RectColor = System.Drawing.Color.Transparent;
-            this.uiUserControl4.Size = new System.Drawing.Size(1125, 447);
-            this.uiUserControl4.Style = Sunny.UI.UIStyle.Custom;
-            this.uiUserControl4.TabIndex = 28;
-            this.uiUserControl4.Text = "uiUserControl4";
-            this.uiUserControl4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiUserControl4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // urC_Crumbs1
-            // 
-            this.urC_Crumbs1.BackColor = System.Drawing.SystemColors.Control;
-            this.urC_Crumbs1.Location = new System.Drawing.Point(0, 4);
-            this.urC_Crumbs1.Name = "urC_Crumbs1";
-            this.urC_Crumbs1.Size = new System.Drawing.Size(294, 35);
-            this.urC_Crumbs1.TabIndex = 29;
-            // 
             // uC_StaffCard14
             // 
             this.uC_StaffCard14.BackColor = System.Drawing.Color.White;
@@ -463,6 +438,31 @@
             this.uC_StaffCard11.Name = "uC_StaffCard11";
             this.uC_StaffCard11.Size = new System.Drawing.Size(230, 50);
             this.uC_StaffCard11.TabIndex = 25;
+            // 
+            // uiUserControl4
+            // 
+            this.uiUserControl4.BackColor = System.Drawing.Color.White;
+            this.uiUserControl4.FillColor = System.Drawing.Color.White;
+            this.uiUserControl4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiUserControl4.Location = new System.Drawing.Point(0, 273);
+            this.uiUserControl4.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiUserControl4.Name = "uiUserControl4";
+            this.uiUserControl4.Radius = 0;
+            this.uiUserControl4.RectColor = System.Drawing.Color.Transparent;
+            this.uiUserControl4.Size = new System.Drawing.Size(1125, 447);
+            this.uiUserControl4.Style = Sunny.UI.UIStyle.Custom;
+            this.uiUserControl4.TabIndex = 28;
+            this.uiUserControl4.Text = "uiUserControl4";
+            this.uiUserControl4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiUserControl4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // urC_Crumbs1
+            // 
+            this.urC_Crumbs1.BackColor = System.Drawing.SystemColors.Control;
+            this.urC_Crumbs1.Location = new System.Drawing.Point(0, 4);
+            this.urC_Crumbs1.Name = "urC_Crumbs1";
+            this.urC_Crumbs1.Size = new System.Drawing.Size(294, 35);
+            this.urC_Crumbs1.TabIndex = 29;
             // 
             // UC_UserInfo
             // 

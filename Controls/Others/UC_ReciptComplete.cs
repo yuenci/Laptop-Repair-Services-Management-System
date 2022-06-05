@@ -276,7 +276,7 @@ namespace miniSys0._3.Controls.Others
             int int_icon_size = 20;
             int int_icon_border = 5;
             bool b_we = false;
-            string iconLocation = Setting.path + "\\Html\\LogoPic1.png";
+            string iconLocation = AppSetting.path + "\\Html\\LogoPic1.png";
             Bitmap bmp = QRCode(str_msg, version, pixel, iconLocation, int_icon_size, int_icon_border, b_we);
             QRpictureBox.Image = bmp;
         }

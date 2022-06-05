@@ -134,7 +134,7 @@ namespace miniSys0._3.Controls
         
         public  static  dynamic getDataReader(string sql)
         {
-            string connStr = Setting.DBString;
+            string connStr = AppSetting.DBString;
 
             SqlConnection conn = new SqlConnection(connStr);
             conn.Open();
@@ -852,7 +852,7 @@ namespace miniSys0._3.Controls
         public static void add1ToViewsOrLikesToDB(string type)
         {
             string atrID = ArticlesInfo.currentArticlelD;
-            string connStr = Setting.DBString;
+            string connStr = AppSetting.DBString;
 
             SqlConnection conn = new SqlConnection(connStr);
             conn.Open();
@@ -872,7 +872,7 @@ namespace miniSys0._3.Controls
         public static void add1ToViewsOrLikesToDB(string Datatype,string aritcalTpye)
         {
             string atrID = "";
-            string connStr = Setting.DBString;
+            string connStr = AppSetting.DBString;
 
             SqlConnection conn = new SqlConnection(connStr);
             conn.Open();
@@ -1069,7 +1069,7 @@ namespace miniSys0._3.Controls
 
         private void readMoreNews_Click(object sender, EventArgs e)
         {
-            string path = Setting.path + "\\Html\\Articles\\newsMore.html";
+            string path = AppSetting.path + "\\Html\\Articles\\newsMore.html";
             Reader.reader.WebBrowser2.Load(path);
 
             Thread.Sleep(100);
@@ -1078,7 +1078,7 @@ namespace miniSys0._3.Controls
 
         private void readMoreNotice_Click(object sender, EventArgs e)
         {
-            string path = Setting.path + "\\Html\\Articles\\noticeMore.html";
+            string path = AppSetting.path + "\\Html\\Articles\\noticeMore.html";
             Reader.reader.WebBrowser2.Load(path);
 
             Thread.Sleep(100);
@@ -1087,7 +1087,7 @@ namespace miniSys0._3.Controls
 
         private void readMoreDoc_Click(object sender, EventArgs e)
         {
-            string path = Setting.path + "\\Html\\Document\\docMore.html";
+            string path = AppSetting.path + "\\Html\\Document\\docMore.html";
             Reader.reader.WebBrowser2.Load(path);
 
             Thread.Sleep(100);

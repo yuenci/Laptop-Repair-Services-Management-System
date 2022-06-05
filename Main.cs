@@ -22,11 +22,15 @@ namespace miniSys0._3
         public static Main main;
         private Point mPoint;
         private static FormFloating uniqueInstance;
-        private SearchBox searchBox_instance = null;
+        
         public bool ifViewProfileExist = false;
         public List<dynamic> messagesList = new List<dynamic>();
         private bool ifReciveNewMessage;
+        private bool ifSettingFormExist = false;
+
+        private SearchBox searchBox_instance = null;
         private MessageBoxForm messageBox_instance = null;
+        private SettingForm settingForm_instance = null;
 
         public Main()
         {
@@ -37,6 +41,7 @@ namespace miniSys0._3
             InitProfile();
             InitReader();
             
+            UserSettings.InitStatusData();
 
             Init_search_box();
             checkMessage();
@@ -156,7 +161,12 @@ namespace miniSys0._3
 
                 if (messageBox_instance != null)
                 {
-                    messageBox_instance.Location = new Point(this.Location.X + 877 + e.X - mPoint.X, this.Location.Y + 68 + e.Y - mPoint.Y);
+                    messageBox_instance.Location = new Point(this.Location.X + 880 + e.X - mPoint.X, this.Location.Y + 70 + e.Y - mPoint.Y);
+                }
+
+                if (settingForm_instance != null)
+                {
+                    settingForm_instance.Location = new Point(this.Location.X + 955 + e.X - mPoint.X, this.Location.Y + 70 + e.Y - mPoint.Y);
                 }
             }
             
@@ -605,6 +615,7 @@ namespace miniSys0._3
 
         private void uiSymbolButton3_Click(object sender, EventArgs e)
         {
+            hideOtherControls();
             if (User_type.user_theme == "light")
             {
                 User_type.user_theme = "dark";
@@ -635,6 +646,11 @@ namespace miniSys0._3
             if (ifViewProfileExist)
             {
                 ViewProfile.Instance.InitTheme();
+            }
+
+            if (ifSettingFormExist)
+            {
+                SettingForm.Instance.InitTheme();
             }
         }
         
@@ -806,7 +822,7 @@ namespace miniSys0._3
                 int PositionX = this.Location.X;
                 int PositionY = this.Location.Y;
                 messageBox_instance.StartPosition = FormStartPosition.Manual;
-                messageBox_instance.Location = (Point)new Size(PositionX + 877, PositionY + 68);
+                messageBox_instance.Location = (Point)new Size(PositionX + 880, PositionY + 70);
 
                 messageBox_instance.Init(messagesList);
 
@@ -846,6 +862,45 @@ namespace miniSys0._3
             {
                 messageBox_instance.Visible = false;
             }
+            if (settingForm_instance != null && settingForm_instance.Visible)
+            {
+                settingForm_instance.Visible = false;
+            }
+        }
+
+        private void uiSymbolButton1_Click(object sender, EventArgs e)
+        {
+
+            if (settingForm_instance == null)
+            {
+                UserSettings.InitStatusData();
+
+                settingForm_instance = new SettingForm();
+                int PositionX = this.Location.X;
+                int PositionY = this.Location.Y;
+                settingForm_instance.StartPosition = FormStartPosition.Manual;
+                settingForm_instance.Location = (Point)new Size(PositionX + 955, PositionY + 70);
+
+                hideOtherControls();
+                settingForm_instance.Visible = true;
+                ifSettingFormExist = true;
+            }
+            else if (settingForm_instance.Visible == false)
+            {
+                SettingForm.Instance.ReInitStatus();
+
+                hideOtherControls();
+                settingForm_instance.Visible = true;
+            }
+            else if (settingForm_instance.Visible == true)
+            {
+                settingForm_instance.Visible = false;
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            UserSettings.ShowAllPropertyValue();
         }
     }
 

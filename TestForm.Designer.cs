@@ -63,6 +63,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button9 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.csharpRepairerIncDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.csharpRepairerIncDataSet)).BeginInit();
@@ -338,7 +339,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(722, 46);
+            this.button7.Location = new System.Drawing.Point(622, 45);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(99, 60);
             this.button7.TabIndex = 15;
@@ -348,7 +349,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(733, 222);
+            this.button8.Location = new System.Drawing.Point(748, 70);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(99, 35);
             this.button8.TabIndex = 16;
@@ -358,16 +359,27 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(683, 184);
+            this.textBox1.Location = new System.Drawing.Point(748, 43);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(202, 21);
             this.textBox1.TabIndex = 17;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(622, 145);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(99, 35);
+            this.button9.TabIndex = 18;
+            this.button9.Text = "InitSetting";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 599);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
@@ -436,5 +448,6 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button9;
     }
 }

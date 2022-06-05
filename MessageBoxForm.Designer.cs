@@ -38,6 +38,7 @@
             // panel
             // 
             this.panel.AutoScroll = true;
+            this.panel.BackColor = System.Drawing.Color.Transparent;
             this.panel.Location = new System.Drawing.Point(0, 0);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(450, 320);
@@ -112,6 +113,7 @@
             this.Controls.Add(this.panel);
             this.Name = "MessageBoxForm";
             this.Padding = new System.Windows.Forms.Padding(0);
+            this.RectColor = System.Drawing.Color.Gainsboro;
             this.ShowRadius = false;
             this.ShowRect = false;
             this.ShowShadow = true;

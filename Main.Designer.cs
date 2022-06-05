@@ -42,6 +42,7 @@
             this.copyRight = new Sunny.UI.UILabel();
             this.navMenuPanel = new System.Windows.Forms.Panel();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.uiUserControl1.SuspendLayout();
@@ -50,6 +51,7 @@
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.White;
+            this.panelTop.Controls.Add(this.button1);
             this.panelTop.Controls.Add(this.searchBox);
             this.panelTop.Controls.Add(this.label1);
             this.panelTop.Controls.Add(this.pictureBox2);
@@ -172,6 +174,7 @@
             this.uiSymbolButton1.SymbolHoverColor = System.Drawing.Color.Black;
             this.uiSymbolButton1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiSymbolButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.uiSymbolButton1.Click += new System.EventHandler(this.uiSymbolButton1_Click);
             // 
             // profile
             // 
@@ -219,6 +222,13 @@
             resources.ApplyResources(this.mainPanel, "mainPanel");
             this.mainPanel.Name = "mainPanel";
             // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Main
             // 
             resources.ApplyResources(this, "$this");
@@ -253,5 +263,6 @@
         private System.Windows.Forms.Panel navMenuPanel;
         public System.Windows.Forms.Panel mainPanel;
         private Sunny.UI.UILabel copyRight;
+        private System.Windows.Forms.Button button1;
     }
 }

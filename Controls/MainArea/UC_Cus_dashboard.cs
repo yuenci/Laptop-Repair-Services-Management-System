@@ -592,7 +592,7 @@ namespace miniSys0._3.Controls.MainArea
 
         private void readMoreNews_Click(object sender, EventArgs e)
         {
-            string path = Setting.path + "\\Html\\Articles\\newsMore.html";
+            string path = AppSetting.path + "\\Html\\Articles\\newsMore.html";
             Reader.reader.WebBrowser2.Load(path);
 
             Thread.Sleep(100);
@@ -601,7 +601,7 @@ namespace miniSys0._3.Controls.MainArea
 
         private void readMoreDoc_Click(object sender, EventArgs e)
         {
-            string path = Setting.path + "\\Html\\Document\\docMore.html";
+            string path = AppSetting.path + "\\Html\\Document\\docMore.html";
             Reader.reader.WebBrowser2.Load(path);
 
             Thread.Sleep(100);

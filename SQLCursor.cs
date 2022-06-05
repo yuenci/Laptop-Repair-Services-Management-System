@@ -118,7 +118,7 @@ namespace miniSys0._3
         public static void Execute(string sql)
         {
 
-            string connStr = Setting.DBString;
+            string connStr = AppSetting.DBString;
             SqlConnection conn = new SqlConnection(connStr);
             conn.Open();
             SqlCommand cmd = new SqlCommand(sql, conn);
@@ -148,7 +148,7 @@ namespace miniSys0._3
              */
             // if sql write like  [ "select      %para%  , %para%,%para%  from   table1  where name = %para%";]
             // will cause eror, because before and after comma must have space.
-            string connStr = Setting.DBString;
+            string connStr = AppSetting.DBString;
             SqlConnection conn = new SqlConnection(connStr);
             conn.Open();
 
@@ -199,7 +199,7 @@ namespace miniSys0._3
         {
             //args = {rowIDName,IDvalue,colname, tableName}
             string atrID = ArticlesInfo.currentArticlelD;
-            string connStr = Setting.DBString;
+            string connStr = AppSetting.DBString;
 
             SqlConnection conn = new SqlConnection(connStr);
             conn.Open();
@@ -249,7 +249,7 @@ namespace miniSys0._3
 
         public static dynamic getDataReader(string sql)
         {
-            string DBString = Setting.DBString;
+            string DBString = AppSetting.DBString;
 
             SqlConnection conn = new SqlConnection(DBString);
             conn.Open();

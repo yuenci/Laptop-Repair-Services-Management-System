@@ -33,6 +33,8 @@ namespace miniSys0._3
             if (User_type.user_theme == "dark")
             {
                 this.BackColor = Color.FromArgb(28, 47, 70);
+                this.rectColor = Color.FromArgb(28, 47, 70);
+                ShowShadow = false;
                 foreach (var item in lable)
                 {
                     item.ForeColor = Color.White;
@@ -46,6 +48,7 @@ namespace miniSys0._3
             else if (User_type.user_theme=="light")
             {
                 this.BackColor = Color.White;
+                ShowShadow = true;
                 foreach (var item in lable)
                 {
                     item.ForeColor = Color.Black;

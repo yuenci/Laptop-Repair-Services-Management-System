@@ -1,13 +1,15 @@
-﻿using System;
+﻿using Sunny.UI;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace miniSys0._3
 {
-    public class Setting
+    public class AppSetting
     {
         public static string DBString = @"Data Source=LAPTOP-5ACE008F\SQLEXPRESS;Initial Catalog=CsharpRepairerInc;Integrated Security=True";
         //public static string DBString = @"Dddddata Source=LAPTOP-5ACE008F\SQLEXPRESS;Initial Catalog=CsharpRepairerInc;Integrated Security=True";
@@ -201,4 +203,316 @@ namespace miniSys0._3
             Console.WriteLine($"User_type.Card_Account_ID: {Card_Account_ID}");
         }
     }
+
+    public static class UserSettings 
+    {
+        //public static string theme = User_type.user_theme;
+
+        public static string theme = "Off";
+        public static string autoTheme = "Off";
+        public static string homePage = "Dashboard";
+
+        public static string rejectAllMs = "Off";
+        public static string rejectAllSy = "Off";
+        public static string rejectAllCus = "Off";
+
+        public static string allowSearch = "On";
+        public static string allowShowProfile = "On";
+        public static string privateMode = "Off";
+
+        public static void DisplayStatus(UISwitch obj,string statusText)
+        {
+            if (statusText =="On")
+            {
+                obj.Active = true;
+            }
+           else if (statusText == "Off")
+            {
+                obj.Active = false;
+            }
+        }
+
+        public static void SetStatus(string type, bool valueBool)
+        {
+            string[] typeList = {"theme","autoTheme","rejectAllMs","rejectAllSy","rejectAllCus",
+                                "allowSearch", "allowShowProfile","privateMode"};
+
+            string[] valueCacheList = { theme, autoTheme,rejectAllMs,rejectAllSy, rejectAllCus, 
+                                        allowSearch, allowShowProfile, privateMode};
+            string value;
+            if (valueBool)
+            {
+                value = "On";
+                setCache(type, "On");
+            }
+            else
+            {
+                value = "Off";
+                setCache(type, "Off");
+            }
+
+            string userIDType = "" ;
+            string userIDSQL = "";
+
+            if (User_type.user_ID.Substring(0,3)=="Cus")
+            {
+                userIDType = "UseID_cus";
+                userIDSQL = $"'{User_type.user_ID}',null";
+            }
+            else if(User_type.user_ID.Substring(0, 3) == "Sta")
+            {
+                userIDType = "UseID_sta";
+                userIDSQL = $"null,'{User_type.user_ID}'";
+            }
+
+            if (typeList.Contains(type))
+            {
+                string sql;
+
+                //exist
+                if (checkIfExist(userIDType))
+                {
+                    sql = $"UPDATE Settings  SET Value = '{value}' WHERE Type = '{type}' " +
+                        $"AND {userIDType} = '{User_type.user_ID}';";
+                }
+                //not exist
+                else
+                {
+                    sql = $"INSERT INTO Settings VALUES ({userIDSQL},'{type}','{value}');";
+                }
+                SQLCursor.Execute(sql);
+                
+            }
+            else
+            {
+                MessageBox.Show("Class UserSettings Method SetStatus ERROE ");
+            }
+
+            bool checkIfExist(string idType)
+            {
+                string sql = $"SELECT Value FROM Settings WHERE  Type= '{type}' AND {idType} = '{User_type.user_ID}';";
+                dynamic[] data = SQLCursor.Query(sql);
+                if (data.Length > 0)
+                {
+                    //MessageBox.Show("exist");
+                    return true;
+                   
+                }
+                else
+                {
+                    //MessageBox.Show(" not exist");
+                    return false;
+                    
+                }
+                
+            }
+            void setCache(string typeStr,string valueStr)
+            {
+                if(typeStr == "theme")
+                {
+                    theme = valueStr;
+                    if (theme == "Off")
+                    {
+                        User_type.user_theme = "light";
+                    }
+                    else if (theme == "On")
+                    {
+                        User_type.user_theme = "dark";
+                    }
+                }
+                else if (typeStr == "autoTheme")
+                {
+                    autoTheme = valueStr;
+                }
+                else if (typeStr == "rejectAllMs")
+                {
+                    rejectAllMs = valueStr;
+                }
+                else if (typeStr == "rejectAllSy")
+                {
+                    rejectAllSy = valueStr;
+                }
+                else if (typeStr == "rejectAllCus")
+                {
+                    rejectAllCus = valueStr;
+                }
+                else if (typeStr == "allowSearch")
+                {
+                    allowSearch = valueStr;
+                }
+                else if (typeStr == "allowShowProfile")
+                {
+                    allowShowProfile = valueStr;
+                }
+                else if (typeStr == "privateMode")
+                {
+                    privateMode = valueStr;
+                }
+            }
+        }
+
+        public static void SetStatus(string type, string value)
+        {
+            string userIDType = "";
+            string userIDSQL = "";
+
+            homePage = value;
+
+            if (User_type.user_ID.Substring(0, 3) == "Cus")
+            {
+                userIDType = "UseID_cus";
+                userIDSQL = $"'{User_type.user_ID}',null";
+            }
+            else if (User_type.user_ID.Substring(0, 3) == "Sta")
+            {
+                userIDType = "UseID_sta";
+                userIDSQL = $"null,'{User_type.user_ID}'";
+            }
+
+            string sql;
+
+            //exist
+            if (checkIfExist(userIDType))
+            {
+                sql = $"UPDATE Settings  SET Value = '{value}' WHERE Type = 'homePage' " +
+                    $"AND {userIDType} = '{User_type.user_ID}';";
+            }
+            //not exist
+            else
+            {
+                sql = $"INSERT INTO Settings VALUES ({userIDSQL},'homePage','{value}');";
+            }
+            SQLCursor.Execute(sql);
+
+
+            bool checkIfExist(string idType)
+            {
+                string sql1 = $"SELECT Value FROM Settings WHERE  Type= 'homePage' AND {idType} = '{User_type.user_ID}';";
+                dynamic[] data = SQLCursor.Query(sql1);
+                if (data.Length > 0)
+                {
+                    //MessageBox.Show("exist");
+                    return true;
+                }
+                else
+                {
+                    //MessageBox.Show(" not exist");
+                    return false;
+
+                }
+
+            }
+        }
+   
+        public static void InitStatusData()
+        {
+            string UseIDRowName;
+
+            if (User_type.user_ID.Substring(0, 3) == "Cus")
+            {
+                UseIDRowName = "UseID_cus";
+            }
+            else
+            {
+                UseIDRowName = "UseID_sta";
+            }
+
+            string[] typeList = {"theme","autoTheme","homePage","rejectAllMs","rejectAllSy","rejectAllCus",
+                                "allowSearch", "allowShowProfile","privateMode"};
+
+            string allSQL = "";
+            for (int i = 0; i < typeList.Length; i++)
+            {
+                string sql = $"SELECT Value FROM Settings WHERE {UseIDRowName} = '{User_type.user_ID}' " +
+                    $"AND Type = '{typeList[i]}';";
+                allSQL += sql;
+            }
+
+            dynamic[] allData = SQLCursor.QueryMany(allSQL);
+            for (int i = 0; i < allData.Length; i++)
+            {
+                if (allData[i][0] != "")
+                {
+                    setCache(typeList[i], allData[i][0]);
+                }
+            }
+
+            void setCache(string typeStr, string valueStr)
+            {
+                if (typeStr == "theme")
+                {
+                    theme = valueStr;
+                    if (theme == "Off")
+                    {
+                        User_type.user_theme = "light";
+                    }
+                    else if(theme == "On")
+                    {
+                        User_type.user_theme = "dark";
+                    }
+                }
+                else if (typeStr == "autoTheme")
+                {
+                    autoTheme = valueStr;
+                }
+                else if (typeStr == "homePage")
+                {
+                    homePage = valueStr;
+                }
+                else if (typeStr == "rejectAllMs")
+                {
+                    rejectAllMs = valueStr;
+                }
+                else if (typeStr == "rejectAllSy")
+                {
+                    rejectAllSy = valueStr;
+                }
+                else if (typeStr == "rejectAllCus")
+                {
+                    rejectAllCus = valueStr;
+                }
+                else if (typeStr == "allowSearch")
+                {
+                    allowSearch = valueStr;
+                }
+                else if (typeStr == "allowShowProfile")
+                {
+                    allowShowProfile = valueStr;
+                }
+                else if (typeStr == "privateMode")
+                {
+                    privateMode = valueStr;
+                }
+            }
+        }
+        public static void ResetToDefault()
+        {
+            theme = "Off";
+            autoTheme = "Off";
+            homePage = "Dashboard";
+
+            rejectAllMs = "Off";
+            rejectAllSy = "Off";
+            rejectAllCus = "Off";
+
+            allowSearch = "On";
+            allowShowProfile = "On";
+            privateMode = "Off";
+    }
+        public static void ShowAllPropertyValue()
+        {
+            Console.WriteLine("-------------");
+            Console.WriteLine($"theme:{theme}");
+            Console.WriteLine($"autoTheme:{autoTheme}");
+            Console.WriteLine($"homePage:{homePage}");
+            Console.WriteLine($"rejectAllMs:{rejectAllMs}");
+            Console.WriteLine($"rejectAllSy:{rejectAllSy}");
+            Console.WriteLine($"rejectAllCus:{rejectAllCus}");
+            Console.WriteLine($"allowSearch:{allowSearch}");
+            Console.WriteLine($"allowShowProfile:{allowShowProfile}");
+            Console.WriteLine($"privateMode:{privateMode}");
+            Console.WriteLine("-------------");
+        }
+    }
+
 }
