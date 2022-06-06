@@ -24,9 +24,9 @@ namespace miniSys0._3.Controls.MainArea
             uc_TaskCards = this;
             InitSwitchBtns();
         }
-        
 
-        private void InitTheme()
+
+        public void InitTheme()
         {
             info.BackColor = Color.Transparent;
             info.ForeColor = Color.White;

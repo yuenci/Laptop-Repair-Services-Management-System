@@ -29,8 +29,8 @@ namespace miniSys0._3.Controls.MainArea
             //button1.Click += new EventHandler(buttonClickCallfuc);
 
         }
-        
-        private void InitTheme()
+
+        public void InitTheme()
         {
             if (User_type.user_theme == "dark")
             {

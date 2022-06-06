@@ -32,9 +32,9 @@ namespace miniSys0._3.Controls.MainArea
             allCard.PerformClick(); 
 
         }
-        
-        
-        private void InitTheme()
+
+
+        public void InitTheme()
         {
             info.BackColor = Color.Transparent;
             info.ForeColor = Color.White;

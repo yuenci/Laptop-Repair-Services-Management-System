@@ -64,6 +64,7 @@ namespace miniSys0._3.Controls.Setting
         {
             UserSettings.SetStatus("autoTheme", auto.Active);
 
+            Main.main.SetAutoThemeMode();
             //UserSettings.ShowAllPropertyValue();
         }
 

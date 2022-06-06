@@ -29,6 +29,7 @@ namespace miniSys0._3.Controls
 
                 // the whole bgc
                 NavMenu.BackColor = Color.FromArgb(28, 47, 70);
+                //NavMenu.BackColor = Color.Blue;
 
                 // the hover bgc
                 NavMenu.HoverColor = Color.FromArgb(55, 55, 57);
@@ -36,16 +37,39 @@ namespace miniSys0._3.Controls
                 // the bgc of choose item
                 NavMenu.SelectedColor = Color.FromArgb(55, 55, 57);
 
-                dynamic[] nodeText = { NavMenu.Nodes[0], NavMenu.Nodes[1], NavMenu.Nodes[2], NavMenu.Nodes[3] };
-                foreach (dynamic node in nodeText)
-                {
-                    node.ForeColor = Color.White;
-                }
+                //font color
+                NavMenu.ForeColor = Color.FromArgb(78, 89, 105);
 
                 for (int i = 0; i < 4; i++)
                 {
                     NavMenu.Nodes[i].ImageIndex = 8 +i;
                     NavMenu.Nodes[i].SelectedImageIndex = 12+i;
+                }
+
+               
+            }
+            else if (User_type.user_theme == "light")
+            {
+                // nav have item part bgc
+                NavMenu.FillColor = Color.White;
+                
+                // the whole bgc
+                NavMenu.BackColor = Color.White;
+
+                // the hover bgc
+                NavMenu.HoverColor = Color.FromArgb(242, 243, 245);
+
+                // the bgc of choose item
+                NavMenu.SelectedColor = Color.FromArgb(242, 243, 245);
+
+
+                //font color
+                NavMenu.ForeColor = Color.FromArgb(78, 89, 105);
+
+                for (int i = 0; i < 4; i++)
+                {
+                    NavMenu.Nodes[i].ImageIndex = i*2;
+                    NavMenu.Nodes[i].SelectedImageIndex = i*2+1;
                 }
             }
         }

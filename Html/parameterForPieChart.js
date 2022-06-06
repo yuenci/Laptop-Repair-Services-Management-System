@@ -1,1 +1,1 @@
-dataset = [7,3,2,9,2,3,5,7,]; theme = 'dark';
+dataset = [7,3,2,9,2,3,5,7,]; theme = 'light';

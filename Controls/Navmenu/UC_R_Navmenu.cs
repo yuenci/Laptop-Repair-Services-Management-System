@@ -19,15 +19,6 @@ namespace miniSys0._3.Controls
             NavMenu.ImageList = imageList;
             InitTheme();
         }
-        
-        private void addUserControl(UserControl userControl)
-        {
-            userControl.Dock = DockStyle.Fill;
-            Main.main.mainPanel.Controls.Clear();
-            Main.main.mainPanel.Controls.Add(userControl);
-            userControl.BringToFront();
-        }
-        
         private void InitTheme()
         {
             if (User_type.user_theme == "dark")
@@ -44,7 +35,7 @@ namespace miniSys0._3.Controls
                 // the bgc of choose item
                 NavMenu.SelectedColor = Color.FromArgb(55, 55, 57);
 
-                dynamic[] nodeText = { NavMenu.Nodes[0], NavMenu.Nodes[1], NavMenu.Nodes[2]};
+                dynamic[] nodeText = { NavMenu.Nodes[0], NavMenu.Nodes[1], NavMenu.Nodes[2] };
                 foreach (dynamic node in nodeText)
                 {
                     node.ForeColor = Color.White;
@@ -57,7 +48,17 @@ namespace miniSys0._3.Controls
                 }
             }
         }
-
+       
+        
+        private void addUserControl(UserControl userControl)
+        {
+            userControl.Dock = DockStyle.Fill;
+            Main.main.mainPanel.Controls.Clear();
+            Main.main.mainPanel.Controls.Add(userControl);
+            userControl.BringToFront();
+        }
+        
+       
         private void NavMenu_NodeMouseClick_1(object sender, TreeNodeMouseClickEventArgs e)
         {
             string nodeSelect = "";

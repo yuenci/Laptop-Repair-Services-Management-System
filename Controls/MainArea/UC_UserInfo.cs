@@ -25,9 +25,9 @@ namespace miniSys0._3.Controls.MainArea
             string[] staffIDArray = { "Sta000001", "Sta000004", "Sta000037", "Sta000063" };
             InitRlatedStaff(staffIDArray);
         }
-        
-        
-        private void InitTheme()
+
+
+        public void InitTheme()
         {
             if (User_type.user_deparment =="Customer")
             {

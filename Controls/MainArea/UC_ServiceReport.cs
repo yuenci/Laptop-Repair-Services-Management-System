@@ -31,7 +31,7 @@ namespace miniSys0._3.Controls.MainArea
             urC_Crumbs1.crumbText.Text = "Service report";
             urC_Crumbs1.crumbsHome.Text = " / Data /            rt";
         }
-        private void InitTheme()
+        public void InitTheme()
         {
             if (User_type.user_theme == "dark")
             {

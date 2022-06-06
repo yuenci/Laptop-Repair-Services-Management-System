@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panelTop = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.searchBox = new Sunny.UI.UITextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -42,7 +44,7 @@
             this.copyRight = new Sunny.UI.UILabel();
             this.navMenuPanel = new System.Windows.Forms.Panel();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.uiUserControl1.SuspendLayout();
@@ -64,6 +66,13 @@
             this.panelTop.Name = "panelTop";
             this.panelTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.drag_down);
             this.panelTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.drag_move);
+            // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // searchBox
             // 
@@ -222,12 +231,11 @@
             resources.ApplyResources(this.mainPanel, "mainPanel");
             this.mainPanel.Name = "mainPanel";
             // 
-            // button1
+            // timer1
             // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Main
             // 
@@ -240,6 +248,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Main";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -264,5 +273,6 @@
         public System.Windows.Forms.Panel mainPanel;
         private Sunny.UI.UILabel copyRight;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

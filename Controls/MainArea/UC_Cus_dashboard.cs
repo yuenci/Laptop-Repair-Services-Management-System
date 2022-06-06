@@ -40,7 +40,7 @@ namespace miniSys0._3.Controls.MainArea
             SetTimer();
         }
         
-        private void InitTheme()
+        public void InitTheme()
         {
             if (User_type.user_theme == "dark")
             {

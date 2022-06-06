@@ -31,7 +31,7 @@ namespace miniSys0._3
         public static string user_ID = "Cus000002";*/
 
         //staff
-        public static string user_deparment = "Receptionist";
+        public static string user_deparment = "Admin";
         public static string user_ID = "Sta000001";
         //public static string user_ID = "Sta000011";
         //public static string user_ID = "Sta000052";
@@ -311,14 +311,6 @@ namespace miniSys0._3
                 if(typeStr == "theme")
                 {
                     theme = valueStr;
-                    if (theme == "Off")
-                    {
-                        User_type.user_theme = "light";
-                    }
-                    else if (theme == "On")
-                    {
-                        User_type.user_theme = "dark";
-                    }
                 }
                 else if (typeStr == "autoTheme")
                 {

@@ -51,8 +51,8 @@ namespace miniSys0._3.Controls
             initReader();
             uc_main = this;
         }
-        
-        private void InitTheme()
+
+        public void InitTheme()
         {
             if (User_type.user_theme == "dark")
             {

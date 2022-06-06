@@ -111,12 +111,14 @@
             this.homePage.FillColor = System.Drawing.Color.White;
             this.homePage.FilterMaxCount = 50;
             this.homePage.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.homePage.Location = new System.Drawing.Point(166, 143);
+            this.homePage.Location = new System.Drawing.Point(145, 143);
             this.homePage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.homePage.MinimumSize = new System.Drawing.Size(63, 0);
             this.homePage.Name = "homePage";
             this.homePage.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.homePage.Size = new System.Drawing.Size(169, 29);
+            this.homePage.RectColor = System.Drawing.Color.Gainsboro;
+            this.homePage.Size = new System.Drawing.Size(190, 29);
+            this.homePage.Style = Sunny.UI.UIStyle.Custom;
             this.homePage.TabIndex = 10;
             this.homePage.Text = "lala";
             this.homePage.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;

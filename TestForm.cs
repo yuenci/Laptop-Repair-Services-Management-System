@@ -285,5 +285,37 @@ namespace miniSys0._3
         {
             InitSetting();
         }
+        private bool timerStatue = false;
+        System.Timers.Timer timer = null;
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (timer == null)
+            {
+                timer = new System.Timers.Timer(3000);   //create timer instance
+                timer.Elapsed += new System.Timers.ElapsedEventHandler(theout); //call back function
+                timer.AutoReset = true;   //once（false）or always(true)；   
+            }
+            
+
+            if (timerStatue == false)
+            {
+                timer.Enabled = true;     // excute System.Timers.Timer.Elapsed；  
+
+                timerStatue = true;
+            }
+            else
+            {
+                timer.Enabled = false;     // excute System.Timers.Timer.Elapsed；  
+
+                timerStatue = false;
+            }
+            
+        }
+        public void theout(object source, System.Timers.ElapsedEventArgs e)
+        {
+            DateTime dt = DateTime.Now;
+            //Console.WriteLine(dt.ToString("MM/dd/yyyy HH:mm:ss"));
+            Console.WriteLine(dt.ToString("HH:mm:ss"));
+        }
     }
 }

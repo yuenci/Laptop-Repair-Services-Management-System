@@ -32,6 +32,8 @@ namespace miniSys0._3
         private MessageBoxForm messageBox_instance = null;
         private SettingForm settingForm_instance = null;
 
+        public string currentMainPage;
+
         public Main()
         {
             InitializeComponent();
@@ -40,7 +42,8 @@ namespace miniSys0._3
             InitCef();
             InitProfile();
             InitReader();
-            
+
+
             UserSettings.InitStatusData();
 
             Init_search_box();
@@ -75,10 +78,14 @@ namespace miniSys0._3
             //add_UC_IncomeAnalysis();
             //add_UC_Cus_dashboard();
 
-
+            SetAutoThemeMode();
 
         }
-       
+        private void Main_Load(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = false; // cancel thread checking
+        }
+
         private void InitCef()
         {
             if (!User_type.ifCefInit)
@@ -518,7 +525,7 @@ namespace miniSys0._3
             sw.Close();
         }
         #region
-        public string currentMainPage;
+        
 
         private void addUserControlToMain(UserControl userControl)
         {
@@ -612,33 +619,52 @@ namespace miniSys0._3
             currentMainPage = "UC_TaskList";
         }
         #endregion
-
         private void uiSymbolButton3_Click(object sender, EventArgs e)
         {
             hideOtherControls();
             if (User_type.user_theme == "light")
             {
-                User_type.user_theme = "dark";
-                prepareData();
-                InitTheme();
-                lodaNewMainPage(currentMainPage);
-                addNavMenu();
-                InitOtherPageTheme();
-                prepareArticalData();
+                SwitchThemeModeToDark();
             }
             else if (User_type.user_theme == "dark")
             {
-                User_type.user_theme = "light";
-                prepareData();
-                InitTheme();
-                lodaNewMainPage(currentMainPage);
-                addNavMenu();
-                InitOtherPageTheme();
-                prepareArticalData();
-            } 
+                SwitchThemeModeToLight();
+            }
         }
-        
+        private void SwitchThemeModeToDark()
+        {
+            User_type.user_theme = "dark";
 
+            // pare all chart data adnd artical data
+            prepareData();
+            prepareArticalData();
+
+            InitTheme(); //change top bar and bgc
+
+            lodaNewMainPage(currentMainPage); //reload main area controls
+
+            addNavMenu(); //reload main area controls
+
+            InitOtherPageTheme(); // call search/message/setting InitTheme
+            
+        }
+        private void SwitchThemeModeToLight()
+        {
+            User_type.user_theme = "light";
+
+            // pare all chart data adnd artical data
+            prepareData();
+            prepareArticalData();
+
+            InitTheme(); //change top bar and bgc
+
+            lodaNewMainPage(currentMainPage); //reload main area controls
+
+            addNavMenu(); //reload navMenu #TODO
+
+            InitOtherPageTheme();  // call search/message/setting InitTheme
+
+        }
         private void InitOtherPageTheme()
         {
             SearchBox.Instance.InitTheme();
@@ -657,7 +683,7 @@ namespace miniSys0._3
 
         private void lodaNewMainPage(string currentControlStr)
         {
-            Console.WriteLine(currentControlStr);
+            //Console.WriteLine(currentControlStr);
             if (currentControlStr == ("UC_main"))
             {
                 add_UC_Mainto_Panel();
@@ -705,7 +731,6 @@ namespace miniSys0._3
                 add_task_table();
             }
         }
-
 
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
@@ -902,6 +927,47 @@ namespace miniSys0._3
         {
             UserSettings.ShowAllPropertyValue();
         }
+
+        System.Timers.Timer timer = null;
+
+        public void SetAutoThemeMode()
+        {
+
+            if (UserSettings.autoTheme == "On")
+            {
+                timer1.Enabled = true;
+            }
+            else if (UserSettings.autoTheme == "Off")
+            {
+                timer1.Enabled = false;
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime currentTimeObj = DateTime.Now;
+            int currentData = int.Parse(currentTimeObj.ToString("HH"));
+
+
+            // Greater than or equal 6 AM - 18 :light
+            // Greater than or equal 18 PM - 24PM && lease 6AM
+
+            // switch to dark
+            if (User_type.user_theme == "light" && (currentData >= 18 || currentData <6))
+            {
+                swithTheme.PerformClick();
+            }
+            else if (User_type.user_theme == "dark" && currentData >=6 && currentData < 18)
+            {
+                swithTheme.PerformClick();
+            }
+            //
+        }
+        
+
+        
+
+
     }
 
 

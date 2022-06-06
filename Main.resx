@@ -117,14 +117,147 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>panelTop</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;searchBox.Name" xml:space="preserve">
+    <value>searchBox</value>
+  </data>
+  <data name="&gt;&gt;searchBox.Type" xml:space="preserve">
+    <value>Sunny.UI.UITextBox, SunnyUI, Version=3.1.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;searchBox.Parent" xml:space="preserve">
+    <value>panelTop</value>
+  </data>
+  <data name="&gt;&gt;searchBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>panelTop</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
+    <value>pictureBox2</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
+    <value>panelTop</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;searchIcon.Name" xml:space="preserve">
+    <value>searchIcon</value>
+  </data>
+  <data name="&gt;&gt;searchIcon.Type" xml:space="preserve">
+    <value>Sunny.UI.UISymbolButton, SunnyUI, Version=3.1.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;searchIcon.Parent" xml:space="preserve">
+    <value>panelTop</value>
+  </data>
+  <data name="&gt;&gt;searchIcon.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;swithTheme.Name" xml:space="preserve">
+    <value>swithTheme</value>
+  </data>
+  <data name="&gt;&gt;swithTheme.Type" xml:space="preserve">
+    <value>Sunny.UI.UISymbolButton, SunnyUI, Version=3.1.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;swithTheme.Parent" xml:space="preserve">
+    <value>panelTop</value>
+  </data>
+  <data name="&gt;&gt;swithTheme.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;message.Name" xml:space="preserve">
+    <value>message</value>
+  </data>
+  <data name="&gt;&gt;message.Type" xml:space="preserve">
+    <value>Sunny.UI.UISymbolButton, SunnyUI, Version=3.1.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;message.Parent" xml:space="preserve">
+    <value>panelTop</value>
+  </data>
+  <data name="&gt;&gt;message.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;uiSymbolButton1.Name" xml:space="preserve">
+    <value>uiSymbolButton1</value>
+  </data>
+  <data name="&gt;&gt;uiSymbolButton1.Type" xml:space="preserve">
+    <value>Sunny.UI.UISymbolButton, SunnyUI, Version=3.1.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;uiSymbolButton1.Parent" xml:space="preserve">
+    <value>panelTop</value>
+  </data>
+  <data name="&gt;&gt;uiSymbolButton1.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;profile.Name" xml:space="preserve">
+    <value>profile</value>
+  </data>
+  <data name="&gt;&gt;profile.Type" xml:space="preserve">
+    <value>Sunny.UI.UIAvatar, SunnyUI, Version=3.1.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;profile.Parent" xml:space="preserve">
+    <value>panelTop</value>
+  </data>
+  <data name="&gt;&gt;profile.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panelTop.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="panelTop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panelTop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1340, 60</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panelTop.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panelTop.Name" xml:space="preserve">
+    <value>panelTop</value>
+  </data>
+  <data name="&gt;&gt;panelTop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelTop.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelTop.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>381, 23</value>
+    <value>263, 19</value>
   </data>
   <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="button1.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
@@ -149,7 +282,6 @@
   <data name="searchBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>617, 16</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="searchBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
   </data>
@@ -372,29 +504,59 @@
   <data name="&gt;&gt;profile.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="panelTop.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
+  <data name="&gt;&gt;copyRight.Name" xml:space="preserve">
+    <value>copyRight</value>
   </data>
-  <data name="panelTop.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="&gt;&gt;copyRight.Type" xml:space="preserve">
+    <value>Sunny.UI.UILabel, SunnyUI, Version=3.1.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
   </data>
-  <data name="panelTop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1340, 60</value>
+  <data name="&gt;&gt;copyRight.Parent" xml:space="preserve">
+    <value>uiUserControl1</value>
   </data>
-  <data name="panelTop.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;copyRight.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;panelTop.Name" xml:space="preserve">
-    <value>panelTop</value>
+  <data name="&gt;&gt;navMenuPanel.Name" xml:space="preserve">
+    <value>navMenuPanel</value>
   </data>
-  <data name="&gt;&gt;panelTop.Type" xml:space="preserve">
+  <data name="&gt;&gt;navMenuPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panelTop.Parent" xml:space="preserve">
+  <data name="&gt;&gt;navMenuPanel.Parent" xml:space="preserve">
+    <value>uiUserControl1</value>
+  </data>
+  <data name="&gt;&gt;navMenuPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="uiUserControl1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 12pt</value>
+  </data>
+  <data name="uiUserControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 70</value>
+  </data>
+  <data name="uiUserControl1.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1, 1</value>
+  </data>
+  <data name="uiUserControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 720</value>
+  </data>
+  <data name="uiUserControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="uiUserControl1.Text" xml:space="preserve">
+    <value>uiUserControl1</value>
+  </data>
+  <data name="&gt;&gt;uiUserControl1.Name" xml:space="preserve">
+    <value>uiUserControl1</value>
+  </data>
+  <data name="&gt;&gt;uiUserControl1.Type" xml:space="preserve">
+    <value>Sunny.UI.UIUserControl, SunnyUI, Version=3.1.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
+  </data>
+  <data name="&gt;&gt;uiUserControl1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panelTop.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;uiUserControl1.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="copyRight.Font" type="System.Drawing.Font, System.Drawing">
     <value>.萍方-简, 12pt</value>
@@ -447,36 +609,6 @@
   <data name="&gt;&gt;navMenuPanel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="uiUserControl1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微软雅黑, 12pt</value>
-  </data>
-  <data name="uiUserControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 70</value>
-  </data>
-  <data name="uiUserControl1.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1, 1</value>
-  </data>
-  <data name="uiUserControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 720</value>
-  </data>
-  <data name="uiUserControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="uiUserControl1.Text" xml:space="preserve">
-    <value>uiUserControl1</value>
-  </data>
-  <data name="&gt;&gt;uiUserControl1.Name" xml:space="preserve">
-    <value>uiUserControl1</value>
-  </data>
-  <data name="&gt;&gt;uiUserControl1.Type" xml:space="preserve">
-    <value>Sunny.UI.UIUserControl, SunnyUI, Version=3.1.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb</value>
-  </data>
-  <data name="&gt;&gt;uiUserControl1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;uiUserControl1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="mainPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>208, 70</value>
   </data>
@@ -498,6 +630,9 @@
   <data name="&gt;&gt;mainPanel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -5160,6 +5295,12 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Main</value>
+  </data>
+  <data name="&gt;&gt;timer1.Name" xml:space="preserve">
+    <value>timer1</value>
+  </data>
+  <data name="&gt;&gt;timer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Main</value>

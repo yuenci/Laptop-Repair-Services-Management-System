@@ -24,8 +24,8 @@ namespace miniSys0._3.Controls.MainArea
             Initcontent();
             
         }
-        
-        private void InitTheme()
+
+        public void InitTheme()
         {
             if (User_type.user_theme == "dark")
             {

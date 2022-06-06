@@ -19,6 +19,37 @@ namespace miniSys0._3.Controls
             NavMenu.ImageList = imageList1;
             InitTheme();
         }
+        private void InitTheme()
+        {
+            if (User_type.user_theme == "dark")
+            {
+                // nav have item part bgc
+                NavMenu.FillColor = Color.FromArgb(28, 47, 70);
+
+                // the whole bgc
+                NavMenu.BackColor = Color.FromArgb(28, 47, 70);
+
+                // the hover bgc
+                NavMenu.HoverColor = Color.FromArgb(55, 55, 57);
+
+                // the bgc of choose item
+                NavMenu.SelectedColor = Color.FromArgb(55, 55, 57);
+
+
+                dynamic[] nodeText = { NavMenu.Nodes[0], NavMenu.Nodes[1], NavMenu.Nodes[2] };
+                foreach (dynamic node in nodeText)
+                {
+                    node.ForeColor = Color.White;
+                }
+
+                for (int i = 0; i < 3; i++)
+                {
+                    NavMenu.Nodes[i].ImageIndex = 6 + i;
+                    NavMenu.Nodes[i].SelectedImageIndex = 9 + i;
+                }
+            }
+        }
+
 
         private void addUserControl(UserControl userControl)
         {
@@ -78,35 +109,6 @@ namespace miniSys0._3.Controls
         }
 
 
-        private void InitTheme()
-        {
-            if (User_type.user_theme == "dark")
-            {
-                // nav have item part bgc
-                NavMenu.FillColor = Color.FromArgb(28, 47, 70);
-
-                // the whole bgc
-                NavMenu.BackColor = Color.FromArgb(28, 47, 70);
-
-                // the hover bgc
-                NavMenu.HoverColor = Color.FromArgb(55, 55, 57);
-
-                // the bgc of choose item
-                NavMenu.SelectedColor = Color.FromArgb(55, 55, 57);
-
-
-                dynamic[] nodeText = { NavMenu.Nodes[0], NavMenu.Nodes[1], NavMenu.Nodes[2] };
-                foreach (dynamic node in nodeText)
-                {
-                    node.ForeColor = Color.White;
-                }
-
-                for (int i = 0; i < 3; i++)
-                {
-                    NavMenu.Nodes[i].ImageIndex = 6 + i;
-                    NavMenu.Nodes[i].SelectedImageIndex = 9 + i;
-                }
-            }
-        }
+        
     }
 }
