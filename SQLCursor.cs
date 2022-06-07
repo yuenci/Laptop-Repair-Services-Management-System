@@ -448,5 +448,40 @@ namespace miniSys0._3
             }
             return false;
         }
+    
+        public static void UpdateAvatar(string userID, string avatarFilePath)
+        {
+            string sql = $"SELECT [AvatarID] FROM [Avatars] WHERE [UserID] = '{userID}'; ";
+            dynamic[] data = Query(sql);
+            if (data.Length>0)
+            {
+                //exist
+                string sql1 = $"UPDATE [Avatars] SET [AvatarID] = '{avatarFilePath}' " +
+                    $"WHERE [UserID] = '{userID}';";
+                Execute(sql1);
+            }
+            else
+            {
+                //not exist
+                string sql1 = $"INSERT INTO [Avatars] VALUES ('{userID}','{avatarFilePath}');";
+                Execute(sql1);
+            }
+        }
+
+        public static string GetAvatar(string  userID)
+        {
+            string sql = $"SELECT [AvatarID] FROM [Avatars] WHERE [UserID] = '{userID}'; ";
+            dynamic[] data = Query(sql);
+            if (data.Length > 0)
+            {
+                //exist
+                return data[0];
+            }
+            else
+            {
+                //not exist
+               return null;
+            }
+        }
     }
 }

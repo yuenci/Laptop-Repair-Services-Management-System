@@ -201,6 +201,7 @@
             resources.ApplyResources(this.profile, "profile");
             this.profile.ForeColor = System.Drawing.Color.Black;
             this.profile.Icon = Sunny.UI.UIAvatar.UIIcon.Text;
+            this.profile.Image = ((System.Drawing.Image)(resources.GetObject("profile.Image")));
             this.profile.Name = "profile";
             this.profile.Style = Sunny.UI.UIStyle.Custom;
             this.profile.Symbol = 61453;

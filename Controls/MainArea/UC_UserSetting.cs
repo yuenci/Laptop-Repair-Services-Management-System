@@ -5,11 +5,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Sunny.UI.UIAvatar;
 
 namespace miniSys0._3.Controls.MainArea
 {
@@ -26,6 +28,7 @@ namespace miniSys0._3.Controls.MainArea
             InitContentPanel();
             InitChangeButton();
             InitSQLArgs();
+            InitAvatar();
         }
         public void InitTheme()
         {
@@ -57,7 +60,7 @@ namespace miniSys0._3.Controls.MainArea
             urC_Crumbs1.crumbText.Text = "User setting";
 
         }
-        
+
 
         private void InitIcon()
         {
@@ -80,25 +83,25 @@ namespace miniSys0._3.Controls.MainArea
                 editIDCardNum.Visible = false;
             }
         }
-        
-        
+
+
         private string encryptedPhoneNum(string phoneNum)
         {
-            double lengthdouble = phoneNum.Length - (phoneNum.Length % 3) ;
+            double lengthdouble = phoneNum.Length - (phoneNum.Length % 3);
             double numLength = Math.Floor(lengthdouble / 3);
             int numLengthInt = Convert.ToInt32(numLength);
 
             int lengthInt = phoneNum.Length;
-            
-            string start =   phoneNum.Substring(0, numLengthInt);
+
+            string start = phoneNum.Substring(0, numLengthInt);
             string end = phoneNum.Substring(lengthInt - numLengthInt, numLengthInt);
-            string asterisks  = new string('*', lengthInt - 2 * numLengthInt);
+            string asterisks = new string('*', lengthInt - 2 * numLengthInt);
 
             return start + asterisks + end;
 
 
         }
-        
+
 
         private void InitUserInfo()
         {
@@ -106,7 +109,7 @@ namespace miniSys0._3.Controls.MainArea
             uiLabel8.Text = User_type.user_ID;
             uiLabel9.Text = User_type.user_regtime;
             uiLabel10.Text = User_type.user_gender;
-            phoneTextBox.RectDisableColor = Color.White;  
+            phoneTextBox.RectDisableColor = Color.White;
             phoneTextBox.Text = encryptedPhoneNum(User_type.user_phone);
             phoneTextBox.RectColor = Color.White;
             phoneTextBox.Enabled = false;
@@ -115,15 +118,15 @@ namespace miniSys0._3.Controls.MainArea
         }
 
 
-        private void SelectedButtonStyle(UIUserControl userControl,Label lable)
+        private void SelectedButtonStyle(UIUserControl userControl, Label lable)
         {
             lable.ForeColor = Color.FromArgb(22, 93, 255);
-            lable.Font =   new Font(".萍方-简", 12, FontStyle.Bold);
+            lable.Font = new Font(".萍方-简", 12, FontStyle.Bold);
 
             userControl.FillColor = Color.FromArgb(242, 243, 245);
 
         }
-        
+
 
         private void UnSelectedButtonStyle(UIUserControl userControl, Label lable)
         {
@@ -131,14 +134,14 @@ namespace miniSys0._3.Controls.MainArea
             lable.Font = new Font(".萍方-简", 12, FontStyle.Regular);
             userControl.FillColor = Color.Transparent;
         }
-        
-        
+
+
         private void InitChangeButton()
         {
             bgBI.RectColor = Color.White;
             bgSS.RectColor = Color.White;
             SelectedButtonStyle(bgBI, labelBI);
-            UnSelectedButtonStyle(bgSS,labelSS);
+            UnSelectedButtonStyle(bgSS, labelSS);
         }
 
 
@@ -149,8 +152,8 @@ namespace miniSys0._3.Controls.MainArea
             contentPanel.Controls.Add(userControl);
             userControl.BringToFront();
         }
-        
-        
+
+
         private void InitContentPanel()
         {
             UC_BasicInfo uc = new UC_BasicInfo();
@@ -202,7 +205,8 @@ namespace miniSys0._3.Controls.MainArea
                 phoneTextBox.RectColor = Color.FromArgb(80, 160, 255);
                 phoneTextBox.Focus();
                 editPhone.Text = "OK";
-            }else if (editPhone.Text == "OK")
+            }
+            else if (editPhone.Text == "OK")
             {
                 if (phoneTextBox.Text == "")
                 {
@@ -230,7 +234,7 @@ namespace miniSys0._3.Controls.MainArea
                         User_type.user_phone = orginalNum;
                         MessageBox.Show($"Reset phone to {orginalNum} successfully");
 
-                        
+
                     }
                     catch
                     {
@@ -239,16 +243,16 @@ namespace miniSys0._3.Controls.MainArea
                 }
                 else if (phoneTextBox.Text == User_type.user_phone)
                 {
-                    phoneTextBox.Text = encryptedPhoneNum(phoneTextBox.Text); 
+                    phoneTextBox.Text = encryptedPhoneNum(phoneTextBox.Text);
                     phoneTextBox.Enabled = false;
-                    phoneTextBox.RectColor = Color.White; 
+                    phoneTextBox.RectColor = Color.White;
                     editPhone.Text = "Edit";
-                }  
+                }
             }
 
 
         }
-        
+
 
         private void InitAuthStatus()
         {
@@ -256,11 +260,11 @@ namespace miniSys0._3.Controls.MainArea
             authStatus.FillColor = Color.FromArgb(232, 255, 234);
             authStatus.ForeColor = Color.FromArgb(0, 180, 42);
         }
-        
-        
+
+
         private UITextBox idCardNum = new UITextBox();
-        
-        
+
+
         private void editIDCardNum_Click(object sender, EventArgs e)
         {
             if (editIDCardNum.Text == "Edit")
@@ -290,7 +294,7 @@ namespace miniSys0._3.Controls.MainArea
                     container1.Controls.Remove(idCardNum);
                     authStatus.Show();
                     editIDCardNum.Text = "Edit";
-                    
+
                 }
                 else
                 {
@@ -302,6 +306,16 @@ namespace miniSys0._3.Controls.MainArea
         }
 
 
+
+        private void ChangeAvatarToImage(string avatarFilePath)
+        {
+            icon.Icon = UIIcon.Image;
+            icon.Image = Image.FromFile(avatarFilePath);
+            icon.Size = new Size(162, 140);
+            icon.AvatarSize = 104;
+            icon.Location = new Point(3, 3);
+        }
+
         private void ButtonEditPhoto_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
@@ -310,9 +324,84 @@ namespace miniSys0._3.Controls.MainArea
             dialog.Filter = "Picture file(*.gif;*.jpg;*.jpeg;*.png)|*.gif;*.jpg;*.jpeg;*.png";
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                MessageBox.Show(dialog.FileName);
-                // do something           
+                //Console.WriteLine(dialog.FileName);
+                // do something
+                string imageFilePath = AppSetting.path + "\\Html\\Avatars";
+                string avatarFilePath =  FileProcess.CopyToFile(dialog.FileName, imageFilePath);
+                ChangeAvatarToImage(avatarFilePath);
+                Main.main.ChangeAvatarToImage(avatarFilePath);
+                User_type.user_avatarPath = avatarFilePath;
+                SQLCursor.UpdateAvatar( User_type.user_ID,FileProcess.AvatarID);
             }
         }
+
+        private void InitAvatar()
+        {
+            if (User_type.user_avatarPath != "")
+            {
+                ChangeAvatarToImage(User_type.user_avatarPath);
+            }
+        }
+    }
+
+    public class FileProcess
+    {
+        public static string AvatarID;
+        public static string CopyToFile(string sourceName, string folderPath)
+        {
+            // sourceName orgianl path
+            // folderPath  target path
+
+            if (!Directory.Exists(folderPath))
+            {
+                //create if file not exist
+                Directory.CreateDirectory(folderPath);
+            }
+
+            //use same name
+            string fileName = Path.GetFileName(sourceName);
+ 
+            string fileType = fileName.Split(".")[1];
+
+
+
+            string imageFilePath = AppSetting.path + "\\Html\\Avatars";
+            int newImageNum =  GetFilesCount(imageFilePath)+1;
+
+            //use different name
+            string newFileName = string.Format("{0}.{1}", newImageNum.ToString(), $"{fileType}");
+            //Console.WriteLine(newFileName);
+
+            AvatarID = newFileName;
+
+
+
+            //target info data
+            string targetPath = Path.Combine(folderPath, newFileName);
+
+            //organal file data
+            FileInfo file = new FileInfo(sourceName);
+            if (file.Exists)
+            {
+                //copy , true:Overwrite duplicate file
+                file.CopyTo(targetPath, true);
+            }
+
+            return targetPath;
+        }
+
+        public static int GetFilesCount(string path)
+        {
+            string dirPath = path;
+            System.IO.DirectoryInfo dirInfo = new System.IO.DirectoryInfo(dirPath);
+           
+
+            int totalFile = 0;
+            totalFile += dirInfo.GetFiles().Length;//get all file
+            //totalFile += dirInfo.GetFiles("*.txt").Length;//get certain format
+            return totalFile;
+        }
+
+       
     }
 }

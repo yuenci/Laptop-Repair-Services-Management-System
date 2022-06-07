@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using CefSharp;
 using miniSys0._3.Controls;
 using Sunny.UI;
+using static Sunny.UI.UIAvatar;
+
 namespace miniSys0._3
 {
     public partial class FormFloating : UIForm
@@ -36,6 +38,7 @@ namespace miniSys0._3
             icon.ForeColor = User_type.LogoFore;
             icon.FillColor = User_type.LogoBkg;
             InitTheme();
+            InitAvatar();
         }
         
         
@@ -97,6 +100,50 @@ namespace miniSys0._3
             login.Show();
             this.Hide();
             Main.main.Hide();
+        }
+
+        private void InitAvatar()
+        {
+            if (User_type.user_avatarPath != "")
+            {
+                icon.Icon = UIIcon.Image;
+                icon.Image = Image.FromFile(User_type.user_avatarPath);
+                icon.Size = new Size(84, 84);
+                icon.AvatarSize = 84;
+                icon.Location = new Point(82, 9);
+            }
+        }
+
+        private int num = 1;
+        private void ChangeAvatarToImage()
+        {
+            if (num == 1)
+            {
+                icon.Icon = UIIcon.Image;
+                icon.Image = Image.FromFile(@"E:\Materials\【LOOP】\Assignment\miniSys0.3\Html\Avatars\1.jpg");
+                icon.Size = new Size(84, 84);
+                icon.AvatarSize = 84;
+                icon.Location = new Point(82, 9);
+                num = 0;
+            }
+            else
+            {
+                icon.Size = new Size(80, 80);
+                icon.AvatarSize = 80;
+                icon.Location = new Point(85, 12);
+                icon.Icon = UIIcon.Text;
+                num = 1;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ChangeAvatarToImage();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            ChangeAvatarToImage();
         }
     }
 }

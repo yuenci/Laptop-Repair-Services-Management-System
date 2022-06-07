@@ -13,6 +13,7 @@ using System.IO;
 using miniSys0._3.Controls.MainArea;
 using CefSharp.WinForms;
 using miniSys0._3.Controls.Navmenu;
+using static Sunny.UI.UIAvatar;
 
 namespace miniSys0._3
 {
@@ -49,6 +50,7 @@ namespace miniSys0._3
             Init_search_box();
             checkMessage();
             //show_message();
+            InitAvatarData();
 
             InitTheme();
 
@@ -138,7 +140,16 @@ namespace miniSys0._3
             set_notice_color();
         }
         
-
+        private void InitAvatarData()
+        {
+            string avatarID = SQLCursor.GetAvatar(User_type.user_ID);
+            if (avatarID != null)
+            {
+                string wholePath = AppSetting.path + "//Html//Avatars//" + avatarID;
+                User_type.user_avatarPath = wholePath;
+                ChangeAvatarToImage(wholePath);
+            }
+        }
         private void InitReader()
         {
             Reader reader = new Reader();
@@ -1016,7 +1027,8 @@ namespace miniSys0._3
         private void button1_Click_1(object sender, EventArgs e)
         {
             //UserSettings.ShowAllPropertyValue();
-            Application.Restart();
+            //Application.Restart();
+            //ChangeAvatarToImage();
 
         }
 
@@ -1094,6 +1106,35 @@ namespace miniSys0._3
         private void exist_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private int num = 1;
+        public void ChangeAvatarToImage(string avatarFilePath)
+        {
+
+            /*if (num == 1)
+            {
+                profile.Icon = UIIcon.Image;
+                profile.Image = Image.FromFile(@"E:\Materials\【LOOP】\Assignment\miniSys0.3\Html\Avatars\1.jpg");
+                profile.Size = new Size(36, 36);
+                profile.AvatarSize = 36;
+                profile.Location = new Point(1290, 11);
+                num =0;
+            }
+            else
+            {
+                profile.Size = new Size(32, 32);
+                profile.AvatarSize = 32;
+                profile.Location = new Point(1293, 14);
+                profile.Icon = UIIcon.Text;
+                num = 1;
+            }*/
+
+            profile.Icon = UIIcon.Image;
+            profile.Image = Image.FromFile(avatarFilePath);
+            profile.Size = new Size(36, 36);
+            profile.AvatarSize = 36;
+            profile.Location = new Point(1290, 11);
         }
     }
 

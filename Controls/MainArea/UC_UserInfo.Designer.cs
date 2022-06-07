@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.picContainer = new Sunny.UI.UIUserControl();
+            this.uiAvatar1 = new Sunny.UI.UIAvatar();
             this.ButtonUserCoutry = new Sunny.UI.UISymbolButton();
             this.ButtonUserDepart = new Sunny.UI.UISymbolButton();
             this.LableUsername = new Sunny.UI.UILabel();
@@ -67,6 +68,7 @@
             // picContainer
             // 
             this.picContainer.BackColor = System.Drawing.Color.Transparent;
+            this.picContainer.Controls.Add(this.uiAvatar1);
             this.picContainer.Controls.Add(this.ButtonUserCoutry);
             this.picContainer.Controls.Add(this.ButtonUserDepart);
             this.picContainer.Controls.Add(this.LableUsername);
@@ -85,6 +87,21 @@
             this.picContainer.Text = "uiUserControl1";
             this.picContainer.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.picContainer.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiAvatar1
+            // 
+            this.uiAvatar1.AvatarSize = 70;
+            this.uiAvatar1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiAvatar1.Icon = Sunny.UI.UIAvatar.UIIcon.Image;
+            this.uiAvatar1.Image = global::miniSys0._3.Properties.Resources.avatar_male;
+            this.uiAvatar1.Location = new System.Drawing.Point(403, 39);
+            this.uiAvatar1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiAvatar1.Name = "uiAvatar1";
+            this.uiAvatar1.Size = new System.Drawing.Size(70, 70);
+            this.uiAvatar1.Style = Sunny.UI.UIStyle.Custom;
+            this.uiAvatar1.TabIndex = 36;
+            this.uiAvatar1.Text = "uiAvatar1";
+            this.uiAvatar1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // ButtonUserCoutry
             // 
@@ -520,5 +537,6 @@
         private Others.UC_StaffCard1 uC_StaffCard13;
         private Others.UC_StaffCard1 uC_StaffCard12;
         private Others.UC_StaffCard1 uC_StaffCard11;
+        private Sunny.UI.UIAvatar uiAvatar1;
     }
 }

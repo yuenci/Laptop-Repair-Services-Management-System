@@ -99,6 +99,7 @@
             // 
             this.icon.AvatarSize = 80;
             this.icon.Font = new System.Drawing.Font(".萍方-简", 40F, System.Drawing.FontStyle.Bold);
+            this.icon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
             this.icon.Icon = Sunny.UI.UIAvatar.UIIcon.Text;
             this.icon.Location = new System.Drawing.Point(85, 12);
             this.icon.MinimumSize = new System.Drawing.Size(1, 1);
@@ -112,7 +113,7 @@
             // userName
             // 
             this.userName.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.userName.Location = new System.Drawing.Point(0, 95);
+            this.userName.Location = new System.Drawing.Point(0, 97);
             this.userName.Name = "userName";
             this.userName.Size = new System.Drawing.Size(250, 33);
             this.userName.Style = Sunny.UI.UIStyle.Custom;

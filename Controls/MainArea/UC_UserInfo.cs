@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Sunny.UI.UIAvatar;
 
 namespace miniSys0._3.Controls.MainArea
 {
@@ -24,6 +25,11 @@ namespace miniSys0._3.Controls.MainArea
             InitTheme();
             string[] staffIDArray = { "Sta000001", "Sta000004", "Sta000037", "Sta000063" };
             InitRlatedStaff(staffIDArray);
+            setAvatar();
+
+            uiAvatar1.Visible = false;
+            InitAvatar();
+
         }
 
 
@@ -226,9 +232,40 @@ namespace miniSys0._3.Controls.MainArea
             dialog.Filter = "Picture file(*.gif;*.jpg;*.jpeg;*.png)|*.gif;*.jpg;*.jpeg;*.png";
             if (dialog.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show(dialog.FileName);
-                // do something           
+                string imageFilePath = AppSetting.path + "\\Html\\Avatars";
+                string avatarFilePath = FileProcess.CopyToFile(dialog.FileName, imageFilePath);
+                ChangeAvatarToImage(avatarFilePath);
+                Main.main.ChangeAvatarToImage(avatarFilePath);
+                User_type.user_avatarPath = avatarFilePath;
+                SQLCursor.UpdateAvatar(User_type.user_ID, FileProcess.AvatarID);
             }
         }
+
+
+        private void ChangeAvatarToImage(string avatarFilePath)
+        {
+            uiAvatar1.Visible = true;
+            uiAvatar1.Icon = UIIcon.Image;
+            uiAvatar1.Image = Image.FromFile(avatarFilePath);
+            uiAvatar1.Size = new Size(70, 70);
+            uiAvatar1.AvatarSize = 70;
+            uiAvatar1.Location = new Point(564, 29);
+
+            UserFirstLeeter.Visible = false;
+
+        }
+        private void InitAvatar()
+        {
+            if (User_type.user_avatarPath != "")
+            {
+                ChangeAvatarToImage(User_type.user_avatarPath);
+            }
+        }
+
+        private void setAvatar()
+        {
+            uiAvatar1.Parent = pictureBg;
+        }
+
     }
 }

@@ -55,6 +55,7 @@ namespace miniSys0._3
         public static string user_password = "password123456";
         public static string user_theme = "light";
         // light/dark
+        public static string user_avatarPath = "";
 
 
 
