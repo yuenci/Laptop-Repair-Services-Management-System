@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -31,11 +32,11 @@ namespace miniSys0._3
         public static string user_ID = "Cus000002";*/
 
         //staff
-        public static string user_deparment = "Technician";
+        public static string user_deparment = "Receptionist";
         //public static string user_ID = "Sta000001";
 
-        //public static string user_ID = "Sta000011";
-        public static string user_ID = "Sta000052";
+        public static string user_ID = "Sta000011";
+        //public static string user_ID = "Sta000052";
 
 
 
@@ -553,4 +554,45 @@ namespace miniSys0._3
         }
     }
 
+    public static class RegexForInput
+    {
+        public static bool EmailVerify(string email)
+        {
+            Regex regex = new Regex(@"^(\w)+(\.\w)*@(\w)+((\.\w+)+)$");
+            if (regex.IsMatch(email))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static bool PhoneNumVerify(string phoneNum)
+        {
+            int num = 0;
+            if (int.TryParse(phoneNum,out num))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static bool TextVerify(string text)
+        {
+            Regex regex = new Regex(@"^[A-Za-z]+$");
+            if (regex.IsMatch(text))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
 }

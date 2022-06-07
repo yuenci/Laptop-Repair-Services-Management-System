@@ -317,5 +317,18 @@ namespace miniSys0._3
             //Console.WriteLine(dt.ToString("MM/dd/yyyy HH:mm:ss"));
             Console.WriteLine(dt.ToString("HH:mm:ss"));
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Regex regex = new Regex(@"^(\w)+(\.\w)*@(\w)+((\.\w+)+)$");
+            if (regex.IsMatch(textBox1.Text))
+            {
+                Console.WriteLine("yes");
+            }
+            else
+            {
+                Console.WriteLine("no");
+            }
+        }
     }
 }

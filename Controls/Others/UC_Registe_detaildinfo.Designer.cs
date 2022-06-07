@@ -48,6 +48,7 @@
             this.country = new Sunny.UI.UITextBox();
             this.address = new Sunny.UI.UITextBox();
             this.sanswer = new Sunny.UI.UITextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // email
@@ -70,6 +71,7 @@
             this.email.Text = "Enter user\'s email";
             this.email.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.email.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.email.Enter += new System.EventHandler(this.email_Enter);
             // 
             // phone
             // 
@@ -403,10 +405,23 @@
             this.sanswer.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.sanswer.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 15F);
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(93, 92);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(21, 27);
+            this.label1.TabIndex = 126;
+            this.label1.Text = "*";
+            // 
             // UC_Registe_detaildinfo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.sanswer);
             this.Controls.Add(this.address);
             this.Controls.Add(this.country);
@@ -457,5 +472,6 @@
         public Sunny.UI.UITextBox country;
         public Sunny.UI.UITextBox address;
         public Sunny.UI.UITextBox sanswer;
+        private System.Windows.Forms.Label label1;
     }
 }

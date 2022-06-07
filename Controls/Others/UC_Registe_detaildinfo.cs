@@ -52,15 +52,25 @@ namespace miniSys0._3.Controls.Others
 
             birthDatePicker.Text = DateTime.Now.ToString("yyyy-MM-dd");
         }
-
+        private bool ifPhoneVerify = false;
+        private bool ifEmailVerify = false;
 
         private void nextStepBtn_Click(object sender, EventArgs e)
         {
+            bool phoneOk = true;
+            bool emailOk = true;
             if (phone.Text == "" || phone.Text == "Enter user's phone")
             {
                 phone.RectColor =Color.Red;
+                phoneOk = false;
             }
-            else
+
+            if (email.Text == "" || email.Text == "Enter user's email")
+            {
+                email.RectColor = Color.Red;
+                emailOk = false;
+            }
+            if(phoneOk && emailOk)
             {
                 string genderStr = "";
                 string squestionStr = "";
@@ -82,18 +92,32 @@ namespace miniSys0._3.Controls.Others
                     $"{squestionStr}" +
                     $"{sanswer.Text}" +
                     $"{profile.Text}" );*/
-                if (phone.Text != "Enter user's phone" && phone.Text != "")
+                if (phone.Text != "Enter user's phone" && phone.Text != "" && RegexForInput.PhoneNumVerify(phone.Text))
                 {
                     RegisterInfoCache.user_phone = phone.Text;
+                    ifPhoneVerify = true;
+
                 }
+                else
+                {
+                    MessageBox.Show("Invalid Phone number");
+                }
+
                 if (birthDatePicker.Text != "")
                 {
                     RegisterInfoCache.user_Birthday = birthDatePicker.Text;
                 }
-                if (email.Text != "Enter user's email" && email.Text != "")
+
+                if (email.Text != "Enter user's email" && email.Text != "" && RegexForInput.EmailVerify(email.Text))
                 {
                     RegisterInfoCache.user_email = email.Text;
+                    ifEmailVerify = true;
                 }
+                else
+                {
+                    MessageBox.Show("Invalid email");
+                }
+
                 if (genderStr != "")
                 {
                     RegisterInfoCache.user_gender = genderStr;
@@ -122,31 +146,34 @@ namespace miniSys0._3.Controls.Others
                 RegisterInfoCache.user_password = generatePWD();
                 RegisterInfoCache.user_regtime = DateTime.Now.ToString();
 
-
-
-                if (User_type.user_deparment =="Admin")
+                if (ifPhoneVerify && ifEmailVerify)
                 {
-                    RegisterInfoCache.user_ID = SQLCursor.AddOneToLastID("StaffID", "Staff");
-                    registerSta();
+
+                    if (User_type.user_deparment == "Admin")
+                    {
+                        RegisterInfoCache.user_ID = SQLCursor.AddOneToLastID("StaffID", "Staff");
+                        registerSta();
+                    }
+                    else if (User_type.user_deparment == "Receptionist")
+                    {
+                        RegisterInfoCache.user_ID = SQLCursor.AddOneToLastID("CustomerID", "Customer");
+                        registerCus();
+                    }
+
+
+                    RegisterInfoCache.step3Activate = true;
+
+                    UC_Registration.iconSelect(UC_Registration.uc_Registration.icon3,
+                    UC_Registration.uc_Registration.iconLabel3);
+                    UC_Registration.iconUnSelect(UC_Registration.uc_Registration.icon2,
+                        UC_Registration.uc_Registration.iconLabel2);
+                    UC_Registration.iconUnSelect(UC_Registration.uc_Registration.icon1,
+                        UC_Registration.uc_Registration.iconLabel1);
+                    UC_Registe_Complete uc = new UC_Registe_Complete();
+                    uc.Location = new Point(320, 80);
+                    AddUserControl.Add(uc, UC_Registration.uc_Registration.contentPanel);
                 }
-                else if(User_type.user_deparment == "Receptionist")
-                {
-                    RegisterInfoCache.user_ID = SQLCursor.AddOneToLastID("CustomerID", "Customer");
-                    registerCus();
-                }
 
-
-                RegisterInfoCache.step3Activate = true;
-
-                UC_Registration.iconSelect(UC_Registration.uc_Registration.icon3,
-                UC_Registration.uc_Registration.iconLabel3);
-                UC_Registration.iconUnSelect(UC_Registration.uc_Registration.icon2,
-                    UC_Registration.uc_Registration.iconLabel2);
-                UC_Registration.iconUnSelect(UC_Registration.uc_Registration.icon1,
-                    UC_Registration.uc_Registration.iconLabel1);
-                UC_Registe_Complete uc = new UC_Registe_Complete();
-                uc.Location = new Point(320, 80);
-                AddUserControl.Add(uc, UC_Registration.uc_Registration.contentPanel);
             }
         }
         private void registerCus()
@@ -265,6 +292,11 @@ namespace miniSys0._3.Controls.Others
                 rng.GetBytes(rndBytes);
                 return BitConverter.ToInt32(rndBytes, 0);
             }
+        }
+
+        private void email_Enter(object sender, EventArgs e)
+        {
+            email.RectColor = Color.Gray;
         }
     }
 }

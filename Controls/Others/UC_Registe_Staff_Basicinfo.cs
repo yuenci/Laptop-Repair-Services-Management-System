@@ -60,12 +60,15 @@ namespace miniSys0._3.Controls.Others
 
             errorBar.Visible = false;
             successIcon.Visible = false;
+
+            nameTextBox.RectColor = Color.Gray;
         }
         
         
         private void IDnumberTextBox_Enter(object sender, EventArgs e)
         {
             IDnumberTextBox.RectSize = 1;
+            nameTextBox.RectColor = Color.Gray;
         }
 
 
@@ -140,7 +143,7 @@ namespace miniSys0._3.Controls.Others
                 selectDepartment.RectSize = 2;
             }
 
-            if (nameTextBox.Text != "" && nameTextBox.Text != "Enter the user's name")
+            if (nameTextBox.Text != "" && nameTextBox.Text != "Enter the user's name" && ifNameVerify && ifNumVerify)
             {
                 if (IDnumberTextBox.Text != "" || IDnumberTextBox.Text != "Enter the user's ID number")
                 {
@@ -192,18 +195,48 @@ namespace miniSys0._3.Controls.Others
             }
         }
         private bool ifUserNameExist = false;
+        private bool ifNameVerify = false;
         private void nameTextBox_Leave(object sender, EventArgs e)
         {
+
+            if (RegexForInput.TextVerify(nameTextBox.Text))
+            {
+                ifNameVerify = true;
+            }
+
+
             if (SQLCursor.ifStaOrCus(nameTextBox.Text) !=null)
             {
                 ifUserNameExist = true;
                 errorBar.Visible = true;
-                
+
+            }
+            else if (!ifNameVerify) 
+            {
+                MessageBox.Show("Names can only consist of letters");
+                nameTextBox.RectColor = Color.Red;
+
             }
             else
             {
                 successIcon.Visible = true;
                 ifUserNameExist = false;
+            }
+
+            
+
+            
+        }
+        private bool ifNumVerify = false;
+        private void IDnumberTextBox_Leave(object sender, EventArgs e)
+        {
+            if (RegexForInput.PhoneNumVerify(IDnumberTextBox.Text))
+            {
+                ifNumVerify = true;
+            }
+            else
+            {
+                MessageBox.Show("ID can only consist of numbers");
             }
         }
     }

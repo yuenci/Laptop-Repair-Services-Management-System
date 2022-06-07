@@ -44,7 +44,19 @@ namespace miniSys0._3.Controls.Others
             {
                 nameTextBox.RectColor = Color.Red;
             }
-            if (nameTextBox.Text != "" && nameTextBox.Text != "Enter Customer's name")
+
+            bool ifNameVerify = false;
+
+            if (RegexForInput.TextVerify(nameTextBox.Text))
+            {
+                ifNameVerify = true;
+            }
+            else
+            {
+                MessageBox.Show("Names can only consist of letters");
+            }
+
+            if (nameTextBox.Text != "" && nameTextBox.Text != "Enter Customer's name" && ifNameVerify)
             {
                 if (SQLCursor.ifStaOrCus(nameTextBox.Text) !=null)
                 {

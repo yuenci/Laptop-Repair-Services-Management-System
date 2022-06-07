@@ -238,6 +238,7 @@
             this.IDnumberTextBox.Text = "Enter the user\'s ID number";
             this.IDnumberTextBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.IDnumberTextBox.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.IDnumberTextBox.Leave += new System.EventHandler(this.IDnumberTextBox_Leave);
             this.IDnumberTextBox.Enter += new System.EventHandler(this.IDnumberTextBox_Enter);
             // 
             // label1
