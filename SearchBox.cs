@@ -294,16 +294,21 @@ namespace miniSys0._3
                 //Console.WriteLine($"ifallowSearch:{ifallowSearch}");
                 //Console.WriteLine($"ifPrivateMode:{ifPrivateMode}");
 
-                if (targetUserID!=null && ifallowSearch == "On" && ifPrivateMode != "On")
+
+                if (targetUserID != null)
                 {
-                    ViewProfile viewProfile = new ViewProfile();
-                    viewProfile.InitCus(targetUserID);
-                    empty_hide_search_box();
-                    viewProfile.Show();
-                }
-                else
-                {
-                    MessageBox.Show($"{content} doesn't exist");
+                    if (ifallowSearch == "Off" || ifPrivateMode == "On")
+                    {
+                        MessageBox.Show($"{content} doesn't exist");
+                    }
+                    else
+                    {
+                        ViewProfile viewProfile = new ViewProfile();
+                        viewProfile.ShowInTaskbar = false;
+                        viewProfile.InitCus(targetUserID);
+                        empty_hide_search_box();
+                        viewProfile.Show();
+                    }
                 }
                 
             }
@@ -317,16 +322,21 @@ namespace miniSys0._3
                 /*Console.WriteLine($"ifallowSearch:{ifallowSearch}");
                 Console.WriteLine($"ifPrivateMode:{ifPrivateMode}");*/
                 //Console.WriteLine(targetUserID);
-                if (targetUserID != null && ifallowSearch == "On" && ifPrivateMode != "On")
+
+                if (targetUserID != null)
                 {
-                    ViewProfile viewProfile = new ViewProfile();
-                    viewProfile.InitStaff(targetUserID);
-                    empty_hide_search_box();
-                    viewProfile.Show();
-                }
-                else
-                {
-                    MessageBox.Show($"{content} doesn't exist");
+                    if (ifallowSearch == "Off" || ifPrivateMode == "On")
+                    {
+                        MessageBox.Show($"{content} doesn't exist");
+                    }
+                    else
+                    {
+                        ViewProfile viewProfile = new ViewProfile();
+                        viewProfile.ShowInTaskbar = false;
+                        viewProfile.InitStaff(targetUserID);
+                        empty_hide_search_box();
+                        viewProfile.Show();
+                    }
                 }
             }
             else if (num==4)

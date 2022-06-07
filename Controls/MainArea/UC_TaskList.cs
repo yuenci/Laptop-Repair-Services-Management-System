@@ -47,7 +47,7 @@ namespace miniSys0._3.Controls.MainArea
                 Container.RectColor = Color.Transparent;
                 contentPanel.BackColor = Color.FromArgb(28, 47, 70);
                 searchIcon.Size = new Size(35, 35);
-                searchIcon.Location = new Point(1020, 46);
+                searchIcon.Location = new Point(1007, 46);
 
                 dynamic[] lable = { label1, uiLabel6, uiLabel7, uiLabel8, uiLabel9, uiLabel10 };
                 foreach (var item in lable)

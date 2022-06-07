@@ -30,6 +30,7 @@
         {
             this.container = new System.Windows.Forms.Panel();
             this.uiUserControl2 = new Sunny.UI.UIUserControl();
+            this.about = new Sunny.UI.UIRichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.uiUserControl1 = new Sunny.UI.UIUserControl();
             this.regtime = new Sunny.UI.UILabel();
@@ -57,7 +58,6 @@
             this.department = new Sunny.UI.UILabel();
             this.uiAvatar4 = new Sunny.UI.UIAvatar();
             this.country = new Sunny.UI.UILabel();
-            this.about = new Sunny.UI.UIRichTextBox();
             this.container.SuspendLayout();
             this.uiUserControl2.SuspendLayout();
             this.uiUserControl1.SuspendLayout();
@@ -95,6 +95,24 @@
             this.uiUserControl2.Text = "uiUserControl2";
             this.uiUserControl2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiUserControl2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // about
+            // 
+            this.about.FillColor = System.Drawing.Color.White;
+            this.about.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.about.Location = new System.Drawing.Point(19, 37);
+            this.about.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.about.MinimumSize = new System.Drawing.Size(1, 1);
+            this.about.Name = "about";
+            this.about.Padding = new System.Windows.Forms.Padding(8);
+            this.about.ReadOnly = true;
+            this.about.ShowText = false;
+            this.about.Size = new System.Drawing.Size(330, 159);
+            this.about.Style = Sunny.UI.UIStyle.Custom;
+            this.about.TabIndex = 2;
+            this.about.Text = "User instruaction";
+            this.about.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.about.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // label2
             // 
@@ -488,24 +506,6 @@
             this.country.Text = "China";
             this.country.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.country.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // about
-            // 
-            this.about.FillColor = System.Drawing.Color.White;
-            this.about.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.about.Location = new System.Drawing.Point(19, 37);
-            this.about.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.about.MinimumSize = new System.Drawing.Size(1, 1);
-            this.about.Name = "about";
-            this.about.Padding = new System.Windows.Forms.Padding(8);
-            this.about.ReadOnly = true;
-            this.about.ShowText = false;
-            this.about.Size = new System.Drawing.Size(330, 159);
-            this.about.Style = Sunny.UI.UIStyle.Custom;
-            this.about.TabIndex = 2;
-            this.about.Text = "User instruaction";
-            this.about.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.about.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // ViewProfile
             // 

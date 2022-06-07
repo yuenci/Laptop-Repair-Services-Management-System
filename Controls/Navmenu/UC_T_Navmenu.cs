@@ -57,6 +57,7 @@ namespace miniSys0._3.Controls
             Main.main.mainPanel.Controls.Clear();
             Main.main.mainPanel.Controls.Add(userControl);
             userControl.BringToFront();
+            Main.main.closeCurrentMainPageObj();
         }
 
 

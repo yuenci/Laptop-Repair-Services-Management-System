@@ -206,9 +206,11 @@ namespace miniSys0._3
 
         public void InitCus(string cusID)
         {
-            dynamic[] data = SQLCursor.Query("SELECT Name,Country,Phone_number,Email," +
+            string sql = "SELECT Name,Country,Phone_number,Email," +
                 "Gender,Birthday,Address,CustomerID,Regtime,About " +
-                $"FROM Customer WHERE CustomerID = '{cusID}';");
+                $"FROM Customer WHERE CustomerID = '{cusID}';";
+            Console.WriteLine(sql);
+            dynamic[] data = SQLCursor.Query(sql);
             if (data.Length == 0)
             {
                 MessageBox.Show($"{cusID} doesn't exist,lalalallal");

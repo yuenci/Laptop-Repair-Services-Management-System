@@ -45,8 +45,8 @@
             this.allCard = new Sunny.UI.UIButton();
             this.contentPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.urC_Crumbs1 = new miniSys0._3.Controls.Others.UrC_Crumbs();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.urC_Crumbs1 = new miniSys0._3.Controls.Others.UrC_Crumbs();
             this.Container.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,7 +86,7 @@
             this.info.AvatarSize = 20;
             this.info.BackColor = System.Drawing.Color.Transparent;
             this.info.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.info.Location = new System.Drawing.Point(1046, 45);
+            this.info.Location = new System.Drawing.Point(1055, 46);
             this.info.MinimumSize = new System.Drawing.Size(1, 1);
             this.info.Name = "info";
             this.info.Size = new System.Drawing.Size(35, 35);

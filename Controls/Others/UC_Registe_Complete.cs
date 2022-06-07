@@ -113,7 +113,8 @@ namespace miniSys0._3.Controls.Others
 
         private void CheckButton_Click(object sender, EventArgs e)
         {
-           ViewProfile viewProfile = new ViewProfile();
+            ViewProfile viewProfile = new ViewProfile();
+            viewProfile.ShowInTaskbar = false;
             viewProfile.Show();
         }
     }

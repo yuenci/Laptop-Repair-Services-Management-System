@@ -142,6 +142,7 @@ namespace miniSys0._3.Controls.Others
         private void orderId_Click(object sender, EventArgs e)
         {
             OrderDetails orderDetails = new OrderDetails();
+            orderDetails.ShowInTaskbar = false;
             orderDetails.Init(orderIDcache);
             orderDetails.Show();
         }

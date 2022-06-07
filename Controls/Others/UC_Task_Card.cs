@@ -208,6 +208,7 @@ namespace miniSys0._3.Controls.Others
             if (useID != null)
             {
                 ViewProfile profile = new ViewProfile();
+                profile.ShowInTaskbar = false;
                 profile.InitCus(useID);
                 profile.Show();
             }

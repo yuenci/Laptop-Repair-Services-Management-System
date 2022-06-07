@@ -45,9 +45,17 @@
             this.navMenuPanel = new System.Windows.Forms.Panel();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.CSharpInc = new System.Windows.Forms.NotifyIcon(this.components);
+            this.ContextMenuStrip = new Sunny.UI.UIContextMenuStrip();
+            this.minimize = new System.Windows.Forms.ToolStripMenuItem();
+            this.maximize = new System.Windows.Forms.ToolStripMenuItem();
+            this.restart = new System.Windows.Forms.ToolStripMenuItem();
+            this.logout = new System.Windows.Forms.ToolStripMenuItem();
+            this.exist = new System.Windows.Forms.ToolStripMenuItem();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.uiUserControl1.SuspendLayout();
+            this.ContextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTop
@@ -237,6 +245,55 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // CSharpInc
+            // 
+            this.CSharpInc.ContextMenuStrip = this.ContextMenuStrip;
+            resources.ApplyResources(this.CSharpInc, "CSharpInc");
+            this.CSharpInc.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            // 
+            // ContextMenuStrip
+            // 
+            this.ContextMenuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            resources.ApplyResources(this.ContextMenuStrip, "ContextMenuStrip");
+            this.ContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.minimize,
+            this.maximize,
+            this.restart,
+            this.logout,
+            this.exist});
+            this.ContextMenuStrip.Name = "ContextMenuStrip";
+            this.ContextMenuStrip.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // minimize
+            // 
+            resources.ApplyResources(this.minimize, "minimize");
+            this.minimize.Name = "minimize";
+            this.minimize.Click += new System.EventHandler(this.minimize_Click);
+            // 
+            // maximize
+            // 
+            resources.ApplyResources(this.maximize, "maximize");
+            this.maximize.Name = "maximize";
+            this.maximize.Click += new System.EventHandler(this.maximize_Click);
+            // 
+            // restart
+            // 
+            this.restart.Name = "restart";
+            resources.ApplyResources(this.restart, "restart");
+            this.restart.Click += new System.EventHandler(this.restart_Click);
+            // 
+            // logout
+            // 
+            this.logout.Name = "logout";
+            resources.ApplyResources(this.logout, "logout");
+            this.logout.Click += new System.EventHandler(this.logout_Click);
+            // 
+            // exist
+            // 
+            this.exist.Name = "exist";
+            resources.ApplyResources(this.exist, "exist");
+            this.exist.Click += new System.EventHandler(this.exist_Click);
+            // 
             // Main
             // 
             resources.ApplyResources(this, "$this");
@@ -253,6 +310,7 @@
             this.panelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.uiUserControl1.ResumeLayout(false);
+            this.ContextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -274,5 +332,12 @@
         private Sunny.UI.UILabel copyRight;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.NotifyIcon CSharpInc;
+        private Sunny.UI.UIContextMenuStrip ContextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem minimize;
+        private System.Windows.Forms.ToolStripMenuItem maximize;
+        private System.Windows.Forms.ToolStripMenuItem restart;
+        private System.Windows.Forms.ToolStripMenuItem logout;
+        private System.Windows.Forms.ToolStripMenuItem exist;
     }
 }

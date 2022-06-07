@@ -83,6 +83,11 @@ namespace miniSys0._3
 
             SetAutoThemeMode();
 
+            this.TopMost = true;
+
+            button1.Visible = false;
+
+            
         }
         private void Main_Load(object sender, EventArgs e)
         {
@@ -243,6 +248,7 @@ namespace miniSys0._3
                 int PositionX = this.Location.X;
                 int PositionY = this.Location.Y;
                 uniqueInstance.StartPosition = FormStartPosition.Manual;
+                uniqueInstance.ShowInTaskbar = false;
                 uniqueInstance.Location = (Point)new Size(PositionX + 1080, PositionY + 68);
 
                 hideOtherControls();
@@ -314,6 +320,7 @@ namespace miniSys0._3
         private void Init_search_box()
         {
             SearchBox searchBoxForm = new SearchBox();
+            searchBoxForm.ShowInTaskbar = false;
             searchBox_instance = searchBoxForm;
         }
 
@@ -580,14 +587,21 @@ namespace miniSys0._3
             sw.Close();
         }
         #region
-        
 
+        private dynamic currentMainPageObj;
         private void addUserControlToMain(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(userControl);
             userControl.BringToFront();
+
+            currentMainPageObj = userControl;
+        }
+
+        public void closeCurrentMainPageObj()
+        {
+            currentMainPageObj.Dispose();
         }
 
         public void add_UC_Mainto_Panel()
@@ -918,6 +932,7 @@ namespace miniSys0._3
             if (messageBox_instance == null)
             {
                 messageBox_instance = new MessageBoxForm();
+                messageBox_instance.ShowInTaskbar = false;  
                 int PositionX = this.Location.X;
                 int PositionY = this.Location.Y;
                 messageBox_instance.StartPosition = FormStartPosition.Manual;
@@ -975,6 +990,7 @@ namespace miniSys0._3
                 UserSettings.InitStatusData();
 
                 settingForm_instance = new SettingForm();
+                settingForm_instance.ShowInTaskbar = false;
                 int PositionX = this.Location.X;
                 int PositionY = this.Location.Y;
                 settingForm_instance.StartPosition = FormStartPosition.Manual;
@@ -999,7 +1015,9 @@ namespace miniSys0._3
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            UserSettings.ShowAllPropertyValue();
+            //UserSettings.ShowAllPropertyValue();
+            Application.Restart();
+
         }
 
         System.Timers.Timer timer = null;
@@ -1037,11 +1055,46 @@ namespace miniSys0._3
             }
             //
         }
-        
 
-        
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (Main.main.WindowState == FormWindowState.Minimized) 
+            {
+                Main.main.WindowState = FormWindowState.Normal;
+                Main.main.ShowInTaskbar = true;
+            }
+        }
 
+        private void minimize_Click(object sender, EventArgs e)
+        {
+            Main.main.WindowState = FormWindowState.Minimized;
+            Main.main.ShowInTaskbar = false;
+        }
 
+        private void maximize_Click(object sender, EventArgs e)
+        {
+            Main.main.WindowState = FormWindowState.Normal;
+            Main.main.ShowInTaskbar = true;
+        }
+
+        private void restart_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            User_type.loginStatus = "Relogin";
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+            Main.main.Hide();
+        }
+
+        private void exist_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 
 

@@ -828,6 +828,7 @@
     <Content Include="Html\chart.js" />
     <Content Include="Html\mainLineChart.html" />
     <Content Include="Html\mainPieChart.html" />
+    <None Include="Resources\icon48-48.png" />
     <None Include="Resources\starShip.png" />
     <None Include="Resources\avatar_male.png" />
     <None Include="Resources\avatar_female.png" />
@@ -855,6 +856,7 @@
     <None Include="Resources\logo.ico" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Html\Avatars\" />
     <Folder Include="Html\Document\" />
   </ItemGroup>
   <ItemGroup>
