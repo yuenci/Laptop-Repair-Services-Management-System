@@ -286,10 +286,17 @@ namespace miniSys0._3
             }
             else if (num==2)
             {
-                ViewProfile viewProfile = new ViewProfile();
+                
                 string targetUserID = formatInput(content,"customer");
-                if (targetUserID!=null)
+                string ifallowSearch = UserSettings.GetSettingsValue(targetUserID, "allowSearch");
+                string ifPrivateMode = UserSettings.GetSettingsValue(targetUserID, "privateMode");
+
+                //Console.WriteLine($"ifallowSearch:{ifallowSearch}");
+                //Console.WriteLine($"ifPrivateMode:{ifPrivateMode}");
+
+                if (targetUserID!=null && ifallowSearch == "On" && ifPrivateMode != "On")
                 {
+                    ViewProfile viewProfile = new ViewProfile();
                     viewProfile.InitCus(targetUserID);
                     empty_hide_search_box();
                     viewProfile.Show();
@@ -302,13 +309,17 @@ namespace miniSys0._3
             }
             else if (num==3)
             {
-                ViewProfile viewProfile = new ViewProfile();
-                
-
+              
                 string targetUserID = formatInput(content, "staff");
-                Console.WriteLine(targetUserID);
-                if (targetUserID != null)
+                string ifallowSearch = UserSettings.GetSettingsValue(targetUserID, "allowSearch");
+                string ifPrivateMode = UserSettings.GetSettingsValue(targetUserID, "privateMode");
+
+                /*Console.WriteLine($"ifallowSearch:{ifallowSearch}");
+                Console.WriteLine($"ifPrivateMode:{ifPrivateMode}");*/
+                //Console.WriteLine(targetUserID);
+                if (targetUserID != null && ifallowSearch == "On" && ifPrivateMode != "On")
                 {
+                    ViewProfile viewProfile = new ViewProfile();
                     viewProfile.InitStaff(targetUserID);
                     empty_hide_search_box();
                     viewProfile.Show();

@@ -45,7 +45,7 @@
             this.uiLabel3.Name = "uiLabel3";
             this.uiLabel3.Size = new System.Drawing.Size(149, 47);
             this.uiLabel3.TabIndex = 15;
-            this.uiLabel3.Text = "Allows users send \r\nmessage to you";
+            this.uiLabel3.Text = "Reject users send \r\nmessages to you";
             this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiLabel3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
@@ -56,7 +56,7 @@
             this.uiLabel2.Name = "uiLabel2";
             this.uiLabel2.Size = new System.Drawing.Size(196, 23);
             this.uiLabel2.TabIndex = 14;
-            this.uiLabel2.Text = "Reject system message";
+            this.uiLabel2.Text = "Reject system messages";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiLabel2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
@@ -65,9 +65,9 @@
             this.uiLabel1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel1.Location = new System.Drawing.Point(25, 49);
             this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(149, 23);
+            this.uiLabel1.Size = new System.Drawing.Size(161, 23);
             this.uiLabel1.TabIndex = 13;
-            this.uiLabel1.Text = "Reject all message";
+            this.uiLabel1.Text = "Reject all messages";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiLabel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 

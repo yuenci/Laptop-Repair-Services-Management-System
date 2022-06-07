@@ -58,7 +58,7 @@ namespace miniSys0._3
             //topbar
             randomLogoColor();
 
-            //insert data to js to prepare first time load for chart
+            //insert data to js to prepare first time load for chart(line and pie)
             prepareData();
 
             //insert data to json to prepare all artical data
@@ -66,7 +66,10 @@ namespace miniSys0._3
 
             // main area loading
 
-            add_UC_Mainto_Panel();
+
+            UserSettings.InitStatusData();
+            InitHomePage();
+            //add_UC_Mainto_Panel();
             //add_UC_UserInfo();
             //add_UC_UserSetting();
             //add_UC_registration();
@@ -143,7 +146,59 @@ namespace miniSys0._3
             searchBox.Visible = false;
         }
         
+        private void InitHomePage()
+        {
+            string homePage = UserSettings.homePage;
 
+            if (homePage == "Dashboard" && User_type.user_deparment != "Customer")
+            {
+                add_UC_Mainto_Panel();
+            }
+            else if (homePage == "Dashboard" && User_type.user_deparment == "Customer")
+            {
+                add_UC_Cus_dashboard();
+            }
+            else if (homePage == "Staff Register")
+            {
+                add_UC_registration();
+            }
+            else if (homePage == "Service Report")
+            {
+                add_UC_ServiceReport();
+            }
+            else if (homePage == "Total Income")
+            {
+                add_UC_IncomeAnalysis();
+            }
+            else if (homePage == "Requests Card View")
+            {
+                add_task_cards();
+            }
+            else if (homePage == "Requests List View")
+            {
+                add_task_table();
+            }
+            else if (homePage == "Customer Register")
+            {
+                add_UC_registration();
+            }
+            else if (homePage == "Payment and Receipt")
+            {
+                add_UC_Payment();
+            }
+            else if (homePage == "Order Detail")
+            {
+                add_Cus_OrderDetails();
+            }
+            else if (homePage == "User Info")
+            {
+                add_UC_UserInfo();
+            }
+            else if (homePage == "User settings")
+            {
+                add_UC_UserSetting();
+            }
+        }
         private void drag_down(object sender, MouseEventArgs e)
         {
             mPoint = new Point(e.X, e.Y);
@@ -752,30 +807,49 @@ namespace miniSys0._3
         
         public void checkMessage()
         {
-            Init_message_data();
+            string ifRejectAll = UserSettings.GetSettingsValue(User_type.user_ID, "rejectAllMs");
+            string ifPrivateMode = UserSettings.GetSettingsValue(User_type.user_ID, "privateMode");
 
-            if (messagesList.Count >0)
+            if (ifRejectAll != "On" && ifPrivateMode!= "On")
             {
-                ifReciveNewMessage =  true;
-                set_notice_color();
+                Init_message_data();
+
+                if (messagesList.Count > 0)
+                {
+                    ifReciveNewMessage = true;
+                    set_notice_color();
+                }
+                else
+                {
+                    ifReciveNewMessage = false;
+                    set_notice_color();
+                }
             }
             else
             {
-                ifReciveNewMessage = false;
-                set_notice_color();
+ 
+                message.FillColor = Color.White;
+                message.FillHoverColor = Color.FromArgb(242, 243, 245);
+
             }
+            
         }
 
 
         private void Init_message_data()
         {
             messagesList.Clear();
-            string sql_messageToall = "SELECT　Message,Type,Time,SenderID_cus,receiverID_cus,Status　FROM  Messages " +
+
+            string ifrejectAllSy = UserSettings.GetSettingsValue(User_type.user_ID, "rejectAllSy");
+            if (ifrejectAllSy != "On")
+            {
+                string sql_messageToall = "SELECT　Message,Type,Time,SenderID_cus,receiverID_cus,Status　FROM  Messages " +
     "WhERE Type ='@all' AND Status = 0  Order By Time DESC ;";
-            dynamic[] data1 = SQLCursor.Query(sql_messageToall);
+                dynamic[] data1 = SQLCursor.Query(sql_messageToall);
 
-            addMessageTolist(data1);
-
+                addMessageTolist(data1);
+            }
+  
             string reciverType = "";
             if (User_type.user_deparment == "Customer")
             {

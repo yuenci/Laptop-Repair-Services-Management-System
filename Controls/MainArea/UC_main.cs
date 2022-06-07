@@ -507,7 +507,9 @@ namespace miniSys0._3.Controls
         
         private async void refreshlButton_Click(object sender, EventArgs e)
         {
+            Main.main.prepareData();
             await WebBrowser.GetBrowser().MainFrame.EvaluateScriptAsync("refresh()");
+            
         }
 
         
@@ -538,7 +540,9 @@ namespace miniSys0._3.Controls
         
         private async void refreshlButton2_Click(object sender, EventArgs e)
         {
+            Main.main.prepareData();
             await WebBrowser1.GetBrowser().MainFrame.EvaluateScriptAsync("refresh1()");
+            
         }
 
         #region hover and leave color

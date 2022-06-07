@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sunny.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,14 +19,67 @@ namespace miniSys0._3.Controls.MainArea
         public UC_Cus_OrderDetails()
         {
             InitializeComponent();
-            InitCrumb();
+            InitTheme();
             InitStyle();
             Init();
         }
-        private void InitCrumb()
+        private void InitTheme()
         {
-            urC_Crumbs1.crumbText.Text = "Order details";
-            urC_Crumbs1.crumbsHome.Text = " / Data /            rt";
+            if (User_type.user_theme == "dark")
+            {
+                this.BackColor = Color.FromArgb(18, 31, 43);
+
+                UIUserControl[] controls = { uiUserControl1, uiUserControl2, uiUserControl3 };
+                foreach (UIUserControl control in controls)
+                {
+                    control.FillColor = Color.FromArgb(28, 47, 70);
+                    control.BackColor = Color.FromArgb(28, 47, 70);
+                    control.RectColor = Color.Transparent;
+                }
+
+                dynamic[] lable = { crumbsHome, crumbText, uiLabel20, uiLabel1, orderID, uiLabel8, model, 
+                    uiLabel9, uiLabel5, uiLabel2, receptionist, uiLabel3, receiveTime, price, status, 
+                    uiLabel7, technician, uiLabel4, edit, uiLabel19, status1, status1Time, status2, 
+                    status2Time, status3, status3Time, status4, status4Time, uiLabel10 };
+                foreach (var item in lable)
+                {
+                    item.ForeColor = Color.White;
+                }
+
+                dynamic[] cards = { card1, card2, card3, card4 };
+                foreach (var item in cards)
+                {
+                    item.InitTheme();
+                }
+            }
+            else if (User_type.user_theme == "light")
+            {
+                this.BackColor = Color.FromArgb(247, 248, 250);
+
+                UIUserControl[] controls = { uiUserControl1, uiUserControl2, uiUserControl3 };
+                foreach (UIUserControl control in controls)
+                {
+                    control.FillColor = Color.White;
+                    control.BackColor = Color.White;
+                    control.RectColor = Color.Gainsboro;
+                }
+
+                dynamic[] lable = { crumbsHome, crumbText, uiLabel20, uiLabel1, orderID, uiLabel8, model,
+                    uiLabel9, uiLabel5, uiLabel2, receptionist, uiLabel3, receiveTime, price, status,
+                    uiLabel7, technician, uiLabel4, edit, uiLabel19, status1, status1Time, status2,
+                    status2Time, status3, status3Time, status4, status4Time, uiLabel10 };
+                foreach (var item in lable)
+                {
+                    item.ForeColor = Color.Black;
+                }
+
+                dynamic[] cards = { card1, card2, card3, card4 };
+                foreach (var item in cards)
+                {
+                    item.InitTheme();
+                }
+            }
+
         }
         private void InitStyle()
         {

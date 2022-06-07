@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.uiLabel2 = new Sunny.UI.UILabel();
             this.uiLabel1 = new Sunny.UI.UILabel();
@@ -36,6 +37,8 @@
             this.privateMode = new Sunny.UI.UISwitch();
             this.uiLine1 = new Sunny.UI.UILine();
             this.uiLabel4 = new Sunny.UI.UILabel();
+            this.info = new Sunny.UI.UIAvatar();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // uiLabel3
@@ -112,7 +115,7 @@
             this.privateMode.Location = new System.Drawing.Point(260, 153);
             this.privateMode.MinimumSize = new System.Drawing.Size(1, 1);
             this.privateMode.Name = "privateMode";
-            this.privateMode.Size = new System.Drawing.Size(75, 29);
+            this.privateMode.Size = new System.Drawing.Size(75, 30);
             this.privateMode.Style = Sunny.UI.UIStyle.Custom;
             this.privateMode.TabIndex = 16;
             this.privateMode.Text = "uiSwitch3";
@@ -143,9 +146,27 @@
             this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiLabel4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // info
+            // 
+            this.info.AvatarSize = 20;
+            this.info.BackColor = System.Drawing.Color.Transparent;
+            this.info.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.info.Location = new System.Drawing.Point(215, 153);
+            this.info.MinimumSize = new System.Drawing.Size(1, 1);
+            this.info.Name = "info";
+            this.info.Size = new System.Drawing.Size(30, 30);
+            this.info.Style = Sunny.UI.UIStyle.Custom;
+            this.info.Symbol = 61737;
+            this.info.SymbolSize = 17;
+            this.info.TabIndex = 100;
+            this.info.Text = "uiAvatar1";
+            this.info.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.info.MouseHover += new System.EventHandler(this.info_MouseHover);
+            // 
             // UC_Setting_Privacy
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.info);
             this.Controls.Add(this.uiLabel4);
             this.Controls.Add(this.uiLine1);
             this.Controls.Add(this.privateMode);
@@ -169,5 +190,7 @@
         private Sunny.UI.UISwitch privateMode;
         private Sunny.UI.UILine uiLine1;
         private Sunny.UI.UILabel uiLabel4;
+        private Sunny.UI.UIAvatar info;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

@@ -13,7 +13,7 @@ namespace miniSys0._3
         // query
         public static dynamic[] Query(string SQL)
         {
-            
+            //Console.WriteLine(SQL);
             dynamic[] connTools = getDataReader(SQL);
             SqlDataReader dr = null;
             SqlConnection conn = null;

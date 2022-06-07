@@ -21,7 +21,9 @@ namespace miniSys0._3.Controls.Setting
         public void InitTheme()
         {
             uiLine1.FillColor = Color.Transparent;
-            
+            info.BackColor = Color.Transparent;
+            info.ForeColor = Color.White;
+            info.FillColor = Color.FromArgb(57, 117, 255);
             if (User_type.user_theme == "dark")
             {
                 uiLine1.LineColor = Color.Gainsboro;
@@ -66,6 +68,12 @@ namespace miniSys0._3.Controls.Setting
         private void privateMode_Click(object sender, EventArgs e)
         {
             UserSettings.SetStatus("privateMode", privateMode.Active);
+        }
+
+        private void info_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Turning on the privacy mode means that you will refuse to receive any messages,\n" +
+                "and your personal information will be hidden and cannot be searched.", info);
         }
     }
 }

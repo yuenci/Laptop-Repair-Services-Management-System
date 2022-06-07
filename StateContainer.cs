@@ -31,9 +31,10 @@ namespace miniSys0._3
         public static string user_ID = "Cus000002";*/
 
         //staff
-        public static string user_deparment = "Admin";
-        public static string user_ID = "Sta000001";
-        //public static string user_ID = "Sta000011";
+        public static string user_deparment = "Receptionist";
+        //public static string user_ID = "Sta000001";
+
+        public static string user_ID = "Sta000011";
         //public static string user_ID = "Sta000052";
 
 
@@ -491,6 +492,50 @@ namespace miniSys0._3
             allowShowProfile = "On";
             privateMode = "Off";
     }
+        
+        public static string GetSettingsValue(string UserId, string settingName)
+        {
+            string userRow = "";
+            if (UserId.Substring(0, 3) == "Cus")
+            {
+                userRow = "UseID_cus";
+            }
+            else
+            {
+                userRow = "UseID_sta";
+            }
+
+
+            string[] typeList = {"theme","autoTheme","homePage","rejectAllMs","rejectAllSy","rejectAllCus",
+                                "allowSearch", "allowShowProfile","privateMode"};
+            if (typeList.Contains(settingName))
+            {
+                string sql = $"SELECT Value FROM Settings WHERE {userRow} = '{UserId}' AND Type = '{settingName}' ;";
+
+                Console.WriteLine(sql);
+
+                dynamic[] data = SQLCursor.Query(sql);
+                if (data.Length == 1)
+                {
+                    return data[0];
+                }
+                else if (data.Length == 0)
+                {
+                    //pass
+                }
+                else
+                {
+                    MessageBox.Show("Setting value more than one");
+                    return null;
+                }
+            }
+            else
+            {
+                MessageBox.Show("settingName Error");
+            }
+            return null;
+        }
+
         public static void ShowAllPropertyValue()
         {
             Console.WriteLine("-------------");

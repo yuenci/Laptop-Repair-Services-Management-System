@@ -72,7 +72,8 @@
             this.card2 = new miniSys0._3.Controls.Others.UC_Recent_Repair_Card();
             this.card1 = new miniSys0._3.Controls.Others.UC_Recent_Repair_Card();
             this.uiLabel10 = new Sunny.UI.UILabel();
-            this.urC_Crumbs1 = new miniSys0._3.Controls.Others.UrC_Crumbs();
+            this.crumbText = new Sunny.UI.UILabel();
+            this.crumbsHome = new Sunny.UI.UISymbolButton();
             this.uiUserControl2.SuspendLayout();
             this.uiUserControl1.SuspendLayout();
             this.uiUserControl3.SuspendLayout();
@@ -99,11 +100,11 @@
             this.uiUserControl2.Controls.Add(this.dot1);
             this.uiUserControl2.FillColor = System.Drawing.Color.White;
             this.uiUserControl2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiUserControl2.Location = new System.Drawing.Point(14, 313);
+            this.uiUserControl2.Location = new System.Drawing.Point(14, 297);
             this.uiUserControl2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiUserControl2.Name = "uiUserControl2";
             this.uiUserControl2.RectColor = System.Drawing.Color.Gainsboro;
-            this.uiUserControl2.Size = new System.Drawing.Size(1097, 160);
+            this.uiUserControl2.Size = new System.Drawing.Size(1097, 176);
             this.uiUserControl2.Style = Sunny.UI.UIStyle.Custom;
             this.uiUserControl2.TabIndex = 3;
             this.uiUserControl2.Text = "uiUserControl2";
@@ -113,7 +114,7 @@
             // uiLabel19
             // 
             this.uiLabel19.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
-            this.uiLabel19.Location = new System.Drawing.Point(13, 9);
+            this.uiLabel19.Location = new System.Drawing.Point(19, 18);
             this.uiLabel19.Name = "uiLabel19";
             this.uiLabel19.Size = new System.Drawing.Size(164, 23);
             this.uiLabel19.Style = Sunny.UI.UIStyle.Custom;
@@ -125,7 +126,7 @@
             // status4
             // 
             this.status4.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.status4.Location = new System.Drawing.Point(920, 87);
+            this.status4.Location = new System.Drawing.Point(920, 95);
             this.status4.Name = "status4";
             this.status4.Size = new System.Drawing.Size(117, 23);
             this.status4.Style = Sunny.UI.UIStyle.Custom;
@@ -137,7 +138,7 @@
             // status3
             // 
             this.status3.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.status3.Location = new System.Drawing.Point(612, 87);
+            this.status3.Location = new System.Drawing.Point(612, 95);
             this.status3.Name = "status3";
             this.status3.Size = new System.Drawing.Size(146, 23);
             this.status3.Style = Sunny.UI.UIStyle.Custom;
@@ -149,7 +150,7 @@
             // status2
             // 
             this.status2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.status2.Location = new System.Drawing.Point(318, 87);
+            this.status2.Location = new System.Drawing.Point(318, 95);
             this.status2.Name = "status2";
             this.status2.Size = new System.Drawing.Size(132, 23);
             this.status2.Style = Sunny.UI.UIStyle.Custom;
@@ -161,7 +162,7 @@
             // status1
             // 
             this.status1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.status1.Location = new System.Drawing.Point(39, 87);
+            this.status1.Location = new System.Drawing.Point(39, 95);
             this.status1.Name = "status1";
             this.status1.Size = new System.Drawing.Size(117, 23);
             this.status1.Style = Sunny.UI.UIStyle.Custom;
@@ -184,7 +185,7 @@
             // status4Time
             // 
             this.status4Time.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.status4Time.Location = new System.Drawing.Point(889, 121);
+            this.status4Time.Location = new System.Drawing.Point(889, 133);
             this.status4Time.Name = "status4Time";
             this.status4Time.Size = new System.Drawing.Size(186, 23);
             this.status4Time.Style = Sunny.UI.UIStyle.Custom;
@@ -218,7 +219,7 @@
             // status3Time
             // 
             this.status3Time.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.status3Time.Location = new System.Drawing.Point(585, 121);
+            this.status3Time.Location = new System.Drawing.Point(585, 133);
             this.status3Time.Name = "status3Time";
             this.status3Time.Size = new System.Drawing.Size(211, 23);
             this.status3Time.Style = Sunny.UI.UIStyle.Custom;
@@ -230,7 +231,7 @@
             // status2Time
             // 
             this.status2Time.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.status2Time.Location = new System.Drawing.Point(296, 121);
+            this.status2Time.Location = new System.Drawing.Point(296, 133);
             this.status2Time.Name = "status2Time";
             this.status2Time.Size = new System.Drawing.Size(196, 23);
             this.status2Time.Style = Sunny.UI.UIStyle.Custom;
@@ -242,7 +243,7 @@
             // status1Time
             // 
             this.status1Time.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.status1Time.Location = new System.Drawing.Point(3, 121);
+            this.status1Time.Location = new System.Drawing.Point(3, 133);
             this.status1Time.Name = "status1Time";
             this.status1Time.Size = new System.Drawing.Size(200, 23);
             this.status1Time.Style = Sunny.UI.UIStyle.Custom;
@@ -332,11 +333,11 @@
             this.uiUserControl1.Controls.Add(this.uiLabel1);
             this.uiUserControl1.FillColor = System.Drawing.Color.White;
             this.uiUserControl1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiUserControl1.Location = new System.Drawing.Point(14, 71);
+            this.uiUserControl1.Location = new System.Drawing.Point(14, 48);
             this.uiUserControl1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiUserControl1.Name = "uiUserControl1";
             this.uiUserControl1.RectColor = System.Drawing.Color.Gainsboro;
-            this.uiUserControl1.Size = new System.Drawing.Size(1097, 215);
+            this.uiUserControl1.Size = new System.Drawing.Size(1097, 226);
             this.uiUserControl1.Style = Sunny.UI.UIStyle.Custom;
             this.uiUserControl1.TabIndex = 2;
             this.uiUserControl1.Text = "uiUserControl1";
@@ -390,7 +391,7 @@
             "Operating System Format and Installation",
             "Data backup and recovery",
             "Internet connectivity issues"});
-            this.serviceType.Location = new System.Drawing.Point(403, 163);
+            this.serviceType.Location = new System.Drawing.Point(403, 183);
             this.serviceType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.serviceType.MinimumSize = new System.Drawing.Size(63, 0);
             this.serviceType.Name = "serviceType";
@@ -405,7 +406,7 @@
             // 
             this.edit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.edit.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.edit.Location = new System.Drawing.Point(785, 165);
+            this.edit.Location = new System.Drawing.Point(785, 185);
             this.edit.Name = "edit";
             this.edit.Size = new System.Drawing.Size(43, 23);
             this.edit.Style = Sunny.UI.UIStyle.Custom;
@@ -418,7 +419,7 @@
             // price
             // 
             this.price.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.price.Location = new System.Drawing.Point(831, 102);
+            this.price.Location = new System.Drawing.Point(831, 122);
             this.price.Name = "price";
             this.price.Size = new System.Drawing.Size(125, 58);
             this.price.Style = Sunny.UI.UIStyle.Custom;
@@ -430,7 +431,7 @@
             // uiLabel9
             // 
             this.uiLabel9.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel9.Location = new System.Drawing.Point(836, 65);
+            this.uiLabel9.Location = new System.Drawing.Point(836, 71);
             this.uiLabel9.Name = "uiLabel9";
             this.uiLabel9.Size = new System.Drawing.Size(120, 23);
             this.uiLabel9.Style = Sunny.UI.UIStyle.Custom;
@@ -442,7 +443,7 @@
             // receiveTime
             // 
             this.receiveTime.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.receiveTime.Location = new System.Drawing.Point(402, 115);
+            this.receiveTime.Location = new System.Drawing.Point(402, 128);
             this.receiveTime.Name = "receiveTime";
             this.receiveTime.Size = new System.Drawing.Size(197, 23);
             this.receiveTime.Style = Sunny.UI.UIStyle.Custom;
@@ -454,7 +455,7 @@
             // model
             // 
             this.model.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.model.Location = new System.Drawing.Point(402, 65);
+            this.model.Location = new System.Drawing.Point(402, 71);
             this.model.Name = "model";
             this.model.Size = new System.Drawing.Size(164, 23);
             this.model.Style = Sunny.UI.UIStyle.Custom;
@@ -466,7 +467,7 @@
             // technician
             // 
             this.technician.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.technician.Location = new System.Drawing.Point(135, 165);
+            this.technician.Location = new System.Drawing.Point(135, 185);
             this.technician.Name = "technician";
             this.technician.Size = new System.Drawing.Size(115, 23);
             this.technician.Style = Sunny.UI.UIStyle.Custom;
@@ -478,7 +479,7 @@
             // receptionist
             // 
             this.receptionist.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.receptionist.Location = new System.Drawing.Point(135, 115);
+            this.receptionist.Location = new System.Drawing.Point(135, 128);
             this.receptionist.Name = "receptionist";
             this.receptionist.Size = new System.Drawing.Size(115, 23);
             this.receptionist.Style = Sunny.UI.UIStyle.Custom;
@@ -490,7 +491,7 @@
             // orderID
             // 
             this.orderID.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.orderID.Location = new System.Drawing.Point(135, 65);
+            this.orderID.Location = new System.Drawing.Point(135, 71);
             this.orderID.Name = "orderID";
             this.orderID.Size = new System.Drawing.Size(141, 23);
             this.orderID.Style = Sunny.UI.UIStyle.Custom;
@@ -502,7 +503,7 @@
             // uiLabel20
             // 
             this.uiLabel20.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
-            this.uiLabel20.Location = new System.Drawing.Point(12, 9);
+            this.uiLabel20.Location = new System.Drawing.Point(19, 9);
             this.uiLabel20.Name = "uiLabel20";
             this.uiLabel20.Size = new System.Drawing.Size(164, 23);
             this.uiLabel20.Style = Sunny.UI.UIStyle.Custom;
@@ -514,7 +515,7 @@
             // status
             // 
             this.status.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.status.Location = new System.Drawing.Point(961, 102);
+            this.status.Location = new System.Drawing.Point(961, 122);
             this.status.Name = "status";
             this.status.Size = new System.Drawing.Size(125, 58);
             this.status.Style = Sunny.UI.UIStyle.Custom;
@@ -526,7 +527,7 @@
             // uiLabel8
             // 
             this.uiLabel8.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel8.Location = new System.Drawing.Point(272, 65);
+            this.uiLabel8.Location = new System.Drawing.Point(272, 71);
             this.uiLabel8.Name = "uiLabel8";
             this.uiLabel8.Size = new System.Drawing.Size(124, 23);
             this.uiLabel8.Style = Sunny.UI.UIStyle.Custom;
@@ -538,7 +539,7 @@
             // uiLabel7
             // 
             this.uiLabel7.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel7.Location = new System.Drawing.Point(14, 165);
+            this.uiLabel7.Location = new System.Drawing.Point(14, 185);
             this.uiLabel7.Name = "uiLabel7";
             this.uiLabel7.Size = new System.Drawing.Size(115, 23);
             this.uiLabel7.Style = Sunny.UI.UIStyle.Custom;
@@ -550,7 +551,7 @@
             // uiLabel5
             // 
             this.uiLabel5.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel5.Location = new System.Drawing.Point(966, 65);
+            this.uiLabel5.Location = new System.Drawing.Point(966, 71);
             this.uiLabel5.Name = "uiLabel5";
             this.uiLabel5.Size = new System.Drawing.Size(120, 23);
             this.uiLabel5.Style = Sunny.UI.UIStyle.Custom;
@@ -562,7 +563,7 @@
             // uiLabel4
             // 
             this.uiLabel4.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel4.Location = new System.Drawing.Point(272, 165);
+            this.uiLabel4.Location = new System.Drawing.Point(272, 185);
             this.uiLabel4.Name = "uiLabel4";
             this.uiLabel4.Size = new System.Drawing.Size(124, 23);
             this.uiLabel4.Style = Sunny.UI.UIStyle.Custom;
@@ -574,7 +575,7 @@
             // uiLabel3
             // 
             this.uiLabel3.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel3.Location = new System.Drawing.Point(272, 115);
+            this.uiLabel3.Location = new System.Drawing.Point(272, 128);
             this.uiLabel3.Name = "uiLabel3";
             this.uiLabel3.Size = new System.Drawing.Size(124, 23);
             this.uiLabel3.Style = Sunny.UI.UIStyle.Custom;
@@ -586,7 +587,7 @@
             // uiLabel2
             // 
             this.uiLabel2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel2.Location = new System.Drawing.Point(14, 115);
+            this.uiLabel2.Location = new System.Drawing.Point(14, 128);
             this.uiLabel2.Name = "uiLabel2";
             this.uiLabel2.Size = new System.Drawing.Size(115, 23);
             this.uiLabel2.Style = Sunny.UI.UIStyle.Custom;
@@ -598,7 +599,7 @@
             // uiLabel1
             // 
             this.uiLabel1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel1.Location = new System.Drawing.Point(14, 65);
+            this.uiLabel1.Location = new System.Drawing.Point(14, 71);
             this.uiLabel1.Name = "uiLabel1";
             this.uiLabel1.Size = new System.Drawing.Size(115, 23);
             this.uiLabel1.Style = Sunny.UI.UIStyle.Custom;
@@ -621,7 +622,7 @@
             this.uiUserControl3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiUserControl3.Name = "uiUserControl3";
             this.uiUserControl3.RectColor = System.Drawing.Color.Gainsboro;
-            this.uiUserControl3.Size = new System.Drawing.Size(1097, 203);
+            this.uiUserControl3.Size = new System.Drawing.Size(1097, 217);
             this.uiUserControl3.Style = Sunny.UI.UIStyle.Custom;
             this.uiUserControl3.TabIndex = 17;
             this.uiUserControl3.Text = "uiUserControl3";
@@ -632,7 +633,7 @@
             // 
             this.card4.BackColor = System.Drawing.Color.White;
             this.card4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.card4.Location = new System.Drawing.Point(827, 45);
+            this.card4.Location = new System.Drawing.Point(827, 54);
             this.card4.Name = "card4";
             this.card4.Size = new System.Drawing.Size(246, 146);
             this.card4.TabIndex = 20;
@@ -642,7 +643,7 @@
             // 
             this.card3.BackColor = System.Drawing.Color.White;
             this.card3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.card3.Location = new System.Drawing.Point(557, 45);
+            this.card3.Location = new System.Drawing.Point(557, 54);
             this.card3.Name = "card3";
             this.card3.Size = new System.Drawing.Size(246, 146);
             this.card3.TabIndex = 19;
@@ -652,7 +653,7 @@
             // 
             this.card2.BackColor = System.Drawing.Color.White;
             this.card2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.card2.Location = new System.Drawing.Point(287, 45);
+            this.card2.Location = new System.Drawing.Point(287, 54);
             this.card2.Name = "card2";
             this.card2.Size = new System.Drawing.Size(246, 146);
             this.card2.TabIndex = 18;
@@ -662,7 +663,7 @@
             // 
             this.card1.BackColor = System.Drawing.Color.White;
             this.card1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.card1.Location = new System.Drawing.Point(17, 45);
+            this.card1.Location = new System.Drawing.Point(17, 54);
             this.card1.Name = "card1";
             this.card1.Size = new System.Drawing.Size(246, 146);
             this.card1.TabIndex = 17;
@@ -671,7 +672,7 @@
             // uiLabel10
             // 
             this.uiLabel10.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
-            this.uiLabel10.Location = new System.Drawing.Point(13, 9);
+            this.uiLabel10.Location = new System.Drawing.Point(19, 10);
             this.uiLabel10.Name = "uiLabel10";
             this.uiLabel10.Size = new System.Drawing.Size(178, 33);
             this.uiLabel10.Style = Sunny.UI.UIStyle.Custom;
@@ -680,23 +681,53 @@
             this.uiLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiLabel10.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // urC_Crumbs1
+            // crumbText
             // 
-            this.urC_Crumbs1.BackColor = System.Drawing.SystemColors.Control;
-            this.urC_Crumbs1.Location = new System.Drawing.Point(0, 4);
-            this.urC_Crumbs1.Name = "urC_Crumbs1";
-            this.urC_Crumbs1.Size = new System.Drawing.Size(300, 35);
-            this.urC_Crumbs1.TabIndex = 0;
+            this.crumbText.BackColor = System.Drawing.Color.Transparent;
+            this.crumbText.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.crumbText.Location = new System.Drawing.Point(116, 5);
+            this.crumbText.Name = "crumbText";
+            this.crumbText.Size = new System.Drawing.Size(187, 35);
+            this.crumbText.Style = Sunny.UI.UIStyle.Custom;
+            this.crumbText.TabIndex = 19;
+            this.crumbText.Text = "Order Details";
+            this.crumbText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.crumbText.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // crumbsHome
+            // 
+            this.crumbsHome.BackColor = System.Drawing.Color.Transparent;
+            this.crumbsHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.crumbsHome.Enabled = false;
+            this.crumbsHome.FillColor = System.Drawing.Color.White;
+            this.crumbsHome.FillDisableColor = System.Drawing.Color.Transparent;
+            this.crumbsHome.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.crumbsHome.ForeColor = System.Drawing.Color.Black;
+            this.crumbsHome.Location = new System.Drawing.Point(6, 5);
+            this.crumbsHome.MinimumSize = new System.Drawing.Size(1, 1);
+            this.crumbsHome.Name = "crumbsHome";
+            this.crumbsHome.RectColor = System.Drawing.Color.Transparent;
+            this.crumbsHome.RectDisableColor = System.Drawing.Color.Transparent;
+            this.crumbsHome.Size = new System.Drawing.Size(188, 35);
+            this.crumbsHome.Style = Sunny.UI.UIStyle.Custom;
+            this.crumbsHome.Symbol = 57353;
+            this.crumbsHome.SymbolColor = System.Drawing.Color.Black;
+            this.crumbsHome.SymbolOffset = new System.Drawing.Point(5, 0);
+            this.crumbsHome.TabIndex = 18;
+            this.crumbsHome.Text = " / Order / User info";
+            this.crumbsHome.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.crumbsHome.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // UC_Cus_OrderDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(250)))));
+            this.Controls.Add(this.crumbText);
             this.Controls.Add(this.uiUserControl3);
+            this.Controls.Add(this.crumbsHome);
             this.Controls.Add(this.uiUserControl2);
             this.Controls.Add(this.uiUserControl1);
-            this.Controls.Add(this.urC_Crumbs1);
             this.Name = "UC_Cus_OrderDetails";
             this.Size = new System.Drawing.Size(1125, 720);
             this.uiUserControl2.ResumeLayout(false);
@@ -707,8 +738,6 @@
         }
 
         #endregion
-
-        private Others.UrC_Crumbs urC_Crumbs1;
         private Sunny.UI.UIUserControl uiUserControl2;
         private Sunny.UI.UILabel uiLabel19;
         private Sunny.UI.UILabel status4;
@@ -753,5 +782,7 @@
         private Others.UC_Recent_Repair_Card card3;
         private Others.UC_Recent_Repair_Card card2;
         private Others.UC_Recent_Repair_Card card1;
+        public Sunny.UI.UILabel crumbText;
+        public Sunny.UI.UISymbolButton crumbsHome;
     }
 }

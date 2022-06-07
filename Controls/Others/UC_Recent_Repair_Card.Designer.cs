@@ -38,7 +38,8 @@
             // 
             // time
             // 
-            this.time.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.time.BackColor = System.Drawing.Color.Transparent;
+            this.time.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.time.Location = new System.Drawing.Point(3, 103);
             this.time.Name = "time";
             this.time.Size = new System.Drawing.Size(223, 23);
@@ -50,7 +51,8 @@
             // 
             // serverType
             // 
-            this.serverType.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.serverType.BackColor = System.Drawing.Color.Transparent;
+            this.serverType.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.serverType.Location = new System.Drawing.Point(3, 46);
             this.serverType.Name = "serverType";
             this.serverType.Size = new System.Drawing.Size(213, 47);
@@ -62,7 +64,8 @@
             // 
             // model
             // 
-            this.model.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.model.BackColor = System.Drawing.Color.Transparent;
+            this.model.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.model.Location = new System.Drawing.Point(2, 7);
             this.model.Name = "model";
             this.model.Size = new System.Drawing.Size(224, 23);
@@ -75,9 +78,7 @@
             // line
             // 
             this.line.BackColor = System.Drawing.Color.Transparent;
-            this.line.FillColor = System.Drawing.Color.Transparent;
             this.line.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.line.LineColor = System.Drawing.Color.Gainsboro;
             this.line.Location = new System.Drawing.Point(3, 33);
             this.line.MinimumSize = new System.Drawing.Size(1, 1);
             this.line.Name = "line";

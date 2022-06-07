@@ -16,11 +16,46 @@ namespace miniSys0._3.Controls.Others
 
         public UC_Recent_Repair_Card()
         {
-            InitializeComponent();
-            line.LineColor = Color.Gainsboro;
-            line.FillColor = Color.Transparent;
+            InitializeComponent();  
+            InitTheme();
         }
-        
+
+        public void InitTheme()
+        {
+            
+            line.FillColor = Color.Transparent;
+            if (User_type.user_theme == "dark")
+            {
+                this.BackColor = Color.FromArgb(55, 55, 57);
+                uiUserControl1.BackColor = Color.FromArgb(55, 55, 57);
+                uiUserControl1.FillColor = Color.FromArgb(55, 55, 57);
+
+                line.LineColor = Color.Gainsboro;
+
+                dynamic[] lable = {model,serverType,time };
+
+                foreach (var item in lable)
+                {
+                    item.ForeColor = Color.White;
+                }
+            }
+            else if (User_type.user_theme == "light")
+            {
+                this.BackColor = Color.White;
+                uiUserControl1.BackColor = Color.White;
+                uiUserControl1.FillColor = Color.White;
+
+                line.LineColor = Color.Gainsboro;
+
+                dynamic[] lable = { model, serverType, time };
+
+                foreach (var item in lable)
+                {
+                    item.ForeColor = Color.Black;
+                }
+            }
+        }
+
         public void Init(string ordID)
         {
             ordIDCache = ordID;

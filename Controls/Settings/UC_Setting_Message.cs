@@ -56,11 +56,13 @@ namespace miniSys0._3.Controls.Setting
         private void rejectAllMs_Click(object sender, EventArgs e)
         {
             UserSettings.SetStatus("rejectAllMs", rejectAllMs.Active);
+            Main.main.checkMessage();
         }
 
         private void rejectAllSy_Click(object sender, EventArgs e)
         {
             UserSettings.SetStatus("rejectAllSy", rejectAllSy.Active);
+            Main.main.checkMessage();
         }
 
         private void rejectAllCus_Click(object sender, EventArgs e)

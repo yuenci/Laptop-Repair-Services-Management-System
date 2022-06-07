@@ -137,7 +137,19 @@ namespace miniSys0._3
 
         private void privacy(string staffID)
         {
-            if (User_type.user_deparment == "Customer")
+            string ifallowShowProfile = UserSettings.GetSettingsValue(userID_cache, "allowShowProfile");
+            string ifPrivateMode = UserSettings.GetSettingsValue(userID_cache, "privateMode");
+            
+
+            if (ifallowShowProfile == "Off" || ifPrivateMode == "On")
+            {
+                dynamic[] lables = { post, country, phone, department, email, about, gender, birthday, address, useID, regtime };
+                foreach (var lable in lables)
+                {
+                    lable.Text = "********";
+                }
+            }
+            else if (User_type.user_deparment == "Customer")
             {
                 phone.Text = "********";
                 regtime.Text = "********";
@@ -181,10 +193,12 @@ namespace miniSys0._3
                 regtime.Text = data[9];
                 about.Text = data[10];
 
+                userID_cache = data[8];
+
                 post.Show();
                 privacy(staffID);
 
-                userID_cache = data[8];
+                
             }
             
         }
@@ -211,9 +225,11 @@ namespace miniSys0._3
                 useID.Text = data[7];
                 regtime.Text = data[8];
                 about.Text = data[9];
+                
+                userID_cache = data[7];
+
                 privacy(cusID);
 
-                userID_cache = data[7];
             }
            
 
@@ -222,10 +238,27 @@ namespace miniSys0._3
 
         private void contact_Click(object sender, EventArgs e)
         {
-            AddDescription addDescription = new AddDescription();
-            addDescription.InitChatting(userID_cache,name.Text);
-            //recvicer id
-            addDescription.Show();
+            string userType = User_type.user_ID.Substring(0, 3);
+            string ifrejectAllCus = UserSettings.GetSettingsValue(userID_cache, "rejectAllCus");
+            string ifPrivateMode = UserSettings.GetSettingsValue(userID_cache, "privateMode");
+
+            /*Console.WriteLine($"userType:{userType}");
+            Console.WriteLine($"ifrejectAllCus:{ifrejectAllCus}");
+            Console.WriteLine($"ifPrivateMode:{ifPrivateMode}");*/
+
+            if ((userType == "Cus" && ifrejectAllCus == "On") || ifPrivateMode == "On")
+            {
+                string useName = SQLCursor.getName(userID_cache);
+                MessageBox.Show($"Can't send messages, {useName} has turned off the private chat");
+            }
+            else
+            {
+                AddDescription addDescription = new AddDescription();
+                addDescription.InitChatting(userID_cache, name.Text);
+                //recvicer id
+                addDescription.Show();
+            }
+            
         }
     }
 }
