@@ -75,7 +75,8 @@ namespace miniSys0._3
         public string MessageText { get; set; }
         public void Getvalue()
         {
-            MessageBox.Show("call c#.\n\r" + MessageText);
+            
+            ("call c#.\n\r" + MessageText);
         }
         public void GetValueArg(string inss)
         {

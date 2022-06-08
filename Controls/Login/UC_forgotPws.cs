@@ -204,7 +204,9 @@ namespace miniSys0._3.Controls
                     }
                     else
                     {
-                        MessageBox.Show("Wrong PIN code!");
+                        //MessageBox.Show("Wrong PIN code!");
+                        NotificationForm messageBoxForm = new NotificationForm("error", "Wrong PIN code!");
+                        messageBoxForm.ShowDialog();
                     }
                 }
                 else if (email.ForeColor == blue)
@@ -215,7 +217,11 @@ namespace miniSys0._3.Controls
                     }
                     else
                     {
-                        MessageBox.Show("Wrong PIN code!");
+                        //MessageBox.Show("Wrong PIN code!");
+
+                        NotificationForm messageBoxForm = new NotificationForm("warning", "Wrong PIN code!");
+                        messageBoxForm.ShowDialog();
+
                     }
                 }
                 else if (valid.ForeColor == blue)
@@ -226,7 +232,10 @@ namespace miniSys0._3.Controls
                     }
                     else
                     {
-                        MessageBox.Show("Wrong input, please try again");
+                        //MessageBox.Show("Wrong input, please try again");
+                        NotificationForm messageBoxForm = new NotificationForm("warning", "Wrong input, please try again");
+                        messageBoxForm.ShowDialog();
+
                     }
                 }
             }
@@ -304,7 +313,10 @@ namespace miniSys0._3.Controls
                $"Name = '{name}' AND StaffID = '{useIDCashe}';";
             }
             SQLCursor.Execute(sql);
-            MessageBox.Show("Password reset successfully");
+            //MessageBox.Show("Password reset successfully");
+            NotificationForm messageBoxForm = new NotificationForm("success", "Password reset successfully");
+            messageBoxForm.ShowDialog();
+
         }
     }
 }

@@ -227,7 +227,10 @@ namespace miniSys0._3.Controls.Others
                 Console.WriteLine(sql);
 
                 SQLCursor.Execute(sql);
-                MessageBox.Show("Profile modify successfully");
+                //MessageBox.Show("Profile modify successfully");
+                NotificationForm messageBoxForm = new NotificationForm("success", "Profile modify successfully");
+                messageBoxForm.ShowDialog();
+
             }
         }
 

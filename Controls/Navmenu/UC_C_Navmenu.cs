@@ -89,9 +89,12 @@ namespace miniSys0._3.Controls
                 }
                 else
                 {
-                    MessageBox.Show("You haven't made any order");
+                    //MessageBox.Show("You haven't made any order");
+                    NotificationForm messageBoxForm = new NotificationForm("notification", "You haven't made any order");
+                    messageBoxForm.ShowDialog();
+
                 }
-                
+
 
             }
             else if (nodeSelect == "User info")

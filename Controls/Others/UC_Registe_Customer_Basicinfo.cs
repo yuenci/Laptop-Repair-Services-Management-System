@@ -53,14 +53,21 @@ namespace miniSys0._3.Controls.Others
             }
             else
             {
-                MessageBox.Show("Names can only consist of letters");
+                //MessageBox.Show("Names can only consist of letters");
+                NotificationForm messageBoxForm = new NotificationForm("warning", "Names can only consist of letters");
+                messageBoxForm.ShowDialog();
+
             }
 
             if (nameTextBox.Text != "" && nameTextBox.Text != "Enter Customer's name" && ifNameVerify)
             {
                 if (SQLCursor.ifStaOrCus(nameTextBox.Text) !=null)
                 {
-                    MessageBox.Show($"{nameTextBox.Text} has already existed, please try others");
+                    //MessageBox.Show($"{nameTextBox.Text} has already existed, please try others");
+
+                    NotificationForm messageBoxForm = new NotificationForm("warning", $"{nameTextBox.Text} has already existed, please try others");
+                    messageBoxForm.ShowDialog();
+
                 }
                 else
                 {

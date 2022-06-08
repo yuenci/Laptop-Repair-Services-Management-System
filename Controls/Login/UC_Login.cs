@@ -61,7 +61,9 @@ namespace miniSys0._3.Controls
             }
             else
             {
-                MessageBox.Show("Can't connect to the database, please contact the system administrator.");
+                //MessageBox.Show("Can't connect to the database, please contact the system administrator.");
+                NotificationForm messageBoxForm = new NotificationForm("error", "Can't connect to the database, please contact the system administrator.");
+                messageBoxForm.ShowDialog();
             }
 
         }
@@ -69,110 +71,129 @@ namespace miniSys0._3.Controls
         private void loginToMain(string nameInput, string passwordInput)
         {
             string userID = SQLCursor.ifStaOrCus(nameInput);
-            if (userID.Length == 9)
+            if (userID != null)
             {
-                if (userID.Substring(0, 3) == "Cus")
+                if (userID.Length == 9)
                 {
-                    if (SQLCursor.PasswordVerification(nameInput, passwordInput))
+                    if (userID.Substring(0, 3) == "Cus")
                     {
-                        string sql = $"SELECT * FROM Customer WHERE Name = '{nameInput}';";
-                        dynamic[] data = SQLCursor.Query(sql);
+                        if (SQLCursor.PasswordVerification(nameInput, passwordInput))
+                        {
+                            string sql = $"SELECT * FROM Customer WHERE Name = '{nameInput}';";
+                            dynamic[] data = SQLCursor.Query(sql);
 
-                        User_type.user_deparment = "Customer";
-                        User_type.user_ID = data[0];
-                        User_type.user_name = data[1];
-                        User_type.user_phone = data[2];
-                        User_type.user_email = data[3];
-                        User_type.Birthday = data[4];
-                        User_type.user_gender = data[5];
-                        User_type.user_post = "Customer";
-                        User_type.user_ID_number = "";
-                        User_type.user_about = data[8];
-                        User_type.user_Country = data[6];
-                        User_type.user_Address = data[7];
-                        User_type.user_regtime = data[9];
-                        User_type.user_security_qustion = data[10];
-                        User_type.user_security_answer = data[11];
-                        User_type.user_password = data[12];
-                        User_type.user_theme = "light";
+                            User_type.user_deparment = "Customer";
+                            User_type.user_ID = data[0];
+                            User_type.user_name = data[1];
+                            User_type.user_phone = data[2];
+                            User_type.user_email = data[3];
+                            User_type.Birthday = data[4];
+                            User_type.user_gender = data[5];
+                            User_type.user_post = "Customer";
+                            User_type.user_ID_number = "";
+                            User_type.user_about = data[8];
+                            User_type.user_Country = data[6];
+                            User_type.user_Address = data[7];
+                            User_type.user_regtime = data[9];
+                            User_type.user_security_qustion = data[10];
+                            User_type.user_security_answer = data[11];
+                            User_type.user_password = data[12];
+                            User_type.user_theme = "light";
 
-                        Loading loading = new Loading();
-                        loading.StartPosition = FormStartPosition.CenterScreen;
-                        loading.Show();
+                            Loading loading = new Loading();
+                            loading.StartPosition = FormStartPosition.CenterScreen;
+                            loading.Show();
 
-                        /*Main main = new Main();
-                        main.StartPosition = FormStartPosition.CenterScreen;
-                        main.Show();*/
+                            /*Main main = new Main();
+                            main.StartPosition = FormStartPosition.CenterScreen;
+                            main.Show();*/
 
-                        Login.login.Hide();
+                            Login.login.Hide();
+                        }
+                        else
+                        {
+                            //MessageBox.Show("Wrong password");
+
+                            NotificationForm messageBoxForm = new NotificationForm("warning", "Wrong password");
+                            messageBoxForm.ShowDialog();
+
+                        }
+
+
+                    }
+                    else if (userID.Substring(0, 3) == "Sta")
+                    {
+                        if (SQLCursor.PasswordVerification(nameInput, passwordInput))
+                        {
+                            string sql = $"SELECT * FROM Staff WHERE Name = '{nameInput}';";
+                            dynamic[] data = SQLCursor.Query(sql);
+
+                            if (data[7] == "Admin")
+                            {
+                                User_type.user_deparment = "Admin";
+                            }
+                            else if (data[7] == "Service department")
+                            {
+                                User_type.user_deparment = "Receptionist";
+                            }
+                            else if (data[7] == "Technican department")
+                            {
+                                User_type.user_deparment = "Technician";
+                            }
+                            User_type.user_ID = data[0];
+                            User_type.user_name = data[1];
+                            User_type.user_phone = data[2];
+                            User_type.user_email = data[3];
+                            User_type.Birthday = data[4];
+                            User_type.user_gender = data[5];
+                            User_type.user_post = data[6];
+                            User_type.user_ID_number = data[10];
+                            User_type.user_about = data[11];
+                            User_type.user_Country = data[8];
+                            User_type.user_Address = data[9];
+                            User_type.user_regtime = data[12];
+                            User_type.user_security_qustion = data[13];
+                            User_type.user_security_answer = data[14];
+                            User_type.user_password = data[15];
+                            User_type.user_theme = "light";
+
+                            Loading loading = new Loading();
+                            loading.StartPosition = FormStartPosition.CenterScreen;
+                            loading.Show();
+
+                            /*Main main = new Main();
+                            main.StartPosition = FormStartPosition.CenterScreen;
+                            main.Show();*/
+
+                            Login.login.Hide();
+                        }
+                        else
+                        {
+                            //MessageBox.Show("Wrong password");
+                            NotificationForm messageBoxForm = new NotificationForm("warning", "Wrong password");
+                            messageBoxForm.ShowDialog();
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Wrong password");
-                    }
-
-
-                }
-                else if (userID.Substring(0, 3) == "Sta")
-                {
-                    if (SQLCursor.PasswordVerification(nameInput, passwordInput))
-                    {
-                        string sql = $"SELECT * FROM Staff WHERE Name = '{nameInput}';";
-                        dynamic[] data = SQLCursor.Query(sql);
-
-                        if (data[7] == "Admin")
-                        {
-                            User_type.user_deparment = "Admin";
-                        }
-                        else if (data[7] == "Service department")
-                        {
-                            User_type.user_deparment = "Receptionist";
-                        }
-                        else if (data[7] == "Technican department")
-                        {
-                            User_type.user_deparment = "Technician";
-                        }
-                        User_type.user_ID = data[0];
-                        User_type.user_name = data[1];
-                        User_type.user_phone = data[2];
-                        User_type.user_email = data[3];
-                        User_type.Birthday = data[4];
-                        User_type.user_gender = data[5];
-                        User_type.user_post = data[6];
-                        User_type.user_ID_number = data[10];
-                        User_type.user_about = data[11];
-                        User_type.user_Country = data[8];
-                        User_type.user_Address = data[9];
-                        User_type.user_regtime = data[12];
-                        User_type.user_security_qustion = data[13];
-                        User_type.user_security_answer = data[14];
-                        User_type.user_password = data[15];
-                        User_type.user_theme = "light";
-
-                        Loading loading = new Loading();
-                        loading.StartPosition = FormStartPosition.CenterScreen;
-                        loading.Show();
-
-                        /*Main main = new Main();
-                        main.StartPosition = FormStartPosition.CenterScreen;
-                        main.Show();*/
-
-                        Login.login.Hide();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Wrong password");
+                        //MessageBox.Show($"{nameInput} doesn't exist");
+                        NotificationForm messageBoxForm = new NotificationForm("warning", $"{nameInput} doesn't exist");
+                        messageBoxForm.ShowDialog();
                     }
                 }
                 else
                 {
-                    MessageBox.Show($"{nameInput} doesn't exist");
+                    //MessageBox.Show($"{nameInput} doesn't exist");
+                    NotificationForm messageBoxForm = new NotificationForm("warning", $"{nameInput} doesn't exist");
+                    messageBoxForm.ShowDialog();
                 }
             }
             else
             {
-                MessageBox.Show($"{nameInput} doesn't exist");
+                NotificationForm messageBoxForm = new NotificationForm("warning", $"{nameInput} doesn't exist");
+                messageBoxForm.ShowDialog();
             }
+            
             
         }
 
@@ -246,11 +267,18 @@ namespace miniSys0._3.Controls
             string user_name_input = name_input.Text;
             if (user_name_input == "")
             {
-                MessageBox.Show("Please enter your name first");
+                //MessageBox.Show("Please enter your name first");
+                NotificationForm messageBoxForm = new NotificationForm("notification", "Please enter your name first");
+                messageBoxForm.ShowDialog();
+
             }
             else if (!UserValid())
             {
-                MessageBox.Show($"{user_name_input} doesn't exist");
+                //MessageBox.Show($"{user_name_input} doesn't exist");
+                NotificationForm messageBoxForm = new NotificationForm("warning", $"{user_name_input} doesn't exist");
+                messageBoxForm.ShowDialog();
+
+
             }
             else
             {

@@ -330,7 +330,10 @@ namespace miniSys0._3.Controls.MainArea
         {
             if (searchBox.Text == null || searchBox.Text == "Search")
             {
-                MessageBox.Show("Invalid value, empty input");
+                //MessageBox.Show("Invalid value, empty input");
+                NotificationForm messageBoxForm = new NotificationForm("warning", "Invalid value, empty input");
+                messageBoxForm.ShowDialog();
+
             }
             else
             {
@@ -353,13 +356,19 @@ namespace miniSys0._3.Controls.MainArea
                     }
                     else
                     {
-                        MessageBox.Show($"Can't find order from {searchBox.Text}");
+                        //MessageBox.Show($"Can't find order from {searchBox.Text}");
+                        NotificationForm messageBoxForm = new NotificationForm("warning", $"Can't find order from {searchBox.Text}");
+                        messageBoxForm.ShowDialog();
+
                     }
 
                 }
                 else
                 {
-                    MessageBox.Show("Invalid input");
+                    //MessageBox.Show("Invalid input");
+                    NotificationForm messageBoxForm = new NotificationForm("warning", "Invalid input");
+                    messageBoxForm.ShowDialog();
+
                 }
 
             }

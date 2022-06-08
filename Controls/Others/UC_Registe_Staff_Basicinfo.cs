@@ -173,7 +173,10 @@ namespace miniSys0._3.Controls.Others
                     }
                     else
                     {
-                        MessageBox.Show($"{nameTextBox.Text} has already existed, please try others");
+                        //MessageBox.Show($"{nameTextBox.Text} has already existed, please try others");
+                        NotificationForm messageBoxForm = new NotificationForm("warning", $"{nameTextBox.Text} has already existed, please try others");
+                        messageBoxForm.ShowDialog();
+
                     }
                 }   
             }
@@ -213,7 +216,10 @@ namespace miniSys0._3.Controls.Others
             }
             else if (!ifNameVerify) 
             {
-                MessageBox.Show("Names can only consist of letters");
+                //MessageBox.Show("Names can only consist of letters");
+                NotificationForm messageBoxForm = new NotificationForm("warning", "Names can only consist of letters");
+                messageBoxForm.ShowDialog();
+
                 nameTextBox.RectColor = Color.Red;
 
             }
@@ -236,7 +242,10 @@ namespace miniSys0._3.Controls.Others
             }
             else
             {
-                MessageBox.Show("ID can only consist of numbers");
+                //MessageBox.Show("ID can only consist of numbers");
+                NotificationForm messageBoxForm = new NotificationForm("warning", "ID can only consist of numbers");
+                messageBoxForm.ShowDialog();
+
             }
         }
     }

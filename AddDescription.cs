@@ -101,7 +101,11 @@ namespace miniSys0._3
                 }
                 else
                 {
-                    MessageBox.Show("Message cannot exceed 280 characters");
+                    //MessageBox.Show("Message cannot exceed 280 characters");
+
+                    NotificationForm messageBoxForm = new NotificationForm("warning", "Message cannot exceed 280 characters");
+                    messageBoxForm.ShowDialog();
+
                 }
             }
             

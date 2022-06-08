@@ -28,14 +28,14 @@ namespace miniSys0._3
 
         //customer
         //customer
-        /*public static string user_deparment = "Customer";
-        public static string user_ID = "Cus000002";*/
+        //public static string user_deparment = "Customer";
+        //public static string user_ID = "Cus000002";
 
         //staff
-        public static string user_deparment = "Receptionist";
-        //public static string user_ID = "Sta000001";
+        public static string user_deparment = "Admin";
+        public static string user_ID = "Sta000001";
 
-        public static string user_ID = "Sta000011";
+        //public static string user_ID = "Sta000011";
         //public static string user_ID = "Sta000052";
 
 
@@ -288,7 +288,10 @@ namespace miniSys0._3
             }
             else
             {
-                MessageBox.Show("Class UserSettings Method SetStatus ERROE ");
+                //MessageBox.Show("Class UserSettings Method SetStatus ERROE ");
+                NotificationForm messageBoxForm = new NotificationForm("error", "Class UserSettings Method SetStatus ERROE ");
+                messageBoxForm.ShowDialog();
+
             }
 
             bool checkIfExist(string idType)
@@ -527,13 +530,18 @@ namespace miniSys0._3
                 }
                 else
                 {
-                    MessageBox.Show("Setting value more than one");
+                    //MessageBox.Show("Setting value more than one");
+                    NotificationForm messageBoxForm = new NotificationForm("error", "Setting value more than one");
+                    messageBoxForm.ShowDialog();
+
                     return null;
                 }
             }
             else
             {
-                MessageBox.Show("settingName Error");
+                //MessageBox.Show("settingName Error");
+                NotificationForm messageBoxForm = new NotificationForm("error", "settingName Error");
+                messageBoxForm.ShowDialog();
             }
             return null;
         }

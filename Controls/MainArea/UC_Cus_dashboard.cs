@@ -269,9 +269,12 @@ namespace miniSys0._3.Controls.MainArea
             }
             else
             {
-                MessageBox.Show("You haven't made any order");
+                //MessageBox.Show("You haven't made any order");
+                NotificationForm messageBoxForm = new NotificationForm("notification", "You haven't made any order");
+                messageBoxForm.ShowDialog();
+
             }
-            
+
         }
         
         private void shortcutButton2_Click(object sender, EventArgs e)
@@ -289,12 +292,17 @@ namespace miniSys0._3.Controls.MainArea
                 }
                 else
                 {
-                    MessageBox.Show("Your order haven't description yet");
+                    //MessageBox.Show("Your order haven't description yet");
+                    NotificationForm messageBoxForm = new NotificationForm("notification", "Your order haven't description yet");
+                    messageBoxForm.ShowDialog();
+
                 }
             }
             else
             {
-                MessageBox.Show("You haven't made any order");
+                //MessageBox.Show("You haven't made any order");
+                NotificationForm messageBoxForm = new NotificationForm("notification", "You haven't made any order");
+                messageBoxForm.ShowDialog();
             }
         }
 

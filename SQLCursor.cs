@@ -249,24 +249,30 @@ namespace miniSys0._3
 
         public static dynamic getDataReader(string sql)
         {
-            string DBString = AppSetting.DBString;
-
-            SqlConnection conn = new SqlConnection(DBString);
-            conn.Open();
-
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            try
+            if (sql !="")
             {
-                SqlDataReader dr = cmd.ExecuteReader();
-                dynamic[] connTools = { conn, dr };
-                return connTools;
+                string DBString = AppSetting.DBString;
+
+                SqlConnection conn = new SqlConnection(DBString);
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                try
+                {
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    dynamic[] connTools = { conn, dr };
+                    return connTools;
+                }
+                catch (Exception ex)
+                {
+                    //Console.WriteLine(sql);
+                    MessageBox.Show($"Error occurred in database. sql is {sql},{ex}");
+                    return null;
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error occurred in database.{ex}");
-                return null;
-            }
-            
+            return null;
+
+
         }
 
 

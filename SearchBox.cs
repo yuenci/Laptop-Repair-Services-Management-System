@@ -214,7 +214,10 @@ namespace miniSys0._3
                     }
                     else
                     {
-                        MessageBox.Show($"page {content} doesn't exist");
+                        //MessageBox.Show($"page {content} doesn't exist");
+                        NotificationForm messageBoxForm = new NotificationForm("warning", $"page {content} doesn't exist");
+                        messageBoxForm.ShowDialog();
+
                     }
                 }
                 else if (User_type.user_deparment == "Technician")
@@ -236,7 +239,10 @@ namespace miniSys0._3
                     }
                     else
                     {
-                        MessageBox.Show($"Page {content} doesn't exist");
+                        //MessageBox.Show($"Page {content} doesn't exist");
+                        NotificationForm messageBoxForm = new NotificationForm("warning", $"Page {content} doesn't exist");
+                        messageBoxForm.ShowDialog();
+
                     }
                 }
                 else if (User_type.user_deparment == "Customer")
@@ -253,7 +259,9 @@ namespace miniSys0._3
                     }
                     else
                     {
-                        MessageBox.Show($"page {content} doesn't exist");
+                        //MessageBox.Show($"page {content} doesn't exist");
+                        NotificationForm messageBoxForm = new NotificationForm("warning", $"Page {content} doesn't exist");
+                        messageBoxForm.ShowDialog();
                     }
                 }
                 else if (User_type.user_deparment == "Admin")
@@ -280,7 +288,9 @@ namespace miniSys0._3
                     }
                     else
                     {
-                        MessageBox.Show($"page {content} doesn't exist");
+                        //MessageBox.Show($"page {content} doesn't exist");
+                        NotificationForm messageBoxForm = new NotificationForm("warning", $"Page {content} doesn't exist");
+                        messageBoxForm.ShowDialog();
                     }
                 }
             }
@@ -299,7 +309,9 @@ namespace miniSys0._3
                 {
                     if (ifallowSearch == "Off" || ifPrivateMode == "On")
                     {
-                        MessageBox.Show($"{content} doesn't exist");
+                        //MessageBox.Show($"{content} doesn't exist");
+                        NotificationForm messageBoxForm = new NotificationForm("warning", $"{content} doesn't exist");
+                        messageBoxForm.ShowDialog();
                     }
                     else
                     {
@@ -327,7 +339,9 @@ namespace miniSys0._3
                 {
                     if (ifallowSearch == "Off" || ifPrivateMode == "On")
                     {
-                        MessageBox.Show($"{content} doesn't exist");
+                        //MessageBox.Show($"{content} doesn't exist");
+                        NotificationForm messageBoxForm = new NotificationForm("warning", $"{content} doesn't exist");
+                        messageBoxForm.ShowDialog();
                     }
                     else
                     {
@@ -357,14 +371,20 @@ namespace miniSys0._3
                         }
                         else
                         {
-                            MessageBox.Show("Insufficient authority");
+                            // MessageBox.Show("Insufficient authority");
+
+                            NotificationForm messageBoxForm = new NotificationForm("warning", "Insufficient authority");
+                            messageBoxForm.ShowDialog();
                         }
 
                         
                     }
                     else
                     {
-                        MessageBox.Show($"Order {content} doesn't exist");
+                        //MessageBox.Show($"Order {content} doesn't exist");
+                        NotificationForm messageBoxForm = new NotificationForm("warning", $"Order {content} doesn't exist");
+                        messageBoxForm.ShowDialog();
+
                     }
                 }
                 else
@@ -380,7 +400,10 @@ namespace miniSys0._3
                     }
                     else
                     {
-                        MessageBox.Show($"Order {content} doesn't exist");
+                        //MessageBox.Show($"Order {content} doesn't exist");
+                        NotificationForm messageBoxForm = new NotificationForm("warning", $"Order {content} doesn't exist");
+                        messageBoxForm.ShowDialog();
+
                     }
                 }
             }

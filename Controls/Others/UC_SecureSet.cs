@@ -346,7 +346,10 @@ namespace miniSys0._3.Controls.Others
                 {
                     if (password1.Text != password2.Text)
                     {
-                        MessageBox.Show("You entered different passwords.");
+                        //MessageBox.Show("You entered different passwords.");
+                        NotificationForm messageBoxForm = new NotificationForm("warning", "You entered different passwords.");
+                        messageBoxForm.ShowDialog();
+
                     }
                     else
                     {
@@ -359,7 +362,10 @@ namespace miniSys0._3.Controls.Others
 
                             User_type.user_password = password1.Text;
 
-                            MessageBox.Show($"Reset the password to {password1.Text} successfully");
+                            //MessageBox.Show($"Reset the password to {password1.Text} successfully");
+                            NotificationForm messageBoxForm = new NotificationForm("success", $"Reset the password to {password1.Text} successfully");
+                            messageBoxForm.ShowDialog();
+
                         }
 
                         HideInfoLable(1);
@@ -403,7 +409,11 @@ namespace miniSys0._3.Controls.Others
                     string answer = secure2.Text;
 
                     //MessageBox.Show($" send Q:{question} and A:{answer} to db");
-                    MessageBox.Show($"Reset the security question to {question} and security answer to {answer} successfully");
+                    //MessageBox.Show($"Reset the security question to {question} and security answer to {answer} successfully");
+                    NotificationForm messageBoxForm = new NotificationForm("success", $"Reset the security question to {question} and security answer to {answer} successfully");
+                    messageBoxForm.ShowDialog();
+
+
                     string sql = $"UPDATE {userTable} SET " +
                         $"Validation_problem = '{question}', " +
                         $"Validation_answer = '{answer}' " +
@@ -455,15 +465,26 @@ namespace miniSys0._3.Controls.Others
                 {
                     if (phone1.Text == User_type.user_phone)
                     {
-                        MessageBox.Show($"{phone1.Text} has already been bound");
+                        //MessageBox.Show($"{phone1.Text} has already been bound");
+
+                        NotificationForm messageBoxForm = new NotificationForm("warning", $"{phone1.Text} has already been bound");
+                        messageBoxForm.ShowDialog();
+
                     }
                     else if (phone2.Text != "123456")
                     {
-                        MessageBox.Show($"Wrong PIN code");
+                        //MessageBox.Show($"Wrong PIN code");
+                        NotificationForm messageBoxForm = new NotificationForm("warning", $"Wrong PIN code");
+                        messageBoxForm.ShowDialog();
                     }
                     else
                     {
-                        MessageBox.Show($"Reset bound phone to {phone1.Text} successfully");
+                        //MessageBox.Show($"Reset bound phone to {phone1.Text} successfully");
+
+                        NotificationForm messageBoxForm = new NotificationForm("success", $"Reset bound phone to {phone1.Text} successfully");
+                        messageBoxForm.ShowDialog();
+
+
                         string sql = $"UPDATE {userTable} SET Phone_number = '{phone1.Text}' " +
                                 $"WHERE {userIDType} = '{User_type.user_ID}';";
                         SQLCursor.Execute(sql);
@@ -510,15 +531,24 @@ namespace miniSys0._3.Controls.Others
                 {
                     if (email1.Text == User_type.user_email)
                     {
-                        MessageBox.Show($"{email1.Text} has already been bound");
+                        //MessageBox.Show($"{email1.Text} has already been bound");
+                        NotificationForm messageBoxForm = new NotificationForm("warning", $"{email1.Text} has already been bound");
+                        messageBoxForm.ShowDialog();
+
                     }
                     else if (email2.Text != "123456")
                     {
-                        MessageBox.Show($"Wrong PIN code");
+                        //MessageBox.Show($"Wrong PIN code");
+                        NotificationForm messageBoxForm = new NotificationForm("warning", $"Wrong PIN code");
+                        messageBoxForm.ShowDialog();
+
                     }
                     else
                     {
-                        MessageBox.Show($"Reset bound phone to {email1.Text} successfully");
+                        //MessageBox.Show($"Reset bound phone to {email1.Text} successfully");
+                        NotificationForm messageBoxForm = new NotificationForm("success", $"Reset bound phone to {email1.Text} successfully");
+                        messageBoxForm.ShowDialog();
+
                         string sql = $"UPDATE {userTable} SET Email = '{email1.Text}' " +
                                 $"WHERE {userIDType} = '{User_type.user_ID}';";
                         SQLCursor.Execute(sql);
@@ -539,13 +569,18 @@ namespace miniSys0._3.Controls.Others
 
         private void sendButton1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"Verified code has been sent to {phone1.Text}, please check");
+            //MessageBox.Show($"Verified code has been sent to {phone1.Text}, please check");
+            NotificationForm messageBoxForm = new NotificationForm("success", $"Verified code has been sent to {phone1.Text}, please check");
+            messageBoxForm.ShowDialog();
+
         }
 
 
         private void sendButton2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"Verified code has been sent to {email1.Text}, please check");
+            //MessageBox.Show($"Verified code has been sent to {email1.Text}, please check");
+            NotificationForm messageBoxForm = new NotificationForm("success", $"Verified code has been sent to {email1.Text}, please check");
+            messageBoxForm.ShowDialog();
         }
 
 

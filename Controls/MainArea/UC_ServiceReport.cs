@@ -350,7 +350,7 @@ namespace miniSys0._3.Controls.MainArea
                 $"and Status = 'Completed') " +
                 "SELECT A.time,B.Time,A.OrderID From A " +
                 "INNER JOIN B ON B.OrderID = A.OrderID; ";
-            Console.WriteLine(SQLSpeed);
+            //Console.WriteLine(SQLSpeed);
             dynamic speedData = SQLCursor.Query(SQLSpeed);
             List<int> result = new List<int>();
             for (int i = 0; i < speedData.Length; i++)

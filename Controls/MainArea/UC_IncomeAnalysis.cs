@@ -98,16 +98,25 @@ namespace miniSys0._3.Controls.MainArea
             string incomeLastWeek = SQLCursor.Query("select sum(Price) from Orders where datediff(week,Time,getdate()) = 1")[0];
             int incomeLastWeekInt = int.Parse(incomeLastWeek);
 
-            double weekOnDou = ((double)incomeThisWeekInt - (double)incomeLastWeekInt) / (double)incomeThisWeekInt;
+            double weekOnDou = ((double)incomeThisWeekInt - (double)incomeLastWeekInt) / (double)incomeLastWeekInt ;
             weekOn = weekOnDou.ToString();
 
             string incomeToday = SQLCursor.Query("select sum(Price) from Orders where datediff(DAY,Time,getdate()) = 0")[0];
-            int incomeTodayInt = int.Parse(incomeToday);
+            int incomeTodayInt  ;
+  
+            try
+            {
+                 incomeTodayInt = int.Parse(incomeToday);
+            }
+            catch
+            {
+                 incomeTodayInt = 0;
+            }
 
             string incomeYestoday = SQLCursor.Query("select sum(Price) from Orders where datediff(DAY,Time,getdate()) = 1")[0];
             int incomeYestodayInt = int.Parse(incomeYestoday);
 
-            double dayOnDou = ((double)incomeTodayInt - (double)incomeYestodayInt) / (double)incomeTodayInt;
+            double dayOnDou = ((double)incomeTodayInt - (double)incomeYestodayInt) / (double)incomeYestodayInt;
             dayOn = dayOnDou.ToString();
 
             //card2

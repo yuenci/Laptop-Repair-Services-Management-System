@@ -17,8 +17,8 @@ namespace miniSys0._3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Login());
-            Application.Run(new Main());
+            Application.Run(new Login());
+            //Application.Run(new Main());
             //Application.Run(new ProfileFloating());
             //Application.Run(new Reader());
             //Application.Run(new Form1());
@@ -29,6 +29,7 @@ namespace miniSys0._3
             //Application.Run(new OrderDetails());
             //Application.Run(new AddDescription());
             //Application.Run(new SettingForm());
+            //Application.Run(new NotificationForm("er1ror","hihihi"));
         }
     }
 }

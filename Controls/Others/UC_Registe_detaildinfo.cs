@@ -100,7 +100,10 @@ namespace miniSys0._3.Controls.Others
                 }
                 else
                 {
-                    MessageBox.Show("Invalid Phone number");
+                    //MessageBox.Show("Invalid Phone number");
+                    NotificationForm messageBoxForm = new NotificationForm("warning", "Invalid Phone number");
+                    messageBoxForm.ShowDialog();
+
                 }
 
                 if (birthDatePicker.Text != "")
@@ -115,7 +118,9 @@ namespace miniSys0._3.Controls.Others
                 }
                 else
                 {
-                    MessageBox.Show("Invalid email");
+                    //MessageBox.Show("Invalid email");
+                    NotificationForm messageBoxForm = new NotificationForm("warning", "Invalid email");
+                    messageBoxForm.ShowDialog();
                 }
 
                 if (genderStr != "")

@@ -75,7 +75,10 @@ namespace miniSys0._3.Controls.Setting
                 UserSettings.InitStatusData();
                 SettingForm.Instance.ReInitStatus();
 
-                System.Windows.Forms.MessageBox.Show("Import successfully");
+                //System.Windows.Forms.MessageBox.Show("Import successfully");
+                NotificationForm messageBoxForm = new NotificationForm("success", "Import successfully");
+                messageBoxForm.ShowDialog();
+
             }
         }
 
@@ -111,7 +114,10 @@ namespace miniSys0._3.Controls.Setting
                 sw.Close();
                 fs1.Close();
 
-                System.Windows.Forms.MessageBox.Show("Export successfully");
+                //System.Windows.Forms.MessageBox.Show("Export successfully");
+                NotificationForm messageBoxForm = new NotificationForm("success", "Export successfully");
+                messageBoxForm.ShowDialog();
+
             }
         }
 
