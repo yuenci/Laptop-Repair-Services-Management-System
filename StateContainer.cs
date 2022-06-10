@@ -12,7 +12,7 @@ namespace miniSys0._3
 {
     public class AppSetting
     {
-        public static string DBString = @"Data Source=LAPTOP-5ACE008F\SQLEXPRESS;Initial Catalog=CsharpRepairerInc;Integrated Security=True";
+        public static string DBString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Materials\【LOOP】\Assignment\miniSys0.4\Data\CsharpRepairerInc.mdf;Integrated Security=True;Connect Timeout=30";
         //public static string DBString = @"Dddddata Source=LAPTOP-5ACE008F\SQLEXPRESS;Initial Catalog=CsharpRepairerInc;Integrated Security=True";
         public static string path = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin"));
         //E:\Materials\【LOOP】\Assignment\miniSys0.3\
