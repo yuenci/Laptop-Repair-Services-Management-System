@@ -178,14 +178,6 @@
             this.progressBar.Size = new System.Drawing.Size(750, 4);
             this.progressBar.TabIndex = 13;
             // 
-            // timer1
-            // 
-            //this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // mytimer
-            // 
-            //this.mytimer.Tick += new System.EventHandler(this.mytimer_Tick);
-            // 
             // Loading
             // 
             this.AllowShowTitle = false;
