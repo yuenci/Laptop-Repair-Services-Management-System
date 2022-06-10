@@ -76,7 +76,7 @@ function setPage2DarkStyle() {
 
 function toPercent(point) {
     if (point == 0) {
-        return 0;
+        return "0%";
     }
     var str = Number(point * 100).toFixed(2);
     str += "%";
@@ -84,7 +84,7 @@ function toPercent(point) {
 }
 
 function getIcon(value) {
-    if (value < 0) {
+    if (value <= 0) {
         return goDown;
 
     } else if (value > 0) {

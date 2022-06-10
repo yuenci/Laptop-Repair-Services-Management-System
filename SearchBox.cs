@@ -298,8 +298,8 @@ namespace miniSys0._3
             {
                 
                 string targetUserID = formatInput(content,"customer");
-                string ifallowSearch = UserSettings.GetSettingsValue(targetUserID, "allowSearch");
-                string ifPrivateMode = UserSettings.GetSettingsValue(targetUserID, "privateMode");
+                //MessageBox.Show($"targetUserID:{targetUserID}");
+                
 
                 //Console.WriteLine($"ifallowSearch:{ifallowSearch}");
                 //Console.WriteLine($"ifPrivateMode:{ifPrivateMode}");
@@ -307,6 +307,8 @@ namespace miniSys0._3
 
                 if (targetUserID != null)
                 {
+                    string ifallowSearch = UserSettings.GetSettingsValue(targetUserID, "allowSearch");
+                    string ifPrivateMode = UserSettings.GetSettingsValue(targetUserID, "privateMode");
                     if (ifallowSearch == "Off" || ifPrivateMode == "On")
                     {
                         //MessageBox.Show($"{content} doesn't exist");
@@ -322,14 +324,18 @@ namespace miniSys0._3
                         viewProfile.Show();
                     }
                 }
+                else
+                {
+                    NotificationForm messageBoxForm = new NotificationForm("warning", $"{content} doesn't exist");
+                    messageBoxForm.ShowDialog();
+                }
                 
             }
             else if (num==3)
             {
               
                 string targetUserID = formatInput(content, "staff");
-                string ifallowSearch = UserSettings.GetSettingsValue(targetUserID, "allowSearch");
-                string ifPrivateMode = UserSettings.GetSettingsValue(targetUserID, "privateMode");
+               
 
                 /*Console.WriteLine($"ifallowSearch:{ifallowSearch}");
                 Console.WriteLine($"ifPrivateMode:{ifPrivateMode}");*/
@@ -337,6 +343,8 @@ namespace miniSys0._3
 
                 if (targetUserID != null)
                 {
+                    string ifallowSearch = UserSettings.GetSettingsValue(targetUserID, "allowSearch");
+                    string ifPrivateMode = UserSettings.GetSettingsValue(targetUserID, "privateMode");
                     if (ifallowSearch == "Off" || ifPrivateMode == "On")
                     {
                         //MessageBox.Show($"{content} doesn't exist");
@@ -352,6 +360,12 @@ namespace miniSys0._3
                         viewProfile.Show();
                     }
                 }
+                else
+                {
+                    NotificationForm messageBoxForm = new NotificationForm("warning", $"{content} doesn't exist");
+                    messageBoxForm.ShowDialog();
+                }
+
             }
             else if (num==4)
             {
@@ -390,7 +404,7 @@ namespace miniSys0._3
                 else
                 {
                     string target = formatOrder(content);
-                    //Console.WriteLine(target);
+                    Console.WriteLine(target);
                     if (target!=null)
                     {
                         OrderDetails orderDetails = new OrderDetails();
@@ -540,7 +554,26 @@ namespace miniSys0._3
                 }
                 else
                 {
-                    return null;
+                    string userID = SQLCursor.ifStaOrCus(str);
+                    if (userID != null && userID.Substring(0,3) == "Cus")
+                    {
+                        string sql = $"SELECT TOP 1  OrderID FROM Orders WHERE CustomerID = '{userID}'";
+                        Console.WriteLine(sql);
+                        dynamic[] data = SQLCursor.Query(sql);
+                        if (data.Length >0)
+                        {
+                            Console.WriteLine(data);
+                            return data[0];
+                        }
+                        else
+                        {
+                            return null;
+                        }
+                    }
+                    else
+                    {
+                        return null;
+                    }
                 }
             }
 

@@ -102,7 +102,7 @@ namespace miniSys0._3
             Main.main.Hide();
         }
 
-        private void InitAvatar()
+        public void InitAvatar()
         {
             if (User_type.user_avatarPath != "")
             {

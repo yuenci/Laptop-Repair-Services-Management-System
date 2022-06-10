@@ -23,6 +23,7 @@ namespace miniSys0._3
             InitializeComponent();
             content.Text = contentText;
             InitStyle(type);
+            InitSize(contentText);
             InitTheme();
             cancel.Hide();
         }
@@ -70,7 +71,7 @@ namespace miniSys0._3
                 icon.Symbol = 61737;
 
 
-                typeText.Text = "warning";
+                typeText.Text = "Warning";
 
             }
             else if (type == "error")
@@ -89,6 +90,22 @@ namespace miniSys0._3
             }
         }
 
+        private void InitSize(string contentText)
+        {
+            if(contentText !="" || contentText != null)
+            {
+                if(contentText.Length > 70)
+                {
+                    this.Size = new Size(350, 200);
+
+                    ok.Location = new Point(248, 156);
+
+                    cancel.Location = new Point(149, 156);
+
+                    content.Size = new Size(305,95);
+                }
+            }
+        }
         private void cancel_Click(object sender, EventArgs e)
         {
             this.Dispose();

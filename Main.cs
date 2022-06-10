@@ -85,7 +85,7 @@ namespace miniSys0._3
 
             SetAutoThemeMode();
 
-            this.TopMost = true;
+            //this.TopMost = true;
 
             button1.Visible = false;
 
@@ -270,6 +270,7 @@ namespace miniSys0._3
             {
                 hideOtherControls();
                 uniqueInstance.Visible = true;
+                uniqueInstance.InitAvatar();
             }
             else if (uniqueInstance.Visible == true)
             {
@@ -1029,6 +1030,8 @@ namespace miniSys0._3
             //UserSettings.ShowAllPropertyValue();
             //Application.Restart();
             //ChangeAvatarToImage();
+
+            Console.WriteLine(User_type.user_avatarPath);
 
         }
 

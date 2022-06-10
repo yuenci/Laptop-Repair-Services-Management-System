@@ -53,7 +53,7 @@
             // 
             this.uiUserControl1.Controls.Add(this.uiLabel1);
             this.uiUserControl1.Controls.Add(this.uiAvatar1);
-            this.uiUserControl1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiUserControl1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiUserControl1.Location = new System.Drawing.Point(1, 2);
             this.uiUserControl1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiUserControl1.Name = "uiUserControl1";
@@ -67,7 +67,7 @@
             // 
             this.uiLabel1.BackColor = System.Drawing.Color.Transparent;
             this.uiLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiLabel1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel1.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel1.Location = new System.Drawing.Point(52, 10);
             this.uiLabel1.Name = "uiLabel1";
             this.uiLabel1.Size = new System.Drawing.Size(360, 30);
@@ -80,7 +80,7 @@
             // 
             this.uiAvatar1.BackColor = System.Drawing.Color.Transparent;
             this.uiAvatar1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiAvatar1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiAvatar1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiAvatar1.Location = new System.Drawing.Point(10, 10);
             this.uiAvatar1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiAvatar1.Name = "uiAvatar1";
@@ -96,7 +96,7 @@
             // 
             this.uiUserControl4.Controls.Add(this.uiLabel4);
             this.uiUserControl4.Controls.Add(this.uiAvatar4);
-            this.uiUserControl4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiUserControl4.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiUserControl4.Location = new System.Drawing.Point(1, 172);
             this.uiUserControl4.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiUserControl4.Name = "uiUserControl4";
@@ -110,7 +110,7 @@
             // 
             this.uiLabel4.BackColor = System.Drawing.Color.Transparent;
             this.uiLabel4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiLabel4.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel4.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel4.Location = new System.Drawing.Point(52, 10);
             this.uiLabel4.Name = "uiLabel4";
             this.uiLabel4.Size = new System.Drawing.Size(360, 30);
@@ -123,7 +123,7 @@
             // 
             this.uiAvatar4.BackColor = System.Drawing.Color.Transparent;
             this.uiAvatar4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiAvatar4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiAvatar4.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiAvatar4.Location = new System.Drawing.Point(10, 10);
             this.uiAvatar4.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiAvatar4.Name = "uiAvatar4";
@@ -139,7 +139,7 @@
             // 
             this.uiUserControl2.Controls.Add(this.uiLabel2);
             this.uiUserControl2.Controls.Add(this.uiAvatar2);
-            this.uiUserControl2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiUserControl2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiUserControl2.Location = new System.Drawing.Point(1, 60);
             this.uiUserControl2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiUserControl2.Name = "uiUserControl2";
@@ -153,7 +153,7 @@
             // 
             this.uiLabel2.BackColor = System.Drawing.Color.Transparent;
             this.uiLabel2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiLabel2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel2.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel2.Location = new System.Drawing.Point(52, 10);
             this.uiLabel2.Name = "uiLabel2";
             this.uiLabel2.Size = new System.Drawing.Size(360, 30);
@@ -166,7 +166,7 @@
             // 
             this.uiAvatar2.BackColor = System.Drawing.Color.Transparent;
             this.uiAvatar2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiAvatar2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiAvatar2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiAvatar2.Location = new System.Drawing.Point(10, 10);
             this.uiAvatar2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiAvatar2.Name = "uiAvatar2";
@@ -182,7 +182,7 @@
             // 
             this.uiUserControl3.Controls.Add(this.uiLabel3);
             this.uiUserControl3.Controls.Add(this.uiAvatar3);
-            this.uiUserControl3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiUserControl3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiUserControl3.Location = new System.Drawing.Point(1, 116);
             this.uiUserControl3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiUserControl3.Name = "uiUserControl3";
@@ -196,7 +196,7 @@
             // 
             this.uiLabel3.BackColor = System.Drawing.Color.Transparent;
             this.uiLabel3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiLabel3.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel3.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel3.Location = new System.Drawing.Point(52, 10);
             this.uiLabel3.Name = "uiLabel3";
             this.uiLabel3.Size = new System.Drawing.Size(360, 30);
@@ -209,7 +209,7 @@
             // 
             this.uiAvatar3.BackColor = System.Drawing.Color.Transparent;
             this.uiAvatar3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiAvatar3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiAvatar3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiAvatar3.Location = new System.Drawing.Point(10, 10);
             this.uiAvatar3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiAvatar3.Name = "uiAvatar3";
@@ -222,7 +222,7 @@
             // 
             // uiLine1
             // 
-            this.uiLine1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLine1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLine1.Location = new System.Drawing.Point(1, 50);
             this.uiLine1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiLine1.Name = "uiLine1";
@@ -232,7 +232,7 @@
             // 
             // uiLine2
             // 
-            this.uiLine2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLine2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLine2.Location = new System.Drawing.Point(1, 110);
             this.uiLine2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiLine2.Name = "uiLine2";
@@ -242,7 +242,7 @@
             // 
             // uiLine3
             // 
-            this.uiLine3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLine3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLine3.Location = new System.Drawing.Point(1, 164);
             this.uiLine3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiLine3.Name = "uiLine3";

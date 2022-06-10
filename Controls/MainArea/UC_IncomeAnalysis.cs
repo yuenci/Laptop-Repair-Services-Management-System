@@ -114,11 +114,18 @@ namespace miniSys0._3.Controls.MainArea
             }
 
             string incomeYestoday = SQLCursor.Query("select sum(Price) from Orders where datediff(DAY,Time,getdate()) = 1")[0];
-            int incomeYestodayInt = int.Parse(incomeYestoday);
+            if (incomeYestoday == "")
+            {
+                dayOn = "0";
+            }
+            else
+            {
+                int incomeYestodayInt = int.Parse(incomeYestoday);
 
-            double dayOnDou = ((double)incomeTodayInt - (double)incomeYestodayInt) / (double)incomeYestodayInt;
-            dayOn = dayOnDou.ToString();
-
+                double dayOnDou = ((double)incomeTodayInt - (double)incomeYestodayInt) / (double)incomeYestodayInt;
+                dayOn = dayOnDou.ToString();
+            }
+            
             //card2
             paymentsNum = SQLCursor.Query("select COUNT(*) from Orders where datediff(MONTH,Time,getdate()) = 0")[0];
 

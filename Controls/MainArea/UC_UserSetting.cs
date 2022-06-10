@@ -325,12 +325,19 @@ namespace miniSys0._3.Controls.MainArea
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 //Console.WriteLine(dialog.FileName);
-                // do something
                 string imageFilePath = AppSetting.path + "\\Html\\Avatars";
+
+                //get the image url
                 string avatarFilePath =  FileProcess.CopyToFile(dialog.FileName, imageFilePath);
+
+                //update picture
                 ChangeAvatarToImage(avatarFilePath);
                 Main.main.ChangeAvatarToImage(avatarFilePath);
+
+                //update tp cache
                 User_type.user_avatarPath = avatarFilePath;
+
+                //update to db
                 SQLCursor.UpdateAvatar( User_type.user_ID,FileProcess.AvatarID);
             }
         }

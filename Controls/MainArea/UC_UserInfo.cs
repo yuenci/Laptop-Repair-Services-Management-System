@@ -233,10 +233,18 @@ namespace miniSys0._3.Controls.MainArea
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 string imageFilePath = AppSetting.path + "\\Html\\Avatars";
+
+                // get the image url
                 string avatarFilePath = FileProcess.CopyToFile(dialog.FileName, imageFilePath);
+
+                // update the picture
                 ChangeAvatarToImage(avatarFilePath);
                 Main.main.ChangeAvatarToImage(avatarFilePath);
+
+                //update the cache
                 User_type.user_avatarPath = avatarFilePath;
+
+                //update the db
                 SQLCursor.UpdateAvatar(User_type.user_ID, FileProcess.AvatarID);
             }
         }

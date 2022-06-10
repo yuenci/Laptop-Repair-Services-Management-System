@@ -59,6 +59,7 @@
             this.typeText.Location = new System.Drawing.Point(52, 14);
             this.typeText.Name = "typeText";
             this.typeText.Size = new System.Drawing.Size(100, 30);
+            this.typeText.Style = Sunny.UI.UIStyle.Custom;
             this.typeText.TabIndex = 18;
             this.typeText.Text = "Notification";
             this.typeText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -119,6 +120,7 @@
             this.content.Location = new System.Drawing.Point(20, 49);
             this.content.Name = "content";
             this.content.Size = new System.Drawing.Size(305, 47);
+            this.content.Style = Sunny.UI.UIStyle.Custom;
             this.content.TabIndex = 21;
             this.content.Text = "This is a notification!This is a notification!This is a notification!";
             this.content.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
