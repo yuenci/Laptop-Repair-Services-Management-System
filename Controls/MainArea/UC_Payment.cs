@@ -22,7 +22,6 @@ namespace miniSys0._3.Controls.MainArea
             InitCurmbs();
             InitTheme();
             Initcontent();
-            
         }
 
         public void InitTheme()
@@ -57,7 +56,5 @@ namespace miniSys0._3.Controls.MainArea
             /*UC_ReciptComplete uc = new UC_ReciptComplete();
             AddUserControl.Add(uc, contentPanel);*/
         }
-
-
     }
 }
