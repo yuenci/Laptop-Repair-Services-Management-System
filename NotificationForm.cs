@@ -13,11 +13,12 @@ namespace miniSys0._3
 {
     public partial class NotificationForm : UIForm
     {
-        /*public NotificationForm()
-        {
-            InitializeComponent();
-        }*/
-
+        Color brown = Color.FromArgb(55, 55, 57);
+        Color wordBlue = Color.FromArgb(22, 93, 255);
+        Color green = Color.FromArgb(0, 180, 42);
+        Color orange = Color.FromArgb(245, 63, 63);
+        Color red = Color.FromArgb(255, 125, 0);
+        
         public NotificationForm(string type, string contentText)
         {
             InitializeComponent();
@@ -31,7 +32,7 @@ namespace miniSys0._3
         {
             if (User_type.user_theme == "dark")
             {
-                this.BackColor = Color.FromArgb(55, 55, 57);
+                this.BackColor = brown;
                 typeText.ForeColor = Color.White;
                 content.ForeColor = Color.White;
                 this.ShowShadow = false;
@@ -45,13 +46,12 @@ namespace miniSys0._3
             }
         }
 
-
         private void InitStyle(string type)
         {
             type = type.ToLower();
             if (type == "notification")
             {
-                icon.FillColor = Color.FromArgb(22, 93, 255);
+                icon.FillColor = wordBlue;
                 icon.Symbol = 61737;
 
                 typeText.Text = "Notification";
@@ -59,7 +59,7 @@ namespace miniSys0._3
             }
             else if (type == "success")
             {
-                icon.FillColor = Color.FromArgb(0, 180, 42);
+                icon.FillColor = green;
                 icon.Symbol = 61452;
 
                 typeText.Text = "Success";
@@ -67,16 +67,15 @@ namespace miniSys0._3
             }
             else if (type == "warning")
             {
-                icon.FillColor = Color.FromArgb(255, 125, 0);
+                icon.FillColor = orange;
                 icon.Symbol = 61737;
-
 
                 typeText.Text = "Warning";
 
             }
             else if (type == "error")
             {
-                icon.FillColor = Color.FromArgb(245, 63, 63);
+                icon.FillColor = red;
                 icon.Symbol = 61453;
 
                 typeText.Text = "Error";
@@ -106,6 +105,7 @@ namespace miniSys0._3
                 }
             }
         }
+
         private void cancel_Click(object sender, EventArgs e)
         {
             this.Dispose();

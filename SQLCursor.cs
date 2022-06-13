@@ -310,6 +310,7 @@ namespace miniSys0._3
             return null;
         }
 
+
         public static string getGender(string useID)
         {
             string first = useID.Substring(0, 3).ToLower();
@@ -359,6 +360,7 @@ namespace miniSys0._3
 
         }
 
+
         public static bool PasswordVerification(string nameOrID, string password)
         {
             //must exist then use this function
@@ -399,6 +401,7 @@ namespace miniSys0._3
             return false;
         }
     
+
         public static bool IfthereAnyOrder()
         {
             string sql = $"SELECT OrderID FROM Orders WHERE CustomerID = '{User_type.user_ID}';";     
@@ -412,6 +415,7 @@ namespace miniSys0._3
                 return false;
             }
         }
+
 
         public static bool ifCurrentOrderNotStart()
         {
@@ -435,6 +439,7 @@ namespace miniSys0._3
             return false;
         }
 
+
         public static bool ifCurrentOrderNotStart(string orderID)
         {
             string sql = $"Select Status from Schedule Where OrderID = '{orderID}'";
@@ -455,6 +460,7 @@ namespace miniSys0._3
             return false;
         }
     
+
         public static void UpdateAvatar(string userID, string avatarFilePath)
         {
             string sql = $"SELECT [AvatarID] FROM [Avatars] WHERE [UserID] = '{userID}'; ";
@@ -473,6 +479,7 @@ namespace miniSys0._3
                 Execute(sql1);
             }
         }
+
 
         public static string GetAvatar(string  userID)
         {

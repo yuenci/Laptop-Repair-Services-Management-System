@@ -26,8 +26,6 @@ namespace miniSys0._3.Controls
             Instance = this;
         }
 
-
-
         private void LoginButton_Click(object sender, EventArgs e)
         {
             if (IfDBConnect())
@@ -317,8 +315,6 @@ namespace miniSys0._3.Controls
             }
 
         }
-
- 
 
         private bool IfDBConnect()
         {

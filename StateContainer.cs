@@ -12,11 +12,14 @@ namespace miniSys0._3
 {
     public class AppSetting
     {
-        public static string DBString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Materials\【LOOP】\Assignment\miniSys0.4\Data\CsharpRepairerInc.mdf;Integrated Security=True;Connect Timeout=30";
+        
+        public static string DBString = @"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Materials\【LOOP】\Assignment\miniSys0.4\Data\CsharpRepairerInc.mdf;Integrated Security = True";
         //public static string DBString = @"Dddddata Source=LAPTOP-5ACE008F\SQLEXPRESS;Initial Catalog=CsharpRepairerInc;Integrated Security=True";
         public static string path = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin"));
         //E:\Materials\【LOOP】\Assignment\miniSys0.3\
     }
+
+
     public class User_type
     {
         //this is defult
@@ -92,6 +95,7 @@ namespace miniSys0._3
         }
     }
 
+
     public class ArticlesInfo
     {
         public static string[] ArticlelDList = new string[5];
@@ -108,6 +112,7 @@ namespace miniSys0._3
 
     }
 
+
     public static class NoticeInfo
     {
         public static string[] ArticlelDList = new string[5];
@@ -121,6 +126,7 @@ namespace miniSys0._3
         public static string currentArticlelD = "";
         public static int currentnoticeLablelD = -1;
     }
+
 
     public static class RegisterInfoCache
     {
@@ -171,6 +177,7 @@ namespace miniSys0._3
         }
     }
 
+
     public static class ReceiptInfoCache
     {
         public static string orderID = "";
@@ -206,6 +213,7 @@ namespace miniSys0._3
             Console.WriteLine($"User_type.Card_Account_ID: {Card_Account_ID}");
         }
     }
+
 
     public static class UserSettings 
     {
@@ -561,6 +569,7 @@ namespace miniSys0._3
             Console.WriteLine("-------------");
         }
     }
+
 
     public static class RegexForInput
     {

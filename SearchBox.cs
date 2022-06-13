@@ -552,12 +552,28 @@ namespace miniSys0._3
                     }
                     
                 }
+                else if (str.Length == 9 && str.Substring(0,3).ToLower() == "cus")
+                {
+                    string sql = $"SELECT TOP 1  OrderID FROM Orders WHERE CustomerID = '{str}' ORDER BY OrderID DESC";
+                    Console.WriteLine(sql);
+                    dynamic[] data = SQLCursor.Query(sql);
+                    if (data.Length > 0)
+                    {
+                        Console.WriteLine(data);
+                        return data[0];
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+
                 else
                 {
                     string userID = SQLCursor.ifStaOrCus(str);
-                    if (userID != null && userID.Substring(0,3) == "Cus")
+                    if (userID != null && userID.Substring(0,3).ToLower() == "cus")
                     {
-                        string sql = $"SELECT TOP 1  OrderID FROM Orders WHERE CustomerID = '{userID}'";
+                        string sql = $"SELECT TOP 1  OrderID FROM Orders WHERE CustomerID = '{userID}' ORDER BY OrderID DESC";
                         Console.WriteLine(sql);
                         dynamic[] data = SQLCursor.Query(sql);
                         if (data.Length >0)

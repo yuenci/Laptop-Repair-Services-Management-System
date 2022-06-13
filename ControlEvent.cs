@@ -20,8 +20,7 @@ namespace miniSys0._3
             this.Text = textContent;
             this.Source.Enter += new EventHandler(TextBoxEnter);
             this.Source.Leave += new EventHandler(TextBoxLeave);
-        }
-        
+        } 
         
         public TextBoxCE(UITextBox textBox, string textContent, Color RectColor)
         {

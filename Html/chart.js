@@ -1,16 +1,4 @@
-/*
- * @Author: Innis
- * @Description: 
- * @Date: 2022-04-19 11:11:21
- * @LastEditTime: 2022-04-19 11:11:24
- * @FilePath: \html\Chart.js
- */
-/*!
- * Chart.js v3.7.0
- * https://www.chartjs.org
- * (c) 2021 Chart.js Contributors
- * Released under the MIT License
- */
+
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
 typeof define === 'function' && define.amd ? define(factory) :
