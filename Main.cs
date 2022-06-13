@@ -218,6 +218,10 @@ namespace miniSys0._3
             {
                 add_post_system_message();
             }
+            else if (homePage == "Modify price")
+            {
+                add_modify_price();
+            }
         }
         private void drag_down(object sender, MouseEventArgs e)
         {
@@ -710,6 +714,13 @@ namespace miniSys0._3
             addUserControlToMain(uc);
             currentMainPage = "post_system_message";
         }
+
+        public void add_modify_price()
+        {
+            UC_PriceModify uc = new UC_PriceModify();
+            addUserControlToMain(uc);
+            currentMainPage = "Modify_price";
+        }
         #endregion
         private void uiSymbolButton3_Click(object sender, EventArgs e)
         {
@@ -825,6 +836,10 @@ namespace miniSys0._3
             else if(currentControlStr == ("post_system_message"))
             {
                 add_post_system_message();
+            }
+            else if (currentControlStr == ("Modify_price"))
+            {
+                add_modify_price();
             }
         }
 

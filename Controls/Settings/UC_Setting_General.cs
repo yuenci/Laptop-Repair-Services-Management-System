@@ -93,7 +93,7 @@ namespace miniSys0._3.Controls.Setting
                 }
                 else if (department == "Admin")
                 {
-                    string[] pagesList = { "Dashboard", "Staff Register","Message Writer", "Service Report", "Total Income",
+                    string[] pagesList = { "Dashboard", "Staff Register","Message Writer", "Modify price", "Service Report", "Total Income",
                     "User Info", "User settings"};
                     InsertData(pagesList);
                 }

@@ -29,24 +29,31 @@
         private void InitializeComponent()
         {
             this.Container = new Sunny.UI.UIUserControl();
-            this.showMessageNum = new Sunny.UI.UILabel();
-            this.delect = new Sunny.UI.UIButton();
-            this.counter = new Sunny.UI.UILabel();
-            this.ok = new Sunny.UI.UIButton();
-            this.textbox = new Sunny.UI.UIRichTextBox();
             this.pageTitle = new System.Windows.Forms.Label();
-            this.urC_Crumbs1 = new miniSys0._3.Controls.Others.UrC_Crumbs();
+            this.price_Card8 = new miniSys0._3.Controls.Others.Price_Card();
+            this.price_Card7 = new miniSys0._3.Controls.Others.Price_Card();
+            this.price_Card6 = new miniSys0._3.Controls.Others.Price_Card();
+            this.price_Card5 = new miniSys0._3.Controls.Others.Price_Card();
+            this.price_Card4 = new miniSys0._3.Controls.Others.Price_Card();
+            this.price_Card3 = new miniSys0._3.Controls.Others.Price_Card();
+            this.price_Card2 = new miniSys0._3.Controls.Others.Price_Card();
+            this.price_Card1 = new miniSys0._3.Controls.Others.Price_Card();
+            this.crumbText = new Sunny.UI.UILabel();
+            this.crumbsHome = new Sunny.UI.UISymbolButton();
             this.Container.SuspendLayout();
             this.SuspendLayout();
             // 
             // Container
             // 
             this.Container.BackColor = System.Drawing.Color.White;
-            this.Container.Controls.Add(this.showMessageNum);
-            this.Container.Controls.Add(this.delect);
-            this.Container.Controls.Add(this.counter);
-            this.Container.Controls.Add(this.ok);
-            this.Container.Controls.Add(this.textbox);
+            this.Container.Controls.Add(this.price_Card8);
+            this.Container.Controls.Add(this.price_Card7);
+            this.Container.Controls.Add(this.price_Card6);
+            this.Container.Controls.Add(this.price_Card5);
+            this.Container.Controls.Add(this.price_Card4);
+            this.Container.Controls.Add(this.price_Card3);
+            this.Container.Controls.Add(this.price_Card2);
+            this.Container.Controls.Add(this.price_Card1);
             this.Container.Controls.Add(this.pageTitle);
             this.Container.FillColor = System.Drawing.Color.White;
             this.Container.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -61,76 +68,6 @@
             this.Container.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.Container.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // showMessageNum
-            // 
-            this.showMessageNum.BackColor = System.Drawing.Color.Transparent;
-            this.showMessageNum.Font = new System.Drawing.Font(".PingFang SC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.showMessageNum.Location = new System.Drawing.Point(653, 71);
-            this.showMessageNum.Name = "showMessageNum";
-            this.showMessageNum.Size = new System.Drawing.Size(286, 35);
-            this.showMessageNum.Style = Sunny.UI.UIStyle.Custom;
-            this.showMessageNum.TabIndex = 11;
-            this.showMessageNum.Text = "3 system messages currently";
-            this.showMessageNum.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.showMessageNum.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // delect
-            // 
-            this.delect.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.delect.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Bold);
-            this.delect.Location = new System.Drawing.Point(973, 71);
-            this.delect.MinimumSize = new System.Drawing.Size(1, 1);
-            this.delect.Name = "delect";
-            this.delect.Size = new System.Drawing.Size(100, 35);
-            this.delect.Style = Sunny.UI.UIStyle.Custom;
-            this.delect.TabIndex = 10;
-            this.delect.Text = "Delect";
-            this.delect.TipsFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.delect.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // counter
-            // 
-            this.counter.BackColor = System.Drawing.Color.Transparent;
-            this.counter.Font = new System.Drawing.Font(".PingFang SC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.counter.Location = new System.Drawing.Point(809, 608);
-            this.counter.Name = "counter";
-            this.counter.Size = new System.Drawing.Size(130, 35);
-            this.counter.Style = Sunny.UI.UIStyle.Custom;
-            this.counter.TabIndex = 9;
-            this.counter.Text = "0/280";
-            this.counter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.counter.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // ok
-            // 
-            this.ok.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ok.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Bold);
-            this.ok.Location = new System.Drawing.Point(973, 608);
-            this.ok.MinimumSize = new System.Drawing.Size(1, 1);
-            this.ok.Name = "ok";
-            this.ok.Size = new System.Drawing.Size(100, 35);
-            this.ok.Style = Sunny.UI.UIStyle.Custom;
-            this.ok.TabIndex = 8;
-            this.ok.Text = "Post";
-            this.ok.TipsFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ok.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // textbox
-            // 
-            this.textbox.FillColor = System.Drawing.Color.White;
-            this.textbox.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textbox.Location = new System.Drawing.Point(33, 133);
-            this.textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textbox.MinimumSize = new System.Drawing.Size(1, 1);
-            this.textbox.Name = "textbox";
-            this.textbox.Padding = new System.Windows.Forms.Padding(2);
-            this.textbox.ShowText = false;
-            this.textbox.Size = new System.Drawing.Size(1040, 448);
-            this.textbox.Style = Sunny.UI.UIStyle.Custom;
-            this.textbox.TabIndex = 7;
-            this.textbox.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.textbox.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
             // pageTitle
             // 
             this.pageTitle.AutoSize = true;
@@ -138,23 +75,117 @@
             this.pageTitle.Font = new System.Drawing.Font(".PingFang SC", 15F, System.Drawing.FontStyle.Bold);
             this.pageTitle.Location = new System.Drawing.Point(29, 19);
             this.pageTitle.Name = "pageTitle";
-            this.pageTitle.Size = new System.Drawing.Size(218, 20);
+            this.pageTitle.Size = new System.Drawing.Size(229, 20);
             this.pageTitle.TabIndex = 6;
-            this.pageTitle.Text = "Post system message";
+            this.pageTitle.Text = "Modify service price";
             // 
-            // urC_Crumbs1
+            // price_Card8
             // 
-            this.urC_Crumbs1.BackColor = System.Drawing.SystemColors.Control;
-            this.urC_Crumbs1.Location = new System.Drawing.Point(3, 3);
-            this.urC_Crumbs1.Name = "urC_Crumbs1";
-            this.urC_Crumbs1.Size = new System.Drawing.Size(289, 35);
-            this.urC_Crumbs1.TabIndex = 4;
+            this.price_Card8.BackColor = System.Drawing.Color.White;
+            this.price_Card8.Location = new System.Drawing.Point(566, 487);
+            this.price_Card8.Name = "price_Card8";
+            this.price_Card8.Size = new System.Drawing.Size(549, 89);
+            this.price_Card8.TabIndex = 16;
+            // 
+            // price_Card7
+            // 
+            this.price_Card7.BackColor = System.Drawing.Color.White;
+            this.price_Card7.Location = new System.Drawing.Point(3, 487);
+            this.price_Card7.Name = "price_Card7";
+            this.price_Card7.Size = new System.Drawing.Size(549, 89);
+            this.price_Card7.TabIndex = 15;
+            // 
+            // price_Card6
+            // 
+            this.price_Card6.BackColor = System.Drawing.Color.White;
+            this.price_Card6.Location = new System.Drawing.Point(566, 353);
+            this.price_Card6.Name = "price_Card6";
+            this.price_Card6.Size = new System.Drawing.Size(549, 89);
+            this.price_Card6.TabIndex = 14;
+            // 
+            // price_Card5
+            // 
+            this.price_Card5.BackColor = System.Drawing.Color.White;
+            this.price_Card5.Location = new System.Drawing.Point(3, 353);
+            this.price_Card5.Name = "price_Card5";
+            this.price_Card5.Size = new System.Drawing.Size(549, 89);
+            this.price_Card5.TabIndex = 13;
+            // 
+            // price_Card4
+            // 
+            this.price_Card4.BackColor = System.Drawing.Color.White;
+            this.price_Card4.Location = new System.Drawing.Point(566, 219);
+            this.price_Card4.Name = "price_Card4";
+            this.price_Card4.Size = new System.Drawing.Size(549, 89);
+            this.price_Card4.TabIndex = 12;
+            // 
+            // price_Card3
+            // 
+            this.price_Card3.BackColor = System.Drawing.Color.White;
+            this.price_Card3.Location = new System.Drawing.Point(3, 219);
+            this.price_Card3.Name = "price_Card3";
+            this.price_Card3.Size = new System.Drawing.Size(549, 89);
+            this.price_Card3.TabIndex = 11;
+            // 
+            // price_Card2
+            // 
+            this.price_Card2.BackColor = System.Drawing.Color.White;
+            this.price_Card2.Location = new System.Drawing.Point(566, 85);
+            this.price_Card2.Name = "price_Card2";
+            this.price_Card2.Size = new System.Drawing.Size(549, 89);
+            this.price_Card2.TabIndex = 10;
+            // 
+            // price_Card1
+            // 
+            this.price_Card1.BackColor = System.Drawing.Color.White;
+            this.price_Card1.Location = new System.Drawing.Point(3, 85);
+            this.price_Card1.Name = "price_Card1";
+            this.price_Card1.Size = new System.Drawing.Size(549, 89);
+            this.price_Card1.TabIndex = 9;
+            // 
+            // crumbText
+            // 
+            this.crumbText.BackColor = System.Drawing.Color.Transparent;
+            this.crumbText.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.crumbText.Location = new System.Drawing.Point(99, 0);
+            this.crumbText.Name = "crumbText";
+            this.crumbText.Size = new System.Drawing.Size(187, 35);
+            this.crumbText.Style = Sunny.UI.UIStyle.Custom;
+            this.crumbText.TabIndex = 23;
+            this.crumbText.Text = "Modify Price";
+            this.crumbText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.crumbText.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // crumbsHome
+            // 
+            this.crumbsHome.BackColor = System.Drawing.Color.Transparent;
+            this.crumbsHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.crumbsHome.Enabled = false;
+            this.crumbsHome.FillColor = System.Drawing.Color.White;
+            this.crumbsHome.FillDisableColor = System.Drawing.Color.Transparent;
+            this.crumbsHome.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.crumbsHome.ForeColor = System.Drawing.Color.Black;
+            this.crumbsHome.Location = new System.Drawing.Point(3, 0);
+            this.crumbsHome.MinimumSize = new System.Drawing.Size(1, 1);
+            this.crumbsHome.Name = "crumbsHome";
+            this.crumbsHome.RectColor = System.Drawing.Color.Transparent;
+            this.crumbsHome.RectDisableColor = System.Drawing.Color.Transparent;
+            this.crumbsHome.Size = new System.Drawing.Size(206, 35);
+            this.crumbsHome.Style = Sunny.UI.UIStyle.Custom;
+            this.crumbsHome.Symbol = 57353;
+            this.crumbsHome.SymbolColor = System.Drawing.Color.Black;
+            this.crumbsHome.SymbolOffset = new System.Drawing.Point(5, 0);
+            this.crumbsHome.TabIndex = 22;
+            this.crumbsHome.Text = " / Form / Post Messgae";
+            this.crumbsHome.TipsFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.crumbsHome.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // UC_PriceModify
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.crumbText);
             this.Controls.Add(this.Container);
-            this.Controls.Add(this.urC_Crumbs1);
+            this.Controls.Add(this.crumbsHome);
             this.Name = "UC_PriceModify";
             this.Size = new System.Drawing.Size(1125, 720);
             this.Container.ResumeLayout(false);
@@ -166,12 +197,16 @@
         #endregion
 
         private Sunny.UI.UIUserControl Container;
-        private Sunny.UI.UILabel showMessageNum;
-        private Sunny.UI.UIButton delect;
-        private Sunny.UI.UILabel counter;
-        private Sunny.UI.UIButton ok;
-        private Sunny.UI.UIRichTextBox textbox;
         private System.Windows.Forms.Label pageTitle;
-        private Others.UrC_Crumbs urC_Crumbs1;
+        private Others.Price_Card price_Card8;
+        private Others.Price_Card price_Card7;
+        private Others.Price_Card price_Card6;
+        private Others.Price_Card price_Card5;
+        private Others.Price_Card price_Card4;
+        private Others.Price_Card price_Card3;
+        private Others.Price_Card price_Card2;
+        private Others.Price_Card price_Card1;
+        public Sunny.UI.UILabel crumbText;
+        public Sunny.UI.UISymbolButton crumbsHome;
     }
 }

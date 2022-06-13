@@ -35,7 +35,8 @@
             this.ok = new Sunny.UI.UIButton();
             this.textbox = new Sunny.UI.UIRichTextBox();
             this.pageTitle = new System.Windows.Forms.Label();
-            this.urC_Crumbs1 = new miniSys0._3.Controls.Others.UrC_Crumbs();
+            this.crumbText = new Sunny.UI.UILabel();
+            this.crumbsHome = new Sunny.UI.UISymbolButton();
             this.Container.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -145,20 +146,50 @@
             this.pageTitle.TabIndex = 6;
             this.pageTitle.Text = "Post system message";
             // 
-            // urC_Crumbs1
+            // crumbText
             // 
-            this.urC_Crumbs1.BackColor = System.Drawing.SystemColors.Control;
-            this.urC_Crumbs1.Location = new System.Drawing.Point(4, 3);
-            this.urC_Crumbs1.Name = "urC_Crumbs1";
-            this.urC_Crumbs1.Size = new System.Drawing.Size(289, 35);
-            this.urC_Crumbs1.TabIndex = 0;
+            this.crumbText.BackColor = System.Drawing.Color.Transparent;
+            this.crumbText.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.crumbText.Location = new System.Drawing.Point(100, 0);
+            this.crumbText.Name = "crumbText";
+            this.crumbText.Size = new System.Drawing.Size(187, 35);
+            this.crumbText.Style = Sunny.UI.UIStyle.Custom;
+            this.crumbText.TabIndex = 21;
+            this.crumbText.Text = "Post Message";
+            this.crumbText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.crumbText.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // crumbsHome
+            // 
+            this.crumbsHome.BackColor = System.Drawing.Color.Transparent;
+            this.crumbsHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.crumbsHome.Enabled = false;
+            this.crumbsHome.FillColor = System.Drawing.Color.White;
+            this.crumbsHome.FillDisableColor = System.Drawing.Color.Transparent;
+            this.crumbsHome.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.crumbsHome.ForeColor = System.Drawing.Color.Black;
+            this.crumbsHome.Location = new System.Drawing.Point(4, 0);
+            this.crumbsHome.MinimumSize = new System.Drawing.Size(1, 1);
+            this.crumbsHome.Name = "crumbsHome";
+            this.crumbsHome.RectColor = System.Drawing.Color.Transparent;
+            this.crumbsHome.RectDisableColor = System.Drawing.Color.Transparent;
+            this.crumbsHome.Size = new System.Drawing.Size(206, 35);
+            this.crumbsHome.Style = Sunny.UI.UIStyle.Custom;
+            this.crumbsHome.Symbol = 57353;
+            this.crumbsHome.SymbolColor = System.Drawing.Color.Black;
+            this.crumbsHome.SymbolOffset = new System.Drawing.Point(5, 0);
+            this.crumbsHome.TabIndex = 20;
+            this.crumbsHome.Text = " / Form / Post Messgae";
+            this.crumbsHome.TipsFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.crumbsHome.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // UC_MessageWriter
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.crumbText);
+            this.Controls.Add(this.crumbsHome);
             this.Controls.Add(this.Container);
-            this.Controls.Add(this.urC_Crumbs1);
             this.Name = "UC_MessageWriter";
             this.Size = new System.Drawing.Size(1125, 720);
             this.Container.ResumeLayout(false);
@@ -168,8 +199,6 @@
         }
 
         #endregion
-
-        private Others.UrC_Crumbs urC_Crumbs1;
         private Sunny.UI.UIUserControl Container;
         private System.Windows.Forms.Label pageTitle;
         private Sunny.UI.UIRichTextBox textbox;
@@ -177,5 +206,7 @@
         private Sunny.UI.UIButton delect;
         private Sunny.UI.UILabel counter;
         private Sunny.UI.UIButton ok;
+        public Sunny.UI.UILabel crumbText;
+        public Sunny.UI.UISymbolButton crumbsHome;
     }
 }

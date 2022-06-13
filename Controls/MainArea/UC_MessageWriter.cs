@@ -15,7 +15,6 @@ namespace miniSys0._3.Controls.MainArea
         public UC_MessageWriter()
         {
             InitializeComponent();
-            InitCurmbs();
             InitCurrentNum();
             InitTheme();
         }
@@ -41,7 +40,9 @@ namespace miniSys0._3.Controls.MainArea
                 textbox.RectColor = Color.Transparent;
                 textbox.FillColor = Color.FromArgb(55, 55, 57);
 
-                
+                crumbsHome.ForeColor = Color.White;
+                crumbText.ForeColor = Color.White;
+
                 dynamic[] lable = { showMessageNum , counter, textbox , pageTitle };
                 foreach (var item in lable)
                 {
@@ -54,9 +55,11 @@ namespace miniSys0._3.Controls.MainArea
                 Container.BackColor = Color.White;
                 Container.FillColor = Color.White;
                 Container.RectColor = Color.Gainsboro;
-
                 textbox.RectColor = Color.Gainsboro;
                 textbox.FillColor = Color.White;
+
+                crumbsHome.ForeColor = Color.Black;
+                crumbText.ForeColor = Color.Black;
 
                 dynamic[] lable = { showMessageNum, counter, textbox, pageTitle };
                 foreach (var item in lable)
@@ -67,11 +70,6 @@ namespace miniSys0._3.Controls.MainArea
         }
 
 
-        private void InitCurmbs()
-        {
-            urC_Crumbs1.crumbText.Text = "Payment";
-            urC_Crumbs1.crumbsHome.Text = " / Form / Payment";
-        }
 
         private void textbox_TextChanged(object sender, EventArgs e)
         {

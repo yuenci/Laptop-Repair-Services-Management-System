@@ -222,6 +222,12 @@
     <Compile Include="Controls\Navmenu\UC_T_Navmenu.Designer.cs">
       <DependentUpon>UC_T_Navmenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Others\Price_Card.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Others\Price_Card.Designer.cs">
+      <DependentUpon>Price_Card.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Others\UC_BasicInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -480,6 +486,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Navmenu\UC_T_Navmenu.resx">
       <DependentUpon>UC_T_Navmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Others\Price_Card.resx">
+      <DependentUpon>Price_Card.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Others\UC_BasicInfo.resx">
       <DependentUpon>UC_BasicInfo.cs</DependentUpon>

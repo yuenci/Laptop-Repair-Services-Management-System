@@ -138,6 +138,12 @@ namespace miniSys0._3.Controls
                 addUserControl(uc);
                 Main.main.currentMainPage = "UC_IncomeAnalysis";
             }
+            else if (nodeSelect == "Price")
+            {
+                UC_PriceModify uc = new UC_PriceModify();
+                addUserControl(uc);
+                Main.main.currentMainPage = "Modify_price";
+            }
         }
     }
 }
