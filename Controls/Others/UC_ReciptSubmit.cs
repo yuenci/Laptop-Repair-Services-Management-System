@@ -252,12 +252,12 @@ namespace miniSys0._3.Controls.Others
 
         private int ifUrgent()
         {
-            if (switch1.ActiveText =="Yes")
+            if (switch1.Active ==false)
+            {
+                return  0;
+            }else if(switch1.Active == true)
             {
                 return 1;
-            }else if(switch1.ActiveText == "No")
-            {
-                return 0;
             }
             else
             {
@@ -272,13 +272,28 @@ namespace miniSys0._3.Controls.Others
             string serverID = index.ToString().PadLeft(3, '0');
             return serverID;
         }
-        
-        
+
         private int TotalPrice()
         {
-            int[,] pricelist = { { 50, 80 }, { 60, 90 }, { 380, 430 }, { 160, 200 },
-                                  {180,210 },{ 100,150},{80,130 },{ 70,100}
+            int[,] pricelist = 
+            { 
+                { 50, 80 }, { 60, 90 }, { 380, 430 }, { 160, 200 },
+                { 180,210 },{ 100,150},{80,130 },{ 70,100}
             };
+
+            string sql = "SELECT　Normal_fee, Urgent_fee FROM Service ORDER BY ServiceID;";
+            dynamic[] data = SQLCursor.Query(sql);
+            if (data.Length > 0)
+            {
+                for (int i = 0; i < data.Length; i++)
+                {
+                    pricelist[i,0] = int.Parse(data[i][0]);
+                    Console.WriteLine(pricelist[i, 0]);
+                    pricelist[i,1] = int.Parse(data[i][1]);
+                    Console.WriteLine(pricelist[i, 1]);
+                }
+            }
+
 
             int col = ifUrgent();
             int row = type.SelectedIndex;

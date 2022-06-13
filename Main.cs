@@ -214,6 +214,10 @@ namespace miniSys0._3
             {
                 add_UC_UserSetting();
             }
+            else if (homePage == "Message Writer")
+            {
+                add_post_system_message();
+            }
         }
         private void drag_down(object sender, MouseEventArgs e)
         {
@@ -699,6 +703,13 @@ namespace miniSys0._3
             addUserControlToMain(uc);
             currentMainPage = "UC_TaskList";
         }
+
+        public void add_post_system_message()
+        {
+            UC_MessageWriter uc = new UC_MessageWriter();
+            addUserControlToMain(uc);
+            currentMainPage = "post_system_message";
+        }
         #endregion
         private void uiSymbolButton3_Click(object sender, EventArgs e)
         {
@@ -724,7 +735,7 @@ namespace miniSys0._3
 
             lodaNewMainPage(currentMainPage); //reload main area controls
 
-            addNavMenu(); //reload main area controls
+            addNavMenu(); //reload nav controls
 
             InitOtherPageTheme(); // call search/message/setting InitTheme
             
@@ -810,6 +821,10 @@ namespace miniSys0._3
             else if (currentControlStr == ("UC_TaskList"))
             {
                 add_task_table();
+            }
+            else if(currentControlStr == ("post_system_message"))
+            {
+                add_post_system_message();
             }
         }
 

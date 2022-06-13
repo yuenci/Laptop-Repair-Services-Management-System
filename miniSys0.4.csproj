@@ -120,11 +120,23 @@
     <Compile Include="Controls\MainArea\UC_IncomeAnalysis.Designer.cs">
       <DependentUpon>UC_IncomeAnalysis.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\MainArea\UC_MessageWriter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MainArea\UC_MessageWriter.Designer.cs">
+      <DependentUpon>UC_MessageWriter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MainArea\UC_Payment.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\MainArea\UC_Payment.Designer.cs">
       <DependentUpon>UC_Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MainArea\UC_PriceModify.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MainArea\UC_PriceModify.Designer.cs">
+      <DependentUpon>UC_PriceModify.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\MainArea\UC_Registration .cs">
       <SubType>UserControl</SubType>
@@ -418,8 +430,14 @@
     <EmbeddedResource Include="Controls\MainArea\UC_IncomeAnalysis.resx">
       <DependentUpon>UC_IncomeAnalysis.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MainArea\UC_MessageWriter.resx">
+      <DependentUpon>UC_MessageWriter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\MainArea\UC_Payment.resx">
       <DependentUpon>UC_Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MainArea\UC_PriceModify.resx">
+      <DependentUpon>UC_PriceModify.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\MainArea\UC_Registration .resx">
       <DependentUpon>UC_Registration .cs</DependentUpon>

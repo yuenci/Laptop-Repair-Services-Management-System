@@ -120,6 +120,12 @@ namespace miniSys0._3.Controls
                 addUserControl(uc);
                 Main.main.currentMainPage = "UC_Registration";
             }
+            else if (nodeSelect == "Post")
+            {
+                UC_MessageWriter uc = new UC_MessageWriter();
+                addUserControl(uc);
+                Main.main.currentMainPage = "post_system_message";
+            }
             else if (nodeSelect == "Service report")
             {
                 UC_ServiceReport uc = new UC_ServiceReport();
