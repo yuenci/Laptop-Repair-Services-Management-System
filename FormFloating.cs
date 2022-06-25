@@ -90,7 +90,6 @@ namespace miniSys0._3
 
         private void logoutButton2_Click(object sender, EventArgs e)
         {
-
             //UC_main.WebBrowser.Dispose();
             //UC_main.WebBrowser1.GetBrowser().CloseBrowser(true);
             //UC_main.WebBrowser1.Dispose();
@@ -111,6 +110,15 @@ namespace miniSys0._3
                 icon.Size = new Size(84, 84);
                 icon.AvatarSize = 84;
                 icon.Location = new Point(82, 9);
+            }
+
+            if (User_type.user_deparment != "Customer")
+            {
+                userPost.Text = User_type.user_post + " | " + User_type.user_ID;
+            }
+            else
+            {
+                userPost.Text = User_type.user_ID;
             }
         }
 

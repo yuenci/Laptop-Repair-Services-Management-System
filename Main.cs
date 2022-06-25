@@ -987,9 +987,10 @@ namespace miniSys0._3
             }
             else if (messageBox_instance.Visible == false)
             {
-                messageBox_instance.Init(messagesList);
-
+                checkMessage();
                 hideOtherControls();
+
+                messageBox_instance.Init(messagesList);
                 messageBox_instance.Visible = true;
 
 

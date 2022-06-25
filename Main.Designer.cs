@@ -52,9 +52,11 @@
             this.restart = new System.Windows.Forms.ToolStripMenuItem();
             this.logout = new System.Windows.Forms.ToolStripMenuItem();
             this.exist = new System.Windows.Forms.ToolStripMenuItem();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.uiUserControl1.SuspendLayout();
+            this.mainPanel.SuspendLayout();
             this.ContextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -126,7 +128,7 @@
             this.searchIcon.Symbol = 61442;
             this.searchIcon.SymbolColor = System.Drawing.Color.Black;
             this.searchIcon.SymbolHoverColor = System.Drawing.Color.Black;
-            this.searchIcon.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.searchIcon.TipsFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.searchIcon.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.searchIcon.Click += new System.EventHandler(this.searchIcon_Click);
             // 
@@ -147,7 +149,7 @@
             this.swithTheme.Symbol = 61506;
             this.swithTheme.SymbolColor = System.Drawing.Color.Black;
             this.swithTheme.SymbolHoverColor = System.Drawing.Color.Black;
-            this.swithTheme.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.swithTheme.TipsFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.swithTheme.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.swithTheme.Click += new System.EventHandler(this.uiSymbolButton3_Click);
             // 
@@ -168,7 +170,7 @@
             this.message.Symbol = 61683;
             this.message.SymbolColor = System.Drawing.Color.Black;
             this.message.SymbolHoverColor = System.Drawing.Color.Black;
-            this.message.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.message.TipsFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.message.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.message.Click += new System.EventHandler(this.uiSymbolButton2_Click);
             // 
@@ -189,7 +191,7 @@
             this.uiSymbolButton1.Symbol = 57399;
             this.uiSymbolButton1.SymbolColor = System.Drawing.Color.Black;
             this.uiSymbolButton1.SymbolHoverColor = System.Drawing.Color.Black;
-            this.uiSymbolButton1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiSymbolButton1.TipsFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiSymbolButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.uiSymbolButton1.Click += new System.EventHandler(this.uiSymbolButton1_Click);
             // 
@@ -237,6 +239,7 @@
             // 
             // mainPanel
             // 
+            this.mainPanel.Controls.Add(this.webBrowser1);
             resources.ApplyResources(this.mainPanel, "mainPanel");
             this.mainPanel.Name = "mainPanel";
             // 
@@ -295,6 +298,11 @@
             resources.ApplyResources(this.exist, "exist");
             this.exist.Click += new System.EventHandler(this.exist_Click);
             // 
+            // webBrowser1
+            // 
+            resources.ApplyResources(this.webBrowser1, "webBrowser1");
+            this.webBrowser1.Name = "webBrowser1";
+            // 
             // Main
             // 
             resources.ApplyResources(this, "$this");
@@ -311,6 +319,7 @@
             this.panelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.uiUserControl1.ResumeLayout(false);
+            this.mainPanel.ResumeLayout(false);
             this.ContextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -340,5 +349,6 @@
         private System.Windows.Forms.ToolStripMenuItem restart;
         private System.Windows.Forms.ToolStripMenuItem logout;
         private System.Windows.Forms.ToolStripMenuItem exist;
+        private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }

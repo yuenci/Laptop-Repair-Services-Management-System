@@ -19,6 +19,7 @@ namespace miniSys0._3
         {
             InitializeComponent();
             InitTheme();
+           
         }
         private void InitTheme()
         {
@@ -53,7 +54,17 @@ namespace miniSys0._3
                 }
             }
         }
-
+        private void ifDeleteShow()
+        {
+            if (User_type.user_deparment == "Receptionist")
+            {
+                delectBtn.Show();
+            }
+            else
+            {
+                delectBtn.Hide();
+            }
+        }
         
         public void Init(string orderId)
         {
@@ -232,6 +243,22 @@ namespace miniSys0._3
             country.Text = data[2];
             address.Text = data[3];
             regtime.Text = data[4];
+        }
+
+        private void delectBtn_Click(object sender, EventArgs e)
+        {
+
+            DialogResult Asterisk = System.Windows.Forms.MessageBox.Show("Do you want delete this order?",
+                                 "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+            if (Asterisk == DialogResult.OK)
+            {
+                string sql = $"DELETE FROM Orders WHERE OrderID ='{orderIDCache}'" +
+                   $"DELETE FROM Schedule WHERE OrderID ='{orderIDCache}'";
+
+                NotificationForm messageBoxForm = new NotificationForm("success", "Delete successfully");
+                messageBoxForm.ShowDialog();
+            }
+               
         }
     }
     

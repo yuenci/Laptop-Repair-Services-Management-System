@@ -75,6 +75,7 @@
             this.uiLabel23 = new Sunny.UI.UILabel();
             this.uiLabel22 = new Sunny.UI.UILabel();
             this.uiLabel21 = new Sunny.UI.UILabel();
+            this.delectBtn = new Sunny.UI.UIButton();
             this.uiUserControl1.SuspendLayout();
             this.uiUserControl2.SuspendLayout();
             this.uiUserControl3.SuspendLayout();
@@ -386,7 +387,6 @@
             // line2
             // 
             this.line2.BackColor = System.Drawing.Color.Transparent;
-            this.line2.FillColor = System.Drawing.Color.Transparent;
             this.line2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.line2.Location = new System.Drawing.Point(345, 44);
             this.line2.MinimumSize = new System.Drawing.Size(1, 1);
@@ -411,7 +411,6 @@
             // line3
             // 
             this.line3.BackColor = System.Drawing.Color.Transparent;
-            this.line3.FillColor = System.Drawing.Color.Transparent;
             this.line3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.line3.Location = new System.Drawing.Point(575, 45);
             this.line3.MinimumSize = new System.Drawing.Size(1, 1);
@@ -424,7 +423,6 @@
             // line1
             // 
             this.line1.BackColor = System.Drawing.Color.Transparent;
-            this.line1.FillColor = System.Drawing.Color.Transparent;
             this.line1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.line1.Location = new System.Drawing.Point(119, 45);
             this.line1.MinimumSize = new System.Drawing.Size(1, 1);
@@ -529,6 +527,7 @@
             // uiUserControl3
             // 
             this.uiUserControl3.BackColor = System.Drawing.Color.White;
+            this.uiUserControl3.Controls.Add(this.delectBtn);
             this.uiUserControl3.Controls.Add(this.regtime);
             this.uiUserControl3.Controls.Add(this.address);
             this.uiUserControl3.Controls.Add(this.country);
@@ -711,6 +710,29 @@
             this.uiLabel21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiLabel21.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // delectBtn
+            // 
+            this.delectBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.delectBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
+            this.delectBtn.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(101)))), ((int)(((byte)(96)))));
+            this.delectBtn.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(101)))), ((int)(((byte)(96)))));
+            this.delectBtn.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(101)))), ((int)(((byte)(96)))));
+            this.delectBtn.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold);
+            this.delectBtn.Location = new System.Drawing.Point(761, 117);
+            this.delectBtn.MinimumSize = new System.Drawing.Size(1, 1);
+            this.delectBtn.Name = "delectBtn";
+            this.delectBtn.RectColor = System.Drawing.Color.Transparent;
+            this.delectBtn.RectHoverColor = System.Drawing.Color.Transparent;
+            this.delectBtn.RectPressColor = System.Drawing.Color.Transparent;
+            this.delectBtn.RectSelectedColor = System.Drawing.Color.Transparent;
+            this.delectBtn.Size = new System.Drawing.Size(100, 35);
+            this.delectBtn.Style = Sunny.UI.UIStyle.Custom;
+            this.delectBtn.TabIndex = 30;
+            this.delectBtn.Text = "Delect";
+            this.delectBtn.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.delectBtn.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.delectBtn.Click += new System.EventHandler(this.delectBtn_Click);
+            // 
             // OrderDetails
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -782,5 +804,6 @@
         private Sunny.UI.UILabel email;
         private Sunny.UI.UILabel phone;
         private Sunny.UI.UILabel name;
+        private Sunny.UI.UIButton delectBtn;
     }
 }
