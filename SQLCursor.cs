@@ -496,5 +496,27 @@ namespace miniSys0._3
                return null;
             }
         }
+
+        public static string GetServicePriceFromOrderID(string OrderID)
+        {
+            string sql;
+
+            string urgent = SQLCursor.Query($"SELECT Urgent FROM Orders WHERE  OrderID  = '{OrderID}';")[0];
+
+            if (urgent == "0")
+            {
+                sql = "SELECT Service.Normal_fee FROM Orders" +
+                        "INNER JOIN Service ON Orders.Service_type = Service.ServiceID" +
+                        $"WHERE Orders.OrderID = '{OrderID}';";
+                return Query(sql)[0];
+            }
+            else
+            {
+                sql = "SELECT Service.Normal_fee FROM Orders" +
+                        "INNER JOIN Service ON Orders.Service_type = Service.ServiceID" +
+                        $"WHERE Orders.OrderID = '{OrderID}';";
+                return Query(sql)[0];
+            }
+        }
     }
 }

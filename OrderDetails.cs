@@ -58,11 +58,11 @@ namespace miniSys0._3
         {
             if (User_type.user_deparment == "Receptionist")
             {
-                delectBtn.Show();
+                finishBtn.Show();
             }
             else
             {
-                delectBtn.Hide();
+                finishBtn.Hide();
             }
         }
         
@@ -259,6 +259,33 @@ namespace miniSys0._3
                 messageBoxForm.ShowDialog();
             }
                
+        }
+
+        private void finishBtn_Click(object sender, EventArgs e)
+        {
+            //orderIDCache
+            string sql = $"SELECT Price FROM Orders WHERE  OrderID  = '{orderIDCache}';";
+            dynamic[] data = SQLCursor.Query(sql);
+
+            string CurrentPrice = data[0];
+
+            string ServicePrice = SQLCursor.GetServicePriceFromOrderID(orderIDCache);
+
+            if (CurrentPrice == ServicePrice)
+            {
+                NotificationForm messageBoxForm = new NotificationForm("success", "Finish successfully");
+                messageBoxForm.ShowDialog();
+            }
+            else
+            {
+                DialogResult Asterisk = System.Windows.Forms.MessageBox.Show("Service type and price do not match. Are you sure you want to end the order?",
+                                "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+                if (Asterisk == DialogResult.OK)
+                {
+                    NotificationForm messageBoxForm = new NotificationForm("success", "Finish successfully");
+                    messageBoxForm.ShowDialog();
+                }
+            }
         }
     }
     

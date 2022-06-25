@@ -30,24 +30,23 @@
         {
             this.dateTIme = new Sunny.UI.UIComboBox();
             this.uiUserControl1 = new Sunny.UI.UIUserControl();
+            this.maxLabel = new Sunny.UI.UILabel();
+            this.aveLabel = new Sunny.UI.UILabel();
+            this.totalLabel = new Sunny.UI.UILabel();
+            this.uiLabel3 = new Sunny.UI.UILabel();
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.uiLabel2 = new Sunny.UI.UILabel();
-            this.uiLabel3 = new Sunny.UI.UILabel();
-            this.uiLabel4 = new Sunny.UI.UILabel();
-            this.uiLabel5 = new Sunny.UI.UILabel();
-            this.uiLabel6 = new Sunny.UI.UILabel();
-            this.uiUserControl2 = new Sunny.UI.UIUserControl();
-            this.serviceType = new Sunny.UI.UIComboBox();
+            this.reportContainer = new Sunny.UI.UIUserControl();
+            this.caedsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.order = new Sunny.UI.UIComboBox();
-            this.uC_ReportTable_card1 = new miniSys0._3.Controls.Others.UC_ReportTable_card();
+            this.serviceType = new Sunny.UI.UIComboBox();
             this.uiUserControl1.SuspendLayout();
-            this.uiUserControl2.SuspendLayout();
+            this.reportContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // dateTIme
             // 
             this.dateTIme.DataSource = null;
-            this.dateTIme.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.dateTIme.FillColor = System.Drawing.Color.White;
             this.dateTIme.FilterMaxCount = 50;
             this.dateTIme.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -62,16 +61,17 @@
             this.dateTIme.Text = "2022";
             this.dateTIme.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.dateTIme.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.dateTIme.DropDownClosed += new System.EventHandler(this.dateTIme_DropDownClosed);
             // 
             // uiUserControl1
             // 
             this.uiUserControl1.BackColor = System.Drawing.Color.White;
-            this.uiUserControl1.Controls.Add(this.uiLabel4);
-            this.uiUserControl1.Controls.Add(this.uiLabel5);
-            this.uiUserControl1.Controls.Add(this.uiLabel6);
+            this.uiUserControl1.Controls.Add(this.maxLabel);
+            this.uiUserControl1.Controls.Add(this.aveLabel);
+            this.uiUserControl1.Controls.Add(this.totalLabel);
             this.uiUserControl1.Controls.Add(this.uiLabel3);
-            this.uiUserControl1.Controls.Add(this.uiLabel2);
             this.uiUserControl1.Controls.Add(this.uiLabel1);
+            this.uiUserControl1.Controls.Add(this.uiLabel2);
             this.uiUserControl1.FillColor = System.Drawing.Color.White;
             this.uiUserControl1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiUserControl1.Location = new System.Drawing.Point(30, 31);
@@ -85,39 +85,49 @@
             this.uiUserControl1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiUserControl1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiLabel1
+            // maxLabel
             // 
-            this.uiLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.uiLabel1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.uiLabel1.Location = new System.Drawing.Point(429, 15);
-            this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(197, 23);
-            this.uiLabel1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel1.TabIndex = 0;
-            this.uiLabel1.Text = "Total service quantity";
-            this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiLabel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.maxLabel.BackColor = System.Drawing.Color.Transparent;
+            this.maxLabel.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.maxLabel.Location = new System.Drawing.Point(714, 53);
+            this.maxLabel.Name = "maxLabel";
+            this.maxLabel.Size = new System.Drawing.Size(297, 43);
+            this.maxLabel.Style = Sunny.UI.UIStyle.Custom;
+            this.maxLabel.TabIndex = 5;
+            this.maxLabel.Text = "100";
+            this.maxLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.maxLabel.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiLabel2
+            // aveLabel
             // 
-            this.uiLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.uiLabel2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.uiLabel2.Location = new System.Drawing.Point(23, 15);
-            this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(318, 23);
-            this.uiLabel2.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel2.TabIndex = 1;
-            this.uiLabel2.Text = "Average monthly service quantity";
-            this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiLabel2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.aveLabel.BackColor = System.Drawing.Color.Transparent;
+            this.aveLabel.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.aveLabel.Location = new System.Drawing.Point(23, 53);
+            this.aveLabel.Name = "aveLabel";
+            this.aveLabel.Size = new System.Drawing.Size(318, 43);
+            this.aveLabel.Style = Sunny.UI.UIStyle.Custom;
+            this.aveLabel.TabIndex = 4;
+            this.aveLabel.Text = "100";
+            this.aveLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.aveLabel.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // totalLabel
+            // 
+            this.totalLabel.BackColor = System.Drawing.Color.Transparent;
+            this.totalLabel.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.totalLabel.Location = new System.Drawing.Point(429, 53);
+            this.totalLabel.Name = "totalLabel";
+            this.totalLabel.Size = new System.Drawing.Size(197, 43);
+            this.totalLabel.Style = Sunny.UI.UIStyle.Custom;
+            this.totalLabel.TabIndex = 3;
+            this.totalLabel.Text = "100";
+            this.totalLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.totalLabel.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiLabel3
             // 
             this.uiLabel3.BackColor = System.Drawing.Color.Transparent;
             this.uiLabel3.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
             this.uiLabel3.Location = new System.Drawing.Point(714, 15);
             this.uiLabel3.Name = "uiLabel3";
             this.uiLabel3.Size = new System.Drawing.Size(297, 23);
@@ -127,96 +137,60 @@
             this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiLabel3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiLabel4
+            // uiLabel1
             // 
-            this.uiLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.uiLabel4.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel4.ForeColor = System.Drawing.Color.Black;
-            this.uiLabel4.Location = new System.Drawing.Point(714, 53);
-            this.uiLabel4.Name = "uiLabel4";
-            this.uiLabel4.Size = new System.Drawing.Size(297, 43);
-            this.uiLabel4.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel4.TabIndex = 5;
-            this.uiLabel4.Text = "100";
-            this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiLabel4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.uiLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.uiLabel1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel1.Location = new System.Drawing.Point(23, 15);
+            this.uiLabel1.Name = "uiLabel1";
+            this.uiLabel1.Size = new System.Drawing.Size(318, 23);
+            this.uiLabel1.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel1.TabIndex = 1;
+            this.uiLabel1.Text = "Average monthly service quantity";
+            this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiLabel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiLabel5
+            // uiLabel2
             // 
-            this.uiLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.uiLabel5.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel5.ForeColor = System.Drawing.Color.Black;
-            this.uiLabel5.Location = new System.Drawing.Point(23, 53);
-            this.uiLabel5.Name = "uiLabel5";
-            this.uiLabel5.Size = new System.Drawing.Size(318, 43);
-            this.uiLabel5.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel5.TabIndex = 4;
-            this.uiLabel5.Text = "100";
-            this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiLabel5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.uiLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.uiLabel2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel2.Location = new System.Drawing.Point(429, 15);
+            this.uiLabel2.Name = "uiLabel2";
+            this.uiLabel2.Size = new System.Drawing.Size(197, 23);
+            this.uiLabel2.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel2.TabIndex = 0;
+            this.uiLabel2.Text = "Total service quantity";
+            this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiLabel2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiLabel6
+            // reportContainer
             // 
-            this.uiLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.uiLabel6.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel6.ForeColor = System.Drawing.Color.Black;
-            this.uiLabel6.Location = new System.Drawing.Point(429, 53);
-            this.uiLabel6.Name = "uiLabel6";
-            this.uiLabel6.Size = new System.Drawing.Size(197, 43);
-            this.uiLabel6.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel6.TabIndex = 3;
-            this.uiLabel6.Text = "100";
-            this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiLabel6.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.reportContainer.BackColor = System.Drawing.Color.White;
+            this.reportContainer.Controls.Add(this.caedsPanel);
+            this.reportContainer.Controls.Add(this.order);
+            this.reportContainer.Controls.Add(this.serviceType);
+            this.reportContainer.Controls.Add(this.dateTIme);
+            this.reportContainer.FillColor = System.Drawing.Color.White;
+            this.reportContainer.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.reportContainer.Location = new System.Drawing.Point(30, 175);
+            this.reportContainer.MinimumSize = new System.Drawing.Size(1, 1);
+            this.reportContainer.Name = "reportContainer";
+            this.reportContainer.RectColor = System.Drawing.Color.Gainsboro;
+            this.reportContainer.Size = new System.Drawing.Size(1055, 476);
+            this.reportContainer.Style = Sunny.UI.UIStyle.Custom;
+            this.reportContainer.TabIndex = 6;
+            this.reportContainer.Text = "uiUserControl2";
+            this.reportContainer.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.reportContainer.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiUserControl2
+            // caedsPanel
             // 
-            this.uiUserControl2.BackColor = System.Drawing.Color.White;
-            this.uiUserControl2.Controls.Add(this.uC_ReportTable_card1);
-            this.uiUserControl2.Controls.Add(this.order);
-            this.uiUserControl2.Controls.Add(this.serviceType);
-            this.uiUserControl2.Controls.Add(this.dateTIme);
-            this.uiUserControl2.FillColor = System.Drawing.Color.White;
-            this.uiUserControl2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiUserControl2.Location = new System.Drawing.Point(30, 175);
-            this.uiUserControl2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiUserControl2.Name = "uiUserControl2";
-            this.uiUserControl2.RectColor = System.Drawing.Color.Gainsboro;
-            this.uiUserControl2.Size = new System.Drawing.Size(1055, 476);
-            this.uiUserControl2.Style = Sunny.UI.UIStyle.Custom;
-            this.uiUserControl2.TabIndex = 6;
-            this.uiUserControl2.Text = "uiUserControl2";
-            this.uiUserControl2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiUserControl2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // serviceType
-            // 
-            this.serviceType.DataSource = null;
-            this.serviceType.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
-            this.serviceType.FillColor = System.Drawing.Color.White;
-            this.serviceType.FilterMaxCount = 50;
-            this.serviceType.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.serviceType.Items.AddRange(new object[] {
-            "All",
-            "Remove virus, malware or spyware",
-            "Troubleshot and fix computer running slow",
-            "Laptop screen replacement",
-            "Laptop keyboard replacement",
-            "Laptop battery replacement",
-            "Operating System Format and Installation",
-            "Data backup and recovery",
-            "Internet connectivity issues"});
-            this.serviceType.Location = new System.Drawing.Point(505, 24);
-            this.serviceType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.serviceType.MinimumSize = new System.Drawing.Size(63, 0);
-            this.serviceType.Name = "serviceType";
-            this.serviceType.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.serviceType.Size = new System.Drawing.Size(172, 29);
-            this.serviceType.Style = Sunny.UI.UIStyle.Custom;
-            this.serviceType.TabIndex = 1;
-            this.serviceType.Text = "All";
-            this.serviceType.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.serviceType.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.caedsPanel.AutoScroll = true;
+            this.caedsPanel.BackColor = System.Drawing.Color.Transparent;
+            this.caedsPanel.Location = new System.Drawing.Point(29, 61);
+            this.caedsPanel.Name = "caedsPanel";
+            this.caedsPanel.Size = new System.Drawing.Size(1006, 412);
+            this.caedsPanel.TabIndex = 2;
             // 
             // order
             // 
@@ -241,25 +215,49 @@
             this.order.Text = "Month Ascending";
             this.order.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.order.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.order.DropDownClosed += new System.EventHandler(this.order_DropDownClosed);
             // 
-            // uC_ReportTable_card1
+            // serviceType
             // 
-            this.uC_ReportTable_card1.BackColor = System.Drawing.Color.Gainsboro;
-            this.uC_ReportTable_card1.Location = new System.Drawing.Point(40, 70);
-            this.uC_ReportTable_card1.Name = "uC_ReportTable_card1";
-            this.uC_ReportTable_card1.Size = new System.Drawing.Size(973, 50);
-            this.uC_ReportTable_card1.TabIndex = 2;
+            this.serviceType.DataSource = null;
+            this.serviceType.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
+            this.serviceType.DropDownWidth = 300;
+            this.serviceType.FillColor = System.Drawing.Color.White;
+            this.serviceType.FilterMaxCount = 50;
+            this.serviceType.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.serviceType.Items.AddRange(new object[] {
+            "All",
+            "Remove virus, malware or spyware",
+            "Troubleshot and fix computer running slow",
+            "Laptop screen replacement",
+            "Laptop keyboard replacement",
+            "Laptop battery replacement",
+            "Operating System Format and Installation",
+            "Data backup and recovery",
+            "Internet connectivity issues"});
+            this.serviceType.Location = new System.Drawing.Point(334, 24);
+            this.serviceType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.serviceType.MinimumSize = new System.Drawing.Size(63, 0);
+            this.serviceType.Name = "serviceType";
+            this.serviceType.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.serviceType.Size = new System.Drawing.Size(343, 29);
+            this.serviceType.Style = Sunny.UI.UIStyle.Custom;
+            this.serviceType.TabIndex = 1;
+            this.serviceType.Text = "All";
+            this.serviceType.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.serviceType.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.serviceType.DropDownClosed += new System.EventHandler(this.serviceType_DropDownClosed);
             // 
             // UC_Report_table
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.uiUserControl2);
+            this.Controls.Add(this.reportContainer);
             this.Controls.Add(this.uiUserControl1);
             this.Name = "UC_Report_table";
             this.Size = new System.Drawing.Size(1125, 675);
             this.uiUserControl1.ResumeLayout(false);
-            this.uiUserControl2.ResumeLayout(false);
+            this.reportContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -268,15 +266,15 @@
 
         private Sunny.UI.UIComboBox dateTIme;
         private Sunny.UI.UIUserControl uiUserControl1;
-        private Sunny.UI.UILabel uiLabel4;
-        private Sunny.UI.UILabel uiLabel5;
-        private Sunny.UI.UILabel uiLabel6;
+        private Sunny.UI.UILabel maxLabel;
+        private Sunny.UI.UILabel aveLabel;
+        private Sunny.UI.UILabel totalLabel;
         private Sunny.UI.UILabel uiLabel3;
-        private Sunny.UI.UILabel uiLabel2;
         private Sunny.UI.UILabel uiLabel1;
-        private Sunny.UI.UIUserControl uiUserControl2;
+        private Sunny.UI.UILabel uiLabel2;
+        private Sunny.UI.UIUserControl reportContainer;
         private Sunny.UI.UIComboBox order;
         private Sunny.UI.UIComboBox serviceType;
-        private UC_ReportTable_card uC_ReportTable_card1;
+        private System.Windows.Forms.FlowLayoutPanel caedsPanel;
     }
 }

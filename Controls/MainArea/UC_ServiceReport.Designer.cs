@@ -28,18 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.urC_Crumbs1 = new miniSys0._3.Controls.Others.UrC_Crumbs();
             this.chartPanel = new System.Windows.Forms.Panel();
             this.refreshlButton2 = new Sunny.UI.UISymbolButton();
+            this.urC_Crumbs1 = new miniSys0._3.Controls.Others.UrC_Crumbs();
+            this.ok = new Sunny.UI.UIButton();
             this.SuspendLayout();
-            // 
-            // urC_Crumbs1
-            // 
-            this.urC_Crumbs1.BackColor = System.Drawing.SystemColors.Control;
-            this.urC_Crumbs1.Location = new System.Drawing.Point(3, 3);
-            this.urC_Crumbs1.Name = "urC_Crumbs1";
-            this.urC_Crumbs1.Size = new System.Drawing.Size(278, 35);
-            this.urC_Crumbs1.TabIndex = 0;
             // 
             // chartPanel
             // 
@@ -71,11 +64,42 @@
             this.refreshlButton2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.refreshlButton2.Click += new System.EventHandler(this.refreshlButton2_Click);
             // 
+            // urC_Crumbs1
+            // 
+            this.urC_Crumbs1.BackColor = System.Drawing.SystemColors.Control;
+            this.urC_Crumbs1.Location = new System.Drawing.Point(3, 3);
+            this.urC_Crumbs1.Name = "urC_Crumbs1";
+            this.urC_Crumbs1.Size = new System.Drawing.Size(278, 35);
+            this.urC_Crumbs1.TabIndex = 0;
+            // 
+            // ok
+            // 
+            this.ok.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ok.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
+            this.ok.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.ok.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.ok.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold);
+            this.ok.Location = new System.Drawing.Point(967, 4);
+            this.ok.MinimumSize = new System.Drawing.Size(1, 1);
+            this.ok.Name = "ok";
+            this.ok.RectColor = System.Drawing.Color.Transparent;
+            this.ok.RectHoverColor = System.Drawing.Color.Transparent;
+            this.ok.RectPressColor = System.Drawing.Color.Transparent;
+            this.ok.RectSelectedColor = System.Drawing.Color.Transparent;
+            this.ok.Size = new System.Drawing.Size(100, 35);
+            this.ok.Style = Sunny.UI.UIStyle.Custom;
+            this.ok.TabIndex = 4;
+            this.ok.Text = "Table view";
+            this.ok.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ok.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.ok.Click += new System.EventHandler(this.ok_Click);
+            // 
             // UC_ServiceReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(250)))));
+            this.Controls.Add(this.ok);
             this.Controls.Add(this.refreshlButton2);
             this.Controls.Add(this.chartPanel);
             this.Controls.Add(this.urC_Crumbs1);
@@ -90,5 +114,6 @@
         private Others.UrC_Crumbs urC_Crumbs1;
         private System.Windows.Forms.Panel chartPanel;
         private Sunny.UI.UISymbolButton refreshlButton2;
+        private Sunny.UI.UIButton ok;
     }
 }

@@ -32,11 +32,11 @@ namespace miniSys0._3
         //customer
         //customer
         //public static string user_deparment = "Customer";
-        public static string user_ID = "Cus000002";
+        //public static string user_ID = "Cus000002";
 
         //staff
         public static string user_deparment = "Admin";
-        //public static string user_ID = "Sta000001";
+        public static string user_ID = "Sta000000";
 
         //public static string user_ID = "Sta000011";
         //public static string user_ID = "Sta000052";

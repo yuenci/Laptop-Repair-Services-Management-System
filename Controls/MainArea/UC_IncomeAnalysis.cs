@@ -1,4 +1,5 @@
 ﻿using CefSharp.WinForms;
+using miniSys0._3.Controls.Others;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -65,6 +66,7 @@ namespace miniSys0._3.Controls.MainArea
         
         private void InitCef()
         {
+            this.chartPanel.Controls.Clear();
             string path = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin")) + 
                 $"Html\\adminIncomeAnalysis.html";
             WebBrowserIA = new ChromiumWebBrowser(path);
@@ -381,6 +383,37 @@ namespace miniSys0._3.Controls.MainArea
                 result += "'" + array[i] +"'" + ",";
             }
             return result + "]";
+        }
+
+        private void ok_Click(object sender, EventArgs e)
+        {
+            if (ok.Text == "Table view")
+            {
+                ok.Text = "Chart view";
+                InitTable();
+            }
+            else if (ok.Text == "Chart view")
+            {
+                ok.Text = "Table view";
+                InitCef();
+            }
+
+
+        }
+
+        private void InitTable()
+        {
+            chartPanel.Controls.Clear();
+            if (Main.main.currentMainPage == "UC_ServiceReport")
+            {
+                UC_Report_table uC_Report_table = new UC_Report_table("service");
+                chartPanel.Controls.Add(uC_Report_table);
+            }
+            else if (Main.main.currentMainPage == "UC_IncomeAnalysis")
+            {
+                UC_Report_table uC_Report_table = new UC_Report_table("income");
+                chartPanel.Controls.Add(uC_Report_table);
+            }
         }
     }
 }

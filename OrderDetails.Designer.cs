@@ -62,6 +62,7 @@
             this.dot2 = new Sunny.UI.UIAvatar();
             this.dot1 = new Sunny.UI.UIAvatar();
             this.uiUserControl3 = new Sunny.UI.UIUserControl();
+            this.finishBtn = new Sunny.UI.UIButton();
             this.regtime = new Sunny.UI.UILabel();
             this.address = new Sunny.UI.UILabel();
             this.country = new Sunny.UI.UILabel();
@@ -528,6 +529,7 @@
             // 
             this.uiUserControl3.BackColor = System.Drawing.Color.White;
             this.uiUserControl3.Controls.Add(this.delectBtn);
+            this.uiUserControl3.Controls.Add(this.finishBtn);
             this.uiUserControl3.Controls.Add(this.regtime);
             this.uiUserControl3.Controls.Add(this.address);
             this.uiUserControl3.Controls.Add(this.country);
@@ -553,6 +555,24 @@
             this.uiUserControl3.Text = "uiUserControl3";
             this.uiUserControl3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiUserControl3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // finishBtn
+            // 
+            this.finishBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.finishBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
+            this.finishBtn.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.finishBtn.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.finishBtn.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold);
+            this.finishBtn.Location = new System.Drawing.Point(761, 117);
+            this.finishBtn.MinimumSize = new System.Drawing.Size(1, 1);
+            this.finishBtn.Name = "finishBtn";
+            this.finishBtn.Size = new System.Drawing.Size(100, 35);
+            this.finishBtn.Style = Sunny.UI.UIStyle.Custom;
+            this.finishBtn.TabIndex = 30;
+            this.finishBtn.Text = "Finish";
+            this.finishBtn.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.finishBtn.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.finishBtn.Click += new System.EventHandler(this.finishBtn_Click);
             // 
             // regtime
             // 
@@ -716,18 +736,13 @@
             this.delectBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
             this.delectBtn.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(101)))), ((int)(((byte)(96)))));
             this.delectBtn.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(101)))), ((int)(((byte)(96)))));
-            this.delectBtn.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(101)))), ((int)(((byte)(96)))));
             this.delectBtn.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold);
-            this.delectBtn.Location = new System.Drawing.Point(761, 117);
+            this.delectBtn.Location = new System.Drawing.Point(761, 67);
             this.delectBtn.MinimumSize = new System.Drawing.Size(1, 1);
             this.delectBtn.Name = "delectBtn";
-            this.delectBtn.RectColor = System.Drawing.Color.Transparent;
-            this.delectBtn.RectHoverColor = System.Drawing.Color.Transparent;
-            this.delectBtn.RectPressColor = System.Drawing.Color.Transparent;
-            this.delectBtn.RectSelectedColor = System.Drawing.Color.Transparent;
             this.delectBtn.Size = new System.Drawing.Size(100, 35);
             this.delectBtn.Style = Sunny.UI.UIStyle.Custom;
-            this.delectBtn.TabIndex = 30;
+            this.delectBtn.TabIndex = 31;
             this.delectBtn.Text = "Delect";
             this.delectBtn.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.delectBtn.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -804,6 +819,7 @@
         private Sunny.UI.UILabel email;
         private Sunny.UI.UILabel phone;
         private Sunny.UI.UILabel name;
+        private Sunny.UI.UIButton finishBtn;
         private Sunny.UI.UIButton delectBtn;
     }
 }

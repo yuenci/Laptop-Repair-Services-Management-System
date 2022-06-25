@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ProcessBar = new Sunny.UI.UIProcessBar();
             this.uiAvatar1 = new Sunny.UI.UIAvatar();
             this.ratio = new Sunny.UI.UILabel();
             this.dataTime = new Sunny.UI.UILabel();
             this.quantity = new Sunny.UI.UILabel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // ProcessBar
@@ -53,6 +55,7 @@
             // 
             // uiAvatar1
             // 
+            this.uiAvatar1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiAvatar1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiAvatar1.Icon = Sunny.UI.UIAvatar.UIIcon.Text;
             this.uiAvatar1.Location = new System.Drawing.Point(14, 3);
@@ -64,6 +67,7 @@
             this.uiAvatar1.TabIndex = 4;
             this.uiAvatar1.Text = "abcd";
             this.uiAvatar1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.uiAvatar1.MouseHover += new System.EventHandler(this.uiAvatar1_MouseHover);
             // 
             // ratio
             // 
@@ -95,9 +99,9 @@
             // 
             this.quantity.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.quantity.ForeColor = System.Drawing.Color.Black;
-            this.quantity.Location = new System.Drawing.Point(388, 14);
+            this.quantity.Location = new System.Drawing.Point(352, 14);
             this.quantity.Name = "quantity";
-            this.quantity.Size = new System.Drawing.Size(93, 23);
+            this.quantity.Size = new System.Drawing.Size(167, 23);
             this.quantity.Style = Sunny.UI.UIStyle.Custom;
             this.quantity.TabIndex = 7;
             this.quantity.Text = "1000";
@@ -125,5 +129,6 @@
         private Sunny.UI.UILabel ratio;
         private Sunny.UI.UILabel dataTime;
         private Sunny.UI.UILabel quantity;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

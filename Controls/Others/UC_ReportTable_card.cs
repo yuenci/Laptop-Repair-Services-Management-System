@@ -20,9 +20,11 @@ namespace miniSys0._3.Controls.Others
         {
             InitializeComponent();
             InitTheme();
+
         }
         private void InitTheme()
         {
+            uiAvatar1.ForeColor = Color.White;
             if (User_type.user_theme == "dark")
             {
                 this.BackColor = Color.FromArgb(55, 55, 57);
@@ -71,11 +73,35 @@ namespace miniSys0._3.Controls.Others
         private void InitLabel()
         {
             dataTime.Text = time;
-            quantity.Text = num.ToString();
 
-            double ratioValue = num / totalNum;
-            ProcessBar.Value = (int)Math.Round(ratioValue, 2);
-            ratio.Text = Math.Round(ratioValue, 2).ToString();
+            if (Main.main.currentMainPage == "UC_ServiceReport")
+            {
+                quantity.Text = num.ToString() + " Orders";
+            }
+            else if (Main.main.currentMainPage == "UC_IncomeAnalysis")
+            {
+                quantity.Text = "RM " + num.ToString();
+            }
+
+
+            var processValue = (float)num*100 / totalNum;
+
+            ProcessBar.Value = (int)processValue;
+            ratio.Text = processValue.ToString("#0.00") + "%";
+
+        }
+
+        private void uiAvatar1_MouseHover(object sender, EventArgs e)
+        {
+           
+            if (uiAvatar1.FillColor == Color.FromArgb(89, 126, 247))
+            {
+                toolTip1.Show("Above average", uiAvatar1);
+            }
+            else
+            {
+                toolTip1.Show("Below average", uiAvatar1);
+            }
         }
     }
 }

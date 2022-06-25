@@ -160,14 +160,15 @@ namespace miniSys0._3.Controls.MainArea
             }
             else if (edit.Text =="OK")
             {
+                
+
                 edit.Text = "Edit";
                 edit.ForeColor = Color.FromArgb(22, 93, 255);
                 if (serviceType.SelectedIndex !=-1)
                 {
-                    SQLCursor.Execute($"UPDATE Orders SET Service_type = " +
-                        $"'{"Ser00" + (serviceType.SelectedIndex+1).ToString()}' " +
-                        $"Where OrderID ='{ordIDCache}'");
+                    
                     string newPrice = "";
+
                     if (urgent)
                     {
                         newPrice = SQLCursor.Query("Select Urgent_fee From Service Where ServiceID =" +
@@ -178,6 +179,13 @@ namespace miniSys0._3.Controls.MainArea
                         newPrice = "RM" + SQLCursor.Query("Select Normal_fee From Service Where ServiceID =" +
                             $"'{"Ser00" + (serviceType.SelectedIndex + 1).ToString()}'")[0];
                     }
+
+                    SQLCursor.Execute($"UPDATE Orders SET Service_type = " +
+                        $"'{"Ser00" + (serviceType.SelectedIndex + 1).ToString()}' " +
+                        $"Where OrderID ='{ordIDCache}'");
+
+
+
                     price.Text = newPrice;
                     serviceType.Enabled = false;
                 }
