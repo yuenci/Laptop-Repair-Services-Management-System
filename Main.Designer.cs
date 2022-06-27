@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panelTop = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.searchBox = new Sunny.UI.UITextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -44,6 +43,7 @@
             this.copyRight = new Sunny.UI.UILabel();
             this.navMenuPanel = new System.Windows.Forms.Panel();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.CSharpInc = new System.Windows.Forms.NotifyIcon(this.components);
             this.ContextMenuStrip = new Sunny.UI.UIContextMenuStrip();
@@ -52,7 +52,6 @@
             this.restart = new System.Windows.Forms.ToolStripMenuItem();
             this.logout = new System.Windows.Forms.ToolStripMenuItem();
             this.exist = new System.Windows.Forms.ToolStripMenuItem();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.uiUserControl1.SuspendLayout();
@@ -63,7 +62,6 @@
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.White;
-            this.panelTop.Controls.Add(this.button1);
             this.panelTop.Controls.Add(this.searchBox);
             this.panelTop.Controls.Add(this.label1);
             this.panelTop.Controls.Add(this.pictureBox2);
@@ -76,13 +74,6 @@
             this.panelTop.Name = "panelTop";
             this.panelTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.drag_down);
             this.panelTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.drag_move);
-            // 
-            // button1
-            // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // searchBox
             // 
@@ -128,7 +119,7 @@
             this.searchIcon.Symbol = 61442;
             this.searchIcon.SymbolColor = System.Drawing.Color.Black;
             this.searchIcon.SymbolHoverColor = System.Drawing.Color.Black;
-            this.searchIcon.TipsFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.searchIcon.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.searchIcon.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.searchIcon.Click += new System.EventHandler(this.searchIcon_Click);
             // 
@@ -149,7 +140,7 @@
             this.swithTheme.Symbol = 61506;
             this.swithTheme.SymbolColor = System.Drawing.Color.Black;
             this.swithTheme.SymbolHoverColor = System.Drawing.Color.Black;
-            this.swithTheme.TipsFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.swithTheme.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.swithTheme.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.swithTheme.Click += new System.EventHandler(this.uiSymbolButton3_Click);
             // 
@@ -170,7 +161,7 @@
             this.message.Symbol = 61683;
             this.message.SymbolColor = System.Drawing.Color.Black;
             this.message.SymbolHoverColor = System.Drawing.Color.Black;
-            this.message.TipsFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.message.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.message.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.message.Click += new System.EventHandler(this.uiSymbolButton2_Click);
             // 
@@ -191,7 +182,7 @@
             this.uiSymbolButton1.Symbol = 57399;
             this.uiSymbolButton1.SymbolColor = System.Drawing.Color.Black;
             this.uiSymbolButton1.SymbolHoverColor = System.Drawing.Color.Black;
-            this.uiSymbolButton1.TipsFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiSymbolButton1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiSymbolButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.uiSymbolButton1.Click += new System.EventHandler(this.uiSymbolButton1_Click);
             // 
@@ -242,6 +233,11 @@
             this.mainPanel.Controls.Add(this.webBrowser1);
             resources.ApplyResources(this.mainPanel, "mainPanel");
             this.mainPanel.Name = "mainPanel";
+            // 
+            // webBrowser1
+            // 
+            resources.ApplyResources(this.webBrowser1, "webBrowser1");
+            this.webBrowser1.Name = "webBrowser1";
             // 
             // timer1
             // 
@@ -298,11 +294,6 @@
             resources.ApplyResources(this.exist, "exist");
             this.exist.Click += new System.EventHandler(this.exist_Click);
             // 
-            // webBrowser1
-            // 
-            resources.ApplyResources(this.webBrowser1, "webBrowser1");
-            this.webBrowser1.Name = "webBrowser1";
-            // 
             // Main
             // 
             resources.ApplyResources(this, "$this");
@@ -340,7 +331,6 @@
         private System.Windows.Forms.Panel navMenuPanel;
         public System.Windows.Forms.Panel mainPanel;
         private Sunny.UI.UILabel copyRight;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.NotifyIcon CSharpInc;
         private Sunny.UI.UIContextMenuStrip ContextMenuStrip;

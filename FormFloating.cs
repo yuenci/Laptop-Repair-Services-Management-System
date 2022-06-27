@@ -24,7 +24,7 @@ namespace miniSys0._3
         {
             InitializeComponent();
             profileFloating = this;
-            userName.Text = User_type.user_name ;
+            userName.Text = User_type.user_name;
             userPost.Text = "";
             if (User_type.user_deparment != "Customer")
             {
@@ -70,6 +70,7 @@ namespace miniSys0._3
 
         private void uiSymbolButton1_Click(object sender, EventArgs e)
         {
+            this.Close();
             SearchBox.Instance.Hide();
             
             FormFloating.profileFloating.Dispose();
@@ -97,7 +98,8 @@ namespace miniSys0._3
             User_type.loginStatus = "Relogin";
             Login login = new Login();
             login.Show();
-            this.Hide();
+            this.Close();
+            Main.uniqueInstance = null;
             Main.main.Hide();
         }
 

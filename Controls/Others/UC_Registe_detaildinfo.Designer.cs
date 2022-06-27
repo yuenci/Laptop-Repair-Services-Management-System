@@ -152,8 +152,8 @@
             this.squestion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
             this.squestion.Items.AddRange(new object[] {
             "What is your favorie food?",
-            "What is your first teacher\'s name?",
-            "What is your father\'s middle name?",
+            "What is your first teacher’s name?",
+            "What is your father’s middle name?",
             "What is your city of birth?",
             "What is your library card number?",
             "What is your frequent flyer number",
@@ -168,7 +168,6 @@
             this.squestion.Size = new System.Drawing.Size(343, 35);
             this.squestion.Style = Sunny.UI.UIStyle.Custom;
             this.squestion.TabIndex = 7;
-            this.squestion.Text = "Select a security question";
             this.squestion.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.squestion.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 

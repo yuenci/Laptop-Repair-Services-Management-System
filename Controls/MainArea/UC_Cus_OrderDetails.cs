@@ -186,7 +186,7 @@ namespace miniSys0._3.Controls.MainArea
 
 
 
-                    price.Text = newPrice;
+                    price.Text = "RM" + newPrice;
                     serviceType.Enabled = false;
                 }
                 else
@@ -372,22 +372,36 @@ namespace miniSys0._3.Controls.MainArea
 
         private void InitRecentRepair()
         {
-            dynamic[] data = SQLCursor.Query($"select Top 4 OrderID From Orders " +
-                $"Where CustomerID= '{User_type.user_ID}' Order By Time DESC ;");
+            string sql = $"select Top 4 OrderID From Orders " +
+                $"Where CustomerID= '{User_type.user_ID}' Order By Time DESC ;";
+            Console.WriteLine(sql);
+            dynamic[] data = SQLCursor.Query(sql);
 
             dynamic[] cards = { card1, card2, card3, card4 };
 
             int num = data.Length;
 
-            for (int i = 0; i < num; i++)
+            if (num == 0 || num == 1)
             {
-                cards[i].Init(data[i][0]);
+                foreach (dynamic card in cards)
+                {
+                    card.Visible = false;
+                }
+            }
+            else
+            {
+                for (int i = 0; i < num; i++)
+                {
+                    cards[i].Init(data[i][0]);
+                }
+
+                for (int i = num; i < 4; i++)
+                {
+                    cards[i].Visible = false;
+                }
             }
 
-            for (int i = num; i < 4; i++)
-            {
-                cards[i].Visible = false;
-            }
+           
             
         }
 

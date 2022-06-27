@@ -175,7 +175,7 @@ namespace miniSys0._3.Controls
                     else
                     {
                         //MessageBox.Show($"{nameInput} doesn't exist");
-                        NotificationForm messageBoxForm = new NotificationForm("warning", $"{nameInput} doesn't exist");
+                        NotificationForm messageBoxForm = new NotificationForm("warning", $"{nameInput} doesn't exist1");
                         messageBoxForm.ShowDialog();
                     }
                 }

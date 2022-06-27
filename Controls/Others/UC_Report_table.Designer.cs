@@ -47,14 +47,17 @@
             // dateTIme
             // 
             this.dateTIme.DataSource = null;
+            this.dateTIme.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.dateTIme.FillColor = System.Drawing.Color.White;
             this.dateTIme.FilterMaxCount = 50;
-            this.dateTIme.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dateTIme.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dateTIme.ItemSelectBackColor = System.Drawing.Color.Gainsboro;
             this.dateTIme.Location = new System.Drawing.Point(708, 24);
             this.dateTIme.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTIme.MinimumSize = new System.Drawing.Size(63, 0);
             this.dateTIme.Name = "dateTIme";
             this.dateTIme.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.dateTIme.RectColor = System.Drawing.Color.Gainsboro;
             this.dateTIme.Size = new System.Drawing.Size(103, 29);
             this.dateTIme.Style = Sunny.UI.UIStyle.Custom;
             this.dateTIme.TabIndex = 0;
@@ -73,7 +76,7 @@
             this.uiUserControl1.Controls.Add(this.uiLabel1);
             this.uiUserControl1.Controls.Add(this.uiLabel2);
             this.uiUserControl1.FillColor = System.Drawing.Color.White;
-            this.uiUserControl1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiUserControl1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiUserControl1.Location = new System.Drawing.Point(30, 31);
             this.uiUserControl1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiUserControl1.Name = "uiUserControl1";
@@ -88,7 +91,7 @@
             // maxLabel
             // 
             this.maxLabel.BackColor = System.Drawing.Color.Transparent;
-            this.maxLabel.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.maxLabel.Font = new System.Drawing.Font(".PingFang SC", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.maxLabel.Location = new System.Drawing.Point(714, 53);
             this.maxLabel.Name = "maxLabel";
             this.maxLabel.Size = new System.Drawing.Size(297, 43);
@@ -101,7 +104,7 @@
             // aveLabel
             // 
             this.aveLabel.BackColor = System.Drawing.Color.Transparent;
-            this.aveLabel.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.aveLabel.Font = new System.Drawing.Font(".PingFang SC", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.aveLabel.Location = new System.Drawing.Point(23, 53);
             this.aveLabel.Name = "aveLabel";
             this.aveLabel.Size = new System.Drawing.Size(318, 43);
@@ -114,7 +117,7 @@
             // totalLabel
             // 
             this.totalLabel.BackColor = System.Drawing.Color.Transparent;
-            this.totalLabel.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.totalLabel.Font = new System.Drawing.Font(".PingFang SC", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.totalLabel.Location = new System.Drawing.Point(429, 53);
             this.totalLabel.Name = "totalLabel";
             this.totalLabel.Size = new System.Drawing.Size(197, 43);
@@ -127,7 +130,7 @@
             // uiLabel3
             // 
             this.uiLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.uiLabel3.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel3.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel3.Location = new System.Drawing.Point(714, 15);
             this.uiLabel3.Name = "uiLabel3";
             this.uiLabel3.Size = new System.Drawing.Size(297, 23);
@@ -140,7 +143,7 @@
             // uiLabel1
             // 
             this.uiLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.uiLabel1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel1.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel1.Location = new System.Drawing.Point(23, 15);
             this.uiLabel1.Name = "uiLabel1";
             this.uiLabel1.Size = new System.Drawing.Size(318, 23);
@@ -153,7 +156,7 @@
             // uiLabel2
             // 
             this.uiLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.uiLabel2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel2.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel2.Location = new System.Drawing.Point(429, 15);
             this.uiLabel2.Name = "uiLabel2";
             this.uiLabel2.Size = new System.Drawing.Size(197, 23);
@@ -171,7 +174,7 @@
             this.reportContainer.Controls.Add(this.serviceType);
             this.reportContainer.Controls.Add(this.dateTIme);
             this.reportContainer.FillColor = System.Drawing.Color.White;
-            this.reportContainer.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.reportContainer.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.reportContainer.Location = new System.Drawing.Point(30, 175);
             this.reportContainer.MinimumSize = new System.Drawing.Size(1, 1);
             this.reportContainer.Name = "reportContainer";
@@ -198,17 +201,19 @@
             this.order.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.order.FillColor = System.Drawing.Color.White;
             this.order.FilterMaxCount = 50;
-            this.order.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.order.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.order.Items.AddRange(new object[] {
             "Month Ascending",
             "Month Descending",
             "Quantity Ascending",
             "Quantity Descending"});
+            this.order.ItemSelectBackColor = System.Drawing.Color.Gainsboro;
             this.order.Location = new System.Drawing.Point(833, 24);
             this.order.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.order.MinimumSize = new System.Drawing.Size(63, 0);
             this.order.Name = "order";
             this.order.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.order.RectColor = System.Drawing.Color.Gainsboro;
             this.order.Size = new System.Drawing.Size(184, 29);
             this.order.Style = Sunny.UI.UIStyle.Custom;
             this.order.TabIndex = 1;
@@ -224,7 +229,7 @@
             this.serviceType.DropDownWidth = 300;
             this.serviceType.FillColor = System.Drawing.Color.White;
             this.serviceType.FilterMaxCount = 50;
-            this.serviceType.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.serviceType.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.serviceType.Items.AddRange(new object[] {
             "All",
             "Remove virus, malware or spyware",
@@ -235,11 +240,13 @@
             "Operating System Format and Installation",
             "Data backup and recovery",
             "Internet connectivity issues"});
+            this.serviceType.ItemSelectBackColor = System.Drawing.Color.Gainsboro;
             this.serviceType.Location = new System.Drawing.Point(334, 24);
             this.serviceType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.serviceType.MinimumSize = new System.Drawing.Size(63, 0);
             this.serviceType.Name = "serviceType";
             this.serviceType.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.serviceType.RectColor = System.Drawing.Color.Gainsboro;
             this.serviceType.Size = new System.Drawing.Size(343, 29);
             this.serviceType.Style = Sunny.UI.UIStyle.Custom;
             this.serviceType.TabIndex = 1;

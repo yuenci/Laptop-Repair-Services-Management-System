@@ -236,14 +236,14 @@ namespace miniSys0._3.Controls.Others
         private bool ifNumVerify = false;
         private void IDnumberTextBox_Leave(object sender, EventArgs e)
         {
-            if (RegexForInput.PhoneNumVerify(IDnumberTextBox.Text))
+            if (RegexForInput.PhoneNumVerify(IDnumberTextBox.Text) && IDnumberTextBox.Text.Length >6)
             {
                 ifNumVerify = true;
             }
             else
             {
                 //MessageBox.Show("ID can only consist of numbers");
-                NotificationForm messageBoxForm = new NotificationForm("warning", "ID can only consist of numbers");
+                NotificationForm messageBoxForm = new NotificationForm("warning", "ID can only consist of numbers and at least six digits");
                 messageBoxForm.ShowDialog();
 
             }

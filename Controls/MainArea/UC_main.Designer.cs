@@ -879,7 +879,7 @@
             // 
             this.refreshlButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.refreshlButton1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.refreshlButton1.Location = new System.Drawing.Point(780, 4);
+            this.refreshlButton1.Location = new System.Drawing.Point(789, 3);
             this.refreshlButton1.MinimumSize = new System.Drawing.Size(1, 1);
             this.refreshlButton1.Name = "refreshlButton1";
             this.refreshlButton1.Size = new System.Drawing.Size(35, 35);
@@ -894,7 +894,7 @@
             // 
             this.upperTriangle.BackColor = System.Drawing.Color.Transparent;
             this.upperTriangle.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.upperTriangle.Location = new System.Drawing.Point(786, 98);
+            this.upperTriangle.Location = new System.Drawing.Point(797, 98);
             this.upperTriangle.MinimumSize = new System.Drawing.Size(1, 1);
             this.upperTriangle.Name = "upperTriangle";
             this.upperTriangle.Shape = Sunny.UI.UIShape.Square;

@@ -19,10 +19,27 @@ namespace miniSys0._3
         {
             InitializeComponent();
             InitTheme();
-           
         }
         private void InitTheme()
         {
+            line1.BackColor = Color.Transparent; 
+            line2.BackColor = Color.Transparent;
+            line3.BackColor = Color.Transparent;
+            line1.FillColor = Color.Transparent;
+            line2.FillColor = Color.Transparent;
+            line3.FillColor = Color.Transparent;
+
+            delectBtn.FillColor = Color.FromArgb(22,93,255);
+            delectBtn.FillHoverColor = Color.FromArgb(64, 18, 255);
+            delectBtn.FillPressColor = Color.FromArgb(64, 18, 255);
+            delectBtn.RectColor = Color.Transparent;
+
+
+            finishBtn.FillColor = Color.FromArgb(245,63,63);
+            finishBtn.FillHoverColor = Color.FromArgb(247,101,96);
+            finishBtn.FillPressColor = Color.FromArgb(247, 101, 96);
+            finishBtn.RectColor = Color.Transparent;
+
             if (User_type.user_theme == "dark")
             {
                 this.BackColor = Color.FromArgb(18, 31, 43);
@@ -56,16 +73,33 @@ namespace miniSys0._3
         }
         private void ifDeleteShow()
         {
-            if (User_type.user_deparment == "Receptionist")
+            finishBtn.Hide();
+            delectBtn.Hide();
+
+            if (User_type.user_deparment == "Receptionist" && ifLastOrderFinish() != true)
+            {
+                delectBtn.Show();
+            }
+            if (User_type.user_deparment == "Technician" && ifLastOrderFinish() != true)
             {
                 finishBtn.Show();
             }
-            else
-            {
-                finishBtn.Hide();
-            }
         }
         
+        private bool ifLastOrderFinish()
+        {
+            string sql = $"Select * FROM Schedule Where OrderID = '{orderIDCache}'";
+            dynamic[] data = SQLCursor.Query(sql);
+            if (data.Length == 4)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public void Init(string orderId)
         {
             // order info
@@ -109,6 +143,8 @@ namespace miniSys0._3
             
             // customer info
             initCusInfo(customerName);
+
+            ifDeleteShow();
         }
 
         private string statusStr(string status)
@@ -278,12 +314,24 @@ namespace miniSys0._3
             }
             else
             {
-                DialogResult Asterisk = System.Windows.Forms.MessageBox.Show("Service type and price do not match. Are you sure you want to end the order?",
+                DialogResult Asterisk = System.Windows.Forms.MessageBox.Show($"Service type and price do not match.\n\r Payable: {ServicePrice}, paid: {CurrentPrice}.\n\r Are you sure you want to end the order?",
                                 "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
                 if (Asterisk == DialogResult.OK)
                 {
                     NotificationForm messageBoxForm = new NotificationForm("success", "Finish successfully");
                     messageBoxForm.ShowDialog();
+
+                    string sql1 = "Select Top 1 TechnicianID From Schedule " +
+                    $"Where OrderID = '{orderIDCache}'";
+                    Console.WriteLine(sql1);
+                    string technicianID = SQLCursor.Query(sql1)[0];
+
+                    string time = DateTime.Now.ToString();
+                    string ScheduleID = SQLCursor.AddOneToLastID("ScheduleID", "Schedule");
+
+                    string sql2 = $"INSERT INTO Schedule VALUES('{ScheduleID}','Finished','{time}'," +
+                        $"'{technicianID}','{orderIDCache}');";
+                    SQLCursor.Execute(sql2);
                 }
             }
         }

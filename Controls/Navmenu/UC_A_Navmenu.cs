@@ -74,7 +74,6 @@ namespace miniSys0._3.Controls
             }
         }
         
-        
         private void addUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
@@ -83,7 +82,6 @@ namespace miniSys0._3.Controls
             userControl.BringToFront();
             Main.main.closeCurrentMainPageObj();
         }
-        
         
         private void NavMenu_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {

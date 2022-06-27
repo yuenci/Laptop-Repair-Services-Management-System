@@ -671,11 +671,11 @@
     <None Include="Resources\tou_alpha.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Data\CsharpRepairerInc.mdf">
+    <Content Include="Data\CsharpRepairerIncNew.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\CsharpRepairerInc_log.ldf">
-      <DependentUpon>CsharpRepairerInc.mdf</DependentUpon>
+    <Content Include="Data\CsharpRepairerIncNew_log.ldf">
+      <DependentUpon>CsharpRepairerIncNew.mdf</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Html\Articles\Art000001.html" />
@@ -941,7 +941,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 和 x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

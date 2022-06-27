@@ -59,9 +59,9 @@ namespace miniSys0._3.Controls.Others
             }
             else if (Main.main.currentMainPage == "UC_IncomeAnalysis")
             {
-                uiLabel1.Text = "Average monthly income quantity";
-                uiLabel2.Text = "Total income quantity";
-                uiLabel3.Text = "Maximum monthly income quantity";
+                uiLabel1.Text = "Average monthly income";
+                uiLabel2.Text = "Total income";
+                uiLabel3.Text = "Maximum monthly income";
 
                 string sql = "SELECT SUM(Price) FROM Orders Where year(Time) = 2022;" +
                 "SELECT TOP 1 SUM(Price) FROM Orders Where year(Time) = 2022" +

@@ -13,6 +13,20 @@ namespace miniSys0._3
         // query
         public static dynamic[] Query(string SQL)
         {
+            string SQL1 = SQL.ToLower();
+            if (SQL1.Contains("drop table"))
+            {
+                NotificationForm messageBoxForm = new NotificationForm("Error", "What are you doing");
+                messageBoxForm.ShowDialog();
+                return null;
+            }
+            else if (SQL1.Contains("drop database"))
+            {
+                NotificationForm messageBoxForm = new NotificationForm("Error", "What are you doing");
+                messageBoxForm.ShowDialog();
+                return null;
+            }
+
             //Console.WriteLine(SQL);
             dynamic[] connTools = getDataReader(SQL);
             SqlDataReader dr = null;
@@ -115,24 +129,40 @@ namespace miniSys0._3
         }
 
         //execute
-        public static void Execute(string sql)
+        public static int Execute(string sql)
         {
+            int res = -1;
+            string sql1 =sql.ToLower();
+            if (sql1.Contains("drop table"))
+            {
+                NotificationForm messageBoxForm = new NotificationForm("Error", "What are you doing");
+                messageBoxForm.ShowDialog();
+            }
+            else if (sql1.Contains("drop database"))
+            {
+                NotificationForm messageBoxForm = new NotificationForm("Error", "What are you doing");
+                messageBoxForm.ShowDialog();
+            }
+            else
+            {
+                string connStr = AppSetting.DBString;
+                SqlConnection conn = new SqlConnection(connStr);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                try
+                {
+                    res =  cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(sql);
+                    MessageBox.Show("SQL:" + sql + ex.Message);
 
-            string connStr = AppSetting.DBString;
-            SqlConnection conn = new SqlConnection(connStr);
-            conn.Open();
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            try
-            {
-                cmd.ExecuteNonQuery();
+                }
+
+                conn.Close();
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(sql);
-                MessageBox.Show("SQL:" + sql + ex.Message);
-            }
-            
-            conn.Close();
+            return res;
         }
        
 
@@ -505,15 +535,15 @@ namespace miniSys0._3
 
             if (urgent == "0")
             {
-                sql = "SELECT Service.Normal_fee FROM Orders" +
-                        "INNER JOIN Service ON Orders.Service_type = Service.ServiceID" +
+                sql = "SELECT Service.Normal_fee FROM Orders " +
+                        "INNER JOIN Service ON Orders.Service_type = Service.ServiceID " +
                         $"WHERE Orders.OrderID = '{OrderID}';";
                 return Query(sql)[0];
             }
             else
             {
-                sql = "SELECT Service.Normal_fee FROM Orders" +
-                        "INNER JOIN Service ON Orders.Service_type = Service.ServiceID" +
+                sql = "SELECT Service.Normal_fee FROM Orders " +
+                        "INNER JOIN Service ON Orders.Service_type = Service.ServiceID " +
                         $"WHERE Orders.OrderID = '{OrderID}';";
                 return Query(sql)[0];
             }

@@ -131,7 +131,7 @@
             this.status4.Size = new System.Drawing.Size(117, 23);
             this.status4.Style = Sunny.UI.UIStyle.Custom;
             this.status4.TabIndex = 15;
-            this.status4.Text = "Order finish";
+            this.status4.Text = "Collection";
             this.status4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.status4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 

@@ -52,11 +52,11 @@
             // 
             this.editEmail.AutoSize = true;
             this.editEmail.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.editEmail.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.editEmail.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.editEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
             this.editEmail.Location = new System.Drawing.Point(1028, 272);
             this.editEmail.Name = "editEmail";
-            this.editEmail.Size = new System.Drawing.Size(42, 22);
+            this.editEmail.Size = new System.Drawing.Size(43, 16);
             this.editEmail.TabIndex = 71;
             this.editEmail.Text = "Edit";
             this.editEmail.Click += new System.EventHandler(this.editEmail_Click);
@@ -65,11 +65,11 @@
             // 
             this.editPhone.AutoSize = true;
             this.editPhone.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.editPhone.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.editPhone.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.editPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
             this.editPhone.Location = new System.Drawing.Point(1028, 193);
             this.editPhone.Name = "editPhone";
-            this.editPhone.Size = new System.Drawing.Size(42, 22);
+            this.editPhone.Size = new System.Drawing.Size(43, 16);
             this.editPhone.TabIndex = 70;
             this.editPhone.Text = "Edit";
             this.editPhone.Click += new System.EventHandler(this.editPhone_Click);
@@ -78,11 +78,11 @@
             // 
             this.editPassword.AutoSize = true;
             this.editPassword.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.editPassword.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.editPassword.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.editPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
             this.editPassword.Location = new System.Drawing.Point(1028, 23);
             this.editPassword.Name = "editPassword";
-            this.editPassword.Size = new System.Drawing.Size(42, 22);
+            this.editPassword.Size = new System.Drawing.Size(43, 16);
             this.editPassword.TabIndex = 68;
             this.editPassword.Text = "Edit";
             this.editPassword.Click += new System.EventHandler(this.editPassword_Click);
@@ -91,22 +91,22 @@
             // 
             this.editQuestion.AutoSize = true;
             this.editQuestion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.editQuestion.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.editQuestion.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.editQuestion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
             this.editQuestion.Location = new System.Drawing.Point(1028, 104);
             this.editQuestion.Name = "editQuestion";
-            this.editQuestion.Size = new System.Drawing.Size(42, 22);
+            this.editQuestion.Size = new System.Drawing.Size(43, 16);
             this.editQuestion.TabIndex = 69;
             this.editQuestion.Text = "Edit";
             this.editQuestion.Click += new System.EventHandler(this.editQuestion_Click);
             // 
             // uiLabel19
             // 
-            this.uiLabel19.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold);
+            this.uiLabel19.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Bold);
             this.uiLabel19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
-            this.uiLabel19.Location = new System.Drawing.Point(44, 272);
+            this.uiLabel19.Location = new System.Drawing.Point(21, 272);
             this.uiLabel19.Name = "uiLabel19";
-            this.uiLabel19.Size = new System.Drawing.Size(124, 23);
+            this.uiLabel19.Size = new System.Drawing.Size(147, 23);
             this.uiLabel19.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel19.TabIndex = 63;
             this.uiLabel19.Text = "Security email";
@@ -115,7 +115,7 @@
             // 
             // uiLabel20
             // 
-            this.uiLabel20.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold);
+            this.uiLabel20.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Bold);
             this.uiLabel20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
             this.uiLabel20.Location = new System.Drawing.Point(29, 192);
             this.uiLabel20.Name = "uiLabel20";
@@ -128,7 +128,7 @@
             // 
             // uiLabel21
             // 
-            this.uiLabel21.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold);
+            this.uiLabel21.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Bold);
             this.uiLabel21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
             this.uiLabel21.Location = new System.Drawing.Point(-6, 103);
             this.uiLabel21.Name = "uiLabel21";
@@ -141,7 +141,7 @@
             // 
             // uiLabel22
             // 
-            this.uiLabel22.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold);
+            this.uiLabel22.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Bold);
             this.uiLabel22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
             this.uiLabel22.Location = new System.Drawing.Point(-19, 22);
             this.uiLabel22.Name = "uiLabel22";
@@ -156,7 +156,7 @@
             // 
             this.password1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.password1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.password1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.password1.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.password1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
             this.password1.Location = new System.Drawing.Point(207, 15);
             this.password1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -178,7 +178,7 @@
             // 
             this.secure2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.secure2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.secure2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.secure2.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.secure2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
             this.secure2.Location = new System.Drawing.Point(516, 99);
             this.secure2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -200,7 +200,7 @@
             // 
             this.email1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.email1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.email1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.email1.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.email1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
             this.email1.Location = new System.Drawing.Point(207, 263);
             this.email1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -222,7 +222,7 @@
             // 
             this.phone1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.phone1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.phone1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.phone1.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.phone1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
             this.phone1.Location = new System.Drawing.Point(207, 184);
             this.phone1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -246,11 +246,11 @@
             this.secureComb.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.secureComb.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
             this.secureComb.FilterMaxCount = 50;
-            this.secureComb.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.secureComb.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.secureComb.Items.AddRange(new object[] {
             "What is your favorie food?",
-            "What is your first teacher\'s name?",
-            "What is your father\'s middle name?",
+            "What is your first teacher’s name?",
+            "What is your father’s middle name?",
             "What is your city of birth?",
             "What is your library card number?",
             "What is your frequent flyer number",
@@ -273,7 +273,7 @@
             // 
             this.password2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.password2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.password2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.password2.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.password2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
             this.password2.Location = new System.Drawing.Point(516, 15);
             this.password2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -296,7 +296,7 @@
             this.sendButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sendButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
             this.sendButton1.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(100)))), ((int)(((byte)(221)))));
-            this.sendButton1.Font = new System.Drawing.Font(".萍方-简", 10F);
+            this.sendButton1.Font = new System.Drawing.Font(".PingFang SC", 10F);
             this.sendButton1.Location = new System.Drawing.Point(412, 187);
             this.sendButton1.MinimumSize = new System.Drawing.Size(1, 1);
             this.sendButton1.Name = "sendButton1";
@@ -318,7 +318,7 @@
             // 
             this.phone2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.phone2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.phone2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.phone2.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.phone2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
             this.phone2.Location = new System.Drawing.Point(516, 184);
             this.phone2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -341,7 +341,7 @@
             this.sendButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sendButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
             this.sendButton2.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(100)))), ((int)(((byte)(221)))));
-            this.sendButton2.Font = new System.Drawing.Font(".萍方-简", 10F);
+            this.sendButton2.Font = new System.Drawing.Font(".PingFang SC", 10F);
             this.sendButton2.Location = new System.Drawing.Point(412, 266);
             this.sendButton2.MinimumSize = new System.Drawing.Size(1, 1);
             this.sendButton2.Name = "sendButton2";
@@ -363,7 +363,7 @@
             // 
             this.email2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.email2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.email2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.email2.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.email2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
             this.email2.Location = new System.Drawing.Point(516, 263);
             this.email2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

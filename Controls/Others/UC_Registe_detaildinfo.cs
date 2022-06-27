@@ -83,15 +83,6 @@ namespace miniSys0._3.Controls.Others
                     squestionStr = squestion.SelectedItem.ToString();
                 }
 
-                /*MessageBox.Show($"{phone.Text}" +
-                    $"{birthDatePicker.Text}" +
-                    $"{email.Text}" +
-                    $"{genderStr}" +
-                    $"{country.Text}" +
-                    $"{address.Text}" +
-                    $"{squestionStr}" +
-                    $"{sanswer.Text}" +
-                    $"{profile.Text}" );*/
                 if (phone.Text != "Enter user's phone" && phone.Text != "" && RegexForInput.PhoneNumVerify(phone.Text))
                 {
                     RegisterInfoCache.user_phone = phone.Text;
@@ -153,35 +144,48 @@ namespace miniSys0._3.Controls.Others
 
                 if (ifPhoneVerify && ifEmailVerify)
                 {
-
+                    int res = -1;
                     if (User_type.user_deparment == "Admin")
                     {
                         RegisterInfoCache.user_ID = SQLCursor.AddOneToLastID("StaffID", "Staff");
-                        registerSta();
+                        res = registerSta();
                     }
                     else if (User_type.user_deparment == "Receptionist")
                     {
                         RegisterInfoCache.user_ID = SQLCursor.AddOneToLastID("CustomerID", "Customer");
-                        registerCus();
+                        res = registerCus();
                     }
 
-
-                    RegisterInfoCache.step3Activate = true;
-
-                    UC_Registration.iconSelect(UC_Registration.uc_Registration.icon3,
-                    UC_Registration.uc_Registration.iconLabel3);
-                    UC_Registration.iconUnSelect(UC_Registration.uc_Registration.icon2,
-                        UC_Registration.uc_Registration.iconLabel2);
-                    UC_Registration.iconUnSelect(UC_Registration.uc_Registration.icon1,
-                        UC_Registration.uc_Registration.iconLabel1);
-                    UC_Registe_Complete uc = new UC_Registe_Complete();
-                    uc.Location = new Point(320, 80);
-                    AddUserControl.Add(uc, UC_Registration.uc_Registration.contentPanel);
+                    if (res == -1)
+                    {
+                        NotificationForm messageBoxForm = new NotificationForm("warning", "The phone number or eamil already exists!");
+                        messageBoxForm.ShowDialog();
+                    }
+                    else
+                    {
+                        changePage();
+                    }
+                   
                 }
 
             }
         }
-        private void registerCus()
+
+        private void changePage()
+        {
+            RegisterInfoCache.step3Activate = true;
+
+            UC_Registration.iconSelect(UC_Registration.uc_Registration.icon3,
+            UC_Registration.uc_Registration.iconLabel3);
+            UC_Registration.iconUnSelect(UC_Registration.uc_Registration.icon2,
+                UC_Registration.uc_Registration.iconLabel2);
+            UC_Registration.iconUnSelect(UC_Registration.uc_Registration.icon1,
+                UC_Registration.uc_Registration.iconLabel1);
+            UC_Registe_Complete uc = new UC_Registe_Complete();
+            uc.Location = new Point(320, 80);
+            AddUserControl.Add(uc, UC_Registration.uc_Registration.contentPanel);
+        }
+        private int registerCus()
         {
             string[] registerDataCache = {
                 RegisterInfoCache.user_ID,
@@ -219,9 +223,9 @@ namespace miniSys0._3.Controls.Others
                 "VALUES (" + String.Join(",", sqlData) + ")";
 
             Console.WriteLine(sql);
-            SQLCursor.Execute(sql);
+            return SQLCursor.Execute(sql);
         }
-        private void registerSta()
+        private int  registerSta()
         {
             string[] registerDataCache = {
                 RegisterInfoCache.user_deparment,
@@ -241,7 +245,6 @@ namespace miniSys0._3.Controls.Others
                 RegisterInfoCache.user_security_answer,
                 RegisterInfoCache.user_password
             };
-
             string[] staffFelid = { "Department", "StaffID", "Name", "Phone_number", "Email", 
                 "Birthday", "Gender", "Post", "ID_number", "About", "Country", 
                 "Address", "Regtime", "Validation_problem","Validation_answer", "Password"};
@@ -262,7 +265,7 @@ namespace miniSys0._3.Controls.Others
                 "VALUES (" + String.Join(",",sqlData) + ")";
 
             Console.WriteLine(sql);
-            SQLCursor.Execute(sql);
+            return SQLCursor.Execute(sql);
         }
 
         private string generatePWD()
@@ -276,9 +279,8 @@ namespace miniSys0._3.Controls.Others
                 str = "";
                 for (int i = 0; i < 8; i++)
                 {
-                    str += chars[randrom.Next(chars.Length)];//randrom.Next(int i)返回一个小于所指定最大值的非负随机数
+                    str += chars[randrom.Next(chars.Length)];
                 }
-                //不符合正则，重新生成
                 if (!Regex.IsMatch(str, @"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$"))
                 {
                     continue;

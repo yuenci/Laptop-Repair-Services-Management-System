@@ -22,7 +22,7 @@ namespace miniSys0._3
     {
         public static Main main;
         private Point mPoint;
-        private static FormFloating uniqueInstance;
+        public static FormFloating uniqueInstance;
         
         public bool ifViewProfileExist = false;
         public List<dynamic> messagesList = new List<dynamic>();
@@ -87,7 +87,7 @@ namespace miniSys0._3
 
             //this.TopMost = true;
 
-            button1.Visible = false;
+            //button1.Visible = false;
 
             
         }
@@ -366,10 +366,6 @@ namespace miniSys0._3
 
         private void addNavMenu()
         {
-            /*UC_Test uc = new UC_Test();
-            addUserControl(uc);*/
-
-
             if (User_type.user_deparment == "Receptionist")
             {
                 UC_R_Navmenu uc = new UC_R_Navmenu();
@@ -390,7 +386,6 @@ namespace miniSys0._3
                 UC_A_Navmenu uc = new UC_A_Navmenu();
                 addUserControl(uc);
             }
-
         }
         
 

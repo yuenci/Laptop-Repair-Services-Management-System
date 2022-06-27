@@ -133,6 +133,8 @@ namespace miniSys0._3
             }
 
             userID_cache = RegisterInfoCache.user_ID;
+
+            InitGenderPic(RegisterInfoCache.user_gender);
         }
         
 
@@ -197,11 +199,9 @@ namespace miniSys0._3
                 userID_cache = data[8];
 
                 post.Show();
-                privacy(staffID);
-
-                
+                privacy(staffID);  
             }
-            
+            InitGenderPic(data[5]);
         }
 
 
@@ -234,8 +234,8 @@ namespace miniSys0._3
                 privacy(cusID);
 
             }
-           
 
+            InitGenderPic(data[4]);
         }
 
 
@@ -262,6 +262,15 @@ namespace miniSys0._3
                 addDescription.Show();
             }
             
+        }
+
+        private void InitGenderPic(string gender)
+        {
+            gender =gender.ToLower();
+            if (gender == "female")
+            {
+                this.pictureBox1.Image = Properties.Resources.avatar_female;
+            }
         }
     }
 }

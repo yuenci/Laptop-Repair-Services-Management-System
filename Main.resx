@@ -118,33 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>263, 19</value>
-  </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>button1</value>
-  </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
-  </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
-    <value>panelTop</value>
-  </data>
-  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="searchBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>.PingFang SC, 12pt, style=Bold</value>
+    <value>.萍方-简, 12pt, style=Bold</value>
   </data>
   <data name="searchBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>617, 16</value>
@@ -162,6 +137,7 @@
   <data name="searchBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>430, 32</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="searchBox.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
@@ -178,19 +154,19 @@
     <value>panelTop</value>
   </data>
   <data name="&gt;&gt;searchBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>.PingFang SC, 20.25pt</value>
+    <value>.萍方-简, 20.25pt</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>66, 10</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 27</value>
+    <value>98, 38</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -208,7 +184,7 @@
     <value>panelTop</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 5</value>
@@ -232,10 +208,10 @@
     <value>panelTop</value>
   </data>
   <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="searchIcon.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei, 12pt</value>
+    <value>Microsoft YaHei UI, 12pt</value>
   </data>
   <data name="searchIcon.Location" type="System.Drawing.Point, System.Drawing">
     <value>1065, 14</value>
@@ -259,10 +235,10 @@
     <value>panelTop</value>
   </data>
   <data name="&gt;&gt;searchIcon.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="swithTheme.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei, 12pt</value>
+    <value>Microsoft YaHei UI, 12pt</value>
   </data>
   <data name="swithTheme.Location" type="System.Drawing.Point, System.Drawing">
     <value>1122, 14</value>
@@ -286,10 +262,10 @@
     <value>panelTop</value>
   </data>
   <data name="&gt;&gt;swithTheme.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="message.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei, 12pt</value>
+    <value>Microsoft YaHei UI, 12pt</value>
   </data>
   <data name="message.Location" type="System.Drawing.Point, System.Drawing">
     <value>1179, 14</value>
@@ -313,10 +289,10 @@
     <value>panelTop</value>
   </data>
   <data name="&gt;&gt;message.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="uiSymbolButton1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei, 12pt</value>
+    <value>Microsoft YaHei UI, 12pt</value>
   </data>
   <data name="uiSymbolButton1.Location" type="System.Drawing.Point, System.Drawing">
     <value>1236, 14</value>
@@ -340,10 +316,10 @@
     <value>panelTop</value>
   </data>
   <data name="&gt;&gt;uiSymbolButton1.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="profile.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei, 18pt</value>
+    <value>Microsoft YaHei UI, 18pt</value>
   </data>
   <data name="profile.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -632,7 +608,7 @@
     <value>panelTop</value>
   </data>
   <data name="&gt;&gt;profile.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="panelTop.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -659,7 +635,7 @@
     <value>3</value>
   </data>
   <data name="copyRight.Font" type="System.Drawing.Font, System.Drawing">
-    <value>.PingFang SC, 12pt</value>
+    <value>.萍方-简, 12pt</value>
   </data>
   <data name="copyRight.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 693</value>
@@ -710,7 +686,7 @@
     <value>1</value>
   </data>
   <data name="uiUserControl1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei, 12pt</value>
+    <value>Microsoft YaHei UI, 12pt</value>
   </data>
   <data name="uiUserControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 70</value>
@@ -797,46 +773,46 @@
     <value>218, 17</value>
   </metadata>
   <data name="ContextMenuStrip.Font" type="System.Drawing.Font, System.Drawing">
-    <value>.PingFang SC, 12pt</value>
+    <value>.萍方-简, 12pt</value>
   </data>
   <data name="minimize.Font" type="System.Drawing.Font, System.Drawing">
-    <value>.PingFang SC, 12pt</value>
+    <value>.萍方-简, 12pt</value>
   </data>
   <data name="minimize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 22</value>
+    <value>151, 26</value>
   </data>
   <data name="minimize.Text" xml:space="preserve">
     <value>Minimize </value>
   </data>
   <data name="maximize.Font" type="System.Drawing.Font, System.Drawing">
-    <value>.PingFang SC, 12pt</value>
+    <value>.萍方-简, 12pt</value>
   </data>
   <data name="maximize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 22</value>
+    <value>151, 26</value>
   </data>
   <data name="maximize.Text" xml:space="preserve">
     <value>Maximize</value>
   </data>
   <data name="restart.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 22</value>
+    <value>151, 26</value>
   </data>
   <data name="restart.Text" xml:space="preserve">
     <value>Restart</value>
   </data>
   <data name="logout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 22</value>
+    <value>151, 26</value>
   </data>
   <data name="logout.Text" xml:space="preserve">
     <value>Log Out</value>
   </data>
   <data name="exist.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 22</value>
+    <value>151, 26</value>
   </data>
   <data name="exist.Text" xml:space="preserve">
     <value>Exist</value>
   </data>
   <data name="ContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 114</value>
+    <value>152, 134</value>
   </data>
   <data name="&gt;&gt;ContextMenuStrip.Name" xml:space="preserve">
     <value>ContextMenuStrip</value>

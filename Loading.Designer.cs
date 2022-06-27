@@ -72,7 +72,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(8, 101);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(221, 31);
@@ -100,12 +100,12 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(10, 457);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(265, 22);
+            this.label4.Size = new System.Drawing.Size(268, 22);
             this.label4.TabIndex = 5;
-            this.label4.Text = "C Shape incorporated company";
+            this.label4.Text = "C Shape Incorporated Company";
             // 
             // load3
             // 

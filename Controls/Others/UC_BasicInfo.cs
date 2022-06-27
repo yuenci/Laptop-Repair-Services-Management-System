@@ -176,7 +176,7 @@ namespace miniSys0._3.Controls.Others
                     ifAnyEmpty = true;
                 }
             }
-            if (ifAnyEmpty == false)
+            if (ifAnyEmpty == false && RegexForInput.EmailVerify(email.Text))
             {
                 dynamic[] uITextBox = { email,name,country,street,profile};
 
@@ -231,6 +231,29 @@ namespace miniSys0._3.Controls.Others
                 NotificationForm messageBoxForm = new NotificationForm("success", "Profile modify successfully");
                 messageBoxForm.ShowDialog();
 
+                string sql1 = "";
+                if (User_type.user_deparment == "Customer")
+                {
+                    sql1 = $"SELECT * FROM Customer WHERE Name = '{name.Text}';";
+                }
+                else
+                {
+                    sql1 = $"SELECT * FROM Staff WHERE Name = '{name.Text}';";
+                }
+
+                
+                dynamic[] data = SQLCursor.Query(sql1);
+
+                User_type.user_name = name.Text;
+                User_type.user_email = data[3];
+                User_type.user_Country = data[6];
+                User_type.user_Address = data[7];
+                User_type.user_about = data[8];
+            }
+            else
+            {
+                NotificationForm messageBoxForm = new NotificationForm("warning", "Invalid email input!");
+                messageBoxForm.ShowDialog();
             }
         }
 

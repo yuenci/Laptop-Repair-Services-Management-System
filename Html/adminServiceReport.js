@@ -223,7 +223,6 @@ function show() {
                     }
                 },
                 y: {
-                    suggestedMax: 100,
                     min: 0,
                     grid: {
                         color: "rgba(242, 243, 245,1)"
