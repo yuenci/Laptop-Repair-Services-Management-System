@@ -45,7 +45,7 @@ This project has completely implemented a management system of laptop repair ser
 I hope the whole project can help your business or give you some ideas. Enjoy~ 😜
 
 
-  
+
 ### Built With
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
@@ -87,7 +87,7 @@ There are two ways you can run this project.
     * Newtonsoft
     * QRCoder
     * SunnyUI
- 
+
 3. Open sln file with [Visual Studio](https://visualstudio.microsoft.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -95,7 +95,33 @@ There are two ways you can run this project.
 
 
 <!-- USAGE EXAMPLES -->
+
+## Features
+
+* Login, Log out, Exit
+* Forget password
+* Reset password with pin via Phone, email. Or use security issue to reset
+* View news
+* Read document
+* View  promo video
+* Search order
+* Search users
+* Search function
+* Send and receive message
+* Switch theme
+* Check and register users
+* Generate order QR codes
+* Accept payment
+* Update  profile
+* View requests
+* Check or add order details
+* Change service price
+* View reports
+* Post system message
+* lTaskbar
+
 ## Screen shoots
+
 ### Customer Main Page
 <img src="https://github.com/yuenci/Laptop-Repair-Services-Management-System/blob/master/image/20221029224421.png" alt="screenShot" width="700">
 
