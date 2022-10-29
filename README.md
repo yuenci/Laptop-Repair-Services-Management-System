@@ -73,19 +73,20 @@ To get a local copy up and running follow these simple example steps.
 Sql server and [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) must be installed
 
 
-### Installation Nuget package
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+### Installation
+There are two ways you can run this project.
+1. Download all source codes, you can download [here](https://cloudmails-my.sharepoint.com/:u:/g/personal/tp061418_mail_apu_edu_my/EdLITrQmlYpFjdUfxqn0jacBLoDvMPgltnF9aRfTEUp1ag?e=PbffHd).
+2. Use the following steps to install the required NuGet packages.
 
 1. Clone the repo
    ```sh
    git clone https://github.com/yuenci/Laptop-Repair-Services-Management-System
    ```
-2. Install NPM packages
+2. Install NuGet packages
    * CefShap
-  * Newtonsoft
-  * QRCoder
-  * SunnyUI
+    * Newtonsoft
+    * QRCoder
+    * SunnyUI
  
 3. Open sln file with [Visual Studio](https://visualstudio.microsoft.com/)
 
@@ -94,13 +95,7 @@ _Below is an example of how you can instruct your audience on installing and set
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## Screen shoots
 
 
 
