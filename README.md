@@ -35,20 +35,9 @@
 
 ![product-screenshot]](https://github.com/yuenci/Laptop-Repair-Services-Management-System/blob/master/image/mainPage.png)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+This project is the final assignment project of my C# course. I got the highest score by this project, and my lecture told me that I am good enough to write my graduation project (I am still two years away from graduation). Hahaha, in short, I am very happy with this project.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
+This project has completely implemented a management system of laptop repair services. It includes four roles: Receptionist, Technician, Customer and Admin, which can complete the whole business process of customers from requesting maintenance, arranging maintenance, completing maintenance, and notifying them to get back. On the page design, arco design system and sunny UI are adopted, which is very elegant and practical.
 
 ### Built With
 
