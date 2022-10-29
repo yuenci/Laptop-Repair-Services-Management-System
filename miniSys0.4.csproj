@@ -627,6 +627,7 @@
       <DependentUpon>CsharpRepairerIncDataSet.xsd</DependentUpon>
     </None>
     <None Include="Html\Articles\iconfont.ttf" />
+    <None Include="LICENSE" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -889,6 +890,7 @@
     <Content Include="Html\chart.js" />
     <Content Include="Html\mainLineChart.html" />
     <Content Include="Html\mainPieChart.html" />
+    <Content Include="README.md" />
     <None Include="Resources\icon48-48.png" />
     <None Include="Resources\starShip.png" />
     <None Include="Resources\avatar_male.png" />
@@ -919,6 +921,7 @@
   <ItemGroup>
     <Folder Include="Html\Avatars\" />
     <Folder Include="Html\Document\" />
+    <Folder Include="image\" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="AxWMPLib">
