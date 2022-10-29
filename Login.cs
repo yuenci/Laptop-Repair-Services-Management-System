@@ -26,6 +26,8 @@ namespace miniSys0._3
 
             UC_Login uc = new UC_Login();
             addUserControl(uc);
+
+            //delete this 
             DBdateCorrection();
         }
 
@@ -39,9 +41,10 @@ namespace miniSys0._3
             int diffentDays = Convert.ToInt32(diff) -1;
             
             if (diffentDays >7)
-            {
+            {   
                 SQLCursor.Execute($"update Schedule set Time =DATEADD(DAY,{diffentDays},Time);");
                 SQLCursor.Execute($"update Orders set Time =DATEADD(DAY,{diffentDays},Time);");
+                
             }
         }
 
