@@ -3,7 +3,6 @@
 <a name="readme-top"></a>
 
 
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -28,34 +27,6 @@
 
 </div>
 
-
-
-<!-- TABLE OF CONTENTS -->
-
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
 
 
 
@@ -87,12 +58,11 @@ This section should list any major frameworks/libraries used to bootstrap your p
 * [Newtonsoft](https://github.com/JamesNK/Newtonsoft.Json)
 * [QRCoder](https://github.com/codebude/QRCoder)
 * [SunnyUI](https://github.com/yhuse/SunnyUI)
+* [sql server](https://www.microsoft.com/en-us/sql-server/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Demo Video
-[![Laptop Repair Services Management System](https://github.com/yuenci/Laptop-Repair-Services-Management-System/blob/master/image/20221029220011.png)](http://www.youtube.com/watch?v=f3Vlglq_60M)
-
 <a href="http://www.youtube.com/watch?v=f3Vlglq_60M">
     <img src="https://github.com/yuenci/Laptop-Repair-Services-Management-System/blob/master/image/20221029220011.png" alt="Cover" width="600" height="360">
   </a>
@@ -104,30 +74,24 @@ This is an example of how you may give instructions on setting up your project l
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+Sql server and [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) must be installed
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
 
-### Installation
+### Installation Nuget package
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/yuenci/Laptop-Repair-Services-Management-System
    ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+2. Install NPM packages
+   * CefShap
+  * Newtonsoft
+  * QRCoder
+  * SunnyUI
+ 
+3. Open sln file with [Visual Studio](https://visualstudio.microsoft.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
