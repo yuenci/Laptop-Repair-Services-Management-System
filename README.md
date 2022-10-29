@@ -4,15 +4,6 @@
 
 
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -102,6 +93,9 @@ This section should list any major frameworks/libraries used to bootstrap your p
 ## Demo Video
 [![Laptop Repair Services Management System](https://github.com/yuenci/Laptop-Repair-Services-Management-System/blob/master/image/20221029220011.png)](http://www.youtube.com/watch?v=f3Vlglq_60M)
 
+<a href="http://www.youtube.com/watch?v=f3Vlglq_60M">
+    <img src="https://github.com/yuenci/Laptop-Repair-Services-Management-System/blob/master/image/20221029220011.png" alt="Cover" width="600" height="360">
+  </a>
 
 <!-- GETTING STARTED -->
 ## Getting Started
