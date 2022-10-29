@@ -70,7 +70,7 @@ This is an example of how you may give instructions on setting up your project l
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
-Sql server and [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) must be installed
+[Sql server](https://www.microsoft.com/en-us/sql-server/) and [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) must be installed
 
 
 ### Installation
