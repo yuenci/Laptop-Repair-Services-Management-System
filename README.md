@@ -33,7 +33,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![product-screenshot](https://github.com/yuenci/Laptop-Repair-Services-Management-System/blob/master/image/mainPage.png)
+<div align="center">
+<img src="https://github.com/yuenci/Laptop-Repair-Services-Management-System/blob/master/image/mainPage.png" alt="Logo" width="700">
+</div>
+<br/>
 
 This project is the final assignment project of my C# course. I got the highest score by this project, and my lecture told me that I am good enough to write my graduation project (I am still two years away from graduation). Haha 🤣🤣🤣, in short, I am very happy with this project.
 
@@ -41,6 +44,8 @@ This project has completely implemented a management system of laptop repair ser
 
 I hope the whole project can help your business or give you some ideas. Enjoy~ 😜
 
+
+  
 ### Built With
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
@@ -65,22 +70,23 @@ This is an example of how you may give instructions on setting up your project l
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
-Sql server and [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) must be installed
+[Sql server](https://www.microsoft.com/en-us/sql-server/) and [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) must be installed
 
 
-### Installation Nuget package
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+### Installation
+There are two ways you can run this project.
+1. Download all source codes, you can download [here](https://cloudmails-my.sharepoint.com/:u:/g/personal/tp061418_mail_apu_edu_my/EdLITrQmlYpFjdUfxqn0jacBLoDvMPgltnF9aRfTEUp1ag?e=PbffHd).
+2. Use the following steps to install the required NuGet packages.
 
 1. Clone the repo
    ```sh
    git clone https://github.com/yuenci/Laptop-Repair-Services-Management-System
    ```
-2. Install NPM packages
+2. Install NuGet packages
    * CefShap
-  * Newtonsoft
-  * QRCoder
-  * SunnyUI
+    * Newtonsoft
+    * QRCoder
+    * SunnyUI
  
 3. Open sln file with [Visual Studio](https://visualstudio.microsoft.com/)
 
@@ -89,13 +95,7 @@ _Below is an example of how you can instruct your audience on installing and set
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## Screen shoots
 
 
 
