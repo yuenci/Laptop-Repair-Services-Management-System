@@ -33,15 +33,18 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+<div align="center">
+<img src="https://github.com/yuenci/Laptop-Repair-Services-Management-System/blob/master/image/mainPage.png" alt="Logo" width="700">
+<div>
+  
+
 This project is the final assignment project of my C# course. I got the highest score by this project, and my lecture told me that I am good enough to write my graduation project (I am still two years away from graduation). Haha 🤣🤣🤣, in short, I am very happy with this project.
 
 This project has completely implemented a management system of laptop repair services. It includes four roles: Receptionist, Technician, Customer and Admin, which can complete the whole business process of customers from requesting maintenance, arranging maintenance, completing maintenance, and notifying them to get back. On the page design, arco design system and sunny UI are adopted, which is very elegant and practical.
 
 I hope the whole project can help your business or give you some ideas. Enjoy~ 😜
 
-<div align="center">
-<img src="https://github.com/yuenci/Laptop-Repair-Services-Management-System/blob/master/image/mainPage.png" alt="Logo" width="400">
-<div>
+
   
 ### Built With
 
