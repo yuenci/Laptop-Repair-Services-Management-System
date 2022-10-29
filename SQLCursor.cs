@@ -489,7 +489,38 @@ namespace miniSys0._3
             }
             return false;
         }
-    
+
+        public static bool ifCurrentOrderFinish()
+        {
+            string sql = "Select Status from Schedule Where OrderID " +
+                $"= (Select top 1 OrderID from Orders Where CustomerID = '{User_type.user_ID}' " +
+                $"ORDER BY OrderID DESC);";
+            dynamic[] data = Query(sql);
+            if (data.Length == 4)
+            {
+                return true;
+            }
+            else 
+            {
+                return false;
+            }
+        }
+
+        public static bool ifCurrentOrderFinishRepair(string orderID)
+        {
+            string sql = $"Select Status from Schedule Where OrderID = '{orderID}'";
+            Console.WriteLine(sql);
+            dynamic[] data = Query(sql);
+            if (data.Length == 3)
+            {
+                return true;
+            }
+            else 
+            {
+                return false;
+            }
+
+        }
 
         public static void UpdateAvatar(string userID, string avatarFilePath)
         {
@@ -542,7 +573,7 @@ namespace miniSys0._3
             }
             else
             {
-                sql = "SELECT Service.Normal_fee FROM Orders " +
+                sql = "SELECT Service.Urgent_fee FROM Orders " +
                         "INNER JOIN Service ON Orders.Service_type = Service.ServiceID " +
                         $"WHERE Orders.OrderID = '{OrderID}';";
                 return Query(sql)[0];

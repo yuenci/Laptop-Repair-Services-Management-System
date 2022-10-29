@@ -71,6 +71,10 @@ namespace miniSys0._3.Controls.Others
             UC_Registration.iconUnSelect(UC_Registration.uc_Registration.icon3,
                 UC_Registration.uc_Registration.iconLabel3);
 
+            RegisterInfoCache.step2Activate = false;
+            RegisterInfoCache.step3Activate = false;
+
+
             string[] controlsText = {
                             RegisterInfoCache.user_deparment ,
                             RegisterInfoCache.user_ID,
@@ -104,10 +108,19 @@ namespace miniSys0._3.Controls.Others
                 contorlStatus[i] = false;
             }
 
-
-            UC_Registe_Staff_Basicinfo uc = new UC_Registe_Staff_Basicinfo();
-            uc.Location = new Point(320, 80);
-            AddUserControl.Add(uc, UC_Registration.uc_Registration.contentPanel);
+            if (User_type.user_deparment == "Admin")
+            {
+                UC_Registe_Staff_Basicinfo uc = new UC_Registe_Staff_Basicinfo();
+                uc.Location = new Point(320, 80);
+                AddUserControl.Add(uc, UC_Registration.uc_Registration.contentPanel);
+            }
+            else
+            {
+                UC_Registe_Customer_Basicinfo uc = new UC_Registe_Customer_Basicinfo();
+                uc.Location = new Point(320, 80);
+                AddUserControl.Add(uc, UC_Registration.uc_Registration.contentPanel);
+            }
+            
         }
 
 

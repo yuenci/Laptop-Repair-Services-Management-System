@@ -67,5 +67,12 @@ namespace miniSys0._3.Controls.Others
             serverType.Text = data[1];
             time.Text = data[2];
         }
+
+        private void showDetail(object sender, EventArgs e)
+        {
+            OrderDetails orderDetails = new OrderDetails();
+            orderDetails.Init(ordIDCache);
+            orderDetails.Show();
+        }
     }
 }

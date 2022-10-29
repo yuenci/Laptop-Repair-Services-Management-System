@@ -133,7 +133,7 @@
             this.uiUserControl7.Controls.Add(this.label15);
             this.uiUserControl7.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.uiUserControl7.FillColor = System.Drawing.Color.White;
-            this.uiUserControl7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiUserControl7.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiUserControl7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
             this.uiUserControl7.Location = new System.Drawing.Point(850, 321);
             this.uiUserControl7.MinimumSize = new System.Drawing.Size(1, 1);
@@ -151,7 +151,7 @@
             // 
             this.notice3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.notice3.Enabled = false;
-            this.notice3.Font = new System.Drawing.Font(".萍方-简", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.notice3.Font = new System.Drawing.Font(".PingFang SC", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.notice3.Location = new System.Drawing.Point(13, 117);
             this.notice3.MinimumSize = new System.Drawing.Size(1, 1);
             this.notice3.Name = "notice3";
@@ -159,14 +159,14 @@
             this.notice3.Style = Sunny.UI.UIStyle.Custom;
             this.notice3.TabIndex = 33;
             this.notice3.Text = "Advice";
-            this.notice3.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.notice3.TipsFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.notice3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // notice2
             // 
             this.notice2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.notice2.Enabled = false;
-            this.notice2.Font = new System.Drawing.Font(".萍方-简", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.notice2.Font = new System.Drawing.Font(".PingFang SC", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.notice2.Location = new System.Drawing.Point(13, 80);
             this.notice2.MinimumSize = new System.Drawing.Size(1, 1);
             this.notice2.Name = "notice2";
@@ -174,14 +174,14 @@
             this.notice2.Style = Sunny.UI.UIStyle.Custom;
             this.notice2.TabIndex = 33;
             this.notice2.Text = "Message";
-            this.notice2.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.notice2.TipsFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.notice2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // notice4
             // 
             this.notice4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.notice4.Enabled = false;
-            this.notice4.Font = new System.Drawing.Font(".萍方-简", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.notice4.Font = new System.Drawing.Font(".PingFang SC", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.notice4.Location = new System.Drawing.Point(13, 154);
             this.notice4.MinimumSize = new System.Drawing.Size(1, 1);
             this.notice4.Name = "notice4";
@@ -189,14 +189,14 @@
             this.notice4.Style = Sunny.UI.UIStyle.Custom;
             this.notice4.TabIndex = 32;
             this.notice4.Text = "Advice";
-            this.notice4.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.notice4.TipsFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.notice4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // notice5
             // 
             this.notice5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.notice5.Enabled = false;
-            this.notice5.Font = new System.Drawing.Font(".萍方-简", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.notice5.Font = new System.Drawing.Font(".PingFang SC", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.notice5.Location = new System.Drawing.Point(13, 191);
             this.notice5.MinimumSize = new System.Drawing.Size(1, 1);
             this.notice5.Name = "notice5";
@@ -204,14 +204,14 @@
             this.notice5.Style = Sunny.UI.UIStyle.Custom;
             this.notice5.TabIndex = 32;
             this.notice5.Text = "Message";
-            this.notice5.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.notice5.TipsFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.notice5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // notice1
             // 
             this.notice1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.notice1.Enabled = false;
-            this.notice1.Font = new System.Drawing.Font(".萍方-简", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.notice1.Font = new System.Drawing.Font(".PingFang SC", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.notice1.Location = new System.Drawing.Point(13, 43);
             this.notice1.MinimumSize = new System.Drawing.Size(1, 1);
             this.notice1.Name = "notice1";
@@ -219,7 +219,7 @@
             this.notice1.Style = Sunny.UI.UIStyle.Custom;
             this.notice1.TabIndex = 32;
             this.notice1.Text = "Activity";
-            this.notice1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.notice1.TipsFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.notice1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // noticeText5
@@ -227,11 +227,11 @@
             this.noticeText5.AutoSize = true;
             this.noticeText5.BackColor = System.Drawing.Color.Transparent;
             this.noticeText5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.noticeText5.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.noticeText5.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.noticeText5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
             this.noticeText5.Location = new System.Drawing.Point(85, 197);
             this.noticeText5.Name = "noticeText5";
-            this.noticeText5.Size = new System.Drawing.Size(65, 22);
+            this.noticeText5.Size = new System.Drawing.Size(63, 16);
             this.noticeText5.TabIndex = 48;
             this.noticeText5.Text = "label25";
             this.noticeText5.Click += new System.EventHandler(this.noticeText5_Click);
@@ -241,11 +241,11 @@
             this.noticeText4.AutoSize = true;
             this.noticeText4.BackColor = System.Drawing.Color.Transparent;
             this.noticeText4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.noticeText4.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.noticeText4.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.noticeText4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
             this.noticeText4.Location = new System.Drawing.Point(85, 159);
             this.noticeText4.Name = "noticeText4";
-            this.noticeText4.Size = new System.Drawing.Size(65, 22);
+            this.noticeText4.Size = new System.Drawing.Size(63, 16);
             this.noticeText4.TabIndex = 47;
             this.noticeText4.Text = "label24";
             this.noticeText4.Click += new System.EventHandler(this.noticeText4_Click);
@@ -255,11 +255,11 @@
             this.noticeText3.AutoSize = true;
             this.noticeText3.BackColor = System.Drawing.Color.Transparent;
             this.noticeText3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.noticeText3.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.noticeText3.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.noticeText3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
             this.noticeText3.Location = new System.Drawing.Point(85, 121);
             this.noticeText3.Name = "noticeText3";
-            this.noticeText3.Size = new System.Drawing.Size(65, 22);
+            this.noticeText3.Size = new System.Drawing.Size(63, 16);
             this.noticeText3.TabIndex = 46;
             this.noticeText3.Text = "label23";
             this.noticeText3.Click += new System.EventHandler(this.noticeText3_Click);
@@ -269,11 +269,11 @@
             this.noticeText2.AutoSize = true;
             this.noticeText2.BackColor = System.Drawing.Color.Transparent;
             this.noticeText2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.noticeText2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.noticeText2.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.noticeText2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
             this.noticeText2.Location = new System.Drawing.Point(85, 83);
             this.noticeText2.Name = "noticeText2";
-            this.noticeText2.Size = new System.Drawing.Size(65, 22);
+            this.noticeText2.Size = new System.Drawing.Size(63, 16);
             this.noticeText2.TabIndex = 45;
             this.noticeText2.Text = "label22";
             this.noticeText2.Click += new System.EventHandler(this.noticeText2_Click);
@@ -283,11 +283,11 @@
             this.noticeText1.AutoSize = true;
             this.noticeText1.BackColor = System.Drawing.Color.Transparent;
             this.noticeText1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.noticeText1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.noticeText1.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.noticeText1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
             this.noticeText1.Location = new System.Drawing.Point(85, 45);
             this.noticeText1.Name = "noticeText1";
-            this.noticeText1.Size = new System.Drawing.Size(65, 22);
+            this.noticeText1.Size = new System.Drawing.Size(63, 16);
             this.noticeText1.TabIndex = 44;
             this.noticeText1.Text = "label21";
             this.noticeText1.Click += new System.EventHandler(this.noticeText1_Click);
@@ -297,11 +297,11 @@
             this.readMoreNotice.AutoSize = true;
             this.readMoreNotice.BackColor = System.Drawing.Color.Transparent;
             this.readMoreNotice.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.readMoreNotice.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.readMoreNotice.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.readMoreNotice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(112)))), ((int)(((byte)(255)))));
             this.readMoreNotice.Location = new System.Drawing.Point(160, 9);
             this.readMoreNotice.Name = "readMoreNotice";
-            this.readMoreNotice.Size = new System.Drawing.Size(91, 22);
+            this.readMoreNotice.Size = new System.Drawing.Size(79, 16);
             this.readMoreNotice.TabIndex = 37;
             this.readMoreNotice.Text = "Read more";
             this.readMoreNotice.Click += new System.EventHandler(this.readMoreNotice_Click);
@@ -310,10 +310,10 @@
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
+            this.label15.Font = new System.Drawing.Font(".PingFang SC", 15F, System.Drawing.FontStyle.Bold);
             this.label15.Location = new System.Drawing.Point(7, 5);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(76, 28);
+            this.label15.Size = new System.Drawing.Size(75, 20);
             this.label15.TabIndex = 33;
             this.label15.Text = "Notice";
             // 
@@ -328,7 +328,7 @@
             this.uiUserControl6.Controls.Add(this.label19);
             this.uiUserControl6.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.uiUserControl6.FillColor = System.Drawing.Color.White;
-            this.uiUserControl6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiUserControl6.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiUserControl6.Location = new System.Drawing.Point(850, 563);
             this.uiUserControl6.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiUserControl6.Name = "uiUserControl6";
@@ -346,11 +346,11 @@
             this.doc4.AutoSize = true;
             this.doc4.BackColor = System.Drawing.Color.Transparent;
             this.doc4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.doc4.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.doc4.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.doc4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
             this.doc4.Location = new System.Drawing.Point(160, 105);
             this.doc4.Name = "doc4";
-            this.doc4.Size = new System.Drawing.Size(76, 22);
+            this.doc4.Size = new System.Drawing.Size(71, 16);
             this.doc4.TabIndex = 52;
             this.doc4.Text = "About us";
             this.doc4.Click += new System.EventHandler(this.doc4_Click);
@@ -360,11 +360,11 @@
             this.doc3.AutoSize = true;
             this.doc3.BackColor = System.Drawing.Color.Transparent;
             this.doc3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.doc3.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.doc3.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.doc3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
             this.doc3.Location = new System.Drawing.Point(9, 105);
             this.doc3.Name = "doc3";
-            this.doc3.Size = new System.Drawing.Size(92, 22);
+            this.doc3.Size = new System.Drawing.Size(87, 16);
             this.doc3.TabIndex = 51;
             this.doc3.Text = "Contact us";
             this.doc3.Click += new System.EventHandler(this.doc3_Click);
@@ -374,11 +374,11 @@
             this.doc2.AutoSize = true;
             this.doc2.BackColor = System.Drawing.Color.Transparent;
             this.doc2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.doc2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.doc2.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.doc2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
             this.doc2.Location = new System.Drawing.Point(160, 59);
             this.doc2.Name = "doc2";
-            this.doc2.Size = new System.Drawing.Size(75, 22);
+            this.doc2.Size = new System.Drawing.Size(79, 16);
             this.doc2.TabIndex = 50;
             this.doc2.Text = "Tutorials";
             this.doc2.Click += new System.EventHandler(this.doc2_Click);
@@ -388,11 +388,11 @@
             this.doc1.AutoSize = true;
             this.doc1.BackColor = System.Drawing.Color.Transparent;
             this.doc1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.doc1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.doc1.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.doc1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
             this.doc1.Location = new System.Drawing.Point(8, 59);
             this.doc1.Name = "doc1";
-            this.doc1.Size = new System.Drawing.Size(94, 22);
+            this.doc1.Size = new System.Drawing.Size(95, 16);
             this.doc1.TabIndex = 49;
             this.doc1.Text = "Quick Start";
             this.doc1.Click += new System.EventHandler(this.doc1_Click);
@@ -402,11 +402,11 @@
             this.readMoreDoc.AutoSize = true;
             this.readMoreDoc.BackColor = System.Drawing.Color.Transparent;
             this.readMoreDoc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.readMoreDoc.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.readMoreDoc.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.readMoreDoc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(112)))), ((int)(((byte)(255)))));
             this.readMoreDoc.Location = new System.Drawing.Point(171, 9);
             this.readMoreDoc.Name = "readMoreDoc";
-            this.readMoreDoc.Size = new System.Drawing.Size(80, 22);
+            this.readMoreDoc.Size = new System.Drawing.Size(71, 16);
             this.readMoreDoc.TabIndex = 36;
             this.readMoreDoc.Text = "Get more";
             this.readMoreDoc.Click += new System.EventHandler(this.readMoreDoc_Click);
@@ -415,10 +415,10 @@
             // 
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
+            this.label19.Font = new System.Drawing.Font(".PingFang SC", 15F, System.Drawing.FontStyle.Bold);
             this.label19.Location = new System.Drawing.Point(6, 6);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(112, 28);
+            this.label19.Size = new System.Drawing.Size(97, 20);
             this.label19.TabIndex = 36;
             this.label19.Text = "Document";
             // 
@@ -434,7 +434,7 @@
             this.uiUserControl2.Controls.Add(this.shortcutButton3);
             this.uiUserControl2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.uiUserControl2.FillColor = System.Drawing.Color.White;
-            this.uiUserControl2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiUserControl2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiUserControl2.Location = new System.Drawing.Point(850, 1);
             this.uiUserControl2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiUserControl2.Name = "uiUserControl2";
@@ -451,10 +451,10 @@
             // 
             this.shortcutText3.AutoSize = true;
             this.shortcutText3.BackColor = System.Drawing.Color.Transparent;
-            this.shortcutText3.Font = new System.Drawing.Font(".萍方-简", 10F);
+            this.shortcutText3.Font = new System.Drawing.Font(".PingFang SC", 10F);
             this.shortcutText3.Location = new System.Drawing.Point(203, 107);
             this.shortcutText3.Name = "shortcutText3";
-            this.shortcutText3.Size = new System.Drawing.Size(51, 20);
+            this.shortcutText3.Size = new System.Drawing.Size(56, 14);
             this.shortcutText3.TabIndex = 50;
             this.shortcutText3.Text = "Profile";
             this.shortcutText3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -463,10 +463,10 @@
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
+            this.label14.Font = new System.Drawing.Font(".PingFang SC", 15F, System.Drawing.FontStyle.Bold);
             this.label14.Location = new System.Drawing.Point(6, 4);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(96, 28);
+            this.label14.Size = new System.Drawing.Size(97, 20);
             this.label14.TabIndex = 30;
             this.label14.Text = "Shortcut";
             // 
@@ -474,10 +474,10 @@
             // 
             this.shortcutText2.AutoSize = true;
             this.shortcutText2.BackColor = System.Drawing.Color.Transparent;
-            this.shortcutText2.Font = new System.Drawing.Font(".萍方-简", 10F);
+            this.shortcutText2.Font = new System.Drawing.Font(".PingFang SC", 10F);
             this.shortcutText2.Location = new System.Drawing.Point(106, 107);
             this.shortcutText2.Name = "shortcutText2";
-            this.shortcutText2.Size = new System.Drawing.Size(67, 20);
+            this.shortcutText2.Size = new System.Drawing.Size(63, 14);
             this.shortcutText2.TabIndex = 49;
             this.shortcutText2.Text = "Describe";
             this.shortcutText2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -485,7 +485,7 @@
             // shortcutButton2
             // 
             this.shortcutButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.shortcutButton2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.shortcutButton2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.shortcutButton2.Location = new System.Drawing.Point(110, 51);
             this.shortcutButton2.MinimumSize = new System.Drawing.Size(1, 1);
             this.shortcutButton2.Name = "shortcutButton2";
@@ -493,7 +493,7 @@
             this.shortcutButton2.Style = Sunny.UI.UIStyle.Custom;
             this.shortcutButton2.Symbol = 61670;
             this.shortcutButton2.TabIndex = 46;
-            this.shortcutButton2.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.shortcutButton2.TipsFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.shortcutButton2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.shortcutButton2.Click += new System.EventHandler(this.shortcutButton2_Click);
             // 
@@ -501,10 +501,10 @@
             // 
             this.shortcutText1.AutoSize = true;
             this.shortcutText1.BackColor = System.Drawing.Color.Transparent;
-            this.shortcutText1.Font = new System.Drawing.Font(".萍方-简", 10F);
+            this.shortcutText1.Font = new System.Drawing.Font(".PingFang SC", 10F);
             this.shortcutText1.Location = new System.Drawing.Point(7, 107);
             this.shortcutText1.Name = "shortcutText1";
-            this.shortcutText1.Size = new System.Drawing.Size(69, 20);
+            this.shortcutText1.Size = new System.Drawing.Size(63, 14);
             this.shortcutText1.TabIndex = 48;
             this.shortcutText1.Text = "Requests";
             this.shortcutText1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -512,7 +512,7 @@
             // shortcutButton1
             // 
             this.shortcutButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.shortcutButton1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.shortcutButton1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.shortcutButton1.Location = new System.Drawing.Point(16, 51);
             this.shortcutButton1.MinimumSize = new System.Drawing.Size(1, 1);
             this.shortcutButton1.Name = "shortcutButton1";
@@ -520,14 +520,14 @@
             this.shortcutButton1.Style = Sunny.UI.UIStyle.Custom;
             this.shortcutButton1.Symbol = 57397;
             this.shortcutButton1.TabIndex = 45;
-            this.shortcutButton1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.shortcutButton1.TipsFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.shortcutButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.shortcutButton1.Click += new System.EventHandler(this.shortcutButton1_Click);
             // 
             // shortcutButton3
             // 
             this.shortcutButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.shortcutButton3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.shortcutButton3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.shortcutButton3.Location = new System.Drawing.Point(204, 51);
             this.shortcutButton3.MinimumSize = new System.Drawing.Size(1, 1);
             this.shortcutButton3.Name = "shortcutButton3";
@@ -536,7 +536,7 @@
             this.shortcutButton3.Symbol = 62144;
             this.shortcutButton3.SymbolSize = 26;
             this.shortcutButton3.TabIndex = 47;
-            this.shortcutButton3.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.shortcutButton3.TipsFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.shortcutButton3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.shortcutButton3.Click += new System.EventHandler(this.shortcutButton3_Click);
             // 
@@ -545,7 +545,7 @@
             this.uiUserControl5.BackColor = System.Drawing.Color.White;
             this.uiUserControl5.Controls.Add(this.pieChartPanel);
             this.uiUserControl5.FillColor = System.Drawing.Color.White;
-            this.uiUserControl5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiUserControl5.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiUserControl5.Location = new System.Drawing.Point(456, 441);
             this.uiUserControl5.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiUserControl5.Name = "uiUserControl5";
@@ -572,10 +572,10 @@
             // 
             this.ratioLabel.AutoSize = true;
             this.ratioLabel.BackColor = System.Drawing.Color.Transparent;
-            this.ratioLabel.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
+            this.ratioLabel.Font = new System.Drawing.Font(".PingFang SC", 15F, System.Drawing.FontStyle.Bold);
             this.ratioLabel.Location = new System.Drawing.Point(6, 4);
             this.ratioLabel.Name = "ratioLabel";
-            this.ratioLabel.Size = new System.Drawing.Size(64, 28);
+            this.ratioLabel.Size = new System.Drawing.Size(64, 20);
             this.ratioLabel.TabIndex = 42;
             this.ratioLabel.Text = "Ratio";
             this.ratioLabel.MouseHover += new System.EventHandler(this.ratioLabel_MouseHover);
@@ -583,15 +583,15 @@
             // refreshlButton2
             // 
             this.refreshlButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.refreshlButton2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.refreshlButton2.Location = new System.Drawing.Point(322, 0);
+            this.refreshlButton2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.refreshlButton2.Location = new System.Drawing.Point(339, 2);
             this.refreshlButton2.MinimumSize = new System.Drawing.Size(1, 1);
             this.refreshlButton2.Name = "refreshlButton2";
             this.refreshlButton2.Size = new System.Drawing.Size(35, 35);
             this.refreshlButton2.Style = Sunny.UI.UIStyle.Custom;
             this.refreshlButton2.Symbol = 57386;
             this.refreshlButton2.TabIndex = 2;
-            this.refreshlButton2.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.refreshlButton2.TipsFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.refreshlButton2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.refreshlButton2.Click += new System.EventHandler(this.refreshlButton2_Click);
             // 
@@ -613,7 +613,7 @@
             this.uiUserControl4.Controls.Add(this.label16);
             this.uiUserControl4.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.uiUserControl4.FillColor = System.Drawing.Color.White;
-            this.uiUserControl4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiUserControl4.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiUserControl4.Location = new System.Drawing.Point(1, 441);
             this.uiUserControl4.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiUserControl4.Name = "uiUserControl4";
@@ -674,7 +674,7 @@
             // news1
             // 
             this.news1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.news1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.news1.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.news1.Location = new System.Drawing.Point(17, 92);
             this.news1.MarkPos = Sunny.UI.UIMarkLabel.UIMarkPos.Bottom;
             this.news1.MarkSize = 2;
@@ -691,7 +691,7 @@
             // news5
             // 
             this.news5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.news5.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.news5.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.news5.Location = new System.Drawing.Point(17, 241);
             this.news5.MarkPos = Sunny.UI.UIMarkLabel.UIMarkPos.Bottom;
             this.news5.MarkSize = 2;
@@ -708,7 +708,7 @@
             // news4
             // 
             this.news4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.news4.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.news4.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.news4.Location = new System.Drawing.Point(17, 204);
             this.news4.MarkPos = Sunny.UI.UIMarkLabel.UIMarkPos.Bottom;
             this.news4.MarkSize = 2;
@@ -725,7 +725,7 @@
             // news3
             // 
             this.news3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.news3.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.news3.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.news3.Location = new System.Drawing.Point(17, 167);
             this.news3.MarkPos = Sunny.UI.UIMarkLabel.UIMarkPos.Bottom;
             this.news3.MarkSize = 2;
@@ -742,7 +742,7 @@
             // news2
             // 
             this.news2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.news2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.news2.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.news2.Location = new System.Drawing.Point(17, 130);
             this.news2.MarkPos = Sunny.UI.UIMarkLabel.UIMarkPos.Bottom;
             this.news2.MarkSize = 2;
@@ -761,7 +761,7 @@
             this.newsTopBar.Controls.Add(this.label32);
             this.newsTopBar.Controls.Add(this.label31);
             this.newsTopBar.Controls.Add(this.label30);
-            this.newsTopBar.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.newsTopBar.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.newsTopBar.Location = new System.Drawing.Point(17, 53);
             this.newsTopBar.MinimumSize = new System.Drawing.Size(1, 1);
             this.newsTopBar.Name = "newsTopBar";
@@ -777,10 +777,10 @@
             // 
             this.label32.AutoSize = true;
             this.label32.BackColor = System.Drawing.Color.Transparent;
-            this.label32.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label32.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label32.Location = new System.Drawing.Point(344, 5);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(57, 22);
+            this.label32.Size = new System.Drawing.Size(52, 16);
             this.label32.TabIndex = 55;
             this.label32.Text = "Views";
             // 
@@ -788,10 +788,10 @@
             // 
             this.label31.AutoSize = true;
             this.label31.BackColor = System.Drawing.Color.Transparent;
-            this.label31.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label31.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label31.Location = new System.Drawing.Point(64, 5);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(44, 22);
+            this.label31.Size = new System.Drawing.Size(52, 16);
             this.label31.TabIndex = 54;
             this.label31.Text = "Title";
             // 
@@ -799,10 +799,10 @@
             // 
             this.label30.AutoSize = true;
             this.label30.BackColor = System.Drawing.Color.Transparent;
-            this.label30.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label30.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label30.Location = new System.Drawing.Point(14, 5);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(40, 22);
+            this.label30.Size = new System.Drawing.Size(34, 16);
             this.label30.TabIndex = 53;
             this.label30.Text = "Top";
             // 
@@ -811,11 +811,11 @@
             this.readMoreNews.AutoSize = true;
             this.readMoreNews.BackColor = System.Drawing.Color.Transparent;
             this.readMoreNews.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.readMoreNews.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.readMoreNews.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.readMoreNews.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(112)))), ((int)(((byte)(255)))));
             this.readMoreNews.Location = new System.Drawing.Point(338, 11);
             this.readMoreNews.Name = "readMoreNews";
-            this.readMoreNews.Size = new System.Drawing.Size(91, 22);
+            this.readMoreNews.Size = new System.Drawing.Size(79, 16);
             this.readMoreNews.TabIndex = 35;
             this.readMoreNews.Text = "Read more";
             this.readMoreNews.Click += new System.EventHandler(this.readMoreNews_Click);
@@ -824,10 +824,10 @@
             // 
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
+            this.label16.Font = new System.Drawing.Font(".PingFang SC", 15F, System.Drawing.FontStyle.Bold);
             this.label16.Location = new System.Drawing.Point(10, 5);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(66, 28);
+            this.label16.Size = new System.Drawing.Size(53, 20);
             this.label16.TabIndex = 34;
             this.label16.Text = "News";
             // 
@@ -853,7 +853,7 @@
             this.uiUserControl3.Controls.Add(this.panel1);
             this.uiUserControl3.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.uiUserControl3.FillColor = System.Drawing.Color.White;
-            this.uiUserControl3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiUserControl3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiUserControl3.Location = new System.Drawing.Point(1, 1);
             this.uiUserControl3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiUserControl3.Name = "uiUserControl3";
@@ -878,23 +878,23 @@
             // refreshlButton1
             // 
             this.refreshlButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.refreshlButton1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.refreshlButton1.Location = new System.Drawing.Point(789, 3);
+            this.refreshlButton1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.refreshlButton1.Location = new System.Drawing.Point(799, 2);
             this.refreshlButton1.MinimumSize = new System.Drawing.Size(1, 1);
             this.refreshlButton1.Name = "refreshlButton1";
-            this.refreshlButton1.Size = new System.Drawing.Size(35, 35);
+            this.refreshlButton1.Size = new System.Drawing.Size(30, 30);
             this.refreshlButton1.Style = Sunny.UI.UIStyle.Custom;
             this.refreshlButton1.Symbol = 57386;
             this.refreshlButton1.TabIndex = 1;
-            this.refreshlButton1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.refreshlButton1.TipsFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.refreshlButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.refreshlButton1.Click += new System.EventHandler(this.refreshlButton_Click);
             // 
             // upperTriangle
             // 
             this.upperTriangle.BackColor = System.Drawing.Color.Transparent;
-            this.upperTriangle.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.upperTriangle.Location = new System.Drawing.Point(797, 98);
+            this.upperTriangle.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.upperTriangle.Location = new System.Drawing.Point(802, 98);
             this.upperTriangle.MinimumSize = new System.Drawing.Size(1, 1);
             this.upperTriangle.Name = "upperTriangle";
             this.upperTriangle.Shape = Sunny.UI.UIShape.Square;
@@ -910,10 +910,10 @@
             // 
             this.BannerLabel4.AutoSize = true;
             this.BannerLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.BannerLabel4.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Bold);
+            this.BannerLabel4.Font = new System.Drawing.Font(".PingFang SC", 18F, System.Drawing.FontStyle.Bold);
             this.BannerLabel4.Location = new System.Drawing.Point(709, 94);
             this.BannerLabel4.Name = "BannerLabel4";
-            this.BannerLabel4.Size = new System.Drawing.Size(76, 34);
+            this.BannerLabel4.Size = new System.Drawing.Size(62, 24);
             this.BannerLabel4.TabIndex = 28;
             this.BannerLabel4.Text = "2.8%";
             // 
@@ -921,10 +921,10 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font(".萍方-简", 12F);
+            this.label10.Font = new System.Drawing.Font(".PingFang SC", 12F);
             this.label10.Location = new System.Drawing.Point(711, 68);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(78, 22);
+            this.label10.Size = new System.Drawing.Size(63, 16);
             this.label10.TabIndex = 27;
             this.label10.Text = "Compare";
             // 
@@ -932,10 +932,10 @@
             // 
             this.BannerLabel3.AutoSize = true;
             this.BannerLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.BannerLabel3.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Bold);
+            this.BannerLabel3.Font = new System.Drawing.Font(".PingFang SC", 18F, System.Drawing.FontStyle.Bold);
             this.BannerLabel3.Location = new System.Drawing.Point(510, 94);
             this.BannerLabel3.Name = "BannerLabel3";
-            this.BannerLabel3.Size = new System.Drawing.Size(75, 34);
+            this.BannerLabel3.Size = new System.Drawing.Size(62, 24);
             this.BannerLabel3.TabIndex = 26;
             this.BannerLabel3.Text = "200+";
             // 
@@ -943,10 +943,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font(".萍方-简", 12F);
+            this.label8.Font = new System.Drawing.Font(".PingFang SC", 12F);
             this.label8.Location = new System.Drawing.Point(512, 68);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(111, 22);
+            this.label8.Size = new System.Drawing.Size(111, 16);
             this.label8.TabIndex = 25;
             this.label8.Text = "Today\'s order";
             // 
@@ -954,10 +954,10 @@
             // 
             this.BannerLabel2.AutoSize = true;
             this.BannerLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.BannerLabel2.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Bold);
+            this.BannerLabel2.Font = new System.Drawing.Font(".PingFang SC", 18F, System.Drawing.FontStyle.Bold);
             this.BannerLabel2.Location = new System.Drawing.Point(291, 94);
             this.BannerLabel2.Name = "BannerLabel2";
-            this.BannerLabel2.Size = new System.Drawing.Size(75, 34);
+            this.BannerLabel2.Size = new System.Drawing.Size(62, 24);
             this.BannerLabel2.TabIndex = 24;
             this.BannerLabel2.Text = "200+";
             // 
@@ -965,10 +965,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font(".萍方-简", 12F);
+            this.label6.Font = new System.Drawing.Font(".PingFang SC", 12F);
             this.label6.Location = new System.Drawing.Point(293, 68);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 22);
+            this.label6.Size = new System.Drawing.Size(79, 16);
             this.label6.TabIndex = 23;
             this.label6.Text = "Servicing";
             // 
@@ -976,10 +976,10 @@
             // 
             this.BannerLabel1.AutoSize = true;
             this.BannerLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.BannerLabel1.Font = new System.Drawing.Font(".萍方-简", 18F, System.Drawing.FontStyle.Bold);
+            this.BannerLabel1.Font = new System.Drawing.Font(".PingFang SC", 18F, System.Drawing.FontStyle.Bold);
             this.BannerLabel1.Location = new System.Drawing.Point(82, 94);
             this.BannerLabel1.Name = "BannerLabel1";
-            this.BannerLabel1.Size = new System.Drawing.Size(90, 34);
+            this.BannerLabel1.Size = new System.Drawing.Size(75, 24);
             this.BannerLabel1.TabIndex = 22;
             this.BannerLabel1.Text = "5000+";
             // 
@@ -987,10 +987,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font(".萍方-简", 12F);
+            this.label3.Font = new System.Drawing.Font(".PingFang SC", 12F);
             this.label3.Location = new System.Drawing.Point(84, 68);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 22);
+            this.label3.Size = new System.Drawing.Size(87, 16);
             this.label3.TabIndex = 21;
             this.label3.Text = "All orders";
             // 
@@ -1038,10 +1038,10 @@
             // 
             this.name_lable.AutoSize = true;
             this.name_lable.BackColor = System.Drawing.Color.Transparent;
-            this.name_lable.Font = new System.Drawing.Font(".萍方-简", 16F);
+            this.name_lable.Font = new System.Drawing.Font(".PingFang SC", 16F);
             this.name_lable.Location = new System.Drawing.Point(53, 14);
             this.name_lable.Name = "name_lable";
-            this.name_lable.Size = new System.Drawing.Size(337, 31);
+            this.name_lable.Size = new System.Drawing.Size(307, 22);
             this.name_lable.TabIndex = 15;
             this.name_lable.Text = "Welcome back，Ryan Septimus";
             // 

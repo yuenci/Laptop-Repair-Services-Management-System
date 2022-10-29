@@ -110,6 +110,9 @@ namespace miniSys0._3.Controls.Others
                     urgentFee.Enabled = false;
                     SQLCursor.Execute(sql);
                     iconStatus = 0;
+
+                    NotificationForm messageBoxForm = new NotificationForm("success", "Modify successfully");
+                    messageBoxForm.ShowDialog();
                 }
                 
             }

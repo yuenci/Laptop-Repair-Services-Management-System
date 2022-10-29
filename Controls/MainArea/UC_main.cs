@@ -1022,11 +1022,13 @@ namespace miniSys0._3.Controls
             {
                 UC_Registration uc = new UC_Registration();
                 addUserControlToMain(uc);
+                Main.main.currentMainPage = "UC_Registration";
             }
             else if (type == "Requests" )
             {
                 UC_TaskList uc = new UC_TaskList();
                 addUserControlToMain(uc);
+                Main.main.currentMainPage = "UC_TaskList";
             }
         }
 
@@ -1037,16 +1039,19 @@ namespace miniSys0._3.Controls
             {
                 UC_Payment uc = new UC_Payment();
                 addUserControlToMain(uc);
+                Main.main.currentMainPage = "UC_Payment";
             }
             else if (type == "Describe")
             {
                 UC_TaskCards uc = new UC_TaskCards();
                 addUserControlToMain(uc);
+                Main.main.currentMainPage = "UC_TaskCards";
             }
             else if (type == "Report")
             {
                 UC_ServiceReport uc = new UC_ServiceReport();
                 addUserControlToMain(uc);
+                Main.main.currentMainPage = "UC_ServiceReport";
             }
         }
 
@@ -1057,11 +1062,13 @@ namespace miniSys0._3.Controls
             {
                 UC_UserInfo uc = new UC_UserInfo();
                 addUserControlToMain(uc);
+                Main.main.currentMainPage = "UC_UserInfo";
             }
             else if (type == "Income")
             {
                 UC_IncomeAnalysis uc = new UC_IncomeAnalysis();
                 addUserControlToMain(uc);
+                Main.main.currentMainPage = "UC_IncomeAnalysis";
             }
         }
 

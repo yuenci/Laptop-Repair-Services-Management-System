@@ -43,7 +43,7 @@
             this.nextStepBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
             this.nextStepBtn.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.nextStepBtn.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.nextStepBtn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.nextStepBtn.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.nextStepBtn.Location = new System.Drawing.Point(435, 415);
             this.nextStepBtn.MinimumSize = new System.Drawing.Size(1, 1);
             this.nextStepBtn.Name = "nextStepBtn";
@@ -55,7 +55,7 @@
             this.nextStepBtn.Style = Sunny.UI.UIStyle.Custom;
             this.nextStepBtn.TabIndex = 91;
             this.nextStepBtn.Text = "Next";
-            this.nextStepBtn.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.nextStepBtn.TipsFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.nextStepBtn.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.nextStepBtn.Click += new System.EventHandler(this.nextStepBtn_Click);
             // 
@@ -63,7 +63,7 @@
             // 
             this.nameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nameTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.nameTextBox.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.nameTextBox.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.nameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
             this.nameTextBox.Location = new System.Drawing.Point(435, 288);
             this.nameTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -84,12 +84,12 @@
             // 
             // uiLabel1
             // 
-            this.uiLabel1.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel1.Font = new System.Drawing.Font(".PingFang SC", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel1.Location = new System.Drawing.Point(430, 116);
             this.uiLabel1.Name = "uiLabel1";
             this.uiLabel1.Size = new System.Drawing.Size(406, 80);
             this.uiLabel1.TabIndex = 99;
-            this.uiLabel1.Text = "Enter the  name as a good start.";
+            this.uiLabel1.Text = "Enter the name as a good start.";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiLabel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
@@ -107,7 +107,7 @@
             // 
             this.successIcon.BackColor = System.Drawing.Color.Transparent;
             this.successIcon.FillColor = System.Drawing.Color.Transparent;
-            this.successIcon.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.successIcon.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.successIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(42)))));
             this.successIcon.Location = new System.Drawing.Point(789, 282);
             this.successIcon.MinimumSize = new System.Drawing.Size(1, 1);
@@ -123,7 +123,7 @@
             // errorBar
             // 
             this.errorBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(236)))), ((int)(((byte)(232)))));
-            this.errorBar.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.errorBar.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.errorBar.Location = new System.Drawing.Point(435, 232);
             this.errorBar.MinimumSize = new System.Drawing.Size(1, 1);
             this.errorBar.Name = "errorBar";

@@ -61,9 +61,11 @@ namespace miniSys0._3.Controls.MainArea
         
         private void InitCard()
         {
-            string sql1 = "WITH A AS(SELECT DISTINCT OrderID,Time from Schedule WhERE Status = 'Finished'),";
+            /*string sql1 = "WITH A AS(SELECT DISTINCT OrderID,Time from Schedule WhERE Status = 'Completed'),";
             sql1 += "B AS(SELECT DISTINCT OrderID,Time from Schedule)";
-            sql1 += "select * from B where (select count(1) as num from A where A.OrderID = B.OrderID) = 0  Order by Time";
+            sql1 += "select * from B where (select count(1) as num from A where A.OrderID = B.OrderID) = 0  Order by Time";*/
+
+            string sql1 = "SELECT OrderID FROM Schedule WHERE Status = 'Order' ORDER　BY Time DESC;";
 
             dynamic[]  data = SQLCursor.Query(sql1);
 
@@ -72,6 +74,7 @@ namespace miniSys0._3.Controls.MainArea
 
             for (int i = 0; i < card.Length; i++)
             {
+                Console.WriteLine(i);
                 card[i].Init(data[i][0]);
             }
 

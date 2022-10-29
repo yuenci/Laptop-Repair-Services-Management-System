@@ -152,51 +152,59 @@ namespace miniSys0._3.Controls.MainArea
         
         private void edit_Click(object sender, EventArgs e)
         {
-            if (edit.Text =="Edit")
+            if (!SQLCursor.ifCurrentOrderFinish())
             {
-                edit.Text = "OK";
-                edit.ForeColor = Color.Green;
-                serviceType.Enabled = true;
-            }
-            else if (edit.Text =="OK")
-            {
-                
-
-                edit.Text = "Edit";
-                edit.ForeColor = Color.FromArgb(22, 93, 255);
-                if (serviceType.SelectedIndex !=-1)
+                if (edit.Text == "Edit")
                 {
-                    
-                    string newPrice = "";
+                    edit.Text = "OK";
+                    edit.ForeColor = Color.Green;
+                    serviceType.Enabled = true;
+                }
+                else if (edit.Text == "OK")
+                {
 
-                    if (urgent)
+
+                    edit.Text = "Edit";
+                    edit.ForeColor = Color.FromArgb(22, 93, 255);
+                    if (serviceType.SelectedIndex != -1)
                     {
-                        newPrice = SQLCursor.Query("Select Urgent_fee From Service Where ServiceID =" +
-                            $"'{"Ser00" + (serviceType.SelectedIndex + 1).ToString()}'")[0];
+
+                        string newPrice = "";
+
+                        if (urgent)
+                        {
+                            newPrice = SQLCursor.Query("Select Urgent_fee From Service Where ServiceID =" +
+                                $"'{"Ser00" + (serviceType.SelectedIndex + 1).ToString()}'")[0];
+                        }
+                        else
+                        {
+                            newPrice = "RM" + SQLCursor.Query("Select Normal_fee From Service Where ServiceID =" +
+                                $"'{"Ser00" + (serviceType.SelectedIndex + 1).ToString()}'")[0];
+                        }
+
+                        SQLCursor.Execute($"UPDATE Orders SET Service_type = " +
+                            $"'{"Ser00" + (serviceType.SelectedIndex + 1).ToString()}' " +
+                            $"Where OrderID ='{ordIDCache}'");
+
+
+
+                        price.Text = "RM" + newPrice;
+                        serviceType.Enabled = false;
                     }
                     else
                     {
-                        newPrice = "RM" + SQLCursor.Query("Select Normal_fee From Service Where ServiceID =" +
-                            $"'{"Ser00" + (serviceType.SelectedIndex + 1).ToString()}'")[0];
+                        serviceType.Text = SQLCursor.Query("select Top 1 Service.Type  From Orders " +
+                            "Inner Join Service On Service.ServiceID = Orders.Service_type " +
+                            "Where CustomerID= 'Cus000001' Order By Time DESC;")[0];
+                        serviceType.Enabled = false;
                     }
 
-                    SQLCursor.Execute($"UPDATE Orders SET Service_type = " +
-                        $"'{"Ser00" + (serviceType.SelectedIndex + 1).ToString()}' " +
-                        $"Where OrderID ='{ordIDCache}'");
-
-
-
-                    price.Text = "RM" + newPrice;
-                    serviceType.Enabled = false;
                 }
-                else
-                {
-                    serviceType.Text = SQLCursor.Query("select Top 1 Service.Type  From Orders " +
-                        "Inner Join Service On Service.ServiceID = Orders.Service_type " +
-                        "Where CustomerID= 'Cus000001' Order By Time DESC;")[0];
-                    serviceType.Enabled = false;
-                }
-
+            }
+            else
+            {
+                NotificationForm messageBoxForm = new NotificationForm("warning", "This order has been closed and cannot be changed");
+                messageBoxForm.ShowDialog();
             }
         }
 
@@ -331,9 +339,11 @@ namespace miniSys0._3.Controls.MainArea
             }
             else if (type == "Finished")
             {
-                string time = SQLCursor.Query("Select Time from Schedule Where " +
+                string sql = "Select Time from Schedule Where " +
                     $"OrderID ='{ordIDCache}' " +
-                    "And Status = 'Finished';")[0];
+                    "And Status = 'Finished';";
+                //Console.WriteLine(sql);
+                string time = SQLCursor.Query(sql)[0];
 
                 return time;
             }

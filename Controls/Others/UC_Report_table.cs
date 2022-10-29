@@ -43,8 +43,8 @@ namespace miniSys0._3.Controls.Others
                 uiLabel2.Text = "Total service quantity";
                 uiLabel3.Text = "Maximum monthly service quantity";
 
-                string sql = "SELECT COUNT(*) FROM Orders Where year(Time) = 2022;" +
-                "SELECT TOP 1 COUNT(*) FROM Orders Where year(Time) = 2022" +
+                string sql = $"SELECT COUNT(*) FROM Orders Where year(Time) = {year};" +
+                $"SELECT TOP 1 COUNT(*) FROM Orders Where year(Time) = {year}" +
                 "GROUP BY year(Time),month(Time)" +
                 "ORDER BY COUNT(*) DESC; ";
 
@@ -52,7 +52,7 @@ namespace miniSys0._3.Controls.Others
                 if (data.Length >0)
                 {
                     double ave = int.Parse(data[0][0]) / month;
-                    aveLabel.Text = ave.ToString("#0.00");
+                    aveLabel.Text = ave.ToString("#0");
                     totalLabel.Text = data[0][0];
                     maxLabel.Text = data[1][0];
                 }
@@ -63,15 +63,15 @@ namespace miniSys0._3.Controls.Others
                 uiLabel2.Text = "Total income";
                 uiLabel3.Text = "Maximum monthly income";
 
-                string sql = "SELECT SUM(Price) FROM Orders Where year(Time) = 2022;" +
-                "SELECT TOP 1 SUM(Price) FROM Orders Where year(Time) = 2022" +
+                string sql = $"SELECT SUM(Price) FROM Orders Where year(Time) = {year};" +
+                $"SELECT TOP 1 SUM(Price) FROM Orders Where year(Time) = {year}" +
                 "GROUP BY year(Time),month(Time)" +
                 "ORDER BY SUM(Price) DESC;";
                 dynamic[] data = SQLCursor.QueryMany(sql);
                 if (data.Length > 0)
                 {
                     double ave = int.Parse(data[0][0]) / month;
-                    aveLabel.Text = ave.ToString("#0.00");
+                    aveLabel.Text = ave.ToString("#0");
                     totalLabel.Text = data[0][0];
                     maxLabel.Text = data[1][0];
                 }

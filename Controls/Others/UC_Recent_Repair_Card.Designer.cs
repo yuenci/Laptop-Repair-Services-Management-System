@@ -39,7 +39,8 @@
             // time
             // 
             this.time.BackColor = System.Drawing.Color.Transparent;
-            this.time.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.time.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.time.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.time.Location = new System.Drawing.Point(3, 103);
             this.time.Name = "time";
             this.time.Size = new System.Drawing.Size(223, 23);
@@ -48,11 +49,13 @@
             this.time.Text = "2017-12-13 02:00:31";
             this.time.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.time.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.time.Click += new System.EventHandler(this.showDetail);
             // 
             // serverType
             // 
             this.serverType.BackColor = System.Drawing.Color.Transparent;
-            this.serverType.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.serverType.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.serverType.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.serverType.Location = new System.Drawing.Point(3, 46);
             this.serverType.Name = "serverType";
             this.serverType.Size = new System.Drawing.Size(213, 47);
@@ -61,11 +64,13 @@
             this.serverType.Text = "Troubleshot and fix computer running slow";
             this.serverType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.serverType.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.serverType.Click += new System.EventHandler(this.showDetail);
             // 
             // model
             // 
             this.model.BackColor = System.Drawing.Color.Transparent;
-            this.model.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.model.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.model.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.model.Location = new System.Drawing.Point(2, 7);
             this.model.Name = "model";
             this.model.Size = new System.Drawing.Size(224, 23);
@@ -74,11 +79,12 @@
             this.model.Text = "Honor";
             this.model.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.model.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.model.Click += new System.EventHandler(this.showDetail);
             // 
             // line
             // 
             this.line.BackColor = System.Drawing.Color.Transparent;
-            this.line.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.line.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.line.Location = new System.Drawing.Point(3, 33);
             this.line.MinimumSize = new System.Drawing.Size(1, 1);
             this.line.Name = "line";
@@ -94,7 +100,7 @@
             this.uiUserControl1.Controls.Add(this.line);
             this.uiUserControl1.Controls.Add(this.time);
             this.uiUserControl1.FillColor = System.Drawing.Color.White;
-            this.uiUserControl1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiUserControl1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiUserControl1.Location = new System.Drawing.Point(3, 3);
             this.uiUserControl1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiUserControl1.Name = "uiUserControl1";

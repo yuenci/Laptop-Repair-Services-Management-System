@@ -94,13 +94,22 @@ namespace miniSys0._3
             //UC_main.WebBrowser.Dispose();
             //UC_main.WebBrowser1.GetBrowser().CloseBrowser(true);
             //UC_main.WebBrowser1.Dispose();
-            //Cef.Shutdown();
+            //Cef.Shutdown();  
             User_type.loginStatus = "Relogin";
+            Main.main.CSharpInc.Visible = false;
             Login login = new Login();
             login.Show();
             this.Close();
+            ResetSetting();
             Main.uniqueInstance = null;
             Main.main.Hide();
+        }
+
+        private void ResetSetting()
+        {
+            User_type.user_avatarPath = "";
+
+            UserSettings.DefaultSetting();
         }
 
         public void InitAvatar()

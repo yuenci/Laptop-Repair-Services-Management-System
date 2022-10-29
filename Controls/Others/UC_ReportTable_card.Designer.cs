@@ -40,7 +40,7 @@
             // ProcessBar
             // 
             this.ProcessBar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            this.ProcessBar.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ProcessBar.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ProcessBar.Location = new System.Drawing.Point(599, 15);
             this.ProcessBar.MinimumSize = new System.Drawing.Size(70, 3);
             this.ProcessBar.Name = "ProcessBar";
@@ -56,7 +56,7 @@
             // uiAvatar1
             // 
             this.uiAvatar1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiAvatar1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiAvatar1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiAvatar1.Icon = Sunny.UI.UIAvatar.UIIcon.Text;
             this.uiAvatar1.Location = new System.Drawing.Point(14, 3);
             this.uiAvatar1.MinimumSize = new System.Drawing.Size(1, 1);
@@ -71,7 +71,7 @@
             // 
             // ratio
             // 
-            this.ratio.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ratio.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ratio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(105)))));
             this.ratio.Location = new System.Drawing.Point(865, 14);
             this.ratio.Name = "ratio";
@@ -84,7 +84,7 @@
             // 
             // dataTime
             // 
-            this.dataTime.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dataTime.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dataTime.ForeColor = System.Drawing.Color.Black;
             this.dataTime.Location = new System.Drawing.Point(177, 15);
             this.dataTime.Name = "dataTime";
@@ -97,7 +97,7 @@
             // 
             // quantity
             // 
-            this.quantity.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.quantity.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.quantity.ForeColor = System.Drawing.Color.Black;
             this.quantity.Location = new System.Drawing.Point(352, 14);
             this.quantity.Name = "quantity";

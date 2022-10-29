@@ -119,7 +119,7 @@
             this.searchIcon.Symbol = 61442;
             this.searchIcon.SymbolColor = System.Drawing.Color.Black;
             this.searchIcon.SymbolHoverColor = System.Drawing.Color.Black;
-            this.searchIcon.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.searchIcon.TipsFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.searchIcon.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.searchIcon.Click += new System.EventHandler(this.searchIcon_Click);
             // 
@@ -140,7 +140,7 @@
             this.swithTheme.Symbol = 61506;
             this.swithTheme.SymbolColor = System.Drawing.Color.Black;
             this.swithTheme.SymbolHoverColor = System.Drawing.Color.Black;
-            this.swithTheme.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.swithTheme.TipsFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.swithTheme.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.swithTheme.Click += new System.EventHandler(this.uiSymbolButton3_Click);
             // 
@@ -161,7 +161,7 @@
             this.message.Symbol = 61683;
             this.message.SymbolColor = System.Drawing.Color.Black;
             this.message.SymbolHoverColor = System.Drawing.Color.Black;
-            this.message.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.message.TipsFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.message.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.message.Click += new System.EventHandler(this.uiSymbolButton2_Click);
             // 
@@ -182,7 +182,7 @@
             this.uiSymbolButton1.Symbol = 57399;
             this.uiSymbolButton1.SymbolColor = System.Drawing.Color.Black;
             this.uiSymbolButton1.SymbolHoverColor = System.Drawing.Color.Black;
-            this.uiSymbolButton1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiSymbolButton1.TipsFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiSymbolButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.uiSymbolButton1.Click += new System.EventHandler(this.uiSymbolButton1_Click);
             // 
@@ -263,6 +263,7 @@
             this.exist});
             this.ContextMenuStrip.Name = "ContextMenuStrip";
             this.ContextMenuStrip.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.ContextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.ContextMenuStrip_Opening);
             // 
             // minimize
             // 
@@ -332,7 +333,7 @@
         public System.Windows.Forms.Panel mainPanel;
         private Sunny.UI.UILabel copyRight;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.NotifyIcon CSharpInc;
+        public System.Windows.Forms.NotifyIcon CSharpInc;
         private Sunny.UI.UIContextMenuStrip ContextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem minimize;
         private System.Windows.Forms.ToolStripMenuItem maximize;

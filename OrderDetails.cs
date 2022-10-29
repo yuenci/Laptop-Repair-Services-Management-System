@@ -28,16 +28,19 @@ namespace miniSys0._3
             line1.FillColor = Color.Transparent;
             line2.FillColor = Color.Transparent;
             line3.FillColor = Color.Transparent;
+            line1.LineColor = Color.FromArgb(22, 93, 255);
+            line2.LineColor = Color.FromArgb(22, 93, 255);
+            line3.LineColor = Color.FromArgb(22, 93, 255);
 
-            delectBtn.FillColor = Color.FromArgb(22,93,255);
-            delectBtn.FillHoverColor = Color.FromArgb(64, 18, 255);
-            delectBtn.FillPressColor = Color.FromArgb(64, 18, 255);
+            finishBtn.FillColor = Color.FromArgb(22,93,255);
+            finishBtn.FillHoverColor = Color.FromArgb(64, 18, 255);
+            finishBtn.FillPressColor = Color.FromArgb(64, 18, 255);
             delectBtn.RectColor = Color.Transparent;
 
 
-            finishBtn.FillColor = Color.FromArgb(245,63,63);
-            finishBtn.FillHoverColor = Color.FromArgb(247,101,96);
-            finishBtn.FillPressColor = Color.FromArgb(247, 101, 96);
+            delectBtn.FillColor = Color.FromArgb(245,63,63);
+            delectBtn.FillHoverColor = Color.FromArgb(247,101,96);
+            delectBtn.FillPressColor = Color.FromArgb(247, 101, 96);
             finishBtn.RectColor = Color.Transparent;
 
             if (User_type.user_theme == "dark")
@@ -309,8 +312,7 @@ namespace miniSys0._3
 
             if (CurrentPrice == ServicePrice)
             {
-                NotificationForm messageBoxForm = new NotificationForm("success", "Finish successfully");
-                messageBoxForm.ShowDialog();
+                closedTheOrder();
             }
             else
             {
@@ -318,22 +320,43 @@ namespace miniSys0._3
                                 "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
                 if (Asterisk == DialogResult.OK)
                 {
-                    NotificationForm messageBoxForm = new NotificationForm("success", "Finish successfully");
-                    messageBoxForm.ShowDialog();
+                    
 
-                    string sql1 = "Select Top 1 TechnicianID From Schedule " +
-                    $"Where OrderID = '{orderIDCache}'";
-                    Console.WriteLine(sql1);
-                    string technicianID = SQLCursor.Query(sql1)[0];
-
-                    string time = DateTime.Now.ToString();
-                    string ScheduleID = SQLCursor.AddOneToLastID("ScheduleID", "Schedule");
-
-                    string sql2 = $"INSERT INTO Schedule VALUES('{ScheduleID}','Finished','{time}'," +
-                        $"'{technicianID}','{orderIDCache}');";
-                    SQLCursor.Execute(sql2);
+                    closedTheOrder();
                 }
             }
+        }
+
+        private void closedTheOrder()
+        {
+            if (SQLCursor.ifCurrentOrderFinishRepair(orderIDCache))
+            {
+                string sql1 = "Select Top 1 TechnicianID From Schedule " +
+                    $"Where OrderID = '{orderIDCache}'";
+                Console.WriteLine(sql1);
+                string technicianID = SQLCursor.Query(sql1)[0];
+
+                string time = DateTime.Now.ToString();
+                string ScheduleID = SQLCursor.AddOneToLastID("ScheduleID", "Schedule");
+
+                string sql2 = $"INSERT INTO Schedule VALUES('{ScheduleID}','Finished','{time}'," +
+                    $"'{technicianID}','{orderIDCache}');";
+                SQLCursor.Execute(sql2);
+
+
+                NotificationForm messageBoxForm = new NotificationForm("success", "Finish successfully");
+                messageBoxForm.ShowDialog();
+
+                Init(orderIDCache);
+
+                line3.LineColor = Color.FromArgb(22, 93, 255);
+            }
+            else
+            {
+                NotificationForm messageBoxForm = new NotificationForm("warning", "This order has not been repaired, cannot be finished.");
+                messageBoxForm.ShowDialog();
+            }
+            
         }
     }
     

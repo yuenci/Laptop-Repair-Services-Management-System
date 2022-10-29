@@ -214,32 +214,41 @@ namespace miniSys0._3.Controls.MainArea
                 }
                 else if (phoneTextBox.Text != User_type.user_phone)
                 {
-                    try
+                    if (RegexForInput.PhoneNumVerify(phoneTextBox.Text))
                     {
-                        Regex.IsMatch(phoneTextBox.Text, @"Expression");
-                        phoneTextBox.Enabled = false;
+                        try
+                        {
+                            Regex.IsMatch(phoneTextBox.Text, @"Expression");
+                            phoneTextBox.Enabled = false;
 
-                        string sql = $"UPDATE {userTable} SET Phone_number = '{phoneTextBox.Text}' " +
-                                $"WHERE {userIDType} = '{User_type.user_ID}';";
-                        SQLCursor.Execute(sql);
+                            string sql = $"UPDATE {userTable} SET Phone_number = '{phoneTextBox.Text}' " +
+                                    $"WHERE {userIDType} = '{User_type.user_ID}';";
+                            SQLCursor.Execute(sql);
 
-                        User_type.user_phone = phoneTextBox.Text;
-
-
-                        string orginalNum = phoneTextBox.Text;
-                        string encryNum = encryptedPhoneNum(phoneTextBox.Text);
-                        phoneTextBox.Text = encryNum;
-                        phoneTextBox.RectColor = Color.White;
-                        editPhone.Text = "Edit";
-                        User_type.user_phone = orginalNum;
-                        MessageBox.Show($"Reset phone to {orginalNum} successfully");
+                            User_type.user_phone = phoneTextBox.Text;
 
 
+                            string orginalNum = phoneTextBox.Text;
+                            string encryNum = encryptedPhoneNum(phoneTextBox.Text);
+                            phoneTextBox.Text = encryNum;
+                            phoneTextBox.RectColor = Color.White;
+                            editPhone.Text = "Edit";
+                            User_type.user_phone = orginalNum;
+                            MessageBox.Show($"Reset phone to {orginalNum} successfully");
+
+
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Invalid input, Enter number please");
+                        }
                     }
-                    catch
+                    else
                     {
-                        MessageBox.Show("Invalid input, Enter number please");
+                        NotificationForm messageBoxForm = new NotificationForm("warning", "Invalid input");
+                        messageBoxForm.ShowDialog();
                     }
+                    
                 }
                 else if (phoneTextBox.Text == User_type.user_phone)
                 {

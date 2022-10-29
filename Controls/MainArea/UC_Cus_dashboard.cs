@@ -250,6 +250,7 @@ namespace miniSys0._3.Controls.MainArea
         {
             UC_UserSetting uc = new UC_UserSetting();
             addUserControl(uc);
+            Main.main.currentMainPage = "UC_UserSetting";
         }
         
         private void addUserControl(UserControl userControl)
@@ -266,6 +267,7 @@ namespace miniSys0._3.Controls.MainArea
             {
                 UC_Cus_OrderDetails uc = new UC_Cus_OrderDetails();
                 addUserControl(uc);
+                Main.main.currentMainPage = "UC_Cus_OrderDetails";
             }
             else
             {
@@ -316,15 +318,21 @@ namespace miniSys0._3.Controls.MainArea
                 $"INNER JOIN Staff ON Staff.StaffID = Schedule.TechnicianID " +
                 $"WHERE Orders.CustomerID = '{cusID}' " +
                 $"ORDER BY Schedule.Time DESC; ";
+
+                Console.WriteLine(sql);
+
                 dynamic[] data = SQLCursor.Query(sql);
 
                 //Console.WriteLine(sql);
                 //MessageBox.Show(data[0]);
 
-                if (data.Length == 0)
+
+
+
+                if (data.Length == 0 || SQLCursor.ifCurrentOrderNotStart())
                 {
-                    Process.Text = "0";
-                    Process.Value = 0;
+                    Process.Text = "25";
+                    Process.Value = 25;
                     orderStatus.Text = "Odered";
                     staffName.Text = "None";
 

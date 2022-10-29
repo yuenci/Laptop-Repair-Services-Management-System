@@ -26,8 +26,31 @@ namespace miniSys0._3
 
             UC_Login uc = new UC_Login();
             addUserControl(uc);
-
+            DBdateCorrection();
         }
+
+        private void DBdateCorrection()
+        {
+            String date = SQLCursor.Query("SELECT Time FROM　Schedule　ORDER BY TIME DESC")[0][0];
+            DateTime laststDate = Convert.ToDateTime(date);
+            DateTime currentDate = DateTime.Now.ToLocalTime();
+
+            double diff = DiffDays(laststDate, currentDate);
+            int diffentDays = Convert.ToInt32(diff) -1;
+            
+            if (diffentDays >7)
+            {
+                SQLCursor.Execute($"update Schedule set Time =DATEADD(DAY,{diffentDays},Time);");
+                SQLCursor.Execute($"update Orders set Time =DATEADD(DAY,{diffentDays},Time);");
+            }
+        }
+
+        private double DiffDays(DateTime startTime, DateTime endTime)
+        {
+            TimeSpan daysSpan = new TimeSpan(endTime.Ticks - startTime.Ticks);
+            return daysSpan.TotalDays;
+        }
+
 
 
         private void uiSymbolButton1_Click(object sender, EventArgs e)

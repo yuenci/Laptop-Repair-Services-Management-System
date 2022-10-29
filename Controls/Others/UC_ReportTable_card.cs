@@ -36,7 +36,7 @@ namespace miniSys0._3.Controls.Others
             }
             else if (User_type.user_theme == "light")
             {
-                this.BackColor = Color.Gainsboro;
+                this.BackColor = Color.FromArgb(242, 243, 245);
                 dynamic[] lable = { dataTime, quantity, ratio };
                 foreach (var item in lable)
                 {

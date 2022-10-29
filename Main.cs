@@ -1165,6 +1165,11 @@ namespace miniSys0._3
             profile.AvatarSize = 36;
             profile.Location = new Point(1290, 11);
         }
+
+        private void ContextMenuStrip_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 
 

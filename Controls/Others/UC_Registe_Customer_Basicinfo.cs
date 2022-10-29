@@ -47,14 +47,14 @@ namespace miniSys0._3.Controls.Others
 
             bool ifNameVerify = false;
 
-            if (RegexForInput.TextVerify(nameTextBox.Text))
+            if (RegexForInput.NameVerify(nameTextBox.Text))
             {
                 ifNameVerify = true;
             }
             else
             {
                 //MessageBox.Show("Names can only consist of letters");
-                NotificationForm messageBoxForm = new NotificationForm("warning", "Names can only consist of letters");
+                NotificationForm messageBoxForm = new NotificationForm("warning", "Invalid input. Please note that the name can only contain letters");
                 messageBoxForm.ShowDialog();
 
             }

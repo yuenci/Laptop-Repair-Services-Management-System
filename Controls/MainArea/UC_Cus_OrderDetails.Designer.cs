@@ -99,7 +99,7 @@
             this.uiUserControl2.Controls.Add(this.dot2);
             this.uiUserControl2.Controls.Add(this.dot1);
             this.uiUserControl2.FillColor = System.Drawing.Color.White;
-            this.uiUserControl2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiUserControl2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiUserControl2.Location = new System.Drawing.Point(14, 297);
             this.uiUserControl2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiUserControl2.Name = "uiUserControl2";
@@ -113,7 +113,7 @@
             // 
             // uiLabel19
             // 
-            this.uiLabel19.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
+            this.uiLabel19.Font = new System.Drawing.Font(".PingFang SC", 15F, System.Drawing.FontStyle.Bold);
             this.uiLabel19.Location = new System.Drawing.Point(19, 18);
             this.uiLabel19.Name = "uiLabel19";
             this.uiLabel19.Size = new System.Drawing.Size(164, 23);
@@ -125,7 +125,7 @@
             // 
             // status4
             // 
-            this.status4.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.status4.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.status4.Location = new System.Drawing.Point(920, 95);
             this.status4.Name = "status4";
             this.status4.Size = new System.Drawing.Size(117, 23);
@@ -137,7 +137,7 @@
             // 
             // status3
             // 
-            this.status3.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.status3.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.status3.Location = new System.Drawing.Point(612, 95);
             this.status3.Name = "status3";
             this.status3.Size = new System.Drawing.Size(146, 23);
@@ -149,7 +149,7 @@
             // 
             // status2
             // 
-            this.status2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.status2.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.status2.Location = new System.Drawing.Point(318, 95);
             this.status2.Name = "status2";
             this.status2.Size = new System.Drawing.Size(132, 23);
@@ -161,7 +161,7 @@
             // 
             // status1
             // 
-            this.status1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.status1.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.status1.Location = new System.Drawing.Point(39, 95);
             this.status1.Name = "status1";
             this.status1.Size = new System.Drawing.Size(117, 23);
@@ -173,7 +173,7 @@
             // 
             // line2
             // 
-            this.line2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.line2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.line2.Location = new System.Drawing.Point(415, 45);
             this.line2.MinimumSize = new System.Drawing.Size(1, 1);
             this.line2.Name = "line2";
@@ -184,7 +184,7 @@
             // 
             // status4Time
             // 
-            this.status4Time.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.status4Time.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.status4Time.Location = new System.Drawing.Point(889, 133);
             this.status4Time.Name = "status4Time";
             this.status4Time.Size = new System.Drawing.Size(186, 23);
@@ -196,7 +196,7 @@
             // 
             // line3
             // 
-            this.line3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.line3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.line3.Location = new System.Drawing.Point(706, 45);
             this.line3.MinimumSize = new System.Drawing.Size(1, 1);
             this.line3.Name = "line3";
@@ -207,7 +207,7 @@
             // 
             // line1
             // 
-            this.line1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.line1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.line1.Location = new System.Drawing.Point(120, 45);
             this.line1.MinimumSize = new System.Drawing.Size(1, 1);
             this.line1.Name = "line1";
@@ -218,7 +218,7 @@
             // 
             // status3Time
             // 
-            this.status3Time.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.status3Time.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.status3Time.Location = new System.Drawing.Point(585, 133);
             this.status3Time.Name = "status3Time";
             this.status3Time.Size = new System.Drawing.Size(211, 23);
@@ -230,7 +230,7 @@
             // 
             // status2Time
             // 
-            this.status2Time.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.status2Time.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.status2Time.Location = new System.Drawing.Point(296, 133);
             this.status2Time.Name = "status2Time";
             this.status2Time.Size = new System.Drawing.Size(196, 23);
@@ -242,7 +242,7 @@
             // 
             // status1Time
             // 
-            this.status1Time.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.status1Time.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.status1Time.Location = new System.Drawing.Point(3, 133);
             this.status1Time.Name = "status1Time";
             this.status1Time.Size = new System.Drawing.Size(200, 23);
@@ -255,7 +255,7 @@
             // dot3
             // 
             this.dot3.AvatarSize = 10;
-            this.dot3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dot3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dot3.Location = new System.Drawing.Point(669, 44);
             this.dot3.MinimumSize = new System.Drawing.Size(1, 1);
             this.dot3.Name = "dot3";
@@ -269,7 +269,7 @@
             // dot4
             // 
             this.dot4.AvatarSize = 10;
-            this.dot4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dot4.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dot4.Location = new System.Drawing.Point(962, 44);
             this.dot4.MinimumSize = new System.Drawing.Size(1, 1);
             this.dot4.Name = "dot4";
@@ -283,7 +283,7 @@
             // dot2
             // 
             this.dot2.AvatarSize = 10;
-            this.dot2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dot2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dot2.Location = new System.Drawing.Point(376, 44);
             this.dot2.MinimumSize = new System.Drawing.Size(1, 1);
             this.dot2.Name = "dot2";
@@ -297,7 +297,7 @@
             // dot1
             // 
             this.dot1.AvatarSize = 10;
-            this.dot1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dot1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dot1.Location = new System.Drawing.Point(83, 44);
             this.dot1.MinimumSize = new System.Drawing.Size(1, 1);
             this.dot1.Name = "dot1";
@@ -332,7 +332,7 @@
             this.uiUserControl1.Controls.Add(this.uiLabel2);
             this.uiUserControl1.Controls.Add(this.uiLabel1);
             this.uiUserControl1.FillColor = System.Drawing.Color.White;
-            this.uiUserControl1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiUserControl1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiUserControl1.Location = new System.Drawing.Point(14, 48);
             this.uiUserControl1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiUserControl1.Name = "uiUserControl1";
@@ -347,7 +347,7 @@
             // infoBar
             // 
             this.infoBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(255)))), ((int)(((byte)(234)))));
-            this.infoBar.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.infoBar.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.infoBar.Location = new System.Drawing.Point(384, 9);
             this.infoBar.MinimumSize = new System.Drawing.Size(1, 1);
             this.infoBar.Name = "infoBar";
@@ -362,7 +362,7 @@
             // statusBtn
             // 
             this.statusBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.statusBtn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.statusBtn.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.statusBtn.Location = new System.Drawing.Point(966, 9);
             this.statusBtn.MinimumSize = new System.Drawing.Size(1, 1);
             this.statusBtn.Name = "statusBtn";
@@ -371,7 +371,7 @@
             this.statusBtn.Symbol = 61528;
             this.statusBtn.TabIndex = 89;
             this.statusBtn.Text = "Ordered";
-            this.statusBtn.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.statusBtn.TipsFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.statusBtn.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.statusBtn.Click += new System.EventHandler(this.statusBtn_Click);
             // 
@@ -381,7 +381,7 @@
             this.serviceType.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.serviceType.FillColor = System.Drawing.Color.White;
             this.serviceType.FilterMaxCount = 50;
-            this.serviceType.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.serviceType.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.serviceType.Items.AddRange(new object[] {
             "Remove virus,malware or spyware",
             "Troubleshot and fix computer running slow",
@@ -405,7 +405,7 @@
             // edit
             // 
             this.edit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.edit.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.edit.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.edit.Location = new System.Drawing.Point(785, 185);
             this.edit.Name = "edit";
             this.edit.Size = new System.Drawing.Size(43, 23);
@@ -418,7 +418,7 @@
             // 
             // price
             // 
-            this.price.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.price.Font = new System.Drawing.Font(".PingFang SC", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.price.Location = new System.Drawing.Point(831, 122);
             this.price.Name = "price";
             this.price.Size = new System.Drawing.Size(125, 58);
@@ -430,7 +430,7 @@
             // 
             // uiLabel9
             // 
-            this.uiLabel9.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel9.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel9.Location = new System.Drawing.Point(836, 71);
             this.uiLabel9.Name = "uiLabel9";
             this.uiLabel9.Size = new System.Drawing.Size(120, 23);
@@ -442,7 +442,7 @@
             // 
             // receiveTime
             // 
-            this.receiveTime.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.receiveTime.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.receiveTime.Location = new System.Drawing.Point(402, 128);
             this.receiveTime.Name = "receiveTime";
             this.receiveTime.Size = new System.Drawing.Size(197, 23);
@@ -454,7 +454,7 @@
             // 
             // model
             // 
-            this.model.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.model.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.model.Location = new System.Drawing.Point(402, 71);
             this.model.Name = "model";
             this.model.Size = new System.Drawing.Size(164, 23);
@@ -466,7 +466,7 @@
             // 
             // technician
             // 
-            this.technician.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.technician.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.technician.Location = new System.Drawing.Point(135, 185);
             this.technician.Name = "technician";
             this.technician.Size = new System.Drawing.Size(115, 23);
@@ -478,7 +478,7 @@
             // 
             // receptionist
             // 
-            this.receptionist.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.receptionist.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.receptionist.Location = new System.Drawing.Point(135, 128);
             this.receptionist.Name = "receptionist";
             this.receptionist.Size = new System.Drawing.Size(115, 23);
@@ -490,7 +490,7 @@
             // 
             // orderID
             // 
-            this.orderID.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.orderID.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.orderID.Location = new System.Drawing.Point(135, 71);
             this.orderID.Name = "orderID";
             this.orderID.Size = new System.Drawing.Size(141, 23);
@@ -502,7 +502,7 @@
             // 
             // uiLabel20
             // 
-            this.uiLabel20.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
+            this.uiLabel20.Font = new System.Drawing.Font(".PingFang SC", 15F, System.Drawing.FontStyle.Bold);
             this.uiLabel20.Location = new System.Drawing.Point(19, 9);
             this.uiLabel20.Name = "uiLabel20";
             this.uiLabel20.Size = new System.Drawing.Size(164, 23);
@@ -514,7 +514,7 @@
             // 
             // status
             // 
-            this.status.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.status.Font = new System.Drawing.Font(".PingFang SC", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.status.Location = new System.Drawing.Point(961, 122);
             this.status.Name = "status";
             this.status.Size = new System.Drawing.Size(125, 58);
@@ -526,7 +526,7 @@
             // 
             // uiLabel8
             // 
-            this.uiLabel8.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel8.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel8.Location = new System.Drawing.Point(272, 71);
             this.uiLabel8.Name = "uiLabel8";
             this.uiLabel8.Size = new System.Drawing.Size(124, 23);
@@ -538,7 +538,7 @@
             // 
             // uiLabel7
             // 
-            this.uiLabel7.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel7.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel7.Location = new System.Drawing.Point(14, 185);
             this.uiLabel7.Name = "uiLabel7";
             this.uiLabel7.Size = new System.Drawing.Size(115, 23);
@@ -550,7 +550,7 @@
             // 
             // uiLabel5
             // 
-            this.uiLabel5.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel5.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel5.Location = new System.Drawing.Point(966, 71);
             this.uiLabel5.Name = "uiLabel5";
             this.uiLabel5.Size = new System.Drawing.Size(120, 23);
@@ -562,7 +562,7 @@
             // 
             // uiLabel4
             // 
-            this.uiLabel4.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel4.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel4.Location = new System.Drawing.Point(272, 185);
             this.uiLabel4.Name = "uiLabel4";
             this.uiLabel4.Size = new System.Drawing.Size(124, 23);
@@ -574,7 +574,7 @@
             // 
             // uiLabel3
             // 
-            this.uiLabel3.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel3.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel3.Location = new System.Drawing.Point(272, 128);
             this.uiLabel3.Name = "uiLabel3";
             this.uiLabel3.Size = new System.Drawing.Size(124, 23);
@@ -586,7 +586,7 @@
             // 
             // uiLabel2
             // 
-            this.uiLabel2.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel2.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel2.Location = new System.Drawing.Point(14, 128);
             this.uiLabel2.Name = "uiLabel2";
             this.uiLabel2.Size = new System.Drawing.Size(115, 23);
@@ -598,7 +598,7 @@
             // 
             // uiLabel1
             // 
-            this.uiLabel1.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel1.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel1.Location = new System.Drawing.Point(14, 71);
             this.uiLabel1.Name = "uiLabel1";
             this.uiLabel1.Size = new System.Drawing.Size(115, 23);
@@ -617,7 +617,7 @@
             this.uiUserControl3.Controls.Add(this.card1);
             this.uiUserControl3.Controls.Add(this.uiLabel10);
             this.uiUserControl3.FillColor = System.Drawing.Color.White;
-            this.uiUserControl3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiUserControl3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiUserControl3.Location = new System.Drawing.Point(14, 500);
             this.uiUserControl3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiUserControl3.Name = "uiUserControl3";
@@ -632,7 +632,7 @@
             // card4
             // 
             this.card4.BackColor = System.Drawing.Color.White;
-            this.card4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.card4.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.card4.Location = new System.Drawing.Point(827, 54);
             this.card4.Name = "card4";
             this.card4.Size = new System.Drawing.Size(246, 146);
@@ -642,7 +642,7 @@
             // card3
             // 
             this.card3.BackColor = System.Drawing.Color.White;
-            this.card3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.card3.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.card3.Location = new System.Drawing.Point(557, 54);
             this.card3.Name = "card3";
             this.card3.Size = new System.Drawing.Size(246, 146);
@@ -652,7 +652,7 @@
             // card2
             // 
             this.card2.BackColor = System.Drawing.Color.White;
-            this.card2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.card2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.card2.Location = new System.Drawing.Point(287, 54);
             this.card2.Name = "card2";
             this.card2.Size = new System.Drawing.Size(246, 146);
@@ -662,7 +662,7 @@
             // card1
             // 
             this.card1.BackColor = System.Drawing.Color.White;
-            this.card1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.card1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.card1.Location = new System.Drawing.Point(17, 54);
             this.card1.Name = "card1";
             this.card1.Size = new System.Drawing.Size(246, 146);
@@ -671,7 +671,7 @@
             // 
             // uiLabel10
             // 
-            this.uiLabel10.Font = new System.Drawing.Font(".萍方-简", 15F, System.Drawing.FontStyle.Bold);
+            this.uiLabel10.Font = new System.Drawing.Font(".PingFang SC", 15F, System.Drawing.FontStyle.Bold);
             this.uiLabel10.Location = new System.Drawing.Point(19, 10);
             this.uiLabel10.Name = "uiLabel10";
             this.uiLabel10.Size = new System.Drawing.Size(178, 33);
@@ -684,7 +684,7 @@
             // crumbText
             // 
             this.crumbText.BackColor = System.Drawing.Color.Transparent;
-            this.crumbText.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.crumbText.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.crumbText.Location = new System.Drawing.Point(116, 5);
             this.crumbText.Name = "crumbText";
             this.crumbText.Size = new System.Drawing.Size(187, 35);
@@ -701,7 +701,7 @@
             this.crumbsHome.Enabled = false;
             this.crumbsHome.FillColor = System.Drawing.Color.White;
             this.crumbsHome.FillDisableColor = System.Drawing.Color.Transparent;
-            this.crumbsHome.Font = new System.Drawing.Font(".萍方-简", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.crumbsHome.Font = new System.Drawing.Font(".PingFang SC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.crumbsHome.ForeColor = System.Drawing.Color.Black;
             this.crumbsHome.Location = new System.Drawing.Point(6, 5);
             this.crumbsHome.MinimumSize = new System.Drawing.Size(1, 1);
@@ -715,7 +715,7 @@
             this.crumbsHome.SymbolOffset = new System.Drawing.Point(5, 0);
             this.crumbsHome.TabIndex = 18;
             this.crumbsHome.Text = " / Order / User info";
-            this.crumbsHome.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.crumbsHome.TipsFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.crumbsHome.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // UC_Cus_OrderDetails

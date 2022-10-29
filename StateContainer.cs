@@ -12,11 +12,25 @@ namespace miniSys0._3
 {
     public class AppSetting
     {
-        
-        public static string DBString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Materials\【LOOP】\Assignment\miniSys0.5\Data\CsharpRepairerIncNew.mdf;Integrated Security=True";
+
+        //public static string DBString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Materials\【IOOP】\Assignment\miniSys0.5\Data\CsharpRepairerIncNew.mdf;Integrated Security=True";
         //public static string DBString = @"Dddddata Source=LAPTOP-5ACE008F\SQLEXPRESS;Initial Catalog=CsharpRepairerInc;Integrated Security=True";
+        //public static string DBString = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={path}" + "Data\\CsharpRepairerIncNew.mdf;Integrated Security=True";
+        //public static string DBString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Materials\Semester 2\【IOOP】\Assignment\miniSys0.5\Data\CsharpRepairerIncNew.mdf;Integrated Security=True";
+        public static string DBString = getDBString();
+
         public static string path = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin"));
         //E:\Materials\【LOOP】\Assignment\miniSys0.3\
+        //E:\Materials\Semester 2\【IOOP】\Assignment\miniSys0.5\
+
+        private static String getDBString()
+        {
+            String s1 = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=";
+            String s2 = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin"));
+            String s3 = @"Data\CsharpRepairerIncNew.mdf;Integrated Security=True";
+            //Console.WriteLine(s1 + s2 + s3);
+            return s1 + s2 + s3;
+        }
     }
 
 
@@ -230,6 +244,21 @@ namespace miniSys0._3
         public static string allowSearch = "On";
         public static string allowShowProfile = "On";
         public static string privateMode = "Off";
+
+        public static void DefaultSetting()
+        {
+            theme = "Off";
+            autoTheme = "Off";
+            homePage = "Dashboard";
+
+            rejectAllMs = "Off";
+            rejectAllSy = "Off";
+            rejectAllCus = "Off";
+
+            allowSearch = "On";
+            allowShowProfile = "On";
+            privateMode = "Off";
+        }
 
         public static void DisplayStatus(UISwitch obj,string statusText)
         {
@@ -610,6 +639,24 @@ namespace miniSys0._3
             {
                 return false;
             }
+        }
+
+        public static bool NameVerify(string text)
+        {
+            string[] args = text.Split(" ");
+            if (args.Length <=2)
+            {
+                foreach (var item in args)
+                {
+                    if (!TextVerify(item))
+                    {
+                        return false;
+                    }
+                }
+
+                return true;
+            }
+            return false;
         }
     }
 }

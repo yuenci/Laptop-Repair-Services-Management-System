@@ -1,7 +1,7 @@
 let titlePara = "[News]Within evidence those dinner form left recognize.";
 let posterPara = "Kevin Hodges";
 let staffpostPara = "Receptionist";
-let viewsPara = "9875";
+let viewsPara = "9877";
 let likesPara = "9083";
 let timePara = "2021/12/28 13:52:09";
 let urlPara = "Art000186.html";
