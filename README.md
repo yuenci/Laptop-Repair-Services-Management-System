@@ -35,7 +35,7 @@
 
 <div align="center">
 <img src="https://github.com/yuenci/Laptop-Repair-Services-Management-System/blob/master/image/mainPage.png" alt="Logo" width="700">
-<div>
+<div/>
 <br/>
 
 This project is the final assignment project of my C# course. I got the highest score by this project, and my lecture told me that I am good enough to write my graduation project (I am still two years away from graduation). Haha 🤣🤣🤣, in short, I am very happy with this project.
