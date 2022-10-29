@@ -96,13 +96,32 @@ There are two ways you can run this project.
 
 <!-- USAGE EXAMPLES -->
 ## Screen shoots
+### Customer Main Page
 <img src="https://github.com/yuenci/Laptop-Repair-Services-Management-System/blob/master/image/20221029220011.png" alt="screenShot" width="700">
+
+### Customer Order Details Page
 <img src="https://github.com/yuenci/Laptop-Repair-Services-Management-System/blob/master/image/20221029224421.png" alt="screenShot" width="700">
+
+### Staff Main page
 <img src="https://github.com/yuenci/Laptop-Repair-Services-Management-System/blob/master/image/20221029224438.png" alt="screenShot" width="700">
+
+### Admin Registration page
+
 <img src="https://github.com/yuenci/Laptop-Repair-Services-Management-System/blob/master/image/20221029224446.png" alt="screenShot" width="700">
+
+### Admin Report Page
+
 <img src="https://github.com/yuenci/Laptop-Repair-Services-Management-System/blob/master/image/20221029224536.png" alt="screenShot" width="700">
+
+### Receptionist  Payment Page
+
 <img src="https://github.com/yuenci/Laptop-Repair-Services-Management-System/blob/master/image/20221029224545.png" alt="screenShot" width="700">
+
+### Technician Requests Page
+
 <img src="https://github.com/yuenci/Laptop-Repair-Services-Management-System/blob/master/image/20221029224557.png" alt="screenShot" width="700">
+
+### Technician Requests Page
 <img src="https://github.com/yuenci/Laptop-Repair-Services-Management-System/blob/master/image/20221029224611.png" alt="screenShot" width="700">
 <img src="https://github.com/yuenci/Laptop-Repair-Services-Management-System/blob/master/image/20221029224855.png" alt="screenShot" width="700">
 <img src="https://github.com/yuenci/Laptop-Repair-Services-Management-System/blob/master/image/20221029224943.png" alt="screenShot" width="700">
