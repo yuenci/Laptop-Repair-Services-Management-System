@@ -156,6 +156,12 @@ There are two ways you can run this project.
 ### Admin Report Page
 <img src="https://github.com/yuenci/Laptop-Repair-Services-Management-System/blob/master/image/Admin_Report_Page.png" alt="screenShot" width="700">
 
+### Search box
+<img src="https://github.com/yuenci/Laptop-Repair-Services-Management-System/blob/master/image/search.png" alt="screenShot" width="700">
+
+### Message box
+<img src="https://github.com/yuenci/Laptop-Repair-Services-Management-System/blob/master/image/message.png" alt="screenShot" width="700">
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
