@@ -100,7 +100,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Demo Video
-[![Laptop Repair Services Management System](http://img.youtube.com/vi/f3Vlglq_60M/0.jpg)](http://www.youtube.com/watch?v=f3Vlglq_60M)
+[![Laptop Repair Services Management System](https://github.com/yuenci/Laptop-Repair-Services-Management-System/blob/master/image/20221029220011.png)](http://www.youtube.com/watch?v=f3Vlglq_60M)
 
 
 <!-- GETTING STARTED -->
