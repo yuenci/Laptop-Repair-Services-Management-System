@@ -93,8 +93,31 @@ There are two ways you can run this project.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+## Features
 
-<!-- USAGE EXAMPLES -->
+* Login, Log out, Exit
+* Forget password
+* Reset password with pin via Phone, email. Or use security issue to reset
+* View news
+* Read document
+* View  promo video
+* Search order
+* Search users
+* Search function
+* Send and receive message
+* Switch theme
+* Check and register users
+* Generate order QR codes
+* Accept payment
+* Update  profile
+* View requests
+* Check or add order details
+* Change service price
+* View reports
+* Post system message
+* Taskba
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Screen shoots
 
 ### Login Page
